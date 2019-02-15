@@ -135,6 +135,8 @@ def retrieve_calendar(url):
             "end_date": date_to_string(end),
             "start_date_iso": start.isoformat(),
             "end_date_iso": end.isoformat(),
+            "start_date_iso_0": start.isoformat(),
+            "end_date_iso_0": end.isoformat(),
             "text":  name,
             "description": calendar_event.get("DESCRIPTION", ""),
             "location": calendar_event.get("LOCATION", None),
@@ -156,13 +158,16 @@ def retrieve_calendar(url):
             for i, date in enumerate(rule):
                 # use correct time to start
                 # see https://docs.python.org/3/library/datetime.html#datetime.time.replace
-                rstart = datetime.datetime(date.year, date.month, date.day, start.hour, start.minute, start.second, microsecond=0)
+                # and this for localize https://stackoverflow.com/a/4974930/1320237
+                rstart = start.tzinfo.localize(datetime.datetime(date.year, date.month, date.day, start.hour, start.minute, start.second, microsecond=0))
                 if date > one_year_ahead:
                     break
                 rend = rstart + duration
                 rec_event = event.copy()
                 rec_event["start_date"] = date_to_string(rstart)
                 rec_event["end_date"] = date_to_string(rend)
+                rec_event["start_date_iso"] = rstart.isoformat()
+                rec_event["end_date_iso"] = rend.isoformat()
                 rec_event["recurrence"] = i
                 events.append(rec_event)
         else:
