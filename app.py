@@ -102,45 +102,66 @@ def retrieve_calendar(url):
     """
     calendar_text = spec_get(url)
     calendars = icalendar.Calendar.from_ical(calendar_text, multiple=True)
-    events = []
+    # collect latest event information
+    ical_events = {} # id: event
     for calendar in calendars:
         assert calendar.get("CALSCALE") == "GREGORIAN", "Only Gregorian calendars are supported."
         for calendar_event in calendar.walk():
             if not subcomponent_is_ical_event(calendar_event):
                 continue
-            start = calendar_event["DTSTART"].dt
-            print("START", start, calendar_event.get("SUMMARY", ""))
-            end = calendar_event["DTEND"].dt
-            event = {
-                "start_date": date_to_string(start),
-                "end_date": date_to_string(end),
-                "text":  calendar_event.get("SUMMARY", "") + "\n\n" + calendar_event.get("DESCRIPTION", ""),
-                "location": calendar_event.get("LOCATION", ""),
-            }
-            # does not work, unfolding it manually
-            # "rec_type" : calendar_event.get("RRULE:FREQ", ""),
-            #pprint(calendar_event)
-            rule = calendar_event.get("RRULE")
-            if rule:
-                today = datetime.datetime.today()
-                one_year_ahead = today.replace(year=today.year + 1, tzinfo=start.tzinfo)
-                one_year_past = today.replace(year=today.year - 1, tzinfo=start.tzinfo)
-                rule = rrulestr(rule.to_ical().decode(), dtstart = one_year_past, cache=True, unfold=True)
-                duration = end - start
-                for rstart in rule:
-                    # use correct time to start
-                    # see https://docs.python.org/3/library/datetime.html#datetime.time.replace
-                    rstart = rstart.replace(hour=start.hour, minute=start.minute, second=start.second, microsecond=0, tzinfo=start.tzinfo)
-                    if rstart > one_year_ahead:
-                        break
-                    print(rstart)
-                    rend = rstart + duration
-                    rec_event = event.copy()
-                    rec_event["start_date"] = date_to_string(rstart)
-                    rec_event["end_date"] = date_to_string(rend)
-                    events.append(rec_event)
-            else:
-                events.append(event)       
+            id = calendar_event["UID"]
+            other_event = ical_events.get(id)
+            if other_event is None or other_event.get("SEQUENCE", 0) <= calendar_event.get("SEQUENCE", 0):
+                ical_events[id] = calendar_event
+    # collect events and their recurrences
+    events = []
+    for calendar_event in ical_events.values():
+        start = calendar_event["DTSTART"].dt
+        print("START", start, calendar_event.get("SUMMARY", ""))
+        end = calendar_event["DTEND"].dt
+        geo = calendar_event.get("GEO", None)
+        if geo:
+            geo = {"lon": geo.longitude, "lat": geo.latitude}
+        name = calendar_event.get("SUMMARY", "")
+        sequence = str(calendar_event.get("SEQUENCE", 0))
+        id = calendar_event["UID"]
+        event = {
+            "start_date": date_to_string(start),
+            "end_date": date_to_string(end),
+            "text":  name,
+            "description": calendar_event.get("DESCRIPTION", ""),
+            "location": calendar_event.get("LOCATION", None),
+            "geo": geo,
+            "uid": id,
+            "ical": calendar_event.to_ical().decode("UTF-8"),
+            "sequence": sequence,
+            "recurrence": None
+        }
+        # does not work, unfolding it manually
+        # "rec_type" : calendar_event.get("RRULE:FREQ", ""),
+        #pprint(calendar_event)
+        rule = calendar_event.get("RRULE")
+        if rule:
+            print(name, dict(rule), rule.to_ical())
+            today = datetime.datetime.today()
+            one_year_ahead = today.replace(year=today.year + 1, tzinfo=start.tzinfo)
+            rule = rrulestr(rule.to_ical().decode(), dtstart = start, cache=True, unfold=True)
+            duration = end - start
+            for i, rstart in enumerate(rule):
+                # use correct time to start
+                # see https://docs.python.org/3/library/datetime.html#datetime.time.replace
+                rstart = rstart.replace(hour=start.hour, minute=start.minute, second=start.second, microsecond=0, tzinfo=start.tzinfo)
+                if rstart > one_year_ahead:
+                    break
+                #print(rstart)
+                rend = rstart + duration
+                rec_event = event.copy()
+                rec_event["start_date"] = date_to_string(rstart)
+                rec_event["end_date"] = date_to_string(rend)
+                rec_event["recurrence"] = i
+                events.append(rec_event)
+        else:
+            events.append(event)       
     return events
 
 def get_events(specification):

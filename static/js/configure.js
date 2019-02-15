@@ -19,6 +19,32 @@ function getQueries() {
     return queries;
 }
 
+// TODO: allow choice through specification
+var GOOGLE_URL = "https://maps.google.com/maps?q=";
+var OSM_URL = "https://www.openstreetmap.org/search?query=";
+
+template = {
+    "summary": function(event) {
+        return "<div class='summary'>" + event.text + "</div>";
+    },
+    "details": function(event) {
+        return "<div class='details'>" + event.description + "</div>";
+    },
+    "location": function(event) {
+        if (!event.location && !event.geo) {
+            return "";
+        }
+        var text = event.location || "🗺";
+        var geoUrl;
+        if (event.geo) {
+            geoUrl = "https://www.openstreetmap.org/?mlon=" + event.geo.lon + "&mlat=" + event.geo.lat + "&#map=15/" + event.geo.lat + "/" + event.geo.lon;
+        } else {
+            geoUrl = OSM_URL + encodeURIComponent(event.location);
+        }
+        return "<a href='" + geoUrl + "'>" + text + "</a>";
+    }
+}
+
 function loadCalendar() {
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
@@ -26,6 +52,35 @@ function loadCalendar() {
     scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
     scheduler.init('scheduler_here', new Date(), "month");
+
+    // event in the calendar
+    scheduler.templates.event_bar_text = function(start, end, event){
+        return event.text;
+    }
+    // tool tip
+    // see https://docs.dhtmlx.com/scheduler/tooltips.html
+    scheduler.templates.tooltip_text = function(start, end, event) {
+        return template.summary(event) + template.details(event) + template.location(event);
+    };
+    dhtmlXTooltip.config.delta_x = 0; 
+    dhtmlXTooltip.config.delta_y = 0;
+    // quick info
+    scheduler.templates.quick_info_title = function(start, end, event){
+        return template.summary(event);
+    }
+    scheduler.templates.quick_info_content = function(start, end, event){
+        return template.details(event) +
+            template.location(event) +
+            "<pre style='display:none'>" +
+            event.ical +
+            "\nsequence " +event.sequence +
+            "\nrecurrence " + event.recurrence +
+            "</pre>";
+    }
+    // general style
+    scheduler.templates.event_class=function(start,end,event){
+        return "event";
+    };
     
     schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + 
         document.location.search;
