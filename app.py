@@ -111,13 +111,19 @@ def retrieve_calendar(url):
                 continue
             id = calendar_event["UID"]
             other_event = ical_events.get(id)
-            if other_event is None or other_event.get("SEQUENCE", 0) <= calendar_event.get("SEQUENCE", 0):
+            if other_event is None:
+                ical_events[id] = calendar_event
+            elif other_event.get("SEQUENCE", 0) <= calendar_event.get("SEQUENCE", 0):
+                for key, value in calendar_event.items():
+                    other_event[key] = value
+            else:
+                for key, value in other_event.items():
+                    calendar_event[key] = value
                 ical_events[id] = calendar_event
     # collect events and their recurrences
     events = []
     for calendar_event in ical_events.values():
         start = calendar_event["DTSTART"].dt
-        print("START", start, calendar_event.get("SUMMARY", ""))
         end = calendar_event["DTEND"].dt
         geo = calendar_event.get("GEO", None)
         if geo:
@@ -152,8 +158,6 @@ def retrieve_calendar(url):
                 rstart = datetime.datetime(date.year, date.month, date.day, start.hour, start.minute, start.second, microsecond=0)
                 if date > one_year_ahead:
                     break
-                if "Lab" in name and "Open" in name:
-                    print(rstart, start.tzinfo.utcoffset(rstart))
                 rend = rstart + duration
                 rec_event = event.copy()
                 rec_event["start_date"] = date_to_string(rstart)
