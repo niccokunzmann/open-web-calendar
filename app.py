@@ -133,6 +133,8 @@ def retrieve_calendar(url):
         event = {
             "start_date": date_to_string(start),
             "end_date": date_to_string(end),
+            "start_date_iso": start.isoformat(),
+            "end_date_iso": end.isoformat(),
             "text":  name,
             "description": calendar_event.get("DESCRIPTION", ""),
             "location": calendar_event.get("LOCATION", None),

@@ -81,8 +81,19 @@ function displayCalendar(url) {
 }
 function showCalendarSourceCode(url) {
     var link = document.getElementById("calendar-code");
-    link.innerText = '<iframe id="open-web-calendar" \n    src="' + encodeURIComponent(url) + '" \n    allowTransparency="true" scrolling="no" \n    frameborder="0" height="600px" width="100%"></iframe>'
+    link.innerText = '<iframe id="open-web-calendar" \n    src="' + escapeHtml(url) + '" \n    allowTransparency="true" scrolling="no" \n    frameborder="0" height="600px" width="100%"></iframe>'
 }
+
+function escapeHtml(unsafe) {
+    // from https://stackoverflow.com/a/6234804/1320237
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
+
 
 
 
