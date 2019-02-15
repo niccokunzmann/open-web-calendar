@@ -1,6 +1,8 @@
 Open Web Calendar
 =================
 
+[Try it out][web]
+
 There are several commercial solutions which allow embedding of calendar into
 my website. I only have a link to an ICS file and want to show a nice-looking
 calenar on my site which gives me the control over who knows the people who
@@ -14,6 +16,14 @@ Features
 - name, time of event, link?
 - showing the time span
 - styling of choice (icon, color, font, ...)
+
+## Deployment
+
+You can deploy the app using Heroku.
+There is a free plan.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 
 Research
 --------
@@ -67,5 +77,5 @@ Development
     python3 app.py
     ```
 
-
+[web]: #todo
 
