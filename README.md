@@ -77,5 +77,5 @@ Development
     python3 app.py
     ```
 
-[web]: #todo
+[web]: https://open-web-calendar.herokuapp.com
 
