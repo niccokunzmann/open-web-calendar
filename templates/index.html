@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Open Web Calendar</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/index.css" 
+            rel="stylesheet" type="text/css" charset="utf-8">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Open Web Calendar</h1>
+        </header>
+        <main>
+            <div class="section">
+                <p>
+                    The Open Web Calendar uses ICS/ICal calendars
+                    online and displays them in one calendar.
+                </p>
+            </div>
+            <div class="section">
+                <p>
+                    To merge several calendars, please input the the
+                    URLs of the ICS calendars here: 
+                </p>
+                <ul id="calendar-urls">
+                </ul>
+                <p>
+                    <a id="calendar-link"></a>
+                    <br/>
+                    To embed the calendar, use this code on your website:
+                    <pre id="calendar-code">
+                    </pre>
+                    You can view the resulting calendar below.
+                    <iframe id="open-web-calendar" src="" allowTransparency="true" scrolling="no" frameborder="0"></iframe>
+                </p>
+            </div>
+        </main>
+        <footer>
+            The open web calendar is open-source.
+            You can contribute and view the source code on
+            <a href="https://github.com/niccokunzmann/open-web-calendar">GitHub</a>.
+        </footer>
+    </body>
+</html>

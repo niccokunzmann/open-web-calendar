@@ -1,0 +1,48 @@
+
+header {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 0.66em;
+}
+
+body {
+    margin: 0px;
+    padding:0px;
+}
+
+footer {
+  border-color: black;
+  border-width: 0px;
+  border-top-width: 1px;
+  border-style: solid;
+  margin-top: 0.3em;
+  padding-top: 0.3em;
+  color: gray;
+}
+
+footer a {
+  color: gray;
+}
+
+main {
+    padding: 1em;
+}
+
+#calendar-code {
+    padding: 1em;
+    background-color: #eee;
+    border-radius: 0.66em;
+}
+
+#open-web-calendar {
+}
+
+.calendar-url-input {
+    width: 80%;
+}
+
+#open-web-calendar {
+    width: 100%;
+    height: 600px;
+}

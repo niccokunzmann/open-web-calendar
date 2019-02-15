@@ -181,6 +181,13 @@ def get_events(specification):
             all_events.extend(events)
     return all_events
 
+def render_app_template(template, specification):
+    return render_template(template, 
+        specification=specification,
+        get_events=get_events,
+        json=json,
+    )
+
 @app.route("/calendar.<type>", methods=['GET', 'OPTIONS']) 
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
 #@cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
@@ -196,11 +203,8 @@ def get_calendar(type):
         template_name = specification["template"]
         all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
         assert template_name in all_template_names, "Template names must be file names like \"{}\", not \"{}\".".format("\", \"".join(all_template_names), template_name)
-        return render_template(os.path.join(CALENDARS_TEMPLATE_FOLDER_NAME, template_name), 
-            specification=specification,
-            get_events=get_events,
-            json=json,
-        )
+        template = os.path.join(CALENDARS_TEMPLATE_FOLDER_NAME, template_name)
+        return render_app_template(template, specification)
     raise ValueError("Cannot use extension {}. Please see the documentation or report an error.".format(type))
 
 for folder_name in os.listdir(STATIC_FOLDER_PATH):
@@ -210,6 +214,10 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
     @app.route('/' + folder_name + '/<path:path>', endpoint="static/" + folder_name)
     def send_static(path, folder_name=folder_name):
         return send_from_directory('static/' + folder_name, path)
+
+@app.route("/")
+def serve_index():
+    return render_app_template("index.html", get_specification())
 
 if __name__ == "__main__":
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
