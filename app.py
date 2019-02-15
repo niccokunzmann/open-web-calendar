@@ -91,8 +91,7 @@ def date_to_string(date):
 
 def subcomponent_is_ical_event(event):
     """Whether the calendar subcomponent is an event."""
-    # TODO: this is an estimation.
-    return "DESCRIPTION" in event
+    return isinstance(event, icalendar.cal.Event)
 
 def retrieve_calendar(url):
     """Get the calendar entry from a url.
@@ -165,7 +164,7 @@ def retrieve_calendar(url):
                 rec_event["recurrence"] = i
                 events.append(rec_event)
         else:
-            events.append(event)       
+            events.append(event)
     return events
 
 def get_events(specification):
