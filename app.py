@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-from flask import Flask, render_template, make_response, request, jsonify, redirect
+from flask import Flask, render_template, make_response, request, jsonify, \
+    redirect, send_from_directory
 from flask_caching import Cache
 import json
 import os
@@ -8,6 +9,8 @@ from concurrent.futures import ThreadPoolExecutor
 import requests
 import icalendar
 import datetime
+from dateutil.rrule import rrulestr
+from pprint import pprint
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -34,6 +37,21 @@ app = Flask(__name__, template_folder="templates")
 cache = Cache(app, config={
     'CACHE_TYPE': 'filesystem',
     'CACHE_DIR': tempfile.mktemp(prefix="cache-")})
+
+def set_JS_headers(response):
+    repsonse = make_response(response)
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    # see https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
+    response.headers['Access-Control-Allow-Headers'] = request.headers.get("Access-Control-Request-Headers")
+    response.headers['Content-Type'] = 'text/calendar'
+    return response
+
+def set_js_headers(func):
+    """Set the response headers for a valid CORS request."""
+    def with_js_response(*args, **kw):
+        return set_JS_headers(func(*args, **kw))
+    return with_js_response
+
 
 def spec_get(url):
     if url.startswith("/"):
@@ -71,22 +89,51 @@ def subcomponent_is_ical_event(event):
     return "DESCRIPTION" in event
 
 def retrieve_calendar(url):
-    """Get the calendar entry from a url."""
+    """Get the calendar entry from a url.
+    
+    Also unfold the events to past and future.
+    see https://dateutil.readthedocs.io/en/stable/rrule.html
+    """
     calendar_text = spec_get(url)
-    calendar = icalendar.Calendar.from_ical(calendar_text)
-    assert calendar.get("CALSCALE") == "GREGORIAN", "Only Gregorian calendars are supported."
+    calendars = icalendar.Calendar.from_ical(calendar_text, multiple=True)
     events = []
-    for calendar_event in calendar.walk():
-        if not subcomponent_is_ical_event(calendar_event):
-            continue
-        event = {
-            "start_date": date_to_string(calendar_event["DTSTART"].dt),
-            "end_date": date_to_string(calendar_event["DTEND"].dt),
-            "text": calendar_event.get("SUMMARY", ""),
-            "location": calendar_event.get("LOCATION", ""),
-            "rec_type" : calendar_event.get("RRULE:FREQ", ""),
-        }
-        events.append(event)
+    for calendar in calendars:
+        assert calendar.get("CALSCALE") == "GREGORIAN", "Only Gregorian calendars are supported."
+        for calendar_event in calendar.walk():
+            if not subcomponent_is_ical_event(calendar_event):
+                continue
+            start = calendar_event["DTSTART"].dt
+            print("START", start, calendar_event.get("SUMMARY", ""))
+            end = calendar_event["DTEND"].dt
+            event = {
+                "start_date": date_to_string(start),
+                "end_date": date_to_string(end),
+                "text":  calendar_event.get("SUMMARY", "") + "\n\n" + calendar_event.get("DESCRIPTION", ""),
+                "location": calendar_event.get("LOCATION", ""),
+            }
+            events.append(event)
+            # does not work, unfolding it manually
+            # "rec_type" : calendar_event.get("RRULE:FREQ", ""),
+            #pprint(calendar_event)
+            rule = calendar_event.get("RRULE")
+            if rule:
+                today = datetime.datetime.today()
+                one_year_ahead = today.replace(year=today.year + 1, tzinfo=start.tzinfo)
+                one_year_past = today.replace(year=today.year - 1, tzinfo=start.tzinfo)
+                rule = rrulestr(rule.to_ical().decode(), dtstart = one_year_past, cache=True, unfold=True)
+                duration = end - start
+                for rstart in rule:
+                    # use correct time to start
+                    # see https://docs.python.org/3/library/datetime.html#datetime.time.replace
+                    rstart = rstart.replace(hour=start.hour, minute=start.minute, second=start.second, microsecond=0, tzinfo=start.tzinfo)
+                    if rstart > one_year_ahead:
+                        break
+                    print(rstart)
+                    rend = rstart + duration
+                    rec_event = event.copy()
+                    rec_event["start_date"] = date_to_string(rstart)
+                    rec_event["end_date"] = date_to_string(rend)
+                    events.append(rec_event)
     return events
 
 def get_events(specification):
@@ -102,7 +149,7 @@ def get_events(specification):
             all_events.extend(events)
     return events
 
-@app.route("/calendar.<type>", methods=['GET']) 
+@app.route("/calendar.<type>", methods=['GET', 'OPTIONS']) 
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
 #@cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
 def get_calendar(type):
@@ -128,7 +175,7 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
     folder_path = os.path.join(STATIC_FOLDER_PATH, folder_name)
     if not os.path.isdir(folder_path):
         continue
-    @app.route('/' + folder_name + '/<path:path>')
+    @app.route('/' + folder_name + '/<path:path>', endpoint="static/" + folder_name)
     def send_static(path, folder_name=folder_name):
         return send_from_directory('static/' + folder_name, path)
 

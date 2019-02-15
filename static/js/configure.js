@@ -21,18 +21,16 @@ function getQueries() {
 
 function loadCalendar() {
     // set format of dates in the data source
-    //scheduler.config.xml_date="%Y-%m-%d %H:%i";
+    scheduler.config.xml_date="%Y-%m-%d %H:%i";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
-    // scheduler.config.server_utc = true;
+    scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
     scheduler.init('scheduler_here', new Date(), "month");
+    
+    schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + 
+        document.location.search;
 
-    var urls = getQueries()["url"];
-    if (urls) {
-        scheduler.load(urls, "ical");
-    } else {
-        console.error("ERROR: no url parameter found, no calendar to display.");
-    }
+    scheduler.load(schedulerUrl, "json");
     
     //var dp = new dataProcessor(schedulerUrl);
     // use RESTful API on the backend
