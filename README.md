@@ -42,6 +42,13 @@ calendar ics service, ics calendar to html, open source calendar view ical,
 python Ical, calendar viewer website for ics, open source calendar website,
 embed calendar into website
 
+Software Components
+-------------------
+
+- Python3 and the packages in requirements.txt
+  - [Flask](http://flask.pocoo.org/)
+- [DHTMLX scheduler](https://docs.dhtmlx.com/scheduler/)
+
 
 Development
 -----------
