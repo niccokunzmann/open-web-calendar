@@ -70,7 +70,13 @@ def get_specification():
         url_specification_response = spec_get(url)
         url_specification_json = json.loads(url_specification_response)
         specification.update(url_specification_json)
-    specification.update(request.args)
+    for parameter in request.args:
+        # get a list of arguments
+        # see http://werkzeug.pocoo.org/docs/0.14/datastructures/#werkzeug.datastructures.MultiDict
+        value = request.args.getlist(parameter, None)
+        if len(value) == 1:
+            value = value[0]
+        specification[parameter] = value
     return specification
     
 def date_to_string(date):
@@ -111,7 +117,6 @@ def retrieve_calendar(url):
                 "text":  calendar_event.get("SUMMARY", "") + "\n\n" + calendar_event.get("DESCRIPTION", ""),
                 "location": calendar_event.get("LOCATION", ""),
             }
-            events.append(event)
             # does not work, unfolding it manually
             # "rec_type" : calendar_event.get("RRULE:FREQ", ""),
             #pprint(calendar_event)
@@ -134,6 +139,8 @@ def retrieve_calendar(url):
                     rec_event["start_date"] = date_to_string(rstart)
                     rec_event["end_date"] = date_to_string(rend)
                     events.append(rec_event)
+            else:
+                events.append(event)       
     return events
 
 def get_events(specification):
@@ -147,7 +154,7 @@ def get_events(specification):
         events_list = e.map(retrieve_calendar, urls)
         for events in events_list:
             all_events.extend(events)
-    return events
+    return all_events
 
 @app.route("/calendar.<type>", methods=['GET', 'OPTIONS']) 
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
