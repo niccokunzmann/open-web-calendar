@@ -142,18 +142,18 @@ def retrieve_calendar(url):
         #pprint(calendar_event)
         rule = calendar_event.get("RRULE")
         if rule:
-            print(name, dict(rule), rule.to_ical())
             today = datetime.datetime.today()
             one_year_ahead = today.replace(year=today.year + 1, tzinfo=start.tzinfo)
             rule = rrulestr(rule.to_ical().decode(), dtstart = start, cache=True, unfold=True)
             duration = end - start
-            for i, rstart in enumerate(rule):
+            for i, date in enumerate(rule):
                 # use correct time to start
                 # see https://docs.python.org/3/library/datetime.html#datetime.time.replace
-                rstart = rstart.replace(hour=start.hour, minute=start.minute, second=start.second, microsecond=0, tzinfo=start.tzinfo)
-                if rstart > one_year_ahead:
+                rstart = datetime.datetime(date.year, date.month, date.day, start.hour, start.minute, start.second, microsecond=0)
+                if date > one_year_ahead:
                     break
-                #print(rstart)
+                if "Lab" in name and "Open" in name:
+                    print(rstart, start.tzinfo.utcoffset(rstart))
                 rend = rstart + duration
                 rec_event = event.copy()
                 rec_event["start_date"] = date_to_string(rstart)
