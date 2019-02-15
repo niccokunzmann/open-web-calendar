@@ -43,4 +43,22 @@ python Ical, calendar viewer website for ics, open source calendar website,
 embed calendar into website
 
 
+Development
+-----------
+
+1. Optional: Install virtualenv and Python3 and create a virtual environment.
+    ```
+    virtualenv -p python3 ENV
+    source ENV/bin/activate
+    ```
+2. Install the packages.
+    ```
+    pip install -r requirements.txt
+    ```
+3. Start the app.
+    ```
+    python3 app.py
+    ```
+
+
 
