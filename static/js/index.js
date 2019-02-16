@@ -1,5 +1,7 @@
 
 const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
+const CALENDAR_ENDPOINT = "/calendar.html";
+const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/default_specification.json";
 
 function updateUrls() {
     updateCalendarInputs();
@@ -41,7 +43,7 @@ function getUrls() {
 }
 
 function getCalendarUrl(specification) {
-    var url = DEFAULT_URL + "/calendar.html?";
+    var url = DEFAULT_URL + CALENDAR_ENDPOINT + "?";
     var parameters = [];
     getOwnProperties(specification).forEach(function(property) {
         if (specification[property]) {
@@ -176,11 +178,21 @@ function fillFirstInputWithData() {
     }
 }
 
+
+function fillDefaultSpecificationLink() {
+    var link = document.getElementById("example-specification-link");
+    var url = DEFAULT_URL + CALENDAR_ENDPOINT + "?specification_url=" + EXAMPLE_SPECIFICATION;
+    link.innerText = url;
+    link.href = url;
+}
+
+
 window.addEventListener("load", function(){
     updateCalendarInputs();
     fillFirstInputWithData();
     updateCalendarInputs();
     updateOutputs();
+    fillDefaultSpecificationLink()
 });
 
 
