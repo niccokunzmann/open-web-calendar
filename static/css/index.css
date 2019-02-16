@@ -29,7 +29,7 @@ main {
     padding: 1em;
 }
 
-#calendar-code {
+.code {
     padding: 1em;
     background-color: #eee;
     border-radius: 0.66em;
