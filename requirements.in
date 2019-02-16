@@ -2,4 +2,4 @@ flask-caching==1.4.0
 flask==1.0.2
 icalendar==4.0.3
 requests==2.21.0
-python-dateutil
+pyyaml==3.13
