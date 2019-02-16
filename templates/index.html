@@ -29,17 +29,41 @@
                     <a id="calendar-link"></a>
                     <br/>
                     To embed the calendar, use this code on your website:
-                    <pre id="calendar-code">
-                    </pre>
+                    <pre id="calendar-code"></pre>
                     You can view the resulting calendar below.
-                    <iframe id="open-web-calendar" src="" allowTransparency="true" scrolling="no" frameborder="0"></iframe>
+                    <iframe id="open-web-calendar" src=""
+                            allowTransparency="true" scrolling="no"
+                            frameborder="0"></iframe>
+                </p>
+            </div>
+            <div class="section">
+                <p>
+                    You can make additional customizations of the calendar.
+                </p>
+                <p>
+                    To change the title, please input the name of the
+                    calendar here: <br/>
+                    <input type="text" id="calendar-title" />
+                </p>
+                <p>
+                    The calendar can be generated not only using the url but
+                    also through a JSON specification which resides in a file.
+                    The customization from above generates this specification:
+                    <pre class="code" id="json-specification"></pre>
+                    You can <a id="json-specification-download" href=""
+                    >download this specification</a>
+                    and place it somewhere on the web.
+                    This way you are still in control over the customization
+                    if the calendar after you shared the link, e.g. on GitHub
+                    in a <a href="https://gist.github.com/">Gist</a>.
                 </p>
             </div>
         </main>
         <footer>
             The open web calendar is open-source.
             You can contribute and view the source code on
-            <a href="https://github.com/niccokunzmann/open-web-calendar">GitHub</a>.
+            <a href="https://github.com/niccokunzmann/open-web-calendar"
+               >GitHub</a>.
         </footer>
     </body>
 </html>
