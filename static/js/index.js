@@ -40,34 +40,69 @@ function getUrls() {
     return urls;
 }
 
-function getCalendarUrl(urls) {
-    var url;
-    if (document.location.protocol == "file:") {
-        url =  + "/join-calendars.ics?";
-    } else {
-        url = DEFAULT_URL + "/calendar.html?";
-    }
-    var arguments = urls.map(function(url){
-        return "url=" + encodeURIComponent(url)
+function getCalendarUrl(specification) {
+    var url = DEFAULT_URL + "/calendar.html?";
+    var parameters = [];
+    getOwnProperties(specification).forEach(function(property) {
+        if (specification[property]) {
+            (Array.isArray(specification[property]) ? specification[property] : [specification[property]]
+            ).forEach(function(url){
+                parameters.push(encodeURIComponent(property) + "=" + encodeURIComponent("" + url))
+            });
+        }
     });
-    return url + arguments.join("&");
+    return url + parameters.join("&");
 }
 
 var lastCalendarUrl = "";
 
+/* This is called after the inputs changed.
+ *
+ */
 function updateOutputs() {
-    var urls = getUrls();
-    console.log("urls", urls);
-    var calendarUrl = getCalendarUrl(urls);
-    if (lastCalendarUrl == calendarUrl) {
-        return;
+    var specification = getSpecification();
+    var calendarUrl = getCalendarUrl(specification);
+    if (lastCalendarUrl != calendarUrl) {
+        updateCalendarOutputs(calendarUrl);
     }
     lastCalendarUrl = calendarUrl;
+    updateSpecificationOutput(specification);
+}
+
+function updateCalendarOutputs(calendarUrl) {
     console.log("calendarUrl", calendarUrl);
     displayCalendarLink(calendarUrl);
     displayCalendar(calendarUrl);
-    showCalendarSourceCode(calendarUrl);
-    
+    showCalendarSourceCode(calendarUrl);   
+
+}
+
+/* Update the output of the specification.
+ *
+ */
+function updateSpecificationOutput(specification) {
+    document.getElementById("json-specification").innerText = JSON.stringify(specification, null, 2);
+}
+
+/* This generates the specification of the calendar.
+ *
+ */
+function getSpecification() {
+    var specification = {};
+    /* url */
+    var urls = getUrls();
+    if (urls.length == 1) {
+        specification.url = urls[0];
+    } else if (urls.length > 1) {
+        specification.url = urls;
+    }
+    /* title */
+    var title = document.getElementById("calendar-title").value;
+    if (title != "") {
+        specification.title = title;
+    }
+    console.log("getSpecification", specification);
+    return specification;
 }
 
 function displayCalendarLink(url) {
@@ -92,14 +127,34 @@ function escapeHtml(unsafe) {
          .replace(/>/g, "&gt;")
          .replace(/"/g, "&quot;")
          .replace(/'/g, "&#039;");
- }
+}
 
+/* Return the properties of an object.
+ * 
+ */
+function getOwnProperties(object) {
+    // from https://stackoverflow.com/a/16735184/1320237
+    var ownProperties = [];
+    for (var property in object) {
+        if (object.hasOwnProperty(property)) {
+            ownProperties.push(property);
+        }
+    }
+    return ownProperties;
+}
 
-
-
+function fillFirstInputWithData() {
+    var urlInputs = document.getElementsByClassName("calendar-url-input");
+    if (urlInputs) {
+        urlInputs[0].value = "http://www.officeholidays.com/ics/ics_country_noregion.php?tbl_country=Germany";
+    }
+}
 
 window.addEventListener("load", function(){
     updateCalendarInputs();
+    fillFirstInputWithData();
+    updateCalendarInputs();
+    updateOutputs();
 });
 
 
