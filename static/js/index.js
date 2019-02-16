@@ -143,6 +143,32 @@ function getOwnProperties(object) {
     return ownProperties;
 }
 
+function downloadJSONSpecification() {
+    var specification = getSpecification();
+    var text = JSON.stringify(specification, null, 4);
+    var filename = specification.title ?
+        specification.title.replace(/\s/g, "-") + ".json" :
+        "calendar-specification.json";
+    downloadJSONAsFile(filename, text);
+}
+
+/* Download content with a file name.
+ *
+ */
+function downloadJSONAsFile(filename, text) {
+    // from https://stackoverflow.com/a/18197341/1320237
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
 function fillFirstInputWithData() {
     var urlInputs = document.getElementsByClassName("calendar-url-input");
     if (urlInputs) {
@@ -156,6 +182,7 @@ window.addEventListener("load", function(){
     updateCalendarInputs();
     updateOutputs();
 });
+
 
 
 
