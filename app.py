@@ -41,7 +41,9 @@ cache = Cache(app, config={
 
 def get_configuration():
     """Return the configuration for the browser"""
-    config = {}
+    config = {
+        "default_specification": get_default_specification()
+    }
     with open(DHTMLX_LANGUAGES_FILE, encoding="UTF-8") as file:
         config["dhtmlx"] = {
             "languages" : json.load(file)
@@ -70,10 +72,15 @@ def spec_get(url):
             return file.read()
     return requests.get(url).text
 
+
+def get_default_specification():
+    """Return the default specification."""
+    with open(DEFAULT_SPECIFICATION_PATH, encoding="UTF-8") as file:
+        return json.load(file)
+
 def get_specification():
     """Build the calendar specification."""
-    with open(DEFAULT_SPECIFICATION_PATH, encoding="UTF-8") as file:
-        specification = json.load(file)
+    specification = get_default_specification()
     # get a request parameter, see https://stackoverflow.com/a/11774434
     url = request.args.get(PARAM_SPECIFICATION_URL, None)
     if url:
