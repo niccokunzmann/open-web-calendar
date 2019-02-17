@@ -45,7 +45,19 @@ template = {
     }
 }
 
+/* The files use a Scheduler variable.
+* scheduler.locale is used to load the locale.
+* This creates the required interface.
+*/ 
+var setLocale = function(){};
+var Scheduler = {plugin:function(setLocale_){
+    // this is called by the locale_??.js files.
+    setLocale = setLocale_;
+}};
+
+
 function loadCalendar() {
+    setLocale(scheduler);
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html

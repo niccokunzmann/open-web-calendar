@@ -6,6 +6,7 @@
         <link href="css/index.css" 
             rel="stylesheet" type="text/css" charset="utf-8">
         <script src="js/index.js"></script>
+        <script src="configuration.js"></script>
     </head>
     <body>
         <header>
@@ -46,6 +47,10 @@
                     <input type="text" id="calendar-title" />
                 </p>
                 <p>
+                    You can set the language of the calendar below.<br/>
+                    <select id="select-language"></select>
+                </p>
+                <p>
                     The calendar can be generated not only using the url but
                     also through a JSON specification which resides in a file.
                     The customization from above generates this specification:
@@ -56,7 +61,7 @@
                     This way you are still in control over the customization
                     if the calendar after you shared the link, e.g. on GitHub
                     in a <a href="https://gist.github.com/">Gist</a>.
-                    Once you have placed the spcification somewhere online,
+                    Once you have placed the specification somewhere online,
                     you can create a link like this one
                     <a id="example-specification-link" target="_blank"></a>.
                 </p>

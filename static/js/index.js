@@ -2,6 +2,9 @@
 const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
 const CALENDAR_ENDPOINT = "/calendar.html";
 const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/default_specification.json";
+const USER_PREFERRED_LANGUAGE = navigator.language.split("-")[0]; // credits to https://stackoverflow.com/a/3335420/1320237
+const USER_PREFERRED_LANGUAGE_DEFAULT = "en";
+const DHTMLX_DEFAULT_LANGUAGE = "en"; // see https://docs.dhtmlx.com/scheduler/localization.html
 
 function updateUrls() {
     updateCalendarInputs();
@@ -103,6 +106,12 @@ function getSpecification() {
     if (title != "") {
         specification.title = title;
     }
+    /* language */
+    var select = document.getElementById("select-language");
+    var language = select.value;
+    if (language && language != DHTMLX_DEFAULT_LANGUAGE) {
+        specification.language = language;
+    }
     console.log("getSpecification", specification);
     return specification;
 }
@@ -187,12 +196,35 @@ function fillDefaultSpecificationLink() {
 }
 
 
+function fillLanguageChoice() {
+    // see 
+    var select = document.getElementById("select-language");
+    var selected = false;
+    configuration.dhtmlx.languages.forEach(function (language){
+        var option = document.createElement("option");
+        option.text = language[0];
+        var code = option.value = language[2];
+        if (code == USER_PREFERRED_LANGUAGE) {
+            option.selected = true;
+            selected = true;
+        }
+        select.appendChild(option);
+    });
+    if (!selected) {
+        select.value = USER_PREFERRED_LANGUAGE_DEFAULT;
+    }
+    // change the specification if the language changes
+    // see https://stackoverflow.com/a/7858323/1320237
+    select.onchange = updateOutputs;
+}
+
 window.addEventListener("load", function(){
+    fillLanguageChoice();
     updateCalendarInputs();
     fillFirstInputWithData();
     updateCalendarInputs();
     updateOutputs();
-    fillDefaultSpecificationLink()
+    fillDefaultSpecificationLink();
 });
 
 

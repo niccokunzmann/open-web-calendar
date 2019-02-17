@@ -27,6 +27,7 @@ CALENDARS_TEMPLATE_FOLDER_NAME = "calendars"
 CALENDAR_TEMPLATE_FOLDER = os.path.join(TEMPLATE_FOLDER, CALENDARS_TEMPLATE_FOLDER_NAME)
 STATIC_FOLDER_NAME = "static"
 STATIC_FOLDER_PATH = os.path.join(HERE, STATIC_FOLDER_NAME)
+DHTMLX_LANGUAGES_FILE = os.path.join(STATIC_FOLDER_PATH, "js", "dhtmlx", "locale", "languages.json")
 
 # specification
 PARAM_SPECIFICATION_URL = "specification_url"
@@ -37,6 +38,15 @@ app = Flask(__name__, template_folder="templates")
 cache = Cache(app, config={
     'CACHE_TYPE': 'filesystem',
     'CACHE_DIR': tempfile.mktemp(prefix="cache-")})
+
+def get_configuration():
+    """Return the configuration for the browser"""
+    config = {}
+    with open(DHTMLX_LANGUAGES_FILE, encoding="UTF-8") as file:
+        config["dhtmlx"] = {
+            "languages" : json.load(file)
+        }
+    return config
 
 def set_JS_headers(response):
     repsonse = make_response(response)
@@ -224,6 +234,10 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
 @app.route("/")
 def serve_index():
     return render_app_template("index.html", get_specification())
+
+@app.route("/configuration.js")
+def serve_configuration():
+    return "/* generated */\nconst configuration = {};".format(json.dumps(get_configuration()))
 
 if __name__ == "__main__":
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
