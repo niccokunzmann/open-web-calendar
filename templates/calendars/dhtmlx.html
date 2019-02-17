@@ -17,12 +17,10 @@
             charset="utf-8"></script>
         <script src="js/configure.js" 
             charset="utf-8"></script>
-        <link href="css/dhtmlx/dhtmlxscheduler_material.css" 
+        <link href="css/dhtmlx/{{ specification['skin'] }}" 
             rel="stylesheet" type="text/css" charset="utf-8">
-        {% if specification.language %}
         <!-- see https://docs.dhtmlx.com/scheduler/localization.html -->
-        <script src="js/dhtmlx/locale/locale_{{ specification.language }}.js" charset="utf-8"></script>
-        {% endif %}
+        <script src="js/dhtmlx/locale/locale_{{ specification['language'] }}.js" charset="utf-8"></script>
         <style>
             html, body{
                 margin:0px;

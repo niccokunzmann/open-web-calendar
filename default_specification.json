@@ -1,5 +1,7 @@
 {
     "url": "/examples/WHO_Health_Days.ics",
     "template": "dhtmlx.html",
-    "title": "Open Web Calendar"
+    "title": "Open Web Calendar",
+    "language": "en",
+    "skin": "dhtmlxscheduler_material.css"
 }

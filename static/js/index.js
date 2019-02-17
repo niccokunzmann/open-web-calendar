@@ -3,8 +3,6 @@ const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
 const CALENDAR_ENDPOINT = "/calendar.html";
 const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/default_specification.json";
 const USER_PREFERRED_LANGUAGE = navigator.language.split("-")[0]; // credits to https://stackoverflow.com/a/3335420/1320237
-const USER_PREFERRED_LANGUAGE_DEFAULT = "en";
-const DHTMLX_DEFAULT_LANGUAGE = "en"; // see https://docs.dhtmlx.com/scheduler/localization.html
 
 function updateUrls() {
     updateCalendarInputs();
@@ -109,8 +107,14 @@ function getSpecification() {
     /* language */
     var select = document.getElementById("select-language");
     var language = select.value;
-    if (language && language != DHTMLX_DEFAULT_LANGUAGE) {
+    if (language && language != configuration.default_specification.language) {
         specification.language = language;
+    }
+    /* skin */
+    var select = document.getElementById("select-skin");
+    var skin = select.value;
+    if (skin && skin != configuration.default_specification.skin) {
+        specification.skin = skin;
     }
     console.log("getSpecification", specification);
     return specification;
@@ -211,15 +215,21 @@ function fillLanguageChoice() {
         select.appendChild(option);
     });
     if (!selected) {
-        select.value = USER_PREFERRED_LANGUAGE_DEFAULT;
+        select.value = configuration.default_specification.language;
     }
     // change the specification if the language changes
     // see https://stackoverflow.com/a/7858323/1320237
     select.onchange = updateOutputs;
 }
 
+function initializeSkinChoice() {
+    var select = document.getElementById("select-skin");
+    select.onchange = updateOutputs;
+}
+
 window.addEventListener("load", function(){
     fillLanguageChoice();
+    initializeSkinChoice();
     updateCalendarInputs();
     fillFirstInputWithData();
     updateCalendarInputs();
