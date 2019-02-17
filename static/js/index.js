@@ -227,9 +227,16 @@ function initializeSkinChoice() {
     select.onchange = updateOutputs;
 }
 
+function initializeTitle() {
+    var input = document.getElementById("calendar-title");
+    input.addEventListener("change", updateOutputs);
+    input.addEventListener("keyup", updateOutputs);
+}
+
 window.addEventListener("load", function(){
     fillLanguageChoice();
     initializeSkinChoice();
+    initializeTitle();
     updateCalendarInputs();
     fillFirstInputWithData();
     updateCalendarInputs();
