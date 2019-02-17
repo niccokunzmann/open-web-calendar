@@ -224,6 +224,7 @@ function fillLanguageChoice() {
 
 function initializeSkinChoice() {
     var select = document.getElementById("select-skin");
+    select.value = configuration.default_specification.skin;
     select.onchange = updateOutputs;
 }
 
@@ -234,12 +235,14 @@ function initializeTitle() {
 }
 
 window.addEventListener("load", function(){
+    // initialization
     fillLanguageChoice();
     initializeSkinChoice();
     initializeTitle();
     updateCalendarInputs();
     fillFirstInputWithData();
     updateCalendarInputs();
+    // updating what can be seen
     updateOutputs();
     fillDefaultSpecificationLink();
 });
