@@ -79,3 +79,9 @@ Development
 
 [web]: https://open-web-calendar.herokuapp.com
 
+Related Work
+------------
+
+- [calender_merger](https://github.com/niccokunzmann/calender_merger) for merging several ICAL files into one
+- [ical-filter](https://github.com/thoka/ical-filter) for filtering events in an ICAL file and providing the selection as file
+
