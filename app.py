@@ -140,7 +140,7 @@ def retrieve_calendar(url):
     events = []
     for calendar_event in ical_events.values():
         start = calendar_event["DTSTART"].dt
-        end = calendar_event["DTEND"].dt
+        end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
         geo = calendar_event.get("GEO", None)
         if geo:
             geo = {"lon": geo.longitude, "lat": geo.latitude}
