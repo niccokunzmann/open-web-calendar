@@ -42,6 +42,11 @@ template = {
             geoUrl = OSM_URL + encodeURIComponent(event.location);
         }
         return "<a href='" + geoUrl + "'>" + text + "</a>";
+    },
+    "debug": function(event) {
+        return "<pre class='debug' style='display:none'>" +
+            JSON.stringify(event, null, 2) +
+            "</pre>"
     }
 }
 
@@ -82,12 +87,8 @@ function loadCalendar() {
     }
     scheduler.templates.quick_info_content = function(start, end, event){
         return template.details(event) +
-            template.location(event) +
-            "<pre style='display:none'>" +
-            event.ical +
-            "\nsequence " +event.sequence +
-            "\nrecurrence " + event.recurrence +
-            "</pre>";
+            template.location(event) + 
+            template.debug(event);
     }
     // general style
     scheduler.templates.event_class=function(start,end,event){
