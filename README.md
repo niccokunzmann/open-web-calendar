@@ -41,6 +41,7 @@ Research
 Hosts
 - https://www.chronoflocalendar.com/
 - with API: http://www.instantcal.com/api.html
+- Wordpress: https://de.wordpress.org/plugins/all-in-one-event-calendar/
 
 Sources/Libs
 - https://stackoverflow.com/questions/9072802/is-there-an-open-source-javascript-calendar-that-supports-built-in-event-detail#9072985
