@@ -121,7 +121,7 @@ def retrieve_calendar(url):
     # collect latest event information
     ical_events = {} # id: event
     for calendar in calendars:
-        assert calendar.get("CALSCALE") == "GREGORIAN", "Only Gregorian calendars are supported."
+        assert calendar.get("CALSCALE", "GREGORIAN") == "GREGORIAN", "Only Gregorian calendars are supported." # https://www.kanzaki.com/docs/ical/calscale.html
         for calendar_event in calendar.walk():
             if not subcomponent_is_ical_event(calendar_event):
                 continue
