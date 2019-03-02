@@ -46,3 +46,7 @@ main {
     width: 100%;
     height: 600px;
 }
+
+#css-input {
+  width: 100%;
+}

@@ -3,7 +3,7 @@
     <head>
         <title>Open Web Calendar</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/index.css" 
+        <link href="css/index.css"
             rel="stylesheet" type="text/css" charset="utf-8">
         <script src="js/index.js"></script>
         <script src="configuration.js"></script>
@@ -22,7 +22,7 @@
             <div class="section">
                 <p>
                     To merge several calendars, please input the the
-                    URLs of the ICS calendars here: 
+                    URLs of the ICS calendars here:
                 </p>
                 <ul id="calendar-urls">
                 </ul>
@@ -41,15 +41,18 @@
                 <p>
                     You can make additional customizations of the calendar.
                 </p>
+                <h3 id="title">Title</h3>
                 <p>
                     To change the title, please input the name of the
                     calendar here: <br/>
                     <input type="text" id="calendar-title" />
                 </p>
+                <h3 id="language">Language</h3>
                 <p>
                     You can set the language of the calendar.<br/>
                     <select id="select-language"></select>
                 </p>
+                <h3 id="skins">Skins</h3>
                 <p>
                     You can select different skins for the calendar.<br/>
                     <!-- see the skins at the static/css/dhtmlx folder -->
@@ -61,6 +64,54 @@
                         <option value="dhtmlxscheduler_contrast_white.css">Contrast White</option>
                     </select>
                 </p>
+                <h3 id="style">Custom Style with CSS</h3>
+                <p>
+                  You can change the color of your calendar and many more
+                  properties using CSS.
+                  Your customization has priority over the Skin you choose.
+                  Below, you can choose from a few customizations we prepared
+                  for you.
+                </p>
+                <ul>
+                  <li>
+                    <input type="text"
+                           placeholder="white" class="color-input"
+                           cssTemplate=".dhx_cal_navline, .dhx_scale_bar {background-color: {color};}">
+                    You can change the background color of the calendar.
+                  </li>
+                  <li>
+                    <input type="text"
+                           placeholder="blue" class="color-input"
+                           cssTemplate=".event, .dhx_cal_tab.active, .dhx_cal_tab.active:hover {background-color: {color};} .dhx_month_head, .dhx_cal_tab, .dhx_cal_today_button {color: {color};} .dhx_cal_tab, .dhx_cal_tab.active {border-color: {color};}">
+                    You can change the color of the elements which can be
+                    clicked.
+                  </li>
+                  <li>
+                    <input type="text" id="color-background-today"
+                           placeholder="green" class="color-input"
+                           cssTemplate=".dhx_scale_holder_now, .dhx_now .dhx_month_head, .dhx_now .dhx_month_body { background-color: {color};}">
+                    You can change the background color of the current date.
+                  </li>
+                  <li>
+                    <input type="text" id="color-background-today"
+                           placeholder="black" class="color-input"
+                           cssTemplate=".dhx_month_body, .dhx_month_head, .dhx_cal_container { background-color: {color}; }">
+                    If you like to have a different color for the days, you can
+                    specify this, too.
+                  </li>
+                  <li>
+                    <input type="text" id="color-background-today"
+                           placeholder="black" class="color-input"
+                           cssTemplate=".dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: {color}; }">
+                    Some days of the calendar have a different color if they are
+                    not within the month.
+                  </li>
+                </ul>
+                <p>
+                    You can specify your own CSS properties if you like.
+                    <textarea id="css-input"></textarea>
+                </p>
+                <h3 id="specification">Hosting the Specification</h3>
                 <p>
                     The calendar can be generated not only using the url but
                     also through a JSON specification which resides in a file.

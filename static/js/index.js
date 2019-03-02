@@ -76,7 +76,7 @@ function updateCalendarOutputs(calendarUrl) {
     console.log("calendarUrl", calendarUrl);
     displayCalendarLink(calendarUrl);
     displayCalendar(calendarUrl);
-    showCalendarSourceCode(calendarUrl);   
+    showCalendarSourceCode(calendarUrl);
 
 }
 
@@ -85,6 +85,11 @@ function updateCalendarOutputs(calendarUrl) {
  */
 function updateSpecificationOutput(specification) {
     document.getElementById("json-specification").innerText = JSON.stringify(specification, null, 2);
+}
+
+function getValueById(id) {
+    var element = document.getElementById(id);
+    return element.value;
 }
 
 /* This generates the specification of the calendar.
@@ -100,21 +105,38 @@ function getSpecification() {
         specification.url = urls;
     }
     /* title */
-    var title = document.getElementById("calendar-title").value;
+    var title = getValueById("calendar-title");
     if (title != "") {
         specification.title = title;
     }
     /* language */
-    var select = document.getElementById("select-language");
-    var language = select.value;
+    var language = getValueById("select-language");
     if (language && language != configuration.default_specification.language) {
         specification.language = language;
     }
     /* skin */
-    var select = document.getElementById("select-skin");
-    var skin = select.value;
+    var skin = getValueById("select-skin");
     if (skin && skin != configuration.default_specification.skin) {
         specification.skin = skin;
+    }
+    /* color and CSS */
+    var css = configuration.default_specification.css;
+    var colorInputs = document.getElementsByClassName("color-input");
+    for (var i = 0; i < colorInputs.length; i++) {
+        var colorInput = colorInputs[i];
+        var color = colorInput.value;
+        if (color) {
+            css += colorInput.getAttribute("csstemplate").formatUnicorn({
+                "color": color
+            }) + "\n";
+        }
+    }
+    var customCss = getValueById("css-input");
+    if (!customCss.match(/^\s*$/) /* only white spaces */) {
+      css += customCss;
+    }
+    if (css) {
+        specification.css = css;
     }
     console.log("getSpecification", specification);
     return specification;
@@ -145,7 +167,7 @@ function escapeHtml(unsafe) {
 }
 
 /* Return the properties of an object.
- * 
+ *
  */
 function getOwnProperties(object) {
     // from https://stackoverflow.com/a/16735184/1320237
@@ -201,7 +223,7 @@ function fillDefaultSpecificationLink() {
 
 
 function fillLanguageChoice() {
-    // see 
+    // see
     var select = document.getElementById("select-language");
     var selected = false;
     configuration.dhtmlx.languages.forEach(function (language){
@@ -230,12 +252,30 @@ function initializeSkinChoice() {
 
 function initializeTitle() {
     var input = document.getElementById("calendar-title");
+    changeSpecificationOnChange(input);
+}
+
+/* general event input for specification changes */
+
+function changeSpecificationOnChange(input) {
     input.addEventListener("change", updateOutputs);
     input.addEventListener("keyup", updateOutputs);
 }
 
+/* Color and CSS customization */
+function listenForCSSChanges() {
+    var colorInputs = document.getElementsByClassName("color-input");
+    for (var i = 0; i < colorInputs.length; i++) {
+        var input = colorInputs[i];
+        changeSpecificationOnChange(input);
+    }
+    var CSSText = document.getElementById("css-input");
+    changeSpecificationOnChange(CSSText);
+}
+
 window.addEventListener("load", function(){
     // initialization
+    listenForCSSChanges();
     fillLanguageChoice();
     initializeSkinChoice();
     initializeTitle();
@@ -247,6 +287,22 @@ window.addEventListener("load", function(){
     fillDefaultSpecificationLink();
 });
 
+String.prototype.formatUnicorn = String.prototype.formatUnicorn ||
+function () {
+    // from https://stackoverflow.com/a/18234317
+    "use strict";
+    var str = this.toString();
+    if (arguments.length) {
+        var t = typeof arguments[0];
+        var key;
+        var args = ("string" === t || "number" === t) ?
+            Array.prototype.slice.call(arguments)
+            : arguments[0];
 
+        for (key in args) {
+            str = str.replace(new RegExp("\\{" + key + "\\}", "gi"), args[key]);
+        }
+    }
 
-
+    return str;
+};

@@ -3,5 +3,6 @@
     "template": "dhtmlx.html",
     "title": "Open Web Calendar",
     "language": "en",
-    "skin": "dhtmlxscheduler_material.css"
+    "skin": "dhtmlxscheduler_material.css",
+    "css": ""
 }

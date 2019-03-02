@@ -5,19 +5,19 @@
         <title>{{ specification["title"] }}</title>
         <meta charset="utf-8">
         <!-- scheduler -->
-        <script src="js/dhtmlx/dhtmlxscheduler.js" 
+        <script src="js/dhtmlx/dhtmlxscheduler.js"
             charset="utf-8"></script>
-        <script src="js/dhtmlx/dhtmlxscheduler_recurring.js" 
+        <script src="js/dhtmlx/dhtmlxscheduler_recurring.js"
             charset="utf-8"></script>
-        <script src="js/dhtmlx/dhtmlxscheduler_multisource.js" 
+        <script src="js/dhtmlx/dhtmlxscheduler_multisource.js"
             charset="utf-8"></script>
-        <script src="js/dhtmlx/dhtmlxscheduler_tooltip.js" 
+        <script src="js/dhtmlx/dhtmlxscheduler_tooltip.js"
             charset="utf-8"></script>
-        <script src="js/dhtmlx/dhtmlxscheduler_quick_info.js" 
+        <script src="js/dhtmlx/dhtmlxscheduler_quick_info.js"
             charset="utf-8"></script>
-        <script src="js/configure.js" 
+        <script src="js/configure.js"
             charset="utf-8"></script>
-        <link href="css/dhtmlx/{{ specification['skin'] }}" 
+        <link href="css/dhtmlx/{{ specification['skin'] }}"
             rel="stylesheet" type="text/css" charset="utf-8">
         <!-- see https://docs.dhtmlx.com/scheduler/localization.html -->
         <script src="js/dhtmlx/locale/locale_{{ specification['language'] }}.js" charset="utf-8"></script>
@@ -28,10 +28,11 @@
                 height:100%;
                 overflow:hidden;
             }
+            {{ specification['css'] }}
         </style>
     </head>
     <body>
-        <div id="scheduler_here" class="dhx_cal_container" 
+        <div id="scheduler_here" class="dhx_cal_container"
             style='width:100%; height:100%;'>
             <div class="dhx_cal_navline">
                 <div class="dhx_cal_prev_button">&nbsp;</div>
