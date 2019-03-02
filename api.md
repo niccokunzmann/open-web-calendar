@@ -36,7 +36,17 @@ You can specify the calendar behavior and looks by these means.
   not as query strings but as a JSON file.
   For an example, see the [default_specification.json] file.
 
+### Specification in the Calendar
 
+[app.py](https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81) compiles the specification from the given parameters in `get_specification()`.
+In the [template](https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23) you can access the specification through the `specification` variable.
+If there is a use-case, the specification should be available to JavaScript as the `specification` variable.
 
+### Specification in the index page
+
+The default specification is available before the calendar is built via JavaScript in the
+`configuration.default_specification` variable.
+There is a [getSpecification()](https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93) function which created the
+specification from the inputs.
 
 [default_specification.json]: ./default_specification.json
