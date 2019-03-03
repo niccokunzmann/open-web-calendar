@@ -104,19 +104,21 @@ def get_default_specification():
     with open(DEFAULT_SPECIFICATION_PATH, encoding="UTF-8") as file:
         return json.load(file)
 
-def get_specification():
+def get_specification(query=None):
     """Build the calendar specification."""
+    if query is None:
+        query = request.args
     specification = get_default_specification()
     # get a request parameter, see https://stackoverflow.com/a/11774434
-    url = request.args.get(PARAM_SPECIFICATION_URL, None)
+    url = query.get(PARAM_SPECIFICATION_URL, None)
     if url:
-        url_specification_response = spec_get(url)
+        url_specification_response = get_text_from_url(url)
         url_specification_json = json.loads(url_specification_response)
         specification.update(url_specification_json)
-    for parameter in request.args:
+    for parameter in query:
         # get a list of arguments
         # see http://werkzeug.pocoo.org/docs/0.14/datastructures/#werkzeug.datastructures.MultiDict
-        value = request.args.getlist(parameter, None)
+        value = query.getlist(parameter, None)
         if len(value) == 1:
             value = value[0]
         specification[parameter] = value
