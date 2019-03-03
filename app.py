@@ -16,7 +16,9 @@ from pprint import pprint
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
 PORT = int(os.environ.get("PORT", "5000"))
 
+# TODO: add as parameters
 MAXIMUM_THREADS = 100
+CACHE_REQUESTED_URLS_FOR_SECONDS = 600
 
 # constants
 HERE = os.path.dirname(__name__) or "."
@@ -38,6 +40,19 @@ app = Flask(__name__, template_folder="templates")
 cache = Cache(app, config={
     'CACHE_TYPE': 'filesystem',
     'CACHE_DIR': tempfile.mktemp(prefix="cache-")})
+
+# caching
+
+__URL_CACHE = {}
+def cache_url(url, text):
+    """Cache the value of a url."""
+    __URL_CACHE[url] = text
+    try:
+        get_text_from_url(url)
+    finally:
+        del __URL_CACHE[url]
+
+# configuration
 
 def get_configuration():
     """Return the configuration for the browser"""
@@ -72,6 +87,17 @@ def spec_get(url):
             return file.read()
     return requests.get(url).text
 
+@cache.memoize(
+    CACHE_REQUESTED_URLS_FOR_SECONDS,
+    forced_update=lambda: bool(__URL_CACHE))
+def get_text_from_url(url):
+    """Return the text from a url.
+
+    The result is cached CACHE_REQUESTED_URLS_FOR_SECONDS.
+    """
+    if __URL_CACHE:
+        return __URL_CACHE[url]
+    return requests.get(url).text
 
 def get_default_specification():
     """Return the default specification."""
@@ -95,7 +121,7 @@ def get_specification():
             value = value[0]
         specification[parameter] = value
     return specification
-    
+
 def date_to_string(date):
     """Convert a date to a string."""
     # use ISO format
@@ -112,7 +138,7 @@ def subcomponent_is_ical_event(event):
 
 def retrieve_calendar(url):
     """Get the calendar entry from a url.
-    
+
     Also unfold the events to past and future.
     see https://dateutil.readthedocs.io/en/stable/rrule.html
     """
@@ -205,13 +231,13 @@ def get_events(specification):
     return all_events
 
 def render_app_template(template, specification):
-    return render_template(template, 
+    return render_template(template,
         specification=specification,
         get_events=get_events,
         json=json,
     )
 
-@app.route("/calendar.<type>", methods=['GET', 'OPTIONS']) 
+@app.route("/calendar.<type>", methods=['GET', 'OPTIONS'])
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
 #@cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
 def get_calendar(type):
