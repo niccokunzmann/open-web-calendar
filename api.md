@@ -24,6 +24,7 @@ You can specify the calendar behavior and looks by these means.
    this url, too.
    Query parameters are still more important than what is written
    in this file.
+   The source format can be YAML or JSON.
 3. **[default_specification.json]**  
    This file contains the default parameters.
    They must not be hardcoded in the source code. They are there.

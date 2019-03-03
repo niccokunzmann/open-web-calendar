@@ -29,3 +29,8 @@ def test_specification_prefers_url_over_default(url):
 def test_url_parameters_are_more_important_than_specification_url(url):
     cache_url(url, '{"test": "123"}')
     assert get_specification(query=MultiDict({"specification_url":url, "test": "test"}))["test"] == "test"
+
+@with_url
+def test_specification_can_be_loaded_from_yml_files(url):
+    cache_url(url, 'test: "123"')
+    assert get_specification(query=MultiDict({"specification_url":url}))["test"] == "123"

@@ -11,6 +11,7 @@ import icalendar
 import datetime
 from dateutil.rrule import rrulestr
 from pprint import pprint
+import yaml
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -105,8 +106,11 @@ def get_specification(query=None):
     url = query.get(PARAM_SPECIFICATION_URL, None)
     if url:
         url_specification_response = get_text_from_url(url)
-        url_specification_json = json.loads(url_specification_response)
-        specification.update(url_specification_json)
+        try:
+            url_specification_values = json.loads(url_specification_response)
+        except json.JSONDecodeError:
+            url_specification_values = yaml.safe_load(url_specification_response)
+        specification.update(url_specification_values)
     for parameter in query:
         # get a list of arguments
         # see http://werkzeug.pocoo.org/docs/0.14/datastructures/#werkzeug.datastructures.MultiDict
