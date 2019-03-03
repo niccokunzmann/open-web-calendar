@@ -79,14 +79,6 @@ def set_js_headers(func):
         return set_JS_headers(func(*args, **kw))
     return with_js_response
 
-
-def spec_get(url):
-    if url.startswith("/"):
-        assert not ".." in url
-        with open(STATIC_FOLDER_PATH + url, encoding="UTF-8") as file:
-            return file.read()
-    return requests.get(url).text
-
 @cache.memoize(
     CACHE_REQUESTED_URLS_FOR_SECONDS,
     forced_update=lambda: bool(__URL_CACHE))
@@ -144,7 +136,7 @@ def retrieve_calendar(url):
     Also unfold the events to past and future.
     see https://dateutil.readthedocs.io/en/stable/rrule.html
     """
-    calendar_text = spec_get(url)
+    calendar_text = get_text_from_url(url)
     calendars = icalendar.Calendar.from_ical(calendar_text, multiple=True)
     # collect latest event information
     ical_events = {} # id: event
