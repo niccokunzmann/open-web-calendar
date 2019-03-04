@@ -12,6 +12,7 @@ import datetime
 from dateutil.rrule import rrulestr
 from pprint import pprint
 import yaml
+import recurring_ical_events
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -143,26 +144,15 @@ def retrieve_calendar(url):
     calendar_text = get_text_from_url(url)
     calendars = icalendar.Calendar.from_ical(calendar_text, multiple=True)
     # collect latest event information
-    ical_events = {} # id: event
+    ical_events = []
+    today = datetime.datetime.utcnow()
+    one_year_ahead = today.replace(year=today.year + 1)
+    one_year_before = today.replace(year=today.year - 1)
     for calendar in calendars:
-        assert calendar.get("CALSCALE", "GREGORIAN") == "GREGORIAN", "Only Gregorian calendars are supported." # https://www.kanzaki.com/docs/ical/calscale.html
-        for calendar_event in calendar.walk():
-            if not subcomponent_is_ical_event(calendar_event):
-                continue
-            id = calendar_event["UID"]
-            other_event = ical_events.get(id)
-            if other_event is None:
-                ical_events[id] = calendar_event
-            elif other_event.get("SEQUENCE", 0) <= calendar_event.get("SEQUENCE", 0):
-                for key, value in calendar_event.items():
-                    other_event[key] = value
-            else:
-                for key, value in other_event.items():
-                    calendar_event[key] = value
-                ical_events[id] = calendar_event
+        ical_events.extend(recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead))
     # collect events and their recurrences
     events = []
-    for calendar_event in ical_events.values():
+    for calendar_event in ical_events:
         start = calendar_event["DTSTART"].dt
         end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
         geo = calendar_event.get("GEO", None)
@@ -187,32 +177,7 @@ def retrieve_calendar(url):
             "sequence": sequence,
             "recurrence": None
         }
-        # does not work, unfolding it manually
-        # "rec_type" : calendar_event.get("RRULE:FREQ", ""),
-        #pprint(calendar_event)
-        rule = calendar_event.get("RRULE")
-        if rule:
-            today = datetime.datetime.today()
-            one_year_ahead = today.replace(year=today.year + 1, tzinfo=start.tzinfo)
-            rule = rrulestr(rule.to_ical().decode(), dtstart = start, cache=True, unfold=True)
-            duration = end - start
-            for i, date in enumerate(rule):
-                # use correct time to start
-                # see https://docs.python.org/3/library/datetime.html#datetime.time.replace
-                # and this for localize https://stackoverflow.com/a/4974930/1320237
-                rstart = start.tzinfo.localize(datetime.datetime(date.year, date.month, date.day, start.hour, start.minute, start.second, microsecond=0))
-                if date > one_year_ahead:
-                    break
-                rend = rstart + duration
-                rec_event = event.copy()
-                rec_event["start_date"] = date_to_string(rstart)
-                rec_event["end_date"] = date_to_string(rend)
-                rec_event["start_date_iso"] = rstart.isoformat()
-                rec_event["end_date_iso"] = rend.isoformat()
-                rec_event["recurrence"] = i
-                events.append(rec_event)
-        else:
-            events.append(event)
+        events.append(event)
     return events
 
 def get_events(specification):
