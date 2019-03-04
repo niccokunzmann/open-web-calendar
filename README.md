@@ -1,7 +1,8 @@
 Open Web Calendar
 =================
 
-[Try it out][web]
+[![Build Status](https://travis-ci.org/niccokunzmann/open-web-calendar.svg?branch=master)](https://travis-ci.org/niccokunzmann/open-web-calendar)
+**[Try it out][web]**
 
 There are several commercial solutions which allow embedding of calendar into
 my website. I only have a link to an ICS file and want to show a nice-looking
@@ -59,6 +60,7 @@ Software Components
 - Python3 and the packages in requirements.txt
   - [Flask](http://flask.pocoo.org/)
 - [DHTMLX scheduler](https://docs.dhtmlx.com/scheduler/)
+- [python-recurring-ical-events](https://github.com/niccokunzmann/python-recurring-ical-events)
 
 
 Development
