@@ -25,6 +25,8 @@ There is a free plan.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+Heroku uses [gunicorn](http://flask.pocoo.org/docs/dev/deploying/wsgi-standalone/#gunicorn)
+to run the server, see the [Procfile](Procfile).
 
 Research
 --------
@@ -50,7 +52,7 @@ Sources/Libs
 Search Terms
 ------------
 
-calendar ics service, ics calendar to html, open source calendar view ical, 
+calendar ics service, ics calendar to html, open source calendar view ical,
 python Ical, calendar viewer website for ics, open source calendar website,
 embed calendar into website
 
@@ -87,4 +89,3 @@ Related Work
 
 - [calender_merger](https://github.com/niccokunzmann/calender_merger) for merging several ICAL files into one
 - [ical-filter](https://github.com/thoka/ical-filter) for filtering events in an ICAL file and providing the selection as file
-

@@ -4,3 +4,4 @@ icalendar==4.0.3
 requests==2.21.0
 pyyaml==3.13
 recurring-ical-events==0.1.1a0
+gunicorn==19.9.0
