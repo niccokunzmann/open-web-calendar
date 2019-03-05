@@ -236,7 +236,7 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
 
 @app.route("/")
 def serve_index():
-    return render_app_template("index.html", get_specification())
+    return send_from_directory("static", "index.html")
 
 @app.route("/configuration.js")
 def serve_configuration():
