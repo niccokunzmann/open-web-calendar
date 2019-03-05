@@ -121,21 +121,27 @@ def get_specification(query=None):
         specification[parameter] = value
     return specification
 
-def date_to_string(date):
-    """Convert a date to a string."""
+def date_to_string(date, timeshift_minutes):
+    """Convert a date to a string.
+
+    - timeshift_minutes is the timeshift specified by the calendar
+        for dates.
+    """
     # use ISO format
     # see https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step4implementingcrud
     # see https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
     # see https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-    if hasattr(date, "astimezone"):
-        date = date.astimezone(datetime.timezone.utc)
+    if isinstance(date, datetime.date) and not isinstance(date, datetime.datetime):
+        timezone = datetime.timezone(datetime.timedelta(minutes=-timeshift_minutes))
+        date = datetime.datetime(date.year, date.month, date.day, tzinfo=timezone)
+    date = date.astimezone(datetime.timezone.utc)
     return date.strftime("%Y-%m-%d %H:%M")
 
 def subcomponent_is_ical_event(event):
     """Whether the calendar subcomponent is an event."""
     return isinstance(event, icalendar.cal.Event)
 
-def retrieve_calendar(url):
+def retrieve_calendar(url, specification):
     """Get the calendar entry from a url.
 
     Also unfold the events to past and future.
@@ -152,6 +158,7 @@ def retrieve_calendar(url):
         ical_events.extend(recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead))
     # collect events and their recurrences
     events = []
+    timeshift = int(specification["timeshift"])
     for calendar_event in ical_events:
         start = calendar_event["DTSTART"].dt
         end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
@@ -162,8 +169,8 @@ def retrieve_calendar(url):
         sequence = str(calendar_event.get("SEQUENCE", 0))
         id = calendar_event["UID"]
         event = {
-            "start_date": date_to_string(start),
-            "end_date": date_to_string(end),
+            "start_date": date_to_string(start, timeshift),
+            "end_date": date_to_string(end, timeshift),
             "start_date_iso": start.isoformat(),
             "end_date_iso": end.isoformat(),
             "start_date_iso_0": start.isoformat(),
@@ -188,7 +195,7 @@ def get_events(specification):
     assert len(urls) <= MAXIMUM_THREADS, "You can only merge {} urls.".format(MAXIMUM_THREADS)
     all_events = []
     with ThreadPoolExecutor(max_workers=MAXIMUM_THREADS) as e:
-        events_list = e.map(retrieve_calendar, urls)
+        events_list = e.map(lambda url: retrieve_calendar(url, specification), urls)
         for events in events_list:
             all_events.extend(events)
     return all_events

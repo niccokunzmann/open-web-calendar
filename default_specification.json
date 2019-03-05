@@ -4,5 +4,6 @@
     "title": "Open Web Calendar",
     "language": "en",
     "skin": "dhtmlxscheduler_material.css",
-    "css": ""
+    "css": "",
+    "timeshift": 0
 }
