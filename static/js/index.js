@@ -66,18 +66,18 @@ function updateOutputs() {
     var specification = getSpecification();
     var calendarUrl = getCalendarUrl(specification);
     if (lastCalendarUrl != calendarUrl) {
-        updateCalendarOutputs(calendarUrl);
+        updateCalendarOutputs(calendarUrl, specification);
     }
     lastCalendarUrl = calendarUrl;
     updateSpecificationOutput(specification);
 }
 
-function updateCalendarOutputs(calendarUrl) {
+function updateCalendarOutputs(calendarUrl, specification) {
     console.log("calendarUrl", calendarUrl);
     displayCalendarLink(calendarUrl);
-    displayCalendar(calendarUrl);
-    showCalendarSourceCode(calendarUrl);
-
+    var sourceCode = getCalendarSourceCode(calendarUrl, specification);
+    displayCalendar(sourceCode);
+    showCalendarSourceCode(sourceCode);
 }
 
 /* Update the output of the specification.
@@ -90,6 +90,16 @@ function updateSpecificationOutput(specification) {
 function getValueById(id) {
     var element = document.getElementById(id);
     return element.value;
+}
+
+/* Set a value in the specification if the value does not equal
+ * the default.
+ */
+function setSpecificationValueFromId(specification, key, id) {
+  var value = getValueById(id);
+  if (value != configuration.default_specification[key]) {
+      specification[key] = value;
+  }
 }
 
 /* This generates the specification of the calendar.
@@ -105,20 +115,11 @@ function getSpecification() {
         specification.url = urls;
     }
     /* title */
-    var title = getValueById("calendar-title");
-    if (title != "") {
-        specification.title = title;
-    }
+    setSpecificationValueFromId(specification, "title", "calendar-title");
     /* language */
-    var language = getValueById("select-language");
-    if (language && language != configuration.default_specification.language) {
-        specification.language = language;
-    }
+    setSpecificationValueFromId(specification, "language", "select-language");
     /* skin */
-    var skin = getValueById("select-skin");
-    if (skin && skin != configuration.default_specification.skin) {
-        specification.skin = skin;
-    }
+    setSpecificationValueFromId(specification, "skin", "select-skin");
     /* color and CSS */
     var css = configuration.default_specification.css;
     var colorInputs = document.getElementsByClassName("color-input");
@@ -138,6 +139,8 @@ function getSpecification() {
     if (css) {
         specification.css = css;
     }
+    /* link targets */
+    setSpecificationValueFromId(specification, "target", "select-target");
     console.log("getSpecification", specification);
     return specification;
 }
@@ -147,13 +150,29 @@ function displayCalendarLink(url) {
     link.innerText = url;
     link.href = url;
 }
-function displayCalendar(url) {
-    var link = document.getElementById("open-web-calendar");
-    link.src = url;
+function displayCalendar(sourceCode) {
+    var container = document.getElementById("calendar-code-execution");
+    container.innerHTML = sourceCode;
 }
-function showCalendarSourceCode(url) {
+function showCalendarSourceCode(sourceCode) {
     var link = document.getElementById("calendar-code");
-    link.innerText = '<iframe id="open-web-calendar" \n    src="' + escapeHtml(url) + '" \n    allowTransparency="true" scrolling="no" \n    frameborder="0" height="600px" width="100%"></iframe>'
+    link.innerText = sourceCode;
+}
+
+// see also https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+// An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can remove its sandboxing.
+var TARGET_TO_SANDBOX = {
+  "_blank": 'sandbox="allow-scripts allow-same-origin allow-popups"',
+  "_top": 'sandbox="allow-scripts allow-same-origin allow-top-navigation"',
+  "_parent": 'sandbox="allow-scripts allow-same-origin allow-top-navigation"', // https://stackoverflow.com/a/16929749/1320237
+  "_self": 'sandbox="allow-scripts allow-same-origin"' // https://stackoverflow.com/a/17802841/1320237
+}
+
+function getCalendarSourceCode(url, specification) {
+  return '<iframe id="open-web-calendar" \n    src="' + escapeHtml(url) + '"' +
+         '\n    ' + TARGET_TO_SANDBOX[specification.target || configuration.default_specification.target] +
+         '\n    allowTransparency="true" scrolling="no" ' +
+         '\n    frameborder="0" height="600px" width="100%"></iframe>';
 }
 
 function escapeHtml(unsafe) {
@@ -273,12 +292,20 @@ function listenForCSSChanges() {
     changeSpecificationOnChange(CSSText);
 }
 
+function initializeLinkTargetChoice() {
+    var select = document.getElementById("select-target");
+    select.value = configuration.default_specification.target;
+    select.onchange = updateOutputs;
+}
+
+
 window.addEventListener("load", function(){
     // initialization
     listenForCSSChanges();
     fillLanguageChoice();
     initializeSkinChoice();
     initializeTitle();
+    initializeLinkTargetChoice();
     updateCalendarInputs();
     fillFirstInputWithData();
     updateCalendarInputs();

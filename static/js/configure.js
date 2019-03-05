@@ -41,7 +41,7 @@ template = {
         } else {
             geoUrl = OSM_URL + encodeURIComponent(event.location);
         }
-        return "<a href='" + geoUrl + "'>" + text + "</a>";
+        return "<a target='" + specification.target + "' href='" + geoUrl + "'>" + text + "</a>";
     },
     "debug": function(event) {
         return "<pre class='debug' style='display:none'>" +
@@ -53,7 +53,7 @@ template = {
 /* The files use a Scheduler variable.
 * scheduler.locale is used to load the locale.
 * This creates the required interface.
-*/ 
+*/
 var setLocale = function(){};
 var Scheduler = {plugin:function(setLocale_){
     // this is called by the locale_??.js files.
@@ -79,7 +79,7 @@ function loadCalendar() {
     scheduler.templates.tooltip_text = function(start, end, event) {
         return template.summary(event) + template.details(event) + template.location(event);
     };
-    dhtmlXTooltip.config.delta_x = 0; 
+    dhtmlXTooltip.config.delta_x = 0;
     dhtmlXTooltip.config.delta_y = 0;
     // quick info
     scheduler.templates.quick_info_title = function(start, end, event){
@@ -87,19 +87,19 @@ function loadCalendar() {
     }
     scheduler.templates.quick_info_content = function(start, end, event){
         return template.details(event) +
-            template.location(event) + 
+            template.location(event) +
             template.debug(event);
     }
     // general style
     scheduler.templates.event_class=function(start,end,event){
         return "event";
     };
-    
-    schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + 
+
+    schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") +
         document.location.search;
 
     scheduler.load(schedulerUrl, "json");
-    
+
     //var dp = new dataProcessor(schedulerUrl);
     // use RESTful API on the backend
     //dp.setTransactionMode("REST");
@@ -107,4 +107,3 @@ function loadCalendar() {
 }
 
 window.addEventListener("load", loadCalendar);
-

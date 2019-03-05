@@ -32,9 +32,7 @@
                     To embed the calendar, use this code on your website:
                     <pre id="calendar-code" class="code"></pre>
                     You can view the resulting calendar below.
-                    <iframe id="open-web-calendar" src=""
-                            allowTransparency="true" scrolling="no"
-                            frameborder="0"></iframe>
+                    <div id="calendar-code-execution"></div>
                 </p>
             </div>
             <div class="section">
@@ -62,6 +60,18 @@
                         <option value="dhtmlxscheduler_flat.css">Flat</option>
                         <option value="dhtmlxscheduler_contrast_black.css">Contrast Black</option>
                         <option value="dhtmlxscheduler_contrast_white.css">Contrast White</option>
+                    </select>
+                </p>
+                <h3 id="links">Links</h3>
+                <p>
+                    Events may have locations and URLs. If you embed the
+                    calendar into a website, you can choose where the
+                    clicked link opens the page.<br/>
+                    <select id="select-target">
+                        <option value="_self">Open the linked document in the same frame as it was clicked.</option>
+                        <option value="_parent">Open the linked document in the parent frame.</option>
+                        <option value="_blank">Open the linked document in a new window or tab.</option>
+                        <option value="_top">Open the linked document in the full body of the window.</option>
                     </select>
                 </p>
                 <h3 id="style">Custom Style with CSS</h3>

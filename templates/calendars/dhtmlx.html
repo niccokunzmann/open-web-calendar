@@ -4,6 +4,9 @@
     <head>
         <title>{{ specification["title"] }}</title>
         <meta charset="utf-8">
+        <script type="text/javascript">
+            var specification = {{ specification | tojson | safe }};
+        </script>
         <!-- scheduler -->
         <script src="js/dhtmlx/dhtmlxscheduler.js"
             charset="utf-8"></script>

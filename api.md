@@ -41,7 +41,7 @@ You can specify the calendar behavior and looks by these means.
 
 [app.py](https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81) compiles the specification from the given parameters in `get_specification()`.
 In the [template](https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23) you can access the specification through the `specification` variable.
-If there is a use-case, the specification should be available to JavaScript as the `specification` variable.
+The specification is available to JavaScript as the `specification` variable.
 
 ### Specification in the index page
 
