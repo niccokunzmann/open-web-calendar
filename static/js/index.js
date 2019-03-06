@@ -176,7 +176,6 @@ function getCalendarSourceCode(url, specification) {
         '\n    src="' + escapeHtml(url) + '"' +
         '\n    ' + TARGET_TO_SANDBOX[specification.target || configuration.default_specification.target] +
         '\n    allowTransparency="true" scrolling="no" ' +
-        '\n    ' +
         '\n    frameborder="0" height="600px" width="100%"></iframe>';
     return code;
 }
