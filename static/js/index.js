@@ -57,17 +57,13 @@ function getCalendarUrl(specification) {
     return url + parameters.join("&");
 }
 
-var lastCalendarUrl = "";
-
 /* This is called after the inputs changed.
  *
  */
 function updateOutputs() {
     var specification = getSpecification();
     var calendarUrl = getCalendarUrl(specification);
-    if (lastCalendarUrl != calendarUrl) {
-        updateCalendarOutputs(calendarUrl, specification);
-    }
+    updateCalendarOutputs(calendarUrl, specification);
     lastCalendarUrl = calendarUrl;
     updateSpecificationOutput(specification);
 }
@@ -159,6 +155,10 @@ function showCalendarSourceCode(sourceCode) {
     link.innerText = sourceCode;
 }
 
+function getLoadingAnimationUrl() {
+    return getValueById("select-loader");
+}
+
 // see also https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 // An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can remove its sandboxing.
 var TARGET_TO_SANDBOX = {
@@ -169,10 +169,24 @@ var TARGET_TO_SANDBOX = {
 }
 
 function getCalendarSourceCode(url, specification) {
-  return '<iframe id="open-web-calendar" \n    src="' + escapeHtml(url) + '"' +
-         '\n    ' + TARGET_TO_SANDBOX[specification.target || configuration.default_specification.target] +
-         '\n    allowTransparency="true" scrolling="no" ' +
-         '\n    frameborder="0" height="600px" width="100%"></iframe>';
+    var code =
+        '<iframe id="open-web-calendar" ' +
+        (shouldShowAnimationForLoading() ?
+        '\n    style="background:url(\'' + getLoadingAnimationUrl() + '\') center center no-repeat;"': "") +
+        '\n    src="' + escapeHtml(url) + '"' +
+        '\n    ' + TARGET_TO_SANDBOX[specification.target || configuration.default_specification.target] +
+        '\n    allowTransparency="true" scrolling="no" ' +
+        '\n    ' +
+        '\n    frameborder="0" height="600px" width="100%"></iframe>';
+    return code;
+}
+
+/* Whether the user should see an animation.
+ * This is not in the specification as the server must be another server than
+ * the one serving the calendar.
+ */
+function shouldShowAnimationForLoading() {
+    return getLoadingAnimationUrl() != "";
 }
 
 function escapeHtml(unsafe) {
@@ -298,6 +312,10 @@ function initializeLinkTargetChoice() {
     select.onchange = updateOutputs;
 }
 
+function initializeLoader() {
+    var select = document.getElementById("select-loader");
+    select.onchange = updateOutputs;
+}
 
 window.addEventListener("load", function(){
     // initialization
@@ -305,6 +323,7 @@ window.addEventListener("load", function(){
     fillLanguageChoice();
     initializeSkinChoice();
     initializeTitle();
+    initializeLoader();
     initializeLinkTargetChoice();
     updateCalendarInputs();
     fillFirstInputWithData();

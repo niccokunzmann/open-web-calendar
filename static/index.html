@@ -121,6 +121,15 @@
                     You can specify your own CSS properties if you like.
                     <textarea id="css-input"></textarea>
                 </p>
+                <h3 id="loader">Loading Animation</h3>
+                <p>
+                  In some cases, the server takes quite a time to load the calendar.
+                  In case the server uses a free plan on Heroku, the server needs to start first.<br/>
+                  <select id="select-loader">
+                      <option value="">no loader</option>
+                      <option value="https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif">circular loader</option>
+                  </select>
+                </p>
                 <h3 id="specification">Hosting the Specification</h3>
                 <p>
                     The calendar can be generated not only using the url but
