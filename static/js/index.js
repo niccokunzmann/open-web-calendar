@@ -284,6 +284,7 @@ function initializeSkinChoice() {
 
 function initializeTitle() {
     var input = document.getElementById("calendar-title");
+    input.value = configuration.default_specification.title;
     changeSpecificationOnChange(input);
 }
 
