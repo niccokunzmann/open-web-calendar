@@ -182,7 +182,8 @@ def retrieve_calendar(url, specification):
             "uid": id,
             "ical": calendar_event.to_ical().decode("UTF-8"),
             "sequence": sequence,
-            "recurrence": None
+            "recurrence": None,
+            "url": calendar_event.get("URL"),
         }
         events.append(event)
     return events

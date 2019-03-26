@@ -23,9 +23,19 @@ function getQueries() {
 var GOOGLE_URL = "https://maps.google.com/maps?q=";
 var OSM_URL = "https://www.openstreetmap.org/search?query=";
 
+/* Create a link around the HTML text.
+ * Use this instead of creating links manually because it also sets the
+ * target according to the specification.
+ */
+function makeLink(url, html) {
+  return "<a target='" + specification.target + "' href='" + encodeURI(url) + "'>" + html + "</a>";
+}
+
 template = {
     "summary": function(event) {
-        return "<div class='summary'>" + event.text + "</div>";
+        return "<div class='summary'>" +
+          (event.url ? makeLink(event.url, event.text) : event.text) +
+          "</div>";
     },
     "details": function(event) {
         return "<div class='details'>" + event.description + "</div>";
@@ -41,7 +51,7 @@ template = {
         } else {
             geoUrl = OSM_URL + encodeURIComponent(event.location);
         }
-        return "<a target='" + specification.target + "' href='" + geoUrl + "'>" + text + "</a>";
+        return makeLink(geoUrl, text);
     },
     "debug": function(event) {
         return "<pre class='debug' style='display:none'>" +
