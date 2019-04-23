@@ -131,9 +131,11 @@ def date_to_string(date, timeshift_minutes):
     # see https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step4implementingcrud
     # see https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
     # see https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+    timezone = datetime.timezone(datetime.timedelta(minutes=-timeshift_minutes))
     if isinstance(date, datetime.date) and not isinstance(date, datetime.datetime):
-        timezone = datetime.timezone(datetime.timedelta(minutes=-timeshift_minutes))
         date = datetime.datetime(date.year, date.month, date.day, tzinfo=timezone)
+    elif date.tzinfo is None:
+        date = date.astimezone(timezone)
     date = date.astimezone(datetime.timezone.utc)
     return date.strftime("%Y-%m-%d %H:%M")
 
