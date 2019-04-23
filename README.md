@@ -82,6 +82,9 @@ Development
     python3 app.py
     ```
 
+For the configuration of the app through environment variables,
+see the [app.json] file.
+
 [web]: https://open-web-calendar.herokuapp.com
 
 Related Work
@@ -90,3 +93,5 @@ Related Work
 - [calender_merger](https://github.com/niccokunzmann/calender_merger) for merging several ICAL files into one
 - [ical-filter](https://github.com/thoka/ical-filter) for filtering events in an ICAL file and providing the selection as file
 - [Wordpress all in one event calendar](https://wordpress.org/plugins/all-in-one-event-calendar/)
+
+[app.json]: app.json
