@@ -136,7 +136,7 @@ def date_to_string(date, timeshift_minutes):
     if isinstance(date, datetime.date) and not isinstance(date, datetime.datetime):
         date = datetime.datetime(date.year, date.month, date.day, tzinfo=timezone)
     elif date.tzinfo is None:
-        date = date.astimezone(timezone)
+        date = date.replace(tzinfo=timezone)
     date = date.astimezone(datetime.timezone.utc)
     return date.strftime("%Y-%m-%d %H:%M")
 
