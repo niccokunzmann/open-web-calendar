@@ -13,6 +13,7 @@ from dateutil.rrule import rrulestr
 from pprint import pprint
 import yaml
 import recurring_ical_events
+import traceback
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -149,7 +150,11 @@ def retrieve_calendar(url, specification):
     Also unfold the events to past and future.
     see https://dateutil.readthedocs.io/en/stable/rrule.html
     """
-    calendar_text = get_text_from_url(url)
+    try:
+        calendar_text = get_text_from_url(url)
+    except requests.exceptions.ConnectionError:
+        traceback.print_exc()
+        return []
     calendars = icalendar.Calendar.from_ical(calendar_text, multiple=True)
     # collect latest event information
     ical_events = []
