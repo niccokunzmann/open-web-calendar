@@ -164,7 +164,7 @@ def retrieve_calendar(url, specification):
     for calendar in calendars:
         ical_events.extend(recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead))
     # collect events and their recurrences
-    events = []
+    events = {} # id: event
     timeshift = int(specification["timeshift"])
     for calendar_event in ical_events:
         start = calendar_event["DTSTART"].dt
@@ -174,7 +174,7 @@ def retrieve_calendar(url, specification):
             geo = {"lon": geo.longitude, "lat": geo.latitude}
         name = calendar_event.get("SUMMARY", "")
         sequence = str(calendar_event.get("SEQUENCE", 0))
-        id = calendar_event["UID"]
+        uid = calendar_event["UID"]
         event = {
             "start_date": date_to_string(start, timeshift),
             "end_date": date_to_string(end, timeshift),
@@ -186,13 +186,14 @@ def retrieve_calendar(url, specification):
             "description": calendar_event.get("DESCRIPTION", ""),
             "location": calendar_event.get("LOCATION", None),
             "geo": geo,
-            "uid": id,
+            "uid": uid,
             "ical": calendar_event.to_ical().decode("UTF-8"),
             "sequence": sequence,
             "recurrence": None,
             "url": calendar_event.get("URL"),
         }
-        events.append(event)
+        event_id = (uid, event["start_date"])
+        events[event_id] = event
     return events
 
 def get_events(specification):
@@ -201,12 +202,12 @@ def get_events(specification):
     if isinstance(urls, str):
         urls = [urls]
     assert len(urls) <= MAXIMUM_THREADS, "You can only merge {} urls.".format(MAXIMUM_THREADS)
-    all_events = []
+    all_events = {}
     with ThreadPoolExecutor(max_workers=MAXIMUM_THREADS) as e:
         events_list = e.map(lambda url: retrieve_calendar(url, specification), urls)
         for events in events_list:
-            all_events.extend(events)
-    return all_events
+            all_events.update(events)
+    return list(all_events.values())
 
 def render_app_template(template, specification):
     return render_template(template,
