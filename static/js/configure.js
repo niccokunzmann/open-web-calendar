@@ -1,3 +1,14 @@
+
+function escapeHtml(unsafe) {
+    // from https://stackoverflow.com/a/6234804
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
+
 function getQueries() {
     // from http://stackoverflow.com/a/1099670/1320237
     var qs = document.location.search;
@@ -28,7 +39,7 @@ var OSM_URL = "https://www.openstreetmap.org/search?query=";
  * target according to the specification.
  */
 function makeLink(url, html) {
-  return "<a target='" + specification.target + "' href='" + encodeURI(url) + "'>" + html + "</a>";
+  return "<a target='" + specification.target + "' href='" + escapeHtml(url) + "'>" + html + "</a>";
 }
 
 template = {
