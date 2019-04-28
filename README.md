@@ -11,7 +11,8 @@ accessed (such as ownCloud/nextCloud in my case).
 I also want to be in control over who knows the people who
 visit the site and not pass everything to Google.
 This is a solution in my case which I share with the world.
-You are free to use it or deploy your own. It works offline and in company networks, too.
+You are free to use it or deploy your own, modify or share it.
+It works offline and in company networks, too.
 
 Features
 - Embedded calendar
