@@ -4,10 +4,14 @@ Open Web Calendar
 [![Build Status](https://travis-ci.org/niccokunzmann/open-web-calendar.svg?branch=master)](https://travis-ci.org/niccokunzmann/open-web-calendar)
 **[Try it out][web]**
 
-There are several commercial solutions which allow embedding of calendar into
-my website. I only have a link to an ICS file and want to show a nice-looking
-calenar on my site which gives me the control over who knows the people who
-visit the site.
+There are several commercial solutions which allow embedding of calendars into my website.
+I only have a link to an ICS file and want to show a nice-looking calendar on my site.
+Browser-only calendars usually have the problem that many ICS files can not be
+accessed (such as ownCloud/nextCloud in my case).
+I also want to be in control over who knows the people who
+visit the site and not pass everything to Google.
+This is a solution in my case which I share with the world.
+You are free to use it or deploy your own. It works offline and in company networks, too.
 
 Features
 - Embedded calendar
