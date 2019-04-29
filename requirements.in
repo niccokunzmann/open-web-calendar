@@ -1,7 +1,7 @@
-flask-caching==1.4.0
-flask==1.0.2
-icalendar==4.0.3
-requests==2.21.0
-pyyaml==3.13
-recurring-ical-events==0.1.2a0
-gunicorn==19.9.0
+flask-caching
+flask
+icalendar
+requests
+pyyaml
+recurring-ical-events
+gunicorn
