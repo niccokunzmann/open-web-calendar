@@ -18,7 +18,7 @@ markupsafe==1.1.0         # via jinja2
 python-dateutil==2.8.0    # via icalendar, recurring-ical-events
 pytz==2018.9              # via icalendar, recurring-ical-events
 pyyaml==3.13
-recurring-ical-events==0.1.4a0
+recurring-ical-events==0.1.7b0
 requests==2.21.0
 six==1.12.0               # via python-dateutil, recurring-ical-events
 urllib3==1.24.1           # via requests
