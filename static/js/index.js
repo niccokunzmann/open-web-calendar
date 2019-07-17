@@ -241,7 +241,7 @@ function downloadJSONAsFile(filename, text) {
 function fillFirstInputWithData() {
     var urlInputs = document.getElementsByClassName("calendar-url-input");
     if (urlInputs) {
-        urlInputs[0].value = "http://www.officeholidays.com/ics/ics_country_noregion.php?tbl_country=Germany";
+        urlInputs[0].value = "https://www.calendarlabs.com/ical-calendar/ics/46/Germany_Holidays.ics";
     }
 }
 
