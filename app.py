@@ -14,6 +14,7 @@ from pprint import pprint
 import yaml
 import recurring_ical_events
 import traceback
+import io
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -250,6 +251,29 @@ def serve_index():
 @app.route("/configuration.js")
 def serve_configuration():
     return "/* generated */\nconst configuration = {};".format(json.dumps(get_configuration()))
+
+@app.errorhandler(500)
+def unhandledException(error):
+    """Called when an error occurs.
+
+    See https://stackoverflow.com/q/14993318
+    """
+    file = io.StringIO()
+    traceback.print_exception(type(error), error, error.__traceback__, file=file)
+    return """
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+    <html>
+        <head>
+            <title>500 Internal Server Error</title>
+        </head>
+        <body>
+            <h1>Internal Server Error</h1>
+            <p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
+            <pre>\r\n{traceback}
+            </pre>
+        </body>
+    </html>
+    """.format(traceback=file.getvalue())
 
 if __name__ == "__main__":
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
