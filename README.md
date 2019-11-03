@@ -90,7 +90,7 @@ Development
 For the configuration of the app through environment variables,
 see the [app.json] file.
 
-[web]: https://open-web-calendar.herokuapp.com
+[web]: https://openwebcalendar.herokuapp.com/
 
 Related Work
 ------------
