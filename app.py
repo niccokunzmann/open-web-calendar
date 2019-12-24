@@ -145,6 +145,35 @@ def subcomponent_is_ical_event(event):
     """Whether the calendar subcomponent is an event."""
     return isinstance(event, icalendar.cal.Event)
 
+def convert_ical_event_to_dhtmlx(calendar_event, timeshift):
+    start = calendar_event["DTSTART"].dt
+    end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
+    geo = calendar_event.get("GEO", None)
+    if geo:
+        geo = {"lon": geo.longitude, "lat": geo.latitude}
+    name = calendar_event.get("SUMMARY", "")
+    sequence = str(calendar_event.get("SEQUENCE", 0))
+    uid = calendar_event["UID"]
+    start_date = date_to_string(start, timeshift)
+    return {
+        "start_date": start_date,
+        "end_date": date_to_string(end, timeshift),
+        "start_date_iso": start.isoformat(),
+        "end_date_iso": end.isoformat(),
+        "start_date_iso_0": start.isoformat(),
+        "end_date_iso_0": end.isoformat(),
+        "text":  name,
+        "description": calendar_event.get("DESCRIPTION", ""),
+        "location": calendar_event.get("LOCATION", None),
+        "geo": geo,
+        "uid": uid,
+        "ical": calendar_event.to_ical().decode("UTF-8"),
+        "sequence": sequence,
+        "recurrence": None,
+        "url": calendar_event.get("URL"),
+        "id": (uid, start_date)
+    }
+
 def retrieve_calendar(url, specification):
     """Get the calendar entry from a url.
 
@@ -168,33 +197,8 @@ def retrieve_calendar(url, specification):
     events = {} # id: event
     timeshift = int(specification["timeshift"])
     for calendar_event in ical_events:
-        start = calendar_event["DTSTART"].dt
-        end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
-        geo = calendar_event.get("GEO", None)
-        if geo:
-            geo = {"lon": geo.longitude, "lat": geo.latitude}
-        name = calendar_event.get("SUMMARY", "")
-        sequence = str(calendar_event.get("SEQUENCE", 0))
-        uid = calendar_event["UID"]
-        event = {
-            "start_date": date_to_string(start, timeshift),
-            "end_date": date_to_string(end, timeshift),
-            "start_date_iso": start.isoformat(),
-            "end_date_iso": end.isoformat(),
-            "start_date_iso_0": start.isoformat(),
-            "end_date_iso_0": end.isoformat(),
-            "text":  name,
-            "description": calendar_event.get("DESCRIPTION", ""),
-            "location": calendar_event.get("LOCATION", None),
-            "geo": geo,
-            "uid": uid,
-            "ical": calendar_event.to_ical().decode("UTF-8"),
-            "sequence": sequence,
-            "recurrence": None,
-            "url": calendar_event.get("URL"),
-        }
-        event_id = (uid, event["start_date"])
-        events[event_id] = event
+        event = convert_ical_event_to_dhtmlx(calendar_event, timeshift)
+        events[event["id"]] = event
     return events
 
 def get_events(specification):
