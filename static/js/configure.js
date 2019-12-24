@@ -1,3 +1,6 @@
+/* This is used by the dhtmlx scheduler.
+ *
+ */
 
 function escapeHtml(unsafe) {
     // from https://stackoverflow.com/a/6234804

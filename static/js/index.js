@@ -1,3 +1,6 @@
+/* This is used by the index/configuration page.
+ *
+ */
 
 const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
 const CALENDAR_ENDPOINT = "/calendar.html";
