@@ -1,3 +1,6 @@
+/* This is used by the dhtmlx scheduler.
+ *
+ */
 
 function escapeHtml(unsafe) {
     // from https://stackoverflow.com/a/6234804
@@ -42,7 +45,7 @@ function makeLink(url, html) {
   return "<a target='" + specification.target + "' href='" + escapeHtml(url) + "'>" + html + "</a>";
 }
 
-template = {
+var template = {
     "summary": function(event) {
         return "<div class='summary'>" +
           (event.url ? makeLink(event.url, event.text) : event.text) +
@@ -81,6 +84,37 @@ var Scheduler = {plugin:function(setLocale_){
     setLocale = setLocale_;
 }};
 
+function showError(element) {
+    var icon = document.getElementById("errorStatusIcon");
+    icon.classList.add("onError");
+    var errors = document.getElementById("errorWindow");
+    element.classList.add("item");
+    errors.appendChild(element);
+}
+
+function toggleErrorWindow() {
+    var scheduler_tag = document.getElementById("scheduler_here");
+    var errors = document.getElementById("errorWindow");
+    scheduler_tag.classList.toggle("hidden");
+    errors.classList.toggle("hidden");
+}
+
+function showXHRError(xhr) {
+    var iframe = document.createElement("iframe");
+    iframe.srcdoc = xhr.responseText;
+    iframe.className = "errorFrame";
+    showError(iframe);
+}
+
+function showEventError(error) {
+    // show an error created by app.py -> error_to_dhtmlx
+    var div = document.createElement("div");
+    div.innerHTML = "<h1>" + error.text + "</h1>" + 
+        "<a href='" + error.url + "'>" + error.url + "</a>" +
+        "<p>" + error.description + "</p>" + 
+        "<pre>" + error.traceback + "</pre>";
+    showError(div);
+}
 
 function loadCalendar() {
     setLocale(scheduler);
@@ -113,13 +147,24 @@ function loadCalendar() {
     }
     // general style
     scheduler.templates.event_class=function(start,end,event){
-        return "event";
+        if (event.type == "error") {
+            showEventError(event);
+        }
+        return event.type;
     };
 
     schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") +
         document.location.search;
+        
+    scheduler.attachEvent("onLoadError", function(xhr) {
+        console.log("could not load events");
+        console.log(xhr);
+        showXHRError(xhr);
+    });
 
+    //requestJSON(schedulerUrl, loadEventsOnSuccess, loadEventsOnError);
     scheduler.load(schedulerUrl, "json");
+    
 
     //var dp = new dataProcessor(schedulerUrl);
     // use RESTful API on the backend
