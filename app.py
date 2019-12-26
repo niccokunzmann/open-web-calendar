@@ -262,7 +262,6 @@ def get_calendar(type):
         return jsonify(specification)
     if type == "events.json":
         entries = get_events(specification)
-        asd
         return jsonify(entries)
     if type == "html":
         template_name = specification["template"]
