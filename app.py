@@ -15,6 +15,7 @@ import yaml
 import recurring_ical_events
 import traceback
 import io
+import sys
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -171,7 +172,36 @@ def convert_ical_event_to_dhtmlx(calendar_event, timeshift):
         "sequence": sequence,
         "recurrence": None,
         "url": calendar_event.get("URL"),
-        "id": (uid, start_date)
+        "id": (uid, start_date),
+        "type": "event"
+    }
+
+def error_to_dhtmlx(ty, error, tb, url=None):
+    """Create an error which can be used by the dhtmlx scheduler."""
+    now = datetime.datetime.now();
+    now_iso = now.isoformat()
+    now_s = date_to_string(now, 0)
+    tb_s = io.StringIO()
+    traceback.print_exception(ty, error, tb, file=tb_s)
+    return {
+        "start_date": now_s,
+        "end_date": now_s,
+        "start_date_iso": now_iso,
+        "end_date_iso": now_iso,
+        "start_date_iso_0": now_iso,
+        "end_date_iso_0": now_iso,
+        "text":  type(error).__name__,
+        "description": str(error),
+        "traceback": tb_s.getvalue(),
+        "location": None,
+        "geo": None,
+        "uid": "error",
+        "ical": "",
+        "sequence": 0,
+        "recurrence": None,
+        "url": url,
+        "id": id(error),
+        "type": "error"
     }
 
 def retrieve_calendar(url, specification):
@@ -182,24 +212,25 @@ def retrieve_calendar(url, specification):
     """
     try:
         calendar_text = get_text_from_url(url)
-    except requests.exceptions.ConnectionError:
-        traceback.print_exc()
-        return []
-    calendars = icalendar.Calendar.from_ical(calendar_text, multiple=True)
-    # collect latest event information
-    ical_events = []
-    today = datetime.datetime.utcnow()
-    one_year_ahead = today.replace(year=today.year + 1)
-    one_year_before = today.replace(year=today.year - 1)
-    for calendar in calendars:
-        ical_events.extend(recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead))
-    # collect events and their recurrences
-    events = {} # id: event
-    timeshift = int(specification["timeshift"])
-    for calendar_event in ical_events:
-        event = convert_ical_event_to_dhtmlx(calendar_event, timeshift)
-        events[event["id"]] = event
-    return events
+        calendars = icalendar.Calendar.from_ical(calendar_text, multiple=True)
+        # collect latest event information
+        ical_events = []
+        today = datetime.datetime.utcnow()
+        one_year_ahead = today.replace(year=today.year + 1)
+        one_year_before = today.replace(year=today.year - 1)
+        for calendar in calendars:
+            ical_events.extend(recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead))
+        # collect events and their recurrences
+        events = {} # id: event
+        timeshift = int(specification["timeshift"])
+        for calendar_event in ical_events:
+            event = convert_ical_event_to_dhtmlx(calendar_event, timeshift)
+            events[event["id"]] = event
+        return events
+    except:
+        ty, err, tb = sys.exc_info()
+        error = error_to_dhtmlx(ty, err, tb, url=url)
+        return {error["id"]: error}
 
 def get_events(specification):
     """Return events."""
@@ -231,6 +262,7 @@ def get_calendar(type):
         return jsonify(specification)
     if type == "events.json":
         entries = get_events(specification)
+        asd
         return jsonify(entries)
     if type == "html":
         template_name = specification["template"]
