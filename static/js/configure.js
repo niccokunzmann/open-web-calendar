@@ -121,6 +121,18 @@ function disableLoader() {
     loader.classList.add("hidden");
 }
 
+function setLoader() {
+    if (specification.loader != undefined) {
+        if (specification.loader) {
+            var loader = document.getElementById("loader");
+            var url = specification.loader.replace(/'/g, "%27");
+            loader.style.cssText += "background:url('" + url + "') center center no-repeat;"
+        } else {
+            disableLoader();
+        }
+    }
+}
+
 function loadCalendar() {
     setLocale(scheduler);
     // set format of dates in the data source
@@ -179,6 +191,8 @@ function loadCalendar() {
     // use RESTful API on the backend
     //dp.setTransactionMode("REST");
     //dp.init(scheduler);
+    
+    setLoader();
 }
 
 window.addEventListener("load", loadCalendar);
