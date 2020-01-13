@@ -6,5 +6,6 @@
     "skin": "dhtmlxscheduler_material.css",
     "css": "",
     "timeshift": 0,
-    "target": "_top"
+    "target": "_top",
+    "loader": "/img/loaders/circular-loader.gif"
 }

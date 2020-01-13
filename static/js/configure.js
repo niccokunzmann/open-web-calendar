@@ -122,14 +122,12 @@ function disableLoader() {
 }
 
 function setLoader() {
-    if (specification.loader != undefined) {
-        if (specification.loader) {
-            var loader = document.getElementById("loader");
-            var url = specification.loader.replace(/'/g, "%27");
-            loader.style.cssText += "background:url('" + url + "') center center no-repeat;"
-        } else {
-            disableLoader();
-        }
+    if (specification.loader) {
+        var loader = document.getElementById("loader");
+        var url = specification.loader.replace(/'/g, "%27");
+        loader.style.cssText += "background:url('" + url + "') center center no-repeat;"
+    } else {
+        disableLoader();
     }
 }
 

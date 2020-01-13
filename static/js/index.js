@@ -6,8 +6,6 @@ const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
 const CALENDAR_ENDPOINT = "/calendar.html";
 const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/default_specification.json";
 const USER_PREFERRED_LANGUAGE = navigator.language.split("-")[0]; // credits to https://stackoverflow.com/a/3335420/1320237
-const RAW_GITHUB_STATIC_URL = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/"; // content served by the open web calendar and statically on github
-const DEFAULT_LOADER = "/img/loaders/circular-loader.gif";
 
 function updateUrls() {
     updateCalendarInputs();
@@ -140,15 +138,10 @@ function getSpecification() {
     }
     /* link targets */
     setSpecificationValueFromId(specification, "target", "select-target");
-    console.log("getSpecification", specification);
     /* loader */
-    var loaderUrl = document.getElementById("select-loader").value;
-    if (loaderUrl.startsWith(RAW_GITHUB_STATIC_URL)) {
-        loaderUrl = "/" + loaderUrl.slice(RAW_GITHUB_STATIC_URL.length);
-    }
-    if (loaderUrl != DEFAULT_LOADER) {
-        specification["loader"] = loaderUrl;
-    }
+    setSpecificationValueFromId(specification, "loader", "select-loader");
+    /* print before exit */
+    console.log("getSpecification", specification);
     return specification;
 }
 
@@ -328,6 +321,11 @@ function initializeLoader() {
     select.onchange = updateOutputs;
 }
 
+function updateLoader() {
+    var defaultLoader = document.getElementById("default-loader");
+    defaultLoader.value = configuration.default_specification.loader;
+}
+
 window.addEventListener("load", function(){
     // initialization
     listenForCSSChanges();
@@ -339,6 +337,7 @@ window.addEventListener("load", function(){
     updateCalendarInputs();
     fillFirstInputWithData();
     updateCalendarInputs();
+    updateLoader();
     // updating what can be seen
     updateOutputs();
     fillDefaultSpecificationLink();

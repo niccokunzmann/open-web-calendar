@@ -72,7 +72,6 @@
 }
 
 #loader {
-    background:url('../../img/loaders/circular-loader.gif') center center no-repeat;
     height: 100px;
     z-index: 40;
     position: absolute;
