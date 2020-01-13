@@ -182,7 +182,7 @@ function getCalendarSourceCode(url, specification) {
     var code =
         '<iframe id="open-web-calendar" ' +
         (shouldShowAnimationForLoading() ?
-        '\n    style="background:url(\'' + getLoadingAnimationUrl() + '\') center center no-repeat;"': "") +
+        '\n    style="background:url(\'' + getLoadingAnimationUrl().replace(/'/g, "%27") + '\') center center no-repeat;"': "") +
         '\n    src="' + escapeHtml(url) + '"' +
         '\n    ' + TARGET_TO_SANDBOX[specification.target || configuration.default_specification.target] +
         '\n    allowTransparency="true" scrolling="no" ' +
