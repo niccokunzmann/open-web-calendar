@@ -116,6 +116,11 @@ function showEventError(error) {
     showError(div);
 }
 
+function disableLoader() {
+    var loader = document.getElementById("loader");
+    loader.classList.add("hidden");
+}
+
 function loadCalendar() {
     setLocale(scheduler);
     // set format of dates in the data source
@@ -157,10 +162,14 @@ function loadCalendar() {
         document.location.search;
         
     scheduler.attachEvent("onLoadError", function(xhr) {
+        disableLoader();
         console.log("could not load events");
         console.log(xhr);
         showXHRError(xhr);
     });
+
+    scheduler.attachEvent("onXLE", disableLoader);
+
 
     //requestJSON(schedulerUrl, loadEventsOnSuccess, loadEventsOnError);
     scheduler.load(schedulerUrl, "json");

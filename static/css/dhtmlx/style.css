@@ -26,12 +26,15 @@
 }
 
 #errorWindow {
+    background-color: rgba(255, 208, 208, 0.9);
+    z-index: 50;
+}
+
+.fullsize {
     top: 0px;
     left: 0px;
     width: 100%;
     min-height: 100%;
-    background-color: rgba(255, 208, 208, 0.9);
-    z-index: 50;
 }
 
 #errorWindow .closeButton {
@@ -66,4 +69,11 @@
 #errorWindow .errorFrame {
     /* The iframe in case of an error. */
     height: 40em;
+}
+
+#loader {
+    background:url('../../img/loaders/circular-loader.gif') center center no-repeat;
+    height: 100px;
+    z-index: 40;
+    position: absolute;
 }
