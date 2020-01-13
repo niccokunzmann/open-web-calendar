@@ -6,6 +6,8 @@ const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
 const CALENDAR_ENDPOINT = "/calendar.html";
 const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/default_specification.json";
 const USER_PREFERRED_LANGUAGE = navigator.language.split("-")[0]; // credits to https://stackoverflow.com/a/3335420/1320237
+const RAW_GITHUB_STATIC_URL = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static"; // content served by the open web calendar and statically on github
+
 
 function updateUrls() {
     updateCalendarInputs();
@@ -160,7 +162,11 @@ function showCalendarSourceCode(sourceCode) {
 }
 
 function getLoadingAnimationUrl() {
-    return getValueById("select-loader");
+    var url = getValueById("select-loader");
+    if (url[0] == "/") {
+        return RAW_GITHUB_STATIC_URL + url;
+    }
+    return url;
 }
 
 // see also https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
