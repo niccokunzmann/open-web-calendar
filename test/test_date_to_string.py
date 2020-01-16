@@ -25,7 +25,7 @@ eastern = timezone('US/Eastern')
 ])
 def test_date_to_string_conversion(date, timeshift_minutes, expected):
     """Convert dates and datetime objects for the events.json"""
-    string = ConvertToDhtmlx(timeshift_minutes).date_to_string(date)
+    string = ConvertToDhtmlx({"timeshift":timeshift_minutes}).date_to_string(date)
     print(date)
     assert string == expected
 
