@@ -137,10 +137,7 @@ class ConvertToDhtmlx:
         self.timeshift = timeshift_minutes
 
     def date_to_string(self, date):
-        """Convert a date to a string.
-
-
-        """
+        """Convert a date to a string."""
         # use ISO format
         # see https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step4implementingcrud
         # see https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
