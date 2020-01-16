@@ -5,14 +5,12 @@ from flask_caching import Cache
 import json
 import os
 import tempfile
-from concurrent.futures import ThreadPoolExecutor
 import requests
 import icalendar
 import datetime
 from dateutil.rrule import rrulestr
 from pprint import pprint
 import yaml
-import recurring_ical_events
 import traceback
 import io
 import sys
@@ -23,9 +21,6 @@ from convert_to_ics import ConvertToICS
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600))
-
-# TODO: add as parameters
-MAXIMUM_THREADS = 100
 
 # constants
 HERE = os.path.dirname(__name__) or "."
@@ -126,50 +121,12 @@ def get_specification(query=None):
         specification[parameter] = value
     return specification
 
-def retrieve_calendar(url, specification, conversion_strategy):
-    """Get the calendar entry from a url.
 
-    Also unfold the events to past and future.
-    see https://dateutil.readthedocs.io/en/stable/rrule.html
-    """
-    try:
-        calendar_text = get_text_from_url(url)
-        calendars = icalendar.Calendar.from_ical(calendar_text, multiple=True)
-        # collect latest event information
-        ical_events = []
-        today = datetime.datetime.utcnow()
-        one_year_ahead = today.replace(year=today.year + 1)
-        one_year_before = today.replace(year=today.year - 1)
-        for calendar in calendars:
-            ical_events.extend(recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead))
-        # collect events and their recurrences  
-        events = []
-        for calendar_event in ical_events:
-            event = conversion_strategy.convert_ical_event(calendar_event)
-            events.append(event)
-        return events
-    except:
-        ty, err, tb = sys.exc_info()
-        error = conversion_strategy.error(ty, err, tb, url=url)
-        return [error]
 
-def get_events(specification, conversion_strategy):
-    """Return events."""
-    urls = specification["url"]
-    if isinstance(urls, str):
-        urls = [urls]
-    assert len(urls) <= MAXIMUM_THREADS, "You can only merge {} urls. If you like more, open an issue.".format(MAXIMUM_THREADS)
-    all_events = []
-    with ThreadPoolExecutor(max_workers=MAXIMUM_THREADS) as e:
-        events_list = e.map(lambda url: retrieve_calendar(url, specification, conversion_strategy), urls)
-        for events in events_list:
-            all_events.extend(events)
-    return all_events
 
 def render_app_template(template, specification):
     return render_template(template,
         specification=specification,
-        get_events=get_events,
         json=json,
     )
 
@@ -182,13 +139,13 @@ def get_calendar(type):
     if type == "spec":
         return jsonify(specification)
     if type == "events.json":
-        strategy = ConvertToDhtmlx(specification)
-        entries = get_events(specification, strategy)
-        return strategy.merge(entries)    
+        strategy = ConvertToDhtmlx(specification, get_text_from_url)
+        strategy.retrieve_calendars()
+        return strategy.merge()    
     if type == "ics":
-        strategy = ConvertToICS(specification)
-        entries = get_events(specification, strategy)
-        return strategy.merge(entries)
+        strategy = ConvertToICS(specification, get_text_from_url)
+        strategy.retrieve_calendars()
+        return strategy.merge()
     if type == "html":
         template_name = specification["template"]
         all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)

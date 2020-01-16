@@ -1,18 +1,19 @@
 import datetime
-import io
-import traceback
 from flask import jsonify
+from conversion_base import ConversionStrategy
+import recurring_ical_events
+from pprint import pprint
 
-class ConvertToDhtmlx:
-    """Convert events to dhtmlx. This conforms to a stratey pattern."""
+
+class ConvertToDhtmlx(ConversionStrategy):
+    """Convert events to dhtmlx. This conforms to a stratey pattern.
     
-    def __init__(self, specification):
-        """Create a DHTMLX conversion strategy.
-        
-        - timeshift_minutes is the timeshift specified by the calendar
-            for dates.
-        """
-        self.timeshift = int(specification["timeshift"])
+    - timeshift_minutes is the timeshift specified by the calendar
+        for dates.
+    """
+    
+    def created(self):
+        self.timeshift = int(self.specification["timeshift"])
 
     def date_to_string(self, date):
         """Convert a date to a string."""
@@ -27,7 +28,6 @@ class ConvertToDhtmlx:
             date = date.replace(tzinfo=timezone)
         date = date.astimezone(datetime.timezone.utc)
         return date.strftime("%Y-%m-%d %H:%M")
-
 
     def convert_ical_event(self, calendar_event):
         start = calendar_event["DTSTART"].dt
@@ -59,13 +59,11 @@ class ConvertToDhtmlx:
             "type": "event"
         }
 
-    def error(self, ty, error, tb, url=None):
+    def convert_error(self, error, url, tb_s):
         """Create an error which can be used by the dhtmlx scheduler."""
         now = datetime.datetime.now();
         now_iso = now.isoformat()
         now_s = self.date_to_string(now)
-        tb_s = io.StringIO()
-        traceback.print_exception(ty, error, tb, file=tb_s)
         return {
             "start_date": now_s,
             "end_date": now_s,
@@ -75,7 +73,7 @@ class ConvertToDhtmlx:
             "end_date_iso_0": now_iso,
             "text":  type(error).__name__,
             "description": str(error),
-            "traceback": tb_s.getvalue(),
+            "traceback": tb_s,
             "location": None,
             "geo": None,
             "uid": "error",
@@ -87,6 +85,20 @@ class ConvertToDhtmlx:
             "type": "error"
         }
     
-    def merge(self, events):
-        return jsonify(events)
+    def merge(self):
+        pprint(self.components)
+        return jsonify(self.components)
+        
+    def collect_components_from(self, calendars):
+        today = datetime.datetime.utcnow()
+        one_year_ahead = today.replace(year=today.year + 1)
+        one_year_before = today.replace(year=today.year - 1)
+        for calendar in calendars:
+            events = recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead)
+            with self.lock:
+                for event in events:
+                    json_event = self.convert_ical_event(event)
+                    self.components.append(json_event)
+                
+
 

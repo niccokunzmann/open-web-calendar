@@ -1,28 +1,43 @@
 import datetime
-from icalendar import Event, Calendar
+from icalendar import Event, Calendar, Timezone
 from icalendar.prop import vDDDTypes
 from flask import Response
-import io
-import traceback
+from conversion_base import ConversionStrategy
 
-class ConvertToICS:
+class ConvertToICS(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern."""
     
-    def __init__(self, specification):
-        """Create an ICS conversion strategy."""
-        self.title = specification["title"]
+    def created(self):
+        self.title = self.specification["title"]
+        self.timezones = set() # ids
+        
+    def is_event(self, component):
+        """Whether a component is an event."""
+        return isinstance(component, Event)
 
-    def convert_ical_event(self, calendar_event):
-        return calendar_event
+    def is_timezone(self, component):
+        """Whether a component is an event."""
+        return isinstance(component, Timezone)
 
-    def error(self, ty, error, tb, url=None):
+    def collect_components_from(self, calendars):
+        for calendar in calendars:
+            for component in calendar.walk():
+                if self.is_event(component):
+                    with self.lock:
+                        self.components.append(component)
+                if self.is_timezone(component):
+                    tzid = component.get("TZID")
+                    if tzid and tzid not in self.timezones:
+                        with self.lock:
+                            self.components.append(component)
+                            self.timezones.add(tzid)
+
+    def convert_error(self, error, url, tb_s):
         """Create an error which can be used by the dhtmlx scheduler."""
-        tb_s = io.StringIO()
-        traceback.print_exception(ty, error, tb, file=tb_s)
         event = Event()
         event["DTSTART"] = event["DTEND"] = vDDDTypes(datetime.datetime.now())
         event["SUMMARY"] = type(error).__name__
-        event["DESCRIPTION"] = str(error) + "\n\n" + tb_s.getvalue()
+        event["DESCRIPTION"] = str(error) + "\n\n" + tb_s
         event["UID"] = "error" + str(id(error))
         if url:
             event["URL"] = url
@@ -38,9 +53,9 @@ class ConvertToICS:
         calendar["X-PROD-SOURCE"] = "https://github.com/niccokunzmann/open-web-calendar/"
         return calendar
     
-    def merge(self, events):
+    def merge(self):
         calendar = self.create_calendar()
-        for event in events:
+        for event in self.components:
             calendar.add_component(event)
         return Response(calendar.to_ical(), mimetype="text/calendar")
 
