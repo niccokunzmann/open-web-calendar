@@ -142,10 +142,6 @@ def date_to_string(date, timeshift_minutes):
     date = date.astimezone(datetime.timezone.utc)
     return date.strftime("%Y-%m-%d %H:%M")
 
-def subcomponent_is_ical_event(event):
-    """Whether the calendar subcomponent is an event."""
-    return isinstance(event, icalendar.cal.Event)
-
 def convert_ical_event_to_dhtmlx(calendar_event, timeshift):
     start = calendar_event["DTSTART"].dt
     end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
@@ -220,7 +216,7 @@ def retrieve_calendar(url, specification):
         one_year_before = today.replace(year=today.year - 1)
         for calendar in calendars:
             ical_events.extend(recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead))
-        # collect events and their recurrences
+        # collect events and their recurrences  
         events = []
         timeshift = int(specification["timeshift"])
         for calendar_event in ical_events:
