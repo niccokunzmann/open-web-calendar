@@ -1,9 +1,10 @@
 
-header {
+header, header a {
     text-align: center;
     color: white;
     background-color: black;
     padding: 0.66em;
+    text-decoration: none;
 }
 
 body {
@@ -27,6 +28,9 @@ footer a {
 
 main {
     padding: 1em;
+    max-width: 60em;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .code {
