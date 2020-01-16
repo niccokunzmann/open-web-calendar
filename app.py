@@ -158,7 +158,7 @@ def get_events(specification, conversion_strategy):
     urls = specification["url"]
     if isinstance(urls, str):
         urls = [urls]
-    assert len(urls) <= MAXIMUM_THREADS, "You can only merge {} urls.".format(MAXIMUM_THREADS)
+    assert len(urls) <= MAXIMUM_THREADS, "You can only merge {} urls. If you like more, open an issue.".format(MAXIMUM_THREADS)
     all_events = []
     with ThreadPoolExecutor(max_workers=MAXIMUM_THREADS) as e:
         events_list = e.map(lambda url: retrieve_calendar(url, specification, conversion_strategy), urls)
