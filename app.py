@@ -221,16 +221,16 @@ def retrieve_calendar(url, specification):
         for calendar in calendars:
             ical_events.extend(recurring_ical_events.of(calendar).between(one_year_before, one_year_ahead))
         # collect events and their recurrences
-        events = {} # id: event
+        events = []
         timeshift = int(specification["timeshift"])
         for calendar_event in ical_events:
             event = convert_ical_event_to_dhtmlx(calendar_event, timeshift)
-            events[event["id"]] = event
+            events.append(event)
         return events
     except:
         ty, err, tb = sys.exc_info()
         error = error_to_dhtmlx(ty, err, tb, url=url)
-        return {error["id"]: error}
+        return [error]
 
 def get_events(specification):
     """Return events."""
@@ -238,12 +238,12 @@ def get_events(specification):
     if isinstance(urls, str):
         urls = [urls]
     assert len(urls) <= MAXIMUM_THREADS, "You can only merge {} urls.".format(MAXIMUM_THREADS)
-    all_events = {}
+    all_events = []
     with ThreadPoolExecutor(max_workers=MAXIMUM_THREADS) as e:
         events_list = e.map(lambda url: retrieve_calendar(url, specification), urls)
         for events in events_list:
-            all_events.update(events)
-    return list(all_events.values())
+            all_events.extend(events)
+    return all_events
 
 def render_app_template(template, specification):
     return render_template(template,
