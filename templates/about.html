@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <!-- Mostly copied from https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step2addingschedulertothepage -->
+    <head>
+        <title>{{ specification["title"] | safe }}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/index.css"
+            rel="stylesheet" type="text/css" charset="utf-8">
+
+        <script type="text/javascript">
+            var specification = {{ specification | tojson | safe }};
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>{{ specification["title"] | safe }}</h1>
+        </header>
+        <main>
+            <p class="description">
+                {{ specification["description"] }}
+            </p>
+            <ul>
+                <li><a href="/calendar.html{{ get_query_string() | safe }}">Website</a></li>
+                <li><a href="/calendar.ics{{ get_query_string() | safe }}">ICS</a></li>
+                <li><a href="/calendar.spec{{ get_query_string() | safe }}">Specification</a></li>
+            </ul>
+        </main>
+    </body>
+</html>

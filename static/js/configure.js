@@ -194,3 +194,4 @@ function loadCalendar() {
 }
 
 window.addEventListener("load", loadCalendar);
+

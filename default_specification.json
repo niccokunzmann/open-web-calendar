@@ -7,5 +7,6 @@
     "css": "",
     "timeshift": 0,
     "target": "_top",
-    "loader": "/img/loaders/circular-loader.gif"
+    "loader": "/img/loaders/circular-loader.gif",
+    "description": "This is a calendar which provides a website and an ICS subscription link based on the different calendars it is configured to use."
 }

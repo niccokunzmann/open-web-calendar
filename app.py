@@ -122,12 +122,14 @@ def get_specification(query=None):
     return specification
 
 
-
+def get_query_string():
+    return "?" + request.query_string.decode()
 
 def render_app_template(template, specification):
     return render_template(template,
         specification=specification,
         json=json,
+        get_query_string=get_query_string
     )
 
 @app.route("/calendar.<type>", methods=['GET', 'OPTIONS'])
@@ -165,6 +167,11 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
 @app.route("/")
 def serve_index():
     return send_from_directory("static", "index.html")
+
+@app.route("/about.html")
+def serve_about():
+    specification = get_specification()
+    return render_app_template("about.html", specification)
 
 @app.route("/configuration.js")
 def serve_configuration():

@@ -6,6 +6,7 @@
     position: absolute;
     right: 0px;
     bottom: 0px;
+    z-index: 60;
 }
 
 .status-window .item {
@@ -13,6 +14,12 @@
     min-height: 1em;
     padding: 0.2em;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#infoIcon {
+    background-color: rgba(0,0,0,0.1);
 }
 
 #errorStatusIcon {
@@ -60,6 +67,7 @@
     border-color: #ff7777;
     border-style: solid;
     border-bottom-width: 0.2em;
+    text-decoration: none;
 }
 
 .hidden, #scheduler_here .error {

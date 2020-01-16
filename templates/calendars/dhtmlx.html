@@ -2,7 +2,7 @@
 <html>
     <!-- Mostly copied from https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step2addingschedulertothepage -->
     <head>
-        <title>{{ specification["title"] }}</title>
+        <title>{{ specification["title"] | safe }}</title>
         <meta charset="utf-8">
         <script type="text/javascript">
             var specification = {{ specification | tojson | safe }};
@@ -25,7 +25,7 @@
         <link href="css/dhtmlx/style.css"
             rel="stylesheet" type="text/css" charset="utf-8">
         <!-- see https://docs.dhtmlx.com/scheduler/localization.html -->
-        <script src="js/dhtmlx/locale/locale_{{ specification['language'] }}.js" charset="utf-8"></script>
+        <script src="js/dhtmlx/locale/locale_{{ specification['language'] | safe }}.js" charset="utf-8"></script>
         <style>
             html, body{
                 margin:0px;
@@ -33,7 +33,7 @@
                 height:100%;
                 overflow:hidden;
             }
-            {{ specification['css'] }}
+            {{ specification['css'] | safe }}
         </style>
     </head>
     <body>
@@ -57,6 +57,7 @@
         </div>
         <div class="status-window">
             <a class="item" id="errorStatusIcon" href="javascript:toggleErrorWindow();">!</a>
+            <a class="item" id="infoIcon" href="/about.html{{ get_query_string() | safe }}" target="_blank">?</a>
         </div>
     </body>
 </html>
