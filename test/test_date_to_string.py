@@ -1,6 +1,6 @@
 import pytest
 import datetime
-from app import date_to_string
+from app import ConvertToDhtmlx
 from pytz import timezone, utc
 
 berlin = timezone("Europe/Berlin")
@@ -25,7 +25,7 @@ eastern = timezone('US/Eastern')
 ])
 def test_date_to_string_conversion(date, timeshift_minutes, expected):
     """Convert dates and datetime objects for the events.json"""
-    string = date_to_string(date, timeshift_minutes)
+    string = ConvertToDhtmlx(timeshift_minutes).date_to_string(date)
     print(date)
     assert string == expected
 
