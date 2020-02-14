@@ -138,7 +138,7 @@ function loadCalendar() {
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
     scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
-    scheduler.init('scheduler_here', new Date(), "month");
+    scheduler.init('scheduler_here', new Date(), specification["tab"]);
 
     // event in the calendar
     scheduler.templates.event_bar_text = function(start, end, event){
