@@ -193,5 +193,18 @@ function loadCalendar() {
     setLoader();
 }
 
+/* Agenda view
+ *
+ * see https://docs.dhtmlx.com/scheduler/agenda_view.html
+ */
+
+scheduler.date.agenda_start = function(date){
+  return scheduler.date.month_start(new Date(date)); 
+};
+ 
+scheduler.date.add_agenda = function(date, inc){
+  return scheduler.date.add(date, inc, "month"); 
+};
+
 window.addEventListener("load", loadCalendar);
 
