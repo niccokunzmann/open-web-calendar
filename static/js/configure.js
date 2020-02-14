@@ -167,6 +167,9 @@ function loadCalendar() {
         }
         return event.type;
     };
+    
+    // set agenda date
+    scheduler.templates.agenda_date = scheduler.templates.month_date;
 
     schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") +
         document.location.search;
