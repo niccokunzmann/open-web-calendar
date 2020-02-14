@@ -47,10 +47,18 @@
                 <div class="dhx_cal_next_button">&nbsp;</div>
                 <div class="dhx_cal_today_button"></div>
                 <div class="dhx_cal_date"></div>
+                {%- if "day" in specification["tabs"] -%}
                 <div class="dhx_cal_tab" name="day_tab"></div>
+                {%- endif -%}
+                {%- if "week" in specification["tabs"] -%}
                 <div class="dhx_cal_tab" name="week_tab"></div>
+                {%- endif -%}
+                {%- if "month" in specification["tabs"] -%}
                 <div class="dhx_cal_tab" name="month_tab"></div>
+                {%- endif -%}
+                {%- if "agenda" in specification["tabs"] -%}
                 <div class="dhx_cal_tab" name="agenda_tab" id="agenda_tab"></div>
+                {%- endif -%}
             </div>
             <div class="dhx_cal_header"></div>
             <div class="dhx_cal_data"></div>
