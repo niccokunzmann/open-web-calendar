@@ -24,7 +24,7 @@ CACHE_REQUESTED_URLS_FOR_SECONDS = int(os.environ.get("CACHE_REQUESTED_URLS_FOR_
 
 # constants
 HERE = os.path.dirname(__name__) or "."
-DEFAULT_SPECIFICATION_PATH = os.path.join(HERE, "default_specification.json")
+DEFAULT_SPECIFICATION_PATH = os.path.join(HERE, "default_specification.yml")
 TEMPLATE_FOLDER_NAME = "templates"
 TEMPLATE_FOLDER = os.path.join(HERE, TEMPLATE_FOLDER_NAME)
 CALENDARS_TEMPLATE_FOLDER_NAME = "calendars"
@@ -96,7 +96,7 @@ def get_text_from_url(url):
 def get_default_specification():
     """Return the default specification."""
     with open(DEFAULT_SPECIFICATION_PATH, encoding="UTF-8") as file:
-        return json.load(file)
+        return yaml.safe_load(file)
 
 def get_specification(query=None):
     """Build the calendar specification."""
