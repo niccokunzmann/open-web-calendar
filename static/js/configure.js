@@ -138,7 +138,7 @@ function loadCalendar() {
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
     scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
-    scheduler.init('scheduler_here', new Date(), "month");
+    scheduler.init('scheduler_here', new Date(), specification["tab"]);
 
     // event in the calendar
     scheduler.templates.event_bar_text = function(start, end, event){
@@ -167,6 +167,9 @@ function loadCalendar() {
         }
         return event.type;
     };
+    
+    // set agenda date
+    scheduler.templates.agenda_date = scheduler.templates.month_date;
 
     schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") +
         document.location.search;
@@ -192,6 +195,19 @@ function loadCalendar() {
     
     setLoader();
 }
+
+/* Agenda view
+ *
+ * see https://docs.dhtmlx.com/scheduler/agenda_view.html
+ */
+
+scheduler.date.agenda_start = function(date){
+  return scheduler.date.month_start(new Date(date)); 
+};
+ 
+scheduler.date.add_agenda = function(date, inc){
+  return scheduler.date.add(date, inc, "month"); 
+};
 
 window.addEventListener("load", loadCalendar);
 

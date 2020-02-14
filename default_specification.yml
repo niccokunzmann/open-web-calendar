@@ -85,6 +85,18 @@ tabs:
 - "day"
 #- agenda
 
+## Users can control the calendar.
+## You can hide these buttons:
+controls:
+## Users can go to the next day/week/month.
+- "next"
+## Users can go to the previous day/week/month.
+- "previous"
+## Users can go to the current day/week/month.
+- "today"
+## Users can see the date.
+- "date"
+
 ## You can describe the calendar with a text so people know what it is about.
 description: "This is a calendar which provides a website and an ICS subscription link based on the different calendars it is configured to use."
 

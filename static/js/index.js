@@ -142,6 +142,24 @@ function getSpecification() {
     setSpecificationValueFromId(specification, "target", "select-target");
     /* loader */
     setSpecificationValueFromId(specification, "loader", "select-loader");
+    /* initial view */
+    setSpecificationValueFromId(specification, "tab", "select-tab");
+    /* controls */
+    specification.controls = [];
+    specification.tabs = [];
+    var checkbuttons = document.getElementById("check-controls");
+    for (var i = 0; i < checkbuttons.length; i++) {
+        var checkbutton = checkbuttons[i];
+        if (checkbutton.checked) {
+            specification[checkbutton.classList[0]].push(checkbutton.value);
+        }
+    }
+    ["tabs", "controls"].forEach(function(element){
+        if (arraysEqual(specification[element], configuration.default_specification[element])) {
+            delete specification[element];
+            console.log("del;");
+        }
+    });
     /* print before exit */
     console.log("getSpecification", specification);
     return specification;
@@ -332,6 +350,33 @@ function updateLoader() {
     defaultLoader.value = configuration.default_specification.loader;
 }
 
+function updateControls() {
+    var initialView = document.getElementById("select-tab");
+    changeSpecificationOnChange(initialView);
+    var form = document.getElementById("check-controls");
+    var checkbuttons = {};
+    ["tabs", "controls"].forEach(function(list) {
+        var checkboxes = form.getElementsByClassName(list);
+        var checked = configuration.default_specification[list];
+        for (var i = 0; i < checkboxes.length; i++) {
+            var checkbox = checkboxes[i];
+            checkbox.checked = checked.includes(checkbox.value);
+            checkbuttons[checkbox.value] = checkbox;
+            changeSpecificationOnChange(checkbox);
+        }
+    });
+    var labels = form.getElementsByTagName("label");
+    for (var i = 0; i < labels.length; i++) {
+        var label = labels[i];
+        label.addEventListener("click", function(event) {
+            var name = event.target.getAttribute("for");
+            var checkbox = checkbuttons[name];
+            checkbox.checked = !checkbox.checked;
+            updateOutputs();
+        });
+    }
+}
+
 window.addEventListener("load", function(){
     // initialization
     listenForCSSChanges();
@@ -344,6 +389,7 @@ window.addEventListener("load", function(){
     fillFirstInputWithData();
     updateCalendarInputs();
     updateLoader();
+    updateControls();
     // updating what can be seen
     updateOutputs();
     fillDefaultSpecificationLink();
@@ -368,3 +414,15 @@ function () {
 
     return str;
 };
+
+function arraysEqual(a, b) {
+  // from https://stackoverflow.com/a/16436975/1320237
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+  for (var i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+  return true;
+}
+

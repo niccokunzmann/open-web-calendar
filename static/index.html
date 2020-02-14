@@ -130,6 +130,33 @@
                       <option value="">no loader</option>
                   </select>
                 </p>
+                <h3 id="tabs">Month, Week, Day and Agenda View</h3>
+                <p>
+                  The Month view is the default. However, you can choose to
+                  show a different view in the beginning.
+                  Choose one:
+                  <select id="select-tab">
+                      <option value="month">Month</option>
+                      <option value="week">Week</option>
+                      <option value="day">Day</option>
+                      <option value="agenda">Agenda</option>
+                  </select>
+                </p>
+                <p>
+                  It might be that you do not want to show all controls for
+                  the users to see. Choose here which controls you would
+                  like to display:
+                  <form id="check-controls">
+                    <input type="checkbox" class="tabs" value="month" /><label for="month" >Month</label>
+                    <input type="checkbox" class="tabs" value="week"  /><label for="week"  >Week</label>
+                    <input type="checkbox" class="tabs" value="day"   /><label for="day"   >Day</label>
+                    <input type="checkbox" class="tabs" value="agenda"/><label for="agenda">Agenda</label>
+                    <input type="checkbox" class="controls" value="next"    /><label for="next"    >Next</label>
+                    <input type="checkbox" class="controls" value="previous"/><label for="previous">Previous</label>
+                    <input type="checkbox" class="controls" value="today"   /><label for="today"   >Today</label>
+                    <input type="checkbox" class="controls" value="date"    /><label for="date"    >Date</label>
+                  </form>
+                </p>
                 <h3 id="specification">Hosting the Specification</h3>
                 <p>
                     The calendar can be generated not only using the url but
