@@ -37,7 +37,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             geo = {"lon": geo.longitude, "lat": geo.latitude}
         name = calendar_event.get("SUMMARY", "")
         sequence = str(calendar_event.get("SEQUENCE", 0))
-        uid = calendar_event["UID"]
+        uid = calendar_event.get("UID", "") # issue 69: UID is helpful for debugging but not required
         start_date = self.date_to_string(start)
         return {
             "start_date": start_date,
