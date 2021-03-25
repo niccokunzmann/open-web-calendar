@@ -4,22 +4,49 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-certifi==2018.11.29       # via requests
-chardet==3.0.4            # via requests
-click==7.0                # via flask
+certifi==2018.11.29
+    # via requests
+chardet==3.0.4
+    # via requests
+click==7.0
+    # via flask
 flask-caching==1.4.0
+    # via -r requirements.in
 flask==1.0.2
+    # via
+    #   -r requirements.in
+    #   flask-caching
 gunicorn==19.9.0
+    # via -r requirements.in
 icalendar==4.0.3
-idna==2.8                 # via requests
-itsdangerous==1.1.0       # via flask
-jinja2==2.10              # via flask
-markupsafe==1.1.0         # via jinja2
-python-dateutil==2.8.0    # via icalendar
-pytz==2018.9              # via icalendar, recurring-ical-events
-pyyaml==3.13
+    # via
+    #   -r requirements.in
+    #   recurring-ical-events
+idna==2.8
+    # via requests
+itsdangerous==1.1.0
+    # via flask
+jinja2==2.10
+    # via flask
+markupsafe==1.1.0
+    # via jinja2
+python-dateutil==2.8.1
+    # via
+    #   icalendar
+    #   recurring-ical-events
+pytz==2018.9
+    # via
+    #   icalendar
+    #   recurring-ical-events
+pyyaml==5.4
+    # via -r requirements.in
 recurring-ical-events==0.1.18b0
+    # via -r requirements.in
 requests==2.21.0
-six==1.12.0               # via python-dateutil
-urllib3==1.24.2           # via requests
-werkzeug==0.15.3          # via flask
+    # via -r requirements.in
+six==1.12.0
+    # via python-dateutil
+urllib3==1.24.2
+    # via requests
+werkzeug==0.15.3
+    # via flask
