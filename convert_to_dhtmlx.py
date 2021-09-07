@@ -2,6 +2,7 @@ import datetime
 from flask import jsonify
 from conversion_base import ConversionStrategy
 import recurring_ical_events
+import icalendar
 from pprint import pprint
 from dateutil.parser import parse as parse_date
 
@@ -47,6 +48,9 @@ class ConvertToDhtmlx(ConversionStrategy):
         sequence = str(calendar_event.get("SEQUENCE", 0))
         uid = calendar_event.get("UID", "") # issue 69: UID is helpful for debugging but not required
         start_date = self.date_to_string(start)
+        categories = calendar_event.get("CATEGORIES", None)
+        if categories and isinstance(categories, icalendar.prop.vCategory):
+            categories = categories.to_ical().decode("UTF-8").replace(",", " | ")
         return {
             "start_date": start_date,
             "end_date": self.date_to_string(end),
@@ -65,7 +69,8 @@ class ConvertToDhtmlx(ConversionStrategy):
             "url": calendar_event.get("URL"),
             "id": (uid, start_date),
             "type": "event",
-            "color": calendar_event.get("COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", ""))
+            "color": calendar_event.get("COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", "")),
+            "categories": categories,
         }
 
     def convert_error(self, error, url, tb_s):

@@ -161,6 +161,18 @@ function loadCalendar() {
             template.location(event) +
             template.debug(event);
     }
+
+    scheduler.templates.event_header = function(start, end, event){
+        if (event.categories){
+            return (scheduler.templates.event_date(start)+" - "+
+                scheduler.templates.event_date(end)+'<b> | '+
+	        event.categories)+' |</b>'
+        } else {
+            return(scheduler.templates.event_date(start)+" - "+
+            scheduler.templates.event_date(end))
+        }
+    };
+
     // general style
     scheduler.templates.event_class=function(start,end,event){
         if (event.type == "error") {
