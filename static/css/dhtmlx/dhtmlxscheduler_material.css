@@ -732,7 +732,7 @@ div.icon_delete {
 }
 .dhx_agenda_line div {
   float: left;
-  width: 188px;
+  width: 120px;
   border-right: 1px dotted #8894A3;
   text-align: center;
   line-height: 21px;
@@ -749,7 +749,7 @@ div.icon_delete {
 }
 .dhx_v_border {
   position: absolute;
-  left: 187px;
+  left: 119px;
   top: 0;
   border-right: 1px dotted #8894A3;
   width: 1px;
