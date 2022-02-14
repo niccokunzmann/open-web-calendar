@@ -3255,3 +3255,12 @@ div.dhx_year_tooltip .dhx_tooltip_line .dhx_tooltip_date {
 .dhx_expand_icon {
   background-image: url("imgs_dhx_material/collapse_expand_icon.png");
 }
+
+/* Shorten URLs */
+.dhtmlXTooltip.tooltip a {
+  display: inline-block;
+  max-width: 20em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
