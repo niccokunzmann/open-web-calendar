@@ -135,6 +135,8 @@ function loadCalendar() {
     setLocale(scheduler);
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
+    // Display no time
+    scheduler.config.hour_date="";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
     scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
