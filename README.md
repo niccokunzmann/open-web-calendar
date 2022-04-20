@@ -95,6 +95,7 @@ see the [app.json] file.
 Related Work
 ------------
 
+- [docker-ics-view](https://github.com/11notes/docker-ics-view) and [its Docker image](https://hub.docker.com/r/11notes/ics-view) - a fork of this project with further improvements
 - [calender_merger](https://github.com/niccokunzmann/calender_merger) for merging several ICAL files into one
 - [ical-filter](https://github.com/thoka/ical-filter) for filtering events in an ICAL file and providing the selection as file
 - [Wordpress all in one event calendar](https://wordpress.org/plugins/all-in-one-event-calendar/)
