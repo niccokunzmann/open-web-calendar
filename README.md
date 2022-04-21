@@ -92,6 +92,21 @@ see the [app.json] file.
 
 [web]: https://openwebcalendar.herokuapp.com/
 
+### Updating Dependencies
+
+You can update the packages to the latest version:
+```
+rm requirements.txt test-requirements.txt
+pip install --upgrade pip-tools -r requirements.in -r test-requirements.in
+pip-compile -o requirements.txt requirements.in
+pip-compile -o test-requirements.txt test-requirements.in
+```
+
+And run the tests:
+```
+pytest
+```
+
 Related Work
 ------------
 
