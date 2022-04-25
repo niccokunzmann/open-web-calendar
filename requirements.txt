@@ -10,12 +10,12 @@ chardet==3.0.4
     # via requests
 click==7.0
     # via flask
-flask-caching==1.4.0
-    # via -r requirements.in
 flask==1.0.2
     # via
     #   -r requirements.in
     #   flask-caching
+flask-caching==1.10.1
+    # via -r requirements.in
 gunicorn==19.9.0
     # via -r requirements.in
 icalendar==4.0.3
