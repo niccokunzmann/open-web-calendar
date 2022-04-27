@@ -2,6 +2,7 @@ Open Web Calendar
 =================
 
 [![Build Status](https://travis-ci.org/niccokunzmann/open-web-calendar.svg?branch=master)](https://travis-ci.org/niccokunzmann/open-web-calendar)
+[![https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective](Support on Open Collective)](https://opencollective.com/open-web-calendar/)
 **[Try it out][web]**
 
 There are several commercial solutions which allow embedding of calendars into my website.
