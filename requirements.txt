@@ -4,14 +4,13 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-
 certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.12
     # via requests
 click==8.1.2
     # via flask
-flask==2.1.1
+flask==2.1.2
     # via
     #   -r requirements.in
     #   flask-caching
@@ -27,7 +26,9 @@ icalendar==4.0.9
 idna==3.3
     # via requests
 importlib-metadata==4.11.3
-    # via flask
+    # via
+    #   click
+    #   flask
 itsdangerous==2.1.2
     # via flask
 jinja2==3.1.1
@@ -51,6 +52,8 @@ requests==2.27.1
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
+typing-extensions==4.2.0
+    # via importlib-metadata
 urllib3==1.26.9
     # via requests
 werkzeug==2.1.1
