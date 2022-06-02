@@ -115,6 +115,8 @@ function getSpecification() {
     }
     /* title */
     setSpecificationValueFromId(specification, "title", "calendar-title");
+    /* starting date */
+    setSpecificationValueFromId(specification, "starting_date", "starting-date");
     /* language */
     setSpecificationValueFromId(specification, "language", "select-language");
     /* skin */
