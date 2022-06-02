@@ -138,6 +138,12 @@ function loadCalendar() {
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
     scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
+    if (specification["starting_hour"]) {
+        scheduler.config.first_hour = parseInt(specification["starting_hour"]);
+    }
+    if (specification["ending_hour"]) {
+        scheduler.config.last_hour = parseInt(specification["ending_hour"]);
+    }
     let starting_date = new Date();
     if (specification["starting_date"]) {
         starting_date = new Date(specification["starting_date"]);
