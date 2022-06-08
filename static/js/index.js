@@ -121,6 +121,15 @@ function getSpecification() {
     setSpecificationValueFromId(specification, "starting_hour", "starting-hour");
     /* ending hour */
     setSpecificationValueFromId(specification, "ending_hour", "ending-hour");
+
+    /* time increment */
+    let time_increment = document.getElementById("time-increment");
+    for (let c of time_increment.getElementsByTagName("input")) {
+        if (c.checked && c.value != 60) {
+            specification.time_increment = c.value;
+        }
+    }
+
     /* language */
     setSpecificationValueFromId(specification, "language", "select-language");
     /* skin */
@@ -322,6 +331,12 @@ function initializeTitle() {
     changeSpecificationOnChange(input);
 }
 
+function initializeTimeIncrement() {
+    var input = document.getElementById("time-increment");
+    document.getElementById("time-hour").checked = "checked";
+    changeSpecificationOnChange(input);
+}
+
 /* general event input for specification changes */
 
 function changeSpecificationOnChange(input) {
@@ -389,6 +404,7 @@ window.addEventListener("load", function(){
     fillLanguageChoice();
     initializeSkinChoice();
     initializeTitle();
+    initializeTimeIncrement();
     initializeLoader();
     initializeLinkTargetChoice();
     updateCalendarInputs();

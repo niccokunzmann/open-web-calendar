@@ -132,10 +132,23 @@ function setLoader() {
 }
 
 function loadCalendar() {
+    var format = scheduler.date.date_to_str("%H:%i");
     setLocale(scheduler);
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
+    if (specification["time_increment"]) {
+        scheduler.config.hour_size_px = 88;
+        scheduler.templates.hour_scale = function(date){
+            var step = 30;
+            var html = "";
+            for (var i=0; i<60/step; i++){
+                html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>";
+                date = scheduler.date.add(date, step, "minute");
+            }
+            return html;
+        }
+    }
     scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
     if (specification["starting_hour"]) {
