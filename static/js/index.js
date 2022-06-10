@@ -125,8 +125,8 @@ function getSpecification() {
     /* time increment */
     let time_increment = document.getElementById("time-increment");
     for (let c of time_increment.getElementsByTagName("input")) {
-        if (c.checked && c.value != 60) {
-            specification.time_increment = c.value;
+        if (c.checked) {
+            specification.hour_division = c.value;
         }
     }
 
@@ -331,10 +331,31 @@ function initializeTitle() {
     changeSpecificationOnChange(input);
 }
 
+function initializeStartDate() {
+    var input = document.getElementById("starting-date");
+    input.value = configuration.default_specification.starting_date;
+    changeSpecificationOnChange(input);
+}
+
+function initializeFirstHour() {
+    var input = document.getElementById("starting-hour");
+    input.value = configuration.default_specification.first_hour; 
+    changeSpecificationOnChange(input);
+}
+
+function initializeLastHour() {
+    var input = document.getElementById("ending-hour");
+    input.value = configuration.default_specification.last_hour;
+    changeSpecificationOnChange(input);
+}
+
 function initializeTimeIncrement() {
     var input = document.getElementById("time-increment");
-    document.getElementById("time-hour").checked = "checked";
-    changeSpecificationOnChange(input);
+    document.getElementById("time-" + configuration.default_specification.hour_division).checked = "checked";
+
+    for (let c of input.getElementsByTagName("input")) {
+        changeSpecificationOnChange(c);
+    }
 }
 
 /* general event input for specification changes */
@@ -404,6 +425,9 @@ window.addEventListener("load", function(){
     fillLanguageChoice();
     initializeSkinChoice();
     initializeTitle();
+    initializeStartDate();
+    initializeFirstHour();
+    initializeLastHour();
     initializeTimeIncrement();
     initializeLoader();
     initializeLinkTargetChoice();

@@ -17,6 +17,29 @@ url:
 ## The title is displayed as the title of the html page.
 title: "Open Web Calendar"
 
+## The starting date of the calendar view in YYYY-MM-DD format
+## Leave empty for today
+starting_date: ""
+
+## First hour of the view
+first_hour: 0
+
+## Last hour of the view
+last_hour: 24
+
+## example use: restrict calendar view to working hour
+#first_hour: 8
+#last_hour: 18
+
+## Hour division
+## size in minute of divisions in day & week views
+## Possibles values:
+## - 60
+## - 30
+## - 15
+## - 10
+hour_division: 60
+
 ## The language of the calendar. You can choose from these languages:
 ## Arabic: "ar"
 ## Belarusian: "be"

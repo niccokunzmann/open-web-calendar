@@ -137,12 +137,13 @@ function loadCalendar() {
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
-    if (specification["time_increment"]) {
-        scheduler.config.hour_size_px = 88;
+    if (specification["hour_division"]) {
+        let hour_division = specification["hour_division"];
+        scheduler.config.hour_size_px = 44 * hour_division;
         scheduler.templates.hour_scale = function(date){
-            var step = 30;
+            var step = 60 / hour_division;
             var html = "";
-            for (var i=0; i<60/step; i++){
+            for (var i=0; i<hour_division; i++){
                 html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>";
                 date = scheduler.date.add(date, step, "minute");
             }
