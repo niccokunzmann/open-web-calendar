@@ -37,8 +37,10 @@ to run the server, see the [Procfile](Procfile).
 ### Docker
 #### Docker build
 To build the container yourself just type the command `docker build . -t <container-name>` with `<container-name>` being the name that you want for your container
+
 #### Using pre build dockerhub image with docker-compose
 <TODO: Docker compose file>
+
 To deploy the open-web-calendar with docker-compose, do the following steps:
 1. Copy the `docker-compose.yml` file to the directory from where you want to run the container
 2. If needed change port mapping and environment variables
