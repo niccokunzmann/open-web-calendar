@@ -39,7 +39,7 @@ to run the server, see the [Procfile](Procfile).
 
 ### Docker
 #### Docker build
-To build the container yourself just type the command `docker build . -t <container-name>` with `<container-name>` being the name that you want for your container
+To build the container yourself type the command `docker build . -t <container-name>` with `<container-name>` being the name that you want for your container
 
 #### Using pre build dockerhub image with docker-compose
 <TODO: Docker compose file>
@@ -51,7 +51,7 @@ To deploy the open-web-calendar with docker-compose, do the following steps:
 4. The container will be pulled automatically from dockerhub and then starts
 
 #### Update prebuild image with docker-compose
-If you want to update your image with the latest version from dockerhub just type `docker-compose pull`
+If you want to update your image with the latest version from dockerhub type `docker-compose pull`
 
 Note: You need to start the container after pulling again in order for the update to apply (`docker-compose up -d`)
 
