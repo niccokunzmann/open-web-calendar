@@ -3,7 +3,8 @@ Open Web Calendar
 
 [![Build Status](https://travis-ci.org/niccokunzmann/open-web-calendar.svg?branch=master)](https://travis-ci.org/niccokunzmann/open-web-calendar)
 [![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)](https://opencollective.com/open-web-calendar/)
-**[Try it out][web]**
+**[Try&nbsp;it&nbsp;out][web]**
+[![build and publish the Docker image](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml/badge.svg)](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml)
 
 There are several commercial solutions which allow embedding of calendars into my website.
 I only have a link to an ICS file and want to show a nice-looking calendar on my site.
