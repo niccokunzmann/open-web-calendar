@@ -8,7 +8,7 @@ name: build and publish the Docker image
 
 on:
   push:
-    branches: [ "docker" ]
+    branches: [ "master" ]
 
 jobs:
 
