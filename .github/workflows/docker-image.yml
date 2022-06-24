@@ -1,5 +1,5 @@
 # GitHub Action workflow to publish the docker image on
-#     https://hub.docker.com/repository/docker/niccokunzmann/open-web-calendar
+#     https://hub.docker.com/r/niccokunzmann/open-web-calendar/
 #
 # Find documentation here:
 #     https://docs.github.com/en/actions/publishing-packages/publishing-docker-images
