@@ -96,7 +96,13 @@ see the [app.json] file.
 
 ### Updating Dependencies
 
+We use `pip-compile` to guarantee a
+tested deployment by fixing all
+the dependencies to a specific
+version.
+
 You can update the packages to the latest version:
+
 ```
 rm requirements.txt test-requirements.txt
 pip install --upgrade pip-tools -r requirements.in -r test-requirements.in
