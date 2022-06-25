@@ -6,6 +6,8 @@ Open Web Calendar
 **[Try&nbsp;it&nbsp;out][web]**
 [![build and publish the Docker image](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml/badge.svg)](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml)
 
+Python: 3.7, 3.8, 3.9, 3.10
+
 There are several commercial solutions which allow embedding of calendars into my website.
 I only have a link to an ICS file and want to show a nice-looking calendar on my site.
 Browser-only calendars usually have the problem that many ICS files can not be
