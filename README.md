@@ -92,6 +92,28 @@ Development
 For the configuration of the app through environment variables,
 see the [app.json] file.
 
+## Running Tests
+
+To run the tests, we use `tox`.
+`tox` tests all different Python versions which we want to 
+be compatible to.
+
+```
+pip install tox
+```
+
+Run all tests:
+
+```
+tox
+```
+
+Run a specific Python version:
+
+```
+tox -e py39
+```
+
 [web]: https://openwebcalendar.herokuapp.com/
 
 ### Updating Dependencies
