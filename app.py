@@ -39,9 +39,10 @@ PARAM_SPECIFICATION_URL = "specification_url"
 # globals
 app = Flask(__name__, template_folder="templates")
 # Check Configuring Flask-Cache section for more details
-cache = Cache(app, config={
+CACHE_CONFIG = {
     'CACHE_TYPE': 'FileSystemCache',
-    'CACHE_DIR': tempfile.mktemp(prefix="cache-")})
+    'CACHE_DIR': tempfile.mktemp(prefix="cache-")}
+cache = Cache(app, config=CACHE_CONFIG)
 
 # caching
 

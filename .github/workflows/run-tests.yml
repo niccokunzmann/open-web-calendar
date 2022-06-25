@@ -1,0 +1,26 @@
+# Run pytest for each commit.
+# See also
+#    https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#running-tests-with-tox
+name: Test with pytest and tox
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.7", "3.8", "3.9", "3.10"]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install test packages
+        run: pip install tox
+      - name: Run tests
+        # Run tox using the version of Python in `PATH`
+        run: tox -e py
