@@ -20,7 +20,7 @@ flask-caching==2.0.0
     # via -r requirements.in
 gunicorn==20.1.0
     # via -r requirements.in
-icalendar==4.0.9
+icalendar==4.1.0
     # via
     #   -r requirements.in
     #   recurring-ical-events
