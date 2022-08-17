@@ -57,7 +57,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "url": calendar_event.get("URL"),
             "id": (uid, start_date),
             "type": "event",
-            "color": calendar_event.get("X-APPLE-CALENDAR-COLOR", "")
+            "color": calendar_event.get("COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", ""))
         }
 
     def convert_error(self, error, url, tb_s):
