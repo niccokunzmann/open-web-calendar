@@ -160,6 +160,8 @@ pytest
 Changelog
 ---------
 
+- v1.1
+  - Add Coatian Language by Tomislav Gomerčić
 - v1.0
   - Create the changelog.
   - Add support for colors from ICS calendars, see [Issue #52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88).
