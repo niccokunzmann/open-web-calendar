@@ -107,3 +107,4 @@ ENV
 # my ignores
 tmp
 *.swp
+.vercel
