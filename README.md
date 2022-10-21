@@ -55,6 +55,14 @@ If you want to update your image with the latest version from dockerhub type `do
 
 Note: You need to start the container after pulling again in order for the update to apply (`docker-compose up -d`)
 
+### Vercel
+
+You can create a fork of this repository which automatically deploys to Vercel:
+
+[![Deploy](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fniccokunzmann%2Fopen-web-calendar.git)
+
+Alternatively you can create a one off deploy by cloning this repository and running `npx vercel` at the root.
+
 Research
 --------
 
