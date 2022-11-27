@@ -5,6 +5,7 @@ ADD pip.conf /etc/pip.conf
 
 EXPOSE 80
 ENV PORT=80
+ENV WORKERS=4
 
 # Create app environment
 RUN mkdir /app
@@ -18,11 +19,5 @@ RUN pip install --upgrade --no-cache-dir -r requirements.txt
 # Start service
 ENTRYPOINT ["/bin/sh", "start-service.sh"]
 
-# add source files
-ENV SOURCE_CODE="/app"
-ADD LICENSE .
-ADD Dockerfile .
-ADD start-service.sh .
-
 # Add the app
-ADD app.py .
+ADD . .

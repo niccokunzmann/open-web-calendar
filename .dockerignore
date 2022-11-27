@@ -12,7 +12,3 @@ __pycache__
 Procfile
 architecture.svg
 app.json
-
-# added before
-pip.conf
-requirements.*

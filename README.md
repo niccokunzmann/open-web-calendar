@@ -37,20 +37,47 @@ There is a free plan.
 Heroku uses [gunicorn](http://flask.pocoo.org/docs/dev/deploying/wsgi-standalone/#gunicorn)
 to run the server, see the [Procfile](Procfile).
 
-### Docker
-#### Docker build
-To build the container yourself type the command `docker build . -t <container-name>` with `<container-name>` being the name that you want for your container
+### Environment Variables - Configutation
 
-#### Using pre build dockerhub image with docker-compose
+These environment variables can be used to configure the service:
+
+- `APP_DEBUG` default `true`, values `true` or `false`, always `false` in the Docker container
+  Set the debug flag for the app.
+- `PORT` default `5000`, default `80` in the Docker container  
+  The port that the service is running on.
+- `WORKERS` default `4` only for the Docker container  
+  The number of parallel workers to handle requests.
+- `CACHE_REQUESTED_URLS_FOR_SECONDS` default `600`  
+  Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.
+
+### Docker
+
+To build the container yourself type the command
+```
+docker build --tag niccokunzmann/open-web-calendar .
+```
+
+You can also use the existing image.
+
+```
+docker run -d --rm -p 8000:80 niccokunzmann/open-web-calendar
+```
+
+Then, you should see your service running at http://localhost:8000.
+
+### Docker Compose
+
+Using pre build dockerhub image with docker-compose
 <TODO: Docker compose file>
 
 To deploy the open-web-calendar with docker-compose, do the following steps:
-1. Copy the `docker-compose.yml` file to the directory from where you want to run the container
-2. If needed change port mapping and environment variables
-3. Type `docker-compose up -d` to start the container
-4. The container will be pulled automatically from dockerhub and then starts
+1. Copy the `docker-compose.yml` file to the directory from where you want to run the container.
+2. If needed change port mapping and environment variables.
+3. Type `docker-compose up -d` to start the container.
+4. The container will be pulled automatically from dockerhub and then starts.
 
-#### Update prebuild image with docker-compose
+#### Update prebuild image with Docker Compose
+
 If you want to update your image with the latest version from dockerhub type `docker-compose pull`
 
 Note: You need to start the container after pulling again in order for the update to apply (`docker-compose up -d`)
@@ -162,7 +189,7 @@ pip-compile -o test-requirements.txt test-requirements.in
 
 And run the tests:
 ```
-pytest
+tox
 ```
 
 Changelog
