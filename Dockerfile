@@ -1,12 +1,28 @@
-FROM python:3
+FROM python:3.9-alpine
 
-WORKDIR /usr/src/app
+# make pip also use piwheels
+ADD pip.conf /etc/pip.conf
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+EXPOSE 80
+ENV PORT=80
 
-COPY . .
+# Create app environment
+RUN mkdir /app
+WORKDIR /app
+ENV PYTHONUNBUFFERED=true
 
-EXPOSE 5000
+# Install Packages
+ADD requirements.txt .
+RUN pip install --upgrade --no-cache-dir -r requirements.txt
 
-CMD [ "python", "./app.py" ]
+# Start service
+ENTRYPOINT ["/bin/sh", "start-service.sh"]
+
+# add source files
+ENV SOURCE_CODE="/app"
+ADD LICENSE .
+ADD Dockerfile .
+ADD start-service.sh .
+
+# Add the app
+ADD app.py .
