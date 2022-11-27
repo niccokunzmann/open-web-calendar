@@ -68,7 +68,18 @@ Then, you should see your service running at http://localhost:5000.
 ### Docker Compose
 
 Using pre build dockerhub image with docker-compose
-<TODO: Docker compose file>
+
+```
+version: '3'
+services:
+  open-web-calendar:
+    image: niccokunzmann/open-web-calendar
+    ports:
+      - '80:80'
+    environment:
+      - WORKERS=4
+    restart: unless-stopped
+```
 
 To deploy the open-web-calendar with docker-compose, do the following steps:
 1. Copy the `docker-compose.yml` file to the directory from where you want to run the container.
