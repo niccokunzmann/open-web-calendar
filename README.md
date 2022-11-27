@@ -60,10 +60,10 @@ docker build --tag niccokunzmann/open-web-calendar .
 You can also use the existing image.
 
 ```
-docker run -d --rm -p 8000:80 niccokunzmann/open-web-calendar
+docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
 ```
 
-Then, you should see your service running at http://localhost:8000.
+Then, you should see your service running at http://localhost:5000.
 
 ### Docker Compose
 

@@ -47,6 +47,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: latest
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/386,linux/arm/v6
           labels: ${{ steps.meta.outputs.labels }}
