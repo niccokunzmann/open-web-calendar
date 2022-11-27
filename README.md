@@ -180,7 +180,7 @@ Run a specific Python version:
 tox -e py39
 ```
 
-[web]: https://openwebcalendar.herokuapp.com/
+[web]: https://open-web-calendar.hosted.quelltext.eu/
 
 ### Updating Dependencies
 
