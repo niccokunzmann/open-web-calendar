@@ -206,6 +206,9 @@ tox
 Changelog
 ---------
 
+- v1.2
+  - Use Gunicorn in Docker image
+  - change deployment to https://open-web-calendar.hosted.quelltext.eu/
 - v1.1
   - Add Coatian Language by Tomislav Gomerčić
 - v1.0
