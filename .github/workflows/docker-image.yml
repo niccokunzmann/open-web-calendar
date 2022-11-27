@@ -20,6 +20,11 @@ jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
+    # This environment stores the DOCKERHUB_USERNAME and DOCKERHUB_TOKEN
+    # see https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
+    environment:
+      name: dockerhub
+      url: https://hub.docker.com/r/niccokunzmann/open-web-calendar
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -34,7 +39,7 @@ jobs:
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -47,6 +52,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: latest
+          tags: niccokunzmann/open-web-calendar:latest
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/386,linux/arm/v6
           labels: ${{ steps.meta.outputs.labels }}
