@@ -16,7 +16,7 @@ flask==2.1.3
     # via
     #   -r requirements.in
     #   flask-caching
-flask-caching==2.0.1
+flask-caching==2.0.2
     # via -r requirements.in
 gunicorn==20.1.0
     # via -r requirements.in
