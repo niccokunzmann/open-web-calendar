@@ -4,8 +4,6 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-backports-zoneinfo==0.2.1
-    # via icalendar
 cachelib==0.9.0
     # via flask-caching
 certifi==2021.10.8
