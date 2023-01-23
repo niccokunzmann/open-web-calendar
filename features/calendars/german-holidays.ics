@@ -1,0 +1,368 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendar Labs//Calendar 1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Germany Holidays
+X-WR-TIMEZONE:Etc/GMT
+BEGIN:VEVENT
+SUMMARY:New Year's Day
+DTSTART:20220101
+DTEND:20220101
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/new-years-day.php to know more about New Year's Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed95fec1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Epiphany (BW\, BY & ST)
+DTSTART:20220106
+DTEND:20220106
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/spain/epiphany.php to know more about Epiphany (BW\, BY & ST). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed960da1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Good Friday
+DTSTART:20220415
+DTEND:20220415
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/good-friday.php to know more about Good Friday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed961c01667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday
+DTSTART:20220417
+DTEND:20220417
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/easter.php to know more about Easter Sunday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed9628c1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday
+DTSTART:20220418
+DTEND:20220418
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/easter-monday.php to know more about Easter Monday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed963501667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Labor Day
+DTSTART:20220501
+DTEND:20220501
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/uk/may-day.php to know more about Labor Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed964171667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ascension Day
+DTSTART:20220526
+DTEND:20220526
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/romania/ascension-day.php to know more about Ascension Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed965131667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Whit Monday
+DTSTART:20220606
+DTEND:20220606
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/germany/pentecost-monday.php to know more about Whit Monday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed965f81667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi
+DTSTART:20220616
+DTEND:20220616
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/corpus-christi.php to know more about Corpus Christi. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed966c31667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assumption Day
+DTSTART:20220815
+DTEND:20220815
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/the-assumption-of-mary.php to know more about Assumption Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed967901667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Unity Day (National)
+DTSTART:20221003
+DTEND:20221003
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/germany/unity-day.php to know more about Unity Day (National). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed968601667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Reformation Day
+DTSTART:20221031
+DTEND:20221031
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/germany/reformation-day.php to know more about Reformation Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed9693a1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:All Saints Day
+DTSTART:20221101
+DTEND:20221101
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/philippines/all-saints-day.php to know more about All Saints Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed96a151667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Day
+DTSTART:20221225
+DTEND:20221225
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php to know more about Christmas Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed96afa1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Holiday
+DTSTART:20221226
+DTEND:20221226
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php to know more about Christmas Holiday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed96be01667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Day
+DTSTART:20230101
+DTEND:20230101
+LOCATION:Germany
+DESCRIPTION:
+UID:636a08ed96ccc1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Epiphany (BW\, BY\, ST)
+DTSTART:20230106
+DTEND:20230106
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/spain/epiphany.php to know more about Epiphany (BW\, BY\, ST). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed96dce1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Good Friday
+DTSTART:20230407
+DTEND:20230407
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/good-friday.php to know more about Good Friday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed96ea91667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (BB)
+DTSTART:20230409
+DTEND:20230409
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/easter.php to know more about Easter Sunday (BB). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed96f861667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday
+DTSTART:20230410
+DTEND:20230410
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/christian/easter-monday.php to know more about Easter Monday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed970641667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Labor Day
+DTSTART:20230501
+DTEND:20230501
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/uk/may-day.php to know more about Labor Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed9714c1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ascension Day
+DTSTART:20230518
+DTEND:20230518
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/romania/ascension-day.php to know more about Ascension Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed972391667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Whit Monday
+DTSTART:20230529
+DTEND:20230529
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/germany/pentecost-monday.php to know more about Whit Monday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed9731b1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi (BW\, BY\, HE\, NW\, RP\, SL\, SN\, TH)
+DTSTART:20230608
+DTEND:20230608
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/corpus-christi.php to know more about Corpus Christi (BW\, BY\, HE\, NW\, RP\, SL\, SN\, TH). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed974131667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assumption Day (BY\, SL)
+DTSTART:20230815
+DTEND:20230815
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/the-assumption-of-mary.php to know more about Assumption Day (BY\, SL). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed975001667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Unity Day (National)
+DTSTART:20231003
+DTEND:20231003
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/germany/unity-day.php to know more about Unity Day (National). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed975ef1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Reformation Day (BB\, HH\, MV\, NI\, SH\, SN\, ST\, TH)
+DTSTART:20231031
+DTEND:20231031
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/germany/reformation-day.php to know more about Reformation Day (BB\, HH\, MV\, NI\, SH\, SN\, ST\, TH). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed976eb1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:All Saints Day (BW\, BY\, NW\, RP\, SL)
+DTSTART:20231101
+DTEND:20231101
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/philippines/all-saints-day.php to know more about All Saints Day (BW\, BY\, NW\, RP\, SL). \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed977e41667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Day
+DTSTART:20231225
+DTEND:20231225
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php to know more about Christmas Day. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed978da1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Holiday
+DTSTART:20231226
+DTEND:20231226
+LOCATION:Germany
+DESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php to know more about Christmas Holiday. \n\n Like us on Facebook: http://fb.com/calendarlabs to get updates
+UID:636a08ed97a2f1667893485@calendarlabs.com
+DTSTAMP:20221108T074445Z
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
