@@ -41,3 +41,16 @@ def step_impl(context, count=1):
     events = context.browser.find_elements(By.XPATH, "//div[contains(@class, 'event')]")
     assert len(events) == count, f"Expected {count} events but {len(events)} were found: {repr(events)}"
 
+@then(u'we see that event "{uid}" has the text "{text}"')
+def step_impl(context, uid, text):
+    events = context.browser.find_elements(By.XPATH, f"//div[contains(@event_id, {repr(uid)})]")
+    assert len(events) == 1, f"There should only be one event with UID {uid} but there are {len(events)}."
+    event = events[0]
+    innerText = event.get_attribute("innerText")
+    assert innerText == text
+
+
+
+
+
+
