@@ -3,10 +3,7 @@
 #    https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#running-tests-with-tox
 name: Test with pytest and tox
 
-on:
-  # run the tests, see https://stackoverflow.com/a/68924896/1320237
-  push:
-  pull_request:
+on: [push]
 
 jobs:
   build:
