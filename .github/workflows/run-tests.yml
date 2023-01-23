@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         python: ["3.7", "3.8", "3.9", "3.10"]
-        tox_env: py
+        tox_env: ["py"]
         # see https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
         include:
         - python: "3.9"
