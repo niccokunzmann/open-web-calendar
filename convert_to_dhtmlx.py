@@ -100,7 +100,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         
     def collect_components_from(self, calendars):
         # see https://stackoverflow.com/a/16115575/1320237
-        today = (parse_date(self.specification["date"]) if "date" in self.specification else datetime.datetime.utcnow())
+        today = (parse_date(self.specification["date"]) if self.specification.get("date") else datetime.datetime.utcnow())
         one_year_ahead = today.replace(year=today.year + 1)
         one_year_before = today.replace(year=today.year - 1)
         for calendar in calendars:

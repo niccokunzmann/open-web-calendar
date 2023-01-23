@@ -52,7 +52,7 @@ function getCalendarUrl(specification) {
     var url = DEFAULT_URL + CALENDAR_ENDPOINT + "?";
     var parameters = [];
     getOwnProperties(specification).forEach(function(property) {
-        (Array.isArray(specification[property]) ? specification[property] : [specification[property]]
+        (Array.isArray(specification[property]) ? specification[property].length ? specification[property] : [""] : [specification[property]]
         ).forEach(function(url){
             parameters.push(encodeURIComponent(property) + "=" + encodeURIComponent("" + url))
         });
