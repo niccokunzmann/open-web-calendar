@@ -213,5 +213,8 @@ def unhandledException(error):
     </html>
     """.format(traceback=file.getvalue()), 500 # return error code from https://stackoverflow.com/a/7824605
 
+# make serializable for multiprocessing
+#app.__reduce__ = lambda: __name__ + ".app"
+
 if __name__ == "__main__":
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)

@@ -12,6 +12,11 @@ jobs:
     strategy:
       matrix:
         python: ["3.7", "3.8", "3.9", "3.10"]
+        tox_env: ["py"]
+        # see https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
+        include:
+        - python: "3.9"
+          tox_env: web
 
     steps:
       - uses: actions/checkout@v3
@@ -23,4 +28,4 @@ jobs:
         run: pip install tox
       - name: Run tests
         # Run tox using the version of Python in `PATH`
-        run: tox -e py
+        run: tox -e ${{ matrix.tox_env }}
