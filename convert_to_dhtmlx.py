@@ -6,6 +6,11 @@ from pprint import pprint
 from dateutil.parser import parse as parse_date
 
 
+def is_date(date):
+    """Whether the date is a datetime.date and not a datetime.datetime"""
+    return isinstance(date, datetime.date) and not isinstance(date, datetime.datetime)
+
+
 class ConvertToDhtmlx(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern.
     
@@ -23,7 +28,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         # see https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
         # see https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
         timezone = datetime.timezone(datetime.timedelta(minutes=-self.timeshift))
-        if isinstance(date, datetime.date) and not isinstance(date, datetime.datetime):
+        if is_date(date):
             date = datetime.datetime(date.year, date.month, date.day, tzinfo=timezone)
         elif date.tzinfo is None:
             date = date.replace(tzinfo=timezone)
@@ -33,6 +38,8 @@ class ConvertToDhtmlx(ConversionStrategy):
     def convert_ical_event(self, calendar_event):
         start = calendar_event["DTSTART"].dt
         end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
+        if is_date(start) and is_date(end) and end == start:
+            end = datetime.timedelta(days=1) + start
         geo = calendar_event.get("GEO", None)
         if geo:
             geo = {"lon": geo.longitude, "lat": geo.latitude}

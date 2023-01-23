@@ -47,7 +47,7 @@ def step_impl(context, uid, text):
     assert len(events) == 1, f"There should only be one event with UID {uid} but there are {len(events)}."
     event = events[0]
     innerText = event.get_attribute("innerText")
-    assert innerText == text
+    assert innerText == text, f"Expected {repr(text)} but got {repr(innerText)}"
 
 
 
