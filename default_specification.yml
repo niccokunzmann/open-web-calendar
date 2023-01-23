@@ -100,6 +100,11 @@ controls:
 ## You can describe the calendar with a text so people know what it is about.
 description: "This is a calendar which provides a website and an ICS subscription link based on the different calendars it is configured to use."
 
+## You can set the date that the calendar displays
+#date: "2023-1-23"
+#date: "2023-1-23 13:00"
+date: ""
+
 ###################### You will probably not change this. ######################
 ##
 ## The template is the file which shows the calendar.

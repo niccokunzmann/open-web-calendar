@@ -10,16 +10,16 @@ sys.path.append(os.path.join(HERE, ".."))
 
 from behave import fixture, use_fixture
 from selenium.webdriver import Firefox
-from dynamic_website_reverse_proxy.app import App
-from dynamic_website_reverse_proxy.config import Config
-from bottle import WSGIRefServer, default_app
-from wsgiref import simple_server
-import threading
+from app import app
+from werkzeug import run_simple
+import multiprocessing
 from selenium.webdriver import FirefoxOptions
 import tempfile
 from selenium.webdriver.common.by import By
 import shutil
 from behave.log_capture import capture
+import http.server
+import socketserver
 
 
 @fixture
@@ -36,43 +36,64 @@ def browser_firefox(context):
     context.browser.quit()
 
 
-@fixture
-def app_client(context, port=8000):
-    """Add the application.
-
-    see https://behave.readthedocs.io/en/latest/usecase_flask.html#integration-example
+def serve_calendar_files(host, port, directory=os.path.join(HERE, "calendars")):
+    """Serve the calendar files so they can be requested.
+    
+    see https://stackoverflow.com/a/52531444/1320237
     """
-    class MyWSGIServer(simple_server.WSGIServer):
-        """Saving all my instances so I can shut them down."""
-        instance = None
-        def __init__(self, *args, **kw):
-            self.__class__.instance = self
-            super().__init__(*args, **kw)
-            
-        
-    with tempfile.TemporaryDirectory(prefix="dyn-tests") as td:
-        context.app_config = config = Config({
-            "NGINX_CONF": os.path.join(td, "nginx.conf"),
-            "DOMAIN": "example.com",
-            "DATABASE": os.path.join(td, "db.pickle"),
-            "NETWORK": "172.16.0.0/16",
-            "PORT": port,
-            "DEFAULT_DOMAINS": "test.example.org->http://172.16.0.1",
-            "ADMIN_PASSWORD": "12345",
-            "NGINX_CONF": "",
-        })
-        context.app = app = App(config)
-        bottle_app = default_app()
-        app.serve_from(bottle_app)
-        bserver = WSGIRefServer(port=port, server_class=MyWSGIServer)
-        context.thread = threading.Thread(target=lambda: bserver.run(bottle_app))
-        context.thread.start()
-        context.index_page = f"http://localhost:{port}/"
-        yield app
-        MyWSGIServer.instance.shutdown()
-        context.thread.join()
+
+    class Handler(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, directory=directory, **kwargs)
+
+
+    with socketserver.TCPServer((host, port), Handler) as httpd:
+        print("serving calendars at port", port)
+        httpd.serve_forever()
+
+
+def get_free_port(start=10000, end=60000):
+    """Return a free port number."""
+    import random
+    port = random.randint(start, end)
+    return port    
+
+
+@fixture
+def app_server(context):
+    """Start the flask app in a server."""
+    app_port = get_free_port()
+    # from https://werkzeug.palletsprojects.com/en/2.1.x/serving/#shutting-down-the-server
+    # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
+    p = multiprocessing.Process(target=run_simple, args=("localhost", app_port, app))
+    p.start()
+    context.index_page = f"http://localhost:{app_port}/"
+    yield
+    p.terminate()
+
+
+@fixture
+def calendars_server(context):
+    """Start the flask app in a server."""
+    calendar_port = get_free_port()
+    # from https://werkzeug.palletsprojects.com/en/2.1.x/serving/#shutting-down-the-server
+    # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
+    p = multiprocessing.Process(target=serve_calendar_files, args=("localhost", calendar_port))
+    p.start()
+    context.calendars_url = f"http://localhost:{calendar_port}/"
+    yield
+    p.terminate()
 
 
 def before_all(context):
     use_fixture(browser_firefox, context)
-    use_fixture(app_client, context)
+    use_fixture(app_server, context)
+    use_fixture(calendars_server, context)
+
+
+def before_scenario(context, scenario):
+    """Reset the calendar for each scenario."""
+    context.specification = {
+        "url": []
+    }
+

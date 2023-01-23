@@ -3,6 +3,7 @@ from flask import jsonify
 from conversion_base import ConversionStrategy
 import recurring_ical_events
 from pprint import pprint
+from dateutil.parser import parse as parse_date
 
 
 class ConvertToDhtmlx(ConversionStrategy):
@@ -91,7 +92,8 @@ class ConvertToDhtmlx(ConversionStrategy):
         return jsonify(self.components)
         
     def collect_components_from(self, calendars):
-        today = datetime.datetime.utcnow()
+        # see https://stackoverflow.com/a/16115575/1320237
+        today = (parse_date(self.specification["date"]) if "date" in self.specification else datetime.datetime.utcnow())
         one_year_ahead = today.replace(year=today.year + 1)
         one_year_before = today.replace(year=today.year - 1)
         for calendar in calendars:

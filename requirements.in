@@ -5,3 +5,4 @@ requests
 pyyaml
 recurring-ical-events
 gunicorn
+dateutil
