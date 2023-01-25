@@ -104,7 +104,7 @@ def get_text_from_url(url):
     """
     if __URL_CACHE:
         return __URL_CACHE[url]
-    return requests.get(url).text
+    return requests.get(url).content
 
 def get_default_specification():
     """Return the default specification."""

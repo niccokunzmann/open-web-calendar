@@ -18,6 +18,7 @@ def specification_to_query(spec):
 
 @given('we add the calendar "{calendar_name}"')
 def step_impl(context, calendar_name):
+    assert not ".ics" in calendar_name
     calendar_url = context.calendars_url + calendar_name + ".ics"
     context.specification["url"].append(calendar_url)
 
