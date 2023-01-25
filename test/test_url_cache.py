@@ -6,7 +6,9 @@ from app import cache_url, get_text_from_url, requests
 from collections import namedtuple
 import pytest
 
-MockRequestResult = namedtuple("MockRequestResult", "text")
+# use the content property
+# see https://stackoverflow.com/a/18810889/1320237
+MockRequestResult = namedtuple("MockRequestResult", "content")
 
 def test_requests_are_automatically_cached(monkeypatch, mock):
     mock.return_value = MockRequestResult("trallala")
