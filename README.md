@@ -37,7 +37,7 @@ There is a free plan.
 Heroku uses [gunicorn](http://flask.pocoo.org/docs/dev/deploying/wsgi-standalone/#gunicorn)
 to run the server, see the [Procfile](Procfile).
 
-### Environment Variables - Configutation
+### Environment Variables - Configuration
 
 These environment variables can be used to configure the service:
 
