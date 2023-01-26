@@ -116,7 +116,7 @@ function getSpecification() {
     /* title */
     setSpecificationValueFromId(specification, "title", "calendar-title");
     /* starting date */
-    setSpecificationValueFromId(specification, "starting_date", "starting-date");
+    setSpecificationValueFromId(specification, "date", "starting-date");
     /* starting hour */
     setSpecificationValueFromId(specification, "starting_hour", "starting-hour");
     /* ending hour */
@@ -333,7 +333,7 @@ function initializeTitle() {
 
 function initializeStartDate() {
     var input = document.getElementById("starting-date");
-    input.value = configuration.default_specification.starting_date;
+    input.value = configuration.default_specification.date;
     changeSpecificationOnChange(input);
 }
 

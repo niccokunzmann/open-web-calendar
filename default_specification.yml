@@ -19,7 +19,7 @@ title: "Open Web Calendar"
 
 ## The starting date of the calendar view in YYYY-MM-DD format
 ## Leave empty for today
-starting_date: ""
+date: ""
 
 ## First hour of the view
 first_hour: 0
@@ -123,10 +123,6 @@ controls:
 ## You can describe the calendar with a text so people know what it is about.
 description: "This is a calendar which provides a website and an ICS subscription link based on the different calendars it is configured to use."
 
-## You can set the date that the calendar displays
-#date: "2023-1-23"
-#date: "2023-1-23 13:00"
-date: ""
 
 ###################### You will probably not change this. ######################
 ##
