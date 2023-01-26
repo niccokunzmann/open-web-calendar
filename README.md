@@ -3,7 +3,10 @@ Open Web Calendar
 
 [![Build Status](https://travis-ci.org/niccokunzmann/open-web-calendar.svg?branch=master)](https://travis-ci.org/niccokunzmann/open-web-calendar)
 [![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)](https://opencollective.com/open-web-calendar/)
-**[Try it out][web]**
+**[Try&nbsp;it&nbsp;out][web]**
+[![build and publish the Docker image](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml/badge.svg)](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml)
+
+Python: 3.7, 3.8, 3.9, 3.10
 
 There are several commercial solutions which allow embedding of calendars into my website.
 I only have a link to an ICS file and want to show a nice-looking calendar on my site.
@@ -33,6 +36,70 @@ There is a free plan.
 
 Heroku uses [gunicorn](http://flask.pocoo.org/docs/dev/deploying/wsgi-standalone/#gunicorn)
 to run the server, see the [Procfile](Procfile).
+
+### Environment Variables - Configuration
+
+These environment variables can be used to configure the service:
+
+- `APP_DEBUG` default `true`, values `true` or `false`, always `false` in the Docker container
+  Set the debug flag for the app.
+- `PORT` default `5000`, default `80` in the Docker container  
+  The port that the service is running on.
+- `WORKERS` default `4` only for the Docker container  
+  The number of parallel workers to handle requests.
+- `CACHE_REQUESTED_URLS_FOR_SECONDS` default `600`  
+  Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.
+
+### Docker
+
+To build the container yourself type the command
+```
+docker build --tag niccokunzmann/open-web-calendar .
+```
+
+You can also use the existing image.
+
+```
+docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
+```
+
+Then, you should see your service running at http://localhost:5000.
+
+### Docker Compose
+
+Using pre build dockerhub image with docker-compose
+
+```
+version: '3'
+services:
+  open-web-calendar:
+    image: niccokunzmann/open-web-calendar
+    ports:
+      - '80:80'
+    environment:
+      - WORKERS=4
+    restart: unless-stopped
+```
+
+To deploy the open-web-calendar with docker-compose, do the following steps:
+1. Copy the `docker-compose.yml` file to the directory from where you want to run the container.
+2. If needed change port mapping and environment variables.
+3. Type `docker-compose up -d` to start the container.
+4. The container will be pulled automatically from dockerhub and then starts.
+
+#### Update prebuild image with Docker Compose
+
+If you want to update your image with the latest version from dockerhub type `docker-compose pull`
+
+Note: You need to start the container after pulling again in order for the update to apply (`docker-compose up -d`)
+
+### Vercel
+
+You can create a fork of this repository which automatically deploys to Vercel:
+
+[Deploy](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fniccokunzmann%2Fopen-web-calendar.git)
+
+Alternatively you can create a one off deploy by cloning this repository and running `npx vercel` at the root.
 
 Research
 --------
@@ -91,11 +158,39 @@ Development
 For the configuration of the app through environment variables,
 see the [app.json] file.
 
-[web]: https://openwebcalendar.herokuapp.com/
+## Running Tests
+
+To run the tests, we use `tox`.
+`tox` tests all different Python versions which we want to 
+be compatible to.
+
+```
+pip install tox
+```
+
+Run all tests:
+
+```
+tox
+```
+
+Run a specific Python version:
+
+```
+tox -e py39
+```
+
+[web]: https://open-web-calendar.hosted.quelltext.eu/
 
 ### Updating Dependencies
 
+We use `pip-compile` to guarantee a
+tested deployment by fixing all
+the dependencies to a specific
+version.
+
 You can update the packages to the latest version:
+
 ```
 rm requirements.txt test-requirements.txt
 pip install --upgrade pip-tools -r requirements.in -r test-requirements.in
@@ -105,12 +200,17 @@ pip-compile -o test-requirements.txt test-requirements.in
 
 And run the tests:
 ```
-pytest
+tox
 ```
 
 Changelog
 ---------
 
+- v1.2
+  - Use Gunicorn in Docker image
+  - change deployment to https://open-web-calendar.hosted.quelltext.eu/
+- v1.1
+  - Add Coatian Language by Tomislav Gomerčić
 - v1.0
   - Create the changelog.
   - Add support for colors from ICS calendars, see [Issue #52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88).

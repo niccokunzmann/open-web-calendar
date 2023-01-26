@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from flask import Flask, render_template, make_response, request, jsonify, \
     redirect, send_from_directory
 from flask_caching import Cache
@@ -23,7 +23,7 @@ PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600))
 
 # constants
-HERE = os.path.dirname(__name__) or "."
+HERE = os.path.dirname(__file__) or "."
 DEFAULT_SPECIFICATION_PATH = os.path.join(HERE, "default_specification.yml")
 TEMPLATE_FOLDER_NAME = "templates"
 TEMPLATE_FOLDER = os.path.join(HERE, TEMPLATE_FOLDER_NAME)
@@ -39,9 +39,10 @@ PARAM_SPECIFICATION_URL = "specification_url"
 # globals
 app = Flask(__name__, template_folder="templates")
 # Check Configuring Flask-Cache section for more details
-cache = Cache(app, config={
-    'CACHE_TYPE': 'filesystem',
-    'CACHE_DIR': tempfile.mktemp(prefix="cache-")})
+CACHE_CONFIG = {
+    'CACHE_TYPE': 'FileSystemCache',
+    'CACHE_DIR': tempfile.mktemp(prefix="cache-")}
+cache = Cache(app, config=CACHE_CONFIG)
 
 # caching
 
@@ -53,6 +54,18 @@ def cache_url(url, text):
         get_text_from_url(url)
     finally:
         del __URL_CACHE[url]
+
+
+@app.after_request
+def add_header(r):
+    """
+    Add headers to both force latest IE rendering engine or Chrome Frame,
+    and also to cache the rendered page for 10 minutes.
+    """
+    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    r.headers["Pragma"] = "no-cache"
+    r.headers["Expires"] = "0"
+    return r
 
 # configuration
 
@@ -91,7 +104,7 @@ def get_text_from_url(url):
     """
     if __URL_CACHE:
         return __URL_CACHE[url]
-    return requests.get(url).text
+    return requests.get(url).content
 
 def get_default_specification():
     """Return the default specification."""
@@ -199,6 +212,9 @@ def unhandledException(error):
         </body>
     </html>
     """.format(traceback=file.getvalue()), 500 # return error code from https://stackoverflow.com/a/7824605
+
+# make serializable for multiprocessing
+#app.__reduce__ = lambda: __name__ + ".app"
 
 if __name__ == "__main__":
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)

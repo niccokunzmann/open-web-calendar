@@ -3,6 +3,12 @@ from flask import jsonify
 from conversion_base import ConversionStrategy
 import recurring_ical_events
 from pprint import pprint
+from dateutil.parser import parse as parse_date
+
+
+def is_date(date):
+    """Whether the date is a datetime.date and not a datetime.datetime"""
+    return isinstance(date, datetime.date) and not isinstance(date, datetime.datetime)
 
 
 class ConvertToDhtmlx(ConversionStrategy):
@@ -22,7 +28,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         # see https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
         # see https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
         timezone = datetime.timezone(datetime.timedelta(minutes=-self.timeshift))
-        if isinstance(date, datetime.date) and not isinstance(date, datetime.datetime):
+        if is_date(date):
             date = datetime.datetime(date.year, date.month, date.day, tzinfo=timezone)
         elif date.tzinfo is None:
             date = date.replace(tzinfo=timezone)
@@ -32,6 +38,8 @@ class ConvertToDhtmlx(ConversionStrategy):
     def convert_ical_event(self, calendar_event):
         start = calendar_event["DTSTART"].dt
         end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
+        if is_date(start) and is_date(end) and end == start:
+            end = datetime.timedelta(days=1) + start
         geo = calendar_event.get("GEO", None)
         if geo:
             geo = {"lon": geo.longitude, "lat": geo.latitude}
@@ -57,7 +65,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "url": calendar_event.get("URL"),
             "id": (uid, start_date),
             "type": "event",
-            "color": calendar_event.get("X-APPLE-CALENDAR-COLOR", "")
+            "color": calendar_event.get("COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", ""))
         }
 
     def convert_error(self, error, url, tb_s):
@@ -91,7 +99,8 @@ class ConvertToDhtmlx(ConversionStrategy):
         return jsonify(self.components)
         
     def collect_components_from(self, calendars):
-        today = datetime.datetime.utcnow()
+        # see https://stackoverflow.com/a/16115575/1320237
+        today = (parse_date(self.specification["date"]) if self.specification.get("date") else datetime.datetime.utcnow())
         one_year_ahead = today.replace(year=today.year + 1)
         one_year_before = today.replace(year=today.year - 1)
         for calendar in calendars:

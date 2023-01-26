@@ -159,8 +159,8 @@ function loadCalendar() {
         scheduler.config.last_hour = parseInt(specification["ending_hour"]);
     }
     let starting_date = new Date();
-    if (specification["starting_date"]) {
-        starting_date = new Date(specification["starting_date"]);
+    if (specification["date"]) {
+        starting_date = new Date(specification["date"]);
     }
     scheduler.init('scheduler_here', starting_date, specification["tab"]);
 
