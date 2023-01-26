@@ -138,6 +138,15 @@ function loadCalendar() {
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
     scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
+    // see https://github.com/UniRegensburg/open-web-calendar/commit/bf75bf38a3cfb9de640275bdbc146fce2acf412c
+    // make calendar readonly 
+	scheduler.config.drag_resize = false;
+	scheduler.config.drag_move = false;
+	scheduler.config.drag_create = false;
+	scheduler.config.drag_event_body = false;
+	scheduler.config.dblclick_create = false;
+	scheduler.config.edit_on_create = false;
+	
     date = specification["date"] ? new Date(specification["date"]) : new Date();
     scheduler.init('scheduler_here', date, specification["tab"]);
 
