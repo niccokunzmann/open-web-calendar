@@ -205,7 +205,12 @@ tox
 
 Changelog
 ---------
-
+- v1.3
+  - update translation mistake
+  - fix encoding problem for languages other than en/de
+  - add ability to remove all controls
+  - test with GitHub actions
+  - test user interface
 - v1.2
   - Use Gunicorn in Docker image
   - change deployment to https://open-web-calendar.hosted.quelltext.eu/
