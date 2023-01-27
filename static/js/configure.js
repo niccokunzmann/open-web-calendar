@@ -133,6 +133,15 @@ function setLoader() {
 
 function loadCalendar() {
     setLocale(scheduler);
+    // load plugins, see https://docs.dhtmlx.com/scheduler/migration_from_older_version.html#5360
+    scheduler.plugins({
+        agenda_view: true,
+        multisource: true,
+        quick_info: true,
+        recurring: false,
+        tooltip: true,
+        readonly: true,
+    });
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
@@ -150,8 +159,8 @@ function loadCalendar() {
     scheduler.templates.tooltip_text = function(start, end, event) {
         return template.summary(event) + template.details(event) + template.location(event);
     };
-    dhtmlXTooltip.config.delta_x = 0;
-    dhtmlXTooltip.config.delta_y = 0;
+    scheduler.tooltip.config.delta_x = 0;
+    scheduler.tooltip.config.delta_y = 0;
     // quick info
     scheduler.templates.quick_info_title = function(start, end, event){
         return template.summary(event);
