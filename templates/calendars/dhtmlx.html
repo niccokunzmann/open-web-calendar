@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <!-- Mostly copied from https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step2addingschedulertothepage -->
     <head>
@@ -10,20 +10,9 @@
         <!-- scheduler -->
         <script src="js/dhtmlx/dhtmlxscheduler.js"
             charset="utf-8"></script>
-        <script src="js/dhtmlx/dhtmlxscheduler_recurring.js"
-            charset="utf-8"></script>
-        <script src="js/dhtmlx/dhtmlxscheduler_multisource.js"
-            charset="utf-8"></script>
-        <script src="js/dhtmlx/dhtmlxscheduler_tooltip.js"
-            charset="utf-8"></script>
-        <script src="js/dhtmlx/dhtmlxscheduler_quick_info.js"
-            charset="utf-8"></script>
-        <!-- agenda view documentation: https://docs.dhtmlx.com/scheduler/agenda_view.html -->
-        <script src="js/dhtmlx/dhtmlxscheduler_agenda_view.js"
-            charset="utf-8"></script>
         <script src="js/configure.js"
             charset="utf-8"></script>
-        <link href="css/dhtmlx/{{ specification['skin'] }}"
+        <link href="css/dhtmlx/{{ specification['skin'] | safe }}"
             rel="stylesheet" type="text/css" charset="utf-8">
         <link href="css/dhtmlx/style.css"
             rel="stylesheet" type="text/css" charset="utf-8">
