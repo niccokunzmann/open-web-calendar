@@ -27,8 +27,10 @@ icalendar==5.0.4
     #   x-wr-timezone
 idna==3.4
     # via requests
-importlib-metadata==4.11.3
+importlib-metadata==6.0.0
     # via flask
+typing-extensions==4.4.0
+    # via importlib-metadata
 itsdangerous==2.1.2
     # via flask
 jinja2==3.1.1
