@@ -205,6 +205,8 @@ tox
 
 Changelog
 ---------
+- v1.4
+  - add event categories when you click an event, see [PR 159](https://github.com/niccokunzmann/open-web-calendar/pull/159).
 - v1.3
   - update translation mistake
   - fix encoding problem for languages other than en/de
