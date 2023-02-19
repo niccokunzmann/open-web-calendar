@@ -51,7 +51,29 @@ def step_impl(context, uid, text):
     assert innerText == text, f"Expected {repr(text)} but got {repr(innerText)}"
 
 
+@when(u'we click on the event "{text}"')
+def step_impl(context, text):
+    print(repr(f"//div[contains(@class, 'event') and contains(text(), '{text}')]"))
+    events = context.browser.find_elements(By.XPATH, "//div[contains(@class, 'event')]")
+    chosen_events = [event for event in events if text in event.get_attribute("innerText")]
+    assert len(chosen_events) == 1, f"There should only be one event with the text {text} but there are {len(events)}."
+    event = chosen_events[0]
+    event.click()
 
 
+def get_body_text(context):
+    body = context.browser.find_elements(By.XPATH, "//body")[0]
+    innerText = body.get_attribute("innerText")
+    return innerText
+
+
+@then(u'we cannot see the text "{text}"')
+def step_impl(context, text):
+    assert text not in get_body_text(context)
+
+
+@then(u'we can see the text "{text}"')
+def step_impl(context, text):
+    assert text in get_body_text(context)
 
 
