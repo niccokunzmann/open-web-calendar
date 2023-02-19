@@ -57,7 +57,7 @@ To build the container yourself type the command
 docker build --tag niccokunzmann/open-web-calendar .
 ```
 
-You can also use the existing image.
+You can also use the existing image: [niccokunzmann/open-web-calendar](https://hub.docker.com/r/niccokunzmann/open-web-calendar).
 
 ```
 docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
