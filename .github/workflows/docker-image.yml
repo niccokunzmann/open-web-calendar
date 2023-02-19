@@ -46,15 +46,15 @@ jobs:
       
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        uses: docker/metadata-action@v4
         with:
           images: niccokunzmann/open-web-calendar
       
       - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: niccokunzmann/open-web-calendar:latest
+          tags: ${{ steps.meta.outputs.tags }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/386,linux/arm/v6
           labels: ${{ steps.meta.outputs.labels }}
