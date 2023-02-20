@@ -57,7 +57,7 @@ To build the container yourself type the command
 docker build --tag niccokunzmann/open-web-calendar .
 ```
 
-You can also use the existing image.
+You can also use the existing image: [niccokunzmann/open-web-calendar](https://hub.docker.com/r/niccokunzmann/open-web-calendar).
 
 ```
 docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
@@ -205,7 +205,14 @@ tox
 
 Changelog
 ---------
-
+- v1.4
+  - add event categories when you click an event, see [PR 159](https://github.com/niccokunzmann/open-web-calendar/pull/159).
+- v1.3
+  - update translation mistake
+  - fix encoding problem for languages other than en/de
+  - add ability to remove all controls
+  - test with GitHub actions
+  - test user interface
 - v1.2
   - Use Gunicorn in Docker image
   - change deployment to https://open-web-calendar.hosted.quelltext.eu/
