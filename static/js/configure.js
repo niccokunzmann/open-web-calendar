@@ -159,8 +159,8 @@ function loadCalendar() {
     scheduler.templates.tooltip_text = function(start, end, event) {
         return template.summary(event) + template.details(event) + template.location(event);
     };
-    scheduler.tooltip.config.delta_x = 0;
-    scheduler.tooltip.config.delta_y = 0;
+    scheduler.tooltip.config.delta_x = 1;
+    scheduler.tooltip.config.delta_y = 1;
     // quick info
     scheduler.templates.quick_info_title = function(start, end, event){
         return template.summary(event);

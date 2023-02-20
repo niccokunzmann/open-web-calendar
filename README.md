@@ -205,6 +205,8 @@ tox
 
 Changelog
 ---------
+- v1.5
+  - make event clickable even if there is a tool tip window
 - v1.4
   - add event categories when you click an event, see [PR 159](https://github.com/niccokunzmann/open-web-calendar/pull/159).
 - v1.3
