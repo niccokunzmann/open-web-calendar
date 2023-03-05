@@ -87,6 +87,8 @@ To deploy the open-web-calendar with docker-compose, do the following steps:
 3. Type `docker-compose up -d` to start the container.
 4. The container will be pulled automatically from dockerhub and then starts.
 
+**Important Note:** If you use this service, consider setting up [log rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47) as it is very talkative.
+
 #### Update prebuild image with Docker Compose
 
 If you want to update your image with the latest version from dockerhub type `docker-compose pull`
