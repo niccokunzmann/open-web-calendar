@@ -227,6 +227,7 @@ tox
 Changelog
 ---------
 - v1.5
+  - add link to [Contributing Section](#contributing) in about page
   - make event clickable even if there is a tool tip window
   - [@MrKoga](https://github.com/MrKoga) [donated][github-sponsors] to the project! Thanks!
 - v1.4
