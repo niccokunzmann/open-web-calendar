@@ -2,9 +2,16 @@ Open Web Calendar
 =================
 
 [![Build Status](https://travis-ci.org/niccokunzmann/open-web-calendar.svg?branch=master)](https://travis-ci.org/niccokunzmann/open-web-calendar)
-[![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)](https://opencollective.com/open-web-calendar/)
-**[Try&nbsp;it&nbsp;out][web]**
+[![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)][open-collective]
 [![build and publish the Docker image](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml/badge.svg)](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml)
+
+You might want to:
+- **[Try&nbsp;it&nbsp;out][web]**
+- [Donate using Open Collective][open-collective]
+- [Donate using GitHub Sponsors][github-sponsors]
+
+[open-collective]: https://opencollective.com/open-web-calendar/
+[github-sponsors]: https://github.com/sponsors/niccokunzmann
 
 Python: 3.7, 3.8, 3.9, 3.10
 
@@ -209,7 +216,7 @@ Changelog
 ---------
 - v1.5
   - make event clickable even if there is a tool tip window
-  - [@MrKoga](https://github.com/MrKoga) [donated](https://github.com/sponsors/niccokunzmann) to the project! Thanks!
+  - [@MrKoga](https://github.com/MrKoga) [donated][github-sponsors] to the project! Thanks!
 - v1.4
   - add event categories when you click an event, see [PR 159](https://github.com/niccokunzmann/open-web-calendar/pull/159).
 - v1.3
