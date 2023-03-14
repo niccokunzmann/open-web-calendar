@@ -34,6 +34,18 @@ Features
 - showing the time span
 - styling of choice (icon, color, font, ...)
 
+## Contributing
+
+There are several ways in which you can help this project:
+
+- [Use it][web] and [report errors][issues]
+- [Donate using Open Collective][open-collective]
+- [Donate using GitHub Sponsors][github-sponsors]
+- Have a look at [open issues][issues] e.g. those especially to get started, labelled [good first issue][good-first-issue], leave a note and work on it. 
+
+[issues]: https://github.com/niccokunzmann/open-web-calendar/issues
+[good-first-issue]: https://github.com/niccokunzmann/open-web-calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+
 ## Deployment
 
 You can deploy the app using Heroku.
