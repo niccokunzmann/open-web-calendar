@@ -119,6 +119,8 @@ function getSpecification() {
     setSpecificationValueFromId(specification, "language", "select-language");
     /* skin */
     setSpecificationValueFromId(specification, "skin", "select-skin");
+    /* Start of the week */
+    setSpecificationValueFromId(specification, "start_of_week", "select-start-of-week");
     /* color and CSS */
     var css = configuration.default_specification.css;
     var colorInputs = document.getElementsByClassName("color-input");
@@ -316,6 +318,12 @@ function initializeTitle() {
     changeSpecificationOnChange(input);
 }
 
+function initializeStartOfWeek() {
+    var input = document.getElementById("select-start-of-week");
+    input.value = configuration.default_specification.start_of_week;
+    changeSpecificationOnChange(input);
+}
+
 /* general event input for specification changes */
 
 function changeSpecificationOnChange(input) {
@@ -381,6 +389,7 @@ window.addEventListener("load", function(){
     // initialization
     listenForCSSChanges();
     fillLanguageChoice();
+    initializeStartOfWeek();
     initializeSkinChoice();
     initializeTitle();
     initializeLoader();
