@@ -84,3 +84,8 @@
     z-index: 40;
     position: absolute;
 }
+
+.dhx_cal_qi_controls {
+  /* hide the delete and details button */
+  display: none
+}

@@ -6,6 +6,7 @@
         <link href="css/index.css"
             rel="stylesheet" type="text/css" charset="utf-8">
         <script src="js/index.js"></script>
+        <script src="js/common.js"></script>
         <script src="configuration.js"></script>
     </head>
     <body>
@@ -99,6 +100,14 @@
                         <option value="_top">Open the linked document in the full body of the window.</option>
                     </select>
                 </p>
+                <h3 id="links">Start of the Week</h3>
+                <p>
+                    The week may start on Monday or Sunday<br/>
+                    <select id="select-start-of-week">
+                        <option value="mo">Monday</option>
+                        <option value="su">Sunday</option>
+                    </select>
+                </p>
                 <h3 id="style">Custom Style with CSS</h3>
                 <p>
                   You can change the color of your calendar and many more
@@ -181,6 +190,16 @@
                     <input type="checkbox" class="controls" value="today"   /><label for="today"   >Today</label>
                     <input type="checkbox" class="controls" value="date"    /><label for="date"    >Date</label>
                   </form>
+                </p>
+                <h3 id="tabs">Time Zone</h3>
+                <p>
+                  The timezone is taken from the browser of the user.
+                  If you want your calendar to be fixed in one timezone,
+                  you have the option below. Your browser uses the time zone
+                  <span id="timezone-info">loading...</span>.
+                  <select id="select-timezone">
+                      <option value="">use the timezone of the browser</option>
+                  </select>
                 </p>
                 <h3 id="specification">Hosting the Specification</h3>
                 <p>

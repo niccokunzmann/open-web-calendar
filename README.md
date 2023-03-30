@@ -2,9 +2,16 @@ Open Web Calendar
 =================
 
 [![Build Status](https://travis-ci.org/niccokunzmann/open-web-calendar.svg?branch=master)](https://travis-ci.org/niccokunzmann/open-web-calendar)
-[![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)](https://opencollective.com/open-web-calendar/)
-**[Try&nbsp;it&nbsp;out][web]**
+[![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)][open-collective]
 [![build and publish the Docker image](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml/badge.svg)](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml)
+
+You might want to:
+- **[Try&nbsp;it&nbsp;out][web]**
+- [Donate using Open Collective][open-collective]
+- [Donate using GitHub Sponsors][github-sponsors]
+
+[open-collective]: https://opencollective.com/open-web-calendar/
+[github-sponsors]: https://github.com/sponsors/niccokunzmann
 
 Python: 3.7, 3.8, 3.9, 3.10
 
@@ -26,6 +33,19 @@ Features
 - name, time of event, link?
 - showing the time span
 - styling of choice (icon, color, font, ...)
+
+## Contributing
+[donation]: #contributing
+
+There are several ways in which you can help this project:
+
+- [Use it][web] and [report errors][issues]
+- [Donate using Open Collective][open-collective]
+- [Donate using GitHub Sponsors][github-sponsors]
+- Have a look at [open issues][issues] e.g. those especially to get started, labelled [good first issue][good-first-issue], leave a note and work on it. 
+
+[issues]: https://github.com/niccokunzmann/open-web-calendar/issues
+[good-first-issue]: https://github.com/niccokunzmann/open-web-calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
 
 ## Deployment
 
@@ -57,7 +77,7 @@ To build the container yourself type the command
 docker build --tag niccokunzmann/open-web-calendar .
 ```
 
-You can also use the existing image.
+You can also use the existing image: [niccokunzmann/open-web-calendar](https://hub.docker.com/r/niccokunzmann/open-web-calendar).
 
 ```
 docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
@@ -86,6 +106,8 @@ To deploy the open-web-calendar with docker-compose, do the following steps:
 2. If needed change port mapping and environment variables.
 3. Type `docker-compose up -d` to start the container.
 4. The container will be pulled automatically from dockerhub and then starts.
+
+**Important Note:** If you use this service, consider setting up [log rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47) as it is very talkative.
 
 #### Update prebuild image with Docker Compose
 
@@ -205,7 +227,22 @@ tox
 
 Changelog
 ---------
-
+- v1.7
+  - Add timezone functionality. See [Issue #171](https://github.com/niccokunzmann/open-web-calendar/issues/171).
+- v1.6
+  - Add choice of Sunday or Monday for the start of the week [Issue 39](https://github.com/niccokunzmann/open-web-calendar/issues/39) - backed by [donation]!
+- v1.5
+  - add link to [Contributing Section](#contributing) in about page
+  - make event clickable even if there is a tool tip window
+  - [@MrKoga](https://github.com/MrKoga) [donated][github-sponsors] to the project! Thanks!
+- v1.4
+  - add event categories when you click an event, see [PR 159](https://github.com/niccokunzmann/open-web-calendar/pull/159).
+- v1.3
+  - update translation mistake
+  - fix encoding problem for languages other than en/de
+  - add ability to remove all controls
+  - test with GitHub actions
+  - test user interface
 - v1.2
   - Use Gunicorn in Docker image
   - change deployment to https://open-web-calendar.hosted.quelltext.eu/
@@ -214,6 +251,23 @@ Changelog
 - v1.0
   - Create the changelog.
   - Add support for colors from ICS calendars, see [Issue #52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88).
+
+Release a new Version
+---------------------
+
+To release a new version:
+1. Edit the `README.md` file in the Changelog Section and add the changes.
+   ```
+   git add README.md
+   git commit -m"Modify changelog for release"
+   git push
+   ```
+2. Create a tag for the version.
+   ```
+   git tag v1.6
+   git push origin v1.6
+   ```
+3. Notify solved issues about the release.
 
 Related Work
 ------------

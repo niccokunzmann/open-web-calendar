@@ -16,6 +16,7 @@ import io
 import sys
 from convert_to_dhtmlx import ConvertToDhtmlx
 from convert_to_ics import ConvertToICS
+import pytz
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -72,7 +73,8 @@ def add_header(r):
 def get_configuration():
     """Return the configuration for the browser"""
     config = {
-        "default_specification": get_default_specification()
+        "default_specification": get_default_specification(), 
+        "timezones": pytz.all_timezones, # see https://stackoverflow.com/a/13867319
     }
     with open(DHTMLX_LANGUAGES_FILE, encoding="UTF-8") as file:
         config["dhtmlx"] = {
@@ -81,7 +83,7 @@ def get_configuration():
     return config
 
 def set_JS_headers(response):
-    repsonse = make_response(response)
+    response = make_response(response)
     response.headers['Access-Control-Allow-Origin'] = '*'
     # see https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
     response.headers['Access-Control-Allow-Headers'] = request.headers.get("Access-Control-Request-Headers")
@@ -165,7 +167,7 @@ def get_calendar(type):
         template_name = specification["template"]
         all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
         assert template_name in all_template_names, "Template names must be file names like \"{}\", not \"{}\".".format("\", \"".join(all_template_names), template_name)
-        template = os.path.join(CALENDARS_TEMPLATE_FOLDER_NAME, template_name)
+        template = CALENDARS_TEMPLATE_FOLDER_NAME + "/" + template_name
         return render_app_template(template, specification)
     raise ValueError("Cannot use extension {}. Please see the documentation or report an error.".format(type))
 

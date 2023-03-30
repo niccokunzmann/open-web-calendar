@@ -134,9 +134,23 @@ function setLoader() {
 function loadCalendar() {
     var format = scheduler.date.date_to_str("%H:%i");
     setLocale(scheduler);
+    // load plugins, see https://docs.dhtmlx.com/scheduler/migration_from_older_version.html#5360
+    scheduler.plugins({
+        agenda_view: true,
+        multisource: true,
+        quick_info: true,
+        recurring: false,
+        tooltip: true,
+        readonly: true,
+    });
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
+    // scheduler.config.server_utc = true; // we use timezones now
+    
+    scheduler.config.readonly = true;
+    // set the start of the week. See https://docs.dhtmlx.com/scheduler/api__scheduler_start_on_monday_config.html
+    scheduler.config.start_on_monday = specification["start_of_week"] == "mo";
     if (specification["hour_division"]) {
         let hour_division = specification["hour_division"];
         scheduler.config.hour_size_px = 44 * hour_division;
@@ -144,25 +158,20 @@ function loadCalendar() {
             var step = 60 / hour_division;
             var html = "";
             for (var i=0; i<hour_division; i++){
-                html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>";
+                html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>"; // TODO: This should be in CSS.
                 date = scheduler.date.add(date, step, "minute");
             }
             return html;
         }
     }
-    scheduler.config.server_utc = true;
-    scheduler.config.readonly = true;
     if (specification["starting_hour"]) {
         scheduler.config.first_hour = parseInt(specification["starting_hour"]);
     }
     if (specification["ending_hour"]) {
         scheduler.config.last_hour = parseInt(specification["ending_hour"]);
     }
-    let starting_date = new Date();
-    if (specification["date"]) {
-        starting_date = new Date(specification["date"]);
-    }
-    scheduler.init('scheduler_here', starting_date, specification["tab"]);
+    var date = specification["date"] ? new Date(specification["date"]) : new Date();
+    scheduler.init('scheduler_here', date, specification["tab"]);
 
     // event in the calendar
     scheduler.templates.event_bar_text = function(start, end, event){
@@ -173,8 +182,8 @@ function loadCalendar() {
     scheduler.templates.tooltip_text = function(start, end, event) {
         return template.summary(event) + template.details(event) + template.location(event);
     };
-    dhtmlXTooltip.config.delta_x = 0;
-    dhtmlXTooltip.config.delta_y = 0;
+    scheduler.tooltip.config.delta_x = 1;
+    scheduler.tooltip.config.delta_y = 1;
     // quick info
     scheduler.templates.quick_info_title = function(start, end, event){
         return template.summary(event);
@@ -184,6 +193,18 @@ function loadCalendar() {
             template.location(event) +
             template.debug(event);
     }
+
+    scheduler.templates.event_header = function(start, end, event){
+        if (event.categories){
+            return (scheduler.templates.event_date(start)+" - "+
+                scheduler.templates.event_date(end)+'<b> | '+
+	        event.categories)+' |</b>'
+        } else {
+            return(scheduler.templates.event_date(start)+" - "+
+            scheduler.templates.event_date(end))
+        }
+    };
+
     // general style
     scheduler.templates.event_class=function(start,end,event){
         if (event.type == "error") {
@@ -197,6 +218,10 @@ function loadCalendar() {
 
     schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") +
         document.location.search;
+    // add the time zone if not specified
+    if (specification.timezone == "") {
+        schedulerUrl += "&timezone=" + getTimezone();
+    }
         
     scheduler.attachEvent("onLoadError", function(xhr) {
         disableLoader();
