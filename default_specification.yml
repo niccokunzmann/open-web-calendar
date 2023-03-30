@@ -105,6 +105,9 @@ description: "This is a calendar which provides a website and an ICS subscriptio
 #date: "2023-1-23 13:00"
 date: ""
 
+## You can choose the start of the week. Either "mo" for Monday or "su" for Sunday.
+start_of_week: mo
+
 ###################### You will probably not change this. ######################
 ##
 ## The template is the file which shows the calendar.

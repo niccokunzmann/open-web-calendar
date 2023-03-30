@@ -147,6 +147,8 @@ function loadCalendar() {
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
     scheduler.config.server_utc = true;
     scheduler.config.readonly = true;
+    // set the start of the week. See https://docs.dhtmlx.com/scheduler/api__scheduler_start_on_monday_config.html
+    scheduler.config.start_on_monday = specification["start_of_week"] == "mo";
     date = specification["date"] ? new Date(specification["date"]) : new Date();
     scheduler.init('scheduler_here', date, specification["tab"]);
 
