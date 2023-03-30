@@ -5,6 +5,7 @@ import recurring_ical_events
 import icalendar
 from pprint import pprint
 from dateutil.parser import parse as parse_date
+import pytz
 
 
 def is_date(date):
@@ -20,7 +21,7 @@ class ConvertToDhtmlx(ConversionStrategy):
     """
     
     def created(self):
-        self.timeshift = int(self.specification["timeshift"])
+        self.timezone = pytz.timezone(self.specification["timezone"])
 
     def date_to_string(self, date):
         """Convert a date to a string."""
@@ -28,13 +29,13 @@ class ConvertToDhtmlx(ConversionStrategy):
         # see https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step4implementingcrud
         # see https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
         # see https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-        timezone = datetime.timezone(datetime.timedelta(minutes=-self.timeshift))
         if is_date(date):
-            date = datetime.datetime(date.year, date.month, date.day, tzinfo=timezone)
+            date = datetime.datetime(date.year, date.month, date.day, tzinfo=self.timezone)
         elif date.tzinfo is None:
-            date = date.replace(tzinfo=timezone)
-        date = date.astimezone(datetime.timezone.utc)
-        return date.strftime("%Y-%m-%d %H:%M")
+            date = self.timezone.localize(date)
+        # convert to other timezone, see https://stackoverflow.com/a/54376154
+        viewed_date = date.astimezone(self.timezone)
+        return viewed_date.strftime("%Y-%m-%d %H:%M")
 
     def convert_ical_event(self, calendar_event):
         start = calendar_event["DTSTART"].dt

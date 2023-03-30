@@ -121,6 +121,8 @@ function getSpecification() {
     setSpecificationValueFromId(specification, "skin", "select-skin");
     /* Start of the week */
     setSpecificationValueFromId(specification, "start_of_week", "select-start-of-week");
+    /* timezone */
+    setSpecificationValueFromId(specification, "timezone", "select-timezone");
     /* color and CSS */
     var css = configuration.default_specification.css;
     var colorInputs = document.getElementsByClassName("color-input");
@@ -285,7 +287,6 @@ function fillDefaultSpecificationLink() {
 
 
 function fillLanguageChoice() {
-    // see
     var select = document.getElementById("select-language");
     var selected = false;
     configuration.dhtmlx.languages.forEach(function (language){
@@ -305,6 +306,25 @@ function fillLanguageChoice() {
     // see https://stackoverflow.com/a/7858323/1320237
     select.onchange = updateOutputs;
 }
+
+function fillTimezoneChoice() {
+    // inform the user
+    var timezone = getTimezone();
+    var timezoneInfo = document.getElementById("timezone-info");
+    timezoneInfo.innerText = timezone;
+    var select = document.getElementById("select-timezone");
+    var option = document.createElement("option");
+    option.text = option.value = timezone;
+    select.appendChild(option);
+    configuration.timezones.forEach(function (timezone){
+        var option = document.createElement("option");
+        option.text = option.value = timezone;
+        select.appendChild(option);
+    });
+    select.value = configuration.default_specification.timezone;
+    changeSpecificationOnChange(select);
+}
+
 
 function initializeSkinChoice() {
     var select = document.getElementById("select-skin");
@@ -389,6 +409,7 @@ window.addEventListener("load", function(){
     // initialization
     listenForCSSChanges();
     fillLanguageChoice();
+    fillTimezoneChoice();
     initializeStartOfWeek();
     initializeSkinChoice();
     initializeTitle();

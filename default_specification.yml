@@ -108,6 +108,10 @@ date: ""
 ## You can choose the start of the week. Either "mo" for Monday or "su" for Sunday.
 start_of_week: mo
 
+## You can fix the calendar to a specific time zone. Default is to take it from the browser.
+## Example values: "Europe/Berlin", "Asia/Shanghai" or "" for the timezone of the user/viewer.
+timezone: ""
+
 ###################### You will probably not change this. ######################
 ##
 ## The template is the file which shows the calendar.
