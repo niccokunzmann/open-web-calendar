@@ -115,6 +115,21 @@ function getSpecification() {
     }
     /* title */
     setSpecificationValueFromId(specification, "title", "calendar-title");
+    /* starting date */
+    setSpecificationValueFromId(specification, "date", "starting-date");
+    /* starting hour */
+    setSpecificationValueFromId(specification, "starting_hour", "starting-hour");
+    /* ending hour */
+    setSpecificationValueFromId(specification, "ending_hour", "ending-hour");
+
+    /* time increment */
+    let time_increment = document.getElementById("time-increment");
+    for (let c of time_increment.getElementsByTagName("input")) {
+        if (c.checked) {
+            specification.hour_division = c.value;
+        }
+    }
+
     /* language */
     setSpecificationValueFromId(specification, "language", "select-language");
     /* skin */
@@ -338,6 +353,33 @@ function initializeTitle() {
     changeSpecificationOnChange(input);
 }
 
+function initializeStartDate() {
+    var input = document.getElementById("starting-date");
+    input.value = configuration.default_specification.date;
+    changeSpecificationOnChange(input);
+}
+
+function initializeFirstHour() {
+    var input = document.getElementById("starting-hour");
+    input.value = configuration.default_specification.first_hour; 
+    changeSpecificationOnChange(input);
+}
+
+function initializeLastHour() {
+    var input = document.getElementById("ending-hour");
+    input.value = configuration.default_specification.last_hour;
+    changeSpecificationOnChange(input);
+}
+
+function initializeTimeIncrement() {
+    var input = document.getElementById("time-increment");
+    document.getElementById("time-" + configuration.default_specification.hour_division).checked = "checked";
+
+    for (let c of input.getElementsByTagName("input")) {
+        changeSpecificationOnChange(c);
+    }
+}
+
 function initializeStartOfWeek() {
     var input = document.getElementById("select-start-of-week");
     input.value = configuration.default_specification.start_of_week;
@@ -413,6 +455,10 @@ window.addEventListener("load", function(){
     initializeStartOfWeek();
     initializeSkinChoice();
     initializeTitle();
+    initializeStartDate();
+    initializeFirstHour();
+    initializeLastHour();
+    initializeTimeIncrement();
     initializeLoader();
     initializeLinkTargetChoice();
     updateCalendarInputs();
