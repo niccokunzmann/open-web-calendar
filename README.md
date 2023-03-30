@@ -35,6 +35,7 @@ Features
 - styling of choice (icon, color, font, ...)
 
 ## Contributing
+[donation]: #contributing
 
 There are several ways in which you can help this project:
 
@@ -226,6 +227,8 @@ tox
 
 Changelog
 ---------
+- v1.6
+  - Add choice of Sunday or Monday for the start of the week [Issue 39](https://github.com/niccokunzmann/open-web-calendar/issues/39) - backed by [donation]!
 - v1.5
   - add link to [Contributing Section](#contributing) in about page
   - make event clickable even if there is a tool tip window
