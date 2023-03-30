@@ -265,6 +265,7 @@ To release a new version:
    git tag v1.6
    git push origin v1.6
    ```
+3. Notify solved issues about the release.
 
 Related Work
 ------------
