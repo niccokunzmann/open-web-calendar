@@ -227,6 +227,8 @@ tox
 
 Changelog
 ---------
+- v1.7
+  - Add timezone functionality. See [Issue #171](https://github.com/niccokunzmann/open-web-calendar/issues/171).
 - v1.6
   - Add choice of Sunday or Monday for the start of the week [Issue 39](https://github.com/niccokunzmann/open-web-calendar/issues/39) - backed by [donation]!
 - v1.5
