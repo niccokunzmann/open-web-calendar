@@ -16,6 +16,7 @@ import io
 import sys
 from convert_to_dhtmlx import ConvertToDhtmlx
 from convert_to_ics import ConvertToICS
+import pytz
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -72,7 +73,8 @@ def add_header(r):
 def get_configuration():
     """Return the configuration for the browser"""
     config = {
-        "default_specification": get_default_specification()
+        "default_specification": get_default_specification(), 
+        "timezones": pytz.all_timezones, # see https://stackoverflow.com/a/13867319
     }
     with open(DHTMLX_LANGUAGES_FILE, encoding="UTF-8") as file:
         config["dhtmlx"] = {
@@ -81,7 +83,7 @@ def get_configuration():
     return config
 
 def set_JS_headers(response):
-    repsonse = make_response(response)
+    response = make_response(response)
     response.headers['Access-Control-Allow-Origin'] = '*'
     # see https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
     response.headers['Access-Control-Allow-Headers'] = request.headers.get("Access-Control-Request-Headers")
