@@ -250,6 +250,22 @@ Changelog
   - Create the changelog.
   - Add support for colors from ICS calendars, see [Issue #52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88).
 
+Release a new Version
+---------------------
+
+To release a new version:
+1. Edit the `README.md` file in the Changelog Section and add the changes.
+   ```
+   git add README.md
+   git commit -m"Modify changelog for release"
+   git push
+   ```
+2. Create a tag for the version.
+   ```
+   git tag v1.6
+   git push origin v1.6
+   ```
+
 Related Work
 ------------
 
