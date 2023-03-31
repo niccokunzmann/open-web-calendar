@@ -3,7 +3,6 @@ from flask import jsonify
 from conversion_base import ConversionStrategy
 import recurring_ical_events
 import icalendar
-from pprint import pprint
 from dateutil.parser import parse as parse_date
 import pytz
 
@@ -101,7 +100,6 @@ class ConvertToDhtmlx(ConversionStrategy):
         }
     
     def merge(self):
-        pprint(self.components)
         return jsonify(self.components)
         
     def collect_components_from(self, calendars):
