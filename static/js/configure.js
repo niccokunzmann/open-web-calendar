@@ -234,6 +234,7 @@ function loadCalendar() {
 
 
     //requestJSON(schedulerUrl, loadEventsOnSuccess, loadEventsOnError);
+    scheduler.setLoadMode("day");
     scheduler.load(schedulerUrl, "json");
     
 
