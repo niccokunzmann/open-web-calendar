@@ -33,7 +33,7 @@ def test_convert_html(language, id, value):
 
 @pytest.mark.parametrize("language", ["en", "de"])
 def test_load_from_common(language):
-    assert translate.string(language, "common", "description") ==  translate.string(language, "index", "description")
+    assert translate.string(language, "common", "project-description") ==  translate.string(language, "index", "project-description")
     
 def test_invalid_id():
     with pytest.raises(KeyError):
