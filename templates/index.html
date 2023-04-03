@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <h1>Open Web Calendar</h1>
+            <h1>{{ html("project-name") }}</h1>
         </header>
         <main>
             <div class="section">
@@ -103,122 +103,101 @@
                         <option value="su">{{ html("start-of-week-su") }}</option>
                     </select>
                 </p>
-                <h3 id="style">Custom Style with CSS</h3>
+                <h3>{{ html("style-title") }}</h3>
                 <p>
-                  You can change the color of your calendar and many more
-                  properties using CSS.
-                  Your customization has priority over the Skin you choose.
-                  Below, you can choose from a few customizations we prepared
-                  for you.
+                    {{ html("style-description") }}<br/>
                 </p>
                 <ul>
                   <li>
                     <input type="text"
                            placeholder="white" class="color-input"
                            cssTemplate=".dhx_cal_navline, .dhx_scale_bar, .dhx_cal_container, .dhx_cal_header {background-color: {color};}">
-                    You can change the background color of the calendar.
+                    {{ html("style-background") }}
                   </li>
                   <li>
                     <input type="text"
                            placeholder="blue" class="color-input"
                            cssTemplate=".event, .dhx_cal_tab.active, .dhx_cal_tab.active:hover {background-color: {color};} .dhx_month_head, .dhx_cal_tab, .dhx_cal_today_button {color: {color};} .dhx_cal_tab, .dhx_cal_tab.active {border-color: {color};}">
-                    You can change the color of the elements which can be
-                    clicked.
+                    {{ html("style-click") }}
                   </li>
                   <li>
                     <input type="text" id="color-background-today"
                            placeholder="green" class="color-input"
                            cssTemplate=".dhx_scale_holder_now, .dhx_now .dhx_month_head, .dhx_now .dhx_month_body { background-color: {color};}">
-                    You can change the background color of the current date.
+                    {{ html("style-date") }}
                   </li>
                   <li>
                     <input type="text" id="color-background-today"
                            placeholder="black" class="color-input"
                            cssTemplate=".dhx_month_body, .dhx_month_head, .dhx_cal_container { background-color: {color}; }">
-                    If you like to have a different color for the days, you can
-                    specify this, too.
+                    {{ html("style-days") }}
                   </li>
                   <li>
                     <input type="text" id="color-background-today"
                            placeholder="black" class="color-input"
                            cssTemplate=".dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: {color}; }">
-                    Some days of the calendar have a different color if they are
-                    not within the month.
+                    {{ html("style-days-outside") }}
                   </li>
                 </ul>
                 <p>
-                    You can specify your own CSS properties if you like.
+                    {{ html("style-css") }}
                     <textarea id="css-input"></textarea>
                 </p>
-                <h3 id="loader">Loading Animation</h3>
+                <h3>{{ html("loader-title") }}</h3>
                 <p>
-                  In some cases, the server takes quite a time to load the calendar.
-                  In case the server uses a free plan on Heroku, the server needs to start first.<br/>
+                  {{ html("loader-description") }}<br/>
                   <select id="select-loader">
-                      <option value="" id="default-loader">circular loader</option>
-                      <option value="">no loader</option>
+                      <option value="" id="default-loader">{{ html("loader-default") }}</option>
+                      <option value="">{{ html("loader-none") }}</option>
                   </select>
                 </p>
-                <h3 id="tabs">Month, Week, Day and Agenda View</h3>
+                <h3>{{ html("tabs-title") }}</h3>
                 <p>
-                  The Month view is the default. However, you can choose to
-                  show a different view in the beginning.
-                  Choose one:
+                  {{ html("tabs-description") }}<br/>
                   <select id="select-tab">
-                      <option value="month">Month</option>
-                      <option value="week">Week</option>
-                      <option value="day">Day</option>
-                      <option value="agenda">Agenda</option>
+                      <option value="month">{{ html("tabs-month") }}</option>
+                      <option value="week">{{ html("tabs-week") }}</option>
+                      <option value="day">{{ html("tabs-day") }}</option>
+                      <option value="agenda">{{ html("tabs-agenda") }}</option>
                   </select>
                 </p>
                 <p>
-                  It might be that you do not want to show all controls for
-                  the users to see. Choose here which controls you would
-                  like to display:
+                  {{ html("controls-description") }}
                   <form id="check-controls">
-                    <input type="checkbox" class="tabs" value="month" /><label for="month" >Month</label>
-                    <input type="checkbox" class="tabs" value="week"  /><label for="week"  >Week</label>
-                    <input type="checkbox" class="tabs" value="day"   /><label for="day"   >Day</label>
-                    <input type="checkbox" class="tabs" value="agenda"/><label for="agenda">Agenda</label>
-                    <input type="checkbox" class="controls" value="next"    /><label for="next"    >Next</label>
-                    <input type="checkbox" class="controls" value="previous"/><label for="previous">Previous</label>
-                    <input type="checkbox" class="controls" value="today"   /><label for="today"   >Today</label>
-                    <input type="checkbox" class="controls" value="date"    /><label for="date"    >Date</label>
+                    <input type="checkbox" class="tabs" value="month" /><label for="month" >{{ html("tabs-month") }}</label>
+                    <input type="checkbox" class="tabs" value="week"  /><label for="week"  >{{ html("tabs-week") }}</label>
+                    <input type="checkbox" class="tabs" value="day"   /><label for="day"   >{{ html("tabs-day") }}</label>
+                    <input type="checkbox" class="tabs" value="agenda"/><label for="agenda">{{ html("tabs-agenda") }}</label>
+                    <input type="checkbox" class="controls" value="next"    /><label for="next"    >{{ html("controls-next") }}</label>
+                    <input type="checkbox" class="controls" value="previous"/><label for="previous">{{ html("controls-previous") }}</label>
+                    <input type="checkbox" class="controls" value="today"   /><label for="today"   >{{ html("controls-today") }}</label>
+                    <input type="checkbox" class="controls" value="date"    /><label for="date"    >{{ html("controls-date") }}</label>
                   </form>
                 </p>
-                <h3 id="tabs">Time Zone</h3>
+                <h3>{{ html("timezone-title") }}</h3>
                 <p>
-                  The timezone is taken from the browser of the user.
-                  If you want your calendar to be fixed in one timezone,
-                  you have the option below. Your browser uses the time zone
-                  <span id="timezone-info">loading...</span>.
+                  {{ html("timezone-description") }}
+                  <span id="timezone-info">{{ html("loading") }}</span><br/>
                   <select id="select-timezone">
-                      <option value="">use the timezone of the browser</option>
+                      <option value="">{{ html("timezone-browser") }}</option>
                   </select>
                 </p>
-                <h3 id="specification">Hosting the Specification</h3>
+                <h3>{{ html("spec-title") }}</h3>
                 <p>
-                    The calendar can be generated not only using the url but
-                    also through a JSON or YAML specification which resides in a file.
-                    The customization from above generates this specification:
+                    {{ html("spec-description") }}
                     <pre class="code" id="json-specification"></pre>
-                    You can <a href="javascript:downloadJSONSpecification()"
-                    >download this specification</a>
-                    and place it somewhere on the web.
-                    This way you are still in control over the customization
-                    of the calendar after you shared the link, e.g. on GitHub
-                    in a <a href="https://gist.github.com/">Gist</a>.
-                    Once you have placed the specification somewhere online,
-                    you can create a link like this one
-                    <a id="example-specification-link" target="_blank"></a>.
+                    {{ html("spec-host-html") }}
+                    {{ html("spec-link") }}
+                    <a id="example-specification-link" target="_blank"></a>
                 </p>
             </div>
         </main>
         <footer>
-            The open web calendar is open-source.
-            You can contribute and view the source code on
-            <a href="https://github.com/niccokunzmann/open-web-calendar"
-               >GitHub</a>.
+            {{ html("project-description") }}
+            <ul>
+                <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>
+                <li><a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a></li>
+            </ul>
         </footer>
     </body>
 </html>

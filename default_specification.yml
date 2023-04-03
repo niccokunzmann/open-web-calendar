@@ -121,8 +121,8 @@ controls:
 - "date"
 
 ## You can describe the calendar with a text so people know what it is about.
-description: "This is a calendar which provides a website and an ICS subscription link based on the different calendars it is configured to use. If you like this project, please consider to donate your time or money to the project to keep it free and accessible for all."
-
+## If this is empty, the description is taken from the project's translations.
+description: ""
 
 ## You can choose the start of the week. Either "mo" for Monday or "su" for Sunday.
 start_of_week: mo
@@ -130,6 +130,15 @@ start_of_week: mo
 ## You can fix the calendar to a specific time zone. Default is to take it from the browser.
 ## Example values: "Europe/Berlin", "Asia/Shanghai" or "" for the timezone of the user/viewer.
 timezone: ""
+
+###################### Change this if you modify the project. ######################
+##
+## Where the current modifications can be obtained.
+## This is required by GPL.
+source_code: "https://github.com/niccokunzmann/open-web-calendar/"
+
+## This is a link to the contribution page
+contributing: "https://github.com/niccokunzmann/open-web-calendar/#contributing"
 
 ###################### You will probably not change this. ######################
 ##

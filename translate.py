@@ -8,6 +8,7 @@ HERE = os.path.dirname(__file__) or "."
 TRANSLATIONS_PATH = os.path.join(HERE, "translations")
 
 DEFAULT_LANGUAGE = "en"
+DEFAULT_FILE = "common"
 TRANSLATIONS = {}
 
 # Parse the directory structure.
@@ -22,12 +23,25 @@ for language in os.listdir(TRANSLATIONS_PATH):
 
 def string(language: str, file: str, id: str) -> str:
     """Translate a string identified by language, file and id."""
-    return TRANSLATIONS[language][file].get(id, TRANSLATIONS[DEFAULT_LANGUAGE][file][id])
-
+    for source in (
+        TRANSLATIONS.get(language, {}).get(file, {}),
+        TRANSLATIONS.get(DEFAULT_LANGUAGE, {}).get(file, {}),
+        TRANSLATIONS.get(language, {}).get(DEFAULT_FILE, {}),
+        TRANSLATIONS.get(DEFAULT_LANGUAGE, {}).get(DEFAULT_FILE, {}),
+    ):
+        if id in source:
+            return source[id]
+    raise KeyError(f"The translation id '{id}' was not to be found in any file.")
 
 def html(language: str, file: str, id: str) -> str:
-    """Translate the string identified by language, file and id and return an html element."""
-    inner_text = escape(string(language, file, id))
+    """Translate the string identified
+    by language, file and id and return an html element.
+    
+    Any id ending in -html will not be escaped but treated as raw HTML.
+    """
+    inner_text = string(language, file, id)
+    if not id.endswith("-html"):
+        inner_text = escape(inner_text)
     id = escape(id)
     return Markup(f'<span id="translate-{id}" class="translation">{inner_text}</span>')
 
