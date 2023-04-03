@@ -17,22 +17,28 @@
         </header>
         <main>
             <p class="description">
-                {{ specification["description"] }}
+                {{ specification["description"] or html("description") }}
             </p>
             <ul>
-                <li><a href="/calendar.html{{ get_query_string() | safe }}">Website</a></li>
-                <li><a href="/calendar.ics{{ get_query_string() | safe }}">ICS</a></li>
-                <li><a href="/calendar.spec{{ get_query_string() | safe }}">Specification</a></li>
-                <li><a href="https://github.com/niccokunzmann/open-web-calendar/">Source Code</a></li>
-                <li><a href="https://github.com/niccokunzmann/open-web-calendar/#contributing">Help improve the project and learn how to contribute</a></li>
+                <li><a href="/calendar.html{{ get_query_string() | safe }}">{{ html("links-website") }}</a></li>
+                <li><a href="/calendar.ics{{ get_query_string() | safe }}">{{ html("links-ics") }}</a></li>
+                <li><a href="/calendar.spec{{ get_query_string() | safe }}">{{ html("links-spec") }}</a></li>
             </ul>
-            <h2>License</h2>
+            <h2>{{ html("project-title") }}</h2>
+            <p class="description">
+                {{ html("project-description") }}
+            </p>
+            <ul>
+                <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>
+                <li><a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a></li>
+            </ul>
+            <h2>{{ html("license") }}</h2>
             <p>
                 Open Web Calendar<br/>
                 Copyright (C) 2019  Nicco Kunzmann
             <p>
             </p>
-                dhtmlxScheduler v.5.1.6 Stardard<br/>
+                dhtmlxScheduler v.5.1.6 Standard<br/>
                 (C) Dinamenta, UAB.
             <p>
             </p>

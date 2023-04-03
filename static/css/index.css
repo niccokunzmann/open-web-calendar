@@ -20,6 +20,9 @@ footer {
   margin-top: 0.3em;
   padding-top: 0.3em;
   color: gray;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
 
 footer a {

@@ -17,6 +17,7 @@ import sys
 from convert_to_dhtmlx import ConvertToDhtmlx
 from convert_to_ics import ConvertToICS
 import pytz
+import translate
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -141,10 +142,12 @@ def get_query_string():
     return "?" + request.query_string.decode()
 
 def render_app_template(template, specification):
+    translation_file = os.path.splitext(template)[0]
     return render_template(template,
         specification=specification,
         json=json,
-        get_query_string=get_query_string
+        get_query_string=get_query_string,
+        html=lambda id: translate.html(specification["language"], translation_file, id)
     )
 
 @app.route("/calendar.<type>", methods=['GET', 'OPTIONS'])
@@ -181,7 +184,8 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
 
 @app.route("/")
 def serve_index():
-    return send_from_directory("static", "index.html")
+    specification = get_specification()
+    return render_app_template("index.html", specification)
 
 @app.route("/about.html")
 def serve_about():

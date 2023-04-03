@@ -1,0 +1,28 @@
+#
+# This file contains translations that are available for all files.
+#
+# commonly used translations
+
+
+# The description of the project that shows up in the index page and
+# on the about page if it was not changed.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-project-description
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-project-description
+project-description: "This is a calendar which provides a website for many different calendars. You can also subscribe through an ICS link. The calendars are highly configurable e.g. to have several sources and fit into the embedding website. If you like this project, please consider to donate your time or money to the project to keep it free and accessible for all."
+
+
+# This is a link in the footer of the index and on the about page leading to the project's source code.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-source-code
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-source-code
+source-code: "View the source code."
+
+
+# This is a link in the footer of the index and on the about page leading to the project's contribution site.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-improve
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-improve
+improve: "Help improve the project and learn how to contribute."
+
+# This is the name of the project.
+# Translate this if it makes sense for your language.
+# https://open-web-calendar.hosted.quelltext.eu/
+project-name: "Open Web Calendar"

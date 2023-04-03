@@ -151,25 +151,19 @@ function loadCalendar() {
     scheduler.config.readonly = true;
     // set the start of the week. See https://docs.dhtmlx.com/scheduler/api__scheduler_start_on_monday_config.html
     scheduler.config.start_on_monday = specification["start_of_week"] == "mo";
-    if (specification["hour_division"]) {
-        let hour_division = specification["hour_division"];
-        scheduler.config.hour_size_px = 44 * hour_division;
-        scheduler.templates.hour_scale = function(date){
-            var step = 60 / hour_division;
-            var html = "";
-            for (var i=0; i<hour_division; i++){
-                html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>"; // TODO: This should be in CSS.
-                date = scheduler.date.add(date, step, "minute");
-            }
-            return html;
-        }
+    let hour_division = parseInt(specification["hour_division"]);
+    scheduler.config.hour_size_px = 44 * hour_division;
+    scheduler.templates.hour_scale = function(date){
+	var step = 60 / hour_division;
+	var html = "";
+	for (var i=0; i<hour_division; i++){
+	    html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>"; // TODO: This should be in CSS.
+	    date = scheduler.date.add(date, step, "minute");
+	}
+	return html;
     }
-    if (specification["starting_hour"]) {
-        scheduler.config.first_hour = parseInt(specification["starting_hour"]);
-    }
-    if (specification["ending_hour"]) {
-        scheduler.config.last_hour = parseInt(specification["ending_hour"]);
-    }
+    scheduler.config.first_hour = parseInt(specification["starting_hour"]);
+    scheduler.config.last_hour = parseInt(specification["ending_hour"]);
     var date = specification["date"] ? new Date(specification["date"]) : new Date();
     scheduler.init('scheduler_here', date, specification["tab"]);
 
