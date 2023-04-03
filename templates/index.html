@@ -16,59 +16,56 @@
         <main>
             <div class="section">
                 <p>
-                    The Open Web Calendar uses ICS/ICal calendars
-                    online and displays them in one calendar.
+                    {{ html("about") }}
                 </p>
             </div>
             <div class="section">
                 <p>
-                    To merge several calendars, please input the the
-                    URLs of the ICS calendars here:
+                    {{ html("calendar-urls") }}
                 </p>
                 <ul id="calendar-urls">
                 </ul>
                 <p>
                     <a id="calendar-link"></a>
                     <br/>
-                    To embed the calendar, use this code on your website:
+                    {{ html("calendar-code") }}
                     <pre id="calendar-code" class="code"></pre>
-                    You can view the resulting calendar below.
+                    {{ html("calendar-code-execution") }}
                     <div id="calendar-code-execution"></div>
                 </p>
             </div>
             <div class="section">
                 <p>
-                    You can make additional customizations of the calendar.
+                    {{ html("section-customization") }}
                 </p>
-                <h3 id="title">Title</h3>
+                <h3>{{ html("title-title") }}</h3>
                 <p>
-                    To change the title, please input the name of the
-                    calendar here: <br/>
+                    {{ html("title-description") }}<br/>
                     <input type="text" id="calendar-title" />
                 </p>
-                <h3 id="title">Starting date</h3>
+                <h3>{{ html("starting-date-title") }}</h3>
                 <p>
-                    To change the starting date of the calendar: <br/>
+                    {{ html("starting-date-description") }}<br/>
                     <input type="date" id="starting-date" />
                 </p>
-                <h3 id="title">First hour</h3>
+                <h3>{{ html("first-hour-title") }}</h3>
                 <p>
-                    To change the first hour of the calendar view: <br/>
+                    {{ html("first-hour-description") }}<br/>
                     <input type="number" min="0" max="23" id="starting-hour" />
                 </p>
-                <h3 id="title">Last hour</h3>
+                <h3>{{ html("last-hour-title") }}</h3>
                 <p>
-                    To change the last hour of the calendar view: <br/>
+                    {{ html("last-hour-description") }}<br/>
                     <input type="number" min="1" max="24" id="ending-hour" />
                 </p>
-                <h3 id="title">Time increment</h3>
+                <h3>{{ html("time-increment-title") }}</h3>
                 <p>
-                    Change time increment in the day & week view :
+                    {{ html("time-increment-description") }}
                     <form id="time-increment">
-                        <input type="radio" id="time-10" name="time-select" value="6" /><label for="time-10">10 minutes</label>
-                        <input type="radio" id="time-15" name="time-select" value="4" /><label for="time-15">15 minutes</label>
-                        <input type="radio" id="time-30" name="time-select" value="2" /><label for="time-30">30 minutes</label>
-                        <input type="radio" id="time-60" name="time-select" value="1" /><label for="time-60">1 hour</label>
+                        <input class="time-increment-input" type="radio" id="time-6" name="time-select" value="6" /><label for="time-10">{{ html("time-increment-10") }}</label>
+                        <input class="time-increment-input" type="radio" id="time-4" name="time-select" value="4" /><label for="time-15">{{ html("time-increment-15") }}</label>
+                        <input class="time-increment-input" type="radio" id="time-2" name="time-select" value="2" /><label for="time-30">{{ html("time-increment-30") }}</label>
+                        <input class="time-increment-input" type="radio" id="time-1" name="time-select" value="1" /><label for="time-60">{{ html("time-increment-60") }}</label>
                     </form>
                 </p>
                 <h3 id="language">Language</h3>

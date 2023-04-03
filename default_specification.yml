@@ -22,10 +22,10 @@ title: "Open Web Calendar"
 date: ""
 
 ## First hour of the view
-first_hour: 0
+starting_hour: "0"
 
 ## Last hour of the view
-last_hour: 24
+ending_hour: "24"
 
 ## example use: restrict calendar view to working hour
 #first_hour: 8
@@ -34,11 +34,11 @@ last_hour: 24
 ## Hour division
 ## size in minute of divisions in day & week views
 ## Possibles values:
-## - 60
-## - 30
-## - 15
-## - 10
-hour_division: 60
+## - 1 (1 hour)
+## - 2 (30 minutes)
+## - 4 (15 minutes)
+## - 6 (10 minutes)
+hour_division: "1"
 
 ## The language of the calendar. You can choose from these languages:
 ## Arabic: "ar"

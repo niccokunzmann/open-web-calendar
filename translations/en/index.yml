@@ -1,0 +1,100 @@
+# Translations for the index.html file.
+
+# Translate this as the language you are working on.
+# It appears at the top for users to choose from.
+# E.g. for German, do not enter "Englisch" but "Deutsch".
+language: English
+
+
+# What is this software about.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-about
+about: 'The Open Web Calendar uses ICS/ICal calendars online and displays them in one calendar. You can use it with Nextcloud, Outlook, Google Calendar, Meetup and other calendar systems using the ICS standard.'
+
+
+# Input for URLs of ICS files.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-urls
+calendar-urls: 'To merge several calendars, please input the URLs of the ICS calendars here:'
+# This describes the calendar code to embed.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code
+calendar-code: "To embed the calendar, use this code on your website:"
+# This describes the visible calendar that is updated with every change.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code-execution
+calendar-code-execution: "You can view the resulting calendar below."
+
+
+# Describe all options.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-section-customization
+section-customization: "You can make additional customizations of the calendar."
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-title-title
+title-title: "Title"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-title-description
+title-description: "To change the title, please input the name of the calendar here:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-starting-date-title
+starting-date-title: "Starting date"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-starting-date-description
+starting-date-description: "To change the starting date of the calendar:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-first-hour-title
+first-hour-title: "First Hour"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-first-hour-description
+first-hour-description: "To change the first hour of the calendar view:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-last-hour-title
+last-hour-title: "Last Hour"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-last-hour-description
+last-hour-description: "To change the last hour of the calendar view:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-title
+time-increment-title: "Time Increment"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-description
+time-increment-description: "Change time increment in the day & week view:"
+# An option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-10
+time-increment-10: "10 minutes"
+# An option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-15
+time-increment-15: "15 minutes"
+# An option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-30
+time-increment-30: "30 minutes"
+# An option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-60
+time-increment-60: "1 hour"
+
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-title-title
+title-title: "Title"
+
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-title-description
+title-description: "To change the title, please input the name of the calendar here:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-title-title
+title-title: "Title"
+
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-title-description
+title-description: "To change the title, please input the name of the calendar here:"
+
+
