@@ -9,6 +9,7 @@ You might want to:
 - **[Try&nbsp;it&nbsp;out][web]**
 - [Donate using Open Collective][open-collective]
 - [Donate using GitHub Sponsors][github-sponsors]
+- [See other ways of contributing][donation]
 
 [open-collective]: https://opencollective.com/open-web-calendar/
 [github-sponsors]: https://github.com/sponsors/niccokunzmann
