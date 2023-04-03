@@ -42,10 +42,26 @@ There are several ways in which you can help this project:
 - [Use it][web] and [report errors][issues]
 - [Donate using Open Collective][open-collective]
 - [Donate using GitHub Sponsors][github-sponsors]
+- [Translate this project][translate]
 - Have a look at [open issues][issues] e.g. those especially to get started, labelled [good first issue][good-first-issue], leave a note and work on it. 
 
 [issues]: https://github.com/niccokunzmann/open-web-calendar/issues
 [good-first-issue]: https://github.com/niccokunzmann/open-web-calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+
+### Translation
+[translate]: #translation
+
+You can help us by [translating the project][weblate] to your language.
+If your language is not listed, please request to add it!
+
+- [Translate on Weblate][weblate]
+
+Here, you can see the current translation status:
+
+[![Translation status](https://hosted.weblate.org/widgets/open-web-calendar/-/multi-auto.svg)][weblate]
+
+
+[weblate]: https://hosted.weblate.org/engage/open-web-calendar/
 
 ## Deployment
 
