@@ -27,9 +27,9 @@ starting_hour: "0"
 ## Last hour of the view
 ending_hour: "24"
 
-## example use: restrict calendar view to working hour
-#first_hour: 8
-#last_hour: 18
+## example use: restrict calendar view to working hours
+#starting_hour: 8
+#ending_hour: 18
 
 ## Hour division
 ## size in minute of divisions in day & week views
