@@ -68,41 +68,39 @@
                         <input class="time-increment-input" type="radio" id="time-1" name="time-select" value="1" /><label for="time-60">{{ html("time-increment-60") }}</label>
                     </form>
                 </p>
-                <h3 id="language">Language</h3>
+                <h3>{{ html("language-title") }}</h3>
                 <p>
-                    You can set the language of the calendar.<br/>
+                    {{ html("language-description") }}<br/>
                     <select id="select-language"></select>
                 </p>
-                <h3 id="skins">Skins</h3>
+                <h3>{{ html("skins-title") }}</h3>
                 <p>
-                    You can select different skins for the calendar.<br/>
+                    {{ html("skins-description") }}<br/>
                     <!-- see the skins at the static/css/dhtmlx folder -->
                     <select id="select-skin">
-                        <option value="dhtmlxscheduler.css">Terrace</option>
-                        <option value="dhtmlxscheduler_material.css">Material</option>
-                        <option value="dhtmlxscheduler_flat.css">Flat</option>
-                        <option value="dhtmlxscheduler_contrast_black.css">Contrast Black</option>
-                        <option value="dhtmlxscheduler_contrast_white.css">Contrast White</option>
+                        <option value="dhtmlxscheduler.css">{{ html("skins-terrace") }}</option>
+                        <option value="dhtmlxscheduler_material.css">{{ html("skins-material") }}</option>
+                        <option value="dhtmlxscheduler_flat.css">{{ html("skins-flat") }}</option>
+                        <option value="dhtmlxscheduler_contrast_black.css">{{ html("skins-contrast-black") }}</option>
+                        <option value="dhtmlxscheduler_contrast_white.css">{{ html("skins-contrast-white") }}</option>
                     </select>
                 </p>
-                <h3 id="links">Links</h3>
+                <h3>{{ html("links-title") }}</h3>
                 <p>
-                    Events may have locations and URLs. If you embed the
-                    calendar into a website, you can choose where the
-                    clicked link opens the page.<br/>
+                    {{ html("links-description") }}<br/>
                     <select id="select-target">
-                        <option value="_self">Open the linked document in the same frame as it was clicked.</option>
-                        <option value="_parent">Open the linked document in the parent frame.</option>
-                        <option value="_blank">Open the linked document in a new window or tab.</option>
-                        <option value="_top">Open the linked document in the full body of the window.</option>
+                        <option value="_self">{{ html("links-self") }}</option>
+                        <option value="_parent">{{ html("links-parent") }}</option>
+                        <option value="_blank">{{ html("links-blank") }}</option>
+                        <option value="_top">{{ html("links-top") }}</option>
                     </select>
                 </p>
-                <h3 id="links">Start of the Week</h3>
+                <h3>{{ html("start-of-week-title") }}</h3>
                 <p>
-                    The week may start on Monday or Sunday<br/>
+                    {{ html("start-of-week-description") }}<br/>
                     <select id="select-start-of-week">
-                        <option value="mo">Monday</option>
-                        <option value="su">Sunday</option>
+                        <option value="mo">{{ html("start-of-week-mo") }}</option>
+                        <option value="su">{{ html("start-of-week-su") }}</option>
                     </select>
                 </p>
                 <h3 id="style">Custom Style with CSS</h3>

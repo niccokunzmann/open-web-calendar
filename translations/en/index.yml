@@ -81,20 +81,91 @@ time-increment-60: "1 hour"
 
 
 # Heading of option
-# https://open-web-calendar.hosted.quelltext.eu/#translate-title-title
-title-title: "Title"
-
+# https://open-web-calendar.hosted.quelltext.eu/#translate-language-title
+language-title: "Language"
 # Description of option
-# https://open-web-calendar.hosted.quelltext.eu/#translate-title-description
-title-description: "To change the title, please input the name of the calendar here:"
+# https://open-web-calendar.hosted.quelltext.eu/#translate-language-description
+language-description: "You can set the language of the calendar."
 
 
 # Heading of option
-# https://open-web-calendar.hosted.quelltext.eu/#translate-title-title
-title-title: "Title"
-
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-title
+skins-title: "Skins"
 # Description of option
-# https://open-web-calendar.hosted.quelltext.eu/#translate-title-description
-title-description: "To change the title, please input the name of the calendar here:"
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-description: "You can select different skins for the calendar."
+# This is a name of a skin which does not need translation neccessarily.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-terrace: "Terrace"
+# This is a name of a skin which does not need translation neccessarily.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-material: "Material"
+# This is a name of a skin which does not need translation neccessarily.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-flat: "Flat"
+# This is a name of a skin.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-contrast-black: "Contrast Black"
+# This is a name of a skin.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-contrast-white: "Contrast White"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-title
+links-title: "Links"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-description: "Events may have locations and URLs. If you embed the calendar into a website, you can choose where the clicked link opens the page."
+# Description of where to open the link that was clicked in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-self: "Open the linked document in the same frame as it was clicked."
+# Description of where to open the link that was clicked in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-parent: "Open the linked document in the parent frame."
+# Description of where to open the link that was clicked in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-blank: "Open the linked document in a new window or tab."
+# Description of where to open the link that was clicked in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-top: "Open the linked document in the full body of the window."
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-title
+start-of-week-title: "Start of the Week"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-description
+start-of-week-description: "The week may start on Monday or Sunday."
+# Weekday
+# https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-description
+start-of-week-mo: "Monday"
+# Weekday
+# https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-description
+start-of-week-su: "Sunday"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-XXX-title
+XXX-title: ""
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-XXX-description
+XXX-description: ""
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-XXX-title
+XXX-title: ""
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-XXX-description
+XXX-description: ""
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-XXX-title
+XXX-title: ""
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-XXX-description
+XXX-description: ""
 
 
