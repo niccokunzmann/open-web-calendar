@@ -1,1 +1,86 @@
-{}
+start-of-week-mo: Mandag
+time-increment-10: 10 minutter
+time-increment-60: 1 time
+time-increment-15: 15 minutter
+start-of-week-title: Ukestart
+style-title: Egendefinert stil med CSS
+controls-date: Dato
+time-increment-30: 30 minutter
+loader-title: Laster inn animasjon …
+language-title: Språk
+start-of-week-su: Søndag
+style-background: Du kan endre kalenderens bakgrunnsfarge
+controls-previous: Forrige
+controls-today: I dag
+timezone-title: Tidssone
+language-description: Du kan velge språk for kalenderen.
+links-self: Åpne lenket dokument i samme ramme som det ble klikket fra.
+style-description: Du kan endre kalenderens farge og mange andre egenskaper ved bruk
+  av CSS. Din tilpasning overstyrer drakten du velger. Nedenfor kan du velge noen
+  forhåndstilpassede endringer.
+links-description: Begivenheter kan ha posisjoner og nettadresser. Hvis du bygger
+  inn kalenderen på en nettside kan du velge hvor klikket lenke åpner siden.
+loader-description: I noen fall tar det litt tid før tjeneren kan laste inn kalenderen.
+  Hvis den bruker gratisplan på Heroku må den starte først.
+timezone-description: 'Tidssonen tas fra brukerens nettleser. Hvis kalenderen din
+  skal fastsettes til én tidssone har du valget nedenfor. Nettleseren din bruker denne
+  tidssonen:'
+loader-none: ingen innlaster
+spec-description: 'Kalenderen kan genereres med nettadresse, og også gjennom JSON-
+  eller YAML-spesifikasjon fra en fil. Tilpasningen ovenfor genererer denne spesifikasjonen:'
+spec-host-html: Du kan <a>laste ned denne spesifikasjonen</a> og plassere den på nettet
+  et sted. På denne måten kontrollerer du fremdeles tilpasningen av kalenderen du
+  delte via lenke, f.eks. på GitHub i en <a href="https://gist.github.com/">Gist</a>.
+first-hour-description: 'Endre første time for kalenderen slik:'
+style-date: Du kan endre bakgrunnsfarge for nåværende dato.
+language: Norsk bokmål
+calendar-code: 'Bruk denne koden for å bygge inn kalenderen på nettsiden din:'
+about: Open Web Calendar-en bruker ICS/ICal-kalendere på nett og viser dem i én kalender.
+  Du kan bruke den med Nextcloud, Outlook, Google Calendar, Meetup og andre kalendersystemer
+  som støtter ICS-standarden.
+calendar-urls: 'For å flette flere kalendere kan du sette inn nettadressen for ICS-kalenderene
+  her:'
+calendar-code-execution: Resulterende kalender vises nedenfor.
+title-title: Navn
+starting-date-title: Startdato
+first-hour-title: Første time
+last-hour-title: Siste time
+starting-date-description: 'Endre startdato for kalenderen slik:'
+section-customization: Du kan gjøre ytterligere tilpasninger av kalenderen.
+title-description: 'For å endre navnet kan du skrive noe inn her:'
+time-increment-title: Tidsforøkelse
+last-hour-description: 'Endre siste time for kalenderen slik:'
+time-increment-description: 'Endre tidsforøkelse i «Dag og uke»-visningen:'
+skins-title: Drakter
+links-title: Lenker
+skins-description: Du kan endre draktvalg for kalenderen.
+skins-contrast-black: Kontrast-svart
+skins-contrast-white: Kontrast-hvitt
+start-of-week-description: Uken kan starte på mandag eller søndag.
+skins-terrace: Terrasse
+skins-material: Materiell
+skins-flat: Flatt
+links-parent: Åpne lenket dokument i inneholdende ramme.
+links-blank: Åpne lenket dokument i et nytt vindu eller fane.
+links-top: Åpne lenket dokument i full kropp tilhørende vinduet.
+style-css: Du kan angi dine egne CSS-egenskaper hvis du vil det.
+style-click: Du kan endre fargen på de klikkbare elementene.
+style-days: Hvis du vil ha forskjellig farge for dagene kan du angi dette også.
+style-days-outside: Noen dager i kalenderen har forskjellig farge hvis de ikke tilhører
+  måneden.
+tabs-week: Uke
+tabs-month: Måned
+tabs-day: Dag
+loader-default: sirkulær innlaster
+tabs-title: Måned, uke, dag, og agenda-visning
+tabs-description: 'Månedsvisning er forvalget. Du kan velge andre visninger å begynne
+  med:'
+tabs-agenda: Agenda
+controls-next: Neste
+timezone-browser: bruk denne tidssonen for nettleseren
+loading: laster inn …
+spec-title: Vertstjening av spesifikasjonen
+controls-description: 'Det kan hende du ikke vil vise brukerne alle kontrollene. Velg
+  hvilke du vil ha:'
+spec-link: 'Når du har plassert spesifikasjonen noensteds hen på nett kan du opprette
+  en lenke slik som denne:'
