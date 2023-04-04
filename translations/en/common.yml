@@ -4,10 +4,10 @@
 # commonly used translations
 
 
-# The description of the project that shows up in the index page and
-# on the about page if it was not changed.
-# https://open-web-calendar.hosted.quelltext.eu/#translate-project-description
-# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-project-description
+#. The description of the project that shows up in the index page and
+#. on the about page if it was not changed.
+#. https://open-web-calendar.hosted.quelltext.eu/#translate-project-description
+#: https://open-web-calendar.hosted.quelltext.eu/about.html#translate-project-description
 project-description: "This is a calendar which provides a website for many different calendars. You can also subscribe through an ICS link. The calendars are highly configurable e.g. to have several sources and fit into the embedding website. If you like this project, please consider to donate your time or money to the project to keep it free and accessible for all."
 
 
