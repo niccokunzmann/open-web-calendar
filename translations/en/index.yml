@@ -255,9 +255,9 @@ loading: "loading…"
 spec-title: "Hosting the Specification"
 # Description of the specification followed by the JSON content
 # https://open-web-calendar.hosted.quelltext.eu/#translate-spec-description
-spec-description: "The calendar can be generated not only using the url but also through\
-  \ a JSON or YAML specification which resides in a file. The customization from above\
-  \ generates this specification:"
+spec-description: "The calendar can be generated not only using the URL, but also\
+  \ through a JSON or YAML specification from a file. The customization above generates\
+  \ this specification:"
 # Description of downloading and hosting. Contains HTML
 # https://open-web-calendar.hosted.quelltext.eu/#translate-spec-host
 spec-host-html: 'You can <a href="javascript:downloadJSONSpecification()">download
