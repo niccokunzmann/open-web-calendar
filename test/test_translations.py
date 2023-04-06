@@ -73,3 +73,7 @@ def test_language_alias_is_not_a_translation_language():
     """If this fails, please edit the file to rename language codes properly."""
     for code in translate.LANGUAGE_ALIAS:
         assert code not in translate.TRANSLATIONS
+
+
+def test_compute_recommendation():
+    assert translate.languages_for_the_index_file() != []

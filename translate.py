@@ -11,7 +11,12 @@ DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
 TRANSLATIONS = {} # lang -> file -> id -> string
-LANGUAGE_ALIAS = {"nb": "nb_NO"} # rename language codes
+LANGUAGE_ALIAS = {
+    "nb": "nb_NO",
+    "ua": "uk",
+    "jp": "ja",
+    "no": "nb_NO",
+} # rename language codes
 
 # Parse the directory structure.
 # translations/<lang>/<file>.yml
@@ -159,7 +164,7 @@ ENGLISH_LANGUAGE_NAMES = {
     'id' : 'Indonesian',
     'it' : 'Italian',
     'jp' : 'Japanese',
-#    'no' : 'Norwegian',
+    'no' : 'Norwegian',
     'nb_NO' : 'Norwegian Bokmål',
     'pl' : 'Polish',
     'pt' : 'Portuguese',
@@ -192,6 +197,7 @@ FILES = tuple(TRANSLATIONS[DEFAULT_LANGUAGE])
 
 def strings_translated(language, files=FILES) -> int:
     """Return the number of translations strings."""
+    language = LANGUAGE_ALIAS.get(language, language)
     return sum(len(TRANSLATIONS[language].get(file, {})) for file in files)
 
 
