@@ -11,6 +11,7 @@ DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
 TRANSLATIONS = {} # lang -> file -> id -> string
+LANGUAGE_ALIAS = {"nb": "nb_NO"} # rename language codes
 
 # Parse the directory structure.
 # translations/<lang>/<file>.yml
@@ -26,6 +27,7 @@ def string(language: str, file: str, id: str) -> str:
     """Translate a string identified by language, file and id."""
     if "." in id:
         file, id = id.split(".", 1)
+    language = LANGUAGE_ALIAS.get(language, language)
     for source in (
         TRANSLATIONS.get(language, {}).get(file, {}),
         TRANSLATIONS.get(DEFAULT_LANGUAGE, {}).get(file, {}),
