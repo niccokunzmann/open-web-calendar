@@ -29,6 +29,18 @@ footer a {
   color: gray;
 }
 
+.languages {
+  text-align: center;
+}
+
+.languages a {
+  color: gray;
+}
+
+.languages a.current {
+  color: black;
+}
+
 main {
     padding: 1em;
     max-width: 60em;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="{{ specification['language'] }}">
     <head>
         <title>Open Web Calendar</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,6 +8,9 @@
         <script src="js/index.js"></script>
         <script src="js/common.js"></script>
         <script src="configuration.js"></script>
+        {%- for name, code, percent in configuration["index"]["languages"]: %}
+            <link rel="alternate" hreflang="{{code}}" href="/index.html?language={{code}}" />
+        {%- endfor %}
     </head>
     <body>
         <header>
@@ -17,6 +20,13 @@
             <div class="section">
                 <p>
                     {{ html("about") }}
+                </p>
+            </div>
+            <div class="section languages">
+                <p>
+                    {%- for name, code, percent in configuration["index"]["languages"]: %}
+                        <a class="{{ ('current' if code == specification['language'] else '') }}" href="/index.html?language={{code}}">{{ name }} ({{percent}}%)</a>
+                    {%- endfor %}
                 </p>
             </div>
             <div class="section">

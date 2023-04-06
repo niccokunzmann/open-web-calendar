@@ -158,7 +158,7 @@ ENGLISH_LANGUAGE_NAMES = {
     'it' : 'Italian',
     'jp' : 'Japanese',
     'no' : 'Norwegian',
-    'nb' : 'Norwegian Bokmål',
+    'nb_NO' : 'Norwegian Bokmål',
     'pl' : 'Polish',
     'pt' : 'Portuguese',
     'ro' : 'Romanian',
@@ -171,12 +171,12 @@ ENGLISH_LANGUAGE_NAMES = {
     'ua' : 'Ukrainian',
 }
 
-def dhtmlx_languages():
+def dhtmlx_languages() -> list:
     """Return tuples of language name and language code."""
     result = set()
     for code, language in ENGLISH_LANGUAGE_NAMES.items():
         result.add((language, code))
-    default = string("en", "index", "language")
+    default = string(DEFAULT_LANGUAGE, "index", "language")
     for code in TRANSLATIONS:
         language = string(code, "index", "language")
         if language != default:
@@ -185,4 +185,40 @@ def dhtmlx_languages():
     result.sort()
     return result
 
-__all__ = ["html", "string", "dhtmlx", "dhtmlx_languages"]
+
+FILES = tuple(TRANSLATIONS[DEFAULT_LANGUAGE])
+
+def strings_translated(language, files=FILES) -> int:
+    """Return the number of translations strings."""
+    return sum(len(TRANSLATIONS[language].get(file, {})) for file in files)
+
+
+def fraction_translated(language, files=FILES) -> float:
+    """Return the 0 <= fraction <= 1 of translation."""
+    return 1.0*strings_translated(language, files) / strings_translated(DEFAULT_LANGUAGE, files)
+
+
+def languages_for_the_index_file(minimal_fraction_translated=0.5):
+    """Return a list of tuples of language name and code for all languages that are translated enough to offer the to a user.
+    (language name, code, translated%)
+    """
+    files = ("index", "common")
+    result = []
+    for language, code in dhtmlx_languages():
+        fraction = fraction_translated(code, files=files)
+        if fraction >= minimal_fraction_translated:
+            for other in result[:]:
+                 if other[1] == code:
+                     # merge languages with duplicate code
+                     language = language + "/" + other[0]
+                     result.remove(other)
+            result.append([language, code, int(fraction * 100)])
+    return result
+
+__all__ = ["html", "string", "dhtmlx", "dhtmlx_languages", "fraction_translated", "strings_translated", "languages_for_the_index_file"]
+
+
+if __name__ == "__main__":
+    for language in sorted(TRANSLATIONS):
+        print(f"{language} is {int(fraction_translated(language) * 100)}% translated: {strings_translated(language)}/{strings_translated(DEFAULT_LANGUAGE)}")
+    print(f"These languages will be offered to the user: {', '.join(map(str, languages_for_the_index_file()))}")

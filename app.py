@@ -78,6 +78,9 @@ def get_configuration():
         "timezones": pytz.all_timezones, # see https://stackoverflow.com/a/13867319
         "dhtmlx": {
             "languages": translate.dhtmlx_languages()
+        },
+        "index": {
+            "languages": translate.languages_for_the_index_file()
         }
     }
     return config
@@ -144,6 +147,7 @@ def render_app_template(template, specification):
     translation_file = os.path.splitext(template)[0]
     return render_template(template,
         specification=specification,
+        configuration = get_configuration(),
         json=json,
         get_query_string=get_query_string,
         html=lambda id: translate.html(specification["language"], translation_file, id)
@@ -182,6 +186,7 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
         return send_from_directory('static/' + folder_name, path)
 
 @app.route("/")
+@app.route("/index.html")
 def serve_index():
     specification = get_specification()
     return render_app_template("index.html", specification)
