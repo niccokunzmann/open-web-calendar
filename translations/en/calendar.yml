@@ -56,9 +56,7 @@ labels_icon_delete: "Delete"
 labels_confirm_closing: ""
 #: not used in this project
 labels_confirm_deleting: "Event will be deleted permanently, are you sure?"
-#: not used in this project
 labels_section_description: "Description"
-#: not used in this project
 labels_section_time: "Time period"
 #: not used in this project
 labels_full_day: "Full day"

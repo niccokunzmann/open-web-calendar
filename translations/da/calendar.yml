@@ -100,6 +100,8 @@ labels_select_year_day2: "i"
 #: not used in this project
 labels_repeat_text_year_day: "dag i"
 #: not used in this project
+labels_select_year_month: ""
+#: not used in this project
 labels_repeat_radio_end: "Ingen slutdato"
 #: not used in this project
 labels_repeat_text_occurences_count: "gentagelse"

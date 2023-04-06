@@ -51,8 +51,7 @@ labels_section_time: "Zeitspanne"
 #: not used in this project
 labels_full_day: "Ganzer Tag"
 #: not used in this project
-labels_confirm_recurring: "Wollen Sie alle Einträge bearbeiten oder nur diesen einzelnen\
-  \ Eintrag?"
+labels_confirm_recurring: "Wollen Sie alle Einträge bearbeiten oder nur diesen einzelnen Eintrag?"
 #: not used in this project
 labels_section_recurring: "Wiederholung"
 #: not used in this project
@@ -103,6 +102,8 @@ labels_repeat_year_label: "am"
 labels_select_year_day2: "im"
 #: not used in this project
 labels_repeat_text_year_day: "Tag im"
+#: not used in this project
+labels_select_year_month: ""
 #: not used in this project
 labels_repeat_radio_end: "kein Enddatum"
 #: not used in this project
