@@ -1,0 +1,67 @@
+date_month_full_jan: "Januari"
+date_month_full_feb: "Februari"
+date_month_full_mar: "Maret"
+date_month_full_may: "Mei"
+date_month_full_jun: "Juni"
+date_month_full_jul: "Juli"
+date_month_full_aug: "Agustus"
+date_month_full_oct: "Oktober"
+date_month_full_dec: "Desember"
+date_month_short_may: "Mei"
+date_month_short_aug: "Ags"
+date_month_short_oct: "Okt"
+date_month_short_dec: "Des"
+date_day_full_sun: "Minggu"
+date_day_full_mon: "Senin"
+date_day_full_tue: "Selasa"
+date_day_full_wed: "Rabu"
+date_day_full_thu: "Kamis"
+date_day_full_fri: "Jumat"
+date_day_full_sat: "Sabtu"
+date_day_short_sun: "Ming"
+date_day_short_mon: "Sen"
+date_day_short_tue: "Sel"
+date_day_short_wed: "Rab"
+date_day_short_thu: "Kam"
+date_day_short_fri: "Jum"
+date_day_short_sat: "Sab"
+labels_dhx_cal_today_button: "Hari Ini"
+labels_day_tab: "Hari"
+labels_week_tab: "Minggu"
+labels_month_tab: "Bulan"
+#: not used in this project
+labels_new_event: "Acara Baru"
+#: not used in this project
+labels_icon_save: "Simpan"
+#: not used in this project
+labels_icon_cancel: "Batal"
+#: not used in this project
+labels_icon_details: "Detail"
+#: not used in this project
+labels_icon_delete: "Hapus"
+#: not used in this project
+labels_confirm_deleting: "Acara akan dihapus"
+#: not used in this project
+labels_section_description: "Keterangan"
+#: not used in this project
+labels_section_time: "Periode"
+#: not used in this project
+labels_full_day: "Hari penuh"
+#: not used in this project
+labels_confirm_recurring: "Apakah acara ini akan berulang?"
+#: not used in this project
+labels_section_recurring: "Acara Rutin"
+#: not used in this project
+labels_button_recurring: "Tidak Difungsikan"
+#: not used in this project
+labels_button_recurring_open: "Difungsikan"
+#: not used in this project
+labels_button_edit_series: "Mengedit seri"
+#: not used in this project
+labels_button_edit_occurrence: "Mengedit salinan"
+labels_date: "Tanggal"
+labels_description: "Keterangan"
+#: not used in this project
+labels_year_tab: "Tahun"
+#: not used in this project
+labels_grid_tab: "Tabel"

@@ -10,6 +10,7 @@ import pytest
         ("en", "_test", "id2", "test2"), 
         ("de", "_test", "id1", "Test"), 
         ("de", "_test", "id2", "test2"), 
+        ("en", "_test", "index.language", "English"), 
     ]
 )
 def test_translate(language, file, id, expected_value):

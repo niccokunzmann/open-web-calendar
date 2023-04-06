@@ -1,0 +1,140 @@
+date_month_full_jan: "Januari"
+date_month_full_feb: "Februari"
+date_month_full_mar: "Maart"
+date_month_full_may: "Mei"
+date_month_full_jun: "Juni"
+date_month_full_jul: "Juli"
+date_month_full_aug: "Augustus"
+date_month_full_oct: "Oktober"
+date_month_short_mar: "mrt"
+date_month_short_may: "Mei"
+date_month_short_oct: "Okt"
+date_day_full_sun: "Zondag"
+date_day_full_mon: "Maandag"
+date_day_full_tue: "Dinsdag"
+date_day_full_wed: "Woensdag"
+date_day_full_thu: "Donderdag"
+date_day_full_fri: "Vrijdag"
+date_day_full_sat: "Zaterdag"
+date_day_short_sun: "Zo"
+date_day_short_mon: "Ma"
+date_day_short_tue: "Di"
+date_day_short_wed: "Wo"
+date_day_short_thu: "Do"
+date_day_short_fri: "Vr"
+date_day_short_sat: "Za"
+labels_dhx_cal_today_button: "Vandaag"
+labels_day_tab: "Dag"
+labels_month_tab: "Maand"
+#: not used in this project
+labels_new_event: "Nieuw item"
+#: not used in this project
+labels_icon_save: "Opslaan"
+#: not used in this project
+labels_icon_cancel: "Annuleren"
+#: not used in this project
+labels_icon_edit: "Bewerken"
+#: not used in this project
+labels_icon_delete: "Verwijderen"
+#: not used in this project
+labels_confirm_deleting: "Item zal permanent worden verwijderd, doorgaan?"
+#: not used in this project
+labels_section_description: "Beschrijving"
+#: not used in this project
+labels_section_time: "Tijd periode"
+#: not used in this project
+labels_full_day: "Hele dag"
+#: not used in this project
+labels_confirm_recurring: "Wilt u alle terugkerende items bijwerken?"
+#: not used in this project
+labels_section_recurring: "Item herhalen"
+#: not used in this project
+labels_button_recurring: "Uit"
+#: not used in this project
+labels_button_recurring_open: "Aan"
+#: not used in this project
+labels_button_edit_series: "Bewerk de serie"
+#: not used in this project
+labels_button_edit_occurrence: "Bewerk een kopie"
+labels_date: "Datum"
+labels_description: "Omschrijving"
+#: not used in this project
+labels_year_tab: "Jaar"
+#: not used in this project
+labels_grid_tab: "Tabel"
+#: not used in this project
+labels_repeat_radio_day: "Dagelijks"
+#: not used in this project
+labels_repeat_radio_week: "Wekelijks"
+#: not used in this project
+labels_repeat_radio_month: "Maandelijks"
+#: not used in this project
+labels_repeat_radio_year: "Jaarlijks"
+#: not used in this project
+labels_repeat_radio_day_type: "Elke"
+#: not used in this project
+labels_repeat_text_day_count: "dag(en)"
+#: not used in this project
+labels_repeat_radio_day_type2: "Elke werkdag"
+#: not used in this project
+labels_repeat_week: " Herhaal elke"
+#: not used in this project
+labels_repeat_text_week_count: "week op de volgende dagen:"
+#: not used in this project
+labels_repeat_radio_month_type: "Herhaal"
+#: not used in this project
+labels_repeat_radio_month_start: "Op"
+#: not used in this project
+labels_repeat_text_month_day: "dag iedere"
+#: not used in this project
+labels_repeat_text_month_count: "maanden"
+#: not used in this project
+labels_repeat_text_month_count2_before: "iedere"
+#: not used in this project
+labels_repeat_text_month_count2_after: "maanden"
+#: not used in this project
+labels_repeat_year_label: "Op"
+#: not used in this project
+labels_select_year_day2: "van"
+#: not used in this project
+labels_repeat_text_year_day: "dag"
+#: not used in this project
+labels_select_year_month: "maand"
+#: not used in this project
+labels_repeat_radio_end: "Geen eind datum"
+#: not used in this project
+labels_repeat_text_occurences_count: "keren"
+#: not used in this project
+labels_repeat_radio_end3: "Eindigd per"
+#: not used in this project
+labels_repeat_radio_end2: "Na"
+#: not used in this project
+labels_month_for_recurring_jan: "Januari"
+#: not used in this project
+labels_month_for_recurring_feb: "Februari"
+#: not used in this project
+labels_month_for_recurring_mar: "Maart"
+#: not used in this project
+labels_month_for_recurring_may: "Mei"
+#: not used in this project
+labels_month_for_recurring_jun: "Juni"
+#: not used in this project
+labels_month_for_recurring_jul: "Juli"
+#: not used in this project
+labels_month_for_recurring_aug: "Augustus"
+#: not used in this project
+labels_month_for_recurring_oct: "Oktober"
+#: not used in this project
+labels_day_for_recurring_sun: "Zondag"
+#: not used in this project
+labels_day_for_recurring_mon: "Maandag"
+#: not used in this project
+labels_day_for_recurring_tue: "Dinsdag"
+#: not used in this project
+labels_day_for_recurring_wed: "Woensdag"
+#: not used in this project
+labels_day_for_recurring_thu: "Donderdag"
+#: not used in this project
+labels_day_for_recurring_fri: "Vrijdag"
+#: not used in this project
+labels_day_for_recurring_sat: "Zaterdag"

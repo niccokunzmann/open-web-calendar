@@ -1,0 +1,162 @@
+date_month_full_jan: "Leden"
+date_month_full_feb: "Únor"
+date_month_full_mar: "Březen"
+date_month_full_apr: "Duben"
+date_month_full_may: "Květen"
+date_month_full_jun: "Červen"
+date_month_full_jul: "Červenec"
+date_month_full_aug: "Srpen"
+date_month_full_sep: "Září"
+date_month_full_oct: "Říjen"
+date_month_full_nov: "Listopad"
+date_month_full_dec: "Prosinec"
+date_month_short_jan: "Led"
+date_month_short_feb: "Ún"
+date_month_short_mar: "Bře"
+date_month_short_apr: "Dub"
+date_month_short_may: "Kvě"
+date_month_short_jun: "Čer"
+date_month_short_jul: "Čec"
+date_month_short_aug: "Srp"
+date_month_short_sep: "Září"
+date_month_short_oct: "Říj"
+date_month_short_nov: "List"
+date_month_short_dec: "Pro"
+date_day_full_sun: "Neděle"
+date_day_full_mon: "Pondělí"
+date_day_full_tue: "Úterý"
+date_day_full_wed: "Středa"
+date_day_full_thu: "Čtvrtek"
+date_day_full_fri: "Pátek"
+date_day_full_sat: "Sobota"
+date_day_short_sun: "Ne"
+date_day_short_mon: "Po"
+date_day_short_tue: "Út"
+date_day_short_wed: "St"
+date_day_short_thu: "Čt"
+date_day_short_fri: "Pá"
+date_day_short_sat: "So"
+labels_dhx_cal_today_button: "Dnes"
+labels_day_tab: "Den"
+labels_week_tab: "Týden"
+labels_month_tab: "Měsíc"
+#: not used in this project
+labels_new_event: "Nová událost"
+#: not used in this project
+labels_icon_save: "Uložit"
+#: not used in this project
+labels_icon_cancel: "Zpět"
+#: not used in this project
+labels_icon_details: "Detail"
+#: not used in this project
+labels_icon_edit: "Edituj"
+#: not used in this project
+labels_icon_delete: "Smazat"
+#: not used in this project
+labels_confirm_deleting: "Událost bude trvale smazána, opravdu?"
+#: not used in this project
+labels_section_description: "Poznámky"
+#: not used in this project
+labels_section_time: "Doba platnosti"
+#: not used in this project
+labels_confirm_recurring: "Přejete si upravit celou řadu opakovaných událostí?"
+#: not used in this project
+labels_section_recurring: "Opakování události"
+#: not used in this project
+labels_button_recurring: "Vypnuto"
+#: not used in this project
+labels_button_recurring_open: "Zapnuto"
+#: not used in this project
+labels_button_edit_occurrence: "Upravit instance"
+labels_agenda_tab: "Program"
+labels_date: "Datum"
+labels_description: "Poznámka"
+#: not used in this project
+labels_year_tab: "Rok"
+labels_week_agenda_tab: "Program"
+#: not used in this project
+labels_grid_tab: "Mřížka"
+#: not used in this project
+labels_repeat_radio_day: "Denně"
+#: not used in this project
+labels_repeat_radio_week: "Týdně"
+#: not used in this project
+labels_repeat_radio_month: "Měsíčně"
+#: not used in this project
+labels_repeat_radio_year: "Ročně"
+#: not used in this project
+labels_repeat_radio_day_type: "každý"
+#: not used in this project
+labels_repeat_text_day_count: "Den"
+#: not used in this project
+labels_repeat_radio_day_type2: "pracovní dny"
+#: not used in this project
+labels_repeat_week: "Opakuje každých"
+#: not used in this project
+labels_repeat_text_week_count: "Týdnů na:"
+#: not used in this project
+labels_repeat_radio_month_type: "u každého"
+#: not used in this project
+labels_repeat_radio_month_start: "na"
+#: not used in this project
+labels_repeat_text_month_day: "Den každého"
+#: not used in this project
+labels_repeat_text_month_count: "Měsíc"
+#: not used in this project
+labels_repeat_text_month_count2_before: "každý"
+#: not used in this project
+labels_repeat_text_month_count2_after: "Měsíc"
+#: not used in this project
+labels_repeat_year_label: "na"
+#: not used in this project
+labels_select_year_day2: "v"
+#: not used in this project
+labels_repeat_text_year_day: "Den v"
+#: not used in this project
+labels_select_year_month: ""
+#: not used in this project
+labels_repeat_radio_end: "bez data ukončení"
+#: not used in this project
+labels_repeat_text_occurences_count: "Události"
+#: not used in this project
+labels_repeat_radio_end2: "po"
+#: not used in this project
+labels_repeat_radio_end3: "Konec"
+#: not used in this project
+labels_month_for_recurring_jan: "Leden"
+#: not used in this project
+labels_month_for_recurring_feb: "Únor"
+#: not used in this project
+labels_month_for_recurring_mar: "Březen"
+#: not used in this project
+labels_month_for_recurring_apr: "Duben"
+#: not used in this project
+labels_month_for_recurring_may: "Květen"
+#: not used in this project
+labels_month_for_recurring_jun: "Červen"
+#: not used in this project
+labels_month_for_recurring_jul: "Červenec"
+#: not used in this project
+labels_month_for_recurring_aug: "Srpen"
+#: not used in this project
+labels_month_for_recurring_sep: "Září"
+#: not used in this project
+labels_month_for_recurring_oct: "Říjen"
+#: not used in this project
+labels_month_for_recurring_nov: "Listopad"
+#: not used in this project
+labels_month_for_recurring_dec: "Prosinec"
+#: not used in this project
+labels_day_for_recurring_sun: "Neděle "
+#: not used in this project
+labels_day_for_recurring_mon: "Pondělí"
+#: not used in this project
+labels_day_for_recurring_tue: "Úterý"
+#: not used in this project
+labels_day_for_recurring_wed: "Středa"
+#: not used in this project
+labels_day_for_recurring_thu: "Čtvrtek"
+#: not used in this project
+labels_day_for_recurring_fri: "Pátek"
+#: not used in this project
+labels_day_for_recurring_sat: "Sobota"

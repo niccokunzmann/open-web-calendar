@@ -1,0 +1,144 @@
+date_month_full_jan: " Januar"
+date_month_full_feb: " Februar"
+date_month_full_mar: " März "
+date_month_full_apr: " April"
+date_month_full_may: " Mai"
+date_month_full_jun: " Juni"
+date_month_full_jul: " Juli"
+date_month_full_aug: " August"
+date_month_full_sep: " September "
+date_month_full_oct: " Oktober"
+date_month_full_nov: " November "
+date_month_full_dec: " Dezember"
+date_month_short_mar: "Mär"
+date_month_short_may: "Mai"
+date_month_short_oct: "Okt"
+date_month_short_dec: "Dez"
+date_day_full_sun: "Sonntag"
+date_day_full_mon: "Montag"
+date_day_full_tue: "Dienstag"
+date_day_full_wed: " Mittwoch"
+date_day_full_thu: " Donnerstag"
+date_day_full_fri: "Freitag"
+date_day_full_sat: "Samstag"
+date_day_short_sun: "So"
+date_day_short_mon: "Mo"
+date_day_short_tue: "Di"
+date_day_short_wed: "Mi"
+date_day_short_thu: "Do"
+date_day_short_fri: "Fr"
+date_day_short_sat: "Sa"
+labels_dhx_cal_today_button: "Heute"
+labels_day_tab: "Tag"
+labels_week_tab: "Woche"
+labels_month_tab: "Monat"
+#: not used in this project
+labels_new_event: "neuer Eintrag"
+#: not used in this project
+labels_icon_save: "Speichern"
+#: not used in this project
+labels_icon_cancel: "Abbrechen"
+#: not used in this project
+labels_icon_edit: "Ändern"
+#: not used in this project
+labels_icon_delete: "Löschen"
+#: not used in this project
+labels_confirm_deleting: "Der Eintrag wird gelöscht"
+#: not used in this project
+labels_section_description: "Beschreibung"
+#: not used in this project
+labels_section_time: "Zeitspanne"
+#: not used in this project
+labels_full_day: "Ganzer Tag"
+#: not used in this project
+labels_confirm_recurring: "Wollen Sie alle Einträge bearbeiten oder nur diesen einzelnen Eintrag?"
+#: not used in this project
+labels_section_recurring: "Wiederholung"
+#: not used in this project
+labels_button_recurring: "Aus"
+#: not used in this project
+labels_button_recurring_open: "An"
+#: not used in this project
+labels_button_edit_series: "Bearbeiten Sie die Serie"
+#: not used in this project
+labels_button_edit_occurrence: "Bearbeiten Sie eine Kopie"
+labels_date: "Datum"
+labels_description: "Beschreibung"
+#: not used in this project
+labels_year_tab: "Jahre"
+#: not used in this project
+labels_repeat_radio_day: "Täglich"
+#: not used in this project
+labels_repeat_radio_week: "Wöchentlich"
+#: not used in this project
+labels_repeat_radio_month: "Monatlich"
+#: not used in this project
+labels_repeat_radio_year: "Jährlich"
+#: not used in this project
+labels_repeat_radio_day_type: "jeden"
+#: not used in this project
+labels_repeat_text_day_count: "Tag"
+#: not used in this project
+labels_repeat_radio_day_type2: "an jedem Arbeitstag"
+#: not used in this project
+labels_repeat_week: " Wiederholt sich jede"
+#: not used in this project
+labels_repeat_text_week_count: "Woche am:"
+#: not used in this project
+labels_repeat_radio_month_type: "an jedem"
+#: not used in this project
+labels_repeat_radio_month_start: "am"
+#: not used in this project
+labels_repeat_text_month_day: "Tag eines jeden"
+#: not used in this project
+labels_repeat_text_month_count: "Monats"
+#: not used in this project
+labels_repeat_text_month_count2_before: "jeden"
+#: not used in this project
+labels_repeat_text_month_count2_after: "Monats"
+#: not used in this project
+labels_repeat_year_label: "am"
+#: not used in this project
+labels_select_year_day2: "im"
+#: not used in this project
+labels_repeat_text_year_day: "Tag im"
+#: not used in this project
+labels_select_year_month: ""
+#: not used in this project
+labels_repeat_radio_end: "kein Enddatum"
+#: not used in this project
+labels_repeat_text_occurences_count: "Ereignissen"
+#: not used in this project
+labels_repeat_radio_end3: "Schluß"
+#: not used in this project
+labels_repeat_radio_end2: "nach"
+#: not used in this project
+labels_month_for_recurring_jan: "Januar"
+#: not used in this project
+labels_month_for_recurring_feb: "Februar"
+#: not used in this project
+labels_month_for_recurring_mar: "März"
+#: not used in this project
+labels_month_for_recurring_may: "Mai"
+#: not used in this project
+labels_month_for_recurring_jun: "Juni"
+#: not used in this project
+labels_month_for_recurring_jul: "Juli"
+#: not used in this project
+labels_month_for_recurring_oct: "Oktober"
+#: not used in this project
+labels_month_for_recurring_dec: "Dezember"
+#: not used in this project
+labels_day_for_recurring_sun: "Sonntag"
+#: not used in this project
+labels_day_for_recurring_mon: "Montag"
+#: not used in this project
+labels_day_for_recurring_tue: "Dienstag"
+#: not used in this project
+labels_day_for_recurring_wed: "Mittwoch"
+#: not used in this project
+labels_day_for_recurring_thu: "Donnerstag"
+#: not used in this project
+labels_day_for_recurring_fri: "Freitag"
+#: not used in this project
+labels_day_for_recurring_sat: "Samstag"

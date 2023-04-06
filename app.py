@@ -196,6 +196,10 @@ def serve_about():
 def serve_configuration():
     return "/* generated */\nconst configuration = {};".format(json.dumps(get_configuration()))
 
+@app.route("/locale_<lang>.js")
+def serve_locale(lang):
+    return render_template("locale.js", locale=json.dumps(translate.dhtmlx(lang), indent="  "))
+
 @app.errorhandler(500)
 def unhandledException(error):
     """Called when an error occurs.

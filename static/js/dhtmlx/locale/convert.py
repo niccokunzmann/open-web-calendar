@@ -15,6 +15,14 @@ en = {}
 M = "jan feb mar apr may jun jul aug sep oct nov dec".split()
 D = "sun mon tue wed thu fri sat".split()
 
+def used(s):
+    return s.startswith("date_") or (
+        s.startswith("labels_") and
+        not any(x in s for x in "repeat drag message button icon new confirm section select recurring labels_year_tab labels_grid_tab labels_full_day".split())
+    ) or s in """
+    labels_dhx_cal_today_button
+    """
+    
 def add(l, v):
     global yaml
     k = "_".join(l)
@@ -30,6 +38,9 @@ def add(l, v):
     elif en.get(k) == v:
         print(f"skip {k} is english: {v}")
         return
+    if not used(k):
+#        print(f"Not used {k}")
+        yaml += "#: not used in this project\n"
     yaml += f"{k}: {v}\n"
     
 

@@ -99,8 +99,8 @@
                 <p>
                     {{ html("start-of-week-description") }}<br/>
                     <select id="select-start-of-week">
-                        <option value="mo">{{ html("start-of-week-mo") }}</option>
-                        <option value="su">{{ html("start-of-week-su") }}</option>
+                        <option value="mo">{{ html("calendar.date_day_full_mon") }}</option>
+                        <option value="su">{{ html("calendar.date_day_full_sun") }}</option>
                     </select>
                 </p>
                 <h3>{{ html("style-title") }}</h3>
@@ -155,23 +155,23 @@
                 <p>
                   {{ html("tabs-description") }}<br/>
                   <select id="select-tab">
-                      <option value="month">{{ html("tabs-month") }}</option>
-                      <option value="week">{{ html("tabs-week") }}</option>
-                      <option value="day">{{ html("tabs-day") }}</option>
-                      <option value="agenda">{{ html("tabs-agenda") }}</option>
+                      <option value="month">{{ html("calendar.labels_month_tab") }}</option>
+                      <option value="week">{{ html("calendar.labels_week_tab") }}</option>
+                      <option value="day">{{ html("calendar.labels_day_tab") }}</option>
+                      <option value="agenda">{{ html("calendar.labels_agenda_tab") }}</option>
                   </select>
                 </p>
                 <p>
                   {{ html("controls-description") }}
                   <form id="check-controls">
-                    <input type="checkbox" class="tabs" value="month" /><label for="month" >{{ html("tabs-month") }}</label>
-                    <input type="checkbox" class="tabs" value="week"  /><label for="week"  >{{ html("tabs-week") }}</label>
-                    <input type="checkbox" class="tabs" value="day"   /><label for="day"   >{{ html("tabs-day") }}</label>
-                    <input type="checkbox" class="tabs" value="agenda"/><label for="agenda">{{ html("tabs-agenda") }}</label>
-                    <input type="checkbox" class="controls" value="next"    /><label for="next"    >{{ html("controls-next") }}</label>
-                    <input type="checkbox" class="controls" value="previous"/><label for="previous">{{ html("controls-previous") }}</label>
-                    <input type="checkbox" class="controls" value="today"   /><label for="today"   >{{ html("controls-today") }}</label>
-                    <input type="checkbox" class="controls" value="date"    /><label for="date"    >{{ html("controls-date") }}</label>
+                    <input type="checkbox" class="tabs" value="month" /><label for="month" >{{ html("calendar.labels_month_tab") }}</label>
+                    <input type="checkbox" class="tabs" value="week"  /><label for="week"  >{{ html("calendar.labels_week_tab") }}</label>
+                    <input type="checkbox" class="tabs" value="day"   /><label for="day"   >{{ html("calendar.labels_day_tab") }}</label>
+                    <input type="checkbox" class="tabs" value="agenda"/><label for="agenda">{{ html("calendar.labels_agenda_tab") }}</label>
+                    <input type="checkbox" class="controls" value="next"    /><label for="next"    >{{ html("calendar.labels_next") }}</label>
+                    <input type="checkbox" class="controls" value="previous"/><label for="previous">{{ html("calendar.labels_prev") }}</label>
+                    <input type="checkbox" class="controls" value="today"   /><label for="today"   >{{ html("calendar.labels_dhx_cal_today_button") }}</label>
+                    <input type="checkbox" class="controls" value="date"    /><label for="date"    >{{ html("calendar.labels_date") }}</label>
                   </form>
                 </p>
                 <h3>{{ html("timezone-title") }}</h3>

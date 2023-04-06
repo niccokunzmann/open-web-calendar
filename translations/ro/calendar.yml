@@ -1,0 +1,153 @@
+date_month_full_jan: "Ianuarie"
+date_month_full_feb: "Februarie"
+date_month_full_mar: "Martie"
+date_month_full_apr: "Aprilie"
+date_month_full_may: "Mai"
+date_month_full_jun: "Iunie"
+date_month_full_jul: "Iulie"
+date_month_full_sep: "Septembrie"
+date_month_full_oct: "Octombrie"
+date_month_short_jan: "Ian"
+date_month_short_may: "Mai"
+date_month_short_jun: "Iun"
+date_month_short_jul: "Iul"
+date_day_full_sun: "Duminica"
+date_day_full_mon: "Luni"
+date_day_full_tue: "Marti"
+date_day_full_wed: "Miercuri"
+date_day_full_thu: "Joi"
+date_day_full_fri: "Vineri"
+date_day_full_sat: "Sambata"
+date_day_short_sun: "Du"
+date_day_short_mon: "Lu"
+date_day_short_tue: "Ma"
+date_day_short_wed: "Mi"
+date_day_short_thu: "Jo"
+date_day_short_fri: "Vi"
+date_day_short_sat: "Sa"
+labels_dhx_cal_today_button: "Astazi"
+labels_day_tab: "Zi"
+labels_week_tab: "Saptamana"
+labels_month_tab: "Luna"
+#: not used in this project
+labels_new_event: "Eveniment nou"
+#: not used in this project
+labels_icon_save: "Salveaza"
+#: not used in this project
+labels_icon_cancel: "Anuleaza"
+#: not used in this project
+labels_icon_details: "Detalii"
+#: not used in this project
+labels_icon_edit: "Editeaza"
+#: not used in this project
+labels_icon_delete: "Sterge"
+#: not used in this project
+labels_confirm_closing: "Schimbarile nu vor fi salvate, esti sigur?"
+#: not used in this project
+labels_confirm_deleting: "Evenimentul va fi sters permanent, esti sigur?"
+#: not used in this project
+labels_section_description: "Descriere"
+#: not used in this project
+labels_section_time: "Interval"
+#: not used in this project
+labels_full_day: "Toata ziua"
+#: not used in this project
+labels_confirm_recurring: "Vrei sa editezi toata seria de evenimente repetate?"
+#: not used in this project
+labels_section_recurring: "Repetare"
+#: not used in this project
+labels_button_recurring: "Dezactivata"
+#: not used in this project
+labels_button_recurring_open: "Activata"
+#: not used in this project
+labels_button_edit_series: "Editeaza serie"
+#: not used in this project
+labels_button_edit_occurrence: "Editeaza doar intrare"
+labels_date: "Data"
+labels_description: "Descriere"
+#: not used in this project
+labels_year_tab: "An"
+#: not used in this project
+labels_grid_tab: "Lista"
+#: not used in this project
+labels_repeat_radio_day: "Zilnic"
+#: not used in this project
+labels_repeat_radio_week: "Saptamanal"
+#: not used in this project
+labels_repeat_radio_month: "Lunar"
+#: not used in this project
+labels_repeat_radio_year: "Anual"
+#: not used in this project
+labels_repeat_radio_day_type: "La fiecare"
+#: not used in this project
+labels_repeat_text_day_count: "zi(le)"
+#: not used in this project
+labels_repeat_radio_day_type2: "Fiecare zi lucratoare"
+#: not used in this project
+labels_repeat_week: " Repeta la fiecare"
+#: not used in this project
+labels_repeat_text_week_count: "saptamana in urmatoarele zile:"
+#: not used in this project
+labels_repeat_radio_month_type: "Repeta in"
+#: not used in this project
+labels_repeat_radio_month_start: "In a"
+#: not used in this project
+labels_repeat_text_month_day: "zi la fiecare"
+#: not used in this project
+labels_repeat_text_month_count: "luni"
+#: not used in this project
+labels_repeat_text_month_count2_before: "la fiecare"
+#: not used in this project
+labels_repeat_text_month_count2_after: "luni"
+#: not used in this project
+labels_repeat_year_label: "In"
+#: not used in this project
+labels_select_year_day2: "a lunii"
+#: not used in this project
+labels_repeat_text_year_day: "zi a lunii"
+#: not used in this project
+labels_select_year_month: ""
+#: not used in this project
+labels_repeat_radio_end: "Fara data de sfarsit"
+#: not used in this project
+labels_repeat_text_occurences_count: "evenimente"
+#: not used in this project
+labels_repeat_radio_end3: "La data"
+#: not used in this project
+labels_repeat_radio_end2: "Dupa"
+#: not used in this project
+labels_month_for_recurring_jan: "Ianuarie"
+#: not used in this project
+labels_month_for_recurring_feb: "Februarie"
+#: not used in this project
+labels_month_for_recurring_mar: "Martie"
+#: not used in this project
+labels_month_for_recurring_apr: "Aprilie"
+#: not used in this project
+labels_month_for_recurring_may: "Mai"
+#: not used in this project
+labels_month_for_recurring_jun: "Iunie"
+#: not used in this project
+labels_month_for_recurring_jul: "Iulie"
+#: not used in this project
+labels_month_for_recurring_sep: "Septembrie"
+#: not used in this project
+labels_month_for_recurring_oct: "Octombrie"
+#: not used in this project
+labels_month_for_recurring_nov: "Noiembrie"
+#: not used in this project
+labels_month_for_recurring_dec: "Decembrie"
+#: not used in this project
+labels_day_for_recurring_sun: "Duminica"
+#: not used in this project
+labels_day_for_recurring_mon: "Luni"
+#: not used in this project
+labels_day_for_recurring_tue: "Marti"
+#: not used in this project
+labels_day_for_recurring_wed: "Miercuri"
+#: not used in this project
+labels_day_for_recurring_thu: "Joi"
+#: not used in this project
+labels_day_for_recurring_fri: "Vineri"
+#: not used in this project
+labels_day_for_recurring_sat: "Sambata"
