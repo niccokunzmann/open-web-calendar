@@ -101,8 +101,6 @@ labels_repeat_text_week_count: "тыдзень"
 #: not used in this project
 labels_repeat_radio_month_type: "Паўтараць"
 #: not used in this project
-labels_repeat_radio_month_start: ""
-#: not used in this project
 labels_repeat_text_month_day: " чысла кожнага"
 #: not used in this project
 labels_repeat_text_month_count: "месяцу"
@@ -111,19 +109,13 @@ labels_repeat_text_month_count2_before: "кожны "
 #: not used in this project
 labels_repeat_text_month_count2_after: "месяц"
 #: not used in this project
-labels_repeat_year_label: ""
-#: not used in this project
 labels_select_year_day2: ""
 #: not used in this project
 labels_repeat_text_year_day: "день"
 #: not used in this project
-labels_select_year_month: ""
-#: not used in this project
 labels_repeat_radio_end: "Без даты заканчэння"
 #: not used in this project
 labels_repeat_text_occurences_count: "паўтораў"
-#: not used in this project
-labels_repeat_radio_end2: ""
 #: not used in this project
 labels_repeat_radio_end3: "Да "
 #: not used in this project

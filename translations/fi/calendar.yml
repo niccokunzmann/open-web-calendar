@@ -61,7 +61,8 @@ labels_section_time: "Aikajakso"
 #: not used in this project
 labels_full_day: "Koko päivä"
 #: not used in this project
-labels_confirm_recurring: "Haluatko varmasti muokata toistuvan tapahtuman kaikkia jaksoja?"
+labels_confirm_recurring: "Haluatko varmasti muokata toistuvan tapahtuman kaikkia\
+  \ jaksoja?"
 #: not used in this project
 labels_section_recurring: "Toista tapahtuma"
 #: not used in this project
@@ -105,8 +106,6 @@ labels_repeat_text_week_count: "viikko n&auml;in&auml; p&auml;ivin&auml;:"
 #: not used in this project
 labels_repeat_radio_month_type: "Toista"
 #: not used in this project
-labels_repeat_radio_month_start: ""
-#: not used in this project
 labels_repeat_text_month_day: "p&auml;iv&auml;n&auml; joka"
 #: not used in this project
 labels_repeat_text_month_count: "kuukausi"
@@ -114,8 +113,6 @@ labels_repeat_text_month_count: "kuukausi"
 labels_repeat_text_month_count2_before: "joka"
 #: not used in this project
 labels_repeat_text_month_count2_after: "kuukausi"
-#: not used in this project
-labels_repeat_year_label: ""
 #: not used in this project
 labels_select_year_day2: ""
 #: not used in this project
@@ -128,8 +125,6 @@ labels_repeat_radio_end: "Ei loppumisaikaa"
 labels_repeat_text_occurences_count: "Toiston j&auml;lkeen"
 #: not used in this project
 labels_repeat_radio_end3: "Loppuu"
-#: not used in this project
-labels_repeat_radio_end2: ""
 #: not used in this project
 labels_month_for_recurring_jan: "Tammikuu"
 #: not used in this project

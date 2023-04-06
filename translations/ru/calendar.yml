@@ -101,8 +101,6 @@ labels_repeat_text_week_count: "неделю , в:"
 #: not used in this project
 labels_repeat_radio_month_type: "Повторять"
 #: not used in this project
-labels_repeat_radio_month_start: ""
-#: not used in this project
 labels_repeat_text_month_day: " числа каждый "
 #: not used in this project
 labels_repeat_text_month_count: "месяц"
@@ -111,21 +109,15 @@ labels_repeat_text_month_count2_before: "каждый "
 #: not used in this project
 labels_repeat_text_month_count2_after: "месяц"
 #: not used in this project
-labels_repeat_year_label: ""
-#: not used in this project
 labels_select_year_day2: ""
 #: not used in this project
 labels_repeat_text_year_day: "день"
-#: not used in this project
-labels_select_year_month: ""
 #: not used in this project
 labels_repeat_radio_end: "Без даты окончания"
 #: not used in this project
 labels_repeat_text_occurences_count: "повторений"
 #: not used in this project
 labels_repeat_radio_end3: "До "
-#: not used in this project
-labels_repeat_radio_end2: ""
 #: not used in this project
 labels_month_for_recurring_jan: "Января"
 #: not used in this project

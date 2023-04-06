@@ -101,8 +101,6 @@ labels_repeat_text_week_count: "тиждень , по:"
 #: not used in this project
 labels_repeat_radio_month_type: "Повторювати"
 #: not used in this project
-labels_repeat_radio_month_start: ""
-#: not used in this project
 labels_repeat_text_month_day: " числа кожний "
 #: not used in this project
 labels_repeat_text_month_count: "місяць"
@@ -111,21 +109,15 @@ labels_repeat_text_month_count2_before: "кожен "
 #: not used in this project
 labels_repeat_text_month_count2_after: "місяць"
 #: not used in this project
-labels_repeat_year_label: ""
-#: not used in this project
 labels_select_year_day2: ""
 #: not used in this project
 labels_repeat_text_year_day: "день"
-#: not used in this project
-labels_select_year_month: ""
 #: not used in this project
 labels_repeat_radio_end: "Без дати закінчення"
 #: not used in this project
 labels_repeat_text_occurences_count: "повторень"
 #: not used in this project
 labels_repeat_radio_end3: "До "
-#: not used in this project
-labels_repeat_radio_end2: ""
 #: not used in this project
 labels_month_for_recurring_jan: "січня"
 #: not used in this project
