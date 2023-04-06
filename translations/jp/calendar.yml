@@ -1,0 +1,82 @@
+date_month_full_jan: "1月"
+date_month_full_feb: "2月"
+date_month_full_mar: "3月"
+date_month_full_apr: "4月"
+date_month_full_may: "5月"
+date_month_full_jun: "6月"
+date_month_full_jul: "7月"
+date_month_full_aug: "8月"
+date_month_full_sep: "9月"
+date_month_full_oct: "10月"
+date_month_full_nov: "11月"
+date_month_full_dec: "12月"
+date_month_short_jan: "1月"
+date_month_short_feb: "2月"
+date_month_short_mar: "3月"
+date_month_short_apr: "4月"
+date_month_short_may: "5月"
+date_month_short_jun: "6月"
+date_month_short_jul: "7月"
+date_month_short_aug: "8月"
+date_month_short_sep: "9月"
+date_month_short_oct: "10月"
+date_month_short_nov: "11月"
+date_month_short_dec: "12月"
+date_day_full_sun: "日曜日"
+date_day_full_mon: "月曜日"
+date_day_full_tue: "火曜日"
+date_day_full_wed: "水曜日"
+date_day_full_thu: "木曜日"
+date_day_full_fri: "金曜日"
+date_day_full_sat: "土曜日"
+date_day_short_sun: "日"
+date_day_short_mon: "月"
+date_day_short_tue: "火"
+date_day_short_wed: "水"
+date_day_short_thu: "木"
+date_day_short_fri: "金"
+date_day_short_sat: "土"
+labels_dhx_cal_today_button: "今日"
+labels_day_tab: "日"
+labels_week_tab: "週"
+labels_month_tab: "月"
+#: not used in this project
+labels_new_event: "新イベント"
+#: not used in this project
+labels_icon_save: "保存"
+#: not used in this project
+labels_icon_cancel: "キャンセル"
+#: not used in this project
+labels_icon_details: "詳細"
+#: not used in this project
+labels_icon_edit: "編集"
+#: not used in this project
+labels_icon_delete: "削除"
+#: not used in this project
+labels_confirm_deleting: "イベント完全に削除されます、宜しいですか？"
+#: not used in this project
+labels_section_description: "デスクリプション"
+#: not used in this project
+labels_section_time: "期間"
+#: not used in this project
+labels_confirm_recurring: "繰り返されているイベントを全て編集しますか？"
+#: not used in this project
+labels_section_recurring: "イベントを繰り返す"
+#: not used in this project
+labels_button_recurring: "無効"
+#: not used in this project
+labels_button_recurring_open: "有効"
+#: not used in this project
+labels_full_day: "終日"
+#: not used in this project
+labels_button_edit_series: "シリーズを編集します"
+#: not used in this project
+labels_button_edit_occurrence: "コピーを編集"
+labels_agenda_tab: "議題は"
+labels_date: "日付"
+labels_description: "説明"
+#: not used in this project
+labels_year_tab: "今年"
+labels_week_agenda_tab: "議題は"
+#: not used in this project
+labels_grid_tab: "グリッド"

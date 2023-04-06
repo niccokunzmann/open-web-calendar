@@ -1,0 +1,159 @@
+date_month_full_jan: "Janeiro"
+date_month_full_feb: "Fevereiro"
+date_month_full_mar: "Março"
+date_month_full_apr: "Abril"
+date_month_full_may: "Maio"
+date_month_full_jun: "Junho"
+date_month_full_jul: "Julho"
+date_month_full_aug: "Agosto"
+date_month_full_sep: "Setembro"
+date_month_full_oct: "Outubro"
+date_month_full_nov: "Novembro"
+date_month_full_dec: "Dezembro"
+date_month_short_feb: "Fev"
+date_month_short_apr: "Abr"
+date_month_short_may: "Mai"
+date_month_short_aug: "Ago"
+date_month_short_sep: "Set"
+date_month_short_oct: "Out"
+date_month_short_dec: "Dez"
+date_day_full_sun: "Domingo"
+date_day_full_mon: "Segunda"
+date_day_full_tue: "Terça"
+date_day_full_wed: "Quarta"
+date_day_full_thu: "Quinta"
+date_day_full_fri: "Sexta"
+date_day_full_sat: "Sábado"
+date_day_short_sun: "Dom"
+date_day_short_mon: "Seg"
+date_day_short_tue: "Ter"
+date_day_short_wed: "Qua"
+date_day_short_thu: "Qui"
+date_day_short_fri: "Sex"
+date_day_short_sat: "Sab"
+labels_dhx_cal_today_button: "Hoje"
+labels_day_tab: "Dia"
+labels_week_tab: "Semana"
+labels_month_tab: "Mês"
+#: not used in this project
+labels_new_event: "Novo evento"
+#: not used in this project
+labels_icon_save: "Salvar"
+#: not used in this project
+labels_icon_cancel: "Cancelar"
+#: not used in this project
+labels_icon_details: "Detalhes"
+#: not used in this project
+labels_icon_edit: "Editar"
+#: not used in this project
+labels_icon_delete: "Deletar"
+#: not used in this project
+labels_confirm_deleting: "Tem certeza que deseja excluir?"
+#: not used in this project
+labels_section_description: "Descrição"
+#: not used in this project
+labels_section_time: "Período de tempo"
+#: not used in this project
+labels_full_day: "Dia inteiro"
+#: not used in this project
+labels_confirm_recurring: "Deseja editar todos esses eventos repetidos?"
+#: not used in this project
+labels_section_recurring: "Repetir evento"
+#: not used in this project
+labels_button_recurring: "Desabilitar"
+#: not used in this project
+labels_button_recurring_open: "Habilitar"
+#: not used in this project
+labels_button_edit_series: "Editar a série"
+#: not used in this project
+labels_button_edit_occurrence: "Editar uma cópia"
+labels_agenda_tab: "Dia"
+labels_date: "Data"
+labels_description: "Descrição"
+#: not used in this project
+labels_year_tab: "Ano"
+labels_week_agenda_tab: "Dia"
+#: not used in this project
+labels_grid_tab: "Grade"
+#: not used in this project
+labels_repeat_radio_day: "Diário"
+#: not used in this project
+labels_repeat_radio_week: "Semanal"
+#: not used in this project
+labels_repeat_radio_month: "Mensal"
+#: not used in this project
+labels_repeat_radio_year: "Anual"
+#: not used in this project
+labels_repeat_radio_day_type: "Cada"
+#: not used in this project
+labels_repeat_text_day_count: "dia(s)"
+#: not used in this project
+labels_repeat_radio_day_type2: "Cada trabalho diário"
+#: not used in this project
+labels_repeat_week: " Repita cada"
+#: not used in this project
+labels_repeat_text_week_count: "semana:"
+#: not used in this project
+labels_repeat_radio_month_type: "Repetir"
+#: not used in this project
+labels_repeat_radio_month_start: "Em"
+#: not used in this project
+labels_repeat_text_month_day: "todo dia"
+#: not used in this project
+labels_repeat_text_month_count: "mês"
+#: not used in this project
+labels_repeat_text_month_count2_before: "todo"
+#: not used in this project
+labels_repeat_text_month_count2_after: "mês"
+#: not used in this project
+labels_repeat_year_label: "Em"
+#: not used in this project
+labels_repeat_text_year_day: "dia"
+#: not used in this project
+labels_select_year_month: "mês"
+#: not used in this project
+labels_repeat_radio_end: "Sem data final"
+#: not used in this project
+labels_repeat_text_occurences_count: "ocorrências"
+#: not used in this project
+labels_repeat_radio_end3: "Fim"
+#: not used in this project
+labels_repeat_radio_end2: "Depois"
+#: not used in this project
+labels_month_for_recurring_jan: "Janeiro"
+#: not used in this project
+labels_month_for_recurring_feb: "Fevereiro"
+#: not used in this project
+labels_month_for_recurring_mar: "Março"
+#: not used in this project
+labels_month_for_recurring_apr: "Abril"
+#: not used in this project
+labels_month_for_recurring_may: "Maio"
+#: not used in this project
+labels_month_for_recurring_jun: "Junho"
+#: not used in this project
+labels_month_for_recurring_jul: "Julho"
+#: not used in this project
+labels_month_for_recurring_aug: "Agosto"
+#: not used in this project
+labels_month_for_recurring_sep: "Setembro"
+#: not used in this project
+labels_month_for_recurring_oct: "Outubro"
+#: not used in this project
+labels_month_for_recurring_nov: "Novembro"
+#: not used in this project
+labels_month_for_recurring_dec: "Dezembro"
+#: not used in this project
+labels_day_for_recurring_sun: "Domingo"
+#: not used in this project
+labels_day_for_recurring_mon: "Segunda"
+#: not used in this project
+labels_day_for_recurring_tue: "Terça"
+#: not used in this project
+labels_day_for_recurring_wed: "Quarta"
+#: not used in this project
+labels_day_for_recurring_thu: "Quinta"
+#: not used in this project
+labels_day_for_recurring_fri: "Sexta"
+#: not used in this project
+labels_day_for_recurring_sat: "Sábado"

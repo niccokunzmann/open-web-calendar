@@ -1,0 +1,163 @@
+date_month_full_jan: "Styczeń"
+date_month_full_feb: "Luty"
+date_month_full_mar: "Marzec"
+date_month_full_apr: "Kwiecień"
+date_month_full_may: "Maj"
+date_month_full_jun: "Czerwiec"
+date_month_full_jul: "Lipiec"
+date_month_full_aug: "Sierpień"
+date_month_full_sep: "Wrzesień"
+date_month_full_oct: "Październik"
+date_month_full_nov: "Listopad"
+date_month_full_dec: "Grudzień"
+date_month_short_jan: "Sty"
+date_month_short_feb: "Lut"
+date_month_short_apr: "Kwi"
+date_month_short_may: "Maj"
+date_month_short_jun: "Cze"
+date_month_short_jul: "Lip"
+date_month_short_aug: "Sie"
+date_month_short_sep: "Wrz"
+date_month_short_oct: "Paź"
+date_month_short_nov: "Lis"
+date_month_short_dec: "Gru"
+date_day_full_sun: "Niedziela"
+date_day_full_mon: "Poniedziałek"
+date_day_full_tue: "Wtorek"
+date_day_full_wed: "Środa"
+date_day_full_thu: "Czwartek"
+date_day_full_fri: "Piątek"
+date_day_full_sat: "Sobota"
+date_day_short_sun: "Nie"
+date_day_short_mon: "Pon"
+date_day_short_tue: "Wto"
+date_day_short_wed: "Śro"
+date_day_short_thu: "Czw"
+date_day_short_fri: "Pią"
+date_day_short_sat: "Sob"
+labels_dhx_cal_today_button: "Dziś"
+labels_day_tab: "Dzień"
+labels_week_tab: "Tydzień"
+labels_month_tab: "Miesiąc"
+#: not used in this project
+labels_new_event: "Nowe zdarzenie"
+#: not used in this project
+labels_icon_save: "Zapisz"
+#: not used in this project
+labels_icon_cancel: "Anuluj"
+#: not used in this project
+labels_icon_details: "Szczegóły"
+#: not used in this project
+labels_icon_edit: "Edytuj"
+#: not used in this project
+labels_icon_delete: "Usuń"
+#: not used in this project
+labels_confirm_deleting: "Zdarzenie zostanie usunięte na zawsze, kontynuować?"
+#: not used in this project
+labels_section_description: "Opis"
+#: not used in this project
+labels_section_time: "Okres czasu"
+#: not used in this project
+labels_full_day: "Cały dzień"
+#: not used in this project
+labels_confirm_recurring: "Czy chcesz edytować cały zbiór powtarzających się zdarzeń?"
+#: not used in this project
+labels_section_recurring: "Powtórz zdarzenie"
+#: not used in this project
+labels_button_recurring: "Nieaktywne"
+#: not used in this project
+labels_button_recurring_open: "Aktywne"
+#: not used in this project
+labels_button_edit_series: "Edytuj serię"
+#: not used in this project
+labels_button_edit_occurrence: "Edytuj kopię"
+labels_date: "Data"
+labels_description: "Opis"
+#: not used in this project
+labels_year_tab: "Rok"
+#: not used in this project
+labels_grid_tab: "Tabela"
+#: not used in this project
+labels_repeat_radio_day: "Codziennie"
+#: not used in this project
+labels_repeat_radio_week: "Co tydzie"
+#: not used in this project
+labels_repeat_radio_month: "Co miesic"
+#: not used in this project
+labels_repeat_radio_year: "Co rok"
+#: not used in this project
+labels_repeat_radio_day_type: "Kadego"
+#: not used in this project
+labels_repeat_text_day_count: "dnia"
+#: not used in this project
+labels_repeat_radio_day_type2: "Kadego dnia roboczego"
+#: not used in this project
+labels_repeat_week: " Powtarzaj kadego"
+#: not used in this project
+labels_repeat_text_week_count: "tygodnia w dni:"
+#: not used in this project
+labels_repeat_radio_month_type: "Powtrz"
+#: not used in this project
+labels_repeat_radio_month_start: "W"
+#: not used in this project
+labels_repeat_text_month_day: "dnia kadego"
+#: not used in this project
+labels_repeat_text_month_count: "miesica"
+#: not used in this project
+labels_repeat_text_month_count2_before: "kadego"
+#: not used in this project
+labels_repeat_text_month_count2_after: "miesica"
+#: not used in this project
+labels_repeat_year_label: "W"
+#: not used in this project
+labels_select_year_day2: "miesica"
+#: not used in this project
+labels_repeat_text_year_day: "dnia miesica"
+#: not used in this project
+labels_select_year_month: ""
+#: not used in this project
+labels_repeat_radio_end: "Bez daty kocowej"
+#: not used in this project
+labels_repeat_text_occurences_count: "wystpieniu/ach"
+#: not used in this project
+labels_repeat_radio_end3: "Zakocz w"
+#: not used in this project
+labels_repeat_radio_end2: "Po"
+#: not used in this project
+labels_month_for_recurring_jan: "Stycznia"
+#: not used in this project
+labels_month_for_recurring_feb: "Lutego"
+#: not used in this project
+labels_month_for_recurring_mar: "Marca"
+#: not used in this project
+labels_month_for_recurring_apr: "Kwietnia"
+#: not used in this project
+labels_month_for_recurring_may: "Maja"
+#: not used in this project
+labels_month_for_recurring_jun: "Czerwca"
+#: not used in this project
+labels_month_for_recurring_jul: "Lipca"
+#: not used in this project
+labels_month_for_recurring_aug: "Sierpnia"
+#: not used in this project
+labels_month_for_recurring_sep: "Wrzenia"
+#: not used in this project
+labels_month_for_recurring_oct: "Padziernka"
+#: not used in this project
+labels_month_for_recurring_nov: "Listopada"
+#: not used in this project
+labels_month_for_recurring_dec: "Grudnia"
+#: not used in this project
+labels_day_for_recurring_sun: "Niedziela"
+#: not used in this project
+labels_day_for_recurring_mon: "Poniedziaek"
+#: not used in this project
+labels_day_for_recurring_tue: "Wtorek"
+#: not used in this project
+labels_day_for_recurring_wed: "roda"
+#: not used in this project
+labels_day_for_recurring_thu: "Czwartek"
+#: not used in this project
+labels_day_for_recurring_fri: "Pitek"
+#: not used in this project
+labels_day_for_recurring_sat: "Sobota"

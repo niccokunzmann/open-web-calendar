@@ -76,11 +76,13 @@ def get_configuration():
     config = {
         "default_specification": get_default_specification(), 
         "timezones": pytz.all_timezones, # see https://stackoverflow.com/a/13867319
-    }
-    with open(DHTMLX_LANGUAGES_FILE, encoding="UTF-8") as file:
-        config["dhtmlx"] = {
-            "languages" : json.load(file)
+        "dhtmlx": {
+            "languages": translate.dhtmlx_languages()
+        },
+        "index": {
+            "languages": translate.languages_for_the_index_file()
         }
+    }
     return config
 
 def set_JS_headers(response):
@@ -145,6 +147,7 @@ def render_app_template(template, specification):
     translation_file = os.path.splitext(template)[0]
     return render_template(template,
         specification=specification,
+        configuration = get_configuration(),
         json=json,
         get_query_string=get_query_string,
         html=lambda id: translate.html(specification["language"], translation_file, id)
@@ -183,6 +186,7 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
         return send_from_directory('static/' + folder_name, path)
 
 @app.route("/")
+@app.route("/index.html")
 def serve_index():
     specification = get_specification()
     return render_app_template("index.html", specification)
@@ -195,6 +199,10 @@ def serve_about():
 @app.route("/configuration.js")
 def serve_configuration():
     return "/* generated */\nconst configuration = {};".format(json.dumps(get_configuration()))
+
+@app.route("/locale_<lang>.js")
+def serve_locale(lang):
+    return render_template("locale.js", locale=json.dumps(translate.dhtmlx(lang), indent="  "))
 
 @app.errorhandler(500)
 def unhandledException(error):

@@ -1,0 +1,145 @@
+date_month_full_jan: "Január"
+date_month_full_feb: "Február"
+date_month_full_mar: "Marec"
+date_month_full_apr: "Apríl"
+date_month_full_may: "Máj"
+date_month_full_jun: "Jún"
+date_month_full_jul: "Júl"
+date_month_full_oct: "Október"
+date_month_short_may: "Máj"
+date_month_short_jun: "Jún"
+date_month_short_jul: "Júl"
+date_month_short_sep: "Sept"
+date_month_short_oct: "Okt"
+date_day_full_sun: "Nedeľa"
+date_day_full_mon: "Pondelok"
+date_day_full_tue: "Utorok"
+date_day_full_wed: "Streda"
+date_day_full_thu: "Štvrtok"
+date_day_full_fri: "Piatok"
+date_day_full_sat: "Sobota"
+date_day_short_sun: "Ne"
+date_day_short_mon: "Po"
+date_day_short_tue: "Ut"
+date_day_short_wed: "St"
+date_day_short_thu: "Št"
+date_day_short_fri: "Pi"
+date_day_short_sat: "So"
+labels_dhx_cal_today_button: "Dnes"
+labels_day_tab: "Deň"
+labels_week_tab: "Týždeň"
+labels_month_tab: "Mesiac"
+#: not used in this project
+labels_new_event: "Nová udalosť"
+#: not used in this project
+labels_icon_save: "Uložiť"
+#: not used in this project
+labels_icon_cancel: "Späť"
+#: not used in this project
+labels_icon_details: "Detail"
+#: not used in this project
+labels_icon_edit: "Edituj"
+#: not used in this project
+labels_icon_delete: "Zmazať"
+#: not used in this project
+labels_confirm_closing: "Vaše zmeny nebudú uložené. Skutočne?"
+#: not used in this project
+labels_confirm_deleting: "Udalosť bude natrvalo vymazaná. Skutočne?"
+#: not used in this project
+labels_section_description: "Poznámky"
+#: not used in this project
+labels_section_time: "Doba platnosti"
+#: not used in this project
+labels_confirm_recurring: "Prajete si upraviť celú radu opakovaných udalostí?"
+#: not used in this project
+labels_section_recurring: "Opakovanie udalosti"
+#: not used in this project
+labels_button_recurring: "Vypnuté"
+#: not used in this project
+labels_button_recurring_open: "Zapnuté"
+#: not used in this project
+labels_button_edit_series: "Upraviť opakovania"
+#: not used in this project
+labels_button_edit_occurrence: "Upraviť inštancie"
+labels_agenda_tab: "Program"
+labels_date: "Dátum"
+labels_description: "Poznámka"
+#: not used in this project
+labels_year_tab: "Rok"
+#: not used in this project
+labels_full_day: "Celý deň"
+labels_week_agenda_tab: "Program"
+#: not used in this project
+labels_grid_tab: "Mriežka"
+#: not used in this project
+labels_repeat_radio_day: "Denne"
+#: not used in this project
+labels_repeat_radio_week: "Týždenne"
+#: not used in this project
+labels_repeat_radio_month: "Mesaène"
+#: not used in this project
+labels_repeat_radio_year: "Roène"
+#: not used in this project
+labels_repeat_radio_day_type: "Každý"
+#: not used in this project
+labels_repeat_text_day_count: "deò"
+#: not used in this project
+labels_repeat_radio_day_type2: "Každý prac. deò"
+#: not used in this project
+labels_repeat_week: "Opakova každý"
+#: not used in this project
+labels_repeat_text_week_count: "týždeò v dòoch:"
+#: not used in this project
+labels_repeat_radio_month_type: "Opakova"
+#: not used in this project
+labels_repeat_text_month_day: "deò každý"
+#: not used in this project
+labels_repeat_text_month_count: "mesiac"
+#: not used in this project
+labels_repeat_text_month_count2_before: "každý"
+#: not used in this project
+labels_repeat_text_month_count2_after: "mesiac"
+#: not used in this project
+labels_select_year_day2: "poèas"
+#: not used in this project
+labels_repeat_text_year_day: "deò"
+#: not used in this project
+labels_select_year_month: "mesiac"
+#: not used in this project
+labels_repeat_radio_end: "Bez dátumu ukonèenia"
+#: not used in this project
+labels_repeat_text_occurences_count: "udalostiach"
+#: not used in this project
+labels_repeat_radio_end3: "Ukonèi"
+#: not used in this project
+labels_repeat_radio_end2: "Po"
+#: not used in this project
+labels_month_for_recurring_jan: "Január"
+#: not used in this project
+labels_month_for_recurring_feb: "Február"
+#: not used in this project
+labels_month_for_recurring_mar: "Marec"
+#: not used in this project
+labels_month_for_recurring_apr: "Apríl"
+#: not used in this project
+labels_month_for_recurring_may: "Máj"
+#: not used in this project
+labels_month_for_recurring_jun: "Jún"
+#: not used in this project
+labels_month_for_recurring_jul: "Júl"
+#: not used in this project
+labels_month_for_recurring_oct: "Október"
+#: not used in this project
+labels_day_for_recurring_sun: "Nede¾a"
+#: not used in this project
+labels_day_for_recurring_mon: "Pondelok"
+#: not used in this project
+labels_day_for_recurring_tue: "Utorok"
+#: not used in this project
+labels_day_for_recurring_wed: "Streda"
+#: not used in this project
+labels_day_for_recurring_thu: "Štvrtok"
+#: not used in this project
+labels_day_for_recurring_fri: "Piatok"
+#: not used in this project
+labels_day_for_recurring_sat: "Sobota"

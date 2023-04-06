@@ -1,0 +1,64 @@
+date_month_full_jan: "Januar"
+date_month_full_feb: "Februar"
+date_month_full_mar: "Marec"
+date_month_full_may: "Maj"
+date_month_full_jun: "Junij"
+date_month_full_jul: "Julij"
+date_month_full_aug: "Avgust"
+date_month_full_oct: "Oktober"
+date_month_short_may: "Maj"
+date_month_short_oct: "Okt"
+date_day_full_sun: "Nedelja"
+date_day_full_mon: "Ponedeljek"
+date_day_full_tue: "Torek"
+date_day_full_wed: "Sreda"
+date_day_full_thu: "Četrtek"
+date_day_full_fri: "Petek"
+date_day_full_sat: "Sobota"
+date_day_short_sun: "Ned"
+date_day_short_mon: "Pon"
+date_day_short_tue: "Tor"
+date_day_short_wed: "Sre"
+date_day_short_thu: "Čet"
+date_day_short_fri: "Pet"
+date_day_short_sat: "Sob"
+labels_dhx_cal_today_button: "Danes"
+labels_day_tab: "Dan"
+labels_week_tab: "Teden"
+labels_month_tab: "Mesec"
+#: not used in this project
+labels_new_event: "Nov dogodek"
+#: not used in this project
+labels_icon_save: "Shrani"
+#: not used in this project
+labels_icon_cancel: "Prekliči"
+#: not used in this project
+labels_icon_details: "Podrobnosti"
+#: not used in this project
+labels_icon_edit: "Uredi"
+#: not used in this project
+labels_icon_delete: "Izbriši"
+#: not used in this project
+labels_confirm_deleting: "Dogodek bo izbrisan. Želite nadaljevati?"
+#: not used in this project
+labels_section_description: "Opis"
+#: not used in this project
+labels_section_time: "Časovni okvir"
+#: not used in this project
+labels_full_day: "Ves dan"
+#: not used in this project
+labels_confirm_recurring: "Želite urediti celoten set ponavljajočih dogodkov?"
+#: not used in this project
+labels_section_recurring: "Ponovi dogodek"
+#: not used in this project
+labels_button_recurring: "Onemogočeno"
+#: not used in this project
+labels_button_recurring_open: "Omogočeno"
+labels_agenda_tab: "Zadeva"
+labels_date: "Datum"
+labels_description: "Opis"
+#: not used in this project
+labels_year_tab: "Leto"
+labels_week_agenda_tab: "Zadeva"
+#: not used in this project
+labels_grid_tab: "Miza"

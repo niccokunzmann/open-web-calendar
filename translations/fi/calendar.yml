@@ -1,0 +1,170 @@
+date_month_full_jan: "Tammikuu"
+date_month_full_feb: "Helmikuu"
+date_month_full_mar: "Maaliskuu"
+date_month_full_apr: "Huhtikuu"
+date_month_full_may: "Toukokuu"
+date_month_full_jun: "Kes&auml;kuu"
+date_month_full_jul: "Hein&auml;kuu"
+date_month_full_aug: "Elokuu"
+date_month_full_sep: "Syyskuu"
+date_month_full_oct: "Lokakuu"
+date_month_full_nov: "Marraskuu"
+date_month_full_dec: "Joulukuu"
+date_month_short_jan: "Tam"
+date_month_short_feb: "Hel"
+date_month_short_mar: "Maa"
+date_month_short_apr: "Huh"
+date_month_short_may: "Tou"
+date_month_short_jun: "Kes"
+date_month_short_jul: "Hei"
+date_month_short_aug: "Elo"
+date_month_short_sep: "Syy"
+date_month_short_oct: "Lok"
+date_month_short_nov: "Mar"
+date_month_short_dec: "Jou"
+date_day_full_sun: "Sunnuntai"
+date_day_full_mon: "Maanantai"
+date_day_full_tue: "Tiistai"
+date_day_full_wed: "Keskiviikko"
+date_day_full_thu: "Torstai"
+date_day_full_fri: "Perjantai"
+date_day_full_sat: "Lauantai"
+date_day_short_sun: "Su"
+date_day_short_mon: "Ma"
+date_day_short_tue: "Ti"
+date_day_short_wed: "Ke"
+date_day_short_thu: "To"
+date_day_short_fri: "Pe"
+date_day_short_sat: "La"
+labels_dhx_cal_today_button: "Tänään"
+labels_day_tab: "Päivä"
+labels_week_tab: "Viikko"
+labels_month_tab: "Kuukausi"
+#: not used in this project
+labels_new_event: "Uusi tapahtuma"
+#: not used in this project
+labels_icon_save: "Tallenna"
+#: not used in this project
+labels_icon_cancel: "Peru"
+#: not used in this project
+labels_icon_details: "Tiedot"
+#: not used in this project
+labels_icon_edit: "Muokkaa"
+#: not used in this project
+labels_icon_delete: "Poista"
+#: not used in this project
+labels_confirm_deleting: "Haluatko varmasti poistaa tapahtuman?"
+#: not used in this project
+labels_section_description: "Kuvaus"
+#: not used in this project
+labels_section_time: "Aikajakso"
+#: not used in this project
+labels_full_day: "Koko päivä"
+#: not used in this project
+labels_confirm_recurring: "Haluatko varmasti muokata toistuvan tapahtuman kaikkia jaksoja?"
+#: not used in this project
+labels_section_recurring: "Toista tapahtuma"
+#: not used in this project
+labels_button_recurring: "Ei k&auml;yt&ouml;ss&auml;"
+#: not used in this project
+labels_button_recurring_open: "K&auml;yt&ouml;ss&auml;"
+#: not used in this project
+labels_button_edit_series: "Muokkaa sarja"
+#: not used in this project
+labels_button_edit_occurrence: "Muokkaa kopio"
+labels_agenda_tab: "Esityslista"
+labels_date: "Päivämäärä"
+labels_description: "Kuvaus"
+#: not used in this project
+labels_year_tab: "Vuoden"
+labels_week_agenda_tab: "Esityslista"
+#: not used in this project
+labels_grid_tab: "Ritilä"
+#: not used in this project
+labels_drag_to_create: "Luo uusi vetämällä"
+#: not used in this project
+labels_drag_to_move: "Siirrä vetämällä"
+#: not used in this project
+labels_repeat_radio_day: "P&auml;ivitt&auml;in"
+#: not used in this project
+labels_repeat_radio_week: "Viikoittain"
+#: not used in this project
+labels_repeat_radio_month: "Kuukausittain"
+#: not used in this project
+labels_repeat_radio_year: "Vuosittain"
+#: not used in this project
+labels_repeat_radio_day_type: "Joka"
+#: not used in this project
+labels_repeat_text_day_count: "p&auml;iv&auml;"
+#: not used in this project
+labels_repeat_radio_day_type2: "Joka arkip&auml;iv&auml;"
+#: not used in this project
+labels_repeat_week: "Toista joka"
+#: not used in this project
+labels_repeat_text_week_count: "viikko n&auml;in&auml; p&auml;ivin&auml;:"
+#: not used in this project
+labels_repeat_radio_month_type: "Toista"
+#: not used in this project
+labels_repeat_radio_month_start: ""
+#: not used in this project
+labels_repeat_text_month_day: "p&auml;iv&auml;n&auml; joka"
+#: not used in this project
+labels_repeat_text_month_count: "kuukausi"
+#: not used in this project
+labels_repeat_text_month_count2_before: "joka"
+#: not used in this project
+labels_repeat_text_month_count2_after: "kuukausi"
+#: not used in this project
+labels_repeat_year_label: ""
+#: not used in this project
+labels_select_year_day2: ""
+#: not used in this project
+labels_repeat_text_year_day: "p&auml;iv&auml;"
+#: not used in this project
+labels_select_year_month: "kuukausi"
+#: not used in this project
+labels_repeat_radio_end: "Ei loppumisaikaa"
+#: not used in this project
+labels_repeat_text_occurences_count: "Toiston j&auml;lkeen"
+#: not used in this project
+labels_repeat_radio_end3: "Loppuu"
+#: not used in this project
+labels_repeat_radio_end2: ""
+#: not used in this project
+labels_month_for_recurring_jan: "Tammikuu"
+#: not used in this project
+labels_month_for_recurring_feb: "Helmikuu"
+#: not used in this project
+labels_month_for_recurring_mar: "Maaliskuu"
+#: not used in this project
+labels_month_for_recurring_apr: "Huhtikuu"
+#: not used in this project
+labels_month_for_recurring_may: "Toukokuu"
+#: not used in this project
+labels_month_for_recurring_jun: "Kes&auml;kuu"
+#: not used in this project
+labels_month_for_recurring_jul: "Hein&auml;kuu"
+#: not used in this project
+labels_month_for_recurring_aug: "Elokuu"
+#: not used in this project
+labels_month_for_recurring_sep: "Syyskuu"
+#: not used in this project
+labels_month_for_recurring_oct: "Lokakuu"
+#: not used in this project
+labels_month_for_recurring_nov: "Marraskuu"
+#: not used in this project
+labels_month_for_recurring_dec: "Joulukuu"
+#: not used in this project
+labels_day_for_recurring_sun: "Sunnuntai"
+#: not used in this project
+labels_day_for_recurring_mon: "Maanantai"
+#: not used in this project
+labels_day_for_recurring_tue: "Tiistai"
+#: not used in this project
+labels_day_for_recurring_wed: "Keskiviikko"
+#: not used in this project
+labels_day_for_recurring_thu: "Torstai"
+#: not used in this project
+labels_day_for_recurring_fri: "Perjantai"
+#: not used in this project
+labels_day_for_recurring_sat: "Lauantai"

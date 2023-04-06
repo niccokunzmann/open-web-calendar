@@ -1,0 +1,166 @@
+date_month_full_jan: "Ιανουάριος"
+date_month_full_feb: "Φεβρουάριος"
+date_month_full_mar: "Μάρτιος"
+date_month_full_apr: "Απρίλιος"
+date_month_full_may: "Μάϊος"
+date_month_full_jun: "Ιούνιος"
+date_month_full_jul: "Ιούλιος"
+date_month_full_aug: "Αύγουστος"
+date_month_full_sep: "Σεπτέμβριος"
+date_month_full_oct: "Οκτώβριος"
+date_month_full_nov: "Νοέμβριος"
+date_month_full_dec: "Δεκέμβριος"
+date_month_short_jan: "ΙΑΝ"
+date_month_short_feb: "ΦΕΒ"
+date_month_short_mar: "ΜΑΡ"
+date_month_short_apr: "ΑΠΡ"
+date_month_short_may: "ΜΑΙ"
+date_month_short_jun: "ΙΟΥΝ"
+date_month_short_jul: "ΙΟΥΛ"
+date_month_short_aug: "ΑΥΓ"
+date_month_short_sep: "ΣΕΠ"
+date_month_short_oct: "ΟΚΤ"
+date_month_short_nov: "ΝΟΕ"
+date_month_short_dec: "ΔΕΚ"
+date_day_full_sun: "Κυριακή"
+date_day_full_mon: "Δευτέρα"
+date_day_full_tue: "Τρίτη"
+date_day_full_wed: "Τετάρτη"
+date_day_full_thu: "Πέμπτη"
+date_day_full_fri: "Παρασκευή"
+date_day_full_sat: "Σάββατο"
+date_day_short_sun: "ΚΥ"
+date_day_short_mon: "ΔΕ"
+date_day_short_tue: "ΤΡ"
+date_day_short_wed: "ΤΕ"
+date_day_short_thu: "ΠΕ"
+date_day_short_fri: "ΠΑ"
+date_day_short_sat: "ΣΑ"
+labels_dhx_cal_today_button: "Σήμερα"
+labels_day_tab: "Ημέρα"
+labels_week_tab: "Εβδομάδα"
+labels_month_tab: "Μήνας"
+#: not used in this project
+labels_new_event: "Νέο έργο"
+#: not used in this project
+labels_icon_save: "Αποθήκευση"
+#: not used in this project
+labels_icon_cancel: "Άκυρο"
+#: not used in this project
+labels_icon_details: "Λεπτομέρειες"
+#: not used in this project
+labels_icon_edit: "Επεξεργασία"
+#: not used in this project
+labels_icon_delete: "Διαγραφή"
+#: not used in this project
+labels_confirm_deleting: "Το έργο θα διαγραφεί οριστικά. Θέλετε να συνεχίσετε;"
+#: not used in this project
+labels_section_description: "Περιγραφή"
+#: not used in this project
+labels_section_time: "Χρονική περίοδος"
+#: not used in this project
+labels_full_day: "Πλήρης Ημέρα"
+#: not used in this project
+labels_confirm_recurring: "Θέλετε να επεξεργασθείτε ολόκληρη την ομάδα των επαναλαμβανόμενων έργων;"
+#: not used in this project
+labels_section_recurring: "Επαναλαμβανόμενο έργο"
+#: not used in this project
+labels_button_recurring: "Ανενεργό"
+#: not used in this project
+labels_button_recurring_open: "Ενεργό"
+#: not used in this project
+labels_button_edit_series: "Επεξεργαστείτε τη σειρά"
+#: not used in this project
+labels_button_edit_occurrence: "Επεξεργασία ένα αντίγραφο"
+labels_agenda_tab: "Ημερήσια Διάταξη"
+labels_date: "Ημερομηνία"
+labels_description: "Περιγραφή"
+#: not used in this project
+labels_year_tab: "Έτος"
+labels_week_agenda_tab: "Ημερήσια Διάταξη"
+#: not used in this project
+labels_grid_tab: "Πλέγμα"
+#: not used in this project
+labels_repeat_radio_day: "Ημερησίως"
+#: not used in this project
+labels_repeat_radio_week: "Εβδομαδιαίως"
+#: not used in this project
+labels_repeat_radio_month: "Μηνιαίως"
+#: not used in this project
+labels_repeat_radio_year: "Ετησίως"
+#: not used in this project
+labels_repeat_radio_day_type: "Κάθε"
+#: not used in this project
+labels_repeat_text_day_count: "ημέρα"
+#: not used in this project
+labels_repeat_radio_day_type2: "Κάθε εργάσιμη"
+#: not used in this project
+labels_repeat_week: " Επανάληψη κάθε"
+#: not used in this project
+labels_repeat_text_week_count: "εβδομάδα τις επόμενες ημέρες:"
+#: not used in this project
+labels_repeat_radio_month_type: "Επανάληψη"
+#: not used in this project
+labels_repeat_radio_month_start: "Την"
+#: not used in this project
+labels_repeat_text_month_day: "ημέρα κάθε"
+#: not used in this project
+labels_repeat_text_month_count: "μήνα"
+#: not used in this project
+labels_repeat_text_month_count2_before: "κάθε"
+#: not used in this project
+labels_repeat_text_month_count2_after: "μήνα"
+#: not used in this project
+labels_repeat_year_label: "Την"
+#: not used in this project
+labels_select_year_day2: "του"
+#: not used in this project
+labels_repeat_text_year_day: "ημέρα"
+#: not used in this project
+labels_select_year_month: "μήνα"
+#: not used in this project
+labels_repeat_radio_end: "Χωρίς ημερομηνία λήξεως"
+#: not used in this project
+labels_repeat_text_occurences_count: "επαναλήψεις"
+#: not used in this project
+labels_repeat_radio_end3: "Λήγει την"
+#: not used in this project
+labels_repeat_radio_end2: "Μετά από"
+#: not used in this project
+labels_month_for_recurring_jan: "Ιανουάριος"
+#: not used in this project
+labels_month_for_recurring_feb: "Φεβρουάριος"
+#: not used in this project
+labels_month_for_recurring_mar: "Μάρτιος"
+#: not used in this project
+labels_month_for_recurring_apr: "Απρίλιος"
+#: not used in this project
+labels_month_for_recurring_may: "Μάϊος"
+#: not used in this project
+labels_month_for_recurring_jun: "Ιούνιος"
+#: not used in this project
+labels_month_for_recurring_jul: "Ιούλιος"
+#: not used in this project
+labels_month_for_recurring_aug: "Αύγουστος"
+#: not used in this project
+labels_month_for_recurring_sep: "Σεπτέμβριος"
+#: not used in this project
+labels_month_for_recurring_oct: "Οκτώβριος"
+#: not used in this project
+labels_month_for_recurring_nov: "Νοέμβριος"
+#: not used in this project
+labels_month_for_recurring_dec: "Δεκέμβριος"
+#: not used in this project
+labels_day_for_recurring_sun: "Κυριακή"
+#: not used in this project
+labels_day_for_recurring_mon: "Δευτέρα"
+#: not used in this project
+labels_day_for_recurring_tue: "Τρίτη"
+#: not used in this project
+labels_day_for_recurring_wed: "Τετάρτη"
+#: not used in this project
+labels_day_for_recurring_thu: "Πέμπτη"
+#: not used in this project
+labels_day_for_recurring_fri: "Παρασκευή"
+#: not used in this project
+labels_day_for_recurring_sat: "Σάββατο"

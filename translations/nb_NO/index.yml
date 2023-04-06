@@ -1,4 +1,3 @@
-start-of-week-mo: Mandag
 time-increment-10: 10 minutter
 time-increment-60: 1 time
 time-increment-15: 15 minutter
@@ -8,10 +7,7 @@ controls-date: Dato
 time-increment-30: 30 minutter
 loader-title: Laster inn animasjon …
 language-title: Språk
-start-of-week-su: Søndag
 style-background: Du kan endre kalenderens bakgrunnsfarge
-controls-previous: Forrige
-controls-today: I dag
 timezone-title: Tidssone
 language-description: Du kan velge språk for kalenderen.
 links-self: Åpne lenket dokument i samme ramme som det ble klikket fra.
@@ -68,15 +64,10 @@ style-click: Du kan endre fargen på de klikkbare elementene.
 style-days: Hvis du vil ha forskjellig farge for dagene kan du angi dette også.
 style-days-outside: Noen dager i kalenderen har forskjellig farge hvis de ikke tilhører
   måneden.
-tabs-week: Uke
-tabs-month: Måned
-tabs-day: Dag
 loader-default: sirkulær innlaster
 tabs-title: Måned, uke, dag, og agenda-visning
 tabs-description: 'Månedsvisning er forvalget. Du kan velge andre visninger å begynne
   med:'
-tabs-agenda: Agenda
-controls-next: Neste
 timezone-browser: bruk denne tidssonen for nettleseren
 loading: laster inn …
 spec-title: Vertstjening av spesifikasjonen
