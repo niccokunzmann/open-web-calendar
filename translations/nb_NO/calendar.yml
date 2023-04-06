@@ -137,3 +137,34 @@ labels_day_for_recurring_thu: "Torsdag"
 labels_day_for_recurring_fri: "Fredag"
 #: not used in this project
 labels_day_for_recurring_sat: "Lørdag"
+labels_agenda_tab: Agenda
+labels_grid_tab: Rutenett
+labels_drag_to_move: Dra for å flytte
+labels_message_ok: OK
+labels_year: År
+labels_month: Måned
+labels_select_year_month: måned
+labels_month_for_recurring_apr: April
+labels_month_for_recurring_aug: August
+labels_month_for_recurring_sep: September
+labels_month_for_recurring_nov: November
+labels_full_day: Hele dagen
+date_month_full_sep: September
+date_month_short_jan: Jan
+date_month_full_aug: August
+date_month_full_apr: April
+date_month_full_nov: November
+date_month_short_nov: Nov
+date_month_short_feb: Feb
+date_month_short_jun: Jun
+date_month_short_aug: Aug
+date_month_short_sep: Sep
+date_month_short_jul: Jul
+date_day_short_mon: Man
+labels_drag_to_create: Dra for å opprette
+labels_message_cancel: Avbryt
+labels_minute: Minutt
+labels_hour: Time
+labels_day: Dag
+date_month_short_apr: Apr
+date_month_short_mar: Mar
