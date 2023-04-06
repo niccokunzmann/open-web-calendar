@@ -244,6 +244,11 @@ tox
 
 Changelog
 ---------
+
+- v1.10
+  - Add translations for nb_NO.
+  - Translate the user interface.
+  - Use weblate to translate files.
 - v1.9
   - Speed up loading with start and stop date range. [Pull Request #177](https://github.com/niccokunzmann/open-web-calendar/pull/177).
 - v1.8
