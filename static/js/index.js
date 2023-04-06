@@ -306,8 +306,8 @@ function fillLanguageChoice() {
     var selected = false;
     configuration.dhtmlx.languages.forEach(function (language){
         var option = document.createElement("option");
-        option.text = language[0];
-        var code = option.value = language[2];
+        var code = option.value = language[1];
+        option.text = language[0] + " (" + code + ")";
         if (code == USER_PREFERRED_LANGUAGE) {
             option.selected = true;
             selected = true;

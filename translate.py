@@ -138,5 +138,51 @@ def dhtmlx(language: str):
         result["labels"][label] = cal("labels_" + label)
     return result
 
+ENGLISH_LANGUAGE_NAMES = {
+    'ar' : 'Arabic',
+    'be' : 'Belarusian',
+    'ca' : 'Catalan',
+    'cn' : 'Chinese',
+    'hr' : 'Croatian',
+    'cs' : 'Czech',
+    'da' : 'Danish',
+    'nl' : 'Dutch',
+    'en' : 'English',
+    'fi' : 'Finnish',
+    'fr' : 'French',
+    'de' : 'German',
+    'el' : 'Greek',
+    'he' : 'Hebrew',
+    'hu' : 'Hungarian',
+    'id' : 'Indonesian',
+    'it' : 'Italian',
+    'jp' : 'Japanese',
+    'no' : 'Norwegian',
+    'nb' : 'Norwegian Bokmål',
+    'pl' : 'Polish',
+    'pt' : 'Portuguese',
+    'ro' : 'Romanian',
+    'ru' : 'Russian',
+    'sk' : 'Slovak',
+    'si' : 'Slovenian',
+    'es' : 'Spanish',
+    'sv' : 'Swedish',
+    'tr' : 'Turkish',
+    'ua' : 'Ukrainian',
+}
 
-__all__ = ["html", "string"]
+def dhtmlx_languages():
+    """Return tuples of language name and language code."""
+    result = set()
+    for code, language in ENGLISH_LANGUAGE_NAMES.items():
+        result.add((language, code))
+    default = string("en", "index", "language")
+    for code in TRANSLATIONS:
+        language = string(code, "index", "language")
+        if language != default:
+            result.add((language, code))
+    result = list(result)
+    result.sort()
+    return result
+
+__all__ = ["html", "string", "dhtmlx", "dhtmlx_languages"]

@@ -57,3 +57,13 @@ def test_ua_calendar():
             else:
                 assert False
     compare(expected, cal)
+    
+@pytest.mark.parametrize(
+    "entry", [
+    ("Deutsch", "de"),
+    ("English", "en"),
+    ('Portuguese', 'pt'),
+])
+def test_languages_are_listed(entry):
+    languages = translate.dhtmlx_languages()
+    assert entry in languages

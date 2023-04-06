@@ -76,11 +76,10 @@ def get_configuration():
     config = {
         "default_specification": get_default_specification(), 
         "timezones": pytz.all_timezones, # see https://stackoverflow.com/a/13867319
-    }
-    with open(DHTMLX_LANGUAGES_FILE, encoding="UTF-8") as file:
-        config["dhtmlx"] = {
-            "languages" : json.load(file)
+        "dhtmlx": {
+            "languages": translate.dhtmlx_languages()
         }
+    }
     return config
 
 def set_JS_headers(response):
