@@ -53,7 +53,7 @@ labels_icon_edit: "Edit"
 #: not used in this project
 labels_icon_delete: "Delete"
 #: not used in this project
-labels_confirm_closing: ""
+labels_confirm_closing: "Close?"
 #: not used in this project
 labels_confirm_deleting: "Event will be deleted permanently, are you sure?"
 labels_section_description: "Description"
