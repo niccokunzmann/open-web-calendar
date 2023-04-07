@@ -114,7 +114,7 @@ labels_select_year_day2: "miesica"
 #: not used in this project
 labels_repeat_text_year_day: "dnia miesica"
 #: not used in this project
-labels_select_year_month: ""
+labels_select_year_month: "miesiąc"
 #: not used in this project
 labels_repeat_radio_end: "Bez daty kocowej"
 #: not used in this project
@@ -161,3 +161,17 @@ labels_day_for_recurring_thu: "Czwartek"
 labels_day_for_recurring_fri: "Pitek"
 #: not used in this project
 labels_day_for_recurring_sat: "Sobota"
+date_month_short_mar: Mar
+labels_agenda_tab: Terminarz
+labels_week_agenda_tab: Terminarz
+labels_message_cancel: Anuluj
+labels_prev: Wstecz
+labels_year: Rok
+labels_month: Miesiąc
+labels_day: Dzień
+labels_hour: Godzina
+labels_minute: Minuta
+labels_drag_to_move: Przeciągnij, aby przenieść
+labels_drag_to_create: Przeciągnij, aby utworzyć
+labels_message_ok: OK
+labels_next: Dalej
