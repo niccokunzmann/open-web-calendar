@@ -164,7 +164,7 @@ ENGLISH_LANGUAGE_NAMES = {
     'id' : 'Indonesian',
     'it' : 'Italian',
     'jp' : 'Japanese',
-    'no' : 'Norwegian',
+#    'no' : 'Norwegian',
     'nb_NO' : 'Norwegian Bokmål',
     'pl' : 'Polish',
     'pt' : 'Portuguese',
