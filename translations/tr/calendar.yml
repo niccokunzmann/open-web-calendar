@@ -38,43 +38,9 @@ labels_dhx_cal_today_button: "Bugün"
 labels_day_tab: "Gün"
 labels_week_tab: "Hafta"
 labels_month_tab: "Ay"
-#: not used in this project
-labels_new_event: "Uygun"
-#: not used in this project
-labels_icon_save: "Kaydet"
-#: not used in this project
-labels_icon_cancel: "Ýptal"
-#: not used in this project
-labels_icon_details: "Detaylar"
-#: not used in this project
-labels_icon_edit: "Düzenle"
-#: not used in this project
-labels_icon_delete: "Sil"
-#: not used in this project
-labels_confirm_deleting: "Etkinlik silinecek, devam?"
-#: not used in this project
 labels_section_description: "Açýklama"
-#: not used in this project
 labels_section_time: "Zaman aralýðý"
-#: not used in this project
-labels_full_day: "Tam gün"
-#: not used in this project
-labels_confirm_recurring: "Tüm tekrar eden etkinlikler silinecek, devam?"
-#: not used in this project
-labels_section_recurring: "Etkinliði tekrarla"
-#: not used in this project
-labels_button_recurring: "Pasif"
-#: not used in this project
-labels_button_recurring_open: "Aktif"
-#: not used in this project
-labels_button_edit_series: "Dizi düzenleme"
-#: not used in this project
-labels_button_edit_occurrence: "Bir kopyasını düzenleyin"
 labels_agenda_tab: "Ajanda"
 labels_date: "Tarih"
 labels_description: "Açýklama"
-#: not used in this project
-labels_year_tab: "Yýl"
 labels_week_agenda_tab: "Ajanda"
-#: not used in this project
-labels_grid_tab: "Izgara"

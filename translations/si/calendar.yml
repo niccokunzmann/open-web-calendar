@@ -26,39 +26,9 @@ labels_dhx_cal_today_button: "Danes"
 labels_day_tab: "Dan"
 labels_week_tab: "Teden"
 labels_month_tab: "Mesec"
-#: not used in this project
-labels_new_event: "Nov dogodek"
-#: not used in this project
-labels_icon_save: "Shrani"
-#: not used in this project
-labels_icon_cancel: "Prekliči"
-#: not used in this project
-labels_icon_details: "Podrobnosti"
-#: not used in this project
-labels_icon_edit: "Uredi"
-#: not used in this project
-labels_icon_delete: "Izbriši"
-#: not used in this project
-labels_confirm_deleting: "Dogodek bo izbrisan. Želite nadaljevati?"
-#: not used in this project
 labels_section_description: "Opis"
-#: not used in this project
 labels_section_time: "Časovni okvir"
-#: not used in this project
-labels_full_day: "Ves dan"
-#: not used in this project
-labels_confirm_recurring: "Želite urediti celoten set ponavljajočih dogodkov?"
-#: not used in this project
-labels_section_recurring: "Ponovi dogodek"
-#: not used in this project
-labels_button_recurring: "Onemogočeno"
-#: not used in this project
-labels_button_recurring_open: "Omogočeno"
 labels_agenda_tab: "Zadeva"
 labels_date: "Datum"
 labels_description: "Opis"
-#: not used in this project
-labels_year_tab: "Leto"
 labels_week_agenda_tab: "Zadeva"
-#: not used in this project
-labels_grid_tab: "Miza"

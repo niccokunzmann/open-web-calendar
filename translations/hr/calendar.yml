@@ -40,54 +40,12 @@ labels_dhx_cal_today_button: "Danas"
 labels_day_tab: "Dan"
 labels_week_tab: "Tjedan"
 labels_month_tab: "Mjesec"
-#: not used in this project
-labels_new_event: "Novi događaj"
-#: not used in this project
-labels_icon_save: "Spremi"
-#: not used in this project
-labels_icon_cancel: "Odustani"
-#: not used in this project
-labels_icon_details: "Detalji"
-#: not used in this project
-labels_icon_edit: "Uredi"
-#: not used in this project
-labels_icon_delete: "Izbriši"
-#: not used in this project
-labels_confirm_deleting: "Događaj će biti izbrisan trajno, da li si siguran?"
-#: not used in this project
 labels_section_description: "Opis"
-#: not used in this project
 labels_section_time: "Vremenski period"
-#: not used in this project
-labels_full_day: "Cijeli dan"
-#: not used in this project
-labels_confirm_recurring: "Želiš li urediti sve ponavljajuće događaje?"
-#: not used in this project
-labels_section_recurring: "Ponovi događaj"
-#: not used in this project
-labels_button_recurring: "Onemogući"
-#: not used in this project
-labels_button_recurring_open: "Omogući"
-#: not used in this project
-labels_button_edit_series: "Uredi seriju"
-#: not used in this project
-labels_button_edit_occurrence: "Uredi događaj"
 labels_agenda_tab: "Dnevni red"
 labels_date: "Datum"
 labels_description: "Opis"
-#: not used in this project
-labels_year_tab: "Godina"
 labels_week_agenda_tab: "Dnevni red"
-#: not used in this project
-labels_grid_tab: "Tablica"
-#: not used in this project
-labels_drag_to_create: "Prenesi za stvoriti novi"
-#: not used in this project
-labels_drag_to_move: "Prenesi za pomaknuti"
-#: not used in this project
-labels_message_ok: "U redu"
-#: not used in this project
-labels_message_cancel: "Odustani"
 labels_next: "Sljedeći"
 labels_prev: "Prethodni"
 labels_year: "Godina"

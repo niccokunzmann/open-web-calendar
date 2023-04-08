@@ -40,50 +40,12 @@ labels_dhx_cal_today_button: "היום"
 labels_day_tab: "יום"
 labels_week_tab: "שבוע"
 labels_month_tab: "חודש"
-#: not used in this project
-labels_new_event: "ארוע חדש"
-#: not used in this project
-labels_icon_save: "שמור"
-#: not used in this project
-labels_icon_cancel: "בטל"
-#: not used in this project
-labels_icon_details: "פרטים"
-#: not used in this project
-labels_icon_edit: "ערוך"
-#: not used in this project
-labels_icon_delete: "מחק"
-#: not used in this project
-labels_confirm_deleting: "ארוע ימחק סופית.להמשיך?"
-#: not used in this project
 labels_section_description: "תיאור"
-#: not used in this project
 labels_section_time: "תקופה"
-#: not used in this project
-labels_confirm_recurring: "האם ברצונך לשנות כל סדרת ארועים מתמשכים?"
-#: not used in this project
-labels_section_recurring: "להעתיק ארוע"
-#: not used in this project
-labels_button_recurring: "לא פעיל"
-#: not used in this project
-labels_button_recurring_open: "פעיל"
-#: not used in this project
-labels_full_day: "יום שלם"
-#: not used in this project
-labels_button_edit_series: "ערוך את הסדרה"
-#: not used in this project
-labels_button_edit_occurrence: "עריכת עותק"
 labels_agenda_tab: "סדר יום"
 labels_date: "תאריך"
 labels_description: "תיאור"
-#: not used in this project
-labels_year_tab: "לשנה"
 labels_week_agenda_tab: "סדר יום"
-#: not used in this project
-labels_grid_tab: "סורג"
-#: not used in this project
-labels_drag_to_move: "גרור כדי להזיז"
-#: not used in this project
-labels_message_cancel: "בטל"
 labels_next: "הבא"
 labels_prev: "הקודם"
 labels_year: "שנה"
@@ -91,87 +53,3 @@ labels_month: "חודש"
 labels_day: "יום"
 labels_hour: "שעה"
 labels_minute: "דקה"
-#: not used in this project
-labels_repeat_radio_day: "יומי"
-#: not used in this project
-labels_repeat_radio_week: "שבועי"
-#: not used in this project
-labels_repeat_radio_month: "חודשי"
-#: not used in this project
-labels_repeat_radio_year: "שנתי"
-#: not used in this project
-labels_repeat_radio_day_type: "חזור כל"
-#: not used in this project
-labels_repeat_text_day_count: "ימים"
-#: not used in this project
-labels_repeat_radio_day_type2: "חזור כל יום עבודה"
-#: not used in this project
-labels_repeat_week: " חזור כל"
-#: not used in this project
-labels_repeat_text_week_count: "שבוע לפי ימים:"
-#: not used in this project
-labels_repeat_radio_month_type: "חזור כל"
-#: not used in this project
-labels_repeat_radio_month_start: "כל"
-#: not used in this project
-labels_repeat_text_month_day: "ימים כל"
-#: not used in this project
-labels_repeat_text_month_count: "חודשים"
-#: not used in this project
-labels_repeat_text_month_count2_before: "חזור כל"
-#: not used in this project
-labels_repeat_text_month_count2_after: "חודש"
-#: not used in this project
-labels_repeat_year_label: "כל"
-#: not used in this project
-labels_select_year_day2: "בחודש"
-#: not used in this project
-labels_repeat_text_year_day: "ימים"
-#: not used in this project
-labels_select_year_month: "חודש"
-#: not used in this project
-labels_repeat_radio_end: "לעולם לא מסתיים"
-#: not used in this project
-labels_repeat_text_occurences_count: "אירועים"
-#: not used in this project
-labels_repeat_radio_end3: "מסתיים ב"
-#: not used in this project
-labels_repeat_radio_end2: "אחרי"
-#: not used in this project
-labels_month_for_recurring_jan: "ינואר"
-#: not used in this project
-labels_month_for_recurring_feb: "פברואר"
-#: not used in this project
-labels_month_for_recurring_mar: "מרץ"
-#: not used in this project
-labels_month_for_recurring_apr: "אפריל"
-#: not used in this project
-labels_month_for_recurring_may: "מאי"
-#: not used in this project
-labels_month_for_recurring_jun: "יוני"
-#: not used in this project
-labels_month_for_recurring_jul: "יולי"
-#: not used in this project
-labels_month_for_recurring_aug: "אוגוסט"
-#: not used in this project
-labels_month_for_recurring_sep: "ספטמבר"
-#: not used in this project
-labels_month_for_recurring_oct: "אוקטובר"
-#: not used in this project
-labels_month_for_recurring_nov: "נובמבר"
-#: not used in this project
-labels_month_for_recurring_dec: "דצמבר"
-#: not used in this project
-labels_day_for_recurring_sun: "ראשון"
-#: not used in this project
-labels_day_for_recurring_mon: "שני"
-#: not used in this project
-labels_day_for_recurring_tue: "שלישי"
-#: not used in this project
-labels_day_for_recurring_wed: "רביעי"
-#: not used in this project
-labels_day_for_recurring_thu: "חמישי"
-#: not used in this project
-labels_day_for_recurring_fri: "שישי"
-#: not used in this project
-labels_day_for_recurring_sat: "שבת"

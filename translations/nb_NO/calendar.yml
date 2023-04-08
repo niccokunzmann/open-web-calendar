@@ -29,126 +29,13 @@ labels_prev: "Forrige"
 labels_next: "Neste"
 labels_week_agenda_tab: "Agenda"
 labels_month_tab: "Måned"
-#: not used in this project
-labels_new_event: "Ny hendelse"
-#: not used in this project
-labels_icon_save: "Lagre"
-#: not used in this project
-labels_icon_cancel: "Avbryt"
-#: not used in this project
-labels_icon_details: "Detaljer"
-#: not used in this project
-labels_icon_edit: "Rediger"
-#: not used in this project
-labels_icon_delete: "Slett"
-#: not used in this project
-labels_confirm_deleting: "Hendelsen vil bli slettet permanent. Er du sikker?"
-#: not used in this project
 labels_section_description: "Beskrivelse"
-#: not used in this project
 labels_section_time: "Tidsperiode"
-#: not used in this project
-labels_confirm_recurring: "Vil du forandre hele dette settet av repeterende hendelser?"
-#: not used in this project
-labels_section_recurring: "Repeter hendelsen"
-#: not used in this project
-labels_button_recurring: "Av"
-#: not used in this project
-labels_button_recurring_open: "På"
-#: not used in this project
-labels_button_edit_series: "Rediger serien"
-#: not used in this project
-labels_button_edit_occurrence: "Redigere en kopi"
 labels_date: "Dato"
 labels_description: "Beskrivelse"
-#: not used in this project
-labels_year_tab: "År"
-#: not used in this project
-labels_repeat_radio_day: "Daglig"
-#: not used in this project
-labels_repeat_radio_week: "Ukentlig"
-#: not used in this project
-labels_repeat_radio_month: "Månedlig"
-#: not used in this project
-labels_repeat_radio_year: "Årlig"
-#: not used in this project
-labels_repeat_radio_day_type: "Hver"
-#: not used in this project
-labels_repeat_text_day_count: "dag"
-#: not used in this project
-labels_repeat_radio_day_type2: "Alle hverdager"
-#: not used in this project
-labels_repeat_week: " Gjentas hver"
-#: not used in this project
-labels_repeat_text_week_count: "uke på:"
-#: not used in this project
-labels_repeat_radio_month_type: "På hver"
-#: not used in this project
-labels_repeat_radio_month_start: "På"
-#: not used in this project
-labels_repeat_text_month_day: "dag hver"
-#: not used in this project
-labels_repeat_text_month_count: "måned"
-#: not used in this project
-labels_repeat_text_month_count2_before: "hver"
-#: not used in this project
-labels_repeat_text_month_count2_after: "måned"
-#: not used in this project
-labels_repeat_year_label: "på"
-#: not used in this project
-labels_select_year_day2: "i"
-#: not used in this project
-labels_repeat_text_year_day: "dag i"
-#: not used in this project
-labels_repeat_radio_end: "Ingen sluttdato"
-#: not used in this project
-labels_repeat_text_occurences_count: "forekomst"
-#: not used in this project
-labels_repeat_radio_end3: "Stop den"
-#: not used in this project
-labels_repeat_radio_end2: "Etter"
-#: not used in this project
-labels_month_for_recurring_jan: "Januar"
-#: not used in this project
-labels_month_for_recurring_feb: "Februar"
-#: not used in this project
-labels_month_for_recurring_mar: "Mars"
-#: not used in this project
-labels_month_for_recurring_may: "Mai"
-#: not used in this project
-labels_month_for_recurring_jun: "Juni"
-#: not used in this project
-labels_month_for_recurring_jul: "Juli"
-#: not used in this project
-labels_month_for_recurring_oct: "Oktober"
-#: not used in this project
-labels_month_for_recurring_dec: "Desember"
-#: not used in this project
-labels_day_for_recurring_sun: "Sondag"
-#: not used in this project
-labels_day_for_recurring_mon: "Mandag"
-#: not used in this project
-labels_day_for_recurring_tue: "Tirsdag"
-#: not used in this project
-labels_day_for_recurring_wed: "Onsdag"
-#: not used in this project
-labels_day_for_recurring_thu: "Torsdag"
-#: not used in this project
-labels_day_for_recurring_fri: "Fredag"
-#: not used in this project
-labels_day_for_recurring_sat: "Lørdag"
 labels_agenda_tab: Agenda
-labels_grid_tab: Rutenett
-labels_drag_to_move: Dra for å flytte
-labels_message_ok: OK
 labels_year: År
 labels_month: Måned
-labels_select_year_month: måned
-labels_month_for_recurring_apr: April
-labels_month_for_recurring_aug: August
-labels_month_for_recurring_sep: September
-labels_month_for_recurring_nov: November
-labels_full_day: Hele dagen
 date_month_full_sep: September
 date_month_short_jan: Jan
 date_month_full_aug: August
@@ -161,11 +48,8 @@ date_month_short_aug: Aug
 date_month_short_sep: Sep
 date_month_short_jul: Jul
 date_day_short_mon: Man
-labels_drag_to_create: Dra for å opprette
-labels_message_cancel: Avbryt
 labels_minute: Minutt
 labels_hour: Time
 labels_day: Dag
 date_month_short_apr: Apr
 date_month_short_mar: Mar
-labels_confirm_closing: Lukk?

@@ -29,39 +29,7 @@ labels_dhx_cal_today_button: "Hari Ini"
 labels_day_tab: "Hari"
 labels_week_tab: "Minggu"
 labels_month_tab: "Bulan"
-#: not used in this project
-labels_new_event: "Acara Baru"
-#: not used in this project
-labels_icon_save: "Simpan"
-#: not used in this project
-labels_icon_cancel: "Batal"
-#: not used in this project
-labels_icon_details: "Detail"
-#: not used in this project
-labels_icon_delete: "Hapus"
-#: not used in this project
-labels_confirm_deleting: "Acara akan dihapus"
-#: not used in this project
 labels_section_description: "Keterangan"
-#: not used in this project
 labels_section_time: "Periode"
-#: not used in this project
-labels_full_day: "Hari penuh"
-#: not used in this project
-labels_confirm_recurring: "Apakah acara ini akan berulang?"
-#: not used in this project
-labels_section_recurring: "Acara Rutin"
-#: not used in this project
-labels_button_recurring: "Tidak Difungsikan"
-#: not used in this project
-labels_button_recurring_open: "Difungsikan"
-#: not used in this project
-labels_button_edit_series: "Mengedit seri"
-#: not used in this project
-labels_button_edit_occurrence: "Mengedit salinan"
 labels_date: "Tanggal"
 labels_description: "Keterangan"
-#: not used in this project
-labels_year_tab: "Tahun"
-#: not used in this project
-labels_grid_tab: "Tabel"
