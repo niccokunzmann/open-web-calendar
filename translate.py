@@ -12,10 +12,11 @@ DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
 TRANSLATIONS = {} # lang -> file -> id -> string
-LANGUAGE_ALIAS = {
+LANGUAGE_ALIAS = { # name also usable -> name in the translations directory
     "nb": "nb_NO",
     "ua": "uk",
     "jp": "ja",
+    "cn": "zh_Hans",
     "no": "nb_NO",
 } # rename language codes
 UNUSED = "-unused"
@@ -153,7 +154,7 @@ ENGLISH_LANGUAGE_NAMES = {
     'ar' : 'Arabic',
     'be' : 'Belarusian',
     'ca' : 'Catalan',
-    'cn' : 'Chinese',
+    'zh_Hans' : 'Chinese',
     'hr' : 'Croatian',
     'cs' : 'Czech',
     'da' : 'Danish',
