@@ -43,3 +43,13 @@ labels_section_description: "Opis"
 labels_section_time: "Okres czasu"
 labels_date: "Data"
 labels_description: "Opis"
+date_month_short_mar: Mar
+labels_agenda_tab: Terminarz
+labels_week_agenda_tab: Terminarz
+labels_prev: Wstecz
+labels_year: Rok
+labels_month: Miesiąc
+labels_day: Dzień
+labels_hour: Godzina
+labels_minute: Minuta
+labels_next: Dalej

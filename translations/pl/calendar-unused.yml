@@ -32,7 +32,7 @@ labels_repeat_text_month_count2_after: "miesica"
 labels_repeat_year_label: "W"
 labels_select_year_day2: "miesica"
 labels_repeat_text_year_day: "dnia miesica"
-labels_select_year_month: ""
+labels_select_year_month: "miesiąc"
 labels_repeat_radio_end: "Bez daty kocowej"
 labels_repeat_text_occurences_count: "wystpieniu/ach"
 labels_repeat_radio_end3: "Zakocz w"
@@ -56,3 +56,7 @@ labels_day_for_recurring_wed: "roda"
 labels_day_for_recurring_thu: "Czwartek"
 labels_day_for_recurring_fri: "Pitek"
 labels_day_for_recurring_sat: "Sobota"
+labels_message_cancel: Anuluj
+labels_drag_to_move: Przeciągnij, aby przenieść
+labels_drag_to_create: Przeciągnij, aby utworzyć
+labels_message_ok: OK
