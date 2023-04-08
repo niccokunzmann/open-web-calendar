@@ -40,54 +40,12 @@ labels_dhx_cal_today_button: "Today"
 labels_day_tab: "Day"
 labels_week_tab: "Week"
 labels_month_tab: "Month"
-#: not used in this project
-labels_new_event: "New event"
-#: not used in this project
-labels_icon_save: "Save"
-#: not used in this project
-labels_icon_cancel: "Cancel"
-#: not used in this project
-labels_icon_details: "Details"
-#: not used in this project
-labels_icon_edit: "Edit"
-#: not used in this project
-labels_icon_delete: "Delete"
-#: not used in this project
-labels_confirm_closing: ""
-#: not used in this project
-labels_confirm_deleting: "Event will be deleted permanently, are you sure?"
 labels_section_description: "Description"
 labels_section_time: "Time period"
-#: not used in this project
-labels_full_day: "Full day"
-#: not used in this project
-labels_confirm_recurring: "Do you want to edit the whole set of repeated events?"
-#: not used in this project
-labels_section_recurring: "Repeat event"
-#: not used in this project
-labels_button_recurring: "Disabled"
-#: not used in this project
-labels_button_recurring_open: "Enabled"
-#: not used in this project
-labels_button_edit_series: "Edit series"
-#: not used in this project
-labels_button_edit_occurrence: "Edit occurrence"
 labels_agenda_tab: "Agenda"
 labels_date: "Date"
 labels_description: "Description"
-#: not used in this project
-labels_year_tab: "Year"
 labels_week_agenda_tab: "Agenda"
-#: not used in this project
-labels_grid_tab: "Grid"
-#: not used in this project
-labels_drag_to_create: "Drag to create"
-#: not used in this project
-labels_drag_to_move: "Drag to move"
-#: not used in this project
-labels_message_ok: "OK"
-#: not used in this project
-labels_message_cancel: "Cancel"
 labels_next: "Next"
 labels_prev: "Previous"
 labels_year: "Year"
@@ -95,87 +53,3 @@ labels_month: "Month"
 labels_day: "Day"
 labels_hour: "Hour"
 labels_minute: "Minute"
-#: not used in this project
-labels_repeat_radio_day: "Daily"
-#: not used in this project
-labels_repeat_radio_week: "Weekly"
-#: not used in this project
-labels_repeat_radio_month: "Monthly"
-#: not used in this project
-labels_repeat_radio_year: "Yearly"
-#: not used in this project
-labels_repeat_radio_day_type: "Every"
-#: not used in this project
-labels_repeat_text_day_count: "day"
-#: not used in this project
-labels_repeat_radio_day_type2: "Every workday"
-#: not used in this project
-labels_repeat_week: " Repeat every"
-#: not used in this project
-labels_repeat_text_week_count: "week next days:"
-#: not used in this project
-labels_repeat_radio_month_type: "Repeat"
-#: not used in this project
-labels_repeat_radio_month_start: "On"
-#: not used in this project
-labels_repeat_text_month_day: "day every"
-#: not used in this project
-labels_repeat_text_month_count: "month"
-#: not used in this project
-labels_repeat_text_month_count2_before: "every"
-#: not used in this project
-labels_repeat_text_month_count2_after: "month"
-#: not used in this project
-labels_repeat_year_label: "On"
-#: not used in this project
-labels_select_year_day2: "of"
-#: not used in this project
-labels_repeat_text_year_day: "day"
-#: not used in this project
-labels_select_year_month: "month"
-#: not used in this project
-labels_repeat_radio_end: "No end date"
-#: not used in this project
-labels_repeat_text_occurences_count: "occurrences"
-#: not used in this project
-labels_repeat_radio_end2: "After"
-#: not used in this project
-labels_repeat_radio_end3: "End by"
-#: not used in this project
-labels_month_for_recurring_jan: "January"
-#: not used in this project
-labels_month_for_recurring_feb: "February"
-#: not used in this project
-labels_month_for_recurring_mar: "March"
-#: not used in this project
-labels_month_for_recurring_apr: "April"
-#: not used in this project
-labels_month_for_recurring_may: "May"
-#: not used in this project
-labels_month_for_recurring_jun: "June"
-#: not used in this project
-labels_month_for_recurring_jul: "July"
-#: not used in this project
-labels_month_for_recurring_aug: "August"
-#: not used in this project
-labels_month_for_recurring_sep: "September"
-#: not used in this project
-labels_month_for_recurring_oct: "October"
-#: not used in this project
-labels_month_for_recurring_nov: "November"
-#: not used in this project
-labels_month_for_recurring_dec: "December"
-#: not used in this project
-labels_day_for_recurring_sun: "Sunday"
-#: not used in this project
-labels_day_for_recurring_mon: "Monday"
-#: not used in this project
-labels_day_for_recurring_tue: "Tuesday"
-#: not used in this project
-labels_day_for_recurring_wed: "Wednesday"
-#: not used in this project
-labels_day_for_recurring_thu: "Thursday"
-#: not used in this project
-labels_day_for_recurring_fri: "Friday"
-#: not used in this project
-labels_day_for_recurring_sat: "Saturday"

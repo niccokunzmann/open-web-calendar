@@ -34,41 +34,7 @@ labels_dhx_cal_today_button: "Hui"
 labels_day_tab: "Dia"
 labels_week_tab: "Setmana"
 labels_month_tab: "Mes"
-#: not used in this project
-labels_new_event: "Nou esdeveniment"
-#: not used in this project
-labels_icon_save: "Guardar"
-#: not used in this project
-labels_icon_cancel: "Cancel·lar"
-#: not used in this project
-labels_icon_details: "Detalls"
-#: not used in this project
-labels_icon_edit: "Editar"
-#: not used in this project
-labels_icon_delete: "Esborrar"
-#: not used in this project
-labels_confirm_deleting: "L'esdeveniment s'esborrarà definitivament, continuar ?"
-#: not used in this project
 labels_section_description: "Descripció"
-#: not used in this project
 labels_section_time: "Periode de temps"
-#: not used in this project
-labels_full_day: "Tot el dia"
-#: not used in this project
-labels_confirm_recurring: "¿Desitja modificar el conjunt d'esdeveniments repetits?"
-#: not used in this project
-labels_section_recurring: "Repeteixca l'esdeveniment"
-#: not used in this project
-labels_button_recurring: "Impedit"
-#: not used in this project
-labels_button_recurring_open: "Permés"
-#: not used in this project
-labels_button_edit_series: "Edit sèrie"
-#: not used in this project
-labels_button_edit_occurrence: "Edita Instància"
 labels_date: "Data"
 labels_description: "Descripció"
-#: not used in this project
-labels_year_tab: "Any"
-#: not used in this project
-labels_grid_tab: "Taula"

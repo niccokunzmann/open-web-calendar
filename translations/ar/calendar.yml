@@ -40,39 +40,5 @@ labels_dhx_cal_today_button: "اليوم"
 labels_day_tab: "يوم"
 labels_week_tab: "أسبوع"
 labels_month_tab: "شهر"
-#: not used in this project
-labels_new_event: "حدث جديد"
-#: not used in this project
-labels_icon_save: "اخزن"
-#: not used in this project
-labels_icon_cancel: "الغاء"
-#: not used in this project
-labels_icon_details: "تفاصيل"
-#: not used in this project
-labels_icon_edit: "تحرير"
-#: not used in this project
-labels_icon_delete: "حذف"
-#: not used in this project
-labels_confirm_closing: "التغييرات سوف تضيع, هل انت متأكد؟"
-#: not used in this project
-labels_confirm_deleting: "الحدث سيتم حذفها نهائيا ، هل أنت متأكد؟"
-#: not used in this project
 labels_section_description: "الوصف"
-#: not used in this project
 labels_section_time: "الفترة الزمنية"
-#: not used in this project
-labels_full_day: "طوال اليوم"
-#: not used in this project
-labels_confirm_recurring: "هل تريد تحرير مجموعة كاملة من الأحداث المتكررة؟"
-#: not used in this project
-labels_section_recurring: "تكرار الحدث"
-#: not used in this project
-labels_button_recurring: "تعطيل"
-#: not used in this project
-labels_button_recurring_open: "تمكين"
-#: not used in this project
-labels_button_edit_series: "تحرير سلسلة"
-#: not used in this project
-labels_button_edit_occurrence: "تعديل نسخة"
-#: not used in this project
-labels_grid_tab: "جدول"

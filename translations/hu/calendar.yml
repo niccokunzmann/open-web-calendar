@@ -32,38 +32,8 @@ labels_dhx_cal_today_button: "Ma"
 labels_day_tab: "Nap"
 labels_week_tab: "Hét"
 labels_month_tab: "Hónap"
-#: not used in this project
-labels_new_event: "Új esemény"
-#: not used in this project
-labels_icon_save: "Mentés"
-#: not used in this project
-labels_icon_cancel: "Mégse"
-#: not used in this project
-labels_icon_details: "Részletek"
-#: not used in this project
-labels_icon_edit: "Szerkesztés"
-#: not used in this project
-labels_icon_delete: "Törlés"
-#: not used in this project
-labels_confirm_deleting: "Az esemény törölve lesz, biztosan folytatja?"
-#: not used in this project
 labels_section_description: "Leírás"
-#: not used in this project
 labels_section_time: "Idõszak"
-#: not used in this project
-labels_full_day: "Egesz napos"
-#: not used in this project
-labels_confirm_recurring: "Biztosan szerkeszteni akarod az összes ismétlõdõ esemény beállítását?"
-#: not used in this project
-labels_section_recurring: "Esemény ismétlése"
-#: not used in this project
-labels_button_recurring: "Tiltás"
-#: not used in this project
-labels_button_recurring_open: "Engedélyezés"
-#: not used in this project
-labels_button_edit_occurrence: "Szerkesztés bíróság"
 labels_agenda_tab: "Napirend"
 labels_date: "Dátum"
 labels_description: "Leírás"
-#: not used in this project
-labels_year_tab: "Év"
