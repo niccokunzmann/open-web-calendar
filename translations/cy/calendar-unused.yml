@@ -13,6 +13,7 @@ labels_button_edit_series: Golygu cyfres
 labels_button_edit_occurrence: Golygu digwyddiad
 labels_year_tab: Blwyddyn
 labels_message_cancel: Dileu
+labels_grid_tab: Grid
 labels_drag_to_create: Llusgo i creu
 labels_drag_to_move: Llusgo i symud
 labels_message_ok: Iawn
@@ -57,4 +58,3 @@ labels_select_year_month: mis
 labels_month_for_recurring_jun: Mehefin
 labels_month_for_recurring_jan: Ionawr
 labels_month_for_recurring_jul: Gorffenhaf
-labels_grid_tab: Grid

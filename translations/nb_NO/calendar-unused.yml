@@ -49,6 +49,7 @@ labels_day_for_recurring_wed: "Onsdag"
 labels_day_for_recurring_thu: "Torsdag"
 labels_day_for_recurring_fri: "Fredag"
 labels_day_for_recurring_sat: "Lørdag"
+labels_grid_tab: Rutenett
 labels_drag_to_move: Dra for å flytte
 labels_message_ok: OK
 labels_select_year_month: måned
@@ -60,4 +61,3 @@ labels_full_day: Hele dagen
 labels_drag_to_create: Dra for å opprette
 labels_message_cancel: Avbryt
 labels_confirm_closing: Lukk?
-labels_grid_tab: Rutenett
