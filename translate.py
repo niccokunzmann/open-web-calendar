@@ -150,49 +150,16 @@ def dhtmlx(language: str):
         result["labels"][label] = cal("labels_" + label)
     return result
 
-ENGLISH_LANGUAGE_NAMES = {
-    'ar' : 'Arabic',
-    'be' : 'Belarusian',
-    'ca' : 'Catalan',
-    'zh_Hans' : 'Chinese',
-    'hr' : 'Croatian',
-    'cs' : 'Czech',
-    'da' : 'Danish',
-    'nl' : 'Dutch',
-    'en' : 'English',
-    'fi' : 'Finnish',
-    'fr' : 'French',
-    'de' : 'German',
-    'el' : 'Greek',
-    'he' : 'Hebrew',
-    'hu' : 'Hungarian',
-    'id' : 'Indonesian',
-    'it' : 'Italian',
-    'jp' : 'Japanese',
-#    'no' : 'Norwegian',
-    'nb_NO' : 'Norwegian Bokmål',
-    'pl' : 'Polish',
-    'pt' : 'Portuguese',
-    'ro' : 'Romanian',
-    'ru' : 'Russian',
-    'sk' : 'Slovak',
-    'si' : 'Slovenian',
-    'es' : 'Spanish',
-    'sv' : 'Swedish',
-    'tr' : 'Turkish',
-    'ua' : 'Ukrainian',
-}
 
 def dhtmlx_languages() -> list:
     """Return tuples of language name and language code."""
     result = set()
-    for code, language in ENGLISH_LANGUAGE_NAMES.items():
-        result.add((language, code))
-    default = string(DEFAULT_LANGUAGE, "index", "language")
-    for code in TRANSLATIONS:
-        language = string(code, "index", "language")
-        if language != default:
-            result.add((language, code))
+    for id in ("language", "language-en"):
+        default = string(DEFAULT_LANGUAGE, "calendar", id)
+        for code in TRANSLATIONS:
+            language = string(code, "calendar", id)
+            if language != default or code == DEFAULT_LANGUAGE:
+                result.add((language, code))
     result = list(result)
     result.sort()
     return result
