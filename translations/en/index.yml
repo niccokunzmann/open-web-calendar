@@ -1,11 +1,5 @@
 # Translations for the index.html file.
 
-# Translate this as the language you are working on.
-# It appears at the top for users to choose from.
-# E.g. for German, do not enter "Englisch" but "Deutsch".
-language: English
-
-
 # What is this software about.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-about
 about: 'The Open Web Calendar uses ICS/ICal calendars online and displays them in
