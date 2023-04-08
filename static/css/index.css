@@ -35,6 +35,13 @@ footer a {
 
 .languages a {
   color: gray;
+  text-decoration: none;
+  margin: 0.2em;
+  display: inline-block;
+}
+
+.languages a:hover {
+  text-decoration: underline;
 }
 
 .languages a.current {

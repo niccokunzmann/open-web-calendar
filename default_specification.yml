@@ -140,6 +140,9 @@ source_code: "https://github.com/niccokunzmann/open-web-calendar/"
 ## This is a link to the contribution page
 contributing: "https://github.com/niccokunzmann/open-web-calendar/#contributing"
 
+## This is a link to the translations page
+translate: "https://hosted.weblate.org/engage/open-web-calendar/"
+
 ###################### You will probably not change this. ######################
 ##
 ## The template is the file which shows the calendar.

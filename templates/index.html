@@ -31,6 +31,7 @@
                         {% endif -%}
                         </a>
                     {%- endfor %}
+                    <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
                 </p>
             </div>
             <div class="section">
@@ -85,7 +86,8 @@
                 <h3>{{ html("language-title") }}</h3>
                 <p>
                     {{ html("language-description") }}<br/>
-                    <select id="select-language"></select>
+                    <select id="select-language"></select><br/>
+                    <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
                 </p>
                 <h3>{{ html("skins-title") }}</h3>
                 <p>
