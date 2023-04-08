@@ -3,6 +3,7 @@ import os
 import yaml
 from html import escape
 from markupsafe import Markup
+from collections import defaultdict
 
 HERE = os.path.dirname(__file__) or "."
 TRANSLATIONS_PATH = os.path.join(HERE, "translations")
@@ -17,16 +18,19 @@ LANGUAGE_ALIAS = {
     "jp": "ja",
     "no": "nb_NO",
 } # rename language codes
+UNUSED = "-unused"
 
 # Parse the directory structure.
 # translations/<lang>/<file>.yml
 for language in os.listdir(TRANSLATIONS_PATH):
-    TRANSLATIONS[language] = file_translations = {}
+    TRANSLATIONS[language] = file_translations = defaultdict(dict)
     language_path = os.path.join(TRANSLATIONS_PATH, language)
     for file in os.listdir(language_path):
         name, ext = os.path.splitext(file)
+        if name.endswith(UNUSED):
+            name = name[:-len(UNUSED)]
         with open(os.path.join(language_path, file)) as f:
-            file_translations[name] =  yaml.safe_load(f)
+            file_translations[name].update(yaml.safe_load(f))
 
 def string(language: str, file: str, id: str) -> str:
     """Translate a string identified by language, file and id."""
