@@ -5,12 +5,12 @@ import pytest
 @pytest.mark.parametrize(
     "language,file,id,expected_value",
     [
-        ("en", "index", "language", "English"), 
+        ("en", "calendar", "language", "English"), 
         ("en", "_test", "id1", "test"), 
         ("en", "_test", "id2", "test2"), 
         ("de", "_test", "id1", "Test"), 
         ("de", "_test", "id2", "test2"), 
-        ("en", "_test", "index.language", "English"), 
+        ("en", "_test", "calendar.language", "English"), 
     ]
 )
 def test_translate(language, file, id, expected_value):

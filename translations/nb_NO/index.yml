@@ -29,7 +29,6 @@ spec-host-html: Du kan <a>laste ned denne spesifikasjonen</a> og plassere den p�
   delte via lenke, f.eks. på GitHub i en <a href="https://gist.github.com/">Gist</a>.
 first-hour-description: 'Endre første time for kalenderen slik:'
 style-date: Du kan endre bakgrunnsfarge for nåværende dato.
-language: Norsk bokmål
 calendar-code: 'Bruk denne koden for å bygge inn kalenderen på nettsiden din:'
 about: Open Web Calendar-en bruker ICS/ICal-kalendere på nett og viser dem i én kalender.
   Du kan bruke den med Nextcloud, Outlook, Google Calendar, Meetup og andre kalendersystemer

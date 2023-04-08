@@ -53,3 +53,13 @@ labels_month: "Month"
 labels_day: "Day"
 labels_hour: "Hour"
 labels_minute: "Minute"
+
+# Translate this as the language you are working on.
+# This appears for the users to choose the language.
+# E.g. for German, do not enter "Englisch" but "Deutsch".
+language: English
+
+# Translate this as the language you are working on.
+# This appears for the users to choose the language in English.
+# E.g. for German, do not enter "Englisch" but "German".
+language-en: "English"
