@@ -222,6 +222,10 @@ timezone-browser: "use the timezone of the browser"
 # This is shown while an element is being loaded.
 loading: "loading…"
 
+# This is a link at the top so people translate the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-translate
+translate: "Translate"
+
 
 # Heading
 # https://open-web-calendar.hosted.quelltext.eu/#translate-spec-title
