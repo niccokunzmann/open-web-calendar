@@ -1,15 +1,15 @@
-date_month_full_jan: " Januar"
-date_month_full_feb: " Februar"
-date_month_full_mar: " März "
-date_month_full_apr: " April"
-date_month_full_may: " Mai"
-date_month_full_jun: " Juni"
-date_month_full_jul: " Juli"
-date_month_full_aug: " August"
-date_month_full_sep: " September "
-date_month_full_oct: " Oktober"
-date_month_full_nov: " November "
-date_month_full_dec: " Dezember"
+date_month_full_jan: "Januar"
+date_month_full_feb: "Februar"
+date_month_full_mar: "März"
+date_month_full_apr: "April"
+date_month_full_may: "Mai"
+date_month_full_jun: "Juni"
+date_month_full_jul: "Juli"
+date_month_full_aug: "August"
+date_month_full_sep: "September"
+date_month_full_oct: "Oktober"
+date_month_full_nov: "November"
+date_month_full_dec: "Dezember"
 date_month_short_mar: "Mär"
 date_month_short_may: "Mai"
 date_month_short_oct: "Okt"
@@ -17,8 +17,8 @@ date_month_short_dec: "Dez"
 date_day_full_sun: "Sonntag"
 date_day_full_mon: "Montag"
 date_day_full_tue: "Dienstag"
-date_day_full_wed: " Mittwoch"
-date_day_full_thu: " Donnerstag"
+date_day_full_wed: "Mittwoch"
+date_day_full_thu: "Donnerstag"
 date_day_full_fri: "Freitag"
 date_day_full_sat: "Samstag"
 date_day_short_sun: "So"
@@ -38,3 +38,20 @@ labels_date: "Datum"
 labels_description: "Beschreibung"
 language-en: "German"
 language: Deutsch
+date_month_short_feb: Feb
+date_month_short_jun: Jun
+date_month_short_jul: Jul
+date_month_short_aug: Aug
+date_month_short_sep: Sep
+date_month_short_nov: Nov
+labels_day: Tag
+labels_month: Monat
+labels_week_agenda_tab: Agenda
+labels_next: Später
+labels_hour: Stunde
+labels_minute: Minute
+date_month_short_jan: Jan
+labels_agenda_tab: Agenda
+date_month_short_apr: Apr
+labels_prev: Früher
+labels_year: Jahr
