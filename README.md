@@ -66,13 +66,7 @@ Here, you can see the current translation status:
 
 ## Deployment
 
-You can deploy the app using Heroku.
-There is a free plan.
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-Heroku uses [gunicorn](http://flask.pocoo.org/docs/dev/deploying/wsgi-standalone/#gunicorn)
-to run the server, see the [Procfile](Procfile).
+There are several ways to deploy the open-web-calendar.
 
 ### Environment Variables - Configuration
 
@@ -101,6 +95,13 @@ docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
 ```
 
 Then, you should see your service running at http://localhost:5000.
+
+#### Container Tags
+
+The container `niccokunzmann/open-web-calendar:latest` contains the latest release.
+Containers are also tagged with the version from the [changelog], e.g.
+`niccokunzmann/open-web-calendar:v1.10`.
+If you wish to run the latest development version, use `niccokunzmann/open-web-calendar:master`.
 
 ### Docker Compose
 
@@ -139,6 +140,15 @@ You can create a fork of this repository which automatically deploys to Vercel:
 [Deploy](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fniccokunzmann%2Fopen-web-calendar.git)
 
 Alternatively you can create a one off deploy by cloning this repository and running `npx vercel` at the root.
+
+### Heroku
+
+You can deploy the app using Heroku.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Heroku uses [gunicorn](http://flask.pocoo.org/docs/dev/deploying/wsgi-standalone/#gunicorn)
+to run the server, see the [Procfile](Procfile).
 
 Research
 --------
@@ -244,7 +254,12 @@ tox
 
 Changelog
 ---------
+[changelog]: #changelog
 
+- v1.11
+  - Add German UI
+  - Improve calendar in Polish
+  - Add Welsh calendar
 - v1.10
   - Add translations for nb_NO.
   - Translate the user interface.
