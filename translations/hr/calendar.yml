@@ -52,4 +52,6 @@ labels_year: "Godina"
 labels_month: "Mjesec"
 labels_day: "Dan"
 labels_hour: "Sati"
-language-en: "Croatian"
+language-en: "Hrvatski"
+labels_minute: Minute
+language: Hrvatski
