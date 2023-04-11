@@ -72,6 +72,7 @@ spec-link: 'Nakon što postaviš specifikaciju negdje online možeš stvoriti po
 spec-description: 'Kalendar se može generirati ne samo pomoću URL-a, već i putem JSON
   ili YAML specifikacije iz datoteke. Gornja prilagodba generira ovu specifikaciju:'
 spec-title: Hosting specifikacije
-spec-host-html: <a>Ovu specifikaciju možeš preuzeti</a> i postaviti je negdje na web.
-  Na taj način i dalje kontroliraš prilagođavanje kalendara nakon dijeljenja poveznice,
-  npr. na GitHub-u u jednom <a href="https://gist.github.com/">Gistu</a>.
+spec-host-html: <a href="javascript:downloadJSONSpecification()">Ovu specifikaciju
+  možeš preuzeti</a> i postaviti je negdje na web. Na taj način i dalje kontroliraš
+  prilagođavanje kalendara nakon dijeljenja poveznice, npr. na GitHub-u u jednom <a
+  href="https://gist.github.com/">Gistu</a>.
