@@ -5,7 +5,7 @@ start-of-week-title: Ukestart
 style-title: Egendefinert stil med CSS
 controls-date: Dato
 time-increment-30: 30 minutter
-loader-title: Laster inn animasjon
+loader-title: Laster inn animasjon …
 language-title: Språk
 style-background: Du kan endre kalenderens bakgrunnsfarge.
 timezone-title: Tidssone
@@ -65,7 +65,7 @@ style-days: Hvis du vil ha forskjellig farge for dagene kan du angi dette også.
 style-days-outside: Noen dager i kalenderen har forskjellig farge hvis de ikke tilhører
   måneden.
 loader-default: sirkulær innlaster
-tabs-title: Måned, uke, dag, og agenda-visning
+tabs-title: Kalenderfaner
 tabs-description: 'Månedsvisning er forvalget. Du kan velge andre visninger å begynne
   med:'
 timezone-browser: bruk denne tidssonen for nettleseren
@@ -75,3 +75,4 @@ controls-description: 'Det kan hende du ikke vil vise brukerne alle kontrollene.
   hvilke du vil ha:'
 spec-link: 'Når du har plassert spesifikasjonen noensteds hen på nett kan du opprette
   en lenke slik som denne:'
+translate: Oversett
