@@ -5,9 +5,9 @@ start-of-week-title: Ukestart
 style-title: Egendefinert stil med CSS
 controls-date: Dato
 time-increment-30: 30 minutter
-loader-title: Laster inn animasjon …
+loader-title: Laster inn animasjon
 language-title: Språk
-style-background: Du kan endre kalenderens bakgrunnsfarge
+style-background: Du kan endre kalenderens bakgrunnsfarge.
 timezone-title: Tidssone
 language-description: Du kan velge språk for kalenderen.
 links-self: Åpne lenket dokument i samme ramme som det ble klikket fra.
@@ -24,9 +24,10 @@ timezone-description: 'Tidssonen tas fra brukerens nettleser. Hvis kalenderen di
 loader-none: ingen innlaster
 spec-description: 'Kalenderen kan genereres med nettadresse, og også gjennom JSON-
   eller YAML-spesifikasjon fra en fil. Tilpasningen ovenfor genererer denne spesifikasjonen:'
-spec-host-html: Du kan <a>laste ned denne spesifikasjonen</a> og plassere den på nettet
-  et sted. På denne måten kontrollerer du fremdeles tilpasningen av kalenderen du
-  delte via lenke, f.eks. på GitHub i en <a href="https://gist.github.com/">Gist</a>.
+spec-host-html: Du kan <a href="javascript:downloadJSONSpecification()">laste ned
+  denne spesifikasjonen</a> og plassere den på nettet et sted. På denne måten kontrollerer
+  du fremdeles tilpasningen av kalenderen du delte via lenke, f.eks. på GitHub i en
+  <a href="https://gist.github.com/">Gist</a>.
 first-hour-description: 'Endre første time for kalenderen slik:'
 style-date: Du kan endre bakgrunnsfarge for nåværende dato.
 calendar-code: 'Bruk denne koden for å bygge inn kalenderen på nettsiden din:'
