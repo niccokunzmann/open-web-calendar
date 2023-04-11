@@ -256,6 +256,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.12
+  - Add Croatian UI by Milo Ivir
 - v1.11
   - Add German UI
   - Improve calendar in Polish
