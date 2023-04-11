@@ -74,7 +74,7 @@ links-parent: Öffne den Link in dem Frame drüber.
 links-blank: Öffne den Link in einem neuen Fenster oder Tab.
 links-top: Öffne den Link im vollen Fenster.
 start-of-week-title: Wochenbeginn
-spec-host-html: Du kannst <a>die Spezifikation herunterladen</a> und sie irgendwo
-  im Web platzieren. Auf diese Weise kannst den Kalender später überall, wo er verwendet
-  wird, mit einem Mal verändern. Dazu kannst du die Spezifikation z.B. in einem a
-  href="https://gist.github.com/"&gt;Gist veröffentlichen.
+spec-host-html: Du kannst <a href="javascript:downloadJSONSpecification()">die Spezifikation
+  herunterladen</a> und sie irgendwo im Web platzieren. Auf diese Weise kannst den
+  Kalender später überall, wo er verwendet wird, mit einem Mal verändern. Dazu kannst
+  du die Spezifikation z.B. in einem <a href="https://gist.github.com/">Gist</a> veröffentlichen.
