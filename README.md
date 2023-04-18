@@ -256,6 +256,9 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.13
+  - Improve French calendar
+  - Update dependencies
 - v1.12
   - Add Croatian UI by Milo Ivir
 - v1.11
