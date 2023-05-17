@@ -72,7 +72,7 @@ There are several ways to deploy the open-web-calendar.
 
 These environment variables can be used to configure the service:
 
-- `APP_DEBUG` default `true`, values `true` or `false`, always `false` in the Docker container
+- `APP_DEBUG` default `true`, values `true` or `false`, always `false` in the Docker container  
   Set the debug flag for the app.
 - `PORT` default `5000`, default `80` in the Docker container  
   The port that the service is running on.
