@@ -1,1 +1,13 @@
-{}
+calendar-urls: 'Untuk menggabungkan beberapa kalender, masukkan URL kalender ICS di
+  sini:'
+starting-date-description: 'Untuk mengubah tanggal awal kalender:'
+calendar-code-execution: Anda dapat melihat kalender yang dihasilkan di bawah ini.
+section-customization: Anda dapat membuat kustomisasi tambahan pada kalender.
+title-title: Judul
+title-description: 'Untuk mengubah judul, masukkan nama kalender di sini:'
+starting-date-title: Tanggal mulai
+calendar-code: 'Untuk menyematkan kalender, gunakan kode ini di situs web Anda:'
+first-hour-title: Jam Pertama
+about: Open Web Calendar menggunakan kalender ICS/ICal secara online dan menampilkannya
+  dalam satu kalender. Anda dapat menggunakannya dengan Nextcloud, Outlook, Google
+  Kalender, Meetup, dan sistem kalender lain yang menggunakan standar ICS.
