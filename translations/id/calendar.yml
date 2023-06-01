@@ -34,3 +34,6 @@ labels_section_time: "Periode"
 labels_date: "Tanggal"
 labels_description: "Keterangan"
 language-en: "Indonesian"
+date_month_full_apr: April
+language: Inggris
+date_month_full_sep: September
