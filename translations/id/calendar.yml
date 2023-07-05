@@ -37,3 +37,11 @@ language-en: "Indonesian"
 date_month_full_apr: April
 language: Inggris
 date_month_full_sep: September
+date_month_short_jan: Jan
+date_month_short_feb: Feb
+date_month_short_mar: Mar
+date_month_short_apr: Apr
+date_month_short_jun: Jun
+date_month_short_jul: Jul
+date_month_short_sep: Sep
+date_month_short_nov: Nov
