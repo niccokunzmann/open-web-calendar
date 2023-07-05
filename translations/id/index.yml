@@ -11,3 +11,19 @@ first-hour-title: Jam Pertama
 about: Open Web Calendar menggunakan kalender ICS/ICal secara online dan menampilkannya
   dalam satu kalender. Anda dapat menggunakannya dengan Nextcloud, Outlook, Google
   Kalender, Meetup, dan sistem kalender lain yang menggunakan standar ICS.
+language-description: Anda dapat mengatur bahasa kalender.
+skins-title: Tampilan
+skins-material: Material
+skins-contrast-black: Kontras Hitam
+skins-terrace: Terrace
+skins-flat: Datar
+skins-contrast-white: Kontras Putih
+links-title: Tautan
+first-hour-description: 'Untuk mengubah jam pertama tampilan kalender:'
+last-hour-title: Jam Terakhir
+last-hour-description: 'Untuk mengubah jam terakhir dari tampilan kalender:'
+time-increment-10: 10 menit
+time-increment-15: 15 menit
+time-increment-30: 30 menit
+time-increment-60: 1 jam
+language-title: Bahasa
