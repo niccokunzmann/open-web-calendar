@@ -256,8 +256,15 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.14
+  - Improve Indonesian translation by Reza Almanda
+  - Improve Spanish translation by zyloj
+  - Improve Polish translation by Eryk Michalak
+  - Update dependencies
+  - do not test Python 3.7 any more
+  - test Python 3.11
 - v1.13
-  - Improve French calendar
+  - Improve French translation
   - Update dependencies
 - v1.12
   - Add Croatian UI by Milo Ivir
