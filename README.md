@@ -256,6 +256,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.15
+  - Update dependecies
 - v1.14
   - Improve Indonesian translation by Reza Almanda
   - Improve Spanish translation by zyloj
