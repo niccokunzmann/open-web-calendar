@@ -4,6 +4,8 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
+backports-zoneinfo==0.2.1
+    # via icalendar
 cachelib==0.9.0
     # via flask-caching
 certifi==2022.12.7
@@ -12,7 +14,7 @@ charset-normalizer==2.0.12
     # via requests
 click==8.1.2
     # via flask
-flask==2.1.3
+flask==2.2.5
     # via
     #   -r requirements.in
     #   flask-caching
@@ -27,12 +29,18 @@ icalendar==5.0.4
     #   x-wr-timezone
 idna==3.4
     # via requests
+importlib-metadata==6.7.0
+    # via
+    #   click
+    #   flask
 itsdangerous==2.1.2
     # via flask
 jinja2==3.1.1
     # via flask
 markupsafe==2.1.1
-    # via jinja2
+    # via
+    #   jinja2
+    #   werkzeug
 python-dateutil==2.8.2
     # via
     #   icalendar
@@ -50,12 +58,16 @@ requests==2.28.2
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
+typing-extensions==4.7.1
+    # via importlib-metadata
 urllib3==1.26.14
     # via requests
-werkzeug==2.1.1
+werkzeug==2.2.3
     # via flask
 x-wr-timezone==0.0.5
     # via recurring-ical-events
+zipp==3.15.0
+    # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
