@@ -305,6 +305,33 @@ Changelog
   - Create the changelog.
   - Add support for colors from ICS calendars, see [Issue #52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88).
 
+Update Dependencies
+-------------------
+
+1. Enter your virtual environment. E.g.
+   ```
+   source .tox/py39/bin/activate
+   ```
+2. Install all dependencies:
+   ```
+   pip install -r requirements.in -r test-requirements.in pip-tools
+   ```
+3. Fix the dependencies:
+   ```
+   rm *requirements.txt
+   pip-compile --output-file=requirements.txt requirements.in
+   pip-compile --output-file=test-requirements.txt test-requirements.in
+   ```
+4. Create a branch, commit:
+   ```
+   git branch -d update
+   git checkout -b update
+   git add *requirements.txt
+   git commit -m"Update dependencies"
+   git push -u origin update
+   ```
+5. Create a Pull Request and see if the tests run.
+
 Release a new Version
 ---------------------
 
