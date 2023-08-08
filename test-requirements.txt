@@ -21,7 +21,7 @@ h11==0.14.0
     # via wsproto
 idna==3.4
     # via trio
-importlib-metadata==6.7.0
+importlib-metadata==6.8.0
     # via
     #   attrs
     #   pluggy
