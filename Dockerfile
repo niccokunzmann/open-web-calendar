@@ -14,7 +14,7 @@ ENV PYTHONUNBUFFERED=true
 
 # Install Packages
 ADD requirements.txt .
-RUN pip install --upgrade --no-cache-dir -r requirements.txt
+RUN pip install --upgrade --no-cache-dir pip && pip install --upgrade --no-cache-dir -r requirements.txt
 
 # Start service
 ENTRYPOINT ["/bin/sh", "start-service.sh"]
