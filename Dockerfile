@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.9.16-alpine
 
 # make pip also use piwheels
 ADD pip.conf /etc/pip.conf
