@@ -150,7 +150,7 @@ def render_app_template(template, specification):
         configuration = get_configuration(),
         json=json,
         get_query_string=get_query_string,
-        html=lambda id: translate.html(specification["language"], translation_file, id)
+        html=lambda id, **template_replacements: translate.html(specification["language"], translation_file, id, **template_replacements)
     )
 
 @app.route("/calendar.<type>", methods=['GET', 'OPTIONS'])
