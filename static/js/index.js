@@ -323,23 +323,9 @@ function fillLanguageChoice() {
 }
 
 function fillTimezoneChoice() {
-    // inform the user
-    var timezone = getTimezone();
-    var timezoneInfo = document.getElementById("timezone-info");
-    timezoneInfo.innerText = timezone;
-    var select = document.getElementById("select-timezone");
-    var option = document.createElement("option");
-    option.text = option.value = timezone;
-    select.appendChild(option);
-    configuration.timezones.forEach(function (timezone){
-        var option = document.createElement("option");
-        option.text = option.value = timezone;
-        select.appendChild(option);
-    });
-    select.value = configuration.default_specification.timezone;
-    changeSpecificationOnChange(select);
+    fillTimezoneUIElements()
+    changeSpecificationOnChange(document.getElementById("select-timezone"));
 }
-
 
 function initializeSkinChoice() {
     var select = document.getElementById("select-skin");
