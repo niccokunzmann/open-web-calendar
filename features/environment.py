@@ -14,6 +14,7 @@ from app import app
 from werkzeug import run_simple
 import multiprocessing
 from selenium.webdriver import FirefoxOptions
+from selenium.webdriver.firefox.service import Service
 import tempfile
 from selenium.webdriver.common.by import By
 import shutil
@@ -29,7 +30,15 @@ def browser_firefox(context):
     # see https://stackoverflow.com/a/47642457/1320237
     opts = FirefoxOptions()
     opts.add_argument("--headless")
-    context.browser = browser = Firefox(options=opts)
+    # specify firefox executible and gecko drivers
+    # see https://stackoverflow.com/a/76852633
+    geckodriver_path = "/snap/bin/geckodriver"  # specify the path to your geckodriver
+    if os.path.exists(geckodriver_path):
+        driver_service = Service(executable_path=geckodriver_path)
+        browser = Firefox(options=opts, service=driver_service)
+    else:
+        browser = Firefox(options=opts)
+    context.browser = browser
     browser.set_page_load_timeout(10)
     yield context.browser
     # -- CLEANUP-FIXTURE PART:
@@ -75,7 +84,7 @@ def app_server(context):
 @fixture
 def calendars_server(context):
     """Start the flask app in a server."""
-    calendar_port = get_free_port()
+    calendar_port = 8001
     # from https://werkzeug.palletsprojects.com/en/2.1.x/serving/#shutting-down-the-server
     # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
     p = multiprocessing.Process(target=serve_calendar_files, args=("localhost", calendar_port))
