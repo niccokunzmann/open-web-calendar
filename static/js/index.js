@@ -2,8 +2,6 @@
  *
  */
 
-const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
-const CALENDAR_ENDPOINT = "/calendar.html";
 const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/default_specification.yml";
 const USER_PREFERRED_LANGUAGE = navigator.language.split("-")[0]; // credits to https://stackoverflow.com/a/3335420/1320237
 const RAW_GITHUB_STATIC_URL = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static"; // content served by the open web calendar and statically on github
@@ -46,18 +44,6 @@ function getUrls() {
         }
     }
     return urls;
-}
-
-function getCalendarUrl(specification) {
-    var url = DEFAULT_URL + CALENDAR_ENDPOINT + "?";
-    var parameters = [];
-    getOwnProperties(specification).forEach(function(property) {
-        (Array.isArray(specification[property]) ? specification[property].length ? specification[property] : [""] : [specification[property]]
-        ).forEach(function(url){
-            parameters.push(encodeURIComponent(property) + "=" + encodeURIComponent("" + url))
-        });
-    });
-    return url + parameters.join("&");
 }
 
 /* This is called after the inputs changed.
@@ -245,19 +231,6 @@ function escapeHtml(unsafe) {
          .replace(/'/g, "&#039;");
 }
 
-/* Return the properties of an object.
- *
- */
-function getOwnProperties(object) {
-    // from https://stackoverflow.com/a/16735184/1320237
-    var ownProperties = [];
-    for (var property in object) {
-        if (object.hasOwnProperty(property)) {
-            ownProperties.push(property);
-        }
-    }
-    return ownProperties;
-}
 
 function downloadJSONSpecification() {
     var specification = getSpecification();
@@ -323,7 +296,7 @@ function fillLanguageChoice() {
 }
 
 function fillTimezoneChoice() {
-    fillTimezoneUIElements()
+    fillTimezoneUIElements(configuration.default_specification.timezone)
     changeSpecificationOnChange(document.getElementById("select-timezone"));
 }
 

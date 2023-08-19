@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from urllib.parse import urlencode
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
 
 
 def specification_to_query(spec):
@@ -92,7 +93,7 @@ def step_impl(context, dropdown_text):
     assert options, f"Could not find option with text {repr(dropdown_text)}"
     assert len(options) == 1, f"Expected one option but found many: {', '.join(repr(o.get_attribute('innerText')) for o in options)}"
     option = options[0]
-    option.set_attribute("selected", True)
+    option.click() # see https://stackoverflow.com/a/7972225/1320237
     wait_for_calendar_to_load(context)
 
 
