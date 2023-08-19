@@ -48,13 +48,15 @@ def string(language: str, file: str, id: str) -> str:
             return source[id]
     raise KeyError(f"The translation id '{id}' was not to be found in any file.")
 
-def html(language: str, file: str, id: str) -> str:
+def html(language: str, file: str, id: str, **template_replacements) -> str:
     """Translate the string identified
     by language, file and id and return an html element.
     
     Any id ending in -html will not be escaped but treated as raw HTML.
     """
     inner_text = string(language, file, id)
+    if template_replacements:
+        inner_text = inner_text.format(**template_replacements)
     if not id.endswith("-html"):
         inner_text = escape(inner_text)
     id = escape(id)

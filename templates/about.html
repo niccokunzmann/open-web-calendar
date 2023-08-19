@@ -10,6 +10,9 @@
         <script type="text/javascript">
             var specification = {{ specification | tojson | safe }};
         </script>
+        <script src="configuration.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/about.js"></script>
     </head>
     <body>
         <header>
@@ -23,6 +26,13 @@
                 <li><a href="/calendar.html{{ get_query_string() | safe }}">{{ html("links-website") }}</a></li>
                 <li><a href="/calendar.ics{{ get_query_string() | safe }}">{{ html("links-ics") }}</a></li>
                 <li><a href="/calendar.spec{{ get_query_string() | safe }}">{{ html("links-spec") }}</a></li>
+                <li>
+                    {{ html("timezone-choice") }}
+                    <select id="select-timezone" onchange="loadCalendarInDifferentTimeZone()">
+                    </select>
+                    {{ html("timezone-browser") }}
+                    <span class="timezone-of-browser"">{{ html("index.loading") }}</span>
+                  </li>
             </ul>
             <h2>{{ html("project-title") }}</h2>
             <p class="description">

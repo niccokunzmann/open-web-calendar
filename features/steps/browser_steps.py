@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from urllib.parse import urlencode
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
 
 
 def specification_to_query(spec):
@@ -30,6 +31,9 @@ def step_impl(context, date):
     url = context.index_page + "calendar.html?" + specification_to_query(context.specification)
     context.browser.get(url)
     print(f"Visiting {url}")
+    wait_for_calendar_to_load(context)
+
+def wait_for_calendar_to_load(context):
     # wait until the loader has stopped spinning
     # see https://stackoverflow.com/a/53242626/1320237
     # see https://stackoverflow.com/a/26567563/1320237
@@ -75,5 +79,21 @@ def step_impl(context, text):
 @then(u'we can see the text "{text}"')
 def step_impl(context, text):
     assert text in get_body_text(context)
+
+@when(u"we open the about page")
+def step_impl(context):
+    print([x for x in dir(context.browser) if "find" in x ])
+    button = context.browser.find_element(By.ID, "infoIcon")
+    button.click()
+    WebDriverWait(context.browser, 10).until(EC.presence_of_element_located((By.ID, "translate-license")))
+
+@when(u'we select "{dropdown_text}"')
+def step_impl(context, dropdown_text):
+    options = context.browser.find_elements(By.XPATH, f"//option[contains(text(), {repr(dropdown_text)})]")
+    assert options, f"Could not find option with text {repr(dropdown_text)}"
+    assert len(options) == 1, f"Expected one option but found many: {', '.join(repr(o.get_attribute('innerText')) for o in options)}"
+    option = options[0]
+    option.click() # see https://stackoverflow.com/a/7972225/1320237
+    wait_for_calendar_to_load(context)
 
 

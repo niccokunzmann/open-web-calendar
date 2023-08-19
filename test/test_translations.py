@@ -20,16 +20,18 @@ def test_translate(language, file, id, expected_value):
 
 
 @pytest.mark.parametrize(
-    "language,id,value",
+    "language,id,value,fill",
     [
-        ("en", "id2", '<span id="translate-id2" class="translation">test2</span>'), 
-        ("en", "test-html", '<span id="translate-test-html" class="translation"><b>Hi!</b></span>'), 
-        ("en", "check-escape", '<span id="translate-check-escape" class="translation">&lt;nanana&gt;</span>'), 
+        ("en", "id2", '<span id="translate-id2" class="translation">test2</span>', {}), 
+        ("en", "test-html", '<span id="translate-test-html" class="translation"><b>Hi!</b></span>', {}), 
+        ("en", "check-escape", '<span id="translate-check-escape" class="translation">&lt;nanana&gt;</span>', {}),
+        ("en", "format-argument", '<span id="translate-format-argument" class="translation">This is a nice day!</span>', {"sunny": "nice"}), 
+        ("en", "format-argument", '<span id="translate-format-argument" class="translation">This is a rainy day!</span>', {"sunny": "rainy"}), 
     ]
 )
-def test_convert_html(language, id, value):
+def test_convert_html(language, id, value, fill):
     """Check that html conversion works."""
-    assert translate.html(language, "_test", id) == value
+    assert translate.html(language, "_test", id, **fill) == value
 
 
 @pytest.mark.parametrize("language", ["en", "de"])
