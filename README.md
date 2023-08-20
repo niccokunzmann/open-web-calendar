@@ -256,6 +256,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.16
+  - Add a dropdown to choose another time zone to view the calendar in the about screen, see [Issue #213](https://github.com/niccokunzmann/open-web-calendar/issues/213).
 - v1.15
   - Update dependecies
 - v1.14
@@ -263,8 +265,8 @@ Changelog
   - Improve Spanish translation by zyloj
   - Improve Polish translation by Eryk Michalak
   - Update dependencies
-  - do not test Python 3.7 any more
-  - test Python 3.11
+  - Do not test Python 3.7 any more
+  - Test Python 3.11
 - v1.13
   - Improve French translation
   - Update dependencies
