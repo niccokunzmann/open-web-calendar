@@ -8,11 +8,13 @@ Open Web Calendar
 You might want to:
 - **[Try&nbsp;it&nbsp;out][web]**
 - [Donate using Open Collective][open-collective]
+- [Fund specific issues with Polar][polar]
 - [Donate using GitHub Sponsors][github-sponsors]
 - [See other ways of contributing][donation]
 
 [open-collective]: https://opencollective.com/open-web-calendar/
 [github-sponsors]: https://github.com/sponsors/niccokunzmann
+[polar]: https://polar.sh/niccokunzmann/open-web-calendar
 
 Python: 3.7, 3.8, 3.9, 3.10
 
@@ -42,6 +44,7 @@ There are several ways in which you can help this project:
 
 - [Use it][web] and [report errors][issues]
 - [Donate using Open Collective][open-collective]
+- [Fund specific issues with Polar][polar]
 - [Donate using GitHub Sponsors][github-sponsors]
 - [Translate this project][translate]
 - Have a look at [open issues][issues] e.g. those especially to get started, labelled [good first issue][good-first-issue], leave a note and work on it. 
