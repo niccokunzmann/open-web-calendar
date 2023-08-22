@@ -6,3 +6,5 @@ links-spec: Pogledaj ili preuzmi specifikaciju kalendara.
 license: Licenca
 description: Daljnje informacije o kalendaru. Pogledaj donje poveznice za različite
   načine korištenja kalendara.
+timezone-browser: 'Ovo je vremenska zona tvog uređaja:'
+timezone-choice: 'Ovdje možeš promijeniti vremensku zonu kalendara:'
