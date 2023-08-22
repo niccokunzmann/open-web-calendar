@@ -2,8 +2,10 @@ Open Web Calendar
 =================
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/niccokunzmann/open-web-calendar/run-tests.yml?logo=github)](https://github.com/niccokunzmann/open-web-calendar/actions)
-[![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)][open-collective]
 [![build and publish the Docker image](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml/badge.svg)](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml)
+[![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)][open-collective]
+[![Fund Issues with Polar](https://img.shields.io/github/issues/niccokunzmann/open-web-calendar/polar?label=issues%20seek%20funding&color=%23374e96)](https://polar.sh/niccokunzmann/open-web-calendar)
+
 
 You might want to:
 - **[Try&nbsp;it&nbsp;out][web]**
