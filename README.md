@@ -236,27 +236,6 @@ tox -e py39
 
 [web]: https://open-web-calendar.hosted.quelltext.eu/
 
-### Updating Dependencies
-
-We use `pip-compile` to guarantee a
-tested deployment by fixing all
-the dependencies to a specific
-version.
-
-You can update the packages to the latest version:
-
-```
-rm requirements.txt test-requirements.txt
-pip install --upgrade pip-tools -r requirements.in -r test-requirements.in
-pip-compile -o requirements.txt requirements.in
-pip-compile -o test-requirements.txt test-requirements.in
-```
-
-And run the tests:
-```
-tox
-```
-
 Changelog
 ---------
 [changelog]: #changelog
