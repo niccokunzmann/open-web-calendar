@@ -261,6 +261,10 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.17
+  - Add User-Agent header, see [Issue #225](https://github.com/niccokunzmann/open-web-calendar/issues/225).
+  - Close security vulnerability, [Pull Request #223](https://github.com/niccokunzmann/open-web-calendar/pull/223)
+  - Update German, Welsh, Croatian
 - v1.16
   - Add a dropdown to choose another time zone to view the calendar in the about screen, see [Issue #213](https://github.com/niccokunzmann/open-web-calendar/issues/213).
 - v1.15
