@@ -34,6 +34,9 @@ CALENDAR_TEMPLATE_FOLDER = os.path.join(TEMPLATE_FOLDER, CALENDARS_TEMPLATE_FOLD
 STATIC_FOLDER_NAME = "static"
 STATIC_FOLDER_PATH = os.path.join(HERE, STATIC_FOLDER_NAME)
 DHTMLX_LANGUAGES_FILE = os.path.join(STATIC_FOLDER_PATH, "js", "dhtmlx", "locale", "languages.json")
+DEFAULT_REQUEST_HEADERS = {
+  "user-agent": "open-web-calendar",
+}
 
 # specification
 PARAM_SPECIFICATION_URL = "specification_url"
@@ -109,7 +112,7 @@ def get_text_from_url(url):
     """
     if __URL_CACHE:
         return __URL_CACHE[url]
-    return requests.get(url).content
+    return requests.get(url, headers=DEFAULT_REQUEST_HEADERS).content
 
 def get_default_specification():
     """Return the default specification."""
