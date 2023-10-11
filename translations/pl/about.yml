@@ -6,3 +6,5 @@ links-website: Wróć, aby wyświetlić kalendarz.
 project-title: O projekcie Open Web Calendar
 description: Tutaj znajdziesz więcej informacji o kalendarzu. Spójrz na poniższe linki,
   aby wykorzystać ten kalendarz na różne sposoby.
+timezone-choice: 'Tutaj możesz zmienić strefę czasową kalendarza:'
+timezone-browser: 'To jest strefa czasowa Twojego urządzenia:'
