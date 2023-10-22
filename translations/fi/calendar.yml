@@ -3,8 +3,8 @@ date_month_full_feb: "Helmikuu"
 date_month_full_mar: "Maaliskuu"
 date_month_full_apr: "Huhtikuu"
 date_month_full_may: "Toukokuu"
-date_month_full_jun: "Kes&auml;kuu"
-date_month_full_jul: "Hein&auml;kuu"
+date_month_full_jun: "Kesäkuu"
+date_month_full_jul: "Heinäkuu"
 date_month_full_aug: "Elokuu"
 date_month_full_sep: "Syyskuu"
 date_month_full_oct: "Lokakuu"
@@ -47,3 +47,11 @@ labels_date: "Päivämäärä"
 labels_description: "Kuvaus"
 labels_week_agenda_tab: "Esityslista"
 language-en: "Finnish"
+labels_day: Päivä
+labels_prev: Edellinen
+labels_minute: Minuutti
+labels_year: Vuosi
+labels_next: Seuraava
+labels_hour: Tunti
+language: Suomi
+labels_month: Kuukausi
