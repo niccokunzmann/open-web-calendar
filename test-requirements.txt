@@ -21,11 +21,6 @@ h11==0.14.0
     # via wsproto
 idna==3.4
     # via trio
-importlib-metadata==6.8.0
-    # via
-    #   attrs
-    #   pluggy
-    #   pytest
 iniconfig==2.0.0
     # via pytest
 outcome==1.2.0
@@ -42,7 +37,7 @@ pluggy==1.2.0
     # via pytest
 pysocks==1.7.1
     # via urllib3
-pytest==7.4.0
+pytest==7.4.3
     # via -r test-requirements.in
 selenium==4.11.2
     # via -r test-requirements.in
@@ -62,11 +57,7 @@ trio==0.22.2
     #   trio-websocket
 trio-websocket==0.10.3
     # via selenium
-typing-extensions==4.7.1
-    # via importlib-metadata
 urllib3[socks]==2.0.3
     # via selenium
 wsproto==1.2.0
     # via trio-websocket
-zipp==3.16.1
-    # via importlib-metadata
