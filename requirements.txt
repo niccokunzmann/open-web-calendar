@@ -56,7 +56,7 @@ requests==2.31.0
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
-urllib3==2.0.3
+urllib3==2.0.7
     # via requests
 werkzeug==2.3.6
     # via flask
