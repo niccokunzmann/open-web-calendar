@@ -39,7 +39,7 @@ pysocks==1.7.1
     # via urllib3
 pytest==7.4.3
     # via -r test-requirements.in
-selenium==4.11.2
+selenium==4.14.0
     # via -r test-requirements.in
 six==1.16.0
     # via
