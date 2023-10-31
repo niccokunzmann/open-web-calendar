@@ -240,6 +240,12 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.18
+  - Update dependencies
+  - Update Finnish by Teemu
+  - Update Slovak by Milan Šalka
+  - Update Polish by Piotr Strebski
+  - Update Japanese by onokatio
 - v1.17
   - Add User-Agent header, see [Issue #225](https://github.com/niccokunzmann/open-web-calendar/issues/225).
   - Close security vulnerability, [Pull Request #223](https://github.com/niccokunzmann/open-web-calendar/pull/223)
