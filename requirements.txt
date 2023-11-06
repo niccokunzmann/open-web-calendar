@@ -14,7 +14,7 @@ charset-normalizer==3.2.0
     # via requests
 click==8.1.4
     # via flask
-flask==2.3.2
+flask==3.0.0
     # via
     #   -r requirements.in
     #   flask-caching
