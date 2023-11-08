@@ -49,7 +49,7 @@ There are several ways in which you can help this project:
 - [Fund specific issues with Polar][polar]
 - [Donate using GitHub Sponsors][github-sponsors]
 - [Translate this project][translate]
-- Have a look at [open issues][issues] e.g. those especially to get started, labelled [good first issue][good-first-issue], leave a note and work on it. 
+- Have a look at [open issues][issues] e.g. those especially to get started, labelled [good first issue][good-first-issue], leave a note and work on it.
 
 [issues]: https://github.com/niccokunzmann/open-web-calendar/issues
 [good-first-issue]: https://github.com/niccokunzmann/open-web-calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
@@ -215,7 +215,7 @@ see the [app.json] file.
 ## Running Tests
 
 To run the tests, we use `tox`.
-`tox` tests all different Python versions which we want to 
+`tox` tests all different Python versions which we want to
 be compatible to.
 
 ```
@@ -240,6 +240,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.19
+  - Update dependencies
 - v1.18
   - Update dependencies
   - Update Finnish by Teemu
