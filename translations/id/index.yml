@@ -27,3 +27,14 @@ time-increment-15: 15 menit
 time-increment-30: 30 menit
 time-increment-60: 1 jam
 language-title: Bahasa
+time-increment-description: 'Perubahan kenaikan waktu dalam tampilan hari & minggu:'
+style-title: Gaya Khusus dengan CSS
+skins-description: Anda dapat memilih gaya yang berbeda untuk kalender.
+links-blank: Buka dokumen terkait di jendela atau tab baru.
+links-self: Buka dokumen terkait dalam bingkai yang sama seperti diklik.
+links-description: Acara mungkin memiliki lokasi dan URL. Jika Anda mengembed kalender
+  ke situs web, Anda dapat memilih di mana tautan yang diklik membuka halaman.
+links-parent: Buka dokumen terkait dalam bingkai induk.
+links-top: Buka dokumen terkait di tubuh penuh jendela.
+start-of-week-description: Minggu dapat dimulai pada hari Senin atau Minggu.
+start-of-week-title: Mulai hari pekan
