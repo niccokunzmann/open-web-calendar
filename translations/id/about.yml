@@ -6,3 +6,5 @@ links-ics: Gunakan tautan ini untuk berlangganan kalender atau menambahkan acara
 links-spec: Lihat atau unduh spesifikasi kalender.
 project-title: Tentang Proyek Open Web Calendar
 license: Lisensi
+timezone-choice: 'Anda dapat memilih untuk mengubah zona waktu kalender di sini:'
+timezone-browser: 'Ini adalah zona waktu perangkat Anda:'
