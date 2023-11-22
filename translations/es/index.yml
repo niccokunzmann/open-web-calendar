@@ -1,1 +1,84 @@
-{}
+style-date: Puede cambiar el color del fondo de la fecha actual.
+spec-link: 'Después de publicar la especificación en algún lugar en línea, puede crear
+  un enlace como este:'
+title-title: Título
+time-increment-title: Incremento del tiempo
+time-increment-description: 'Cambiar el incremento de tiempo en la vista del día y
+  la semana:'
+skins-contrast-black: Contraste negro
+controls-date: Fecha
+style-title: Estilo personalizado con CSS
+tabs-title: Pestañas del calendario
+starting-date-description: 'Para cambiar la fecha de inicio del calendario:'
+skins-flat: Plano
+spec-description: 'El calendario se puede generar no sólo utilizando la dirección
+  URL, sino también mediante una especificación JSON o YAML de un archivo. La personalización
+  anterior genera esta especificación:'
+calendar-code-execution: Puede consultar el calendario resultante a continuación.
+style-description: Puedes cambiar el color de tu calendario y muchas más propiedades
+  usando CSS. Tu personalización tiene prioridad sobre el diseño que elijas. A continuación,
+  puedes elegir entre algunas personalizaciones que hemos preparado para ti.
+style-css: Si lo desea, puede especificar sus propias propiedades CSS.
+skins-description: Puedes seleccionar diferentes diseños para el calendario.
+timezone-description: 'La zona horaria se toma del navegador del usuario. Si desea
+  que su calendario se fije en una zona horaria, tiene la siguiente opción. Su navegador
+  utiliza esta zona horaria:'
+calendar-urls: 'Para fusionar varios calendarios, introduzca aquí las direcciones
+  URL de los calendarios ICS:'
+translate: Traducir
+links-blank: Abra el documento vinculado en una nueva ventana o pestaña.
+style-days: Si quieres que los días tengan un color diferente, también puedes especificarlo.
+language-title: Idioma
+links-self: Abra el documento vinculado en el mismo marco en el que se hizo clic.
+skins-contrast-white: Contraste claro
+timezone-title: Zona horaria
+spec-host-html: Puede <a href="javascript:downloadJSONSpecification()">descargar esta
+  especificación</a> y colocarla en algún lugar de la web. De esta forma sigues teniendo
+  el control sobre la personalización del calendario después de haber compartido el
+  enlace, por ejemplo, en GitHub en un <a href="https://gist.github.com/">Gist</a>.
+calendar-code: 'Para insetar el calendario, utilice este código en su página web:'
+last-hour-title: Última hora
+links-title: Enlaces
+tabs-description: 'La vista mensual se muestra primero pero puedes cambiar lo que
+  más te convenga:'
+title-description: 'Para cambiar el título, por favor introduzca aquí el nombre del
+  calendario:'
+skins-terrace: Adosados
+spec-title: Alojamiento de la especificación
+skins-title: Diseños
+language-description: Puedes configurar el idioma del calendario.
+section-customization: Puede personalizar aún más el calendario.
+first-hour-description: 'Para cambiar la hora de inicio de la vista del calendario:'
+about: Open Web Calendar utiliza calendarios ICS/ICal en línea y los muestra en un
+  solo calendario. Puede utilizarlo con Nextcloud, Outlook, Google Calendar, Meetup
+  y otros sistemas de calendario que utilicen el estándar ICS.
+links-description: Los eventos pueden tener ubicaciones y direcciones URL. Si inserta
+  el calendario en una página web, puede elegir dónde se abre la página al hacer clic
+  en el enlace.
+loader-default: Animación circular
+style-background: Puedes cambiar el color de fondo del calendario.
+loader-description: En algunos casos, el servidor tarda bastante en cargar el calendario.
+  En caso de que el servidor utilice un plan gratuito en Heroku, el servidor debe
+  iniciarse primero.
+last-hour-description: 'Para cambiar la última hora de la vista del calendario:'
+time-increment-30: 30 minutos
+loader-none: Sin animación
+style-click: Puede cambiar el color de los elementos sobre los que se puede hacer
+  clic.
+style-days-outside: Algunos días del calendario tienen un color diferente si no están
+  dentro del mes.
+links-parent: Abra el documento vinculado en el marco principal.
+time-increment-60: 1 hora
+time-increment-10: 10 minutos
+loading: cargando…
+loader-title: Cargando la animación
+skins-material: Material
+starting-date-title: Fecha de inicio
+links-top: Abra el documento vinculado en una ventana entera.
+controls-description: 'Es posible que no desee mostrar todos los controles para que
+  los vean los usuarios. Elija aquí qué controles le gustaría mostrar:'
+timezone-browser: utilizar la zona horaria del navegador
+first-hour-title: Hora de inicio
+time-increment-15: 15 minutos
+start-of-week-description: La semana puede empezar el Lunes o el Domingo.
+start-of-week-title: Inicio de la semana
