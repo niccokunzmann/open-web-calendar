@@ -23,7 +23,7 @@ date_day_full_fri: "Viernes"
 date_day_full_sat: "Sábado"
 date_day_short_sun: "Dom"
 date_day_short_mon: "Lun"
-date_day_short_tue: "Mar"
+date_day_short_tue: "Ma."
 date_day_short_wed: "Mié"
 date_day_short_thu: "Jue"
 date_day_short_fri: "Vie"
@@ -34,13 +34,13 @@ labels_week_tab: "Semana"
 labels_month_tab: "Mes"
 labels_section_description: "Descripción"
 labels_section_time: "Período"
-labels_agenda_tab: "Día"
+labels_agenda_tab: "Agenda"
 labels_date: "Fecha"
 labels_description: "Descripción"
-labels_week_agenda_tab: "Día"
+labels_week_agenda_tab: "Agenda"
 language-en: "Spanish"
 date_month_short_feb: Feb
-date_month_short_mar: Mar
+date_month_short_mar: Mar.
 date_month_short_may: May
 date_month_short_jun: Jun
 date_month_short_jul: Jul
@@ -54,4 +54,4 @@ labels_minute: Minuto
 labels_month: Mes
 labels_day: Día
 date_month_short_nov: Nov
-language: Inglés
+language: Español
