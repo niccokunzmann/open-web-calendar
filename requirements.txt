@@ -52,7 +52,7 @@ pytz==2023.3
     #   x-wr-timezone
 pyyaml==6.0.1
     # via -r requirements.in
-recurring-ical-events==2.1.0
+recurring-ical-events==2.1.1
     # via -r requirements.in
 requests==2.31.0
     # via -r requirements.in
