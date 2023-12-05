@@ -135,7 +135,7 @@ def get_specification(query=None):
         specification.update(url_specification_values)
     for parameter in query:
         # get a list of arguments
-        # see http://werkzeug.pocoo.org/docs/0.14/datastructures/#werkzeug.datastructures.MultiDict
+        # see https://web.archive.org/web/20230325034825/https://werkzeug.palletsprojects.com/en/0.14.x/datastructures/
         value = query.getlist(parameter, None)
         if len(value) == 1:
             value = value[0]
