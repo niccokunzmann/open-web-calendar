@@ -164,7 +164,7 @@ Research
   - https://sourceforge.net/projects/phpicalendar/
 - https://icalendar.readthedocs.io/
 - https://github.com/rianjs/ical.net
-- https://stackoverflow.com/questions/4671764/is-there-a-javascript-calendar-that-takes-an-ical-link-as-input-to-display-event
+- https://web.archive.org/web/20210201222328/https://stackoverflow.com/questions/4671764/is-there-a-javascript-calendar-that-takes-an-ical-link-as-input-to-display-event
 - https://www.webgui.org/content-managers-guide-wiki/calendar
 - https://www.quora.com/What-calendars-can-I-embed-in-my-website-that-arent-Google-Calendar
 
