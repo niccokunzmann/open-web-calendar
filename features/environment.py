@@ -1,6 +1,6 @@
 """Browser fixture setup and teardown
 
-see https://behave.readthedocs.io/en/stable/practical_tips.html
+see https://behave.readthedocs.io/en/stable/practical_tips.html#selenium-example
 """
 import  sys
 import os
