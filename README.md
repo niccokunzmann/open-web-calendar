@@ -152,7 +152,7 @@ You can deploy the app using Heroku.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Heroku uses [gunicorn](http://flask.pocoo.org/docs/dev/deploying/wsgi-standalone/#gunicorn)
+Heroku uses [gunicorn](https://gunicorn.org/)
 to run the server, see the [Procfile](Procfile).
 
 Research
