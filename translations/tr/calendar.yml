@@ -11,7 +11,7 @@ date_month_full_oct: "Ekim"
 date_month_full_nov: "Kasým"
 date_month_full_dec: "Aralýk"
 date_month_short_jan: "Oca"
-date_month_short_feb: "Þub"
+date_month_short_feb: "Şub"
 date_month_short_apr: "Nis"
 date_month_short_jun: "Haz"
 date_month_short_jul: "Tem"
@@ -45,3 +45,13 @@ labels_date: "Tarih"
 labels_description: "Açýklama"
 labels_week_agenda_tab: "Ajanda"
 language-en: "Turkish"
+labels_day: Gün
+labels_prev: Önceki
+labels_minute: Dakika
+labels_year: Yıl
+labels_next: Sonraki
+labels_hour: Saat
+date_month_short_mar: Mar
+date_month_short_may: May
+language: Türkçe
+labels_month: Ay
