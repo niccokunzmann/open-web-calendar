@@ -1,4 +1,4 @@
-[]![Open Web Calendar](static/img/logo/github-social-preview.png)][web]
+[![Open Web Calendar](static/img/logo/github-social-preview.png)][web]
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/niccokunzmann/open-web-calendar/run-tests.yml?logo=github)](https://github.com/niccokunzmann/open-web-calendar/actions)
 [![build and publish the Docker image](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml/badge.svg)](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml)
