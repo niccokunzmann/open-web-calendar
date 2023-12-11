@@ -47,3 +47,11 @@ labels_date: "日期"
 labels_description: "说明"
 labels_week_agenda_tab: "议程"
 language-en: "Chinese"
+labels_day: 日
+labels_prev: 上一步
+labels_minute: 分
+labels_year: 年
+labels_next: 下一步
+labels_hour: 时
+language: 用你的工作语言来翻译这段话。这是为了引导用户正确选择翻译语言。例如一位引导德语人士，选择“德语”，而非“英语”这种不熟悉的语言。
+labels_month: 月
