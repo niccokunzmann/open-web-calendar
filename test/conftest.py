@@ -19,6 +19,35 @@ def no_requests(monkeypatch):
                            " Internet. You can use cache_url() to mock that.")
     monkeypatch.setattr(requests.sessions.Session, "request", test_cannot_call_outside)
 
+
 @pytest.fixture()
 def mock():
     return Mock()
+
+
+@pytest.fixture()
+def app():
+    """Create the app.
+
+    See https://flask.palletsprojects.com/en/2.2.x/testing/
+    """
+    from app import app
+    app.config.update({
+        "TESTING": True,
+    })
+
+    # other setup can go here
+
+    yield app
+
+    # clean up / reset resources here
+
+
+@pytest.fixture()
+def client(app):
+    return app.test_client()
+
+
+@pytest.fixture()
+def runner(app):
+    return app.test_cli_runner()
