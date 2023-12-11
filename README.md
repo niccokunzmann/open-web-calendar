@@ -240,6 +240,12 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.20
+  - Turkish translation by Oğuz Ersen
+  - Spanish translation by gallegonovato
+  - Indonesian translation by Reza Almanda
+  - update dependencies
+  - correct links
 - v1.19
   - Update dependencies
 - v1.18
