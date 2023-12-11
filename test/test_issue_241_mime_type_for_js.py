@@ -21,4 +21,6 @@ def test_mime_type_of_configuration_js(client, js_url):
     """Check the Content-Type header.
     """
     response = client.get(js_url)
-    assert "application/javascript" in response.content_type
+    assert \
+        "application/javascript" in response.content_type or \
+        "text/javascript" in response.content_type

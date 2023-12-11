@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template, make_response, request, jsonify, \
-    redirect, send_from_directory
+    redirect, send_from_directory, Response
 from flask_caching import Cache
 import json
 import os
@@ -77,7 +77,7 @@ def add_header(r):
 def get_configuration():
     """Return the configuration for the browser"""
     config = {
-        "default_specification": get_default_specification(), 
+        "default_specification": get_default_specification(),
         "timezones": pytz.all_timezones, # see https://stackoverflow.com/a/13867319
         "dhtmlx": {
             "languages": translate.dhtmlx_languages()
@@ -101,6 +101,15 @@ def set_js_headers(func):
     def with_js_response(*args, **kw):
         return set_JS_headers(func(*args, **kw))
     return with_js_response
+
+
+def make_js_file_response(content:str) -> Response:
+    """Modify the response to set the content type for .js files."""
+    response = make_response(content)
+    set_JS_headers(response)
+    response.headers['Content-Type'] = "application/javascript"
+    return response
+
 
 @cache.memoize(
     CACHE_REQUESTED_URLS_FOR_SECONDS,
@@ -167,7 +176,7 @@ def get_calendar(type):
     if type == "events.json":
         strategy = ConvertToDhtmlx(specification, get_text_from_url)
         strategy.retrieve_calendars()
-        return strategy.merge()    
+        return strategy.merge()
     if type == "ics":
         strategy = ConvertToICS(specification, get_text_from_url)
         strategy.retrieve_calendars()
@@ -201,11 +210,12 @@ def serve_about():
 
 @app.route("/configuration.js")
 def serve_configuration():
-    return "/* generated */\nconst configuration = {};".format(json.dumps(get_configuration()))
+    return make_js_file_response("/* generated */\nconst configuration = {};".format(json.dumps(get_configuration())))
 
 @app.route("/locale_<lang>.js")
 def serve_locale(lang):
-    return render_template("locale.js", locale=json.dumps(translate.dhtmlx(lang), indent="  "))
+    """Serve the locale translations for the web frontend DHTMLX."""
+    return make_js_file_response(render_template("locale.js", locale=json.dumps(translate.dhtmlx(lang), indent="  ")))
 
 @app.errorhandler(500)
 def unhandledException(error):
