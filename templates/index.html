@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/index.css"
             rel="stylesheet" type="text/css" charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
         <script src="js/index.js"></script>
         <script src="js/common.js"></script>
         <script src="configuration.js"></script>
@@ -25,7 +26,7 @@
             <div class="section languages">
                 <p>
                     {%- for name, code, percent in configuration["index"]["languages"]: %}
-                        <a class="{{ ('current' if code == specification['language'] else '') }}" href="/index.html?language={{code}}">{{ name }} 
+                        <a class="{{ ('current' if code == specification['language'] else '') }}" href="/index.html?language={{code}}">{{ name }}
                         {%- if percent != 100 -%}
                             ({{percent}}%)
                         {% endif -%}
