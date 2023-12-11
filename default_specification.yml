@@ -17,6 +17,9 @@ url:
 ## The title is displayed as the title of the html page.
 title: "Open Web Calendar"
 
+## The favicon of the page
+favicon: "/static/img/logo/owc.svg"
+
 ## The starting date of the calendar view in YYYY-MM-DD format
 ## Leave empty for today
 date: ""
@@ -151,4 +154,3 @@ template: "dhtmlx.html"
 
 ## This is set by the dhtmlscheduler when the events are displayed.
 timeshift: 0
-

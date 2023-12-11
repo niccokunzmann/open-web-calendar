@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="96"
+   height="96"
+   viewBox="0 0 25.4 25.4"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (1:1.3+202307231459+0e150ed6c4)"
+   sodipodi:docname="owc.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">Open Web Calenar Logo</title>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.8186588"
+     inkscape:cx="24.834506"
+     inkscape:cy="48.782066"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="bg" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path3"
+       style="color:#000000;fill:#fbfd31;-inkscape-stroke:none;fill-opacity:1"
+       d="M 21.668962 3.7310384 L 18.130676 7.268807 C 18.130766 7.2688971 18.130586 7.2692336 18.130676 7.2693237 C 19.514147 8.652445 20.365165 10.567618 20.365165 12.698966 C 20.365165 14.830453 19.514306 16.747046 18.130676 18.130676 L 21.668962 21.668962 C 23.971229 19.366695 25.400517 16.191057 25.400517 12.698966 C 25.400517 9.2070091 23.971074 6.0327959 21.668962 3.7310384 z " />
+    <path
+       id="circle2"
+       style="color:#000000;fill:#cfea29;-inkscape-stroke:none;fill-opacity:1"
+       d="M 12.698966 0 C 5.7147842 0 1.2533172e-15 5.7147842 0 12.698966 C 0 19.683148 5.7147842 25.400517 12.698966 25.400517 C 16.191057 25.400517 19.366695 23.971229 21.668962 21.668962 L 18.130676 18.130676 C 16.747046 19.514306 14.830453 20.365165 12.698966 20.365165 C 8.435992 20.365165 5.0353516 16.96194 5.0353516 12.698966 C 5.0353516 8.435992 8.435992 5.0353516 12.698966 5.0353516 C 14.830453 5.0353516 16.747046 5.885665 18.130676 7.268807 L 21.668962 3.7310384 C 21.668873 3.7309503 21.66905 3.7306098 21.668962 3.7305216 C 19.366695 1.4287429 16.191057 6.2665859e-16 12.698966 0 z " />
+    <g
+       id="g5"
+       transform="matrix(-1,0,0,1,25.400003,0)">
+      <g
+         id="g4"
+         transform="matrix(0.61399115,0,0,0.60641773,26.466594,3.6376656)"
+         style="fill:#fa9801;fill-opacity:1">
+        <path
+           id="path4"
+           style="color:#000000;fill:#fa9801;fill-opacity:1;-inkscape-stroke:none"
+           d="m -35.12045,14.832756 c 0,3.817358 1.70724,7.255496 4.395862,9.588554 2.230441,1.93547 5.13628,-5.621967 8.303104,-5.621967 v -5.035351 c -4.262974,0 -7.663614,5.331738 -7.663614,1.068764 0,-0.892492 0.149081,-1.747308 0.423936,-2.541097 0.381565,-1.101972 1.005523,-2.086334 1.809519,-2.8906127 l -1.765635,-1.765893 -1.772133,-1.7723927 c 0.30146,0.3081282 -1.173762,1.020447 -2.530187,3.8105365 -0.760076,1.5634329 -1.200852,3.2986369 -1.200852,5.1594589 z"
+           sodipodi:nodetypes="ssccsscccss" />
+        <use
+           x="0"
+           y="0"
+           xlink:href="#path4"
+           id="use4"
+           transform="matrix(-1,0,0,1,-44.842968,0)"
+           style="fill:#fa9801;fill-opacity:1" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:title>Open Web Calenar Logo</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Nicco Kunzmann</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Logo for the open-web-calendar project.</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

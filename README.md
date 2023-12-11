@@ -240,12 +240,15 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.21 (unreleased)
+  - Fix Content-Type header for .js files, see [Issue 241](https://github.com/niccokunzmann/open-web-calendar/issues/241)
+  - Add logo [Issue 205](https://github.com/niccokunzmann/open-web-calendar/issues/205)
 - v1.20
   - Turkish translation by Oğuz Ersen
   - Spanish translation by gallegonovato
   - Indonesian translation by Reza Almanda
-  - update dependencies
-  - correct links
+  - Update dependencies
+  - Correct links
 - v1.19
   - Update dependencies
 - v1.18
