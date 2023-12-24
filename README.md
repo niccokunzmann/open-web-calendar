@@ -239,7 +239,9 @@ Changelog
 ---------
 [changelog]: #changelog
 
-- v1.21 (unreleased)
+- v1.21
+  - Update Chinese translation by dingc
+  - Update French translation by Thomas Moerschell
   - Fix Content-Type header for .js files, see [Issue 241](https://github.com/niccokunzmann/open-web-calendar/issues/241)
   - Add logo [Issue 205](https://github.com/niccokunzmann/open-web-calendar/issues/205)
 - v1.20
