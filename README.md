@@ -17,7 +17,7 @@ You might want to:
 [github-sponsors]: https://github.com/sponsors/niccokunzmann
 [polar]: https://polar.sh/niccokunzmann/open-web-calendar
 
-Python: 3.7, 3.8, 3.9, 3.10
+Python: 3.8, 3.9, 3.10, 3.11
 
 There are several commercial solutions which allow embedding of calendars into my website.
 I only have a link to an ICS file and want to show a nice-looking calendar on my site.
