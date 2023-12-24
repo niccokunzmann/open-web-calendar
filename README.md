@@ -154,6 +154,13 @@ You can deploy the app using Heroku.
 Heroku uses [gunicorn](https://gunicorn.org/)
 to run the server, see the [Procfile](Procfile).
 
+### Cloudron
+
+The Open Web Calendar has been intrgrated into [Cloudron](https://www.cloudron.io/).
+
+- [Cloudron Documentation](https://docs.cloudron.io/apps/openwebcalendar/)
+- [Cloudron Repository](https://git.cloudron.io/cloudron/openwebcalendar-app)
+
 Research
 --------
 
