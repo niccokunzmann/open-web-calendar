@@ -246,6 +246,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.22
+  - Update dependencies
 - v1.21
   - Update Chinese translation by dingc
   - Update French translation by Thomas Moerschell
@@ -272,7 +274,7 @@ Changelog
 - v1.16
   - Add a dropdown to choose another time zone to view the calendar in the about screen, see [Issue #213](https://github.com/niccokunzmann/open-web-calendar/issues/213).
 - v1.15
-  - Update dependecies
+  - Update dependencies
 - v1.14
   - Improve Indonesian translation by Reza Almanda
   - Improve Spanish translation by zyloj
@@ -331,7 +333,7 @@ Update Dependencies
    ```
 2. Install all dependencies:
    ```
-   pip install -r requirements.in -r test-requirements.in pip-tools
+   pip install --upgrade -r requirements.in -r test-requirements.in pip-tools
    ```
 3. Fix the dependencies:
    ```
