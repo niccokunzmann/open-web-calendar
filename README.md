@@ -246,6 +246,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.23 (unreleased)
+  - remove temporary cache directory vulnerability [GitHub](https://github.com/niccokunzmann/open-web-calendar/security/code-scanning/2) [CWE-377](https://cwe.mitre.org/data/definitions/377.html)
 - v1.22
   - Update dependencies
 - v1.21
