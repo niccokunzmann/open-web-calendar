@@ -4,15 +4,15 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-blinker==1.6.2
+blinker==1.7.0
     # via flask
 cachelib==0.9.0
     # via flask-caching
-certifi==2023.7.22
+certifi==2023.11.17
     # via requests
-charset-normalizer==3.2.0
+charset-normalizer==3.3.2
     # via requests
-click==8.1.4
+click==8.1.7
     # via flask
 flask==3.0.0
     # via
@@ -27,9 +27,9 @@ icalendar==5.0.11
     #   -r requirements.in
     #   recurring-ical-events
     #   x-wr-timezone
-idna==3.4
+idna==3.6
     # via requests
-importlib-metadata==6.8.0
+importlib-metadata==7.0.1
     # via flask
 itsdangerous==2.1.2
     # via flask
@@ -45,7 +45,7 @@ python-dateutil==2.8.2
     # via
     #   icalendar
     #   recurring-ical-events
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   icalendar
     #   recurring-ical-events
@@ -58,11 +58,11 @@ requests==2.31.0
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
-urllib3==2.0.7
+urllib3==2.1.0
     # via requests
 werkzeug==3.0.1
     # via flask
-x-wr-timezone==0.0.5
+x-wr-timezone==0.0.6
     # via recurring-ical-events
-zipp==3.16.1
+zipp==3.17.0
     # via importlib-metadata

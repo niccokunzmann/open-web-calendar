@@ -10,30 +10,30 @@ attrs==23.1.0
     #   trio
 behave==1.2.6
     # via -r test-requirements.in
-certifi==2023.7.22
+certifi==2023.11.17
     # via selenium
-exceptiongroup==1.1.2
+exceptiongroup==1.2.0
     # via
     #   pytest
     #   trio
     #   trio-websocket
 h11==0.14.0
     # via wsproto
-idna==3.4
+idna==3.6
     # via trio
 iniconfig==2.0.0
     # via pytest
-outcome==1.2.0
+outcome==1.3.0.post0
     # via trio
 packaging==23.2
     # via pytest
-parse==1.19.1
+parse==1.20.0
     # via
     #   behave
     #   parse-type
 parse-type==0.6.2
     # via behave
-pluggy==1.2.0
+pluggy==1.3.0
     # via pytest
 pysocks==1.7.1
     # via urllib3
@@ -51,15 +51,13 @@ sortedcontainers==2.4.0
     # via trio
 tomli==2.0.1
     # via pytest
-trio==0.22.2
+trio==0.23.2
     # via
     #   selenium
     #   trio-websocket
-trio-websocket==0.10.3
+trio-websocket==0.11.1
     # via selenium
-urllib3[socks]==2.0.7
-    # via
-    #   selenium
-    #   urllib3
+urllib3[socks]==2.1.0
+    # via selenium
 wsproto==1.2.0
     # via trio-websocket
