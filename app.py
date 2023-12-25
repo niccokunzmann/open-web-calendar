@@ -18,6 +18,7 @@ from convert_to_dhtmlx import ConvertToDhtmlx
 from convert_to_ics import ConvertToICS
 import pytz
 import translate
+import mimetypes
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -107,7 +108,7 @@ def make_js_file_response(content:str) -> Response:
     """Modify the response to set the content type for .js files."""
     response = make_response(content)
     set_JS_headers(response)
-    response.headers['Content-Type'] = "application/javascript"
+    response.headers['Content-Type'] = "text/javascript"
     return response
 
 

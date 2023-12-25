@@ -2,7 +2,7 @@
 
 See https://github.com/niccokunzmann/open-web-calendar/issues/241
 
-We expect application/javascript.
+We expect text/javascript.
 https://stackoverflow.com/a/189877/1320237
 """
 import pytest
@@ -21,6 +21,4 @@ def test_mime_type_of_configuration_js(client, js_url):
     """Check the Content-Type header.
     """
     response = client.get(js_url)
-    assert \
-        "application/javascript" in response.content_type or \
-        "text/javascript" in response.content_type
+    assert "text/javascript" in response.content_type.split(";")
