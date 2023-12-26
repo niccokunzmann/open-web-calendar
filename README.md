@@ -85,6 +85,22 @@ These environment variables can be used to configure the service:
 - `CACHE_REQUESTED_URLS_FOR_SECONDS` default `600`  
   Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.
 
+### SSRF Protection with a Proxy Server
+
+The Open Web Calendar can be used to access the local network behind a firewall,
+see [Issue 250](https://github.com/niccokunzmann/open-web-calendar/issues/250).
+This free access is intended to show calendars from everywhere.
+Since `requests` is used by the Open Web Calender,
+it can be used to use a proxy as described in the
+[`requests` documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies).
+The proxy can then handle the filtering.
+
+``` sh
+export HTTP_PROXY="http://10.10.1.10:3128"
+export HTTPS_PROXY="http://10.10.1.10:1080"
+export ALL_PROXY="socks5://10.10.1.10:3434"
+```
+
 ### Docker
 
 To build the container yourself type the command
@@ -105,13 +121,15 @@ Then, you should see your service running at http://localhost:5000.
 The container `niccokunzmann/open-web-calendar:latest` contains the latest release.
 Containers are also tagged with the version from the [changelog], e.g.
 `niccokunzmann/open-web-calendar:v1.10`.
+
 If you wish to run the latest development version, use `niccokunzmann/open-web-calendar:master`.
+This includes unchecked translations.
 
 ### Docker Compose
 
 Using pre build dockerhub image with docker-compose
 
-```
+``` YAML
 version: '3'
 services:
   open-web-calendar:
@@ -133,9 +151,38 @@ To deploy the open-web-calendar with docker-compose, do the following steps:
 
 #### Update prebuild image with Docker Compose
 
-If you want to update your image with the latest version from dockerhub type `docker-compose pull`
+If you want to update your image with the latest version from Dockerhub type `docker-compose pull`.
 
 Note: You need to start the container after pulling again in order for the update to apply (`docker-compose up -d`)
+
+#### Preventing SSRF attacks using a Tor proxy
+
+The Open Web Calendar can be configured to use a proxy to request `.ics`
+and other files. The following example shows the usage of a Tor proxy.
+
+``` YAML
+version: '3'
+services:
+  tor-open-web-calendar:
+    image: niccokunzmann/open-web-calendar:master
+    restart: unless-stopped
+    environment:
+    - HTTP_PROXY="socks://tor-socks-proxy:9150"
+    - HTTPS_PROXY="socks://tor-socks-proxy:9150"
+    - ALL_PROXY="socks://tor-socks-proxy:9150"
+
+  # from https://hub.docker.com/r/peterdavehello/tor-socks-proxy/
+  tor-socks-proxy:
+    image: peterdavehello/tor-socks-proxy
+    restart: unless-stopped
+```
+
+The configuration above prevents access to the internal network as the
+requests are sent over the Tor network.
+A bonus feature is that calendars can be accessed and hosted as a
+Tor Hidden Service using an `.onion` address.
+E.g. a calendar file can be served from a Raspberry Pi behind a home
+network's firewall.
 
 ### Vercel
 
@@ -247,7 +294,8 @@ Changelog
 [changelog]: #changelog
 
 - v1.23 (unreleased)
-  - remove temporary cache directory vulnerability [GitHub](https://github.com/niccokunzmann/open-web-calendar/security/code-scanning/2) [CWE-377](https://cwe.mitre.org/data/definitions/377.html)
+  - Add documentation and dependencies to use a Tor proxy to prevent SSRF attacks.
+  - Remove temporary cache directory vulnerability [GitHub](https://github.com/niccokunzmann/open-web-calendar/security/code-scanning/2) [CWE-377](https://cwe.mitre.org/data/definitions/377.html)
 - v1.22
   - Update dependencies
 - v1.21

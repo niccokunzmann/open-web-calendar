@@ -41,6 +41,8 @@ markupsafe==2.1.3
     #   werkzeug
 packaging==23.2
     # via gunicorn
+pysocks==1.7.1
+    # via requests
 python-dateutil==2.8.2
     # via
     #   icalendar
@@ -54,7 +56,7 @@ pyyaml==6.0.1
     # via -r requirements.in
 recurring-ical-events==2.1.2
     # via -r requirements.in
-requests==2.31.0
+requests[socks]==2.31.0
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
