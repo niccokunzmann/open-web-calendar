@@ -13,3 +13,6 @@ Procfile
 architecture.svg
 app.json
 features
+constraints.txt
+Dockerfile
+
