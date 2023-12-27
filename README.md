@@ -170,9 +170,11 @@ services:
     image: niccokunzmann/open-web-calendar:master
     restart: unless-stopped
     environment:
-      - HTTP_PROXY=socks5://tor-socks-proxy:9150
-      - HTTPS_PROXY=socks5://tor-socks-proxy:9150
-      - ALL_PROXY=socks5://tor-socks-proxy:9150
+    # use socks5h for *.onion
+    # see https://stackoverflow.com/a/42972942/1320237
+      - HTTP_PROXY=socks5h://tor-socks-proxy:9150
+      - HTTPS_PROXY=socks5h://tor-socks-proxy:9150
+      - ALL_PROXY=socks5h://tor-socks-proxy:9150
 
   # from https://hub.docker.com/r/peterdavehello/tor-socks-proxy/
   tor-socks-proxy:
