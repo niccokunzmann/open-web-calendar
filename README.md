@@ -296,7 +296,7 @@ Changelog
 ---------
 [changelog]: #changelog
 
-- v1.23 (unreleased)
+- v1.23
   - Add documentation and dependencies to use a Tor proxy to prevent SSRF attacks.
   - Remove temporary cache directory vulnerability [GitHub](https://github.com/niccokunzmann/open-web-calendar/security/code-scanning/2) [CWE-377](https://cwe.mitre.org/data/definitions/377.html)
 - v1.22
