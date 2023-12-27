@@ -17,7 +17,7 @@ You might want to:
 [github-sponsors]: https://github.com/sponsors/niccokunzmann
 [polar]: https://polar.sh/niccokunzmann/open-web-calendar
 
-Python: 3.8, 3.9, 3.10, 3.11
+Python: 3.8, 3.9, 3.10, 3.11, 3.12
 
 There are several commercial solutions which allow embedding of calendars into my website.
 I only have a link to an ICS file and want to show a nice-looking calendar on my site.
@@ -188,7 +188,7 @@ A bonus feature is that calendars can be accessed and hosted as a
 Tor Hidden Service using an `.onion` address.
 E.g. a calendar file can be served from a Raspberry Pi behind a home
 network's firewall.
-This [example calendar](https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics) uses [this onion address](http://3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion/one-day-event-repeat-every-day.ics). 
+This [example calendar](https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics) uses [this onion address](http://3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion/one-day-event-repeat-every-day.ics).
 
 ### Vercel
 
@@ -299,6 +299,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.24
+  - Test and support Python 3.12
 - v1.23
   - Add documentation and dependencies to use a Tor proxy to prevent SSRF attacks.
   - Remove temporary cache directory vulnerability [GitHub](https://github.com/niccokunzmann/open-web-calendar/security/code-scanning/2) [CWE-377](https://cwe.mitre.org/data/definitions/377.html)
