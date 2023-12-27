@@ -159,6 +159,9 @@ Note: You need to start the container after pulling again in order for the updat
 
 The Open Web Calendar can be configured to use a proxy to request `.ics`
 and other files. The following example shows the usage of a Tor proxy.
+You can try it out at
+[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted.quelltext.eu/).
+
 
 ``` YAML
 version: '3'
@@ -167,9 +170,9 @@ services:
     image: niccokunzmann/open-web-calendar:master
     restart: unless-stopped
     environment:
-    - HTTP_PROXY="socks://tor-socks-proxy:9150"
-    - HTTPS_PROXY="socks://tor-socks-proxy:9150"
-    - ALL_PROXY="socks://tor-socks-proxy:9150"
+      - HTTP_PROXY=socks5://tor-socks-proxy:9150
+      - HTTPS_PROXY=socks5://tor-socks-proxy:9150
+      - ALL_PROXY=socks5://tor-socks-proxy:9150
 
   # from https://hub.docker.com/r/peterdavehello/tor-socks-proxy/
   tor-socks-proxy:
