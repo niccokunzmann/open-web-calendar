@@ -127,7 +127,7 @@ This includes unchecked translations.
 
 ### Docker Compose
 
-Using pre build dockerhub image with docker-compose
+Using pre-build Dockerhub image with docker-compose
 
 ``` YAML
 version: '3'
@@ -188,6 +188,7 @@ A bonus feature is that calendars can be accessed and hosted as a
 Tor Hidden Service using an `.onion` address.
 E.g. a calendar file can be served from a Raspberry Pi behind a home
 network's firewall.
+This [example calendar](https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics) uses [this onion address](http://3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion/one-day-event-repeat-every-day.ics). 
 
 ### Vercel
 
