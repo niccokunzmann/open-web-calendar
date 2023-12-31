@@ -14,13 +14,17 @@ def is_date(date):
 
 class ConvertToDhtmlx(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern.
-    
+
     - timeshift_minutes is the timeshift specified by the calendar
         for dates.
     """
-    
+
     def created(self):
-        self.timezone = pytz.timezone(self.specification["timezone"])
+        """Set attribtues when created."""
+        try:
+            self.timezone = pytz.timezone(self.specification["timezone"])
+        except pytz.UnknownTimeZoneError:
+            self.timezone = pytz.FixedOffset(-int(self.specification["timeshift"]))
 
     def date_to_string(self, date):
         """Convert a date to a string."""
@@ -98,10 +102,10 @@ class ConvertToDhtmlx(ConversionStrategy):
             "id": id(error),
             "type": "error"
         }
-    
+
     def merge(self):
         return jsonify(self.components)
-        
+
     def collect_components_from(self, calendars):
         # see https://stackoverflow.com/a/16115575/1320237
         today = (
@@ -125,6 +129,3 @@ class ConvertToDhtmlx(ConversionStrategy):
                 for event in events:
                     json_event = self.convert_ical_event(event)
                     self.components.append(json_event)
-                
-
-
