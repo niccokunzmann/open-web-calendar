@@ -109,9 +109,9 @@ function showXHRError(xhr) {
 function showEventError(error) {
     // show an error created by app.py -> error_to_dhtmlx
     var div = document.createElement("div");
-    div.innerHTML = "<h1>" + error.text + "</h1>" + 
+    div.innerHTML = "<h1>" + error.text + "</h1>" +
         "<a href='" + error.url + "'>" + error.url + "</a>" +
-        "<p>" + error.description + "</p>" + 
+        "<p>" + error.description + "</p>" +
         "<pre>" + error.traceback + "</pre>";
     showError(div);
 }
@@ -147,20 +147,20 @@ function loadCalendar() {
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
     // scheduler.config.server_utc = true; // we use timezones now
-    
+
     scheduler.config.readonly = true;
     // set the start of the week. See https://docs.dhtmlx.com/scheduler/api__scheduler_start_on_monday_config.html
     scheduler.config.start_on_monday = specification["start_of_week"] == "mo";
     let hour_division = parseInt(specification["hour_division"]);
     scheduler.config.hour_size_px = 44 * hour_division;
     scheduler.templates.hour_scale = function(date){
-	var step = 60 / hour_division;
-	var html = "";
-	for (var i=0; i<hour_division; i++){
-	    html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>"; // TODO: This should be in CSS.
-	    date = scheduler.date.add(date, step, "minute");
-	}
-	return html;
+    	var step = 60 / hour_division;
+    	var html = "";
+    	for (var i=0; i<hour_division; i++){
+    	    html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>"; // TODO: This should be in CSS.
+    	    date = scheduler.date.add(date, step, "minute");
+    	}
+    	return html;
     }
     scheduler.config.first_hour = parseInt(specification["starting_hour"]);
     scheduler.config.last_hour = parseInt(specification["ending_hour"]);
@@ -206,7 +206,7 @@ function loadCalendar() {
         }
         return event.type;
     };
-    
+
     // set agenda date
     scheduler.templates.agenda_date = scheduler.templates.month_date;
 
@@ -216,7 +216,7 @@ function loadCalendar() {
     if (specification.timezone == "") {
         schedulerUrl += "&timezone=" + getTimezone();
     }
-        
+
     scheduler.attachEvent("onLoadError", function(xhr) {
         disableLoader();
         console.log("could not load events");
@@ -230,13 +230,13 @@ function loadCalendar() {
     //requestJSON(schedulerUrl, loadEventsOnSuccess, loadEventsOnError);
     scheduler.setLoadMode("day");
     scheduler.load(schedulerUrl, "json");
-    
+
 
     //var dp = new dataProcessor(schedulerUrl);
     // use RESTful API on the backend
     //dp.setTransactionMode("REST");
     //dp.init(scheduler);
-    
+
     setLoader();
 }
 
@@ -246,12 +246,11 @@ function loadCalendar() {
  */
 
 scheduler.date.agenda_start = function(date){
-  return scheduler.date.month_start(new Date(date)); 
+  return scheduler.date.month_start(new Date(date));
 };
- 
+
 scheduler.date.add_agenda = function(date, inc){
-  return scheduler.date.add(date, inc, "month"); 
+  return scheduler.date.add(date, inc, "month");
 };
 
 window.addEventListener("load", loadCalendar);
-
