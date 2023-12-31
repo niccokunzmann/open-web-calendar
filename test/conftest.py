@@ -4,9 +4,15 @@ import pytest
 from unittest.mock import Mock
 import requests
 
-HERE = os.path.dirname(__name__) or "."
+# constants
+HERE = os.path.dirname(__file__) or "."
+CALENDAR_DIRECTORY = os.path.join(HERE, "..", "features", "calendars")
+
+# relative imports
 sys.path.append(os.path.join(os.path.abspath(HERE), ".."))
 sys.path.append(os.path.abspath(HERE))
+from app import cache_url
+
 
 @pytest.fixture(autouse=True)
 def no_requests(monkeypatch):
@@ -51,3 +57,19 @@ def client(app):
 @pytest.fixture()
 def runner(app):
     return app.test_cli_runner()
+
+
+@pytest.fixture()
+def calendar_urls():
+    """Mapping the calendar name without .ics to the cached url.
+
+    The files are located in the CALENDAR_FOLDER.
+    """
+    mapping = {}
+    for file in os.listdir(CALENDAR_DIRECTORY):
+        if file.lower().endswith(".ics"):
+            url = "http://test.examples.local/" + file
+            with open(os.path.join(CALENDAR_DIRECTORY, file)) as f:
+                cache_url(url, f.read())
+            mapping[file[:-4]] = url
+    return mapping
