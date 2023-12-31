@@ -299,8 +299,9 @@ Changelog
 ---------
 [changelog]: #changelog
 
-- v1.24
+- v1.24 (unreleased)
   - Test and support Python 3.12
+  - Fix rendering error for unknown/malformed timezones (use DHTMLX's timeshift)
 - v1.23
   - Add documentation and dependencies to use a Tor proxy to prevent SSRF attacks.
   - Remove temporary cache directory vulnerability [GitHub](https://github.com/niccokunzmann/open-web-calendar/security/code-scanning/2) [CWE-377](https://cwe.mitre.org/data/definitions/377.html)
