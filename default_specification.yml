@@ -127,7 +127,7 @@ controls:
 ## If this is empty, the description is taken from the project's translations.
 description: ""
 
-## You can choose the start of the week. Either "mo" for Monday or "su" for Sunday.
+## You can choose the start of the week. Either "mo" for Monday or "su" for Sunday. "work" is Mo-Fr.
 start_of_week: mo
 
 ## You can fix the calendar to a specific time zone. Default is to take it from the browser.
