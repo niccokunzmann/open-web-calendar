@@ -299,6 +299,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.25 (unreleased)
+  - Update Dependencies
 - v1.24
   - Test and support Python 3.12
   - Fix rendering error for unknown/malformed time zones (use DHTMLX's timeshift)
