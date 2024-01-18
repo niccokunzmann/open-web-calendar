@@ -24,6 +24,11 @@ def step_impl(context, calendar_name):
     context.specification["url"].append(calendar_url)
 
 
+@given('we set the "{parameter_name}" parameter to "{parameter_value}"')
+def step_impl(context, parameter_name, parameter_value):
+    context.specification[parameter_name] = parameter_value
+
+
 @when(u'we look at {date}')
 def step_impl(context, date):
     context.specification["date"] = date
@@ -95,5 +100,3 @@ def step_impl(context, dropdown_text):
     option = options[0]
     option.click() # see https://stackoverflow.com/a/7972225/1320237
     wait_for_calendar_to_load(context)
-
-
