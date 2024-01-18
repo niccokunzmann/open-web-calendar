@@ -80,5 +80,3 @@ controls-description: 'Es posible que no desee mostrar todos los controles para 
 timezone-browser: utilizar la zona horaria del navegador
 first-hour-title: Hora de inicio
 time-increment-15: 15 minutos
-start-of-week-description: La semana puede empezar el Lunes o el Domingo.
-start-of-week-title: Inicio de la semana

@@ -47,8 +47,6 @@ links-self: Otvori povezani dokument u istom okviru u kojem je pritisnut.
 links-parent: Otvori povezani dokument u nadređenom okviru.
 links-blank: Otvori povezani dokument u novom prozoru ili registru.
 links-top: Otvori povezani dokument u cijelom prozoru.
-start-of-week-title: Početak tjedna
-start-of-week-description: Početak tjedna može biti ponedjeljak ili nedjelja.
 style-title: Prilagođeni stil pomoću CSS-a
 style-description: Pomoću CSS-a možeš promijeniti boju kalendara i razna druga svojstva.
   Tvoj prilagođeni dizajn ima prioritet nad odabranim dizajnom. U sljedećem popisu

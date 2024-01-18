@@ -1,7 +1,6 @@
 time-increment-10: 10 minutter
 time-increment-60: 1 time
 time-increment-15: 15 minutter
-start-of-week-title: Ukestart
 style-title: Egendefinert stil med CSS
 controls-date: Dato
 time-increment-30: 30 minutter
@@ -52,7 +51,6 @@ links-title: Lenker
 skins-description: Du kan endre draktvalg for kalenderen.
 skins-contrast-black: Kontrast-svart
 skins-contrast-white: Kontrast-hvitt
-start-of-week-description: Uken kan starte på mandag eller søndag.
 skins-terrace: Terrasse
 skins-material: Materiell
 skins-flat: Flatt

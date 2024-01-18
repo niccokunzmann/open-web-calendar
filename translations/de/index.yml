@@ -57,7 +57,6 @@ time-increment-10: 10 Minuten
 time-increment-15: 15 Minuten
 time-increment-30: 30 Minuten
 time-increment-60: 1 Stunde
-start-of-week-description: Die Woche kann am Sonntag oder am Montag anfangen.
 style-title: Eigener Style mit CSS
 style-description: Du kannst die Farbe des Kalenders und viele andere Eigenschaften
   mit CSS anpassen. Deine Anpassungen überschreiben die des Designs. Unten kannst
@@ -73,7 +72,6 @@ links-self: Öffne den Link im selben Frame wie der Kalender.
 links-parent: Öffne den Link in dem Frame drüber.
 links-blank: Öffne den Link in einem neuen Fenster oder Tab.
 links-top: Öffne den Link im vollen Fenster.
-start-of-week-title: Wochenbeginn
 spec-host-html: Du kannst <a href="javascript:downloadJSONSpecification()">die Spezifikation
   herunterladen</a> und sie irgendwo im Web platzieren. Auf diese Weise kannst den
   Kalender später überall, wo er verwendet wird, mit einem Mal verändern. Dazu kannst
