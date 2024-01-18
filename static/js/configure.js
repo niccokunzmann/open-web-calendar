@@ -150,7 +150,7 @@ function loadCalendar() {
 
     scheduler.config.readonly = true;
     // set the start of the week. See https://docs.dhtmlx.com/scheduler/api__scheduler_start_on_monday_config.html
-    scheduler.config.start_on_monday = specification["start_of_week"] == "mo";
+    scheduler.config.start_on_monday = specification["start_of_week"] != "su";
     let hour_division = parseInt(specification["hour_division"]);
     scheduler.config.hour_size_px = 44 * hour_division;
     scheduler.templates.hour_scale = function(date){
@@ -217,6 +217,7 @@ function loadCalendar() {
         schedulerUrl += "&timezone=" + getTimezone();
     }
 
+    /* load the events */
     scheduler.attachEvent("onLoadError", function(xhr) {
         disableLoader();
         console.log("could not load events");
@@ -251,6 +252,28 @@ scheduler.date.agenda_start = function(date){
 
 scheduler.date.add_agenda = function(date, inc){
   return scheduler.date.add(date, inc, "month");
+};
+
+/* Customize the week view
+ *
+ * See https://docs.dhtmlx.com/scheduler/custom_views.html
+ */
+
+scheduler.date.get_week_end=function(start_date){
+  return scheduler.date.add(start_date, specification["start_of_week"] == "work" ? 5 : 7,"day");
+}
+
+/* Customize the month view so the work week is displayed.
+ *
+ * See
+ */
+
+scheduler.ignore_month = function(date){
+  // 0 refers to Sunday, 6 - to Saturday
+  if (date.getDay() == 6 || date.getDay() == 0) {
+    //hides Saturdays and Sundays
+    return specification["start_of_week"] == "work";
+  }
 };
 
 window.addEventListener("load", loadCalendar);

@@ -112,12 +112,13 @@
                         <option value="_top">{{ html("links-top") }}</option>
                     </select>
                 </p>
-                <h3>{{ html("start-of-week-title") }}</h3>
+                <h3>{{ html("configure-week-title") }}</h3>
                 <p>
-                    {{ html("start-of-week-description") }}<br/>
+                    {{ html("configure-week-description") }}<br/>
                     <select id="select-start-of-week">
-                        <option value="mo">{{ html("calendar.date_day_full_mon") }}</option>
-                        <option value="su">{{ html("calendar.date_day_full_sun") }}</option>
+                        <option value="mo">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_sun") }}</option>
+                        <option value="su">{{ html("calendar.date_day_full_sun") }} - {{ html("calendar.date_day_full_mon") }}</option>
+                        <option value="work">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_fri") }}</option>
                     </select>
                 </p>
                 <h3>{{ html("style-title") }}</h3>

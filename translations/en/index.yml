@@ -131,10 +131,10 @@ links-top: "Open the linked document in the full body of the window."
 
 # Heading of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-title
-start-of-week-title: "Start of the Week"
+configure-week-title: "Days of the Week"
 # Description of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-description
-start-of-week-description: "The week may start on Monday or Sunday."
+configure-week-description: "The week may start on Monday or Sunday."
 
 
 # Heading of option
