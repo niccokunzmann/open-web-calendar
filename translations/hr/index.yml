@@ -74,3 +74,5 @@ spec-host-html: <a href="javascript:downloadJSONSpecification()">Ovu specifikaci
   možeš preuzeti</a> i postaviti je negdje na web. Na taj način i dalje kontroliraš
   prilagođavanje kalendara nakon dijeljenja poveznice, npr. na GitHub-u u jednom <a
   href="https://gist.github.com/">Gistu</a>.
+configure-week-title: Dani tjedna
+configure-week-description: Početak tjedna može biti ponedjeljak ili nedjelja.
