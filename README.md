@@ -300,8 +300,9 @@ Changelog
 [changelog]: #changelog
 
 - v1.25
-  - Update Dependencies
+  - Update dependencies
   - Implement work week view, see [Issue 258](https://github.com/niccokunzmann/open-web-calendar/issues/258)
+  - Update translations
 - v1.24
   - Test and support Python 3.12
   - Fix rendering error for unknown/malformed time zones (use DHTMLX's timeshift)
