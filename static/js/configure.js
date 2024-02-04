@@ -132,7 +132,12 @@ function setLoader() {
 }
 
 function loadCalendar() {
-    var format = scheduler.date.date_to_str("%H:%i");
+    /* Format the time of the hour.
+     * see https://docs.dhtmlx.com/scheduler/settings_format.html
+     * see https://docs.dhtmlx.com/scheduler/api__scheduler_hour_date_config.html
+     */
+    scheduler.config.hour_date = specification["hour_format"];
+    var format = scheduler.date.date_to_str(scheduler.config.hour_date);
     setLocale(scheduler);
     // load plugins, see https://docs.dhtmlx.com/scheduler/migration_from_older_version.html#5360
     scheduler.plugins({

@@ -84,6 +84,18 @@
                         <input class="time-increment-input" type="radio" id="time-1" name="time-select" value="1" /><label for="time-60">{{ html("time-increment-60") }}</label>
                     </form>
                 </p>
+                <h3>{{ html("hour-format-title") }}</h3>
+                <p>
+                    {{ html("hour-format-description") }} <a href="https://docs.dhtmlx.com/scheduler/settings_format.html">{{ html("hour-format-specification-link") }}</a><br/>
+                    <select id="select-hour-format">
+                        <option value="%G:%i">24:00 - 1:15, 13:45</option>
+                        <option value="%H:%i">24:00 - 01:15, 13:45</option>
+                        <option value="%g:%i %a">am/pm - 1:15 am, 1:45 pm</option>
+                        <option value="%h:%i %a">am/pm - 01:15 am, 1:45 pm</option>
+                        <option value="%g:%i %A">AM/PM - 1:15 AM, 1:45 PM</option>
+                        <option value="%h:%i %A">AM/PM - 01:15 AM, 1:45 PM</option>
+                    </select>
+                </p>
                 <h3>{{ html("language-title") }}</h3>
                 <p>
                     {{ html("language-description") }}<br/>
@@ -114,9 +126,9 @@
                 </p>
                 <h3>{{ html("configure-week-title") }}</h3>
                 <p>
-                    {{ html("configure-week-description") }}<br/>
                     <select id="select-start-of-week">
                         <option value="mo">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_sun") }}</option>
+                        {{ html("configure-week-description") }}<br/>
                         <option value="su">{{ html("calendar.date_day_full_sun") }} - {{ html("calendar.date_day_full_mon") }}</option>
                         <option value="work">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_fri") }}</option>
                     </select>

@@ -76,6 +76,16 @@ time-increment-30: "30 minutes"
 time-increment-60: "1 hour"
 
 
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-hour-format-title
+hour-format-title: "Clock Convention"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-hour-format-description
+hour-format-description: "You can choose between the 24 hour clock and the 12 hour clock. More options are possible."
+# Link to the specification
+# https://open-web-calendar.hosted.quelltext.eu/#translate-hour-format-description
+hour-format-specification-link: "View the specification."
+
 
 # Heading of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-language-title
