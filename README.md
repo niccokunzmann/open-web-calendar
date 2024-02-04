@@ -299,6 +299,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.26 (unreleased)
+  - Add a red bar at the current time in the week view and the day view.
 - v1.25
   - Update dependencies
   - Implement work week view, see [Issue 258](https://github.com/niccokunzmann/open-web-calendar/issues/258)
