@@ -134,6 +134,13 @@ start_of_week: mo
 ## Example values: "Europe/Berlin", "Asia/Shanghai" or "" for the timezone of the user/viewer.
 timezone: ""
 
+## You can change the format of how a time is displayed.
+## See also https://docs.dhtmlx.com/scheduler/settings_format.html
+hour_format: "%H:%i"     # examples: 01:30, 13:45
+#hour_format: "%G:%i"    # examples:  1:30, 13:45
+#hour_format: "%g:%i %a" # examples:  1:30 am, 1:45 pm
+
+
 ###################### Change this if you modify the project. ######################
 ##
 ## Where the current modifications can be obtained.

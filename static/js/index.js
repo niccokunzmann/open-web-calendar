@@ -116,6 +116,8 @@ function getSpecification() {
         }
     }
 
+    /* hour format */
+    setSpecificationValueFromId(specification, "hour_format", "select-hour-format");
     /* language */
     setSpecificationValueFromId(specification, "language", "select-language");
     /* skin */
@@ -320,7 +322,7 @@ function initializeStartDate() {
 
 function initializeFirstHour() {
     var input = document.getElementById("starting-hour");
-    input.value = configuration.default_specification.starting_hour; 
+    input.value = configuration.default_specification.starting_hour;
     changeSpecificationOnChange(input);
 }
 
@@ -339,6 +341,12 @@ function initializeTimeIncrement() {
     for (let c of input.getElementsByClassName("time-increment-input")) {
         changeSpecificationOnChange(c);
     }
+}
+
+function initializeHourFormat() {
+    var input = document.getElementById("select-hour-format");
+    input.value = configuration.default_specification.hour_format;
+    changeSpecificationOnChange(input);
 }
 
 function initializeStartOfWeek() {
@@ -420,6 +428,7 @@ window.addEventListener("load", function(){
     initializeFirstHour();
     initializeLastHour();
     initializeTimeIncrement();
+    initializeHourFormat();
     initializeLoader();
     initializeLinkTargetChoice();
     updateCalendarInputs();
@@ -462,4 +471,3 @@ function arraysEqual(a, b) {
   }
   return true;
 }
-
