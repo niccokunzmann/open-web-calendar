@@ -147,6 +147,7 @@ function loadCalendar() {
         recurring: false,
         tooltip: true,
         readonly: true,
+        limit: true,
     });
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
@@ -154,6 +155,11 @@ function loadCalendar() {
     // scheduler.config.server_utc = true; // we use timezones now
 
     scheduler.config.readonly = true;
+    /* Add a red line at the current time.
+     * see https://docs.dhtmlx.com/scheduler/api__scheduler_hour_date_config.html
+     * see https://docs.dhtmlx.com/scheduler/limits.html
+     */
+    scheduler.config.mark_now = true;
     // set the start of the week. See https://docs.dhtmlx.com/scheduler/api__scheduler_start_on_monday_config.html
     scheduler.config.start_on_monday = specification["start_of_week"] != "su";
     let hour_division = parseInt(specification["hour_division"]);
@@ -276,8 +282,8 @@ scheduler.date.get_week_end=function(start_date){
 scheduler.ignore_month = function(date){
   // 0 refers to Sunday, 6 - to Saturday
   if (date.getDay() == 6 || date.getDay() == 0) {
-    //hides Saturdays and Sundays
     return specification["start_of_week"] == "work";
+    //hides Saturdays and Sundays
   }
 };
 
