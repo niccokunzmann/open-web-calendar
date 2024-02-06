@@ -82,3 +82,7 @@ first-hour-title: Hora de inicio
 time-increment-15: 15 minutos
 configure-week-title: Días de la semana
 configure-week-description: La semana puede empezar el lunes o el domingo.
+hour-format-specification-link: Ver las especificaciones.
+hour-format-title: Convención del reloj
+hour-format-description: Puede elegir entre el reloj de 24 horas y el de 12 horas.
+  Son posibles más opciones.
