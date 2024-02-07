@@ -302,6 +302,9 @@ Changelog
 - v1.26 (unreleased)
   - Add a red bar at the current time in the week view and the day view, see [PR 265](https://github.com/niccokunzmann/open-web-calendar/pull/265).
   - Expose the `hour_format` parameter and add choices for the 12h format, see [PR 266](https://github.com/niccokunzmann/open-web-calendar/pull/266).
+  - Update Turkish by oersen and German
+  - Update dependencies
+  - Update GitHub Actions with Dependabot
 - v1.25
   - Update dependencies
   - Implement work week view, see [Issue 258](https://github.com/niccokunzmann/open-web-calendar/issues/258)
