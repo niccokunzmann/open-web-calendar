@@ -132,7 +132,7 @@ function getSpecification() {
     for (var i = 0; i < colorInputs.length; i++) {
         var colorInput = colorInputs[i];
         var color = colorInput.value;
-        if (color) {
+        if (color && color != "#fefefe") {
             css += colorInput.getAttribute("csstemplate").formatUnicorn({
                 "color": color
             }) + "\n";
