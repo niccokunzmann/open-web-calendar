@@ -78,3 +78,7 @@ spec-host-html: Du kannst <a href="javascript:downloadJSONSpecification()">die S
   du die Spezifikation z.B. in einem <a href="https://gist.github.com/">Gist</a> veröffentlichen.
 configure-week-title: Wochentage
 configure-week-description: Die Woche kann am Montag oder Sonntag anfangen.
+hour-format-title: Zeitanzeige
+hour-format-description: Du kannst zwischen einer Anzeige mit 24 Stunden oder 12 Stunden
+  auswählen. Es gibt auch andere Optionen.
+hour-format-specification-link: Spezifikation ansehen.

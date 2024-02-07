@@ -77,3 +77,7 @@ first-hour-title: Başlangıç Saati
 time-increment-15: 15 dakika
 configure-week-description: Hafta Pazartesi veya Pazar günü başlayabilir.
 configure-week-title: Haftanın Günleri
+hour-format-specification-link: Tanımlamayı görüntüleyin.
+hour-format-title: Saat Biçimi
+hour-format-description: 24 saat ve 12 saat biçimi arasında seçim yapabilirsiniz.
+  Daha fazla seçenek mümkündür.
