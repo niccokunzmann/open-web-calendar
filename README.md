@@ -209,7 +209,7 @@ to run the server, see the [Procfile](Procfile).
 
 ### Cloudron
 
-The Open Web Calendar has been intrgrated into [Cloudron](https://www.cloudron.io/).
+The Open Web Calendar has been integrated into [Cloudron](https://www.cloudron.io/).
 
 - [Cloudron Documentation](https://docs.cloudron.io/apps/openwebcalendar/)
 - [Cloudron Repository](https://git.cloudron.io/cloudron/openwebcalendar-app)
@@ -303,7 +303,7 @@ Changelog
   - Use HTML color chooser for custom CSS
   - Add a red bar at the current time in the week view and the day view, see [PR 265](https://github.com/niccokunzmann/open-web-calendar/pull/265).
   - Expose the `hour_format` parameter and add choices for the 12h format, see [PR 266](https://github.com/niccokunzmann/open-web-calendar/pull/266).
-  - Update Turkish by oersen and German
+  - Update Turkish by oersen, Spanish by gallegonovato and German
   - Update dependencies
   - Update GitHub Actions with Dependabot
 - v1.25
