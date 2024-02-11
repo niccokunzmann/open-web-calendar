@@ -47,25 +47,26 @@ def browser_firefox(context):
 
 def serve_calendar_files(host, port, directory=os.path.join(HERE, "calendars")):
     """Serve the calendar files so they can be requested.
-    
+
     see https://stackoverflow.com/a/52531444/1320237
     """
 
     class Handler(http.server.SimpleHTTPRequestHandler):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, directory=directory, **kwargs)
-
-
-    with socketserver.TCPServer((host, port), Handler) as httpd:
-        print("serving calendars at port", port)
-        httpd.serve_forever()
+    try:
+        with socketserver.TCPServer((host, port), Handler) as httpd:
+            print("serving calendars at port", port)
+            httpd.serve_forever()
+    except OSError as e:
+        print("\n", e)
 
 
 def get_free_port(start=10000, end=60000):
     """Return a free port number."""
     import random
     port = random.randint(start, end)
-    return port    
+    return port
 
 
 @fixture
@@ -105,4 +106,3 @@ def before_scenario(context, scenario):
     context.specification = {
         "url": []
     }
-

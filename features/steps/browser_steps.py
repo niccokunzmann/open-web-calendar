@@ -4,6 +4,7 @@ from urllib.parse import urlencode
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+import json
 
 
 def specification_to_query(spec):
@@ -100,3 +101,43 @@ def step_impl(context, dropdown_text):
     option = options[0]
     option.click() # see https://stackoverflow.com/a/7972225/1320237
     wait_for_calendar_to_load(context)
+
+
+# Browser steps for configuring the calendar.
+
+
+@given('we are on the configuration page')
+def step_impl(context):
+    """Visit the configuration page and wait for it to load."""
+    context.browser.delete_all_cookies()
+    url = context.index_page
+    context.browser.get(url)
+    print(f"Visiting {url}")
+
+
+@when('we write "{text}" into "{field_id}"')
+def step_impl(context, text, field_id):
+    """Write text into text input."""
+    input = context.browser.find_element(By.ID, field_id)
+    input.clear() # see https://stackoverflow.com/a/7809907/1320237
+    input.send_keys(text) # see https://stackoverflow.com/a/35127217/1320237
+
+
+def get_specification(context) -> dict:
+    """Return the specification from the configuration page."""
+    spec_element = context.browser.find_element(By.ID, "json-specification")
+    json_string = spec_element.get_attribute("innerText")
+    return json.loads(json_string)
+
+
+def assert_specification_has_value(context, attribute, expected_value):
+    """Make sure the specification has a certain value."""
+    specification = get_specification(context)
+    actual_value = specification[attribute]
+    assert actual_value == expected_value, f"specification.{attribute}: expected {expected_value} but got {actual_value}."
+
+
+@then('"{attribute}" is specified as {expected_value}')
+def step_impl(context, attribute, expected_value):
+    """Check the JSON value of an attribute."""
+    assert_specification_has_value(context, attribute, json.loads(expected_value))
