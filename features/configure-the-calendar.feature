@@ -78,3 +78,19 @@ Feature: The calendar has a configuration page that displays and changes the
         When we click on the span "Next"
          And we click on the span "Date"
         Then "controls" is specified as ["date"]
+
+    Scenario: We choose the design
+       Given we are on the configuration page
+        When we choose "Flat" in "select-skin"
+        Then "skin" is specified as "dhtmlxscheduler_flat.css"
+
+    Scenario: We choose to divide the hours
+       Given we are on the configuration page
+        When we click on the span "10 minutes"
+        Then "hour_division" is specified as "6"
+        When we click on the span "15 minutes"
+        Then "hour_division" is specified as "4"
+        When we click on the span "30 minutes"
+        Then "hour_division" is specified as "2"
+        When we click on the span "1 hour"
+        Then "hour_division" is not specified
