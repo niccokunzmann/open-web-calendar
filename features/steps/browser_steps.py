@@ -4,6 +4,7 @@ from urllib.parse import urlencode
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import json
 
@@ -122,11 +123,10 @@ def step_impl(context, text, field_id):
     """Write text into text input."""
     input = context.browser.find_element(By.ID, field_id)
     input.clear() # see https://stackoverflow.com/a/7809907/1320237
-    # For filling inputs and date inoputs
+    # For filling inputs and date inputs
     # see https://stackoverflow.com/a/35127217/1320237
     # see https://stackoverflow.com/a/39532746/1320237
     ActionChains(context.browser).move_to_element(input).click().send_keys(text).perform()
-    #input.send_keys(text)
     print(f"{field_id}.value == {input.get_attribute('value')}")
 
 

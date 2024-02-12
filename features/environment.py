@@ -9,7 +9,7 @@ HERE = os.path.dirname(__file__ or ".")
 sys.path.append(os.path.join(HERE, ".."))
 
 from behave import fixture, use_fixture
-from selenium.webdriver import Firefox
+from selenium.webdriver import Firefox, FirefoxProfile
 from app import app
 from werkzeug import run_simple
 import multiprocessing
@@ -33,11 +33,14 @@ def browser_firefox(context):
     # specify firefox executible and gecko drivers
     # see https://stackoverflow.com/a/76852633
     geckodriver_path = "/snap/bin/geckodriver"  # specify the path to your geckodriver
+    # Set the language for the tests
+    # see https://stackoverflow.com/a/71766991/1320237
+    opts.set_preference('intl.accept_languages', 'en-US, en')
+    # construct the arguments
+    kw = dict(options=opts)
     if os.path.exists(geckodriver_path):
-        driver_service = Service(executable_path=geckodriver_path)
-        browser = Firefox(options=opts, service=driver_service)
-    else:
-        browser = Firefox(options=opts)
+        kw["service"] = Service(executable_path=geckodriver_path)
+    browser = Firefox(**kw)
     context.browser = browser
     browser.set_page_load_timeout(10)
     yield context.browser
