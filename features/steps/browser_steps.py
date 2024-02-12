@@ -158,3 +158,13 @@ def assert_specification_has_value(context, attribute, expected_value):
 def step_impl(context, attribute, expected_value):
     """Check the JSON value of an attribute."""
     assert_specification_has_value(context, attribute, json.loads(expected_value))
+
+
+@when(u'we click on the {tag} "{text}"')
+def step_impl(context, tag, text):
+    # select if inner text element equals the text
+    # see https://stackoverflow.com/a/3655588/1320237
+    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {repr(text)}]]")
+    assert len(elements) == 1, f"There should only be one {tag} with the text {repr(text)} but there are {len(elements)}."
+    element = elements[0]
+    element.click()
