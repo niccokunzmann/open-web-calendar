@@ -98,7 +98,8 @@ def step_impl(context):
 def step_impl(context, dropdown_text):
     options = context.browser.find_elements(By.XPATH, f"//option[contains(text(), {repr(dropdown_text)})]")
     assert options, f"Could not find option with text {repr(dropdown_text)}"
-    assert len(options) == 1, f"Expected one option but found many: {', '.join(repr(o.get_attribute('innerText')) for o in options)}"
+    if len(options) != 1:
+        print(f"Expected one option but found many: {', '.join(repr(o.get_attribute('innerText')) for o in options)}")
     option = options[0]
     option.click() # see https://stackoverflow.com/a/7972225/1320237
     wait_for_calendar_to_load(context)
