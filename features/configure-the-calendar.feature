@@ -66,3 +66,15 @@ Feature: The calendar has a configuration page that displays and changes the
         Then "tabs" is specified as []
         When we click on the span "Agenda"
         Then "tabs" is specified as ["agenda"]
+
+    Scenario: We choose which controls are visible
+       Given we are on the configuration page
+        When we click on the span "Date"
+        Then "controls" is specified as ["next","previous","today"]
+        When we click on the span "Previous"
+        Then "controls" is specified as ["next","today"]
+        When we click on the span "Today"
+        Then "controls" is specified as ["next"]
+        When we click on the span "Next"
+         And we click on the span "Date"
+        Then "controls" is specified as ["date"]
