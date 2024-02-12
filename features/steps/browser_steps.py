@@ -4,6 +4,7 @@ from urllib.parse import urlencode
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.action_chains import ActionChains
 import json
 
 
@@ -120,7 +121,22 @@ def step_impl(context, text, field_id):
     """Write text into text input."""
     input = context.browser.find_element(By.ID, field_id)
     input.clear() # see https://stackoverflow.com/a/7809907/1320237
-    input.send_keys(text) # see https://stackoverflow.com/a/35127217/1320237
+    # For filling inputs and date inoputs
+    # see https://stackoverflow.com/a/35127217/1320237
+    # see https://stackoverflow.com/a/39532746/1320237
+    ActionChains(context.browser).move_to_element(input).click().send_keys(text).perform()
+    #input.send_keys(text)
+    print(f"{field_id}.value == {input.get_attribute('value')}")
+
+
+@when('we choose "{choice}" in "{select_id}"')
+def step_impl(context, choice, select_id):
+    """Write text into text input."""
+    element = context.browser.find_element(By.ID, select_id)
+    # see https://stackoverflow.com/a/28613320/1320237
+    select = Select(element)
+    select.select_by_visible_text(choice)
+    print(f"{select_id} selected {repr(element.get_attribute('value'))} though text {repr(choice)}")
 
 
 def get_specification(context) -> dict:
