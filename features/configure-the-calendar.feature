@@ -51,3 +51,14 @@ Feature: The calendar has a configuration page that displays and changes the
         Then "start_of_week" is specified as "su"
         When we choose "Monday - Friday" in "select-start-of-week"
         Then "start_of_week" is specified as "work"
+
+    Scenario: We choose the calendar tabs
+       Given we are on the configuration page
+        When we click on the span "Month"
+        Then "tabs" is specified as ["week","day"]
+        When we click on the span "Week"
+        Then "tabs" is specified as ["day"]
+        When we click on the span "Day"
+        Then "tabs" is specified as []
+        When we click on the span "Agenda"
+        Then "tabs" is specified as ["agenda"]
