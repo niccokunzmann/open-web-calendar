@@ -39,6 +39,10 @@ Feature: The calendar has a configuration page that displays and changes the
        Given we are on the configuration page
         When we choose "Week" in "select-tab"
         Then "tab" is specified as "week"
+        When we choose "Day" in "select-tab"
+        Then "tab" is specified as "day"
+        When we choose "Agenda" in "select-tab"
+        Then "tab" is specified as "agenda"
 
     Scenario: We choose the loader
        Given we are on the configuration page
