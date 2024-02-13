@@ -94,3 +94,8 @@ Feature: The calendar has a configuration page that displays and changes the
         Then "hour_division" is specified as "2"
         When we click on the span "1 hour"
         Then "hour_division" is not specified
+
+    Scenario: We choose the language of the calendar
+       Given we are on the configuration page
+        When we choose "Cymraeg (cy)" in "select-language"
+        Then "language" is specified as "cy"
