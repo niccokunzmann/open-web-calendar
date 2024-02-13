@@ -73,6 +73,12 @@ def step_impl(context, text):
     event.click()
 
 
+@when('we click on a link containing "{text}"')
+def step_impl(context, text):
+    event = context.browser.find_element(By.XPATH, f"//a[contains(text(), {repr(text)})]")
+    event.click()
+
+
 def get_body_text(context):
     body = context.browser.find_elements(By.XPATH, "//body")[0]
     innerText = body.get_attribute("innerText")
