@@ -299,7 +299,7 @@ Changelog
 ---------
 [changelog]: #changelog
 
-- v1.26 (unreleased)
+- v1.26
   - Use HTML color chooser for custom CSS
   - Add a red bar at the current time in the week view and the day view, see [PR 265](https://github.com/niccokunzmann/open-web-calendar/pull/265).
   - Expose the `hour_format` parameter and add choices for the 12h format, see [PR 266](https://github.com/niccokunzmann/open-web-calendar/pull/266).
