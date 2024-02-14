@@ -309,6 +309,11 @@ tox -e web -- -D browser=firefox
 tox -e web -- -D browser=chrome
 ```
 
+You can also change the layout of the window to test the responsive design:
+```
+tox -e web -- -D window=375x812 # iPhone11 size
+```
+
 [web]: https://open-web-calendar.hosted.quelltext.eu/
 
 Changelog
@@ -317,6 +322,9 @@ Changelog
 
 - v1.27 (unreleased)
   - Browser tests run with Firefox and Chrome, see [PR 272](https://github.com/niccokunzmann/open-web-calendar/pull/272)
+  - Add responsive layout, see [PR 273](https://github.com/niccokunzmann/open-web-calendar/pull/273)
+    - Remove tooltip on touch devices as it overlaps with the quick info
+    - Expose `compact_layout_width` parameter so you can change when to compact the layout, default is 600px width
 - v1.26
   - Use HTML color chooser for custom CSS
   - Add a red bar at the current time in the week view and the day view, see [PR 265](https://github.com/niccokunzmann/open-web-calendar/pull/265).
