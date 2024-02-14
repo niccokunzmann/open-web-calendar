@@ -129,11 +129,29 @@ def step_impl(context, text, field_id):
     """Write text into text input."""
     input = context.browser.find_element(By.ID, field_id)
     input.clear() # see https://stackoverflow.com/a/7809907/1320237
+    input.send_keys(text)
+    print(f"{field_id}.value == {input.get_attribute('value')}")
+
+
+@when('we write the date {day}/{month}/{year} into "{field_id}"')
+def step_impl(context, year, month, day, field_id):
+    """Write text into text input."""
+    input = context.browser.find_element(By.ID, field_id)
+    input.clear() # see https://stackoverflow.com/a/7809907/1320237
+    # construct the text, see https://stackoverflow.com/a/35855868/1320237
+    text = context.browser.execute_script(f"return (new Date({year}, {month} - 1, {day})).toLocaleDateString()")
+    print("text =", repr(text))
     # For filling inputs and date inputs
     # see https://stackoverflow.com/a/35127217/1320237
     # see https://stackoverflow.com/a/39532746/1320237
     ActionChains(context.browser).move_to_element(input).click().send_keys(text).perform()
-    print(f"{field_id}.value == {input.get_attribute('value')}")
+    value = input.get_attribute('value')
+    if not value:
+        # this works in Chrome, see https://stackoverflow.com/a/21314269/1320237
+        context.browser.execute_script(f'document.getElementById({repr(field_id)}).value = "{year}-{month}-{day}"');
+        input.send_keys(Keys.CONTROL)
+        value = input.get_attribute('value')
+    print(f"{field_id}.value == {value}")
 
 
 @when('we choose "{choice}" in "{select_id}"')
