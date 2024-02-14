@@ -15,10 +15,15 @@ jobs:
         tox_env: ["py"]
         # see https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
         include:
+        # run Firefox
         - python: "3.9"
           tox_env: web
+        # run Chrome
         - python: "3.9"
           tox_env: "web -- -D browser=chrome"
+        # run Firefox in iPhone 11 responsive layout
+        - python: "3.9"
+          tox_env: "web -D window=375x812"
 
     steps:
       - uses: actions/checkout@v3
