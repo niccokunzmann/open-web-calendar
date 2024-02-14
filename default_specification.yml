@@ -140,6 +140,9 @@ hour_format: "%H:%i"     # examples: 01:30, 13:45
 #hour_format: "%G:%i"    # examples:  1:30, 13:45
 #hour_format: "%g:%i %a" # examples:  1:30 am, 1:45 pm
 
+## This is the width in pixels at which the calendar switches to a compact
+## layout in order to fit in all the elements.
+compact_layout_width: 600
 
 ###################### Change this if you modify the project. ######################
 ##

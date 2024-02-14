@@ -83,6 +83,16 @@ browsers = {
     "safari": browser_safari,
 }
 
+
+@fixture
+def set_window_size(context):
+    """Set the window size of the browser."""
+    # see https://stackoverflow.com/a/55878622/1320237
+    if "window" in context.config.userdata:
+        width, height = context.config.userdata["window"].split("x")
+        context.browser.set_window_size(int(width), int(height))
+
+
 def serve_calendar_files(host, port, directory=os.path.join(HERE, "calendars")):
     """Serve the calendar files so they can be requested.
 
@@ -136,6 +146,7 @@ def calendars_server(context):
 def before_all(context):
     browser = browsers[context.config.userdata["browser"]]
     use_fixture(browser, context)
+    use_fixture(set_window_size, context)
     use_fixture(app_server, context)
     use_fixture(calendars_server, context)
 

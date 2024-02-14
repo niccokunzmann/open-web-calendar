@@ -131,6 +131,67 @@ function setLoader() {
     }
 }
 
+function getHeader() {
+    // elements that do not occur in the list will always be permitted
+    var useHeaderElement = {
+      "prev": specification.controls.includes("previous") ,
+      "date": specification.controls.includes("date"),
+      "next": specification.controls.includes("next"),
+      "day": specification.tabs.includes("day"),
+      "week": specification.tabs.includes("week"),
+      "month": specification.tabs.includes("month"),
+      "today": specification.controls.includes("today"),
+      "agenda": specification.tabs.includes("agenda"),
+    }
+    function showSelected(headerElements) {
+      return headerElements.filter(function(element){
+        return useHeaderElement[element] != false; // null for absent
+      });
+    }
+    // switch the header to a compact one
+    // see https://docs.dhtmlx.com/scheduler/touch_support.html
+    if (window.innerWidth < Number.parseInt(specification.compact_layout_width)) {
+        return {
+            rows: [
+                {
+                    cols: showSelected([
+                        "prev",
+                        "date",
+                        "next",
+                    ])
+                },
+                {
+                    cols: showSelected([
+                        "day",
+                        "week",
+                        "month",
+                        "agenda",
+                        "spacer",
+                        "today"
+                    ])
+                }
+            ]
+          };
+    } else {
+        return showSelected([
+            "day",
+            "week",
+            "month",
+            "agenda",
+            "date",
+            "prev",
+            "today",
+            "next"
+        ]);
+    }
+}
+
+function resetConfig() {
+    scheduler.config.header = getHeader();
+    return true;
+}
+
+
 /* Disable/Enable features based on touch/mouse-over gestures
  * see https://stackoverflow.com/a/52855084/1320237
  */
@@ -157,12 +218,14 @@ function loadCalendar() {
     });
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
-    // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
-    // scheduler.config.server_utc = true; // we use timezones now
 
     // responsive lightbox, see https://docs.dhtmlx.com/scheduler/touch_support.html
     scheduler.config.responsive_lightbox = true;
+    resetConfig();
+    scheduler.attachEvent("onBeforeViewChange", resetConfig);
+    scheduler.attachEvent("onSchedulerResize", resetConfig);
 
+    // we do not allow changes to the source calendar
     scheduler.config.readonly = true;
     /* Add a red line at the current time.
      * see https://docs.dhtmlx.com/scheduler/api__scheduler_hour_date_config.html

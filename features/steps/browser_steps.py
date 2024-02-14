@@ -27,9 +27,9 @@ def step_impl(context, calendar_name):
     context.specification["url"].append(calendar_url)
 
 
-@given('we set the "{parameter_name}" parameter to "{parameter_value}"')
+@given('we set the "{parameter_name}" parameter to {parameter_value}')
 def step_impl(context, parameter_name, parameter_value):
-    context.specification[parameter_name] = parameter_value
+    context.specification[parameter_name] = json.loads(parameter_value)
 
 
 @when(u'we look at {date}')
@@ -87,12 +87,23 @@ def get_body_text(context):
 
 @then(u'we cannot see the text "{text}"')
 def step_impl(context, text):
-    assert text not in get_body_text(context)
+    assert text not in get_body_text(context), f"{repr(text)} is visible but should not be visible"
 
 
 @then(u'we can see the text "{text}"')
 def step_impl(context, text):
-    assert text in get_body_text(context)
+    assert text in get_body_text(context), f"{repr(text)} is invisible but should be visible"
+
+
+@then(u'we can see a {cls}')
+def step_impl(context, cls):
+    assert context.browser.find_elements(By.CLASS_NAME, cls), f"Expected to find elements of class {cls}"
+
+
+@then(u'we cannot see a {cls}')
+def step_impl(context, cls):
+    assert not context.browser.find_elements(By.CLASS_NAME, cls), f"Expected to not find elements of class {cls}"
+
 
 @when(u"we open the about page")
 def step_impl(context):
