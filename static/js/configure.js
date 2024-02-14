@@ -131,6 +131,12 @@ function setLoader() {
     }
 }
 
+/* Disable/Enable features based on touch/mouse-over gestures
+ * see https://stackoverflow.com/a/52855084/1320237
+ */
+var IS_TOUCH_SCREEN = window.matchMedia("(pointer: coarse)").matches;
+var HAS_TOOLTIP = !IS_TOUCH_SCREEN;
+
 function loadCalendar() {
     /* Format the time of the hour.
      * see https://docs.dhtmlx.com/scheduler/settings_format.html
@@ -145,7 +151,7 @@ function loadCalendar() {
         multisource: true,
         quick_info: true,
         recurring: false,
-        tooltip: true,
+        tooltip: HAS_TOOLTIP,
         readonly: true,
         limit: true,
     });
@@ -153,6 +159,9 @@ function loadCalendar() {
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
     // use UTC, see https://docs.dhtmlx.com/scheduler/api__scheduler_server_utc_config.html
     // scheduler.config.server_utc = true; // we use timezones now
+
+    // responsive lightbox, see https://docs.dhtmlx.com/scheduler/touch_support.html
+    scheduler.config.responsive_lightbox = true;
 
     scheduler.config.readonly = true;
     /* Add a red line at the current time.
@@ -182,13 +191,15 @@ function loadCalendar() {
     scheduler.templates.event_bar_text = function(start, end, event){
         return event.text;
     }
-    // tool tip
+    // tooltip
     // see https://docs.dhtmlx.com/scheduler/tooltips.html
-    scheduler.templates.tooltip_text = function(start, end, event) {
-        return template.summary(event) + template.details(event) + template.location(event);
-    };
-    scheduler.tooltip.config.delta_x = 1;
-    scheduler.tooltip.config.delta_y = 1;
+    if (HAS_TOOLTIP) {
+        scheduler.templates.tooltip_text = function(start, end, event) {
+            return template.summary(event) + template.details(event) + template.location(event);
+        };
+        scheduler.tooltip.config.delta_x = 1;
+        scheduler.tooltip.config.delta_y = 1;
+    }
     // quick info
     scheduler.templates.quick_info_title = function(start, end, event){
         return template.summary(event);
