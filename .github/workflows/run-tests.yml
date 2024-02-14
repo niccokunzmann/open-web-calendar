@@ -17,6 +17,8 @@ jobs:
         include:
         - python: "3.9"
           tox_env: web
+        - python: "3.9"
+          tox_env: "web -- -D browser=chrome"
 
     steps:
       - uses: actions/checkout@v3
