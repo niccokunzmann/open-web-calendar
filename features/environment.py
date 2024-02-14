@@ -23,6 +23,14 @@ from behave.log_capture import capture
 import http.server
 import socketserver
 from selenium.webdriver.chrome.service import Service
+import subprocess
+
+def locate_command(command:str):
+    """Locate a command on the command line or return ''."""
+    code, output = subprocess.getstatusoutput(f'which {command}')
+    if code == 0:
+        return output.strip()
+    return ""
 
 
 @fixture
@@ -57,7 +65,8 @@ def browser_chrome(context):
     options.add_argument("start-maximized")
     options.add_argument("--headless") # from https://stackoverflow.com/q/56637973/1320237
     # executable_path from https://stackoverflow.com/a/76550727/1320237
-    service = Service(executable_path='/snap/bin/chromium.chromedriver')
+    path = locate_command("chromium.chromedriver") or locate_command("chromedriver")
+    service = Service(executable_path=path)
     context.browser = webdriver.Chrome(service=service, options=options)
     yield context.browser
     context.browser.quit()
