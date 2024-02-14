@@ -23,7 +23,7 @@ jobs:
           tox_env: "web -- -D browser=chrome"
         # run Firefox in iPhone 11 responsive layout
         - python: "3.9"
-          tox_env: "web -D window=375x812"
+          tox_env: "web -- -D window=375x812"
 
     steps:
       - uses: actions/checkout@v3
