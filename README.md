@@ -315,6 +315,8 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.27 (unreleased)
+  - Browser tests run with Firefox and Chrome, see [PR 272](https://github.com/niccokunzmann/open-web-calendar/pull/272)
 - v1.26
   - Use HTML color chooser for custom CSS
   - Add a red bar at the current time in the week view and the day view, see [PR 265](https://github.com/niccokunzmann/open-web-calendar/pull/265).
