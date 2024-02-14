@@ -293,6 +293,22 @@ Run a specific Python version:
 tox -e py39
 ```
 
+### Browser Testing
+
+We use selenium to test the app in different browsers.
+By default, Firefox is used.
+You can test the features like this:
+
+```
+tox -e web
+```
+
+If you like to change the browser, use
+```
+tox -e web -- -D browser=firefox
+tox -e web -- -D browser=chrome
+```
+
 [web]: https://open-web-calendar.hosted.quelltext.eu/
 
 Changelog

@@ -20,8 +20,8 @@ Feature: The calendar has a configuration page that displays and changes the
 
     Scenario: We choose the date which the calendar displays
        Given we are on the configuration page
-        When we write "02022024" into "starting-date"
-        Then "date" is specified as "2024-02-02"
+        When we write the date 14/02/2024 into "starting-date"
+        Then "date" is specified as "2024-02-14"
 
     Scenario: We choose the start and end hour
        Given we are on the configuration page
