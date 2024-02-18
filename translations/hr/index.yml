@@ -76,3 +76,7 @@ spec-host-html: <a href="javascript:downloadJSONSpecification()">Ovu specifikaci
   href="https://gist.github.com/">Gistu</a>.
 configure-week-title: Dani tjedna
 configure-week-description: Početak tjedna može biti ponedjeljak ili nedjelja.
+hour-format-title: Prikaz sata
+hour-format-description: Možeš birati između 24-satnog i 12-satnog sata. Potoji više
+  opcija.
+hour-format-specification-link: Pogledaj specifikaciju.
