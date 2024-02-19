@@ -91,7 +91,7 @@ The Open Web Calendar can be used to access the local network behind a firewall,
 see [Issue 250](https://github.com/niccokunzmann/open-web-calendar/issues/250).
 This free access is intended to show calendars from everywhere.
 Since `requests` is used by the Open Web Calender,
-it can be used to use a proxy as described in the
+it can use a proxy as described in the
 [`requests` documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies).
 The proxy can then handle the filtering.
 
@@ -100,6 +100,9 @@ export HTTP_PROXY="http://10.10.1.10:3128"
 export HTTPS_PROXY="http://10.10.1.10:1080"
 export ALL_PROXY="socks5://10.10.1.10:3434"
 ```
+
+See also:
+- [Prevent SSRF using a Tor proxy][tor-proxy]
 
 ### Docker
 
@@ -156,6 +159,7 @@ If you want to update your image with the latest version from Dockerhub type `do
 Note: You need to start the container after pulling again in order for the update to apply (`docker-compose up -d`)
 
 #### Preventing SSRF attacks using a Tor proxy
+[tor-proxy]: #ssrf-protection-with-a-proxy-server
 
 The Open Web Calendar can be configured to use a proxy to request `.ics`
 and other files. The following example shows the usage of a Tor proxy.
