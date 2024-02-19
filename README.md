@@ -175,11 +175,27 @@ services:
       - HTTP_PROXY=socks5h://tor-socks-proxy:9150
       - HTTPS_PROXY=socks5h://tor-socks-proxy:9150
       - ALL_PROXY=socks5h://tor-socks-proxy:9150
+    # optional: create a private network so OWC cannot access the Internet directly
+    networks:
+      - no-internet-only-tor
 
   # from https://hub.docker.com/r/peterdavehello/tor-socks-proxy/
   tor-socks-proxy:
-    image: peterdavehello/tor-socks-proxy
+    image: peterdavehello/tor-socks-proxy # use :test for arm64
     restart: unless-stopped
+    # optional: allow access to OWC and the Internet
+    networks:
+      - default
+      - no-internet-only-tor
+
+networks:
+  default:
+    ipam:
+      driver: default
+  no-internet-only-tor: # see https://stackoverflow.com/a/51964169/1320237
+    driver: bridge
+    internal: true
+
 ```
 
 The configuration above prevents access to the internal network as the
