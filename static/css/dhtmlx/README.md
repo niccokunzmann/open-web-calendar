@@ -3,6 +3,12 @@ DHTMLX Skins
 
 This folder contains skins for DHTMLX.
 
+Style all skins
+---------------
+
+If you like to add a style that is present when all skins are present,
+please add it to `style.css`.
+
 Adding a new Skin
 -----------------
 
