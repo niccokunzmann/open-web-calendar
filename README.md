@@ -340,7 +340,7 @@ Changelog
 ---------
 [changelog]: #changelog
 
-- v1.27 (unreleased)
+- v1.27
   - Browser tests run with Firefox and Chrome, see [PR 272](https://github.com/niccokunzmann/open-web-calendar/pull/272)
   - Add responsive layout, see [PR 273](https://github.com/niccokunzmann/open-web-calendar/pull/273)
     - Remove tooltip on touch devices as it overlaps with the quick info
