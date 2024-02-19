@@ -61,9 +61,16 @@ def browser_firefox(context):
 def browser_chrome(context):
     # see https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls
     # for an example
+    # lots of options come from https://stackoverflow.com/a/52340526/1320237
     options = webdriver.ChromeOptions()
-    options.add_argument("start-maximized")
     options.add_argument("--headless") # from https://stackoverflow.com/q/56637973/1320237
+    options.add_argument("start-maximized"); # https://stackoverflow.com/a/26283818/1689770
+    options.add_argument("enable-automation"); # https://stackoverflow.com/a/43840128/1689770
+    options.add_argument("--no-sandbox"); # https://stackoverflow.com/a/50725918/1689770
+    options.add_argument("--disable-dev-shm-usage"); # https://stackoverflow.com/a/50725918/1689770
+    options.add_argument("--disable-browser-side-navigation"); # https://stackoverflow.com/a/49123152/1689770
+    options.add_argument("--disable-gpu"); # https://stackoverflow.com/questions/51959986/how-to-solve-selenium-chromedriver-timed-out-receiving-message-from-renderer-exc
+
     # executable_path from https://stackoverflow.com/a/76550727/1320237
     path = locate_command("chromium.chromedriver") or locate_command("chromedriver")
     service = Service(executable_path=path)
