@@ -89,3 +89,10 @@
   /* hide the delete and details button */
   display: none
 }
+
+div.dhx_agenda_line > span {
+    /* fixes vanishing of calendar entries in agenda view at narrow mobile viewport sizes */
+	display: block ruby !important;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
