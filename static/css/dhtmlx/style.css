@@ -96,3 +96,16 @@ div.dhx_agenda_line > span {
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
+
+@media only screen and (max-width: 480px) {
+    .event {
+        height: 4.17vw;
+        font-size: 2.92vw;
+    }
+
+    .dhx_month_head {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        line-height: 3.75vw;
+    }
+}
