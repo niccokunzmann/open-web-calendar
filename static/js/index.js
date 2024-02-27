@@ -261,9 +261,10 @@ function downloadJSONAsFile(filename, text) {
 }
 
 function fillFirstInputWithData() {
-    var urlInputs = document.getElementsByClassName("calendar-url-input");
-    if (urlInputs) {
-        urlInputs[0].value = "https://www.calendarlabs.com/ical-calendar/ics/46/Germany_Holidays.ics";
+    for (let url of ((typeof specification.url) == "string" ? [specification.url] : specification.url)) {
+      updateCalendarInputs();
+      var urlInputs = document.getElementsByClassName("calendar-url-input");
+      urlInputs[urlInputs.length - 1].value = url;
     }
 }
 
