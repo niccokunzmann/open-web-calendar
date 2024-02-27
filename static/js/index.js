@@ -300,13 +300,13 @@ function fillLanguageChoice() {
 }
 
 function fillTimezoneChoice() {
-    fillTimezoneUIElements(configuration.default_specification.timezone)
+    fillTimezoneUIElements(specification.timezone)
     changeSpecificationOnChange(document.getElementById("select-timezone"));
 }
 
 function initializeSkinChoice() {
     var select = document.getElementById("select-skin");
-    select.value = configuration.default_specification.skin;
+    select.value = specification.skin;
     select.onchange = updateOutputs;
 }
 
@@ -318,25 +318,25 @@ function initializeTitle() {
 
 function initializeStartDate() {
     var input = document.getElementById("starting-date");
-    input.value = configuration.default_specification.date;
+    input.value = specification.date;
     changeSpecificationOnChange(input);
 }
 
 function initializeFirstHour() {
     var input = document.getElementById("starting-hour");
-    input.value = configuration.default_specification.starting_hour;
+    input.value = specification.starting_hour;
     changeSpecificationOnChange(input);
 }
 
 function initializeLastHour() {
     var input = document.getElementById("ending-hour");
-    input.value = configuration.default_specification.ending_hour;
+    input.value = specification.ending_hour;
     changeSpecificationOnChange(input);
 }
 
 function initializeTimeIncrement() {
     var input = document.getElementById("time-increment");
-    var increment = document.getElementById("time-" + configuration.default_specification.hour_division)
+    var increment = document.getElementById("time-" + specification.hour_division)
     if (increment) {
         increment.checked = "checked";
     }
@@ -345,15 +345,26 @@ function initializeTimeIncrement() {
     }
 }
 
+function select_option_and_add_if_absent(select, value) {
+  select.value = value;
+  if (select.selectedIndex == -1) {
+    var option = document.createElement("option");
+    option.value = value;
+    option.innerText = value;
+    select.appendChild(option);
+    select.value = value;
+  }
+}
+
 function initializeHourFormat() {
     var input = document.getElementById("select-hour-format");
-    input.value = configuration.default_specification.hour_format;
+    select_option_and_add_if_absent(input, specification.hour_format);
     changeSpecificationOnChange(input);
 }
 
 function initializeStartOfWeek() {
     var input = document.getElementById("select-start-of-week");
-    input.value = configuration.default_specification.start_of_week;
+    input.value = specification.start_of_week;
     changeSpecificationOnChange(input);
 }
 
@@ -377,28 +388,27 @@ function listenForCSSChanges() {
 
 function initializeLinkTargetChoice() {
     var select = document.getElementById("select-target");
-    select.value = configuration.default_specification.target;
+    select.value = specification.target;
     select.onchange = updateOutputs;
 }
 
 function initializeLoader() {
-    var select = document.getElementById("select-loader");
-    select.onchange = updateOutputs;
-}
-
-function updateLoader() {
     var defaultLoader = document.getElementById("default-loader");
     defaultLoader.value = configuration.default_specification.loader;
+    var select = document.getElementById("select-loader");
+    select_option_and_add_if_absent(select, specification.loader);
+    select.onchange = updateOutputs;
 }
 
 function updateControls() {
     var initialView = document.getElementById("select-tab");
+    initialView.value = specification.tab;
     changeSpecificationOnChange(initialView);
     var form = document.getElementById("check-controls");
     var checkbuttons = {};
     ["tabs", "controls"].forEach(function(list) {
         var checkboxes = form.getElementsByClassName(list);
-        var checked = configuration.default_specification[list];
+        var checked = specification[list];
         for (var i = 0; i < checkboxes.length; i++) {
             var checkbox = checkboxes[i];
             checkbox.checked = checked.includes(checkbox.value);
@@ -436,7 +446,6 @@ window.addEventListener("load", function(){
     updateCalendarInputs();
     fillFirstInputWithData();
     updateCalendarInputs();
-    updateLoader();
     updateControls();
     // updating what can be seen
     updateOutputs();
