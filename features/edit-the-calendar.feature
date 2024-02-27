@@ -37,3 +37,19 @@ Feature: The calendar about page has a link to edit an existing calendar.
         | hour_format   | "%g:%i%a"                           |
         | target        | "_blank"                            |
         | target        | "_self"                             |
+        | custom-value  | "nanana!"                           |
+        | css           | ".test{/*css*/}"                    |
+
+  Scenario: When I visit the configuration page, the configuration is
+            almost empty.
+    Given we are on the configuration page
+     Then "hour_division" is not specified
+     Then "date" is not specified
+     Then "tab" is not specified
+
+  Scenario: We want to edit the CSS properties
+      Given we set the "css" parameter to ".test"
+        And we are on the configuration page
+       Then ".test" is written in "css-input"
+       When we write "other-css" into "css-input"
+       Then "css" is specified as "other-css"

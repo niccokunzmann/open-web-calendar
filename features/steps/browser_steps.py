@@ -144,6 +144,14 @@ def step_impl(context, text, field_id):
     print(f"{field_id}.value == {input.get_attribute('value')}")
 
 
+@then('"{text}" is written in "{field_id}"')
+def step_impl(context, text, field_id):
+    """Check that a field has a value."""
+    input = context.browser.find_element(By.ID, field_id)
+    actual_text = input.get_attribute('value')
+    assert actual_text == text, f"Expected {repr(text)} in {field_id} but got {repr(actual_text)}."
+
+
 @when('we write the date {day}/{month}/{year} into "{field_id}"')
 def step_impl(context, year, month, day, field_id):
     """Write text into text input."""

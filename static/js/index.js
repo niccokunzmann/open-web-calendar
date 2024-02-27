@@ -91,41 +91,41 @@ function setSpecificationValueFromId(specification, key, id) {
  *
  */
 function getSpecification() {
-    var specification = {};
+    var spec = shallowCopy(specification);
     /* url */
     var urls = getUrls();
     if (urls.length == 1) {
-        specification.url = urls[0];
+        spec.url = urls[0];
     } else if (urls.length > 1) {
-        specification.url = urls;
+        spec.url = urls;
     }
     /* title */
-    setSpecificationValueFromId(specification, "title", "calendar-title");
+    setSpecificationValueFromId(spec, "title", "calendar-title");
     /* starting date */
-    setSpecificationValueFromId(specification, "date", "starting-date");
+    setSpecificationValueFromId(spec, "date", "starting-date");
     /* starting hour */
-    setSpecificationValueFromId(specification, "starting_hour", "starting-hour");
+    setSpecificationValueFromId(spec, "starting_hour", "starting-hour");
     /* ending hour */
-    setSpecificationValueFromId(specification, "ending_hour", "ending-hour");
+    setSpecificationValueFromId(spec, "ending_hour", "ending-hour");
 
     /* time increment */
     let time_increment = document.getElementById("time-increment");
     for (let c of time_increment.getElementsByClassName("time-increment-input")) {
         if (c.checked && configuration.default_specification.hour_division != c.value) {
-            specification.hour_division = c.value;
+            spec.hour_division = c.value;
         }
     }
 
     /* hour format */
-    setSpecificationValueFromId(specification, "hour_format", "select-hour-format");
+    setSpecificationValueFromId(spec, "hour_format", "select-hour-format");
     /* language */
-    setSpecificationValueFromId(specification, "language", "select-language");
+    setSpecificationValueFromId(spec, "language", "select-language");
     /* skin */
-    setSpecificationValueFromId(specification, "skin", "select-skin");
+    setSpecificationValueFromId(spec, "skin", "select-skin");
     /* Start of the week */
-    setSpecificationValueFromId(specification, "start_of_week", "select-start-of-week");
+    setSpecificationValueFromId(spec, "start_of_week", "select-start-of-week");
     /* timezone */
-    setSpecificationValueFromId(specification, "timezone", "select-timezone");
+    setSpecificationValueFromId(spec, "timezone", "select-timezone");
     /* color and CSS */
     var css = configuration.default_specification.css;
     var colorInputs = document.getElementsByClassName("color-input");
@@ -135,41 +135,42 @@ function getSpecification() {
         if (color && color != "#fefefe") {
             css += colorInput.getAttribute("csstemplate").formatUnicorn({
                 "color": color
-            }) + "\n";
+            });
         }
     }
     var customCss = getValueById("css-input");
     if (!customCss.match(/^\s*$/) /* only white spaces */) {
-      css += customCss;
+      /* Add the custom CSS to the start of the file to override values from
+         chosen color dialogs. */
+      css = customCss + (css ? "\n" + css : "");
     }
     if (css) {
-        specification.css = css;
+        spec.css = css;
     }
     /* link targets */
-    setSpecificationValueFromId(specification, "target", "select-target");
+    setSpecificationValueFromId(spec, "target", "select-target");
     /* loader */
-    setSpecificationValueFromId(specification, "loader", "select-loader");
+    setSpecificationValueFromId(spec, "loader", "select-loader");
     /* initial view */
-    setSpecificationValueFromId(specification, "tab", "select-tab");
+    setSpecificationValueFromId(spec, "tab", "select-tab");
     /* controls */
-    specification.controls = [];
-    specification.tabs = [];
+    spec.controls = [];
+    spec.tabs = [];
     var checkbuttons = document.getElementById("check-controls");
     for (var i = 0; i < checkbuttons.length; i++) {
         var checkbutton = checkbuttons[i];
         if (checkbutton.checked) {
-            specification[checkbutton.classList[0]].push(checkbutton.value);
+            spec[checkbutton.classList[0]].push(checkbutton.value);
         }
     }
-    ["tabs", "controls"].forEach(function(element){
-        if (arraysEqual(specification[element], configuration.default_specification[element])) {
-            delete specification[element];
-            console.log("del;");
+    getOwnProperties(configuration.default_specification).forEach(function(element){
+        if (arraysEqual(spec[element], configuration.default_specification[element])) {
+            delete spec[element];
         }
     });
     /* print before exit */
-    console.log("getSpecification", specification);
-    return specification;
+    console.log("getSpecification", spec);
+    return spec;
 }
 
 function displayCalendarLink(url) {
@@ -383,6 +384,7 @@ function listenForCSSChanges() {
         changeSpecificationOnChange(input);
     }
     var CSSText = document.getElementById("css-input");
+    CSSText.value = specification.css;
     changeSpecificationOnChange(CSSText);
 }
 
