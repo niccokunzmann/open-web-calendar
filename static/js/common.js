@@ -19,6 +19,13 @@ function getOwnProperties(object) {
     return ownProperties;
 }
 
+function shallowCopy(object) {
+    var copy = {};
+    for (let attribute of getOwnProperties(object)) {
+      copy[attribute] = object[attribute];
+    }
+    return copy;
+}
 
 function getTimezone() {
     // see https://stackoverflow.com/a/37512371
