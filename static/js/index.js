@@ -279,11 +279,12 @@ function fillDefaultSpecificationLink() {
 function fillLanguageChoice() {
     var select = document.getElementById("select-language");
     var selected = false;
+    var selected_language = configuration.default_specification.language == specification.language ? USER_PREFERRED_LANGUAGE : specification.language;
     configuration.dhtmlx.languages.forEach(function (language){
         var option = document.createElement("option");
         var code = option.value = language[1];
         option.text = language[0] + " (" + code + ")";
-        if (code == USER_PREFERRED_LANGUAGE) {
+        if (code == selected_language) {
             option.selected = true;
             selected = true;
         }
@@ -310,7 +311,7 @@ function initializeSkinChoice() {
 
 function initializeTitle() {
     var input = document.getElementById("calendar-title");
-    input.value = configuration.default_specification.title;
+    input.value = specification.title;
     changeSpecificationOnChange(input);
 }
 

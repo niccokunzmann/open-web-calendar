@@ -130,7 +130,7 @@ def step_impl(context, dropdown_text):
 def step_impl(context):
     """Visit the configuration page and wait for it to load."""
     context.browser.delete_all_cookies()
-    url = context.index_page
+    url = context.index_page + "?" + specification_to_query(context.specification)
     context.browser.get(url)
     print(f"Visiting {url}")
 
