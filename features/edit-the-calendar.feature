@@ -24,6 +24,7 @@ Feature: The calendar about page has a link to edit an existing calendar.
         | tab           | "agenda"                            |
         | tab           | "week"                              |
         | loader        | ""                                  |
+        | loader        | "https://my-custom-loader.uk/l.gif" |
         | start_of_week | "su"                                |
         | start_of_week | "work"                              |
         | tabs          | ["week","day"]                      |
@@ -32,3 +33,7 @@ Feature: The calendar about page has a link to edit an existing calendar.
         | controls      | ["date"]                            |
         | skin          | "dhtmlxscheduler_flat.css"          |
         | hour_division | "2"                                 |
+        | hour_format   | "%G:%i"                             |
+        | hour_format   | "%g:%i%a"                           |
+        | target        | "_blank"                            |
+        | target        | "_self"                             |

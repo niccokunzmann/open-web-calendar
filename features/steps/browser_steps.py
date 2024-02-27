@@ -179,7 +179,11 @@ def get_specification(context) -> dict:
     """Return the specification from the configuration page."""
     spec_element = context.browser.find_element(By.ID, "json-specification")
     json_string = spec_element.get_attribute("innerText")
-    return json.loads(json_string)
+    try:
+        return json.loads(json_string)
+    except:
+        print(repr(json_string))
+        raise
 
 
 def assert_specification_has_value(context, attribute, expected_value="no value"):
