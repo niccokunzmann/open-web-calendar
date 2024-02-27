@@ -36,7 +36,7 @@ spec-title: Die Spezifikation Hosten
 spec-description: 'Der Kalender kann nicht nur durch eine URL generiert werden sondern
   auch durch eine JSON oder YAML-Spezifikation aus einer Datei. Deine Anpassungen
   erzeugen die folgende Spezifikation:'
-calendar-code: 'Um den Kalender einzubetten nutze diesen Code auf der Webseite:'
+calendar-code: 'Um den Kalender einzubetten, nutze diesen Code auf der Webseite:'
 calendar-code-execution: Das Resultat kannst Du hier drunter ansehen.
 about: Der Offene Web-Kalender nutzt online ICS/ICal-Kalender und zeigt sie in einem
   Kalender an. Du kannst ihn mit Nextcloud, Outlook, Google Calendar, Meetup und anderen
@@ -73,7 +73,7 @@ links-parent: Öffne den Link in dem Frame drüber.
 links-blank: Öffne den Link in einem neuen Fenster oder Tab.
 links-top: Öffne den Link im vollen Fenster.
 spec-host-html: Du kannst <a href="javascript:downloadJSONSpecification()">die Spezifikation
-  herunterladen</a> und sie irgendwo im Web platzieren. Auf diese Weise kannst den
+  herunterladen</a> und sie irgendwo im Web platzieren. Auf diese Weise kannst Du den
   Kalender später überall, wo er verwendet wird, mit einem Mal verändern. Dazu kannst
   du die Spezifikation z.B. in einem <a href="https://gist.github.com/">Gist</a> veröffentlichen.
 configure-week-title: Wochentage
