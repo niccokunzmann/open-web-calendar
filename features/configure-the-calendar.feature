@@ -6,7 +6,6 @@ Feature: The calendar has a configuration page that displays and changes the
         When we write "https://localhost:12345/example.ics" into "calendar-url-input-0"
         Then "url" is specified as "https://localhost:12345/example.ics"
 
-
     Scenario: We can specify two URLs.
        Given we are on the configuration page
         When we write "https://localhost:12345/example.ics" into "calendar-url-input-0"

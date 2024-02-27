@@ -3,6 +3,9 @@
     <head>
         <title>Open Web Calendar</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var specification = {{ specification | tojson | safe }};
+        </script>
         <link href="css/index.css"
             rel="stylesheet" type="text/css" charset="utf-8">
         <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">

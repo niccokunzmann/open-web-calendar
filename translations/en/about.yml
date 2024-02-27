@@ -13,6 +13,9 @@ links-ics: "Use this link to subscribe to the calendar or to add the events to y
 # One of the links
 # https://open-web-calendar.hosted.quelltext.eu/about.html#translate-links-spec
 links-spec: "View or download the calendar specification."
+# One of the links
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-links-spec
+links-edit: "Edit a copy of the calendar."
 # One of the items in the menu to choose the time zone of the calendar
 # https://open-web-calendar.hosted.quelltext.eu/about.html#translate-timezone-browser
 timezone-browser: "This is the time zone of your device:"
