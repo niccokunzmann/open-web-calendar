@@ -1,1 +1,22 @@
-{}
+title-title: Otsikko
+starting-date-description: 'Muuta kalenterin alkamispäivää:'
+first-hour-title: Ensimmäinen tunti
+last-hour-title: Viimeinen tunti
+time-increment-title: Ajan lisäys
+time-increment-30: 30 minuuttia
+title-description: 'Muuttaaksesi otsikkoa, syötä kalenterin nimi tähän:'
+starting-date-title: Alkamispäivä
+first-hour-description: 'Muuta kalenterinäkymän ensimmäistä tuntia:'
+time-increment-10: 10 minuuttia
+language-description: Voit valita kalenterin kielen.
+skins-title: Teemat
+skins-description: Voit valita kalenterin teeman.
+last-hour-description: 'Muuta kalenterinäkymän viimeistä tuntia:'
+time-increment-description: 'Muuta ajan lisäystä päivä- ja viikkonäkymässä:'
+time-increment-15: 15 minuuttia
+hour-format-title: Ajannäyttö
+hour-format-specification-link: Katso määrittely.
+language-title: Kieli
+hour-format-description: Voit valita 24 tunnin tai 12 tunnin kellon välillä. Muitakin
+  vaihtoehtoja on.
+time-increment-60: 1 tunti
