@@ -159,7 +159,7 @@ If you want to update your image with the latest version from Dockerhub type `do
 Note: You need to start the container after pulling again in order for the update to apply (`docker-compose up -d`)
 
 #### Preventing SSRF attacks using a Tor proxy
-[tor-proxy]: #ssrf-protection-with-a-proxy-server
+[tor-proxy]: #preventing-ssrf-attacks-using-a-tor-proxy
 
 The Open Web Calendar can be configured to use a proxy to request `.ics`
 and other files. The following example shows the usage of a Tor proxy.
