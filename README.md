@@ -340,6 +340,13 @@ Changelog
 ---------
 [changelog]: #changelog
 
+- v1.28
+  - Update dependencies
+  - Allow editing calendar copies, see [Issue 180](https://github.com/niccokunzmann/open-web-calendar/issues/180)
+  - Improve Finnish translation by Tomi Pöyskö and Croatian by Milo Ivir
+  - Improve visibility on small screens, see [PR 284](https://github.com/niccokunzmann/open-web-calendar/pull/284)
+  - Fix: show event title in mobile agenda view, see [Issue 277](https://github.com/niccokunzmann/open-web-calendar/issues/277)
+  - Fix Chrome driver timeout in CI tests, see [PR 279](https://github.com/niccokunzmann/open-web-calendar/pull/279)
 - v1.27
   - Browser tests run with Firefox and Chrome, see [PR 272](https://github.com/niccokunzmann/open-web-calendar/pull/272)
   - Add responsive layout, see [PR 273](https://github.com/niccokunzmann/open-web-calendar/pull/273)
