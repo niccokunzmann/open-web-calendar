@@ -123,6 +123,25 @@ def step_impl(context, dropdown_text):
     wait_for_calendar_to_load(context)
 
 
+@when("we click on >")
+def step_impl(context):
+    """Move the calendar one section further."""
+    click_button(context, By.CLASS_NAME, "dhx_cal_next_button")
+
+
+@when("we click on <")
+def step_impl(context):
+    """Move the calendar one section further."""
+    click_button(context, By.CLASS_NAME, "dhx_cal_prev_button")
+
+
+def click_button(context, selector_type, selector):
+    """Find a button with a selector and click it."""
+    buttons = context.browser.find_elements(selector_type, selector)
+    assert len(buttons) == 1, f"Expected one button but got {buttons}."
+    buttons[0].click()
+
+
 # Browser steps for configuring the calendar.
 
 
