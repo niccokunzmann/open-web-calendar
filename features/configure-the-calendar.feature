@@ -50,7 +50,7 @@ Feature: The calendar has a configuration page that displays and changes the
 
     Scenario: We choose the days of the week
        Given we are on the configuration page
-        When we choose "Sunday - Monday" in "select-start-of-week"
+        When we choose "Sunday - Saturday" in "select-start-of-week"
         Then "start_of_week" is specified as "su"
         When we choose "Monday - Friday" in "select-start-of-week"
         Then "start_of_week" is specified as "work"

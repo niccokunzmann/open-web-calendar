@@ -361,4 +361,22 @@ scheduler.ignore_month = function(date){
   }
 };
 
+scheduler.attachEvent("onBeforeViewChange", function(old_mode, old_date, mode, date){
+    // see https://docs.dhtmlx.com/scheduler/api__scheduler_onbeforeviewchange_event.html
+    // see https://forum.dhtmlx.com/t/scheduler-date-add-day-not-getting-called/35633
+    // see https://docs.dhtmlx.com/scheduler/day_view.html#comment-6411743964
+    if (mode == "day" && specification["start_of_week"] == "work") {
+      if (date.getDay() == 6) {
+        // Saturday, we come from Friday and go to Monday
+        scheduler.setCurrentView(scheduler.date.add(date, 2, "day"));
+        return false;
+      } else if (date.getDay() == 0) {
+        // Sunday, we come from Monday and go to Friday
+        scheduler.setCurrentView(scheduler.date.add(date, -2, "day"));
+        return false;
+      }
+    }
+    return true;
+});
+
 window.addEventListener("load", loadCalendar);
