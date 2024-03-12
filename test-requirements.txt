@@ -37,7 +37,7 @@ pluggy==1.4.0
     # via pytest
 pysocks==1.7.1
     # via urllib3
-pytest==8.1.0
+pytest==8.1.1
     # via -r test-requirements.in
 selenium==4.18.1
     # via -r test-requirements.in
