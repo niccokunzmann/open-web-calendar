@@ -339,7 +339,11 @@ tox -e web -- -D window=375x812 # iPhone11 size
 Changelog
 ---------
 [changelog]: #changelog
-
+- v1.29
+  - Improve Indonesian translation by Reza Almanda, Croatian by Milo Ivir,
+    German by Nicco Kunzmann, Spanish by gallegonovato, Turkish by Oğuz Ersen
+  - Update dependencies and documentation
+  - Work week now skips Saturday and Sunday in Day View, see [Issue 258](https://github.com/niccokunzmann/open-web-calendar/issues/258)
 - v1.28
   - Update dependencies
   - Allow editing calendar copies, see [Issue 180](https://github.com/niccokunzmann/open-web-calendar/issues/180)
