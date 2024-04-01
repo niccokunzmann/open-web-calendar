@@ -54,7 +54,7 @@ pytz==2023.3.post1
     #   x-wr-timezone
 pyyaml==6.0.1
     # via -r requirements.in
-recurring-ical-events==2.1.3
+recurring-ical-events==2.2.0
     # via -r requirements.in
 requests[socks]==2.31.0
     # via -r requirements.in
