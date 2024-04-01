@@ -1,1 +1,87 @@
-{}
+first-hour-title: Prima ora
+last-hour-description: "Per modificare l'ultima ora della visualizzazione del calendario:"
+calendar-urls: 'Per unire più calendari, inserisci gli URL dei calendari ICS qui:'
+calendar-code: 'Per incorporare il calendario, utilizza questo codice sul tuo sito
+  web:'
+calendar-code-execution: È possibile visualizzare il calendario risultante di seguito.
+section-customization: Puoi effettuare ulteriori personalizzazioni del calendario.
+title-title: Titolo
+title-description: 'Per modificare il titolo, inserisci qui il nome del calendario:'
+starting-date-title: Data di inizio
+last-hour-title: Ultima ora
+time-increment-title: Incremento temporale
+time-increment-description: "Modificare l'incremento temporale nella visualizzazione
+  giornaliera e settimanale:"
+time-increment-10: 10 minuti
+time-increment-15: 15 minuti
+time-increment-30: 30 minuti
+time-increment-60: 1 ora
+style-title: Stile personalizzato con CSS
+translate: Traduzione
+hour-format-title: Convenzione sull'orologio
+hour-format-specification-link: Visualizza la specifica.
+language-description: È possibile impostare la lingua del calendario.
+skins-description: Puoi selezionare skin diverse per il calendario.
+skins-title: Skin
+skins-contrast-black: Nero a contrasto
+skins-material: Material
+skins-contrast-white: Bianco a contrasto
+links-title: Link
+links-parent: Apri il documento collegato nel frame principale.
+links-blank: Apri il documento collegato in una nuova finestra o scheda.
+style-background: Puoi cambiare il colore di sfondo del calendario.
+style-days: Se preferisci avere un colore diverso per i giorni, puoi specificarlo
+  anche tu.
+style-days-outside: Alcuni giorni del calendario hanno un colore diverso se non rientrano
+  nel mese.
+loader-title: Caricamento dell'animazione
+loader-default: caricatore circolare
+loader-none: nessun caricatore
+tabs-title: Schede del calendario
+controls-date: Data
+timezone-title: Fuso orario
+loading: Caricamento in corso…
+spec-title: Specifiche dell'hosting
+spec-description: "Il calendario può essere generato non solo utilizzando l'URL, ma
+  anche tramite una specifica JSON o YAML da un file. La personalizzazione sopra genera
+  questa specifica:"
+spec-link: 'Dopo aver inserito le specifiche da qualche parte online, puoi creare
+  un collegamento come questo:'
+configure-week-title: Giorni della settimana
+configure-week-description: La settimana può iniziare lunedì o domenica.
+starting-date-description: 'Per modificare la data di inizio del calendario:'
+first-hour-description: 'Per modificare la prima ora della visualizzazione del calendario:'
+timezone-description: "Il fuso orario viene preso dal browser dell'utente. Se desideri
+  che il tuo calendario venga fissato in un fuso orario, hai l'opzione di seguito.
+  Il tuo browser utilizza questo fuso orario:"
+timezone-browser: utilizzare il fuso orario del browser
+spec-host-html: Puoi <a href="javascript:downloadJSONSpecification()">scaricare questa
+  specifica</a> e inserirla da qualche parte sul Web. In questo modo hai ancora il
+  controllo sulla personalizzazione del calendario dopo aver condiviso il collegamento,
+  ad es. su GitHub in un <a href="https://gist.github.com/">Gist</a>.
+about: Open Web Calendar utilizza i calendari ICS/ICal online e li visualizza in un
+  unico calendario. Puoi utilizzarlo con Nextcloud, Outlook, Google Calendar, Meetup
+  e altri sistemi di calendario utilizzando lo standard ICS.
+hour-format-description: Puoi scegliere tra l'orologio a 24 ore e l'orologio a 12
+  ore. Sono possibili più opzioni.
+language-title: Lingua
+skins-terrace: Terrazza
+skins-flat: Piatta
+links-description: Gli eventi possono avere posizioni e URL. Se incorpori il calendario
+  in un sito Web, puoi scegliere dove il collegamento cliccato apre la pagina.
+links-self: Apri il documento collegato nello stesso frame in cui è stato cliccato.
+links-top: Apri il documento collegato nell'intero corpo della finestra.
+style-description: Puoi cambiare il colore del tuo calendario e molte altre proprietà
+  usando i CSS. La tua personalizzazione ha la priorità sulla skin che scegli. Di
+  seguito puoi scegliere tra alcune personalizzazioni che abbiamo preparato per te.
+style-click: È possibile modificare il colore degli elementi su cui è possibile fare
+  clic.
+style-date: Puoi cambiare il colore di sfondo della data corrente.
+style-css: Se lo desideri, puoi specificare le tue proprietà CSS.
+loader-description: In alcuni casi, il server impiega molto tempo per caricare il
+  calendario. Nel caso in cui il server utilizzi un piano gratuito su Heroku, il server
+  deve prima essere avviato.
+tabs-description: "La visualizzazione mese è quella predefinita. Tuttavia, puoi scegliere
+  di mostrare una visualizzazione diversa all'inizio. Scegline una:"
+controls-description: 'Potrebbe darsi che tu non voglia mostrare tutti i controlli
+  affinché gli utenti possano vederli. Scegli qui quali controlli desideri visualizzare:'
