@@ -41,3 +41,17 @@ labels_section_time: "Periodo di tempo"
 labels_date: "Data"
 labels_description: "Descrizione"
 language-en: "Italian"
+date_month_short_feb: Feb
+date_month_short_mar: Mar
+date_month_short_apr: Apr
+date_month_short_nov: Nov
+labels_agenda_tab: Agenda
+labels_week_agenda_tab: Agenda
+labels_next: Prossimo
+labels_prev: Precedente
+labels_year: Anno
+labels_month: Mese
+labels_day: Giorno
+labels_hour: Ora
+labels_minute: Minuto
+language: Italiano
