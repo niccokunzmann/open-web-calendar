@@ -6,3 +6,5 @@ requests[socks]
 pyyaml
 recurring-ical-events
 gunicorn
+lxml
+beautifulsoup4
