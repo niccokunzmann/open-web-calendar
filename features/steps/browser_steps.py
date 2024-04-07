@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import json
+from selenium.common.exceptions import TimeoutException
 
 
 def specification_to_query(spec):
@@ -18,6 +19,15 @@ def specification_to_query(spec):
         for v in v:
             result.append(urlencode({k: v}))
     return "&".join(result)
+
+
+def get_url(context, url):
+    """Replace getting the URL to mitigate a TimeoutException in Chrome."""
+    for i in range(20):
+        try:
+            return context.browser.get(url)
+        except TimeoutException:
+            pass
 
 
 @given('we add the calendar "{calendar_name}"')
@@ -37,7 +47,7 @@ def step_impl(context, date):
     context.specification["date"] = date
     context.browser.delete_all_cookies()
     url = context.index_page + "calendar.html?" + specification_to_query(context.specification)
-    context.browser.get(url)
+    get_url(context, url)
     print(f"Visiting {url}")
     wait_for_calendar_to_load(context)
 
@@ -83,6 +93,14 @@ def get_body_text(context):
     body = context.browser.find_elements(By.XPATH, "//body")[0]
     innerText = body.get_attribute("innerText")
     return innerText
+
+
+@then('we cannot find an XPATH "{xpath}"')
+def step_impl(context, xpath):
+    elements = context.browser.find_elements(By.XPATH, xpath)
+    for element in elements:
+        print(element)
+    assert not elements
 
 
 @then(u'we cannot see the text "{text}"')
@@ -150,7 +168,7 @@ def step_impl(context):
     """Visit the configuration page and wait for it to load."""
     context.browser.delete_all_cookies()
     url = context.index_page + "?" + specification_to_query(context.specification)
-    context.browser.get(url)
+    get_url(context, url)
     print(f"Visiting {url}")
 
 

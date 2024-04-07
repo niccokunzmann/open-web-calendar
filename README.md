@@ -248,6 +248,7 @@ Research
 - https://www.quora.com/What-calendars-can-I-embed-in-my-website-that-arent-Google-Calendar
 
 Hosts
+- [gancio.org](https://gancio.org/)
 - https://www.chronoflocalendar.com/
 - with API: http://www.instantcal.com/api.html
 - Wordpress: https://de.wordpress.org/plugins/all-in-one-event-calendar/
@@ -343,6 +344,7 @@ Changelog
 - v1.30
   - Improve Italian translation by albanobattistella
   - Update dependencies
+  - Remove CSS attacks from event sources through HTML injection, see [Issue 165](https://github.com/niccokunzmann/open-web-calendar/issues/165)
 - v1.29
   - Improve Indonesian translation by Reza Almanda, Croatian by Milo Ivir,
     German by Nicco Kunzmann, Spanish by gallegonovato, Turkish by Oğuz Ersen

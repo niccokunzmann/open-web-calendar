@@ -146,7 +146,13 @@ def get_specification(query=None):
     for parameter in query:
         # get a list of arguments
         # see https://web.archive.org/web/20230325034825/https://werkzeug.palletsprojects.com/en/0.14.x/datastructures/
-        value = query.getlist(parameter, None)
+        value = query.getlist(parameter)
+        # convert values
+        for i in range(len(value)):
+            if value[i] in ("false", "False"):
+                value[i] = False
+            elif value[i] in ("true", "True"):
+                value[i] = True
         if len(value) == 1:
             value = value[0]
         specification[parameter] = value

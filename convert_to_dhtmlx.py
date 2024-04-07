@@ -5,6 +5,8 @@ import recurring_ical_events
 import icalendar
 from dateutil.parser import parse as parse_date
 import pytz
+from clean_html import clean_html, remove_html
+from collections import defaultdict
 
 
 def is_date(date):
@@ -53,8 +55,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         uid = calendar_event.get("UID", "") # issue 69: UID is helpful for debugging but not required
         start_date = self.date_to_string(start)
         categories = calendar_event.get("CATEGORIES", None)
-        if categories and isinstance(categories, icalendar.prop.vCategory):
-            categories = categories.to_ical().decode("UTF-8").replace(",", " | ")
+        categories = categories.cats if categories is not None else []
         return {
             "start_date": start_date,
             "end_date": self.date_to_string(end),
@@ -62,8 +63,8 @@ class ConvertToDhtmlx(ConversionStrategy):
             "end_date_iso": end.isoformat(),
             "start_date_iso_0": start.isoformat(),
             "end_date_iso_0": end.isoformat(),
-            "text":  name,
-            "description": calendar_event.get("DESCRIPTION", ""),
+            "text": name,
+            "description": clean_html(calendar_event.get("DESCRIPTION", ""), self.specification),
             "location": calendar_event.get("LOCATION", None),
             "geo": geo,
             "uid": uid,
@@ -71,7 +72,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "sequence": sequence,
             "recurrence": None,
             "url": calendar_event.get("URL"),
-            "id": (uid, start_date),
+            "id": uid + "-" + start_date.replace(" ", "-").replace(":", "-"),
             "type": "event",
             "color": calendar_event.get("COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", "")),
             "categories": categories,

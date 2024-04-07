@@ -34,3 +34,25 @@ def test_url_parameters_are_more_important_than_specification_url(url):
 def test_specification_can_be_loaded_from_yml_files(url):
     cache_url(url, 'test: "123"')
     assert get_specification(query=MultiDict({"specification_url":url}))["test"] == "123"
+
+@pytest.mark.parametrize(
+    "string,expected_bool", [
+        ("true", True),
+        ("True", True),
+        ("false", False),
+        ("False", False),
+    ]
+)
+def test_false_and_true(string, expected_bool):
+    """Check that True and False work."""
+    value = get_specification(query=MultiDict({"param":string}))["param"]
+    assert bool(value) == bool(expected_bool)
+    assert (not value) == (not expected_bool)
+
+
+def test_boolean_values_of_parameters():
+    """Some parameters have boolean values."""
+    spec = get_specification(query=MultiDict({"clean_html_style":"false", "clean_html_links":"True"}))
+    assert spec["clean_html_embedded"] == True, "default"
+    assert spec["clean_html_style"] == False
+    assert spec["clean_html_links"] == True

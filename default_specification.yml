@@ -144,6 +144,42 @@ hour_format: "%H:%i"     # examples: 01:30, 13:45
 ## layout in order to fit in all the elements.
 compact_layout_width: 600
 
+###################### Clean HTML ######################
+##
+## Clean HTML removes possibilities of hacking your site.
+## This section enforces strong cleaning by default.
+## See https://lxml.de/api/lxml.html.clean.Cleaner-class.html
+## See https://stackoverflow.com/questions/3073881/clean-up-html-in-python
+## See https://github.com/niccokunzmann/open-web-calendar/issues/165
+## If you disable any cleaning here, you might make your site vulnerable.
+clean_html_page_structure: true
+clean_html_meta: true
+clean_html_embedded: true
+clean_html_links: true
+clean_html_style: true
+clean_html_processing_instructions: true
+clean_html_inline_style: true
+clean_html_scripts: true
+clean_html_javascript: true
+clean_html_comments: true
+clean_html_frames: true
+clean_html_forms: true
+clean_html_annoying_tags: true
+clean_html_remove_unknown_tags: true
+clean_html_safe_attrs_only: true
+clean_html_safe_attrs:
+- src
+- color
+- href
+- title
+- class
+- name
+- id
+clean_html_remove_tags:
+- body
+- head
+- html
+
 ###################### Change this if you modify the project. ######################
 ##
 ## Where the current modifications can be obtained.
