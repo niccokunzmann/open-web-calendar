@@ -25,10 +25,36 @@ BEGIN:VEVENT
 CREATED:20190303T111937
 DTSTAMP:20190303T111937
 LAST-MODIFIED:20190303T111937
-UID:"><maliciousuid>"
-SUMMARY:"><malicioussummary>event!
+UID:"><maliciousuid>1"
+SUMMARY:"><malicioussummary>event day
 DTSTART;VALUE=DATE:20190304
 DTEND;VALUE=DATE:20190305
+DESCRIPTION:"><maliciousdescription>
+COLOR:"><maliciouscolor><"
+LOCATION:<maliciouslocation>
+CATEGORIES:<maliciouscategory>,a
+END:VEVENT
+BEGIN:VEVENT
+CREATED:20190303T111937
+DTSTAMP:20190303T111937
+LAST-MODIFIED:20190303T111937
+UID:"><maliciousuid>2"
+SUMMARY:"><malicioussummary>event for days
+DTSTART;VALUE=DATE:20190304
+DTEND;VALUE=DATE:20190307
+DESCRIPTION:"><maliciousdescription>
+COLOR:"><maliciouscolor><"
+LOCATION:<maliciouslocation>
+CATEGORIES:<maliciouscategory>,a
+END:VEVENT
+BEGIN:VEVENT
+CREATED:20190303T111937
+DTSTAMP:20190303T111937
+LAST-MODIFIED:20190303T111937
+UID:"><maliciousuid>3"
+SUMMARY:"><malicioussummary>event short
+DTSTART;TZID=Europe/Berlin:20190304T080000
+DTEND;TZID=Europe/Berlin:20190304T083000
 DESCRIPTION:"><maliciousdescription>
 COLOR:"><maliciouscolor><"
 LOCATION:<maliciouslocation>
