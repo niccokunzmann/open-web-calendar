@@ -13,12 +13,13 @@ WORKDIR /app
 ENV PYTHONUNBUFFERED=true
 
 # Install Packages
-RUN apk add libxslt-dev libxml2-dev gcc
 ADD requirements.txt .
-RUN echo "cython < 4.0" > constraints.txt \
+RUN apk add libxslt libxml2 libxslt-dev libxml2-dev gcc libc-dev \
+ && echo "cython < 4.0" > constraints.txt \
  && export PIP_CONSTRAINT=constraints.txt \
  && pip install --upgrade --no-cache-dir pip \
- && pip install --upgrade --no-cache-dir -r requirements.txt
+ && pip install --upgrade --no-cache-dir -r requirements.txt \
+ && apk del libxslt-dev libxml2-dev gcc libc-dev
 
 # Start service
 ENTRYPOINT ["/bin/sh", "start-service.sh"]
