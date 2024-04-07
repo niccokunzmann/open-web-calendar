@@ -45,11 +45,39 @@ function makeLink(url, html) {
   return "<a target='" + specification.target + "' href='" + escapeHtml(url) + "'>" + html + "</a>";
 }
 
+/*
+ * Check whether a Date is located at the start of a day.
+ */
+function isStartOfDay(date) {
+    return date.getHours() == 0 && date.getMinutes() == 0 && date.getSeconds() == 0;
+}
+
+/*
+ * Check if the start and end are one day.
+ */
+function isOneDay(start, end) {
+  return isStartOfDay(start) && isStartOfDay(end) && end - start == 24 * 60 * 60 * 1000;
+}
+
+// from https://stackoverflow.com/a/10262019/1320237
+const isWhitespaceString = str => !str.replace(/\s/g, '').length;
+const isNotWhitespaceString = str => !isWhitespaceString(str);
+
+/*
+ * join lines as HTML.
+ * Ignore empty lines.
+ */
+function joinHtmlLines(lines) {
+    return lines.filter(isNotWhitespaceString).join("<br/>")
+}
+
+/*
+ * These are template functions to compose event details.
+ * Use these instead of custom edits in the scheduler.template replacements.
+ */
 var template = {
     "summary": function(event) {
-        return "<div class='summary'>" +
-          (event.url ? makeLink(event.url, event.text) : event.text) +
-          "</div>";
+        return escapeHtml(event.text);
     },
     "details": function(event) {
         return "<div class='details'>" + event.description + "</div>";
@@ -58,10 +86,10 @@ var template = {
         if (!event.location && !event.geo) {
             return "";
         }
-        var text = event.location || "🗺";
+        var text = escapeHtml(event.location || "🗺");
         var geoUrl;
         if (event.geo) {
-            geoUrl = "https://www.openstreetmap.org/?mlon=" + event.geo.lon + "&mlat=" + event.geo.lat + "&#map=15/" + event.geo.lat + "/" + event.geo.lon;
+            geoUrl = "https://www.openstreetmap.org/?mlon=" + encodeURIComponent(event.geo.lon) + "&mlat=" + encodeURIComponent(event.geo.lat) + "&#map=15/" + encodeURIComponent(event.geo.lat) + "/" + encodeURIComponent(event.geo.lon);
         } else {
             geoUrl = OSM_URL + encodeURIComponent(event.location);
         }
@@ -69,8 +97,25 @@ var template = {
     },
     "debug": function(event) {
         return "<pre class='debug' style='display:none'>" +
-            JSON.stringify(event, null, 2) +
+            escapeHtml(JSON.stringify(event, null, 2)) +
             "</pre>"
+    },
+    "categories": function (event) {
+      if (event.categories.length) {
+          return '<b>| ' + event.categories.map(escapeHtml).join(" | ") + ' |</b> ';
+      }
+      return "";
+    },
+    "date": function (start, end) {
+        /* One day
+         * Multiday
+         * Within a day
+         * From one day to another
+         */
+        if (isOneDay(start, end)) {
+          return "";
+        }
+        return scheduler.templates.event_date(start) + " - " + scheduler.templates.event_date(end)
     }
 }
 
@@ -250,10 +295,21 @@ function loadCalendar() {
     var date = specification["date"] ? new Date(specification["date"]) : new Date();
     scheduler.init('scheduler_here', date, specification["tab"]);
 
-    // event in the calendar
+    // see https://docs.dhtmlx.com/scheduler/custom_events_content.html
+    // see https://docs.dhtmlx.com/scheduler/api__scheduler_event_bar_text_template.html
     scheduler.templates.event_bar_text = function(start, end, event){
-        return event.text;
+        return template.summary(event);
     }
+/*    scheduler.templates.event_bar_date = function(start, end, event){
+      console.log("event_bar_date");
+      return template.date(start, end) + template.categories(event);
+    }*/
+    // see https://docs.dhtmlx.com/scheduler/custom_events_content.html
+    scheduler.templates.event_header = function(start, end, event){
+        return joinHtmlLines([template.date(start, end), template.categories(event)]);
+    };
+
+
     // tooltip
     // see https://docs.dhtmlx.com/scheduler/tooltips.html
     if (HAS_TOOLTIP) {
@@ -264,6 +320,7 @@ function loadCalendar() {
         scheduler.tooltip.config.delta_y = 1;
     }
     // quick info
+    // see https://docs.dhtmlx.com/scheduler/extensions_list.html#quickinfo
     scheduler.templates.quick_info_title = function(start, end, event){
         return template.summary(event);
     }
@@ -272,17 +329,10 @@ function loadCalendar() {
             template.location(event) +
             template.debug(event);
     }
-
-    scheduler.templates.event_header = function(start, end, event){
-        if (event.categories){
-            return (scheduler.templates.event_date(start)+" - "+
-                scheduler.templates.event_date(end)+'<b> | '+
-	        event.categories)+' |</b>'
-        } else {
-            return(scheduler.templates.event_date(start)+" - "+
-            scheduler.templates.event_date(end))
-        }
-    };
+    // see https://docs.dhtmlx.com/scheduler/api__scheduler_quick_info_date_template.html
+    scheduler.templates.quick_info_date = function(start, end, event){
+        return joinHtmlLines([template.date(start, end), template.categories(event)]);
+    }
 
     // general style
     scheduler.templates.event_class=function(start,end,event){

@@ -85,6 +85,14 @@ def get_body_text(context):
     return innerText
 
 
+@then('we cannot find an XPATH "{xpath}"')
+def step_impl(context, xpath):
+    elements = context.browser.find_elements(By.XPATH, xpath)
+    for element in elements:
+        print(element)
+    assert not elements
+
+
 @then(u'we cannot see the text "{text}"')
 def step_impl(context, text):
     assert text not in get_body_text(context), f"{repr(text)} is visible but should not be visible"

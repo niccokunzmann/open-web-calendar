@@ -175,8 +175,9 @@ clean_html_safe_attrs:
 - name
 - id
 clean_html_remove_tags:
-- span
-- font
+- body
+- head
+- html
 
 ###################### Change this if you modify the project. ######################
 ##
