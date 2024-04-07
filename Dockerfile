@@ -13,7 +13,7 @@ WORKDIR /app
 ENV PYTHONUNBUFFERED=true
 
 # Install Packages
-RUN apk add libxslt-dev libxml2-dev
+RUN apk add libxslt-dev libxml2-dev gcc
 ADD requirements.txt .
 RUN echo "cython < 4.0" > constraints.txt \
  && export PIP_CONSTRAINT=constraints.txt \
