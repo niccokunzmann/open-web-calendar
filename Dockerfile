@@ -14,7 +14,7 @@ ENV PYTHONUNBUFFERED=true
 
 # Install Packages
 ADD requirements.txt .
-RUN echo "cython < 3.0" > constraints.txt \
+RUN echo "cython < 4.0" > constraints.txt \
  && export PIP_CONSTRAINT=constraints.txt \
  && pip install --upgrade --no-cache-dir pip \
  && pip install --upgrade --no-cache-dir -r requirements.txt
