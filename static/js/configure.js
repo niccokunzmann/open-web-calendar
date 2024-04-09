@@ -339,7 +339,7 @@ function loadCalendar() {
         if (event.type == "error") {
             showEventError(event);
         }
-        return event.type;
+        return event["css-classes"].map(escapeHtml).join(" ");
     };
 
     // set agenda date
@@ -349,7 +349,7 @@ function loadCalendar() {
         document.location.search;
     // add the time zone if not specified
     if (specification.timezone == "") {
-        schedulerUrl += "&timezone=" + getTimezone();
+        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
     }
 
     /* load the events */

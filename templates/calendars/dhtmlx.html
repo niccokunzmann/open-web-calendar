@@ -29,6 +29,9 @@
                 height:100%;
                 overflow:hidden;
             }
+            {% if specification['style-event-status-tentative'] %}.STATUS-TENTATIVE { font-style: italic; }{% endif %}
+            {% if specification['style-event-status-confirmed'] %}.event { font-weight: normal; } .STATUS-CONFIRMED { font-weight: bold; }{% endif %}
+            {% if specification['style-event-status-cancelled'] %}.STATUS-CANCELLED { text-decoration: line-through; }{% endif %}
             {{ specification['css'] | safe }}
         </style>
     </head>

@@ -144,6 +144,11 @@ hour_format: "%H:%i"     # examples: 01:30, 13:45
 ## layout in order to fit in all the elements.
 compact_layout_width: 600
 
+## This changes the style of events according to their STATUS
+style-event-status-tentative: false
+style-event-status-confirmed: false
+style-event-status-cancelled: false
+
 ###################### Clean HTML ######################
 ##
 ## Clean HTML removes possibilities of hacking your site.

@@ -118,6 +118,15 @@ def step_impl(context, cls):
     assert context.browser.find_elements(By.CLASS_NAME, cls), f"Expected to find elements of class {cls}"
 
 
+@then('we can see an event with UID "{uid}" with css class "{css_class}"')
+def step_impl(context, uid, css_class):
+    """Make sure an event has a certain css class."""
+    elements_by_uid = context.browser.find_elements(By.CLASS_NAME, f"UID-{uid}")
+    elements_by_class = context.browser.find_elements(By.CLASS_NAME, css_class)
+    found_elements = set(elements_by_uid) & set(elements_by_class)
+    assert found_elements, f"Expected at least one event with UID {uid} to have the css class {css_class} but none did."
+
+
 @then(u'we cannot see a {cls}')
 def step_impl(context, cls):
     assert not context.browser.find_elements(By.CLASS_NAME, cls), f"Expected to not find elements of class {cls}"
@@ -250,11 +259,32 @@ def step_impl(context, attribute):
     assert_specification_has_value(context, attribute)
 
 
-@when(u'we click on the {tag} "{text}"')
+@when(u'we click on the {tag:S} "{text}"')
 def step_impl(context, tag, text):
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
     elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {repr(text)}]]")
     assert len(elements) == 1, f"There should only be one {tag} with the text {repr(text)} but there are {len(elements)}."
     element = elements[0]
+    element.click()
+
+
+@then('the checkbox with id "{id:S}" is checked')
+def step_impl(context, id):
+    """Check the checkbox status."""
+    element = context.browser.find_element(By.ID, id)
+    assert element.get_attribute("checked")
+
+
+@then('the checkbox with id "{id}" is not checked')
+def step_impl(context, id):
+    """Check the checkbox status."""
+    element = context.browser.find_element(By.ID, id)
+    assert not element.get_attribute("checked")
+
+
+@when('we click on the {tag_name:S} with id "{id}"')
+def step_impl(context, tag_name, id):
+    """Click on elements with an id."""
+    element = context.browser.find_element(By.ID, id)
     element.click()

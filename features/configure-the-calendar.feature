@@ -98,3 +98,15 @@ Feature: The calendar has a configuration page that displays and changes the
        Given we are on the configuration page
         When we choose "Cymraeg (cy)" in "select-language"
         Then "language" is specified as "cy"
+
+    Scenario Outline: Checkboxes can be checked
+       Given we are on the configuration page
+        Then "<id>" is not specified
+        When we click on the span "<name>"
+        Then "<id>" is specified as true
+
+      Examples:
+        | name      | id                           |
+        | tentative | style-event-status-tentative |
+        | confirmed | style-event-status-confirmed |
+        | cancelled | style-event-status-cancelled |

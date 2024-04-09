@@ -16,12 +16,14 @@ function updateCalendarInputs() {
     var urlInputs = document.getElementsByClassName("calendar-url-input");
     var calendarUrls = document.getElementById("calendar-urls");
     var hasEmptyInput = false;
-    for (var i = 0; i < urlInputs.length; i+= 1) {
-        var urlInput = urlInputs[i];
+    var calendar_index;
+    for (calendar_index = 0; calendar_index < urlInputs.length; calendar_index+= 1) {
+        var urlInput = urlInputs[calendar_index];
         hasEmptyInput |= urlInput.value == "";
     }
     if (!hasEmptyInput) {
         var li = document.createElement("li");
+        /* input for urls */
         var input = document.createElement("input");
         input.type = "text";
         input.classList.add("calendar-url-input");
@@ -29,6 +31,18 @@ function updateCalendarInputs() {
         input.addEventListener("keyup", updateUrls);
         input.id = "calendar-url-input-" + urlInputs.length;
         li.appendChild(input);
+        /* input for calendar color
+        <input type="color" value="#fefefe"
+               placeholder="black" class="color-input"
+               cssTemplate=".dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: {color}; }">*/
+        var color = document.createElement("input");
+        color.type = "color";
+        color.classList.add("color-input");
+        color.value = "#fefefe";
+        color.setAttribute("cssTemplate", ".CALENDAR-INDEX-" + calendar_index + " { background-color: {color}; }")
+        color.addEventListener("change", updateUrls);
+        color.addEventListener("keyup", updateUrls);
+        li.appendChild(color);
         calendarUrls.appendChild(li);
     }
 }
@@ -163,6 +177,13 @@ function getSpecification() {
             spec[checkbutton.classList[0]].push(checkbutton.value);
         }
     }
+    /* event status */
+    checkbuttons = document.getElementsByClassName("collect-if-checked");
+    for (var i = 0; i < checkbuttons.length; i++) {
+        var checkbutton = checkbuttons[i];
+        spec[checkbutton.id] = checkbutton.checked;
+    }
+    /* delete duplicate values */
     getOwnProperties(configuration.default_specification).forEach(function(element){
         if (arraysEqual(spec[element], configuration.default_specification[element])) {
             delete spec[element];
@@ -394,6 +415,15 @@ function initializeLinkTargetChoice() {
     select.onchange = updateOutputs;
 }
 
+function initializeCollectedCheckBoxes() {
+  var checkboxes = document.getElementsByClassName("collect-if-checked");
+  for (var i = 0; i < checkboxes.length; i++) {
+      var checkbox = checkboxes[i];
+      changeSpecificationOnChange(checkbox);
+      checkbox.checked = ["true", true, "yes"].includes(specification[checkbox.id]);
+  }
+}
+
 function initializeLoader() {
     var defaultLoader = document.getElementById("default-loader");
     defaultLoader.value = configuration.default_specification.loader;
@@ -444,6 +474,7 @@ window.addEventListener("load", function(){
     initializeTimeIncrement();
     initializeHourFormat();
     initializeLoader();
+    initializeCollectedCheckBoxes();
     initializeLinkTargetChoice();
     updateCalendarInputs();
     fillFirstInputWithData();
@@ -476,11 +507,12 @@ function () {
 
 function arraysEqual(a, b) {
   // from https://stackoverflow.com/a/16436975/1320237
+  if (typeof a != 'object') return a == b;
   if (a === b) return true;
   if (a == null || b == null) return false;
   if (a.length != b.length) return false;
   for (var i = 0; i < a.length; ++i) {
-    if (a[i] !== b[i]) return false;
+    if (!arraysEqual(a[i], b[i])) return false;
   }
   return true;
 }

@@ -7,6 +7,7 @@ from dateutil.parser import parse as parse_date
 import pytz
 from clean_html import clean_html, remove_html
 from collections import defaultdict
+from typing import List
 
 
 def is_date(date):
@@ -42,7 +43,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         viewed_date = date.astimezone(self.timezone)
         return viewed_date.strftime("%Y-%m-%d %H:%M")
 
-    def convert_ical_event(self, calendar_event):
+    def convert_ical_event(self, calendar_index, calendar_event):
         start = calendar_event["DTSTART"].dt
         end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
         if is_date(start) and is_date(end) and end == start:
@@ -54,8 +55,6 @@ class ConvertToDhtmlx(ConversionStrategy):
         sequence = str(calendar_event.get("SEQUENCE", 0))
         uid = calendar_event.get("UID", "") # issue 69: UID is helpful for debugging but not required
         start_date = self.date_to_string(start)
-        categories = calendar_event.get("CATEGORIES", None)
-        categories = categories.cats if categories is not None else []
         return {
             "start_date": start_date,
             "end_date": self.date_to_string(end),
@@ -75,7 +74,8 @@ class ConvertToDhtmlx(ConversionStrategy):
             "id": uid + "-" + start_date.replace(" ", "-").replace(":", "-"),
             "type": "event",
             "color": calendar_event.get("COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", "")),
-            "categories": categories,
+            "categories": self.get_event_categories(calendar_event),
+            "css-classes": ["event"] + self.get_event_classes(calendar_event) + [f"CALENDAR-INDEX-{calendar_index}"]
         }
 
     def convert_error(self, error, url, tb_s):
@@ -101,13 +101,14 @@ class ConvertToDhtmlx(ConversionStrategy):
             "recurrence": None,
             "url": url,
             "id": id(error),
-            "type": "error"
+            "type": "error",
+            "css-classes": ["error"]
         }
 
     def merge(self):
         return jsonify(self.components)
 
-    def collect_components_from(self, calendars):
+    def collect_components_from(self, calendar_index, calendars):
         # see https://stackoverflow.com/a/16115575/1320237
         today = (
             parse_date(self.specification["date"])
@@ -128,5 +129,23 @@ class ConvertToDhtmlx(ConversionStrategy):
             events = recurring_ical_events.of(calendar).between(from_date, to_date)
             with self.lock:
                 for event in events:
-                    json_event = self.convert_ical_event(event)
+                    json_event = self.convert_ical_event(calendar_index, event)
                     self.components.append(json_event)
+
+    def get_event_classes(self, event) -> List[str]:
+        """Return the CSS classes that should be used for the event styles."""
+        classes = []
+        for attr in ["UID", "TRANSP", "STATUS", "CLASS", "PRIORITY"]:
+            value = event.get(attr)
+            if value is not None:
+                classes.append(f"{attr}-{value}")
+        if event.get("CLASS") not in [None, "PUBLIC", "CONFIDENTIAL", "PRIVATE"]:
+            classes.append("CLASS-PRIVATE") # unrecognized is private
+        for category in self.get_event_categories(event):
+            classes.append(f"CATEGORY-{category}")
+        return classes
+
+    def get_event_categories(self, event) -> List[str]:
+        """Return the categories of the event."""
+        categories = event.get("CATEGORIES", None)
+        return categories.cats if categories is not None else []
