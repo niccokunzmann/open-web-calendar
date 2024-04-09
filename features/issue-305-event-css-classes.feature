@@ -22,7 +22,7 @@ Feature: I would like to be able to style the events based on their values.
         | day    |
         | month  |
 
-    Scenario: Events of a calendar have a css classes
+    Scenario: Events of a calendar have css classes
       Given we add the calendar "event-with-categories"
         And we add the calendar "one-day-event"
         And we set the "tab" parameter to "week"

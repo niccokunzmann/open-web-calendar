@@ -75,7 +75,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "type": "event",
             "color": calendar_event.get("COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", "")),
             "categories": self.get_event_categories(calendar_event),
-            "css-classes": ["event"] + self.get_event_classes(calendar_event) + [f"CALENDAR-{calendar_index}"]
+            "css-classes": ["event"] + self.get_event_classes(calendar_event) + [f"CALENDAR-INDEX-{calendar_index}"]
         }
 
     def convert_error(self, error, url, tb_s):
