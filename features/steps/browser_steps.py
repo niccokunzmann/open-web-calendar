@@ -118,6 +118,15 @@ def step_impl(context, cls):
     assert context.browser.find_elements(By.CLASS_NAME, cls), f"Expected to find elements of class {cls}"
 
 
+@then('we can see an event with UID "{uid}" with css class "{css_class}"')
+def step_impl(context, uid, css_class):
+    """Make sure an event has a certain css class."""
+    elements_by_uid = context.browser.find_elements(By.CLASS_NAME, f"UID-{uid}")
+    elements_by_class = context.browser.find_elements(By.CLASS_NAME, css_class)
+    found_elements = set(elements_by_uid) & set(elements_by_class)
+    assert found_elements, f"Expected at least one event with UID {uid} to have the css class {css_class} but none did."
+
+
 @then(u'we cannot see a {cls}')
 def step_impl(context, cls):
     assert not context.browser.find_elements(By.CLASS_NAME, cls), f"Expected to not find elements of class {cls}"
