@@ -19,6 +19,7 @@ CATEGORY = namedtuple("CATEGORY", ["cats"])
         ({"CLASS": "PRIVATE"}, ["CLASS-PRIVATE"]),
         ({"CLASS": "CONFIDENTIAL"}, ["CLASS-CONFIDENTIAL"]),
         ({"CLASS": "PUBLIC"}, ["CLASS-PUBLIC"]),
+        ({"PRIORITY": 5}, ["PRIORITY-5"]),
     ]
 )
 def test_get_event_classes(event, expected_classes):

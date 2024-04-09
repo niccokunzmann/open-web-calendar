@@ -175,6 +175,7 @@ style-days-outside: "Some days of the calendar have a different color if they ar
 # Description of CSS styling option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-style-css
 style-css: "You can specify your own CSS properties if you like."
+style-css-classes: "These are examples of CSS classes to style events:"
 # Description of CSS styling option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-style-css
 style-css-generated: "This is the generated CSS from above. You can use it to further customize"

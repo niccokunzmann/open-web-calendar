@@ -89,3 +89,7 @@ main {
 .STATUS-CANCELLED {
   text-decoration: line-through;
 }
+
+.css-class-example {
+  display: inline-block;
+}
