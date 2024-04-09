@@ -347,6 +347,10 @@ Changelog
   - Improve Italian translation by albanobattistella and Russian translation by Ivan V
   - Update dependencies
   - Remove CSS attacks from event sources through HTML injection, see [Issue 165](https://github.com/niccokunzmann/open-web-calendar/issues/165)
+  - Add CSS classes for events, see [Issue 305](https://github.com/niccokunzmann/open-web-calendar/issues/305)
+  - Add a way to give calendars a different color, see [Issue 141](https://github.com/niccokunzmann/open-web-calendar/issues/141) and [Issue 52](https://github.com/niccokunzmann/open-web-calendar/issues/52)
+  - Document CSS classes, see [Issue 202](https://github.com/niccokunzmann/open-web-calendar/issues/202)
+  - Add checkboxes for the event status, see [PR 306](https://github.com/niccokunzmann/open-web-calendar/pull/306)
 - v1.29
   - Improve Indonesian translation by Reza Almanda, Croatian by Milo Ivir,
     German by Nicco Kunzmann, Spanish by gallegonovato, Turkish by Oğuz Ersen
