@@ -6,11 +6,11 @@ from conversion_base import ConversionStrategy
 
 class ConvertToICS(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern."""
-    
+
     def created(self):
         self.title = self.specification["title"]
         self.timezones = set() # ids
-        
+
     def is_event(self, component):
         """Whether a component is an event."""
         return isinstance(component, Event)
@@ -19,7 +19,7 @@ class ConvertToICS(ConversionStrategy):
         """Whether a component is an event."""
         return isinstance(component, Timezone)
 
-    def collect_components_from(self, calendars):
+    def collect_components_from(self, calendar_index, calendars):
         for calendar in calendars:
             for component in calendar.walk():
                 if self.is_event(component):
@@ -42,7 +42,7 @@ class ConvertToICS(ConversionStrategy):
         if url:
             event["URL"] = url
         return event
-    
+
     def create_calendar(self):
         calendar = Calendar()
         calendar["VERSION"] = "2.0"
@@ -52,10 +52,9 @@ class ConvertToICS(ConversionStrategy):
         calendar["X-WR-CALNAME"] = self.title
         calendar["X-PROD-SOURCE"] = "https://github.com/niccokunzmann/open-web-calendar/"
         return calendar
-    
+
     def merge(self):
         calendar = self.create_calendar()
         for event in self.components:
             calendar.add_component(event)
         return Response(calendar.to_ical(), mimetype="text/calendar")
-
