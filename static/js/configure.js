@@ -339,7 +339,7 @@ function loadCalendar() {
         if (event.type == "error") {
             showEventError(event);
         }
-        return event["css-classes"].map(escapeHtml).join(" ");
+        return event.type;
     };
 
     // set agenda date
