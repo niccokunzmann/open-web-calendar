@@ -50,6 +50,8 @@ There are several ways in which you can help this project:
 - [Translate this project][translate]
 - Have a look at [open issues][issues] e.g. those especially to get started, labelled [good first issue][good-first-issue], leave a note and work on it.
 
+If you are part of a company and you would like to commission work, please get in touch with Nicco Kunzmann.
+
 [issues]: https://github.com/niccokunzmann/open-web-calendar/issues
 [good-first-issue]: https://github.com/niccokunzmann/open-web-calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
 
