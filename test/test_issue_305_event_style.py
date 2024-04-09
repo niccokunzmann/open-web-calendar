@@ -15,6 +15,10 @@ CATEGORY = namedtuple("CATEGORY", ["cats"])
         ({"CATEGORIES": CATEGORY(["CAT1"])}, ["CATEGORY-CAT1"]),
         ({"TRANSP": "OPAQUE"}, ["TRANSP-OPAQUE"]),
         ({"TRANSP": "TRANSPARENT"}, ["TRANSP-TRANSPARENT"]),
+        ({"CLASS": "x-custom-token"}, ["CLASS-x-custom-token", "CLASS-PRIVATE"]),
+        ({"CLASS": "PRIVATE"}, ["CLASS-PRIVATE"]),
+        ({"CLASS": "CONFIDENTIAL"}, ["CLASS-CONFIDENTIAL"]),
+        ({"CLASS": "PUBLIC"}, ["CLASS-PUBLIC"]),
     ]
 )
 def test_get_event_classes(event, expected_classes):
@@ -28,7 +32,8 @@ def test_get_event_classes(event, expected_classes):
     "calendar,start,stop,uid,classes",
     [
         ("event-with-categories", "2023-03-04", "2023-03-05", "UYDQSG9TH4DE0WM3QFL2J", ["event", "UID-UYDQSG9TH4DE0WM3QFL2J", "CATEGORY-APPOINTMENT", "CATEGORY-EDUCATION", 'CALENDAR-INDEX-0']),
-        ("issue-135-free-busy", "2022-11-18", "2022-11-23", "83E6A2ED-D816-4E6F-94B5-251A101C6E36", ["UID-83E6A2ED-D816-4E6F-94B5-251A101C6E36", "STATUS-CONFIRMED", "TRANSP-OPAQUE"])
+        ("issue-135-free-busy", "2022-11-18", "2022-11-23", "83E6A2ED-D816-4E6F-94B5-251A101C6E36", ["UID-83E6A2ED-D816-4E6F-94B5-251A101C6E36", "STATUS-CONFIRMED", "TRANSP-OPAQUE"]),
+        ("events-with-privacy", "2024-04-08", "2024-04-10", "e897cc75-e428-4696-baf1-d1e22eba7e2e-2", ["CLASS-PRIVATE", "CLASS-x-custom-token"]),
     ]
 )
 def test_classes_of_events(client, calendar, start, stop, uid, classes, calendar_urls):
