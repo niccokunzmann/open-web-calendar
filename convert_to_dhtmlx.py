@@ -135,14 +135,12 @@ class ConvertToDhtmlx(ConversionStrategy):
     def get_event_classes(self, event) -> List[str]:
         """Return the CSS classes that should be used for the event styles."""
         classes = []
-        uid = event.get("UID", "")
-        if uid:
-            classes.append(f"UID-{uid}")
+        for attr in ["UID", "TRANSP", "STATUS"]:
+            value = event.get(attr)
+            if value is not None:
+                classes.append(f"{attr}-{value}")
         for category in self.get_event_categories(event):
             classes.append(f"CATEGORY-{category}")
-        transp = event.get("TRANSP", "")
-        if transp:
-            classes.append(f"TRANSP-{transp}")
         return classes
 
     def get_event_categories(self, event) -> List[str]:
