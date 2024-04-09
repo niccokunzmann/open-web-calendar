@@ -344,7 +344,7 @@ Changelog
 [changelog]: #changelog
 
 - v1.30
-  - Improve Italian translation by albanobattistella
+  - Improve Italian translation by albanobattistella and Russian translation by Ivan V
   - Update dependencies
   - Remove CSS attacks from event sources through HTML injection, see [Issue 165](https://github.com/niccokunzmann/open-web-calendar/issues/165)
 - v1.29
