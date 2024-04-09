@@ -349,7 +349,7 @@ function loadCalendar() {
         document.location.search;
     // add the time zone if not specified
     if (specification.timezone == "") {
-        schedulerUrl += "&timezone=" + getTimezone();
+        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
     }
 
     /* load the events */
