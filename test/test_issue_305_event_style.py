@@ -27,7 +27,7 @@ def test_get_event_classes(event, expected_classes):
 @pytest.mark.parametrize(
     "calendar,start,stop,uid,classes",
     [
-        ("event-with-categories", "2023-03-04", "2023-03-05", "UYDQSG9TH4DE0WM3QFL2J", ["event", "UID-UYDQSG9TH4DE0WM3QFL2J", "CATEGORY-APPOINTMENT", "CATEGORY-EDUCATION"])
+        ("event-with-categories", "2023-03-04", "2023-03-05", "UYDQSG9TH4DE0WM3QFL2J", ["event", "UID-UYDQSG9TH4DE0WM3QFL2J", "CATEGORY-APPOINTMENT", "CATEGORY-EDUCATION", 'CALENDAR-0'])
     ]
 )
 def test_classes_of_events(client, calendar, start, stop, uid, classes, calendar_urls):
