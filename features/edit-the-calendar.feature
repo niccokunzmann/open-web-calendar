@@ -53,3 +53,25 @@ Feature: The calendar about page has a link to edit an existing calendar.
        Then ".test" is written in "css-input"
        When we write "other-css" into "css-input"
        Then "css" is specified as "other-css"
+
+  Scenario Outline: Checkboxes are not checked by default
+      Given we are on the configuration page
+       Then the checkbox with id "<id>" is not checked
+
+    Examples:
+      | id                           |
+      | style-event-status-tentative |
+      | style-event-status-confirmed |
+      | style-event-status-cancelled |
+
+  Scenario Outline: Checkboxes get checked when the parameter is set
+      Given we set the "<id>" parameter to true
+        And we are on the configuration page
+       Then the checkbox with id "<id>" is checked
+       When we click on the input with id "<id>"
+       Then "<id>" is not specified
+    Examples:
+      | id                           |
+      | style-event-status-tentative |
+      | style-event-status-confirmed |
+      | style-event-status-cancelled |

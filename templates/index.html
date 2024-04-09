@@ -176,6 +176,16 @@
                     {{ html("style-css") }}
                     <textarea id="css-input"></textarea>
                 </p>
+                <h3>{{ html("event-status-title") }}</h3>
+                <p>
+                  {{ html("event-status-description") }}<br/>
+                  <form id="event-status-form">
+                    <!-- We have three event status, see https://icalendar.org/iCalendar-RFC-5545/3-8-1-11-status.html -->
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-tentative" /><label for="style-event-status-tentative" class="STATUS-TENTATIVE">{{ html("event-status-tentative") }}</label>
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-confirmed" /><label for="style-event-status-confirmed" class="STATUS-CONFIRMED">{{ html("event-status-confirmed") }}</label>
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-cancelled" /><label for="style-event-status-cancelled" class="STATUS-CANCELLED">{{ html("event-status-cancelled") }}</label>
+                  </form>
+                </p>
                 <h3>{{ html("loader-title") }}</h3>
                 <p>
                   {{ html("loader-description") }}<br/>

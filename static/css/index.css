@@ -77,3 +77,15 @@ main {
 #css-input {
   width: 100%;
 }
+
+.STATUS-TENTATIVE {
+  font-style: italic;
+}
+
+.STATUS-CONFIRMED {
+  font-weight: bold;
+}
+
+.STATUS-CANCELLED {
+  text-decoration: line-through;
+}

@@ -259,11 +259,32 @@ def step_impl(context, attribute):
     assert_specification_has_value(context, attribute)
 
 
-@when(u'we click on the {tag} "{text}"')
+@when(u'we click on the {tag:S} "{text}"')
 def step_impl(context, tag, text):
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
     elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {repr(text)}]]")
     assert len(elements) == 1, f"There should only be one {tag} with the text {repr(text)} but there are {len(elements)}."
     element = elements[0]
+    element.click()
+
+
+@then('the checkbox with id "{id:S}" is checked')
+def step_impl(context, id):
+    """Check the checkbox status."""
+    element = context.browser.find_element(By.ID, id)
+    assert element.get_attribute("checked")
+
+
+@then('the checkbox with id "{id}" is not checked')
+def step_impl(context, id):
+    """Check the checkbox status."""
+    element = context.browser.find_element(By.ID, id)
+    assert not element.get_attribute("checked")
+
+
+@when('we click on the {tag_name:S} with id "{id}"')
+def step_impl(context, tag_name, id):
+    """Click on elements with an id."""
+    element = context.browser.find_element(By.ID, id)
     element.click()
