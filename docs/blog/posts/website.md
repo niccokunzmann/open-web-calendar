@@ -12,8 +12,9 @@ comments: true
 
 # New Website
 
-As the Open Web Calendar is funded by NLNet, it was also suggested to setup
-a website that shows how to use the calendar, not only hosting the tool itself.
+As the Open Web Calendar is funded by [NLNet](https://nlnet.nl/project/OpenWebCalendar/),
+it was also suggested to setup a website that shows how to use the calendar,
+not only hosting the tool itself.
 
 <!-- more -->
 

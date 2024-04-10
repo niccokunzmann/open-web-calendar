@@ -1,7 +1,7 @@
 # Run pytest for each commit.
 # See also
 #    https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#running-tests-with-tox
-name: Test with pytest and tox
+name: "Build, Test & Publish"
 
 on: [push]
 
