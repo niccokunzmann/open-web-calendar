@@ -83,8 +83,6 @@ hour-format-description: 24 saat ve 12 saat biçimi arasında seçim yapabilirsi
   Daha fazla seçenek mümkündür.
 event-status-tentative: geçici
 style-css-classes: 'Bunlar, etkinlikleri biçimlendirmek için CSS sınıfları örnekleridir:'
-style-css-generated: Bu, yukarıdan oluşturulan CSS'dir. Daha fazla özelleştirmek için
-  kullanabilirsiniz
 event-status-title: Etkinlik Durumu
 event-status-description: 'Duruma bağlı olarak etkinlik açıklamasının görünümünü değiştirin:'
 event-status-confirmed: onaylandı

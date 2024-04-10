@@ -87,8 +87,6 @@ hour-format-title: Convención del reloj
 hour-format-description: Puede elegir entre el reloj de 24 horas y el de 12 horas.
   Son posibles más opciones.
 style-css-classes: 'Estos son ejemplos de clases de CSS para dar estilo a los eventos:'
-style-css-generated: Este es el CSS generado anteriormente. Puede utilizarlo para
-  personalizar aún más
 event-status-title: Estado del evento
 event-status-description: 'Cambiar el aspecto de la descripción del evento en función
   del estado:'
