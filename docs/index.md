@@ -7,6 +7,7 @@ title: Getting Started
 
 A highly flexible calendar display for your website.
 
+Give a calendar your personal touch within minutes: **[Try it out now!]({{link.web}})**
 
 | Features |  |
 | --- | --- |
@@ -21,9 +22,9 @@ A highly flexible calendar display for your website.
 | Color per Calendar, Category and more | <center>✔</center> |
 | Day, Week, Month, Agenda | <center>✔</center> |
 | Work Week | <center>✔</center> |
-| Custom Date | <center>✔</center> |
-| Custom Title | <center>✔</center> |
-| Open Event Location | <center>✔</center> |
+| Custom Date & Time Range | <center>✔</center> |
+| Custom Title & Icon | <center>✔</center> |
+| Click on Event Location | <center>✔</center> |
 | Styled Event Descriptions | <center>✔</center> |
 | FOSS - No Vendor Lock-In | <center>✔</center> |
 | [Hosted] and Self-Hosted | <center>✔</center> |
