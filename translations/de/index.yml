@@ -73,12 +73,21 @@ links-parent: Öffne den Link in dem Frame drüber.
 links-blank: Öffne den Link in einem neuen Fenster oder Tab.
 links-top: Öffne den Link im vollen Fenster.
 spec-host-html: Du kannst <a href="javascript:downloadJSONSpecification()">die Spezifikation
-  herunterladen</a> und sie irgendwo im Web platzieren. Auf diese Weise kannst Du den
-  Kalender später überall, wo er verwendet wird, mit einem Mal verändern. Dazu kannst
-  du die Spezifikation z.B. in einem <a href="https://gist.github.com/">Gist</a> veröffentlichen.
+  herunterladen</a> und sie irgendwo im Web platzieren. Auf diese Weise kannst Du
+  den Kalender später überall, wo er verwendet wird, mit einem Mal verändern. Dazu
+  kannst du die Spezifikation z.B. in einem <a href="https://gist.github.com/">Gist</a>
+  veröffentlichen.
 configure-week-title: Wochentage
 configure-week-description: Die Woche kann am Montag oder Sonntag anfangen.
 hour-format-title: Zeitanzeige
 hour-format-description: Du kannst zwischen einer Anzeige mit 24 Stunden oder 12 Stunden
   auswählen. Es gibt auch andere Optionen.
 hour-format-specification-link: Spezifikation ansehen.
+event-status-title: Terminstatus
+event-status-tentative: Vorläufig
+style-css-classes: 'Das sind Beispiele von CSS-Klassen, die Kalendereinträge verändern
+  können:'
+event-status-description: 'Verändere das Aussehen der Terminbeschreibung abhänging
+  vom Status:'
+event-status-confirmed: Bestätigt
+event-status-cancelled: Abgesagt
