@@ -12,12 +12,13 @@
 {%- endmacro %}
 
 
-# Templates
+# Examples
 
 We have prepared a variety of different styles so you can edit them to your needs.
 For each style, you can click on the `?` question mark in the corner
 and edit the calendar.
 
+> Are you proud of your calendar? Share it here!
 
 ## Mobile One Day Calendar Feed
 
