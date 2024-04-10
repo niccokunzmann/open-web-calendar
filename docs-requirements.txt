@@ -3,4 +3,4 @@ mkdocs-rss-plugin
 mkdocs-git-revision-date-localized-plugin
 mkdocs-material[imaging]
 mkdocs-markdownextradata-plugin
-
+mkdocs-macros-plugin
