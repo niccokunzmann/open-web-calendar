@@ -1,17 +1,17 @@
 # Self-Hosting
 
-You do not have to host the Open Web Calendar yourself but you can.
-Several options are available.
+You do not have to host the Open Web Calendar yourself but you are encouraged to.
+It is intended to work behind a company firewall, through a proxy and also without access to the Internet.
 
-Generally, the Open Web Calendar is there to be used without restriction.
-You can use this API to customize the calendar on the fly.
+Several hosting options are already documented.
+We are grateful if you can add your favorite one, too.
 
 ## Default Parameters
 
 The configuration of all calendars is rooted in the [default_specification.yml].
 All those values can be changed through a copy of this file hosted on the web
 through the calendar parameter `specification_url`.
-Each parameter should be documented in this file.
+Each parameter should be documented in [default_specification.yml].
 
 If you modify the default specification, you modify **all calendars** that are hosted at your instance.
 You might want to change these values:

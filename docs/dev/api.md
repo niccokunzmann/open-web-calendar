@@ -1,6 +1,8 @@
 # API
 
-The calendar has an API that allows customizing it.
+Generally, the Open Web Calendar is there to be used without restriction.
+You can use this API to customize the calendar on the fly.
+
 This section can be of use if one of these applies:
 
 - You are a web developer who wants to embed the Open Web Calendar.
