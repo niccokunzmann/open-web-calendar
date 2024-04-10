@@ -1,0 +1,4 @@
+mkdocs-material
+mkdocs-rss-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-material[imaging]

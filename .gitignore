@@ -110,3 +110,5 @@ tmp
 .vercel
 *save
 
+# mkdocs
+site/

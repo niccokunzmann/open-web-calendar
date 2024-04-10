@@ -36,3 +36,19 @@ jobs:
       - name: Run tests
         # Run tox using the version of Python in `PATH`
         run: tox -e ${{ matrix.tox_env }}
+
+  gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # required for mkdocs git date, see  https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file#note-when-using-build-environments
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.12
+      - name: Install test packages
+        run: pip install tox
+      - name: mkdocs
+        # Run tox using the version of Python in `PATH`
+        run: tox -e docs -- gh-deploy
