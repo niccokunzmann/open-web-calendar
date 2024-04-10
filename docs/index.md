@@ -1,20 +1,33 @@
 ---
 comments: false
+title: Getting Started
 ---
-# Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+![](assets/img/logo/github-social-preview.svg)
 
-## Commands
+A highly flexible calendar display for your website.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
+| Features |  |
+| --- | --- |
+| Instant Event Syncing | <center>✔</center> |
+| Embed with an HTML snippet | <center>✔</center> |
+| Desktop and Mobile | <center>✔</center> |
+| Multi-Language Support | <center>✔</center> |
+| Fixed and Automatic Timezone | <center>✔</center> |
+| Easy Editing | <center>✔</center> |
+| Designs To Choose  | <center>✔</center> |
+| Custom CSS | <center>✔</center> |
+| Color per Calendar, Category and more | <center>✔</center> |
+| Day, Week, Month, Agenda | <center>✔</center> |
+| Work Week | <center>✔</center> |
+| Custom Date | <center>✔</center> |
+| Custom Title | <center>✔</center> |
+| Open Event Location | <center>✔</center> |
+| Styled Event Descriptions | <center>✔</center> |
+| FOSS - No Vendor Lock-In | <center>✔</center> |
+| [Hosted] and Self-Hosted | <center>✔</center> |
+| Subscribe Link | <center>✔</center> |
+| Community and Paid Support | <center>✔</center> |
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+[Hosted]: https://open-web-calendar.hosted.quelltext.eu

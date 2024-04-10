@@ -192,7 +192,7 @@ clean_html_remove_tags:
 source_code: "https://github.com/niccokunzmann/open-web-calendar/"
 
 ## This is a link to the contribution page
-contributing: "https://github.com/niccokunzmann/open-web-calendar/#contributing"
+contributing: "https://open-web-calendar.quelltext.eu/contributing/"
 
 ## This is a link to the translations page
 translate: "https://hosted.weblate.org/engage/open-web-calendar/"

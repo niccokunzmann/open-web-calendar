@@ -1,0 +1,126 @@
+
+# Versions and Changes
+
+This is a history of changes in the stable version of the Open Web Calendar.
+These correspond to the [tags]({{link.tags}})
+
+- v1.30
+    - Improve Italian translation by albanobattistella and Russian translation by Ivan V
+    - Update dependencies
+    - Remove CSS attacks from event sources through HTML injection, see [Issue 165](https://github.com/niccokunzmann/open-web-calendar/issues/165)
+    - Add CSS classes for events, see [Issue 305](https://github.com/niccokunzmann/open-web-calendar/issues/305)
+    - Add a way to give calendars a different color, see [Issue 141](https://github.com/niccokunzmann/open-web-calendar/issues/141) and [Issue 52](https://github.com/niccokunzmann/open-web-calendar/issues/52)
+    - Document CSS classes, see [Issue 202](https://github.com/niccokunzmann/open-web-calendar/issues/202)
+    - Add checkboxes for the event status, see [PR 306](https://github.com/niccokunzmann/open-web-calendar/pull/306)
+- v1.29
+    - Improve Indonesian translation by Reza Almanda, Croatian by Milo Ivir,
+    German by Nicco Kunzmann, Spanish by gallegonovato, Turkish by Oğuz Ersen
+    - Update dependencies and documentation
+    - Work week now skips Saturday and Sunday in Day View, see [Issue 258](https://github.com/niccokunzmann/open-web-calendar/issues/258)
+- v1.28
+    - Update dependencies
+    - Allow editing calendar copies, see [Issue 180](https://github.com/niccokunzmann/open-web-calendar/issues/180)
+    - Improve Finnish translation by Tomi Pöyskö and Croatian by Milo Ivir
+    - Improve visibility on small screens, see [PR 284](https://github.com/niccokunzmann/open-web-calendar/pull/284)
+    - Fix: show event title in mobile agenda view, see [Issue 277](https://github.com/niccokunzmann/open-web-calendar/issues/277)
+    - Fix Chrome driver timeout in CI tests, see [PR 279](https://github.com/niccokunzmann/open-web-calendar/pull/279)
+- v1.27
+    - Browser tests run with Firefox and Chrome, see [PR 272](https://github.com/niccokunzmann/open-web-calendar/pull/272)
+    - Add responsive layout, see [PR 273](https://github.com/niccokunzmann/open-web-calendar/pull/273)
+        - Remove tooltip on touch devices as it overlaps with the quick info
+        - Expose `compact_layout_width` parameter so you can change when to compact the layout, default is 600px width
+- v1.26
+    - Use HTML color chooser for custom CSS
+    - Add a red bar at the current time in the week view and the day view, see [PR 265](https://github.com/niccokunzmann/open-web-calendar/pull/265).
+    - Expose the `hour_format` parameter and add choices for the 12h format, see [PR 266](https://github.com/niccokunzmann/open-web-calendar/pull/266).
+    - Update Turkish by oersen, Spanish by gallegonovato and German
+    - Update dependencies
+    - Update GitHub Actions with Dependabot
+- v1.25
+    - Update dependencies
+    - Implement work week view, see [Issue 258](https://github.com/niccokunzmann/open-web-calendar/issues/258)
+    - Update translations
+- v1.24
+    - Test and support Python 3.12
+    - Fix rendering error for unknown/malformed time zones (use DHTMLX's timeshift)
+    - Improve Indonesian translation by Reza Almanda
+- v1.23
+    - Add documentation and dependencies to use a Tor proxy to prevent SSRF attacks.
+    - Remove temporary cache directory vulnerability [GitHub](https://github.com/niccokunzmann/open-web-calendar/security/code-scanning/2) [CWE-377](https://cwe.mitre.org/data/definitions/377.html)
+- v1.22
+    - Update dependencies
+- v1.21
+    - Update Chinese translation by dingc
+    - Update French translation by Thomas Moerschell
+    - Fix Content-Type header for .js files, see [Issue 241](https://github.com/niccokunzmann/open-web-calendar/issues/241)
+    - Add logo [Issue 205](https://github.com/niccokunzmann/open-web-calendar/issues/205)
+- v1.20
+    - Turkish translation by Oğuz Ersen
+    - Spanish translation by gallegonovato
+    - Indonesian translation by Reza Almanda
+    - Update dependencies
+    - Correct links
+- v1.19
+    - Update dependencies
+- v1.18
+    - Update dependencies
+    - Update Finnish by Teemu
+    - Update Slovak by Milan Šalka
+    - Update Polish by Piotr Strebski
+    - Update Japanese by onokatio
+- v1.17
+    - Add User-Agent header, see [Issue #225](https://github.com/niccokunzmann/open-web-calendar/issues/225).
+    - Close security vulnerability, [Pull Request #223](https://github.com/niccokunzmann/open-web-calendar/pull/223)
+    - Update German, Welsh, Croatian
+- v1.16
+    - Add a dropdown to choose another time zone to view the calendar in the about screen, see [Issue #213](https://github.com/niccokunzmann/open-web-calendar/issues/213).
+- v1.15
+    - Update dependencies
+- v1.14
+    - Improve Indonesian translation by Reza Almanda
+    - Improve Spanish translation by zyloj
+    - Improve Polish translation by Eryk Michalak
+    - Update dependencies
+    - Do not test Python 3.7 any more
+    - Test Python 3.11
+- v1.13
+    - Improve French translation
+    - Update dependencies
+- v1.12
+    - Add Croatian UI by Milo Ivir
+- v1.11
+    - Add German UI
+    - Improve calendar in Polish
+    - Add Welsh calendar
+- v1.10
+    - Add translations for nb_NO.
+    - Translate the user interface.
+    - Use weblate to translate files.
+- v1.9
+    - Speed up loading with start and stop date range. [Pull Request #177](https://github.com/niccokunzmann/open-web-calendar/pull/177).
+- v1.8
+    - Add start of day, end of day and time step (hour be default) in [Pull Request #158](https://github.com/niccokunzmann/open-web-calendar/pull/158) thanks to [@TheoLeCalvar](https://github.com/TheoLeCalvar).
+- v1.7
+    - Add timezone functionality. See [Issue #171](https://github.com/niccokunzmann/open-web-calendar/issues/171).
+- v1.6
+    - Add choice of Sunday or Monday for the start of the week [Issue 39](https://github.com/niccokunzmann/open-web-calendar/issues/39) - backed by [donation]!
+- v1.5
+    - add link to [Contributing Section](#contributing) in about page
+    - make event clickable even if there is a tool tip window
+    - [@MrKoga](https://github.com/MrKoga) [donated][github-sponsors] to the project! Thanks!
+- v1.4
+    - add event categories when you click an event, see [PR 159](https://github.com/niccokunzmann/open-web-calendar/pull/159).
+- v1.3
+    - update translation mistake
+    - fix encoding problem for languages other than en/de
+    - add ability to remove all controls
+    - test with GitHub actions
+    - test user interface
+- v1.2
+    - Use Gunicorn in Docker image
+    - change deployment to https://open-web-calendar.hosted.quelltext.eu/
+- v1.1
+    - Add Coatian Language by Tomislav Gomerčić
+- v1.0
+    - Create the changelog.
+    - Add support for colors from ICS calendars, see [Issue #52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88).
