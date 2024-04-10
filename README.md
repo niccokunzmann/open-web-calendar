@@ -1,12 +1,11 @@
 [![Open Web Calendar](static/img/logo/github-social-preview.png)][web]
 
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/niccokunzmann/open-web-calendar/run-tests.yml?logo=github)](https://github.com/niccokunzmann/open-web-calendar/actions)
-[![build and publish the Docker image](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml/badge.svg)](https://github.com/niccokunzmann/open-web-calendar/actions/workflows/docker-image.yml)
 
 
 You might want to:
 - **[Try&nbsp;it&nbsp;out][web]**
-- [Read the documentation][donation]
+- [Read the documentation][docs]
 
 
 Python: 3.8, 3.9, 3.10, 3.11, 3.12
@@ -33,6 +32,7 @@ Features
 
 
 [web]: https://open-web-calendar.hosted.quelltext.eu/
+[docs]: https://open-web-calendar.quelltext.eu/
 
 Changelog
 ---------
