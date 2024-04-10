@@ -26,6 +26,13 @@ Here is an example of a one day view of a Christmas day:
 
 {{calendar_iframe("christmas-day.json", "300px")}}
 
+## Recurring Events with Categories
+
+A calendar at home might look like this:
+
+{{calendar_iframe("home-categories.json")}}
+
+
 ## Events Hosted as a Tor Hidden Service
 
 This calendar is not styled but contains events that can be hosted behind
