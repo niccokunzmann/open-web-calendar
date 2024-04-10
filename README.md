@@ -337,7 +337,20 @@ You can also change the layout of the window to test the responsive design:
 tox -e web -- -D window=375x812 # iPhone11 size
 ```
 
+### Documentation
+
+You can build the documentation with `tox`, too:
+
+```
+tox -e docs -- build
+tox -e docs -- serve
+```
+
+We are using [mkdocs] with the [material theme](https://squidfunk.github.io/mkdocs-material/).
+
+
 [web]: https://open-web-calendar.hosted.quelltext.eu/
+[mkdocs]: https://www.mkdocs.org
 
 Changelog
 ---------
