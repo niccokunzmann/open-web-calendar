@@ -1,0 +1,34 @@
+# Translations for the about.html file.
+
+# This is a description at the top of the about page.
+# It also points out the links. It can be replaced in the specification.
+# https://open-web-calendar.hosted.quelltext.eu/about.html
+description: "Here is more information about the calendar. Have a look at the links below to use this calendar in different ways."
+# One of the links
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-website
+links-website: "Go back to view the calendar."
+# One of the links
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-links-ics
+links-ics: "Use this link to subscribe to the calendar or to add the events to your own calendar."
+# One of the links
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-links-spec
+links-spec: "View or download the calendar specification."
+# One of the links
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-links-edit
+links-edit: "Edit a copy of the calendar."
+# One of the items in the menu to choose the time zone of the calendar
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-timezone-browser
+timezone-browser: "This is the time zone of your device:"
+# One of the items in the menu to choose the time zone of the calendar
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-timezone-choice
+timezone-choice: "You can choose to change the time zone of the calendar here:"
+
+
+# This is the headline/title on the about page
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-project-title
+project-title: "About the Open Web Calendar Project"
+
+
+# Title for the license section
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-license
+license: "License"

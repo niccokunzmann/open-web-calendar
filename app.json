@@ -1,0 +1,27 @@
+{
+  "name": "Open Web Calendar",
+  "description": "Embed a web calendar into your own website.",
+  "repository": "https://github.com/niccokunzmann/open-web-calendar",
+  "website": "https://github.com/niccokunzmann/open-web-calendar",
+  "success_url": "/",
+  "env": {
+    "APP_DEBUG": {
+      "description": "Whether to use debug mode to run the app (true/false). It defaults to true.",
+      "value": "true",
+      "required": false
+    },
+    "CACHE_REQUESTED_URLS_FOR_SECONDS": {
+      "description": "To speed up loading time, the requests to urls can be cached. This also delays displaying updates.",
+      "value": "600",
+      "required": false
+    }
+  },
+  "image": "heroku/python",
+  "keywords": [
+    "calendar",
+    "web",
+    "ical",
+    "open-source"
+  ]
+}
+

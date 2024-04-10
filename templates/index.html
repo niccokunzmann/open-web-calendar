@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="{{ specification['language'] }}">
+    <head>
+        <title>Open Web Calendar</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var specification = {{ specification | tojson | safe }};
+        </script>
+        <link href="css/index.css"
+            rel="stylesheet" type="text/css" charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
+        <script src="js/index.js"></script>
+        <script src="js/common.js"></script>
+        <script src="configuration.js"></script>
+        {%- for name, code, percent in configuration["index"]["languages"]: %}
+            <link rel="alternate" hreflang="{{code}}" href="/index.html?language={{code}}" />
+        {%- endfor %}
+    </head>
+    <body>
+        <header>
+            <h1>{{ html("project-name") }}</h1>
+        </header>
+        <main>
+            <div class="section">
+                <p>
+                    {{ html("about") }}
+                </p>
+            </div>
+            <div class="section languages">
+                <p>
+                    {%- for name, code, percent in configuration["index"]["languages"]: %}
+                        <a class="{{ ('current' if code == specification['language'] else '') }}" href="/index.html?language={{code}}">{{ name }}
+                        {%- if percent != 100 -%}
+                            ({{percent}}%)
+                        {% endif -%}
+                        </a>
+                    {%- endfor %}
+                    <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
+                </p>
+            </div>
+            <div class="section">
+                <p>
+                    {{ html("calendar-urls") }}
+                </p>
+                <ul id="calendar-urls">
+                </ul>
+                <p>
+                    <a id="calendar-link"></a>
+                    <br/>
+                    {{ html("calendar-code") }}
+                    <pre id="calendar-code" class="code"></pre>
+                    {{ html("calendar-code-execution") }}
+                    <div id="calendar-code-execution"></div>
+                </p>
+            </div>
+            <div class="section">
+                <p>
+                    {{ html("section-customization") }}
+                </p>
+                <h3>{{ html("title-title") }}</h3>
+                <p>
+                    {{ html("title-description") }}<br/>
+                    <input type="text" id="calendar-title" />
+                </p>
+                <h3>{{ html("starting-date-title") }}</h3>
+                <p>
+                    {{ html("starting-date-description") }}<br/>
+                    <input type="date" id="starting-date" required pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD"/>
+                </p>
+                <h3>{{ html("first-hour-title") }}</h3>
+                <p>
+                    {{ html("first-hour-description") }}<br/>
+                    <input type="number" min="0" max="23" id="starting-hour" />
+                </p>
+                <h3>{{ html("last-hour-title") }}</h3>
+                <p>
+                    {{ html("last-hour-description") }}<br/>
+                    <input type="number" min="1" max="24" id="ending-hour" />
+                </p>
+                <h3>{{ html("time-increment-title") }}</h3>
+                <p>
+                    {{ html("time-increment-description") }}
+                    <form id="time-increment">
+                        <input class="time-increment-input" type="radio" id="time-6" name="time-select" value="6" /><label for="time-6">{{ html("time-increment-10") }}</label>
+                        <input class="time-increment-input" type="radio" id="time-4" name="time-select" value="4" /><label for="time-4">{{ html("time-increment-15") }}</label>
+                        <input class="time-increment-input" type="radio" id="time-2" name="time-select" value="2" /><label for="time-2">{{ html("time-increment-30") }}</label>
+                        <input class="time-increment-input" type="radio" id="time-1" name="time-select" value="1" /><label for="time-1">{{ html("time-increment-60") }}</label>
+                    </form>
+                </p>
+                <h3>{{ html("hour-format-title") }}</h3>
+                <p>
+                    {{ html("hour-format-description") }} <a href="https://docs.dhtmlx.com/scheduler/settings_format.html">{{ html("hour-format-specification-link") }}</a><br/>
+                    <select id="select-hour-format">
+                        <option value="%G:%i">24:00 - 1:15, 13:45</option>
+                        <option value="%H:%i">24:00 - 01:15, 13:45</option>
+                        <option value="%g:%i %a">am/pm - 1:15 am, 1:45 pm</option>
+                        <option value="%h:%i %a">am/pm - 01:15 am, 1:45 pm</option>
+                        <option value="%g:%i %A">AM/PM - 1:15 AM, 1:45 PM</option>
+                        <option value="%h:%i %A">AM/PM - 01:15 AM, 01:45 PM</option>
+                    </select>
+                </p>
+                <h3>{{ html("language-title") }}</h3>
+                <p>
+                    {{ html("language-description") }}<br/>
+                    <select id="select-language"></select><br/>
+                    <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
+                </p>
+                <h3>{{ html("skins-title") }}</h3>
+                <p>
+                    {{ html("skins-description") }}<br/>
+                    <!-- see the skins at the static/css/dhtmlx folder -->
+                    <select id="select-skin">
+                        <option value="dhtmlxscheduler.css">{{ html("skins-terrace") }}</option>
+                        <option value="dhtmlxscheduler_material.css">{{ html("skins-material") }}</option>
+                        <option value="dhtmlxscheduler_flat.css">{{ html("skins-flat") }}</option>
+                        <option value="dhtmlxscheduler_contrast_black.css">{{ html("skins-contrast-black") }}</option>
+                        <option value="dhtmlxscheduler_contrast_white.css">{{ html("skins-contrast-white") }}</option>
+                    </select>
+                </p>
+                <h3>{{ html("links-title") }}</h3>
+                <p>
+                    {{ html("links-description") }}<br/>
+                    <select id="select-target">
+                        <option value="_self">{{ html("links-self") }}</option>
+                        <option value="_parent">{{ html("links-parent") }}</option>
+                        <option value="_blank">{{ html("links-blank") }}</option>
+                        <option value="_top">{{ html("links-top") }}</option>
+                    </select>
+                </p>
+                <h3>{{ html("configure-week-title") }}</h3>
+                <p>
+                    <select id="select-start-of-week">
+                        <option value="mo">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_sun") }}</option>
+                        {{ html("configure-week-description") }}<br/>
+                        <option value="su">{{ html("calendar.date_day_full_sun") }} - {{ html("calendar.date_day_full_sat") }}</option>
+                        <option value="work">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_fri") }}</option>
+                    </select>
+                </p>
+                <h3>{{ html("style-title") }}</h3>
+                <p>
+                    {{ html("style-description") }}<br/>
+                </p>
+                <ul>
+                  <li>
+                    <input type="color" value="#fefefe"
+                           placeholder="white" class="color-input"
+                           cssTemplate=".dhx_cal_navline, .dhx_scale_bar, .dhx_cal_container, .dhx_cal_header, .dhx_cal_scale_placeholder, .dhx_scale_holder, .dhx_scale_hour {background-color: {color};}">
+                    {{ html("style-background") }}
+                  </li>
+                  <li>
+                    <input type="color" value="#fefefe"
+                           placeholder="blue" class="color-input"
+                           cssTemplate=".event, .dhx_cal_tab.active, .dhx_cal_tab.active:hover {background-color: {color};} .dhx_month_head, .dhx_cal_tab, .dhx_cal_today_button {color: {color};} .dhx_cal_tab, .dhx_cal_tab.active {border-color: {color};}">
+                    {{ html("style-click") }}
+                  </li>
+                  <li>
+                    <input type="color" value="#fefefe"
+                           placeholder="green" class="color-input"
+                           cssTemplate=".dhx_scale_holder_now, .dhx_now .dhx_month_head, .dhx_now .dhx_month_body { background-color: {color};}">
+                    {{ html("style-date") }}
+                  </li>
+                  <li>
+                    <input type="color" value="#fefefe"
+                           placeholder="black" class="color-input"
+                           cssTemplate=".dhx_month_body, .dhx_month_head, .dhx_cal_container { background-color: {color}; }">
+                    {{ html("style-days") }}
+                  </li>
+                  <li>
+                    <input type="color" value="#fefefe"
+                           placeholder="black" class="color-input"
+                           cssTemplate=".dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: {color}; }">
+                    {{ html("style-days-outside") }}
+                  </li>
+                </ul>
+                <p>
+                    {{ html("style-css") }} {{ html("style-css-classes") }}
+                    <code class="css-class-example">.event {}</code>
+                    <code class="css-class-example">.UID-... {}</code>
+                    <code class="css-class-example">.CATEGORY-... {}</code>
+                    <code class="css-class-example">.CALENDAR-INDEX-0 {}</code>
+                    <code class="css-class-example">.CALENDAR-INDEX-... {}</code>
+                    <code class="css-class-example">.TRANSP-OPAQUE {}</code>
+                    <code class="css-class-example">.TRANSP-TRANSPARENT {}</code>
+                    <code class="css-class-example">.CLASS-PRIVATE {}</code>
+                    <code class="css-class-example">.CLASS-CONFIDENTIAL {}</code>
+                    <code class="css-class-example">.CLASS-PUBLIC {}</code>
+                    <code class="css-class-example">.STATUS-TENTATIVE {}</code>
+                    <code class="css-class-example">.STATUS-CONFIRMED {}</code>
+                    <code class="css-class-example">.STATUS-CANCELLED {}</code>
+                    <code class="css-class-example">.PRIORITY-1 {}</code>
+                    <code class="css-class-example">.PRIORITY-... {}</code>
+                    <code class="css-class-example">.error {}</code>
+                    <textarea id="css-input"></textarea>
+                </p>
+                <h3>{{ html("event-status-title") }}</h3>
+                <p>
+                  {{ html("event-status-description") }}<br/>
+                  <form id="event-status-form">
+                    <!-- We have three event status, see https://icalendar.org/iCalendar-RFC-5545/3-8-1-11-status.html -->
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-tentative" /><label for="style-event-status-tentative" class="STATUS-TENTATIVE">{{ html("event-status-tentative") }}</label>
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-confirmed" /><label for="style-event-status-confirmed" class="STATUS-CONFIRMED">{{ html("event-status-confirmed") }}</label>
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-cancelled" /><label for="style-event-status-cancelled" class="STATUS-CANCELLED">{{ html("event-status-cancelled") }}</label>
+                  </form>
+                </p>
+                <h3>{{ html("loader-title") }}</h3>
+                <p>
+                  {{ html("loader-description") }}<br/>
+                  <select id="select-loader">
+                      <option value="" id="default-loader">{{ html("loader-default") }}</option>
+                      <option value="">{{ html("loader-none") }}</option>
+                  </select>
+                </p>
+                <h3>{{ html("tabs-title") }}</h3>
+                <p>
+                  {{ html("tabs-description") }}<br/>
+                  <select id="select-tab">
+                      <option value="month">{{ html("calendar.labels_month_tab") }}</option>
+                      <option value="week">{{ html("calendar.labels_week_tab") }}</option>
+                      <option value="day">{{ html("calendar.labels_day_tab") }}</option>
+                      <option value="agenda">{{ html("calendar.labels_agenda_tab") }}</option>
+                  </select>
+                </p>
+                <p>
+                  {{ html("controls-description") }}
+                  <form id="check-controls">
+                    <input type="checkbox" class="tabs" value="month"  id="check-controls-month" /><label for="check-controls-month" >{{ html("calendar.labels_month_tab") }}</label>
+                    <input type="checkbox" class="tabs" value="week"   id="check-controls-week"  /><label for="check-controls-week"  >{{ html("calendar.labels_week_tab") }}</label>
+                    <input type="checkbox" class="tabs" value="day"    id="check-controls-day"   /><label for="check-controls-day"   >{{ html("calendar.labels_day_tab") }}</label>
+                    <input type="checkbox" class="tabs" value="agenda" id="check-controls-agenda"/><label for="check-controls-agenda">{{ html("calendar.labels_agenda_tab") }}</label>
+                    <input type="checkbox" class="controls" value="next"     id="check-controls-next"    /><label for="check-controls-next"    >{{ html("calendar.labels_next") }}</label>
+                    <input type="checkbox" class="controls" value="previous" id="check-controls-previous"/><label for="check-controls-previous">{{ html("calendar.labels_prev") }}</label>
+                    <input type="checkbox" class="controls" value="today"    id="check-controls-today"   /><label for="check-controls-today"   >{{ html("calendar.labels_dhx_cal_today_button") }}</label>
+                    <input type="checkbox" class="controls" value="date"     id="check-controls-date"    /><label for="check-controls-date"    >{{ html("calendar.labels_date") }}</label>
+                  </form>
+                </p>
+                <h3>{{ html("timezone-title") }}</h3>
+                <p>
+                  {{ html("timezone-description") }}
+                  <span class="timezone-of-browser">{{ html("loading") }}</span><br/>
+                  <select id="select-timezone">
+                      <option value="">{{ html("timezone-browser") }}</option>
+                  </select>
+                </p>
+                <h3>{{ html("spec-title") }}</h3>
+                <p>
+                    {{ html("spec-description") }}
+                    <pre class="code" id="json-specification"></pre>
+                    {{ html("spec-host-html") }}
+                    {{ html("spec-link") }}
+                    <a id="example-specification-link" target="_blank"></a>
+                </p>
+            </div>
+        </main>
+        <footer>
+            {{ html("project-description") }}
+            <ul>
+                <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>
+                <li><a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

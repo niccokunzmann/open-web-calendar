@@ -1,0 +1,258 @@
+# Translations for the index.html file.
+
+# What is this software about.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-about
+about: 'The Open Web Calendar uses ICS/ICal calendars online and displays them in
+  one calendar. You can use it with Nextcloud, Outlook, Google Calendar, Meetup and
+  other calendar systems using the ICS standard.'
+
+
+# Input for URLs of ICS files.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-urls
+calendar-urls: 'To merge several calendars, please input the URLs of the ICS calendars
+  here:'
+# This describes the calendar code to embed.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code
+calendar-code: "To embed the calendar, use this code on your website:"
+# This describes the visible calendar that is updated with every change.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code-execution
+calendar-code-execution: "You can view the resulting calendar below."
+
+
+# Describe all options.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-section-customization
+section-customization: "You can make additional customizations of the calendar."
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-title-title
+title-title: "Title"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-title-description
+title-description: "To change the title, please input the name of the calendar here:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-starting-date-title
+starting-date-title: "Starting date"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-starting-date-description
+starting-date-description: "To change the starting date of the calendar:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-first-hour-title
+first-hour-title: "First Hour"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-first-hour-description
+first-hour-description: "To change the first hour of the calendar view:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-last-hour-title
+last-hour-title: "Last Hour"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-last-hour-description
+last-hour-description: "To change the last hour of the calendar view:"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-title
+time-increment-title: "Time Increment"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-description
+time-increment-description: "Change time increment in the day & week view:"
+# An option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-10
+time-increment-10: "10 minutes"
+# An option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-15
+time-increment-15: "15 minutes"
+# An option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-30
+time-increment-30: "30 minutes"
+# An option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-time-increment-60
+time-increment-60: "1 hour"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-hour-format-title
+hour-format-title: "Clock Convention"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-hour-format-description
+hour-format-description: "You can choose between the 24 hour clock and the 12 hour clock. More options are possible."
+# Link to the specification
+# https://open-web-calendar.hosted.quelltext.eu/#translate-hour-format-description
+hour-format-specification-link: "View the specification."
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-language-title
+language-title: "Language"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-language-description
+language-description: "You can set the language of the calendar."
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-title
+skins-title: "Skins"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-description: "You can select different skins for the calendar."
+# This is a name of a skin which does not need translation neccessarily.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-terrace: "Terrace"
+# This is a name of a skin which does not need translation neccessarily.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-material: "Material"
+# This is a name of a skin which does not need translation neccessarily.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-flat: "Flat"
+# This is a name of a skin.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-contrast-black: "Contrast Black"
+# This is a name of a skin.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-contrast-white: "Contrast White"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-title
+links-title: "Links"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-description: "Events may have locations and URLs. If you embed the calendar\
+  \ into a website, you can choose where the clicked link opens the page."
+# Description of where to open the link that was clicked in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-self: "Open the linked document in the same frame as it was clicked."
+# Description of where to open the link that was clicked in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-parent: "Open the linked document in the parent frame."
+# Description of where to open the link that was clicked in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-blank: "Open the linked document in a new window or tab."
+# Description of where to open the link that was clicked in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-links-description
+links-top: "Open the linked document in the full body of the window."
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-title
+configure-week-title: "Days of the Week"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-description
+configure-week-description: "The week may start on Monday or Sunday."
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-title
+style-title: "Custom Style with CSS"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-description
+style-description: "You can change the color of your calendar and many more properties\
+  \ using CSS. Your customization has priority over the Skin you choose. Below, you\
+  \ can choose from a few customizations we prepared for you."
+# Description of CSS styling option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-background
+style-background: "You can change the background color of the calendar."
+# Description of CSS styling option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-click
+style-click: "You can change the color of the elements which can be clicked."
+# Description of CSS styling option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-date
+style-date: "You can change the background color of the current date."
+# Description of CSS styling option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-days
+style-days: "If you like to have a different color for the days, you can specify this,\
+  \ too."
+# Description of CSS styling option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-days-outside
+style-days-outside: "Some days of the calendar have a different color if they are\
+  \ not within the month."
+# Description of CSS styling option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-css
+style-css: "You can specify your own CSS properties if you like."
+style-css-classes: "These are examples of CSS classes to style events:"
+
+
+event-status-title: "Event Status"
+event-status-description: "Change the look of the event description depending on the status:"
+event-status-tentative: "tentative"
+event-status-confirmed: "confirmed"
+event-status-cancelled: "cancelled"
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-loader-title
+loader-title: "Loading Animation"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-loader-description
+loader-description: "In some cases, the server takes quite a time to load the calendar.\
+  \ In case the server uses a free plan on Heroku, the server needs to start first."
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-loader-description
+loader-default: "circular loader"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-loader-description
+loader-none: "no loader"
+
+
+# Heading of option, should be the same words as in the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-tabs-title
+tabs-title: "Calendar Tabs"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-tabs-description
+tabs-description: "The Month view is the default. However, you can choose to show\
+  \ a different view in the beginning. Choose one:"
+
+
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-controls-description
+controls-description: "It might be that you do not want to show all controls for the\
+  \ users to see. Choose here which controls you would like to display:"
+# Description of option. This is the date at the top of the calendar.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-controls-description
+controls-date: "Date"
+
+
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-timezone-title
+timezone-title: "Time Zone"
+# Description of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-timezone-description
+timezone-description: "The timezone is taken from the browser of the user. If you\
+  \ want your calendar to be fixed in one timezone, you have the option below. Your\
+  \ browser uses this time zone:"
+# Heading of option
+# https://open-web-calendar.hosted.quelltext.eu/#translate-timezone-title
+timezone-browser: "use the timezone of the browser"
+
+
+# This is shown while an element is being loaded.
+loading: "loading…"
+
+# This is a link at the top so people translate the calendar
+# https://open-web-calendar.hosted.quelltext.eu/#translate-translate
+translate: "Translate"
+
+
+# Heading
+# https://open-web-calendar.hosted.quelltext.eu/#translate-spec-title
+spec-title: "Hosting the Specification"
+# Description of the specification followed by the JSON content
+# https://open-web-calendar.hosted.quelltext.eu/#translate-spec-description
+spec-description: "The calendar can be generated not only using the URL, but also\
+  \ through a JSON or YAML specification from a file. The customization above generates\
+  \ this specification:"
+# Description of downloading and hosting. Contains HTML
+# https://open-web-calendar.hosted.quelltext.eu/#translate-spec-host
+spec-host-html: 'You can <a href="javascript:downloadJSONSpecification()">download
+  this specification</a> and place it somewhere on the web. This way you are still
+  in control over the customization of the calendar after you shared the link, e.g.
+  on GitHub in a <a href="https://gist.github.com/">Gist</a>.'
+# Description of specification link
+# https://open-web-calendar.hosted.quelltext.eu/#translate-spec-link
+spec-link: "Once you have placed the specification somewhere online, you can create\
+  \ a link like this one:"

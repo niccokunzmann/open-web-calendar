@@ -1,0 +1,6 @@
+# These translations are only for testing the translation engine.
+id1: "test"
+id2: "test2"
+check-escape: "<nanana>"
+test-html: "<b>Hi!</b>"
+format-argument: "This is a {sunny} day!"

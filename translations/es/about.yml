@@ -1,0 +1,11 @@
+timezone-choice: 'Aquí puede cambiar la zona horaria del calendario:'
+description: Aquí tienes más información sobre el calendario. Echa un vistazo a los
+  siguientes enlaces para utilizar este calendario de diferentes maneras.
+links-ics: Utilice este enlace para suscribirse al calendario o para añadir los eventos
+  a su propio calendario.
+license: Licencia
+project-title: Acerca del proyecto Open Web Calendar
+timezone-browser: 'Esta es la zona horaria de su dispositivo:'
+links-spec: Descargue o vea las especificaciones del calendario.
+links-website: Regrese para ver el calendario.
+links-edit: Editar una copia del calendario.

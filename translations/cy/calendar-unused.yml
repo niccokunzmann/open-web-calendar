@@ -1,0 +1,60 @@
+labels_new_event: Digwyddiad Newydd
+labels_icon_save: Cadw
+labels_icon_cancel: Dileu
+labels_icon_edit: Golygu
+labels_icon_delete: Dileu
+labels_confirm_deleting: Dileir y digwyddiad yn barhaol, 'dach chi'n sicr?
+labels_full_day: Diwrnod llawn
+labels_confirm_recurring: "'Dach chi eisiau golugu'r holl set o ddigwyddiadau mynych?"
+labels_section_recurring: Digwyddiad mynych
+labels_button_recurring: Analluogwyd
+labels_button_recurring_open: Galluogwyd
+labels_button_edit_series: Golygu cyfres
+labels_button_edit_occurrence: Golygu digwyddiad
+labels_year_tab: Blwyddyn
+labels_message_cancel: Dileu
+labels_grid_tab: Grid
+labels_drag_to_create: Llusgo i creu
+labels_drag_to_move: Llusgo i symud
+labels_message_ok: Iawn
+labels_repeat_radio_day: Dyddiol
+labels_repeat_radio_week: Wythnosol
+labels_repeat_radio_month: Misol
+labels_repeat_radio_day_type: Pob
+labels_repeat_radio_day_type2: Pob diwrnod gwaith
+labels_repeat_week: ' Ail-wneud pob'
+labels_repeat_radio_month_type: Ail-wneud
+labels_repeat_radio_month_start: Ymlaen
+labels_repeat_text_month_count: mis
+labels_repeat_text_month_count2_before: pob
+labels_repeat_year_label: Ymlaen
+labels_select_year_day2: o
+labels_repeat_text_year_day: dydd
+labels_repeat_radio_end: Dim diwedd dyddiad
+labels_repeat_text_occurences_count: digwyddiadau
+labels_repeat_radio_end2: Ar ôl
+labels_repeat_radio_end3: Diwedd erbyn
+labels_month_for_recurring_feb: Chwefror
+labels_month_for_recurring_apr: Ebrill
+labels_month_for_recurring_aug: Awst
+labels_month_for_recurring_may: Mai
+labels_month_for_recurring_sep: Medi
+labels_month_for_recurring_oct: Hydref
+labels_month_for_recurring_nov: Tachwedd
+labels_month_for_recurring_dec: Rhagfyr
+labels_day_for_recurring_sun: Dydd Sul
+labels_day_for_recurring_mon: Dydd Llun
+labels_day_for_recurring_tue: Dydd Mawrth
+labels_day_for_recurring_wed: Dydd Mercher
+labels_day_for_recurring_thu: Dydd Iau
+labels_day_for_recurring_fri: Dydd Gwener
+labels_day_for_recurring_sat: Dydd Sadwrn
+labels_icon_details: Manylion
+labels_repeat_text_month_count2_after: mis
+labels_repeat_radio_year: Blynyddol
+labels_repeat_text_day_count: Dydd
+labels_month_for_recurring_mar: Mawrth
+labels_select_year_month: mis
+labels_month_for_recurring_jun: Mehefin
+labels_month_for_recurring_jan: Ionawr
+labels_month_for_recurring_jul: Gorffenhaf

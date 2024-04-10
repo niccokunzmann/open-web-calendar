@@ -1,0 +1,11 @@
+flask-caching
+flask
+icalendar
+requests
+requests[socks]
+pyyaml
+recurring-ical-events
+gunicorn
+lxml
+beautifulsoup4
+lxml[html_clean]

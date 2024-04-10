@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <!-- Mostly copied from https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step2addingschedulertothepage -->
+    <head>
+        <title>{{ specification["title"] | safe }}</title>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var specification = {{ specification | tojson | safe }};
+        </script>
+        <!-- scheduler -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/dhtmlx/dhtmlxscheduler.js"
+            charset="utf-8"></script>
+        <script src="js/configure.js"
+            charset="utf-8"></script>
+        <script src="js/common.js"
+            charset="utf-8"></script>
+        <link href="css/dhtmlx/{{ specification['skin'] | safe }}"
+            rel="stylesheet" type="text/css" charset="utf-8">
+        <link href="css/dhtmlx/style.css"
+            rel="stylesheet" type="text/css" charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
+        <!-- see https://docs.dhtmlx.com/scheduler/localization.html -->
+        <script src="locale_{{ specification['language'] | safe }}.js" charset="utf-8"></script>
+        <style>
+            html, body{
+                margin:0px;
+                padding:0px;
+                height:100%;
+                overflow:hidden;
+            }
+            {% if specification['style-event-status-tentative'] %}.STATUS-TENTATIVE { font-style: italic; }{% endif %}
+            {% if specification['style-event-status-confirmed'] %}.event { font-weight: normal; } .STATUS-CONFIRMED { font-weight: bold; }{% endif %}
+            {% if specification['style-event-status-cancelled'] %}.STATUS-CANCELLED { text-decoration: line-through; }{% endif %}
+            {{ specification['css'] | safe }}
+        </style>
+    </head>
+    <body>
+        <div id="scheduler_here" class="dhx_cal_container"
+            style='width:100%; height:100%;'>
+            <div class="dhx_cal_navline"></div>
+            <div class="dhx_cal_header"></div>
+            <div class="dhx_cal_data"></div>
+        </div>
+        <div id="loader" class="fullsize"></div>
+        <div id="errorWindow" class="hidden fullsize">
+            <a class="closeButton" href="javascript:toggleErrorWindow();">X</a>
+        </div>
+        <div class="status-window">
+            <a class="item" id="errorStatusIcon" href="javascript:toggleErrorWindow();">!</a>
+            <a class="item" id="infoIcon" href="/about.html{{ get_query_string() | safe }}" target="{{ specification['target'] }}">?</a>
+        </div>
+    </body>
+</html>

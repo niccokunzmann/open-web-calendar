@@ -1,0 +1,18 @@
+# see https://docs.docker.com/engine/reference/builder/#dockerignore-file
+*.md
+vercel.json
+tox.ini
+venv
+test-requirements.*
+test
+scripts
+runtime.txt
+__pycache__
+*.pyc
+Procfile
+architecture.svg
+app.json
+features
+constraints.txt
+Dockerfile
+

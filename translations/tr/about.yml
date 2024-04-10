@@ -1,0 +1,11 @@
+timezone-choice: 'Takvimin saat dilimini buradan değiştirmeyi seçebilirsiniz:'
+description: İşte takvim hakkında daha fazla bilgi. Bu takvimi farklı şekillerde kullanmak
+  için aşağıdaki bağlantılara göz atın.
+links-ics: Takvime abone olmak veya etkinlikleri kendi takviminize eklemek için bu
+  bağlantıyı kullanın.
+license: Lisans
+project-title: Open Web Calendar Projesi Hakkında
+timezone-browser: 'Bu, aygıtınızın saat dilimidir:'
+links-spec: Takvim tanımlamasını görüntüleyin veya indirin.
+links-website: Takvimi görüntülemek için geri dönün.
+links-edit: Takvimin bir kopyasını düzenleyin.

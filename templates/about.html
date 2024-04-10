@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <!-- Mostly copied from https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step2addingschedulertothepage -->
+    <head>
+        <title>{{ specification["title"] | safe }}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
+        <link href="css/index.css"
+            rel="stylesheet" type="text/css" charset="utf-8">
+
+        <script type="text/javascript">
+            var specification = {{ specification | tojson | safe }};
+        </script>
+        <script src="configuration.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/about.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="/calendar.html{{ get_query_string() | safe }}"><h1>{{ specification["title"] | safe }}</h1></a>
+        </header>
+        <main>
+            <p class="description">
+                {{ specification["description"] or html("description") }}
+            </p>
+            <ul>
+                <li><a href="/calendar.html{{ get_query_string() | safe }}">{{ html("links-website") }}</a></li>
+                <li><a href="/calendar.ics{{ get_query_string() | safe }}">{{ html("links-ics") }}</a></li>
+                <li><a href="/calendar.spec{{ get_query_string() | safe }}">{{ html("links-spec") }}</a></li>
+                <li><a href="/index.html{{ get_query_string() | safe }}">{{ html("links-edit") }}</a></li>
+                <li>
+                    {{ html("timezone-choice") }}
+                    <select id="select-timezone" onchange="loadCalendarInDifferentTimeZone()">
+                    </select>
+                    {{ html("timezone-browser") }}
+                    <span class="timezone-of-browser"">{{ html("index.loading") }}</span>
+                  </li>
+            </ul>
+            <h2>{{ html("project-title") }}</h2>
+            <p class="description">
+                {{ html("project-description") }}
+            </p>
+            <ul>
+                <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>
+                <li><a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a></li>
+            </ul>
+            <h2>{{ html("license") }}</h2>
+            <p>
+                Open Web Calendar<br/>
+                Copyright (C) 2019  Nicco Kunzmann
+            <p>
+            </p>
+                dhtmlxScheduler v.5.1.6 Standard<br/>
+                (C) Dinamenta, UAB.
+            <p>
+            </p>
+                This program is free software; you can redistribute it and/or modify
+                it under the terms of the GNU General Public License as published by
+                the Free Software Foundation; either version 2 of the License.
+            <p>
+            </p>
+                This program is distributed in the hope that it will be useful,
+                but WITHOUT ANY WARRANTY; without even the implied warranty of
+                MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                GNU General Public License for more details.
+            <p>
+            </p>
+                You should have received a copy of the GNU General Public License along
+                with this program; if not, write to the Free Software Foundation, Inc.,
+                51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+            </p>
+        </main>
+    </body>
+</html>

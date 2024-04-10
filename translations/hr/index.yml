@@ -1,0 +1,82 @@
+about: Otvoreni web kalendar koristi ICS/ICal kalendare online i prikazuje ih u jednom
+  kalendaru. Možeš ga koristiti s Nextcloudom, Outlookom, Google kalendarom, Meetupom
+  i drugim sustavima kalendara koji koriste ICS standard.
+calendar-urls: 'Za sjedinjavanje kalendara, ovdje upiši URL-ove ICS kalendara:'
+calendar-code: 'Za ugrađivanje kalendara koristi ovaj kod na tvojoj web stranici:'
+calendar-code-execution: Dolje možeš vidjeti rezultirajući kalendar.
+title-title: Naslov
+first-hour-title: Prvi sat
+starting-date-description: 'Za mijenjanje početnog datuma kalendara:'
+last-hour-title: Zadnji sat
+first-hour-description: 'Za mijenjanje prvog sata u prikazu kalendara:'
+time-increment-description: 'Za mijenjanje intervala u prikazu dana i tjedna:'
+time-increment-10: 10 minuta
+time-increment-30: 30 minuta
+language-title: Jezik
+language-description: Ovdje postavi jezik kalendara.
+time-increment-60: 1 sat
+skins-terrace: Terrace
+skins-material: Material
+skins-flat: Plošno
+skins-contrast-black: Crni kontrast
+skins-contrast-white: Bijeli kontrast
+links-description: Događaji mogu imati lokacije i URL-ove. Ako kalendar ugradiš u
+  web stranicu, možeš odabrati gdje će pritisnuta poveznica otvoriti stranicu.
+links-title: Poveznice
+style-click: Možeš promijeniti boju elemenata koji se mogu pritisnuti.
+style-css: Ako želiš, možeš odrediti vlastita CSS svojstva.
+loader-title: Animacija pri učitavanju
+style-date: Možeš promijeniti boju pozadine aktualnog datuma.
+style-days: Ako želiš koristiti drugačiju boju za dane, to također možeš odediti.
+style-days-outside: Neki dani u kalendaru imaju drugačiju boju ako se ne nalaze unutar
+  mjeseca.
+loader-default: rotirajuća animacija tijekom učitavanja
+controls-description: 'Možda ne želiš prikazati sve kontrole korisnicima. Ovdje odaberi
+  kontrole želi koje želiš prikazati:'
+controls-date: Datum
+tabs-description: 'Standardno se koristi mjesečni prikaz. Međutim, na početku možeš
+  odabrati drugačiji prikaz. Odaberi jedan:'
+starting-date-title: Početni datum
+title-description: 'Za mijenjanje naslova ovdje upiši ime kalendara:'
+last-hour-description: 'Za mijenjanje zadnjeg sata u prikazu kalendara:'
+section-customization: Kalendar možeš dodatno prilagoditi.
+time-increment-15: 15 minuta
+time-increment-title: Intervali
+skins-title: Dizajn
+links-self: Otvori povezani dokument u istom okviru u kojem je pritisnut.
+links-parent: Otvori povezani dokument u nadređenom okviru.
+links-blank: Otvori povezani dokument u novom prozoru ili registru.
+links-top: Otvori povezani dokument u cijelom prozoru.
+style-title: Prilagođeni stil pomoću CSS-a
+style-description: Pomoću CSS-a možeš promijeniti boju kalendara i razna druga svojstva.
+  Tvoj prilagođeni dizajn ima prioritet nad odabranim dizajnom. U sljedećem popisu
+  možeš odabrati unaprijed pripremljene dizajne.
+style-background: Možeš promijeniti boju pozadine kalendara.
+tabs-title: Registri kalendara
+loader-none: bez animacije tijekom učitavanja
+timezone-title: Vremenska zona
+timezone-browser: koristi vremensku zonu preglednika
+loading: učitavanje …
+translate: Prevedi
+skins-description: Ovdje odaberi dizajn kalendara.
+loader-description: U nekim slučajevima poslužitelj treba dosta vremena za učitavanje
+  kalendara. U slučaju da poslužitelj koristi besplatni plan na Herokuu, poslužitelj
+  se mora prvi pokrenuti.
+timezone-description: 'Vremenska zona se preuzima iz korisničkog preglednika. Ako
+  želiš fiksirati vremensku zonu za kalendar odaberi jednu opciju. Tvoj preglednik
+  koristi sljedeću vremensku zonu:'
+spec-link: 'Nakon što postaviš specifikaciju negdje online možeš stvoriti poveznicu
+  poput ove:'
+spec-description: 'Kalendar se može generirati ne samo pomoću URL-a, već i putem JSON
+  ili YAML specifikacije iz datoteke. Gornja prilagodba generira ovu specifikaciju:'
+spec-title: Hosting specifikacije
+spec-host-html: <a href="javascript:downloadJSONSpecification()">Ovu specifikaciju
+  možeš preuzeti</a> i postaviti je negdje na web. Na taj način i dalje kontroliraš
+  prilagođavanje kalendara nakon dijeljenja poveznice, npr. na GitHub-u u jednom <a
+  href="https://gist.github.com/">Gistu</a>.
+configure-week-title: Dani tjedna
+configure-week-description: Početak tjedna može biti ponedjeljak ili nedjelja.
+hour-format-title: Prikaz sata
+hour-format-description: Možeš birati između 24-satnog i 12-satnog sata. Potoji više
+  opcija.
+hour-format-specification-link: Pogledaj specifikaciju.

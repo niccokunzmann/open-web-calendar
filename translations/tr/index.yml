@@ -1,0 +1,89 @@
+style-date: Geçerli tarihin arka plan rengini değiştirebilirsiniz.
+spec-link: 'Tanımlamayı çevrim içi bir yere yerleştirdikten sonra, şunun gibi bir
+  bağlantı oluşturabilirsiniz:'
+title-title: Başlık
+time-increment-title: Zaman Artışı
+time-increment-description: 'Gün ve hafta görünümünde zaman artışını değiştirin:'
+skins-contrast-black: Karşıt Siyah
+controls-date: Tarih
+style-title: CSS ile Özel Görünüm
+tabs-title: Takvim Sekmeleri
+starting-date-description: 'Takvimin başlangıç tarihini değiştirmek için:'
+skins-flat: Düz
+spec-description: 'Takvim yalnızca URL kullanılarak değil, aynı zamanda bir dosyadan
+  JSON veya YAML tanımlaması aracılığıyla da oluşturulabilir. Yukarıdaki özelleştirme
+  şu tanımlamayı oluşturur:'
+calendar-code-execution: Ortaya çıkan takvimi aşağıda görüntüleyebilirsiniz.
+style-description: CSS kullanarak takviminizin rengini ve daha birçok özelliği değiştirebilirsiniz.
+  Özelleştirmeniz, seçtiğiniz tema üzerinde önceliğe sahiptir. Aşağıda, sizin için
+  hazırladığımız birkaç özelleştirme arasından seçim yapabilirsiniz.
+style-css: İsterseniz kendi CSS özelliklerinizi belirtebilirsiniz.
+skins-description: Takvim için farklı temalar seçebilirsiniz.
+timezone-description: 'Saat dilimi kullanıcının tarayıcısından alınır. Takviminizin
+  bir saat diliminde sabitlenmesini istiyorsanız, aşağıdaki seçeneğe sahipsiniz. Tarayıcınız
+  bu saat dilimini kullanır:'
+calendar-urls: "Birden fazla takvimi birleştirmek için lütfen ICS takvimlerinin URL'lerini
+  buraya girin:"
+translate: Çevir
+links-blank: Bağlantılı belgeyi yeni bir pencerede veya sekmede aç.
+style-days: Günler için farklı bir renk isterseniz, bunu da belirtebilirsiniz.
+language-title: Dil
+links-self: Bağlantılı belgeyi tıklandığı çerçevede aç.
+skins-contrast-white: Karşıt Beyaz
+timezone-title: Saat Dilimi
+spec-host-html: <a href="javascript:downloadJSONSpecification()">Bu tanımlamayı indirebilir</a>
+  ve web üzerinde bir yere yerleştirebilirsiniz. Bu şekilde, örneğin GitHub'da bir
+  <a href="https://gist.github.com/">Gist</a> içinde bağlantıyı paylaştıktan sonra
+  takvimin özelleştirilmesi üzerinde denetim sahibi olmaya devam edersiniz.
+calendar-code: 'Takvimi gömmek için bu kodu web sitenizde kullanın:'
+last-hour-title: Bitiş Saati
+links-title: Bağlantılar
+tabs-description: 'Ay görünümü öntanımlı olandır. Ancak, başlangıçta farklı bir görünüm
+  göstermeyi seçebilirsiniz. Birini seçin:'
+title-description: 'Başlığı değiştirmek için lütfen takvimin adını buraya girin:'
+skins-terrace: Terrace
+spec-title: Tanımlamayı Barındırma
+skins-title: Temalar
+language-description: Takvimin dilini ayarlayabilirsiniz.
+section-customization: Takvim üzerinde ek özelleştirmeler yapabilirsiniz.
+first-hour-description: 'Takvim görünümünün başlangıç saatini değiştirmek için:'
+about: Open Web Calendar, ICS/ICal takvimlerini çevrim içi olarak kullanır ve bunları
+  tek bir takvimde görüntüler. Nextcloud, Outlook, Google Calendar, Meetup ve ICS
+  standardını kullanan diğer takvim sistemleri ile kullanabilirsiniz.
+links-description: Etkinliklerin konumları ve URL'leri olabilir. Takvimi bir web sitesine
+  gömerseniz, tıklanan bağlantının sayfayı nerede açacağını seçebilirsiniz.
+loader-default: dairesel yükleyici
+style-background: Takvimin arka plan rengini değiştirebilirsiniz.
+loader-description: Bazı durumlarda, sunucunun takvimi yüklemesi oldukça zaman alır.
+  Sunucunun Heroku'da ücretsiz bir plan kullanması durumunda, önce sunucunun başlaması
+  gerekir.
+last-hour-description: 'Takvim görünümünün bitiş saatini değiştirmek için:'
+time-increment-30: 30 dakika
+loader-none: yükleyici yok
+style-click: Tıklanabilen ögelerin rengini değiştirebilirsiniz.
+style-days-outside: Takvimin bazı günleri ay içinde değilse farklı bir renge sahiptir.
+links-parent: Bağlantılı belgeyi üst çerçevede aç.
+time-increment-60: 1 saat
+time-increment-10: 10 dakika
+loading: yükleniyor…
+loader-title: Yükleme Animasyonu
+skins-material: Material
+starting-date-title: Başlangıç tarihi
+links-top: Bağlantılı belgeyi pencerenin tam gövdesinde aç.
+controls-description: 'Kullanıcıların görmesi için tüm denetimleri göstermek istemiyor
+  olabilirsiniz. Burada hangi denetimleri göstermek istediğinizi seçin:'
+timezone-browser: tarayıcının saat dilimini kullan
+first-hour-title: Başlangıç Saati
+time-increment-15: 15 dakika
+configure-week-description: Hafta Pazartesi veya Pazar günü başlayabilir.
+configure-week-title: Haftanın Günleri
+hour-format-specification-link: Tanımlamayı görüntüleyin.
+hour-format-title: Saat Biçimi
+hour-format-description: 24 saat ve 12 saat biçimi arasında seçim yapabilirsiniz.
+  Daha fazla seçenek mümkündür.
+event-status-tentative: geçici
+style-css-classes: 'Bunlar, etkinlikleri biçimlendirmek için CSS sınıfları örnekleridir:'
+event-status-title: Etkinlik Durumu
+event-status-description: 'Duruma bağlı olarak etkinlik açıklamasının görünümünü değiştirin:'
+event-status-confirmed: onaylandı
+event-status-cancelled: iptal edildi

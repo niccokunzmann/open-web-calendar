@@ -1,0 +1,93 @@
+style-click: Du kannst die Farbe von anklickbaren Elementen ändern.
+timezone-browser: nutze die Zeitzone des Browsers
+loading: lade…
+section-customization: Du kannst den Kalender weiter anpassen.
+title-title: Titel
+title-description: 'Um den Titel zu ändern, gib den Namen des Kalenders hier ein:'
+skins-title: Designs
+skins-description: Du kannst ein Design für den Kalender auswählen.
+skins-terrace: Terrasse
+skins-material: Material
+skins-flat: Flach
+style-date: Du kannst die Farbe des heutigen Tages anpassen.
+style-days: Wenn Du eine andere Farbe für die Tage magst, dann ist auch das möglich.
+style-days-outside: Manche Tage haben eine andere Farbe, wenn sie nicht innerhalb
+  des Monats sind.
+style-css: Eigene CSS-Eigenschaften sind möglich.
+loader-default: Kreis-Animation
+loader-none: Keine Animation
+tabs-title: Kalender-Ansichten
+tabs-description: 'Die Monatsansicht wird als erste angezeigt aber du kannst ändern,
+  was am Besten passt:'
+controls-description: 'Sollte der Nutzer nicht alle Ansichten und Schalter sehen sollen,
+  dann kannst Du hier bestimmen, was möglich ist:'
+controls-date: Datum
+timezone-title: Zeitzone
+translate: Übersetzen
+spec-link: 'Sobald Du die Spezifikation irgendwo online hast, kannst Du z.B. einen
+  solchen Link erstellen:'
+loader-title: Lade-Animation
+timezone-description: 'Die Zeitzone wird von dem Webbrowser des Nutzers bestimmt.
+  Wenn der Kalender in einer festen Zeitzone angezeigt werden soll, dann ist das möglich.
+  Dein Browser nutzt diese Zeitzone:'
+loader-description: In manchen Fällen brauch der Server eine Weile, um den Kalender
+  zu laden, z.B. wenn der Server erst starten muss.
+spec-title: Die Spezifikation Hosten
+spec-description: 'Der Kalender kann nicht nur durch eine URL generiert werden sondern
+  auch durch eine JSON oder YAML-Spezifikation aus einer Datei. Deine Anpassungen
+  erzeugen die folgende Spezifikation:'
+calendar-code: 'Um den Kalender einzubetten, nutze diesen Code auf der Webseite:'
+calendar-code-execution: Das Resultat kannst Du hier drunter ansehen.
+about: Der Offene Web-Kalender nutzt online ICS/ICal-Kalender und zeigt sie in einem
+  Kalender an. Du kannst ihn mit Nextcloud, Outlook, Google Calendar, Meetup und anderen
+  Kalendersystemen benutzen, die den ICS-Standard exportieren.
+calendar-urls: 'Um mehrere Kalender anzuzeigen, füge die URLs zu diesen hier unten
+  ein:'
+language-title: Sprache
+language-description: Du kannst die Sprache des Kalenders auswählen.
+starting-date-title: Erster Tag
+starting-date-description: 'Um den ersten Tag im Kalender zu ändern:'
+first-hour-title: Erste Stunde
+first-hour-description: 'Um die erste Stunde im Kalender zu ändern:'
+last-hour-title: Letzte Stunde
+last-hour-description: 'Um die letzte Stunde im Kalender zu ändern:'
+time-increment-title: Zeitschritte
+time-increment-description: 'Ändere die Zeitschritte der Tages- und Wochenansicht:'
+time-increment-10: 10 Minuten
+time-increment-15: 15 Minuten
+time-increment-30: 30 Minuten
+time-increment-60: 1 Stunde
+style-title: Eigener Style mit CSS
+style-description: Du kannst die Farbe des Kalenders und viele andere Eigenschaften
+  mit CSS anpassen. Deine Anpassungen überschreiben die des Designs. Unten kannst
+  Du ein paar Anpassungen vornehmen, die wir vorbereitet haben.
+style-background: Du kannst die Hintergrundfarbe verändern.
+skins-contrast-black: Schwarzer Kontrast
+skins-contrast-white: Weißer Kontrast
+links-title: Links
+links-description: Einträge können Orte und Links enthalten. Wenn der Kalender in
+  eine Webseite eingebettet wird, kannst Du auswählen, wo sich ein Link öffnet, wenn
+  er geklickt wird.
+links-self: Öffne den Link im selben Frame wie der Kalender.
+links-parent: Öffne den Link in dem Frame drüber.
+links-blank: Öffne den Link in einem neuen Fenster oder Tab.
+links-top: Öffne den Link im vollen Fenster.
+spec-host-html: Du kannst <a href="javascript:downloadJSONSpecification()">die Spezifikation
+  herunterladen</a> und sie irgendwo im Web platzieren. Auf diese Weise kannst Du
+  den Kalender später überall, wo er verwendet wird, mit einem Mal verändern. Dazu
+  kannst du die Spezifikation z.B. in einem <a href="https://gist.github.com/">Gist</a>
+  veröffentlichen.
+configure-week-title: Wochentage
+configure-week-description: Die Woche kann am Montag oder Sonntag anfangen.
+hour-format-title: Zeitanzeige
+hour-format-description: Du kannst zwischen einer Anzeige mit 24 Stunden oder 12 Stunden
+  auswählen. Es gibt auch andere Optionen.
+hour-format-specification-link: Spezifikation ansehen.
+event-status-title: Terminstatus
+event-status-tentative: Vorläufig
+style-css-classes: 'Das sind Beispiele von CSS-Klassen, die Kalendereinträge verändern
+  können:'
+event-status-description: 'Verändere das Aussehen der Terminbeschreibung abhänging
+  vom Status:'
+event-status-confirmed: Bestätigt
+event-status-cancelled: Abgesagt

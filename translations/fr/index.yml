@@ -1,0 +1,84 @@
+style-date: Vous pouvez changer la couleur de fond de la date.
+spec-link: "D'une fois que vous avez placé la spécification quelque part en ligne,
+  vous pouvez créer un lien tel que celui-ci :"
+title-title: Titre
+time-increment-title: Incrémentation du temps
+time-increment-description: "Modifier l'incrément de temps dans l'affichage du jour
+  et de la semaine :"
+skins-contrast-black: Contraste Noir
+controls-date: Date
+style-title: Style CSS personalisé
+tabs-title: Onglets du calendrier
+starting-date-description: 'Pour changer la date de départ du calendrier :'
+skins-flat: Plat
+spec-description: "Le calendrier peut être généré non-seulement à partir de l'URL,
+  mais également à travers un fichier de spécification JSON ou YAML. La customisation
+  ci-dessus génère la spécification suivante :"
+calendar-code-execution: Vous pouvez voir le calendrier résultant ci-dessous.
+style-description: Vous pouvez changer la couleur du calendrier et bien d'autres properties
+  avec du CSS. Vos personalisations ont priorité sur le thème que vous avez choisis.
+  Ci-dessous, vous pouvez choisir quelques personalisations que nous vous avons préparées.
+style-css: Vous pouvez spécifier vos propres propriétés CSS si vous souhaitez.
+skins-description: Vous pouvez sélectionner différents thèmes pour le calendrier.
+timezone-description: "Le fuseau horaire est déterminé par le navigateur de l'utilisateur.
+  Si vous souhaitez que votre calendrier ait un fuseau horaire fixe, cela est possible
+  ci-dessous. Votre navigateur utilise ce fuseau horaire :"
+calendar-urls: 'Pour fusionner plusieurs calendriers, entrez les URLs des calendriers
+  ici :'
+translate: Traduire
+links-blank: Ouvrir le lien dans une nouvelle fenêtre ou onglet.
+style-days: Si vous souhaitez avoir une couleur différente pourles jours, vous pouvez
+  également spécifier cela.
+language-title: Langue
+links-self: Ouvrir le lien dans le même cadre que le calendrier.
+skins-contrast-white: Contraste Blanc
+timezone-title: Fuseau horaire
+spec-host-html: Vous pouvez <a href="javascript:downloadJSONSpecification()">télécharger
+  la spécification</a> et la placer quelque part sur le web. Ainsi, vous aurez toujours
+  le contrôle sur la personalisation, même après avoir partagé le lien, par ex. sur
+  GitHub dans un <a href="https://gist.github.com/">Gist</a>.
+calendar-code: 'Pour intégrer le calendrier, utilisez ce code sur votre site web :'
+last-hour-title: Dernière heure
+links-title: Liens
+tabs-description: "La vue mensuelle est affichée par défaut. Toutefois, vous pouvez
+  décider d'afficher une vue différente au début :"
+title-description: 'Pour changer le titre, entrez le nom du calendrier ici :'
+skins-terrace: Terasse
+spec-title: Héberger la spécification
+skins-title: Thèmes
+language-description: Vous pouvez définir la langue du calendrier.
+section-customization: Vous pouvez personaliser d'avantage le calendrier.
+first-hour-description: 'Pour changer la première heure affichée dans le calendrier
+  :'
+about: Open Web Calendar utilise des calendriers ICS/ICal en ligne et les affiche
+  dans un unique calendrier. Il est possible de l'utiliser avec Nextcloud, Outlook,
+  Google Calendar, Meetup et d'autres systèmes de calendriers qui utilisent le standard
+  ICS.
+links-description: Les évènements peuvent contenir des emplacements et des URLs. Si
+  vous intégrez le calendrier à un site web, vous pouvez choisir comment les liens
+  s'ouvrent lorsque l'on clique dessus.
+loader-default: Animation circulaire
+style-background: Vous pouvez changer la couleur de fond du calendrier.
+loader-description: Dans certains cas, le serveur peut prendre un certain temps pour
+  charger le calendrier, par exemple lorsque le serveur doit d'abord démarrer.
+last-hour-description: 'Pour changer la dernière heure affichée dans le calendrier
+  :'
+time-increment-30: 30 minutes
+loader-none: Aucune animation
+style-click: Vous pouvez changer la couleur des éléments sur lesquels on peut cliquer.
+style-days-outside: Certains jours du calendrier n'ont pas la même couleur lorsqu'ils
+  ne sont pas dans le mois.
+links-parent: Ouvrir le lien dans le cadre supérieur.
+time-increment-60: 1 heure
+time-increment-10: 10 minutes
+loading: en chargement…
+loader-title: Animation de chargement
+skins-material: Matériel
+starting-date-title: Date de départ
+links-top: Ouvrir le lien dans la fenêtre complète.
+controls-description: "Il est possible que vous ne souhaitez pas mettre à disposition
+  toutes les fonctionalités à l'utilisateur. Vous pouvez choisir ce que vous voulez
+  montrer :"
+timezone-browser: Utiliser le fuseau horaire du navigateur
+first-hour-title: Première heure
+time-increment-15: 15 minutes
