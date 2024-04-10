@@ -39,6 +39,7 @@ jobs:
 
   gh-pages:
     runs-on: ubuntu-latest
+    if: github.ref_name == 'master'
     steps:
       - uses: actions/checkout@v3
         with:
