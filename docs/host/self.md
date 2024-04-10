@@ -3,6 +3,9 @@
 You do not have to host the Open Web Calendar yourself but you can.
 Several options are available.
 
+Generally, the Open Web Calendar is there to be used without restriction.
+You can use this API to customize the calendar on the fly.
+
 ## Default Parameters
 
 The configuration of all calendars is rooted in the [default_specification.yml].
@@ -20,6 +23,10 @@ You might want to change these values:
 - `contributing` - if you want to redirect to contribute to your project
 
 [default_specification.yml]: https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml
+
+Related:
+
+- [API](../dev/api.md)
 
 ## Environment Variables
 

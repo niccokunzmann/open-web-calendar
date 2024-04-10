@@ -130,6 +130,7 @@ nav:
   - Development:
     - dev/index.md
     - dev/maintain.md
+    - dev/api.md
   - changelog.md
   - dunno.md
 
