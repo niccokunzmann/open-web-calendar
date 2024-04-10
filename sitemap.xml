@@ -6,12 +6,57 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://open-web-calendar.quelltext.eu/changelog/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://open-web-calendar.quelltext.eu/contributing/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://open-web-calendar.quelltext.eu/dunno/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://open-web-calendar.quelltext.eu/support/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://open-web-calendar.quelltext.eu/blog/</loc>
          <lastmod>2024-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://open-web-calendar.quelltext.eu/blog/2024/04/10/new-website/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://open-web-calendar.quelltext.eu/dev/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://open-web-calendar.quelltext.eu/dev/maintain/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://open-web-calendar.quelltext.eu/host/docker/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://open-web-calendar.quelltext.eu/host/hosted/</loc>
+         <lastmod>2024-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://open-web-calendar.quelltext.eu/host/self/</loc>
          <lastmod>2024-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
