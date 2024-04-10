@@ -10,27 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://open-web-calendar.quelltext.eu/blog/2024/04/10/new-website/">
+        <link rel="canonical" href="https://open-web-calendar.quelltext.eu/dev/api/">
       
       
+        <link rel="prev" href="../">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
+        <link rel="next" href="../maintain/">
       
-      <link rel="icon" href="../../../../../assets/img/logo/owc.svg">
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/img/logo/owc.svg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>New Website - Open Web Calendar</title>
+        <title>API - Open Web Calendar</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,12 +48,12 @@
         
         
         
-        <link rel="stylesheet" href="../../../../../assets/external/fonts.googleapis.com/css.2196aa76.css">
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.2196aa76.css">
         <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -58,11 +62,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="New Website - Open Web Calendar" >
+        <meta  property="og:title"  content="API - Open Web Calendar" >
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="https://open-web-calendar.quelltext.eu/assets/images/social/blog/posts/website.png" >
+        <meta  property="og:image"  content="https://open-web-calendar.quelltext.eu/assets/images/social/dev/api.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -70,15 +74,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://open-web-calendar.quelltext.eu/blog/2024/04/10/new-website/" >
+        <meta  property="og:url"  content="https://open-web-calendar.quelltext.eu/dev/api/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="New Website - Open Web Calendar" >
+        <meta  name="twitter:title"  content="API - Open Web Calendar" >
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="https://open-web-calendar.quelltext.eu/assets/images/social/blog/posts/website.png" >
+        <meta  name="twitter:image"  content="https://open-web-calendar.quelltext.eu/assets/images/social/dev/api.png" >
       
     
     
@@ -99,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#new-website" class="md-skip">
+        <a href="#api" class="md-skip">
           Skip to content
         </a>
       
@@ -115,9 +119,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Open Web Calendar" class="md-header__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
+    <a href="../.." title="Open Web Calendar" class="md-header__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
       
-  <img src="../../../../../assets/img/logo/owc.svg" alt="logo">
+  <img src="../../assets/img/logo/owc.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -134,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              New Website
+              API
             
           </span>
         </div>
@@ -201,9 +205,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -212,9 +214,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Open Web Calendar" class="md-nav__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
+    <a href="../.." title="Open Web Calendar" class="md-nav__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
       
-  <img src="../../../../../assets/img/logo/owc.svg" alt="logo">
+  <img src="../../assets/img/logo/owc.svg" alt="logo">
 
     </a>
     Open Web Calendar
@@ -241,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -261,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -278,14 +280,12 @@
       
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../host/hosted/" class="md-nav__link">
+      <a href="../../host/hosted/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -361,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../host/self/" class="md-nav__link">
+      <a href="../../host/self/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../host/docker/" class="md-nav__link">
+      <a href="../../host/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -407,17 +407,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -431,7 +433,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Development
@@ -445,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../dev/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -463,10 +465,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../dev/api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -475,6 +497,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-the-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiling the Specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification-in-the-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification in the Calendar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification-in-the-index-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification in the Index Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -487,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../dev/maintain/" class="md-nav__link">
+      <a href="../maintain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -515,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../changelog/" class="md-nav__link">
+      <a href="../../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../dunno/" class="md-nav__link">
+      <a href="../../dunno/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -556,8 +661,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -570,6 +673,77 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-the-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiling the Specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification-in-the-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification in the Calendar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification-in-the-index-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification in the Index Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -577,96 +751,13 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="../../../../../assets/external/avatars.githubusercontent.com/u/564768.e0565dbb.png" alt="Nicco Kunzmann">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Nicco Kunzmann
-                        
-                      </strong>
-                      <br>
-                      Creator
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-04-10 00:00:00" class="md-ellipsis">April 10, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/website/">website</a></span>
-                        </div>
-                      </li>
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              1 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
+                  
 
   
-    <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/docs/blog/posts/website.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/docs/dev/api.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -674,13 +765,121 @@
   
 
 
-<h1 id="new-website">New Website<a class="headerlink" href="#new-website" title="Permanent link">&para;</a></h1>
-<p>As the Open Web Calendar is funded by <a href="https://nlnet.nl/project/OpenWebCalendar/">NLNet</a>,
-it was also suggested to setup a website that shows how to use the calendar,
-not only hosting the tool itself.</p>
-<!-- more -->
-
-<p>This website is generated using <a href="https://squidfunk.github.io/mkdocs-material/">mkdocs-material</a>.</p>
+<h1 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
+<p>The calendar has an API that allows customizing it.
+This section can be of use if one of these applies:</p>
+<ul>
+<li>You are a web developer who wants to embed the Open Web Calendar.</li>
+<li>You want to exploit the full flexibility, not just what is exposed
+    on the configuration page.</li>
+<li>You want to use JavaScript to dynamically generate the calendar design and options.</li>
+<li>You want to extend the functionality of the Open Web Calendar.</li>
+<li>You want to use the Open Web Calendar as a proxy to request JSON events for your self-made event feed.</li>
+</ul>
+<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
+<p>The basic parameters are the same at these endpoints:</p>
+<ul>
+<li><code>/index.html</code> - edit the calendar</li>
+<li><code>/about.html</code> - view the about page</li>
+<li><code>/calendar.html</code> - view the calendar</li>
+<li><code>/calendar.spec</code> - download the specification</li>
+<li><code>/calendar.ics</code> - subscribe to the ics file</li>
+<li>
+<p><code>/calendar.events.json</code> - FLEXIBLE - get the events as JSON<br />
+    Please note that you CAN use this but you cannot be sure that the
+    JSON schema remains the same. If you want that, add tests.</p>
+<p>Additional parameters are required:</p>
+<ul>
+<li><code>timezone=UTC</code> - the timezone that you need to display the events in</li>
+<li><code>from=YYYY-MM-DD</code> - the start of the period in which events happen (inclusive)</li>
+<li><code>to=YYYY-MM-DD</code> - the end of the period in which events happen (exclusive)</li>
+</ul>
+</li>
+</ul>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<p>All configuration parameters are described sufficiently in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification</a>.
+That is the reference.
+E.g. if you find the parameter <code>title</code> in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification</a>,
+you have several options:</p>
+<ul>
+<li>
+<p>Change it as query parameter</p>
+<pre><code>`/index.html?title=calendar`
+</code></pre>
+</li>
+<li>
+<p>Add it to your own specification as YML:</p>
+<pre><code>title: calendar
+</code></pre>
+</li>
+<li>
+<p>Add it to your own specification as JSON:</p>
+<pre><code>{
+  "title": "calendar"
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="adding-parameters">Adding Parameters<a class="headerlink" href="#adding-parameters" title="Permanent link">&para;</a></h2>
+<p>If you add a new parameter as a developer,</p>
+<ul>
+<li>Add it with a default value to the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification</a></li>
+<li>Add an implementation, depending on its use in the <code>app.py</code> or the templates
+  of the JavaScript files.
+  The specification is already available in all of them to use.</li>
+</ul>
+<h2 id="compiling-the-specification">Compiling the Specification<a class="headerlink" href="#compiling-the-specification" title="Permanent link">&para;</a></h2>
+<p>You can change the calendar behavior and looks with parameters.
+These are the places to specify parameters:</p>
+<ol>
+<li>
+<p><strong>Query parameters</strong><br />
+    All parameters to the calendar url are put into the specification.
+    The query parameters have the highest precedence.<br />
+    Examples:</p>
+<pre><code>index.html?language=de
+calendar.html?title=CALENDAR
+</code></pre>
+</li>
+<li>
+<p><strong>specification_url</strong><br />
+    If you specify this query parameter, the editor configuration is loaded from
+    this url, too.
+    Query parameters are still more important than what is written
+    in this file.
+    The source format can be YAML or JSON.
+    Examples:</p>
+<pre><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml
+</code></pre>
+</li>
+<li>
+<p><strong><a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification</a></strong><br />
+    This file contains the default parameters.
+    They must not be hard-coded in the source code. All of them are there.
+    Query parameters and the <code>specification_url</code> override these values.</p>
+</li>
+</ol>
+<h2 id="specification-in-the-calendar">Specification in the Calendar<a class="headerlink" href="#specification-in-the-calendar" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compiles the specification from the given parameters in <code>get_specification()</code>.
+In the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> you can access the specification through the <code>specification</code> variable.
+The specification is available to JavaScript as the <code>specification</code> variable.</p>
+<h2 id="specification-in-the-index-page">Specification in the Index Page<a class="headerlink" href="#specification-in-the-index-page" title="Permanent link">&para;</a></h2>
+<p>The default specification is available before the calendar is built via JavaScript in the
+<code>configuration.default_specification</code> variable.
+There is a <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a> function which created the
+specification from the inputs.
+Generally, the <code>specification</code> variable should be used.</p>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p>Below, you can find a picture of the architecture.</p>
+<p><img alt="architecture" src="../../assets/img/architecture.svg" /></p>
+<p>The base of a calendar is the specification, given in the various forms.
+This specification influences all the steps.</p>
+<p>After the specification is compiled, the calendar (ics) files are downloaded from
+the locations on the Internet.</p>
+<p>From the calendar files, the events are generated.</p>
+<p>Then, different views are chosen to display the events.</p>
+<p>In the end, these lead to HTML and style changes of the calendar website.</p>
+<p>In the real application, these steps are bit bit mixed up and unordered or omitted but this explains simply the basic, initial idea behind the event processing.</p>
 
 
 
@@ -723,54 +922,13 @@ not only hosting the tool itself.</p>
 
 
 
-  
-
 
 <!-- from https://giscus.app/ -->
 
-  <h2 id="__comments">Comments</h2>
-  <script src="../../../../../assets/external/giscus.app/client.js" data-repo="niccokunzmann/open-web-calendar" data-repo-id="MDEwOlJlcG9zaXRvcnkxNzA4ODYyNzY=" data-category="Q&amp;A" data-category-id="DIC_kwDOCi-EhM4CX3Pf" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="noborder_light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async=>
-  </script>
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme)
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -779,6 +937,44 @@ not only hosting the tool itself.</p>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setup &amp; Tests">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Setup & Tests
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../maintain/" class="md-footer__link md-footer__link--next" aria-label="Next: Notes for Maintainers">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Notes for Maintainers
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -851,10 +1047,10 @@ not only hosting the tool itself.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "header.autohide", "announce.dismiss", "navigation.footer", "content.action.edit"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "header.autohide", "announce.dismiss", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
     
   </body>
