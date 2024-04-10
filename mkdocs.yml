@@ -129,8 +129,8 @@ nav:
     - host/docker.md
   - Development:
     - dev/index.md
-    - dev/maintain.md
     - dev/api.md
+    - dev/maintain.md
   - changelog.md
   - dunno.md
 
