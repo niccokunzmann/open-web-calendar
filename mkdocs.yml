@@ -52,7 +52,7 @@ theme:
     - header.autohide
     - announce.dismiss
     - navigation.footer
-    - content.action.view
+    - content.action.edit
   icon:
     edit: material/pencil
     view: material/eye
