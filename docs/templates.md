@@ -28,10 +28,10 @@ Here is an example of a one day view of a Christmas day:
 
 ## Recurring Events with Categories
 
-A calendar at home might look like this:
+If you are at home, planning the days with the family, events might have
+different categories depending on who they are for.
 
-{{calendar_iframe("home-categories.json")}}
-
+{{calendar_iframe("family-planning.json")}}
 
 ## Events Hosted as a Tor Hidden Service
 
