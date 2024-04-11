@@ -3,7 +3,7 @@
 
 {% macro calendar_iframe(spec, width="100%") -%}
 <iframe class="open-web-calendar"
-    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat;"
+    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
     src="{{link.web}}/calendar.html?specification_url={{link.templates}}/{{spec}}"
     sandbox="allow-scripts allow-same-origin allow-top-navigation"
     allowTransparency="true" scrolling="no"
