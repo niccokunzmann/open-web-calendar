@@ -1,4 +1,6 @@
 
+# Examples
+
 <!-- Page level macros, see https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/#page-level-macros -->
 
 {% macro calendar_iframe(spec, width="100%") -%}
@@ -11,8 +13,6 @@
 <a href="{{link.web}}/index.html?specification_url={{link.templates}}/{{spec}}" target="_blank">Edit the calendar</a>
 {%- endmacro %}
 
-
-# Examples
 
 We have prepared a variety of different styles so you can edit them to your needs.
 For each style, you can click on the `?` question mark in the corner
