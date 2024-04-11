@@ -135,6 +135,7 @@ nav:
     - dev/index.md
     - dev/api.md
     - dev/maintain.md
+  - SECURITY.md
   - changelog.md
   - dunno.md
 

@@ -2,13 +2,13 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Only the `master` branch receives security updates.
+When an security update is made, it is released with the latest version.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| master  | :white_check_mark: |
-| anything else   | :x:                |
+| Version       | Supported          |
+| ------------- | ------------------ |
+| master        |       ✅           |
+| anything else |       ❌           |
 
 ## Reporting a Vulnerability
 
