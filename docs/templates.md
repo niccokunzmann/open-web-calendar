@@ -100,10 +100,10 @@ Modifications:
 
 - CSS
 
-## Contributing Here
+## Contribute Examples!
 
 If you want to add another example or showcase your calendar, this is the place.
-You can contact us with the link of the calendar e.g. in an [issue]({{link.issues}}).
+You can **contact us** with the link of the calendar e.g. in an [issue]({{link.issues}}).
 
 You can **edit the page** yourself:
 
