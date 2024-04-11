@@ -1,0 +1,14 @@
+{
+  "controls": [
+    "today",
+    "date"
+  ],
+  "skin": "dhtmlxscheduler_contrast_white.css",
+  "tab": "day",
+  "tabs": [
+    "week",
+    "day"
+  ],
+  "title": "Timezone Example",
+  "url": "https://open-web-calendar.quelltext.eu/assets/calendars/timezone-example.ics"
+}
