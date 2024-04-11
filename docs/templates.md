@@ -80,7 +80,7 @@ function changeTimezone() {
   owcTimezoneExample.src = originalUrl + (timezoneOption.value ? "timezone=" + timezoneOption.value : "");
   console.log("url: " + owcTimezoneExample.src);
 }
-document.addEventListener("onload", changeTimezone);
+changeTimezone();
 timezoneOption.onchange = changeTimezone;
 </script>
 
