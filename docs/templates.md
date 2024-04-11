@@ -41,6 +41,8 @@ Events can be single events or occur every day.
 
 {{calendar_iframe("family-planning.json")}}
 
+Modifications:
+
 - start and end time
 - fixed date
 - CSS
@@ -50,6 +52,10 @@ Events can be single events or occur every day.
 This calendar is not styled but contains events that can be hosted behind
 a firewall on a little anonymous server. [Example](https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics
 )
+
+Modifications:
+
+- [proxy parameters](host/self/#ssrf-protection-with-a-proxy-server)
 
 ## Timezones
 
@@ -77,6 +83,22 @@ function changeTimezone() {
 document.addEventListener("onload", changeTimezone);
 timezoneOption.onchange = changeTimezone;
 </script>
+
+Modifications:
+
+- JavaScript
+- timezone
+
+## Free and Busy
+
+You can change the design based on whether you are free or busy.
+
+{{calendar_iframe("free-and-busy.json")}}
+
+
+Modifications:
+
+- CSS
 
 ## Contributing Here
 
