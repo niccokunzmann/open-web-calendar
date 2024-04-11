@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://open-web-calendar.quelltext.eu/SECURITY/</loc>
+         <lastmod>2024-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://open-web-calendar.quelltext.eu/changelog/</loc>
          <lastmod>2024-04-11</lastmod>
          <changefreq>daily</changefreq>

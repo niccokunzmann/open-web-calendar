@@ -503,6 +503,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Updates
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -631,6 +640,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SECURITY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../changelog/" class="md-nav__link">
         
   
@@ -739,6 +768,15 @@
   <a href="#preventing-ssrf-attacks-using-a-tor-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       Preventing SSRF attacks using a Tor proxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Updates
     </span>
   </a>
   
@@ -870,6 +908,38 @@ Tor Hidden Service using an <code>.onion</code> address.
 E.g. a calendar file can be served from a Raspberry Pi behind a home
 network&rsquo;s firewall.
 This <a href="https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics">example calendar</a> uses <a href="http://3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion/one-day-event-repeat-every-day.ics">this onion address</a>.</p>
+<h2 id="automatic-updates">Automatic Updates<a class="headerlink" href="#automatic-updates" title="Permanent link">&para;</a></h2>
+<p>If you have not fixed your version but you use the <code>latest</code> or <code>master</code> tag,
+you can automatically update all the services required.</p>
+<p>Create an <code>update.sh</code> file next to your <code>docker-compose.yml</code> file and add this content:</p>
+<pre><code>#!/bin/bash
+#
+# update the services
+#
+
+cd "`dirname \"$0\"`"
+
+docker compose pull
+docker compose create
+docker compose up -d --remove-orphans
+
+# clean up
+# see https://stackoverflow.com/a/46159681/1320237
+docker system prune -a -f
+docker rm -v $(docker ps -a -q -f status=exited)
+docker rmi -f  $(docker images -f "dangling=true" -q)
+docker volume ls -qf dangling=true | xargs -r docker volume rm
+</code></pre>
+<p>Make <code>update.sh</code> executable.</p>
+<pre><code>chmod +x update.sh
+</code></pre>
+<p>Add a cron job to update everything at 3am daily (when there is an update).
+Run this as the user who has access to the <code>docker</code> command:</p>
+<pre><code>crontab -e
+</code></pre>
+<p>And add this line:</p>
+<pre><code>3 * * * * /path/to/update.sh 1&gt; /path/to/update.sh.log 2&gt; /path/to/update.sh.log
+</code></pre>
 
 
 
@@ -892,7 +962,7 @@ This <a href="https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?ur
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 10, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 11, 2024</span>
   </span>
 
     
