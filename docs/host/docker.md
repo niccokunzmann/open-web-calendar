@@ -129,6 +129,42 @@ E.g. a calendar file can be served from a Raspberry Pi behind a home
 network's firewall.
 This [example calendar](https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics) uses [this onion address](http://3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion/one-day-event-repeat-every-day.ics).
 
+## Automatic Updates
 
+If you have not fixed your version but you use the `latest` or `master` tag,
+you can automatically update all the services required.
+
+Create an `update.sh` file next to your `docker-compose.yml` file and add this content:
+
+    #!/bin/bash
+    #
+    # update the services
+    #
+
+    cd "`dirname \"$0\"`"
+
+    docker compose pull
+    docker compose create
+    docker compose up -d --remove-orphans
+
+    # clean up
+    # see https://stackoverflow.com/a/46159681/1320237
+    docker system prune -a -f
+    docker rm -v $(docker ps -a -q -f status=exited)
+    docker rmi -f  $(docker images -f "dangling=true" -q)
+    docker volume ls -qf dangling=true | xargs -r docker volume rm
+
+Make `update.sh` executable.
+
+    chmod +x update.sh
+
+Add a cron job to update everything at 3am daily (when there is an update).
+Run this as the user who has access to the `docker` command:
+
+    crontab -e
+
+And add this line:
+
+    3 * * * * /path/to/update.sh 1> /path/to/update.sh.log 2> /path/to/update.sh.log
 
 [Dockerhub]: {{link.dockerhub}}
