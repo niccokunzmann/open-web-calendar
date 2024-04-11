@@ -345,6 +345,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#free-and-busy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free and Busy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#contributing-here" class="md-nav__link">
     <span class="md-ellipsis">
       Contributing Here
@@ -736,6 +745,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#free-and-busy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free and Busy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#contributing-here" class="md-nav__link">
     <span class="md-ellipsis">
       Contributing Here
@@ -803,6 +821,7 @@ Events can be single events or occur every day.</p>
     allowTransparency="true" scrolling="no"
     frameborder="0" height="600px" width="100%"></iframe>
 <p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json" target="_blank">Edit the calendar</a></p>
+<p>Modifications:</p>
 <ul>
 <li>start and end time</li>
 <li>fixed date</li>
@@ -811,6 +830,10 @@ Events can be single events or occur every day.</p>
 <h2 id="events-hosted-as-a-tor-hidden-service">Events Hosted as a Tor Hidden Service<a class="headerlink" href="#events-hosted-as-a-tor-hidden-service" title="Permanent link">&para;</a></h2>
 <p>This calendar is not styled but contains events that can be hosted behind
 a firewall on a little anonymous server. <a href="https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics">Example</a></p>
+<p>Modifications:</p>
+<ul>
+<li><a href="host/self/#ssrf-protection-with-a-proxy-server">proxy parameters</a></li>
+</ul>
 <h2 id="timezones">Timezones<a class="headerlink" href="#timezones" title="Permanent link">&para;</a></h2>
 <p>The calendar allows choosing the time zone that the events are displayed in.
 Whether you have a local website or an international calendar, all is possible.
@@ -841,6 +864,24 @@ document.addEventListener("onload", changeTimezone);
 timezoneOption.onchange = changeTimezone;
 </script>
 
+<p>Modifications:</p>
+<ul>
+<li>JavaScript</li>
+<li>timezone</li>
+</ul>
+<h2 id="free-and-busy">Free and Busy<a class="headerlink" href="#free-and-busy" title="Permanent link">&para;</a></h2>
+<p>You can change the design based on whether you are free or busy.</p>
+<iframe class="open-web-calendar" id=""
+    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json&"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+<p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json" target="_blank">Edit the calendar</a></p>
+<p>Modifications:</p>
+<ul>
+<li>CSS</li>
+</ul>
 <h2 id="contributing-here">Contributing Here<a class="headerlink" href="#contributing-here" title="Permanent link">&para;</a></h2>
 <p>If you want to add another example or showcase your calendar, this is the place.
 You can contact us with the link of the calendar e.g. in an <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar/issues">issue</a>.</p>
