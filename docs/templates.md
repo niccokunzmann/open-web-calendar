@@ -3,10 +3,10 @@
 
 <!-- Page level macros, see https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/#page-level-macros -->
 
-{% macro calendar_iframe(spec, width="100%") -%}
-<iframe class="open-web-calendar"
+{% macro calendar_iframe(spec, width="100%", params="", id="") -%}
+<iframe class="open-web-calendar" id="{{id}}"
     style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-    src="{{link.web}}/calendar.html?specification_url={{link.templates}}/{{spec}}"
+    src="{{link.web}}/calendar.html?specification_url={{link.templates}}/{{spec}}&{{params}}"
     sandbox="allow-scripts allow-same-origin allow-top-navigation"
     allowTransparency="true" scrolling="no"
     frameborder="0" height="600px" width="{{width}}"></iframe>
@@ -50,6 +50,33 @@ Events can be single events or occur every day.
 This calendar is not styled but contains events that can be hosted behind
 a firewall on a little anonymous server. [Example](https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics
 )
+
+## Timezones
+
+The calendar allows choosing the time zone that the events are displayed in.
+Whether you have a local website or an international calendar, all is possible.
+It is also fairly easy to customize with JavaScript.
+You can edit the page to see how it is done.
+
+<select id="timezoneOption">
+  <option value="America/New_York">New York</option>
+  <option value="Europe/London">London</option>
+  <option value="Asia/Singapore">Singapore</option>
+  <option value="">My Time Zone</option>
+</select>
+
+{{calendar_iframe("timezone-example.json", id="owcTimezoneExample")}}
+
+<script>
+const originalUrl = owcTimezoneExample.src;
+function changeTimezone() {
+  console.log("change timezone: " + timezoneOption.value);
+  owcTimezoneExample.src = originalUrl + (timezoneOption.value ? "timezone=" + timezoneOption.value : "");
+  console.log("url: " + owcTimezoneExample.src);
+}
+document.addEventListener("onload", changeTimezone);
+timezoneOption.onchange = changeTimezone;
+</script>
 
 ## Contributing Here
 
