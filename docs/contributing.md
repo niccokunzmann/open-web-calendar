@@ -14,6 +14,7 @@ There are several ways in which you can help this project:
 - [Donate using GitHub Sponsors]({{link.fund.github_sponsors}})
 - [Translate this project][translate]
 - Have a look at [open issues]({{link.issues}}) e.g. those especially to get started, labeled [good first issue]({{link.good_first_issue}}), leave a note and work on it.
+- If you customized a calendar, please consider [contributing it as a template](templates.md) for others to use.
 
 If you are part of a company and you would like to commission work, please get in touch with Nicco Kunzmann.
 
