@@ -28,3 +28,6 @@ If your language is not listed, please request to add it!
 Here, you can see the current translation status:
 
 [![Translation status](https://hosted.weblate.org/widgets/open-web-calendar/-/multi-auto.svg)]({{link.weblate}})
+
+Translations are contributed by volunteers and [logged](changelog.md).
+After 48 hours they are usually life at the [hosted instance]({{link.web}}).
