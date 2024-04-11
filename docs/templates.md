@@ -29,7 +29,8 @@ Here is an example of a one day view of a Christmas day:
 ## Recurring Events with Categories
 
 If you are at home, planning the days with the family, events might have
-different categories depending on who they are for.
+different categories depending on who they are for: `work` or `personal`.
+Events can be single events or occur every day.
 
 {{calendar_iframe("family-planning.json")}}
 
