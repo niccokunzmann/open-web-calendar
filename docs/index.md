@@ -7,7 +7,10 @@ title: Getting Started
 
 A highly flexible calendar display for your website.
 
-Give a calendar your personal touch within minutes: **[Try it out now!]({{link.web}})**
+Give a calendar your personal touch within minutes!
+
+- **[Try it out now!]({{link.web}})**
+- [See Examples](templates.md)
 
 | Features |  |
 | --- | --- |
@@ -18,8 +21,9 @@ Give a calendar your personal touch within minutes: **[Try it out now!]({{link.w
 | Fixed and Automatic Timezone | <center>✔</center> |
 | Easy Editing | <center>✔</center> |
 | Designs To Choose  | <center>✔</center> |
+| Multiple Calendar Sources | <center>✔</center> |
+| Style per Calendar, Category and more | <center>✔</center> |
 | Custom CSS | <center>✔</center> |
-| Color per Calendar, Category and more | <center>✔</center> |
 | Day, Week, Month, Agenda | <center>✔</center> |
 | Work Week | <center>✔</center> |
 | Custom Date & Time Range | <center>✔</center> |
@@ -27,8 +31,7 @@ Give a calendar your personal touch within minutes: **[Try it out now!]({{link.w
 | Click on Event Location | <center>✔</center> |
 | Styled Event Descriptions | <center>✔</center> |
 | FOSS - No Vendor Lock-In | <center>✔</center> |
-| [Hosted] and Self-Hosted | <center>✔</center> |
+| [Hosted]({{link.web}}) and [Self-Hosted](host/self.md) | <center>✔</center> |
 | Subscribe Link | <center>✔</center> |
 | Community and Paid Support | <center>✔</center> |
-
-[Hosted]: https://open-web-calendar.hosted.quelltext.eu
+| [Developer API](dev/api.md) | <center>✔</center> |
