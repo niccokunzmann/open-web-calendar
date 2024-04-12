@@ -85,3 +85,10 @@ tabs-description: "La visualizzazione mese è quella predefinita. Tuttavia, puoi
   di mostrare una visualizzazione diversa all'inizio. Scegline una:"
 controls-description: 'Potrebbe darsi che tu non voglia mostrare tutti i controlli
   affinché gli utenti possano vederli. Scegli qui quali controlli desideri visualizzare:'
+style-css-classes: 'Questi sono esempi di classi CSS per definire gli eventi:'
+event-status-tentative: provvisorio
+event-status-confirmed: confermato
+event-status-cancelled: cancellato
+event-status-title: Stato dell'evento
+event-status-description: "Cambia l'aspetto della descrizione dell'evento a seconda
+  dello stato:"
