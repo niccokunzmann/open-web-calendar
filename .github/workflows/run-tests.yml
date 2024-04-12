@@ -105,3 +105,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: create release
         uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          body: "For a list of changes, please refer to the [Changelog](https://open-web-calendar.quelltext.eu/changelog/)."
+          generateReleaseNotes: true
