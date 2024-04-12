@@ -29,7 +29,7 @@ icalendar==5.0.12
     #   -r requirements.in
     #   recurring-ical-events
     #   x-wr-timezone
-idna==3.6
+idna==3.7
     # via requests
 importlib-metadata==7.1.0
     # via flask
