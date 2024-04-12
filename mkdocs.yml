@@ -154,3 +154,20 @@ markdown_extensions:
       permalink: true
   - sane_lists # see https://python-markdown.github.io/extensions/sane_lists/
   - meta # see https://python-markdown.github.io/extensions/meta_data/
+  - pymdownx.tabbed # see https://mrkeo.github.io/reference/content-tabs/
+  - pymdownx.superfences # see https://mrkeo.github.io/reference/content-tabs/
+  - pymdownx.highlight # see https://mrkeo.github.io/reference/code-blocks/
+  - pymdownx.inlinehilite # see https://mrkeo.github.io/reference/code-blocks/#inlinehilite
+  - pymdownx.details # see https://facelessuser.github.io/pymdown-extensions/extensions/details/
+  - abbr
+  - pymdownx.snippets # see https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
+  - attr_list # see https://mrkeo.github.io/reference/images/
+
+extra_css:
+  - css/code-blocks.css
+extra_javascript:
+  - js/popper.js
+  - js/jquery-3.7.1.min.js
+  - js/tippy.js
+  - js/clipboard.min.js
+  - js/code-blocks.js

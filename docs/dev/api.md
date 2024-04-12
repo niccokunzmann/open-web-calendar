@@ -40,17 +40,23 @@ you have several options:
 
 - Change it as query parameter
 
-        `/index.html?title=calendar`
+    ```sh
+    /index.html?title=calendar`
+    ```
 
 - Add it to your own specification as YML:
 
-        title: calendar
+    ```YAML
+    title: calendar
+    ```
 
 - Add it to your own specification as JSON:
 
-        {
-          "title": "calendar"
-        }
+    ```json
+    {
+      "title": "calendar"
+    }
+    ```
 
 
 ## Adding Parameters
@@ -72,8 +78,10 @@ These are the places to specify parameters:
     The query parameters have the highest precedence.  
     Examples:
 
-        index.html?language=de
-        calendar.html?title=CALENDAR
+    ```txt
+    index.html?language=de
+    calendar.html?title=CALENDAR
+    ```
 
 2. **specification_url**  
     If you specify this query parameter, the editor configuration is loaded from

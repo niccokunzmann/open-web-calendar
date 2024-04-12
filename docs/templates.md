@@ -55,7 +55,7 @@ a firewall on a little anonymous server. [Example](https://tor.open-web-calendar
 
 Modifications:
 
-- [proxy parameters](host/self/#ssrf-protection-with-a-proxy-server)
+- [proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)
 
 ## Timezones
 

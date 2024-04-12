@@ -14,16 +14,22 @@ cd open-web-calendar
 
 1. Optional: Install virtualenv and Python3 and create a virtual environment.
 
-        virtualenv -p python3 ENV
-        source ENV/bin/activate
+    ```sh
+    virtualenv -p python3 ENV
+    source ENV/bin/activate
+    ```
 
 2. Install the packages.
 
-        pip install -r requirements.txt
+    ```sh
+    pip install -r requirements.txt
+    ```
 
 3. Start the app.
 
-        python3 app.py
+    ```sh
+    python3 app.py
+    ```
 
 You can [configure the app through environment](../host/self.md#environment-variables) variables.
 
@@ -33,19 +39,19 @@ To run the tests, we use `tox`.
 `tox` tests all different Python versions which we want to
 be compatible to.
 
-```
+```sh
 pip install tox
 ```
 
 Run all tests:
 
-```
+```sh
 tox
 ```
 
 Run a specific Python version:
 
-```
+```sh
 tox -e py39
 ```
 
@@ -55,18 +61,20 @@ We use selenium to test the app in different browsers.
 By default, Firefox is used.
 You can test the features like this:
 
-```
+```sh
 tox -e web
 ```
 
 If you like to change the browser, use
-```
+
+```sh
 tox -e web -- -D browser=firefox
 tox -e web -- -D browser=chrome
 ```
 
 You can also change the layout of the window to test the responsive design:
-```
+
+```sh
 tox -e web -- -D window=375x812 # iPhone11 size
 ```
 
@@ -75,7 +83,7 @@ tox -e web -- -D window=375x812 # iPhone11 size
 You can build the documentation with `tox`, too.
 It is located in the `docs` directory.
 
-```
+```sh
 tox -e docs -- build # ./site
 tox -e docs -- serve
 ```

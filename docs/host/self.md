@@ -53,7 +53,7 @@ it can use a proxy as described in the
 [`requests` documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies).
 The proxy can then handle the filtering.
 
-``` sh
+```sh
 export HTTP_PROXY="http://10.10.1.10:3128"
 export HTTPS_PROXY="http://10.10.1.10:1080"
 export ALL_PROXY="socks5://10.10.1.10:3434"

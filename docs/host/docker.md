@@ -6,14 +6,14 @@ You can use `docker` and `docker compose` to host the Open Web Calendar.
 
 First, clone the repository:
 
-```
+```sh
 git clone https://github.com/niccokunzmann/open-web-calendar
 cd open-web-calendar
 ```
 
 To build the container yourself, run:
 
-```
+```sh
 docker build --tag niccokunzmann/open-web-calendar .
 ```
 This will create the image `niccokunzmann/open-web-calendar`.
@@ -23,7 +23,7 @@ This will create the image `niccokunzmann/open-web-calendar`.
 You can use the existing image:
 [niccokunzmann/open-web-calendar][Dockerhub].
 
-```
+```sh
 docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
 ```
 
@@ -60,7 +60,9 @@ To deploy the Open Web Calendar with `docker compose`, follow these steps:
 2. If needed change the port mapping and [environment variables](self.md#environment-variables).
 3. Start the container:
 
-        docker compose up -d
+    ```sh
+    docker compose up -d
+    ```
 
 4. The container will be pulled automatically from [Dockerhub] and then starts.
 
@@ -136,35 +138,43 @@ you can automatically update all the services required.
 
 Create an `update.sh` file next to your `docker-compose.yml` file and add this content:
 
-    #!/bin/bash
-    #
-    # update the services
-    #
+```sh
+#!/bin/bash
+#
+# update the services
+#
 
-    cd "`dirname \"$0\"`"
+cd "`dirname \"$0\"`"
 
-    docker compose pull
-    docker compose create
-    docker compose up -d --remove-orphans
+docker compose pull
+docker compose create
+docker compose up -d --remove-orphans
 
-    # clean up
-    # see https://stackoverflow.com/a/46159681/1320237
-    docker system prune -a -f
-    docker rm -v $(docker ps -a -q -f status=exited)
-    docker rmi -f  $(docker images -f "dangling=true" -q)
-    docker volume ls -qf dangling=true | xargs -r docker volume rm
+# clean up
+# see https://stackoverflow.com/a/46159681/1320237
+docker system prune -a -f
+docker rm -v $(docker ps -a -q -f status=exited)
+docker rmi -f  $(docker images -f "dangling=true" -q)
+  docker volume ls -qf dangling=true | xargs -r docker volume rm
+```
 
 Make `update.sh` executable.
 
-    chmod +x update.sh
+```sh
+chmod +x update.sh
+```
 
 Add a cron job to update everything at 3am daily (when there is an update).
 Run this as the user who has access to the `docker` command:
 
-    crontab -e
+```sh
+crontab -e
+```
 
 And add this line:
 
-    3 * * * * /path/to/update.sh 1> /path/to/update.sh.log 2> /path/to/update.sh.log
+```crontab
+3 * * * * /path/to/update.sh 1> /path/to/update.sh.log 2> /path/to/update.sh.log
+```
 
 [Dockerhub]: {{link.dockerhub}}
