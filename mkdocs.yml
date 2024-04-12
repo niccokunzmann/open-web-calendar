@@ -109,8 +109,8 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     # do not use - but _
     web: https://open-web-calendar.hosted.quelltext.eu
     tor: https://tor.open-web-calendar.hosted.quelltext.eu
-    repo: https://hub.docker.com/r/niccokunzmann/open-web-calendar
-    issues: https://hub.docker.com/r/niccokunzmann/open-web-calendar/issues
+    repo: https://github.com/niccokunzmann/open-web-calendar/
+    issues: https://github.com/niccokunzmann/open-web-calendar/issues
     tags: https://github.com/niccokunzmann/open-web-calendar/tags
     weblate: https://hosted.weblate.org/engage/open-web-calendar/
     good_first_issue:  https://github.com/niccokunzmann/open-web-calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22

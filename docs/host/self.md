@@ -92,5 +92,12 @@ The Open Web Calendar has been integrated into [Cloudron](https://www.cloudron.i
 - [Cloudron Documentation](https://docs.cloudron.io/apps/openwebcalendar/)
 - [Cloudron Repository](https://git.cloudron.io/cloudron/openwebcalendar-app)
 
-[open-web-calendar.hosted.quelltext.eu]: https://open-web-calendar.hosted.quelltext.eu
-[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-calendar.hosted.quelltext.eu
+## Update Notifications
+
+If you wish to receive notifications about new updates of the software,
+watch the [GitHub repository]({{link.repo}}).
+
+![Repository, Watch, Custom, Releases](../assets/img/subscribe-to-release.png)
+
+[open-web-calendar.hosted.quelltext.eu]: {{link.web}}
+[tor.open-web-calendar.hosted.quelltext.eu]: {{link.tor}}

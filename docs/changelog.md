@@ -8,6 +8,7 @@ The latest version might not be released, yet.
 - v1.31
     - Move documentation to [open-web-calendar.quelltext.eu](https://open-web-calendar.quelltext.eu)
     - Update dependencies
+    - Generate GitHub Releases to notify watchers
 - v1.30
     - Improve Italian translation by albanobattistella and Russian translation by Ivan V
     - Update dependencies
