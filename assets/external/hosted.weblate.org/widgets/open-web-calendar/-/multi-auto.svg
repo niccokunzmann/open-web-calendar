@@ -389,11 +389,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="260"
-   id="percent260">95%</text>
+   id="percent260">100%</text>
 <rect
    style="fill:#2eccaa;fill-opacity:1;stroke:none"
    id="rect260"
-   width="143"
+   width="150"
    height="6"
    x="200"
    rx="2"

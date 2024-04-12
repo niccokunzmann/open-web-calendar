@@ -53,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/code-blocks.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -886,10 +888,10 @@ Since <code>requests</code> is used by the Open Web Calender,
 it can use a proxy as described in the
 <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>.
 The proxy can then handle the filtering.</p>
-<pre><code class="language-sh">export HTTP_PROXY=&quot;http://10.10.1.10:3128&quot;
-export HTTPS_PROXY=&quot;http://10.10.1.10:1080&quot;
-export ALL_PROXY=&quot;socks5://10.10.1.10:3434&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
+</code></pre></div>
 <p>See also:</p>
 <ul>
 <li><a href="../docker/#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF using a Tor proxy</a></li>
@@ -1102,6 +1104,16 @@ The `title` parameter defines the match of the category for discussion.
     
     
       <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/popper.js"></script>
+      
+        <script src="../../js/jquery-3.7.1.min.js"></script>
+      
+        <script src="../../js/tippy.js"></script>
+      
+        <script src="../../js/clipboard.min.js"></script>
+      
+        <script src="../../js/code-blocks.js"></script>
       
     
   </body>

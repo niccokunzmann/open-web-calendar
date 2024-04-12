@@ -53,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/code-blocks.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -809,18 +811,18 @@
 <p>You can use <code>docker</code> and <code>docker compose</code> to host the Open Web Calendar.</p>
 <h2 id="build-the-image">Build the Image<a class="headerlink" href="#build-the-image" title="Permanent link">&para;</a></h2>
 <p>First, clone the repository:</p>
-<pre><code>git clone https://github.com/niccokunzmann/open-web-calendar
-cd open-web-calendar
-</code></pre>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/niccokunzmann/open-web-calendar
+<span class="nb">cd</span><span class="w"> </span>open-web-calendar
+</code></pre></div>
 <p>To build the container yourself, run:</p>
-<pre><code>docker build --tag niccokunzmann/open-web-calendar .
-</code></pre>
-<p>This will create the image <code>niccokunzmann/open-web-calendar</code>.</p>
+<p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>--tag<span class="w"> </span>niccokunzmann/open-web-calendar<span class="w"> </span>.
+</code></pre></div>
+This will create the image <code>niccokunzmann/open-web-calendar</code>.</p>
 <h2 id="run-the-docker-image">Run the Docker Image<a class="headerlink" href="#run-the-docker-image" title="Permanent link">&para;</a></h2>
 <p>You can use the existing image:
 <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">niccokunzmann/open-web-calendar</a>.</p>
-<pre><code>docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
-</code></pre>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>niccokunzmann/open-web-calendar
+</code></pre></div>
 <p>Then, you should see your service running at <a href="http://localhost:5000">http://localhost:5000</a>.</p>
 <h2 id="container-tags">Container Tags<a class="headerlink" href="#container-tags" title="Permanent link">&para;</a></h2>
 <p>The container <code>niccokunzmann/open-web-calendar:latest</code> contains the latest release.
@@ -830,24 +832,24 @@ Containers are also tagged with the version from the <a href="../../changelog/">
 This includes unchecked translations.</p>
 <h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h2>
 <p>Use the pre-build Dockerhub image with <code>docker compose</code>:</p>
-<pre><code class="language-YAML">version: '3'
-services:
-  open-web-calendar:
-    image: niccokunzmann/open-web-calendar
-    ports:
-      - '80:80'
-    environment:
-      - WORKERS=4
-    restart: unless-stopped
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">open-web-calendar</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">niccokunzmann/open-web-calendar</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;80:80&#39;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WORKERS=4</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+</code></pre></div>
 <p>To deploy the Open Web Calendar with <code>docker compose</code>, follow these steps:</p>
 <ol>
 <li>Copy the <code>docker-compose.yml</code> file to the directory from where you want to run the container.</li>
 <li>If needed change the port mapping and <a href="../self/#environment-variables">environment variables</a>.</li>
 <li>
 <p>Start the container:</p>
-<pre><code>docker compose up -d
-</code></pre>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
 </li>
 <li>
 <p>The container will be pulled automatically from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> and then starts.</p>
@@ -858,49 +860,48 @@ services:
 as it is very talkative.</p>
 <h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="Permanent link">&para;</a></h2>
 <p>If you want to update your image with the latest version from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> run this:</p>
-<pre><code>docker compose pull
-</code></pre>
+<div class="highlight"><pre><span></span><code>docker compose pull
+</code></pre></div>
 <p>Note: You need to restart the container after pulling in order for the update to apply:</p>
-<pre><code>docker compose up -d
-</code></pre>
+<div class="highlight"><pre><span></span><code>docker compose up -d
+</code></pre></div>
 <h2 id="preventing-ssrf-attacks-using-a-tor-proxy">Preventing SSRF attacks using a Tor proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-tor-proxy" title="Permanent link">&para;</a></h2>
 <p>The Open Web Calendar can be configured to use a proxy to request <code>.ics</code>
 and other files. The following example shows the usage of a Tor proxy.
 You can try it out at
 <a href="https://tor.open-web-calendar.hosted.quelltext.eu/">tor.open-web-calendar.hosted.quelltext.eu</a>.</p>
-<pre><code class="language-YAML">version: '3'
-services:
-  tor-open-web-calendar:
-    image: niccokunzmann/open-web-calendar:master
-    restart: unless-stopped
-    environment:
-    # use socks5h for *.onion
-    # see https://stackoverflow.com/a/42972942/1320237
-      - HTTP_PROXY=socks5h://tor-socks-proxy:9150
-      - HTTPS_PROXY=socks5h://tor-socks-proxy:9150
-      - ALL_PROXY=socks5h://tor-socks-proxy:9150
-    # optional: create a private network so OWC cannot access the Internet directly
-    networks:
-      - no-internet-only-tor
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tor-open-web-calendar</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">niccokunzmann/open-web-calendar:master</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># use socks5h for *.onion</span>
+<span class="w">    </span><span class="c1"># see https://stackoverflow.com/a/42972942/1320237</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP_PROXY=socks5h://tor-socks-proxy:9150</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTPS_PROXY=socks5h://tor-socks-proxy:9150</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ALL_PROXY=socks5h://tor-socks-proxy:9150</span>
+<span class="w">    </span><span class="c1"># optional: create a private network so OWC cannot access the Internet directly</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no-internet-only-tor</span>
 
-  # from https://hub.docker.com/r/peterdavehello/tor-socks-proxy/
-  tor-socks-proxy:
-    image: peterdavehello/tor-socks-proxy # use :test for arm64
-    restart: unless-stopped
-    # optional: allow access to OWC and the Internet
-    networks:
-      - default
-      - no-internet-only-tor
+<span class="w">  </span><span class="c1"># from https://hub.docker.com/r/peterdavehello/tor-socks-proxy/</span>
+<span class="w">  </span><span class="nt">tor-socks-proxy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peterdavehello/tor-socks-proxy</span><span class="w"> </span><span class="c1"># use :test for arm64</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="c1"># optional: allow access to OWC and the Internet</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no-internet-only-tor</span>
 
-networks:
-  default:
-    ipam:
-      driver: default
-  no-internet-only-tor: # see https://stackoverflow.com/a/51964169/1320237
-    driver: bridge
-    internal: true
-
-</code></pre>
+<span class="nt">networks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ipam</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">  </span><span class="nt">no-internet-only-tor</span><span class="p">:</span><span class="w"> </span><span class="c1"># see https://stackoverflow.com/a/51964169/1320237</span>
+<span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+<span class="w">    </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
 <p>The configuration above prevents access to the internal network as the
 requests are sent over the Tor network.
 A bonus feature is that calendars can be accessed and hosted as a
@@ -912,34 +913,34 @@ This <a href="https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?ur
 <p>If you have not fixed your version but you use the <code>latest</code> or <code>master</code> tag,
 you can automatically update all the services required.</p>
 <p>Create an <code>update.sh</code> file next to your <code>docker-compose.yml</code> file and add this content:</p>
-<pre><code>#!/bin/bash
-#
-# update the services
-#
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#</span>
+<span class="c1"># update the services</span>
+<span class="c1">#</span>
 
-cd "`dirname \"$0\"`"
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;`dirname \&quot;</span><span class="nv">$0</span><span class="s2">\&quot;`&quot;</span>
 
-docker compose pull
-docker compose create
-docker compose up -d --remove-orphans
+docker<span class="w"> </span>compose<span class="w"> </span>pull
+docker<span class="w"> </span>compose<span class="w"> </span>create
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--remove-orphans
 
-# clean up
-# see https://stackoverflow.com/a/46159681/1320237
-docker system prune -a -f
-docker rm -v $(docker ps -a -q -f status=exited)
-docker rmi -f  $(docker images -f "dangling=true" -q)
-docker volume ls -qf dangling=true | xargs -r docker volume rm
-</code></pre>
+<span class="c1"># clean up</span>
+<span class="c1"># see https://stackoverflow.com/a/46159681/1320237</span>
+docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a<span class="w"> </span>-f
+docker<span class="w"> </span>rm<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-q<span class="w"> </span>-f<span class="w"> </span><span class="nv">status</span><span class="o">=</span>exited<span class="k">)</span>
+docker<span class="w"> </span>rmi<span class="w"> </span>-f<span class="w">  </span><span class="k">$(</span>docker<span class="w"> </span>images<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;dangling=true&quot;</span><span class="w"> </span>-q<span class="k">)</span>
+<span class="w">  </span>docker<span class="w"> </span>volume<span class="w"> </span>ls<span class="w"> </span>-qf<span class="w"> </span><span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-r<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>rm
+</code></pre></div>
 <p>Make <code>update.sh</code> executable.</p>
-<pre><code>chmod +x update.sh
-</code></pre>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>update.sh
+</code></pre></div>
 <p>Add a cron job to update everything at 3am daily (when there is an update).
 Run this as the user who has access to the <code>docker</code> command:</p>
-<pre><code>crontab -e
-</code></pre>
+<div class="highlight"><pre><span></span><code>crontab<span class="w"> </span>-e
+</code></pre></div>
 <p>And add this line:</p>
-<pre><code>3 * * * * /path/to/update.sh 1&gt; /path/to/update.sh.log 2&gt; /path/to/update.sh.log
-</code></pre>
+<div class="highlight"><pre><span></span><code>3 * * * * /path/to/update.sh 1&gt; /path/to/update.sh.log 2&gt; /path/to/update.sh.log
+</code></pre></div>
 
 
 
@@ -962,7 +963,7 @@ Run this as the user who has access to the <code>docker</code> command:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 11, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 12, 2024</span>
   </span>
 
     
@@ -1119,6 +1120,16 @@ The `title` parameter defines the match of the category for discussion.
     
     
       <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/popper.js"></script>
+      
+        <script src="../../js/jquery-3.7.1.min.js"></script>
+      
+        <script src="../../js/tippy.js"></script>
+      
+        <script src="../../js/clipboard.min.js"></script>
+      
+        <script src="../../js/code-blocks.js"></script>
       
     
   </body>
