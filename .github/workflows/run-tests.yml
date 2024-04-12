@@ -93,3 +93,15 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/386,linux/arm/v6
           labels: ${{ steps.meta.outputs.labels }}
+
+  github-release:
+    # only deploy on tags, see https://stackoverflow.com/a/58478262/1320237
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs:
+      - build
+      - dockerhub
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: create release
+        uses: ncipollo/release-action@v1
