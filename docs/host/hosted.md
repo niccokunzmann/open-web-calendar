@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Hosted Version
 
 A hosted version exists at [open-web-calendar.hosted.quelltext.eu]({{link.web}}).

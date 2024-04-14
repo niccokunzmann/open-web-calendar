@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Hosting with Docker
 
 You can use `docker` and `docker compose` to host the Open Web Calendar.

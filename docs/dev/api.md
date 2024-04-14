@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # API
 
 Generally, the Open Web Calendar is there to be used without restriction.

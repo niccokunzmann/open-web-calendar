@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Setup & Tests
 
 This section guides you through everything you need to know to develop the

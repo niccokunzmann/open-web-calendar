@@ -1,3 +1,6 @@
+---
+comments: true
+---
 
 # Versions and Changes
 

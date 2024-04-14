@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Contributing ♥️
 
 [![Sponsor with GitHub](https://img.shields.io/github/sponsors/niccokunzmann?logo=github&label=GitHub%20Sponsors

@@ -1,3 +1,6 @@
+---
+comments: true
+---
 
 # Good to Know
 

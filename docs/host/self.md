@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Self-Hosting & Deployment
 
 You do not have to host the Open Web Calendar yourself but you are encouraged to.
