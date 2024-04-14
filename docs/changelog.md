@@ -5,6 +5,8 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+- v1.32
+    - Update Italian translation by albanobattistella
 - v1.31
     - Move documentation to [open-web-calendar.quelltext.eu](https://open-web-calendar.quelltext.eu)
     - Update dependencies

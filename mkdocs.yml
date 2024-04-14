@@ -63,8 +63,10 @@ theme:
   custom_dir: docs/overrides
 plugins:
   # privacy, see https://squidfunk.github.io/mkdocs-material/plugins/privacy/
-#  - privacy:
+  - privacy # asset filtering can be circumvented by html escaping the content
+            # for l in b'https://giscus.app/client.js': print('&#' + hex(l)[1:]+';', end="")
 #      assets_exclude: # see also https://github.com/giscus/giscus/issues/1348
+#        - cdn.jsdelivr.net/npm/mathjax@3/*
 #        - giscus.app/* # see https://squidfunk.github.io/mkdocs-material/plugins/privacy/#config.assets_exclude
   # offline, see https://squidfunk.github.io/mkdocs-material/plugins/offline/
 #  - offline
