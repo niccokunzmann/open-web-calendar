@@ -63,7 +63,9 @@ theme:
   custom_dir: docs/overrides
 plugins:
   # privacy, see https://squidfunk.github.io/mkdocs-material/plugins/privacy/
-  - privacy
+#  - privacy:
+#      assets_exclude: # see also https://github.com/giscus/giscus/issues/1348
+#        - giscus.app/* # see https://squidfunk.github.io/mkdocs-material/plugins/privacy/#config.assets_exclude
   # offline, see https://squidfunk.github.io/mkdocs-material/plugins/offline/
 #  - offline
   - social
