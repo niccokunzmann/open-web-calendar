@@ -23,6 +23,7 @@ def specification_to_query(spec):
 
 def get_url(context, url):
     """Replace getting the URL to mitigate a TimeoutException in Chrome."""
+    print(f"Visiting {url}")
     for i in range(20):
         try:
             return context.browser.get(url)
@@ -48,7 +49,6 @@ def step_impl(context, date):
     context.browser.delete_all_cookies()
     url = context.index_page + "calendar.html?" + specification_to_query(context.specification)
     get_url(context, url)
-    print(f"Visiting {url}")
     wait_for_calendar_to_load(context)
 
 def wait_for_calendar_to_load(context):
@@ -178,7 +178,6 @@ def step_impl(context):
     context.browser.delete_all_cookies()
     url = context.index_page + "?" + specification_to_query(context.specification)
     get_url(context, url)
-    print(f"Visiting {url}")
 
 
 @when('we write "{text}" into "{field_id}"')
@@ -288,3 +287,30 @@ def step_impl(context, tag_name, id):
     """Click on elements with an id."""
     element = context.browser.find_element(By.ID, id)
     element.click()
+
+
+## Link verification
+
+@then('the link "{link_text}" targets "{link_target}"')
+def step_impl(context, link_text, link_target):
+    """Check the target of a link."""
+    assert_tag_with_text_attribute_equals(context, "a", link_text, "target", link_target)
+
+
+@then('the link "{link_text}" opens "{link_href}"')
+def step_impl(context, link_text, link_href):
+    """Check the href of a link."""
+    assert_tag_with_text_attribute_equals(context, "a", link_text, "href", link_href)
+
+
+def assert_tag_with_text_attribute_equals(context, tag, text, attribute, expected_value):
+    """Make sure that an attribute of a tag has a certain value."""
+    # select if inner text element equals the text
+    # see https://stackoverflow.com/a/3655588/1320237
+    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {repr(text)}]]")
+    assert len(elements) == 1, f"Expected one {tag} with text {repr(text)} but got {len(elements)}."
+    element = elements[0]
+    actual_value = element.get_attribute(attribute, None)
+    assert actual_value == expected_value, f"Expected the {tag} with the text {repr(text)} to have an attribute with the value {repr(expected_value)} but the value is {repr(actual_value)}."
+
+## Other
