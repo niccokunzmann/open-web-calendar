@@ -1,4 +1,7 @@
 {
-  "origins": ["https://open-web-calendar.quelltext.eu/"],
+  "origins": [
+    "https://open-web-calendar.quelltext.eu/",
+    "http://127.0.0.1:8000/"
+  ],
   "defaultCommentOrder": "newest"
 }
