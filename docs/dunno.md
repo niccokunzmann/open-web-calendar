@@ -1,5 +1,6 @@
 ---
 comments: true
+description: "These are some interesting sections to consider."
 ---
 
 # Good to Know

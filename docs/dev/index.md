@@ -1,5 +1,6 @@
 ---
 comments: true
+description: "Learn how to develop the Open Web Calendar."
 ---
 
 # Setup & Tests

@@ -1,5 +1,6 @@
 ---
 comments: true
+description: "There are various ways to host the Open Web Calendar yourself and customize the deployment."
 ---
 
 # Self-Hosting & Deployment

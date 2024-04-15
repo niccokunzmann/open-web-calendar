@@ -1,9 +1,13 @@
+---
+description: How to report security concerns about the Open Web Calendar project.
+---
+
 # Security Policy
 
 ## Supported Versions
 
 Only the `master` branch receives security updates.
-When an security update is made, it is released with the latest version.
+When an security update is made, it is released with the [latest version](changelog.md).
 
 | Version       | Supported          |
 | ------------- | ------------------ |

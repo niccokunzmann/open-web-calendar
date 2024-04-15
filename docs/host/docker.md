@@ -1,5 +1,6 @@
 ---
 comments: true
+description: "Host the Open Web Calendar using Docker and Docker Compose."
 ---
 
 # Hosting with Docker

@@ -1,3 +1,6 @@
+---
+description: "Code and guide to maintain the Open Web Calendar project."
+---
 
 # Notes for Maintainers
 

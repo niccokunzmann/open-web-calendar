@@ -1,5 +1,6 @@
 ---
 comments: true
+description: "The API of the Open Web Calendar allows more customization than the configuration page."
 ---
 
 # API

@@ -1,5 +1,6 @@
 ---
 comments: true
+description: "You can use the hosted version of the Open Web Calendar yourself."
 ---
 
 # Hosted Version

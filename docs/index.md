@@ -1,6 +1,7 @@
 ---
 comments: false
 title: Getting Started
+description: "See the features or try the Open Web Calendar yourself!"
 ---
 
 ![](assets/img/logo/github-social-preview.svg)

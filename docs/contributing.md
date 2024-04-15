@@ -1,5 +1,6 @@
 ---
 comments: true
+description: "You can improve the project yourself. Get started here."
 ---
 
 # Contributing ♥️

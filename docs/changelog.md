@@ -1,5 +1,6 @@
 ---
 comments: true
+description: "This page lists the changes made to the Open Web Calendar in a reader friendly way."
 ---
 
 # Versions and Changes
