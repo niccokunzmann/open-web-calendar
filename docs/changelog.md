@@ -11,6 +11,7 @@ The latest version might not be released, yet.
 
 - v1.32
     - Update Italian translation by albanobattistella
+    - Open links in event descriptions in new tab or as configured, see [Issue 287](https://github.com/niccokunzmann/open-web-calendar/issues/287)
 - v1.31
     - Move documentation to [open-web-calendar.quelltext.eu](https://open-web-calendar.quelltext.eu)
     - Update dependencies
