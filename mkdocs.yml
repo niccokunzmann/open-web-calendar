@@ -90,6 +90,8 @@ plugins:
   - markdownextradata
   # macros, see https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/
   - macros
+  # meta description, see https://github.com/prcr/mkdocs-meta-descriptions-plugin
+  - meta-descriptions
 
 extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
   alternate:

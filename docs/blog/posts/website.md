@@ -9,7 +9,6 @@ links:
   - NLNet: https://nlnet.nl/project/OpenWebCalendar/
 ## If you use comments, also set the description!
 comments: true
-description: "The Open Web Calendar has a new project website."
 ---
 
 # New Website
