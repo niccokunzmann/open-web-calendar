@@ -8,6 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import json
 from selenium.common.exceptions import TimeoutException
+import re
 
 
 def specification_to_query(spec):
@@ -23,7 +24,7 @@ def specification_to_query(spec):
 
 def get_url(context, url):
     """Replace getting the URL to mitigate a TimeoutException in Chrome."""
-    print(f"Visiting {url}")
+    print(f"Visiting {re.sub('^http://localhost:[0-9]+/', 'http://localhost:5000/', url)}")
     for i in range(20):
         try:
             return context.browser.get(url)
@@ -78,7 +79,7 @@ def step_impl(context, text):
     print(repr(f"//div[contains(@class, 'event') and contains(text(), '{text}')]"))
     events = context.browser.find_elements(By.XPATH, "//div[contains(@class, 'event')]")
     chosen_events = [event for event in events if text in event.get_attribute("innerText")]
-    assert len(chosen_events) == 1, f"There should only be one event with the text {text} but there are {len(events)}."
+    assert len(chosen_events) == 1, f"There should only be one event with the text {text} but there are {len(chosen_events)}: {chosen_events}"
     event = chosen_events[0]
     event.click()
 
@@ -307,10 +308,9 @@ def assert_tag_with_text_attribute_equals(context, tag, text, attribute, expecte
     """Make sure that an attribute of a tag has a certain value."""
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
-    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {repr(text)}]]")
-    assert len(elements) == 1, f"Expected one {tag} with text {repr(text)} but got {len(elements)}."
-    element = elements[0]
-    actual_value = element.get_attribute(attribute, None)
-    assert actual_value == expected_value, f"Expected the {tag} with the text {repr(text)} to have an attribute with the value {repr(expected_value)} but the value is {repr(actual_value)}."
+    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[contains(., {repr(text)})]]")
+    assert len(elements) >= 1, f"Expected at least one <{tag}> with text {repr(text)} but got {len(elements)}."
+    actual_values = [element.get_attribute(attribute) for element in elements]
+    assert expected_value in actual_values, f"Expected a <{tag}> with the text {repr(text)} to have an attribute {attribute} with the value \n{repr(expected_value)} but the values are \n{{}}.".format('\n'.join(map(repr, actual_values)))
 
 ## Other

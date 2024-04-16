@@ -80,7 +80,16 @@ var template = {
         return escapeHtml(event.text);
     },
     "details": function(event) {
-        return "<div class='details'>" + event.description + "</div>";
+        var details = document.createElement("div");
+        details.classList.add("details");
+        details.innerHTML = event.description;
+        // set the target of all the links
+        var links = details.getElementsByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+          link.target = specification.target;
+        }
+        return details.outerHTML;
     },
     "location": function(event) {
         if (!event.location && !event.geo) {
