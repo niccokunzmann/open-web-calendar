@@ -1,0 +1,1124 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DMF Events
+X-WR-TIMEZONE:America/Chicago
+X-WR-CALDESC:www.DowntownMarceline.org
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+X-LIC-LOCATION:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART:20220827T220000Z
+DTEND:20220828T020000Z
+DTSTAMP:20240301T091503Z
+UID:1lnco7mmf4p8042a098k4h968g@google.com
+CREATED:20220322T181628Z
+DESCRIPTION:www.DowntownMarceline.org\n\nStroll down the original Main Stre
+ et USA for a fun-filled evening of wine tasting\, shopping\, food\, and an
+ exhibit of artwork by area artists. Not a fan of wine? No need to fear\, we
+ ’ve got you covered with beer! Sit back\, relax\, and enjoy some musical en
+ tertainment\, visit with friends\, and enjoy Downtown Marceline!\n\nwww.Dow
+ ntownMarceline.org
+LAST-MODIFIED:20220324T052958Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:10th Annual Downtown Marceline Wine & Art Stroll
+TRANSP:OPAQUE
+ATTACH;FILENAME=2022-WineAndArtStroll.png;FMTTYPE=image/png:https://drive.g
+ oogle.com/open?id=1mQt8d7Oooy3n_Yf4UcildvSd-RZEem3C&authuser=0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20220328
+DTEND;VALUE=DATE:20220405
+DTSTAMP:20240301T091503Z
+UID:1t7s4buap9r1sjhb0s1tnv1kot@google.com
+CREATED:20220324T052853Z
+DESCRIPTION:<html-blob><br><br>Beginning March 28th\, the Bunny Buckets wil
+ l be back in downtown Marceline businesses. With each local purchase\, writ
+ e your name and phone number on the back of your receipt. Drop it in the Bu
+ nny Bucket! It’s that simple!<br><br>Small businesses\, are the heartbeat o
+ f our neighborhood\, the spine of our local economy\, and the spirit of our
+  town.<br><br><br><br>Thanks for shopping local!<br><br><a href="http://www
+ .DowntownMarceline.org">www.DowntownMarceline.org</a></html-blob>
+LAST-MODIFIED:20220324T055058Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hop to Shop Downtown Marceline
+TRANSP:TRANSPARENT
+ATTACH;FILENAME=2022-BunnyBuckets.jpg;FMTTYPE=image/jpeg:https://drive.goog
+ le.com/open?id=1NeExCKehvcEaakMA4oCk10ftWDEvr6_D&authuser=0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220629T130000Z
+DTEND:20220630T010000Z
+DTSTAMP:20240301T091503Z
+UID:0kl1m5s1o5521jtcicvqdhi6t2@google.com
+CREATED:20220607T214934Z
+DESCRIPTION:<a href="https://www.DowntownMarceline.org/2022-patriotic-pie-w
+ ars">https://www.DowntownMarceline.org/2022-patriotic-pie-wars</a>
+LAST-MODIFIED:20220620T160631Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:2022 Patriotic Pie Wars
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220812T230000Z
+DTEND:20220813T013000Z
+DTSTAMP:20240301T091503Z
+UID:2mq8bka1v6opsra23c1na99bcr@google.com
+CREATED:20220808T224800Z
+DESCRIPTION:See attached flyer for details.\n\n\nhttps://www.facebook.com/M
+ arcelineSchool/events/
+LAST-MODIFIED:20220808T224800Z
+LOCATION:Chester Ray Stadium\, Marceline High School
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline High School Ice Cream Social
+TRANSP:TRANSPARENT
+ATTACH;FILENAME=RV IceCreamSocial.png;FMTTYPE=image/png:https://drive.googl
+ e.com/open?id=1Exjbnsv2wvIYtIQY0456OkaLVQHLcwBN&authuser=0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220813T230000Z
+DTEND:20220814T020000Z
+DTSTAMP:20240301T091503Z
+UID:7kl9i4ptp35bo4658ub2n42am8@google.com
+CREATED:20220808T225048Z
+DESCRIPTION:<html-blob>https://www.facebook.com/events/5719800934714915/</h
+ tml-blob><br><html-blob><br></html-blob><br><html-blob>Saturday\, August 13
+  at 6pm at the Walsworth Community Center. Proceeds benefit the Animal Shel
+ ter of Linn County.<br></html-blob>
+LAST-MODIFIED:20220808T225048Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Trivia Night FUNdraiser for Animal Shelter of Linn County
+TRANSP:TRANSPARENT
+ATTACH;FILENAME=028ea9d4-44c2-5be8-d16f-36dbb9ca7edb.jpg;FMTTYPE=image/jpeg
+ :https://drive.google.com/open?id=17bJu4U4XLgqedWrj5gGnUdACDDNRdbyM&authuse
+ r=0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220902T000000Z
+DTEND:20220902T003000Z
+DTSTAMP:20240301T091503Z
+UID:6cs1b54iskgfkg5lb7a7kds6mh@google.com
+CREATED:20220728T002952Z
+DESCRIPTION:<html-blob><a href="https://www.DowntownMarceline.org/2022-groc
+ ery-grab" id="ow688" __is_owner="true">https://www.DowntownMarceline.org/20
+ 22-grocery-grab</a><u></u><u></u><p><b>Grocery Grab</b><br></p><p>Get on yo
+ ur mark… get set… get ready to&nbsp\;<strong><b>GRAB SOME GROCERIES</b></st
+ rong>&nbsp\;at&nbsp\;<strong><b><a href="https://www.prengerfoods.com/conta
+ ct">Prenger Foods in Marceline</a></b></strong>! That’s right\,&nbsp\;<a hr
+ ef="https://www.downtownmarceline.org/">Downtown Marceline</a>\, in conjunc
+ tion with&nbsp\;<strong><b>Prenger Foods</b></strong>\, is doing another La
+ bor Day Grocery Grab!</p><u></u></html-blob>
+LAST-MODIFIED:20220808T225345Z
+LOCATION:Prenger Foods\, 205 N Chestnut St\, Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Grocery Grab 1
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20220923
+DTEND;VALUE=DATE:20220925
+DTSTAMP:20240301T091503Z
+UID:1bm6j5b4udbupge7qq4aq02ifg@google.com
+CREATED:20220808T232019Z
+LAST-MODIFIED:20220808T232019Z
+LOCATION:Marceline\, MO
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Fall City-Wide Garage Sales
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220902T000000Z
+DTEND:20220902T003000Z
+DTSTAMP:20240301T091503Z
+UID:751v5v3ccm3ui9h03dosaimtli@google.com
+CREATED:20220831T005136Z
+DESCRIPTION:<u></u><a href="https://www.google.com/url?q=https://www.Downto
+ wnMarceline.org/2022-grocery-grab&amp\;sa=D&amp\;source=calendar&amp\;ust=1
+ 662339011708338&amp\;usg=AOvVaw3IdHYp4Zpxv9ePQloSCoy6" target="_blank">http
+ s://www.DowntownMarceline.org/2022-grocery-grab</a><u></u><u></u><p><b>Groc
+ ery Grab</b><br></p><p>Get on your mark… get set… get ready to <strong><b>G
+ RAB SOME GROCERIES</b></strong> at <strong><b><a href="https://www.google.c
+ om/url?q=https://www.prengerfoods.com/contact&amp\;sa=D&amp\;source=calenda
+ r&amp\;ust=1662339011708338&amp\;usg=AOvVaw3DfTL9irRDsT9bv-Qg_NUK" target="
+ _blank">Prenger Foods in Marceline</a></b></strong>! That’s right\, <a href
+ ="https://www.google.com/url?q=https://www.downtownmarceline.org/&amp\;sa=D
+ &amp\;source=calendar&amp\;ust=1662339011708338&amp\;usg=AOvVaw0bADiAtiloIT
+ 6a_2AqeRyj" target="_blank">Downtown Marceline</a>\, in conjunction with <s
+ trong><b>Prenger Foods</b></strong>\, is doing another Labor Day Grocery Gr
+ ab!</p><u></u><u></u>
+LAST-MODIFIED:20220831T005136Z
+LOCATION:Prenger Foods\, 205 N Chestnut St\, Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Grocery Grab 2
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220902T210000Z
+DTEND:20220902T230000Z
+DTSTAMP:20240301T091503Z
+UID:2h0ika5guld2d7tsbgt7rgu5p4@google.com
+CREATED:20220831T005151Z
+DESCRIPTION:Free Hot Dogs\, Hamburgers\, Chips &amp\; Drink - No carry outs
+ .
+LAST-MODIFIED:20220831T005151Z
+LOCATION:Bethany Baptist Church\, 305 E. Howell St.\, Marceline
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Annual First Home Game Tailgate Party
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220910T130000Z
+DTEND:20220910T190000Z
+DTSTAMP:20240301T091503Z
+UID:2qns091lrimsjfoadbb0f0hh1a@google.com
+CREATED:20220831T005237Z
+LAST-MODIFIED:20220831T005237Z
+LOCATION:Marceline Country Club
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Annual Masonic Lodge Golf Tournament
+TRANSP:OPAQUE
+ATTACH;FILENAME=MasonsGolfTourney.jpg;FMTTYPE=image/jpeg:https://drive.goog
+ le.com/open?id=18EbJNJJSBaGBw0VIs2AFhL9ovpAX40rP&authuser=0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20220809T150000
+DTEND;TZID=America/Chicago:20220809T180000
+RRULE:FREQ=WEEKLY;UNTIL=20220913T045959Z;BYDAY=TU
+EXDATE;TZID=America/Chicago:20220906T150000
+DTSTAMP:20240301T091503Z
+UID:2g6l4vmaeqr2easbe9gnhegmjn@google.com
+CREATED:20220808T224353Z
+LAST-MODIFIED:20220906T152805Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline City Market
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220917T140000Z
+DTEND:20220917T160000Z
+DTSTAMP:20240301T091503Z
+UID:7u7ageb49ffes4q74jbcli5f34@google.com
+CREATED:20220912T182426Z
+DESCRIPTION:View all the details -&nbsp\;<a href="https://www.facebook.com/
+ permalink.php?story_fbid=pfbid0yZo4spqSBjnm3MHXUR41TDbp4X2KtHmBK3xorXYrehnP
+ C8BjjJpZCUr4a3jXSfVRl&amp\;id=102006874554469" id="ow483" __is_owner="true"
+ >https://www.facebook.com/permalink.php?story_fbid=pfbid0yZo4spqSBjnm3MHXUR
+ 41TDbp4X2KtHmBK3xorXYrehnPC8BjjJpZCUr4a3jXSfVRl&amp\;id=102006874554469</a>
+LAST-MODIFIED:20220912T182426Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:3rd Annual Progressive Meal Square Dance
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221126T160000Z
+DTEND:20221127T000000Z
+DTSTAMP:20240301T091503Z
+UID:2rtaho0mn85klqj3dhk6ej5imh@google.com
+CREATED:20220912T223945Z
+DESCRIPTION:<a href="https://www.walsworthcc.org/events/holiday-craft-frenz
+ y/" id="ow1923" __is_owner="true">https://www.WalsworthCC.org/events/holida
+ y-craft-frenzy</a>
+LAST-MODIFIED:20220912T223945Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Holiday Craft Frenzy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220912T220000Z
+DTEND:20220913T000000Z
+DTSTAMP:20240301T091503Z
+UID:50al30mitlou2llvpoolqu9ajp@google.com
+CREATED:20220913T005753Z
+DESCRIPTION:<span style="background-color: var(--textfield-surface)\; color
+ : var(--on-surface)\;">Get the details at www.NoMoArt.org</span>
+LAST-MODIFIED:20220913T005753Z
+LOCATION:North Missouri Arts Council\, 111 S Main Street USA\, Marceline\,
+ MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NoMo Arts Council: Orr Street Studios Showcase Reception
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220924T000000Z
+DTEND:20220924T020000Z
+DTSTAMP:20240301T091503Z
+UID:4k7420ebj1jmh2m2mri1q2qclc@google.com
+CREATED:20220923T203557Z
+LAST-MODIFIED:20220923T203557Z
+LOCATION:Chester Ray Stadium
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Homecoming Game - Marceline Vs. Fayette
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220923T190000Z
+DTEND:20220923T200000Z
+DTSTAMP:20240301T091503Z
+UID:7d0sfjui6rcsup42liiq4pjf8d@google.com
+CREATED:20220923T204313Z
+LAST-MODIFIED:20220923T204313Z
+LOCATION:Main Street USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MHS Homecoming Parade
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220929T223000Z
+DTEND:20220929T233000Z
+DTSTAMP:20240301T091503Z
+UID:20tkd7u03ktvkhmc0p3qn63iun@google.com
+CREATED:20220923T224231Z
+DESCRIPTION:<a href="http://marcelinemo.us/">http://marcelinemo.us/</a>
+LAST-MODIFIED:20220923T224231Z
+LOCATION:Marceline City Hall\, 116 N Main Street USA\, Marceline\, MO 64658
+ \, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:City Council Special Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221022T210000Z
+DTEND:20221023T000000Z
+DTSTAMP:20240301T091503Z
+UID:1tsa2u9i08u1cprb6a05ifitnm@google.com
+CREATED:20220922T214232Z
+DESCRIPTION:<a href="www.DowntownMarceline.org/funrun" id="ow507" __is_owne
+ r="true">www.DowntownMarceline.org/funrun</a><br><br><html-blob>Registratio
+ n at 4p at the Masonic Temple<br>Run start at 4:30p<br>Awards and Pool Part
+ y - 5-7p<br></html-blob><br><html-blob><br></html-blob><br><html-blob><a hr
+ ef="www.DowntownMarceline.org/funrun" id="ow503" __is_owner="true">www.Down
+ townMarceline.org/funrun</a><br></html-blob>
+LAST-MODIFIED:20220924T194723Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Trick or Trot Dash and Splash 5k Fun Run
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220924T210000Z
+DTEND:20220925T023000Z
+DTSTAMP:20240301T091503Z
+UID:5s4urr7qup1beq0o00bpv94h8v@google.com
+CREATED:20220901T165315Z
+DESCRIPTION:<a href="https://www.facebook.com/events/368165002027520" id="o
+ w953" __is_owner="true">https://www.facebook.com/events/368165002027520</a>
+LAST-MODIFIED:20220924T194820Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Marceline High School Alumni Banquet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220927T213000Z
+DTEND:20220927T233000Z
+DTSTAMP:20240301T091503Z
+UID:1jkma74p98bj79c760660arc07@google.com
+CREATED:20220923T224205Z
+DESCRIPTION:<html-blob>Menu:<br>Pork Chops<br>Green Beans &amp\; Potatoes<b
+ r>Dessert / Drink</html-blob><br><html-blob><br></html-blob><br><html-blob>
+ <a href="https://bethanymarceline.com/" id="ow1286" __is_owner="true">https
+ ://bethanymarceline.com/</a><br></html-blob>
+LAST-MODIFIED:20220924T194843Z
+LOCATION:Bethany Baptist Church Sbc\, 305 E Howell Ave\, Marceline\, MO 646
+ 58\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Free Community Dinner @ Bethany Baptist Church
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221001T150000Z
+DTEND:20221001T210000Z
+DTSTAMP:20240301T091503Z
+UID:2pb7gekp52kslcigop373sortr@google.com
+CREATED:20220923T224341Z
+DESCRIPTION:<a href="https://www.facebook.com/events/1041409616450545">http
+ s://www.facebook.com/events/1041409616450545</a>
+LAST-MODIFIED:20221001T163502Z
+LOCATION:Bethany Baptist Church Christian Life Center
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:20th & Final Quilt Show
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221024T170000Z
+DTEND:20221024T220000Z
+DTSTAMP:20240301T091503Z
+UID:09357ab1j3gdnbk772luj3pnk0@google.com
+CREATED:20221004T213143Z
+LAST-MODIFIED:20221004T213143Z
+LOCATION:Eagles Lodge\, 301 N. Chestnut
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Community Blood Drive
+TRANSP:OPAQUE
+ATTACH;FILENAME=Community Blood Drive OCT 22.jpg;FMTTYPE=image/jpeg:https:/
+ /drive.google.com/open?id=1Ektqze4gMn9n6RhVz-C7rJwyxcfq03RX&authuser=0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221011T213000Z
+DTEND:20221011T233000Z
+DTSTAMP:20240301T091503Z
+UID:2av3dnrvl4qv3vo9g9jes2gcjn@google.com
+CREATED:20221004T213227Z
+DESCRIPTION:See Attached Flyer
+LAST-MODIFIED:20221004T213227Z
+LOCATION:Walsworth Community Center
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:FBC Benefit Dinner Fundraiser
+TRANSP:OPAQUE
+ATTACH;FILENAME=Community Benefit Dinner.jpg;FMTTYPE=image/jpeg:https://dri
+ ve.google.com/open?id=109tH35k6_ff6y59dk88MG9qQFgz1_ODM&authuser=0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221014T210000Z
+DTEND:20221015T000000Z
+DTSTAMP:20240301T091503Z
+UID:0eg72vntavkpl6v4oi7elluulu@google.com
+CREATED:20221004T213250Z
+DESCRIPTION:<a href="https://drive.google.com/file/d/1Rg1F1QAc8CvpRS8o6_17u
+ xfNqmCp26kY/view?pli=1" class="pastedDriveLink-0">https://drive.google.com/
+ file/d/1Rg1F1QAc8CvpRS8o6_17uxfNqmCp26kY/view?pli=1</a>
+LAST-MODIFIED:20221014T202440Z
+LOCATION:Knights of Columbus Hall\, 217 N. Main Street USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tiger Tenderloin Tailgate
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221022T220000Z
+DTEND:20221023T020000Z
+DTSTAMP:20240301T091503Z
+UID:1j7qpar5t1tgb9bglcb8ptmnec@google.com
+CREATED:20220912T223411Z
+DESCRIPTION:www.WalsworthCC.org
+LAST-MODIFIED:20221024T003725Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Quarter Auction
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221027T190000Z
+DTEND:20221027T203000Z
+DTSTAMP:20240301T091503Z
+UID:1iljc86klbj0753dkak5da7cmi@google.com
+CREATED:20221026T223745Z
+LAST-MODIFIED:20221026T223745Z
+LOCATION:121 N. Main Street USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Governor Parson to visit Marceline for the CoffeeTree Ribbon Cuttin
+ g
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221029T140000Z
+DTEND:20221029T180000Z
+DTSTAMP:20240301T091503Z
+UID:38b0o2t15q8ica7klk9cgsshvn@google.com
+CREATED:20221028T163415Z
+LAST-MODIFIED:20221028T163415Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IDA Manufacturing & Tech Job & Career Fair
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221030T200000Z
+DTEND:20221030T220000Z
+DTSTAMP:20240301T091503Z
+UID:4536q7qk27hrq7gdm5lig8bmmm@google.com
+CREATED:20221028T163439Z
+DESCRIPTION:<p><span><b>Setting up a trunk or treat spot iswelcome.<span> 
+ </span>For </b></span><span><b>allof</b></span><span><b>our kiddos\, young
+ or young at heart!  </b></span></p><p><span><b>Come in your Halloween costu
+ me andhave some fun!<span>  </span>Bring your friends andfamily with you! 
+ </b></span></p><p><span><b>There will be fun Halloween crafts\,blocks\, bub
+ bles\, parachutes\, bean bag toss\, as well as snacks.<span>  </span>Weathe
+ r permitting\, the games will be outsidein the church yard.</b></span></p>
+LAST-MODIFIED:20221028T163439Z
+LOCATION:First Christian Church of Marceline\, 116 W Gracia Ave\, Marceline
+ \, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Halloween Fun @ Marceline First Christian Church
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221111T190000Z
+DTEND:20221111T210000Z
+DTSTAMP:20240301T091503Z
+UID:7sqk2b8ub2vkqu3cif10mol35h@google.com
+CREATED:20221028T174350Z
+DESCRIPTION:<a href="https://drive.google.com/open?id=1TZQWcbLdT2oQESxZvhh8
+ 0LR7knWjIe-q&amp\;authuser=dave%40downtownmarceline.org&amp\;usp=drive_fs"
+ class="pastedDriveLink-0">https://drive.google.com/open?id=1TZQWcbLdT2oQESx
+ Zvhh80LR7knWjIe-q&amp\;authuser=dave%40downtownmarceline.org&amp\;usp=drive
+ _fs</a>
+LAST-MODIFIED:20221028T174350Z
+LOCATION:North Missouri Arts Council\, 111 S Main Street USA\, Marceline\,
+ MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NOMO Reception: Salute to Veterans
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221031T220000Z
+DTEND:20221031T233000Z
+DTSTAMP:20240301T091503Z
+UID:6oc7fq6sal6mbp6ek9ru2cte7h@google.com
+CREATED:20221001T170945Z
+DESCRIPTION:<a href="https://drive.google.com/open?id=1F_MAvjWRcjUBzpGhdbc7
+ qWd1h3P2F5uK&amp\;authuser=dave%40downtownmarceline.org&amp\;usp=drive_fs"
+ class="pastedDriveLink-0" id="ow497" __is_owner="true">https://drive.google
+ .com/open?id=1F_MAvjWRcjUBzpGhdbc7qWd1h3P2F5uK&amp\;authuser=dave%40downtow
+ nmarceline.org&amp\;usp=drive_fs</a>
+LAST-MODIFIED:20221029T202115Z
+LOCATION:Main Street USA\, Marceline\, MO
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Trick or Treat Downtown
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20221120
+DTEND;VALUE=DATE:20221127
+DTSTAMP:20240301T091503Z
+UID:1gana9bnfq69j8kbokh7u3q1d8@google.com
+CREATED:20221110T203745Z
+DESCRIPTION:<span style="background-color: var(--textfield-surface)\; color
+ : var(--on-surface)\;">Free Scavenger Hunt for Children\, with achance to w
+ in one of four $25 gift certificates\, sponsored by the Downtown Marceline
+ Foundation. More details at&nbsp\;</span><a href="https://www.downtownmarce
+ line.org/tis-the-season-for-elves/" style="background-color: var(--textfiel
+ d-surface)\;"><u>https://www.DowntownMarceline.org/tis-the-season-for-elves
+ /</u></a>
+LAST-MODIFIED:20221110T203745Z
+LOCATION:Main Street USA\, Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Elves on the Shelves
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221126T233000Z
+DTEND:20221127T003000Z
+DTSTAMP:20240301T091503Z
+UID:3ndp3miln08sfdbh770ucjh440@google.com
+CREATED:20220901T170604Z
+DESCRIPTION:<html-blob><u></u><p>The entire town of Marceline will come to
+ life with the lights and sounds of Christmas\, plus peanuts with prizes.</p
+ ><p><a href="https://drive.google.com/file/d/1VA66zIWrWxQoIclJcBvk5MhnZU9RV
+ sEH/view" class="pastedDriveLink-0">https://drive.google.com/file/d/1VA66zI
+ WrWxQoIclJcBvk5MhnZU9RVsEH/view</a><br></p><p><br></p><u></u></html-blob>
+LAST-MODIFIED:20221110T233640Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Peanut Night & Lighting Ceremony
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221126T235500Z
+DTEND:20221127T010000Z
+DTSTAMP:20240301T091503Z
+UID:5u2tf3t0jfj9m50tmoi4rvot5j@google.com
+CREATED:20221110T203234Z
+DESCRIPTION:<a href="https://drive.google.com/file/d/1VA66zIWrWxQoIclJcBvk5
+ MhnZU9RVsEH/view" class="pastedDriveLink-0">https://drive.google.com/file/d
+ /1VA66zIWrWxQoIclJcBvk5MhnZU9RVsEH/view</a>
+LAST-MODIFIED:20221110T233647Z
+LOCATION:Ripley Square\, 200 N Main Street USA\, Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Yule Log\, Welcome\, Blessing\, and Santa arrives!
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221127T010000Z
+DTEND:20221127T020000Z
+DTSTAMP:20240301T091503Z
+UID:19u6vc8d7sjcr8h91qnmjno27f@google.com
+CREATED:20221110T203448Z
+DESCRIPTION:<a href="https://drive.google.com/file/d/1VA66zIWrWxQoIclJcBvk5
+ MhnZU9RVsEH/view" class="pastedDriveLink-0">https://drive.google.com/file/d
+ /1VA66zIWrWxQoIclJcBvk5MhnZU9RVsEH/view</a>
+LAST-MODIFIED:20221110T233651Z
+LOCATION:First Baptist Church of Marceline\, 119 W Ritchie Ave\, Marceline\
+ , MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Children's play "The Christmas Puzzle"
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221111T170000Z
+DTEND:20221111T180000Z
+DTSTAMP:20240301T091503Z
+UID:2011svk1jre0lbtjo8371ujn88@google.com
+CREATED:20221111T205714Z
+DESCRIPTION:<a href="https://drive.google.com/file/d/1VYsD7zTu9102UHKJTcsGK
+ VZJh6efLuLb/view" class="pastedDriveLink-1" style="background-color: var(--
+ textfield-surface)\;" id="ow486" __is_owner="true">https://drive.google.com
+ /file/d/1VYsD7zTu9102UHKJTcsGKVZJh6efLuLb/view</a><br><br>Presented by Marc
+ eline VFW Post #1471 and American Legion Post #264
+LAST-MODIFIED:20221111T205714Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Veterans Day Program
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20221121
+DTEND;VALUE=DATE:20221231
+DTSTAMP:20240301T091503Z
+UID:7fvb0sc7vj8pq0erksdh49onu0@google.com
+CREATED:20221124T032103Z
+DESCRIPTION:<a href="https://drive.google.com/file/d/1GAtfgsbzVavQOD5ljXUI3
+ o1_CSVo0pxQ/view" class="pastedDriveLink-0" id="ow463" __is_owner="true">ht
+ tps://drive.google.com/file/d/1GAtfgsbzVavQOD5ljXUI3o1_CSVo0pxQ/view</a>
+LAST-MODIFIED:20221124T032103Z
+LOCATION:North Missouri Arts Council\, 111 S Main Street USA\, Marceline\,
+ MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NOMO Christmas Show
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20140819T173000
+DTEND;TZID=America/Chicago:20140819T190000
+RRULE:FREQ=MONTHLY;UNTIL=20221220T055959Z;BYDAY=3TU
+EXDATE;TZID=America/Chicago:20221115T173000
+DTSTAMP:20240301T091503Z
+UID:35srq3f5u1hb1tc5rvq5chnuvt@google.com
+CREATED:20220808T225200Z
+DESCRIPTION:Marceline Council Meetings are held on the 3rd Tuesday of each
+ month at 5:30 pm
+LAST-MODIFIED:20221124T232615Z
+LOCATION:Marceline City Hall\, 116 N Main Street USA\, Marceline\, MO 64658
+ \, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline City Council meeting
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221212T233000Z
+DTEND:20221213T003000Z
+DTSTAMP:20240301T091503Z
+UID:4539ig5fee17aukpobvs4ea232@google.com
+CREATED:20221116T211914Z
+LAST-MODIFIED:20221130T200946Z
+LOCATION:City Hall
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:HPB Public Hearing - Uptown Theatre
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221208T000000Z
+DTEND:20221208T020000Z
+DTSTAMP:20240301T091503Z
+UID:2jafh1r9cm540et5kht8b6gb2c@google.com
+CREATED:20221202T184821Z
+LAST-MODIFIED:20221202T184821Z
+LOCATION:Marceline High School\, 314 E Santa Fe Ave\, Marceline\, MO 64658\
+ , USA (Ag Shop)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline FFA Quarter Bingo Night
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20221217T220000Z
+DTEND:20221218T010000Z
+DTSTAMP:20240301T091503Z
+UID:643ua5mf262jv18geufrb4spjc@google.com
+CREATED:20221202T230800Z
+DESCRIPTION:<a href="https://www.facebook.com/events/3136980153204146" id="
+ ow490" __is_owner="true">https://www.facebook.com/events/3136980153204146</
+ a><br><br><a href="https://www.facebook.com/marcelinemopolice/" id="ow475"
+ __is_owner="true">https://www.facebook.com/marcelinemopolice/</a><br><a hre
+ f="https://www.facebook.com/christmas4kidsmarcelinepd" id="ow483" __is_owne
+ r="true">https://www.facebook.com/christmas4kidsmarcelinepd</a>
+LAST-MODIFIED:20221202T230759Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Police Christmas 4 Kids
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230102T230000Z
+DTEND:20230103T000000Z
+DTSTAMP:20240301T091503Z
+UID:54jqf6mp85ubkbmov2s9mm8dpf@google.com
+CREATED:20221229T182406Z
+LAST-MODIFIED:20221229T182406Z
+LOCATION:Marceline Fire Barn
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Parks & Recreation Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20220924T180000
+DTEND;TZID=America/Chicago:20220924T200000
+RRULE:FREQ=MONTHLY;UNTIL=20230128T055959Z;BYDAY=4SA
+EXDATE;TZID=America/Chicago:20221126T180000
+EXDATE;TZID=America/Chicago:20221224T180000
+DTSTAMP:20240301T091503Z
+UID:0br70uk6mmg0mu6o6r5iapa1rm@google.com
+CREATED:20220913T201656Z
+DESCRIPTION:<a href="https://fb.me/e/1Olff6Jn8">https://fb.me/e/1Olff6Jn8</
+ a>
+LAST-MODIFIED:20221229T183635Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Main Street Marceline Cruise Nights
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230513T140000Z
+DTEND:20230513T210000Z
+DTSTAMP:20240301T091503Z
+UID:2uq322k71ddrh7cfst2jksblop@google.com
+CREATED:20230123T171021Z
+DESCRIPTION:Details at <a href="http://www.MarcelineCarShow.com">www.Marcel
+ ineCarShow.com</a>
+LAST-MODIFIED:20230123T171050Z
+LOCATION:Main Street USA\, Marceline\, MO
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:30th annual Marceline Car Show
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230513T140000Z
+DTEND:20230513T190000Z
+DTSTAMP:20240301T091503Z
+UID:2bqre4nasnntkatgqhapmjm9dj@google.com
+CREATED:20230123T171301Z
+DESCRIPTION:Details at www.DowntownMarceline.org
+LAST-MODIFIED:20230123T171406Z
+LOCATION:Main Street USA\, Marceline\, MO
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Cookie Crawl
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20230301T100000
+DTEND;TZID=America/Chicago:20230301T200000
+RRULE:FREQ=DAILY;UNTIL=20230319T045959Z
+DTSTAMP:20240301T091503Z
+UID:5u6gtg14gri5k4k8fr14rvn0rs@google.com
+CREATED:20230312T060253Z
+DESCRIPTION:<span>Details at </span><a href="https://www.DowntownMarceline.
+ org/2023TwoTowns">https://www.DowntownMarceline.org/2023TwoTowns</a><br><br
+ >Sponsored by Brunswick Downtown Merchants and the Downtown Marceline Found
+ ation.
+LAST-MODIFIED:20230312T060546Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Two Towns\, Twice the Fun Shopping Road Trip
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20230520T180000
+DTEND;TZID=America/Chicago:20230520T210000
+RRULE:FREQ=MONTHLY;UNTIL=20230918T045959Z;BYDAY=3SA
+DTSTAMP:20240301T091503Z
+UID:3i07r1f2ettjgn64jqeu7ppg1b@google.com
+CREATED:20230615T164946Z
+DESCRIPTION:Good old fashion car cruise on Main Street.  Bring what you got
+  and cruise main.  Hang out with friends in the park.<br><br><a href="https
+ ://www.facebook.com/events/758113562302396">https://www.facebook.com/events
+ /758113562302396</a>
+LAST-MODIFIED:20230615T173458Z
+LOCATION:Main Street USA\, Marceline\, MO
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Main Street Cruise Nights
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230704T214500Z
+DTEND:20230704T223000Z
+DTSTAMP:20240301T091503Z
+UID:7g3ndukfgp8dkmm814a23osb51@google.com
+CREATED:20230615T173107Z
+DESCRIPTION:If you can't come to Main Street USA\, watch the live video - <
+ a href="http://www.downtownmarceline.org/4thVideo">www.DowntownMarceline.<w
+ br />org/4thVideo</a><br><br>www.DowntownMarceline.org
+LAST-MODIFIED:20230615T173505Z
+LOCATION:Main Street USA\, Marceline\, MO
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline 4th of July Parade broadcast
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230628T130000Z
+DTEND:20230629T010000Z
+DTSTAMP:20240301T091503Z
+UID:688jhn18e2bnrchb46eho54otk@google.com
+CREATED:20230615T173425Z
+DESCRIPTION:This Fourth of July FUNdraiser auction runs from 8am to 8pm. Pr
+ oceeds from the event go towards projects and events in support of Downtown
+  Marceline.<br><br><a href="www.DowntownMarceline.org/2023-patriotic-pie-wa
+ rs">www.DowntownMarceline.org/2023-patriotic-pie-wars</a>
+LAST-MODIFIED:20230615T173516Z
+LOCATION:www.DowntownMarceline.org/2023-patriotic-pie-wars
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Patriotic Pie Wars
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230826T220000Z
+DTEND:20230827T020000Z
+DTSTAMP:20240301T091503Z
+UID:6otfpfricpf1cs37h9asbu0di7@google.com
+CREATED:20220922T215411Z
+DESCRIPTION:<a href="http://www.DowntownMarceline.org"><u>www.DowntownMarce
+ line.org</u></a>
+LAST-MODIFIED:20230615T173539Z
+LOCATION:Main Street USA\, Marceline\, MO
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Wine & Art Stroll
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230704
+DTEND;VALUE=DATE:20230705
+DTSTAMP:20240301T091503Z
+UID:0pv3a7n06aab2vm03700il1e74@google.com
+CREATED:20230616T184414Z
+DESCRIPTION:<p><b><span> </span></b><a href="https://www.google.com/url?q=h
+ ttp://marcelinemo.us/events/Independence%2520Day%25202023.pdf&amp\;sa=D&amp
+ \;source=calendar&amp\;ust=1687373026738848&amp\;usg=AOvVaw2QiLKcXjjmeZIHqg
+ 9UVKGa" target="_blank">http://marcelinemo.us/events/Independence%20Day%202
+ 023.pdf</a></p><p><b><span>5:00pm:<span>  </span>PARADE “Party in the USA”<
+ span>  </span></span></b><span>Line-upinfo will be included in entry form.<
+ span> </span>Entry Forms can be obtained at Paula Wright Insurance and Marc
+ eline CityHall.<span>  </span>Judged categories include:Tractors\, Bikes an
+ d Trikes\, Golf Carts and ATV’s\, Antique Cars and Trucks\,Floats.<span>  <
+ /span>Contact Paula Wright at (660)349-6257 for more information.</span></p
+ ><p><b><span>6-10 pm:<span>  </span></span></b><span>Armband night </span><
+ /p><p><span><span>      </span>VFW – Bingo </span></p><p><span><span>     
+ </span>Rotary Club </span><span>– FunnelCakes</span></p><p><span><span>   <
+ /span><span>  </span><span> </span>Lions Club – Turtle Races</span></p><p><
+ b><span>7:00 pm</span></b><span>:<span>  </span><i>ABleS</i> – Live Music\,
+ Ripley Park Stage</span></p><p><b><span>9:30 pm:</span></b><span><span>  </
+ span>Marceline Fireman’s Association Raffle –Ripley Park <span>     </span>
+ </span></p><p><span><span>                  </span>Stage</span></p><p><b><s
+ pan>11:00 pm</span></b><span>:<span>  </span><b>FIREWORKSDISPLAY @ Disney P
+ ark</b></span></p><b><span><span>                    </span>(Country Club L
+ ake)</span></b>
+LAST-MODIFIED:20230616T184414Z
+LOCATION:Downtown Marceline
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Independence Day 2023 Celebration
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20230717T160000Z
+DTEND:20230717T180000Z
+DTSTAMP:20240301T091503Z
+UID:5840avf7cbialdlsvpk633p1hj@google.com
+CREATED:20230622T183929Z
+DESCRIPTION:<p>Existing Marceline businesses and entrepreneurs thinking abo
+ ut opening a new business in Marceline are invited to the Marceline Small B
+ usiness and Entrepreneur Workshop.  <span><a href="http://www.64658.org/bus
+ iness">www.64658.org/business</a></span></p><h2><b>July 17th\, 2023 – 11a-1
+ pm</b></h2><h3><b>Walsworth Community Center</b></h3><ul><li>Learn about lo
+ cal businesses</li></ul><p></p><ul><li>Discuss your ideas</li></ul><p></p><
+ ul><li>Talk about money &amp\; business loans</li></ul><p></p><ul><li>Expan
+ d your business</li></ul><p></p><ul><li>Find resources</li></ul><p></p><ul>
+ <li>Information sharing</li></ul>
+LAST-MODIFIED:20230622T183929Z
+LOCATION:Walworth Community Center
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Small Business Workshop
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20230831
+DTEND;VALUE=DATE:20230901
+DTSTAMP:20240301T091503Z
+UID:0q8tg37k1rmqc67trd9qepcse5@google.com
+CREATED:20230629T192135Z
+LAST-MODIFIED:20230629T192135Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Grocery Grab
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20231016T163000Z
+DTEND:20231016T183000Z
+DTSTAMP:20240301T091503Z
+UID:52gr4no76us58gvt2bkl2d3oot@google.com
+CREATED:20230817T211004Z
+DESCRIPTION:<a href="https://www.downtownmarceline.org/2023sbdc/">https://w
+ ww.DowntownMarceline.org/2023sbdc</a>
+LAST-MODIFIED:20230831T000457Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Greater Marceline Small Business Lunch & Learn
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20231026T130000Z
+DTEND:20231028T010000Z
+DTSTAMP:20240301T091503Z
+UID:6j2qtfsbt48vlmf45nl3o510gt@google.com
+CREATED:20230909T000324Z
+DESCRIPTION:https://www.64658.org/bbq
+LAST-MODIFIED:20230922T221342Z
+LOCATION:https://www.64658.org/bbq
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Ultimate Tailgate Face-off online auction
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231125
+DTEND;VALUE=DATE:20231126
+DTSTAMP:20240301T091503Z
+UID:4u9dviefu1bt98nmg2maudbnd4@google.com
+CREATED:20231105T204035Z
+DESCRIPTION:www.Marceline.com
+LAST-MODIFIED:20231105T204035Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Peanut Night
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20231112
+DTEND;VALUE=DATE:20231126
+DTSTAMP:20240301T091503Z
+UID:7bcirlser2vb5rcohppot22j2q@google.com
+CREATED:20231105T204151Z
+DESCRIPTION:www.DowntownMarceline.org/elves
+LAST-MODIFIED:20231105T204151Z
+LOCATION:Main Street USA\, Marceline\, MO
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Elves on the Shelves
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20240110T190000Z
+DTEND:20240110T191500Z
+DTSTAMP:20240301T091503Z
+UID:1q8n9uipbibl9qimjjtrtumuaq@google.com
+CREATED:20240104T185742Z
+DESCRIPTION:<br>Be Our Guest at the Zurcher on Main Ribbon Cutting - Wednes
+ day\, January 10th at 1pm at the corner of Main Street USA &amp\; Ritchie A
+ ve.<br><br><br><a>www.DowntownMarceline.org/be-our-guest-at-the-zurcher-on-
+ main-ribbon-cutting</a>
+LAST-MODIFIED:20240104T185742Z
+LOCATION:101 W Ritchie Ave\, Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Be Our Guest at the Zurcher on Main Ribbon Cutting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20240511T140000Z
+DTEND:20240511T220000Z
+DTSTAMP:20240301T091503Z
+UID:6o9ujoatlui0q1s6lafi926hou@google.com
+CREATED:20240124T030154Z
+DESCRIPTION:<a href="http://www.MarcelineSpringFestival.com">www.MarcelineS
+ pringFestival.com</a>
+LAST-MODIFIED:20240124T030154Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Spring Festival
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20240221T190000Z
+DTEND:20240221T193000Z
+DTSTAMP:20240301T091503Z
+UID:5gf737spfg5eme8vmn4tb1rk94@google.com
+CREATED:20240207T163846Z
+LAST-MODIFIED:20240221T184533Z
+LOCATION:Ripley Square\, 200 N Main Street USA\, Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Smart Rural Community presentation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20240626T130000Z
+DTEND:20240627T010000Z
+DTSTAMP:20240301T091503Z
+UID:1ji72gluilm2qt0fe8gh7ubfie@google.com
+CREATED:20240126T074927Z
+DESCRIPTION:<a href="https://www.DowntownMarceline.org/piewar"><u>https://w
+ ww.DowntownMarceline.org/piewar</u></a>
+LAST-MODIFIED:20240224T183106Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Patriotic Pie War
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20240824T210000Z
+DTEND:20240825T010000Z
+DTSTAMP:20240301T091503Z
+UID:41m36dj6lhpa6bp4lk3822sog5@google.com
+CREATED:20240126T075009Z
+DESCRIPTION:<a href="https://www.DowntownMarceline.org/winestroll"><u>https
+ ://www.DowntownMarceline.org/winestroll</u></a>
+LAST-MODIFIED:20240224T183158Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Wine & Art Stroll
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20241130T230000Z
+DTEND:20241201T030000Z
+DTSTAMP:20240301T091503Z
+UID:52o3cdta9odonsqpi0nnd4qdff@google.com
+CREATED:20240224T183312Z
+DESCRIPTION:https://www.VisitMarceline.com/PeanutNight
+LAST-MODIFIED:20240224T183312Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Peanut Night
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20241117
+DTEND;VALUE=DATE:20241201
+DTSTAMP:20240301T091503Z
+UID:1aokf62bj2kdkgh6kefd97qr5g@google.com
+CREATED:20240217T050803Z
+DESCRIPTION:<a href="https://www.DowntownMarceline.org/elves">https://www.D
+ owntownMarceline.org/elves</a>
+LAST-MODIFIED:20240228T064740Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Elves on the Shelves
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20240901
+DTEND;VALUE=DATE:20240902
+DTSTAMP:20240301T091503Z
+UID:01m1tlvppdt7253b2elo9upfs1@google.com
+CREATED:20240126T075055Z
+LAST-MODIFIED:20240228T065119Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Restaurant Weeks
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20240511T140000Z
+DTEND:20240511T210000Z
+DTSTAMP:20240301T091503Z
+UID:1bcbdnvnoqsifret5eu2qr0kfq@google.com
+CREATED:20240224T232105Z
+DESCRIPTION:Marceline Car Show - <a href="https://www.MarcelineCarShow.com"
+ >https://www.MarcelineCarShow.com</a>
+LAST-MODIFIED:20240228T072212Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Car Show
+TRANSP:OPAQUE
+ATTACH;FILENAME=Marceline Car Show.url;FMTTYPE=text/x-url:https://drive.goo
+ gle.com/open?id=1MJHJ4pZ5R_c7zn-g5Xg1GiCmLPzzME3v&authuser=0
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20240301
+DTEND;VALUE=DATE:20240318
+DTSTAMP:20240301T091503Z
+UID:2um2t685plms9i7s0q56emj2f7@google.com
+CREATED:20240221T020817Z
+DESCRIPTION:<a href="https://www.DowntownMarceline.org/shamrockshop/">https
+ ://www.DowntownMarceline.org/shamrockshop/</a>
+LAST-MODIFIED:20240228T080517Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Shamrock $hop
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

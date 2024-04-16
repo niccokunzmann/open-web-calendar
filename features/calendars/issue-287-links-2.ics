@@ -1,0 +1,590 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:marcelinehistory@gmail.com
+X-WR-TIMEZONE:America/Chicago
+X-WR-CALDESC:www.MarcelineHistory.org
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+X-LIC-LOCATION:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20230327T140000
+DTEND;TZID=America/Chicago:20230327T150000
+RRULE:FREQ=MONTHLY;UNTIL=20230828T045959Z;BYDAY=4MO
+EXDATE;TZID=America/Chicago:20230626T140000
+DTSTAMP:20240301T091507Z
+ORGANIZER;CN=marcelinememories@gmail.com:mailto:marcelinememories@gmail.com
+UID:4gdopq97rlo0hrljicjb1aqlsn@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=marcel
+ inehistory@gmail.com;X-NUM-GUESTS=0:mailto:marcelinehistory@gmail.com
+CREATED:20230228T083048Z
+LAST-MODIFIED:20230821T175441Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Marceline History Connection meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20230327T140000
+DTEND;TZID=America/Chicago:20230327T150000
+DTSTAMP:20240301T091507Z
+ORGANIZER;CN=marcelinememories@gmail.com:mailto:marcelinememories@gmail.com
+UID:4gdopq97rlo0hrljicjb1aqlsn@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=marcel
+ inehistory@gmail.com;X-NUM-GUESTS=0:mailto:marcelinehistory@gmail.com
+RECURRENCE-ID;TZID=America/Chicago:20230327T140000
+CREATED:20230228T083048Z
+LAST-MODIFIED:20230823T181447Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Marceline Historical Society meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19011205
+DTEND;VALUE=DATE:19011206
+DTSTAMP:20240301T091507Z
+UID:3kibdk96c37gscjatobhbelq3r@google.com
+CREATED:20230823T181654Z
+LAST-MODIFIED:20230823T181654Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Walt Disney born\, 1901
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19290128
+DTEND;VALUE=DATE:19290129
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:553ena53s5722egbo4vsig7q58@google.com
+CREATED:20230906T050931Z
+DESCRIPTION:On January 28\, 1929 the first Librarian of the Marceline Carne
+ gie Library\, Flo Cooper Carr\, died of a burst appendix.\n\nwww.MarcelineH
+ istory.org
+LAST-MODIFIED:20230906T050931Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:January 28\, 1929 - Flo Cooper Carr\, first Librarian of the Marcel
+ ine Carnegie Library\, dies of a burst appendix
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19550126
+DTEND;VALUE=DATE:19550127
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:0cv5ojhfni4m84ra83ush4veam@google.com
+CREATED:20230906T051300Z
+DESCRIPTION:<p dir="ltr">January 26\, 1955 - The library received a $100 gi
+ ft to be used to purchase an electric water cooler.</p><p dir="ltr"><br></p
+ ><p>www.MarcelineHistory.org</p>
+LAST-MODIFIED:20230906T051300Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:January 26\, 1955 - the Marceline Carnegie Library receives a $100 
+ gift to purchase an electric water cooler
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19671219
+DTEND;VALUE=DATE:19671220
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:6ehcquitb9hh81pv5smq1c0au0@google.com
+CREATED:20230906T051619Z
+DESCRIPTION:December 19\, 1967 - Ms. Olive McAllister retired after 38 year
+ s of service.  Pictured with her is Mayor Jake Young.\n\n\nwww.MarcelineHis
+ tory.org
+LAST-MODIFIED:20230906T051619Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:On December 19\, 1967 - Ms. Olive McAllister retires
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19760704
+DTEND;VALUE=DATE:19760705
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:2veq9eef6nlanuja8tei50tcq2@google.com
+CREATED:20230906T051801Z
+DESCRIPTION:<span>July 4\, 1976 - </span>The Continental Volunteer Army mar
+ ches in uniform in the 4th of July parade.  The uniforms were sewed by loca
+ l women.<br><br><br>www.MarcelineHistory.org
+LAST-MODIFIED:20230906T051801Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:July 4\, 1976 - The Continental Volunteer Army marches in the 4th o
+ f July parade
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19880308
+DTEND;VALUE=DATE:19880309
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:5ds62lis2s5glalso7h2tfujve@google.com
+CREATED:20230906T052217Z
+DESCRIPTION:<span>March 8\, 1988 - </span><span>Vicky Schaal's first day as
+  the new </span><span>Librarian of the </span><span>Marceline Carnegie Libr
+ ary.</span><br><br><br>www.MarcelineHistory.org
+LAST-MODIFIED:20230906T052217Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:March 8\, 1988 - Vicky Schaal's first day as the new Librarian
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19900524
+DTEND;VALUE=DATE:19900525
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:4knc6vvp16d71j9vu6j0dc7v4p@google.com
+CREATED:20230906T052658Z
+DESCRIPTION:May 24\, 1990 -  <span>Joyce Stallo Clapp is hired as the Direc
+ tor of the Marceline Carnegie Library. </span><span>She makes only the 9th 
+ Director in 100 years! She </span><span>started working just four days afte
+ r her high school graduation.</span><br><br><br>www.MarcelineHistory.org
+LAST-MODIFIED:20230906T052658Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:May 24\, 1990 - Joyce Stallo Clapp is hired as the new Director of 
+ the Marceline Carnegie Library
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19310525
+DTEND;VALUE=DATE:19310526
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:2bq2rpp98jfnq9948665b9vgdp@google.com
+CREATED:20230906T053145Z
+DESCRIPTION:May 25\, 1931 - <span>A new set of World Book Encyclopedias wer
+ e purchased by the Marceline Carnegie Library for $89\, to be paid at $5 pe
+ r month.</span><br><br><br>www.MarcelineHistory.org
+LAST-MODIFIED:20230906T053145Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:May 25\, 1931 - New encyclopedias are purchased for $89 for the Mar
+ celine Carnegie Library
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19441113
+DTEND;VALUE=DATE:19441114
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:659qiqtrvfroat0d83r2tvu6ro@google.com
+CREATED:20230906T053714Z
+DESCRIPTION:<span>November 13\, 1944 - A new </span><span>30 volume set of 
+ </span><span>Encyclopedia Americana is purchased for $139.50.</span><span><
+ /span><br><span><br></span><br><span><br></span><br>www.MarcelineHistory.or
+ g
+LAST-MODIFIED:20230906T053714Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:November 13\, 1944 - The Marceline Carnegie Library purchases a new
+  set of Encyclopedia Americana books
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19011205
+DTEND;VALUE=DATE:19011206
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:23h49pce2cijh4oqvt6pqn42fp@google.com
+CREATED:20230823T174845Z
+DESCRIPTION:<p>Walt Disney was born on December 5\, 1901 at 2156 N Tripp Av
+ e\, Chicago\, IL 60639\, USA.</p><br><br><a href="www.MarcelineHistory.org"
+ >www.MarcelineHistory.org</a>
+LAST-MODIFIED:20230907T055241Z
+LOCATION:2156 N Tripp Ave\, Chicago\, IL 60639\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:December 5\, 1901 - Walt Disney was born
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19130410
+DTEND;VALUE=DATE:19130411
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:6treco8hem660uhi026iaga8sh@google.com
+CREATED:20230823T181730Z
+DESCRIPTION:<p>April 10\, 1913 - the Marceline Santa Fe Depot was dedicated
+ .</p><p><br></p><p>www.MarcelineHistory.org</p>
+LAST-MODIFIED:20230907T055356Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:April 10\, 1913 - Santa Fe Depot dedicated
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19551220
+DTEND;VALUE=DATE:19551221
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:0umok0s37oq99sb54p0llu6fjk@google.com
+CREATED:20230823T181750Z
+DESCRIPTION:On December 20\, 1955\, Engine #2546 was placed in Ripley Squar
+ e and dedicated to Marceline.\n\n\nwww.MarcelineHistory.org
+LAST-MODIFIED:20230907T055647Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:December 20\, 1955 - Engine #2546 placed in Ripley Square
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19560704
+DTEND;VALUE=DATE:19560705
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:3rfhn12firri8echu4vbfsmgsu@google.com
+CREATED:20230823T181757Z
+DESCRIPTION:<p>The Walt Disney Municipal Park was dedicated on July 4\, 195
+ 6.</p><p> </p><p><a href="www.MarcelineHistory.org">www.MarcelineHistory.or
+ g</a></p>
+LAST-MODIFIED:20230907T055815Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:July 4\, 1956 - Walt Disney Municipal Park dedicated
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19560704
+DTEND;VALUE=DATE:19560705
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:56dtk9nga0auidoo926g73u7gk@google.com
+CREATED:20230823T181804Z
+DESCRIPTION:On July 4\, 1956\, Walt Disney's movie "The Great Locomotive Ch
+ ase" p<span>remiered at the Uptown Theatre.</span><br><span><br></span><br>
+ <span><br></span><br><span>www.MarcelineHistory.org</span>
+LAST-MODIFIED:20230907T055955Z
+LOCATION:Uptown Theater\, 104 N Main\, St\, Marceline\, MO 64658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:July 4\, 1956 - Premiere of The Great Locomotive Chase
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19601016
+DTEND;VALUE=DATE:19601017
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:74alnt1lll4b80mcac3nvdbd9i@google.com
+CREATED:20230823T181811Z
+DESCRIPTION:Walt Disney Elementary School was dedicated on <span>October 16
+ \, 1960.</span><br><span><br></span><br><span><br></span><br><span>www.Marc
+ elineHistory.org</span>
+LAST-MODIFIED:20230907T060319Z
+LOCATION:Walt Disney Elementary\, 420 E California Ave\, Marceline\, MO 646
+ 58\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:October 16\, 1960 - Walt Disney Elementary School dedicated
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19661215
+DTEND;VALUE=DATE:19661216
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:0t828lumfn27lgqq3no607ie6o@google.com
+CREATED:20230823T181818Z
+DESCRIPTION:Walt Disney passed away on <span>December 15\, 1966 at </span><
+ span>Saint Joseph Hospital in Burbank\, CA.</span><br><span><br></span><br>
+ <span><br></span><br><span>www.MarcelineHistory.org</span>
+LAST-MODIFIED:20230907T060538Z
+LOCATION:Providence Saint Joseph Emergency Care - Burbank\, 501 S Buena Vis
+ ta St\, Burbank\, CA 91505\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:December 15\, 1966 - Walt Disney passes away
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19680911
+DTEND;VALUE=DATE:19680912
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:3c9ptsq5suqjc7d9lcj3q6ptod@google.com
+CREATED:20230823T181824Z
+DESCRIPTION:Walt Disney Commemorative Stamp Day took place in Marceline on 
+ <span>September 11\, 1968.</span><br><span><br></span><br><span><br></span>
+ <br><span><br></span><br><span>www.MarcelineHistory.org</span>
+LAST-MODIFIED:20230907T060703Z
+LOCATION:United States Postal Service\, 120 E Ritchie Ave\, Marceline\, MO 
+ 64658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:September 11\, 1968 - Walt Disney Commemorative Stamp Day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19920704
+DTEND;VALUE=DATE:19920705
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:3kdinsmea6lc329ns9bjocf8qc@google.com
+CREATED:20230823T181831Z
+DESCRIPTION:On July 4\, 1992\, the Veterans Memorial was dedicated in Riple
+ y Square.\n\n\nwww.MarcelineHistory.org
+LAST-MODIFIED:20230907T060817Z
+LOCATION:Ripley Square\, 200 N Main Street USA\, Marceline\, MO 64658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:July 4\, 1992 - Veterans Memorial dedicated
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20010921
+DTEND;VALUE=DATE:20010922
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:6an2gh5lg05igh6uub7keq0qnt@google.com
+CREATED:20230823T181838Z
+DESCRIPTION:The Walsworth Community Center was dedicated on <span>September
+  21\, 2001.</span><br><span><br></span><br><span><br></span><br><span><br><
+ /span><br><span>www.MarcelineHistory.org</span>
+LAST-MODIFIED:20230907T060928Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:September 21\, 2001 - Walsworth Community Center dedicated
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20040823
+DTEND;VALUE=DATE:20040824
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:3p1p366m0p9bkd837bc8iqqfrn@google.com
+CREATED:20230823T181845Z
+DESCRIPTION:The Walt Disney Post Office was dedicated on August 23\, 2004.\
+ n\n\nwww.MarcelineHistory.org
+LAST-MODIFIED:20230907T061021Z
+LOCATION:United States Postal Service\, 120 E Ritchie Ave\, Marceline\, MO 
+ 64658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:August 23\, 2004 - Walt Disney Post Office dedicated
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20170415
+DTEND;VALUE=DATE:20170416
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:76jklg6scg8ip6qcb4n5qreopn@google.com
+CREATED:20230823T181851Z
+DESCRIPTION:The <span>Ripley Pond Bridge was dedicated on </span><span>Apri
+ l 15\, 2017.</span><br><span><br></span><br><span><br></span><br><span>www.
+ MarcelineHistory.org</span>
+LAST-MODIFIED:20230907T061118Z
+LOCATION:Ripley Square\, 200 N Main Street USA\, Marceline\, MO 64658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:April 15\, 2017 - Ripley Pond Bridge dedicated
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20220512
+DTEND;VALUE=DATE:20220513
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:3t44cv52e6pem2he7d48buu13i@google.com
+CREATED:20230823T181857Z
+DESCRIPTION:May 12\, 2022 - the Marceline Skate Park was opened.\n\n\nwww.M
+ arcelineHistory.org
+LAST-MODIFIED:20230907T061229Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:May 12\, 2022 - Marceline Skate Park opened
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19200209
+DTEND;VALUE=DATE:19200210
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:6sof4k5dhps5pabq48tm6lpua3@google.com
+CREATED:20230907T061749Z
+LAST-MODIFIED:20230907T061749Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:February 9\, 1920 - American Legion Post #264 was chartered
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19201101
+DTEND;VALUE=DATE:19201102
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:12g7cpi3h01e0145f6o39ljlm2@google.com
+CREATED:20230823T181741Z
+DESCRIPTION:November 1\, 1920\, the Marceline Carnegie Library was dedicate
+ d\, and opened with 1\,701 books ready for use. At the end of the first yea
+ r\, there were 990 borrowers and 3\,024 volumes in the library.<br><br><a h
+ ref="http://www.MarcelineHistory.org">www.MarcelineHistory.org</a>
+LAST-MODIFIED:20230907T062355Z
+LOCATION:Carnegie Library\, 119 E California Ave\, Marceline\, MO 64658\, U
+ SA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:November 1\, 1920 - Marceline Carnegie Library dedicated
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19290607
+DTEND;VALUE=DATE:19290608
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:6kaec67b1m4pj9vvggqn92fhg1@google.com
+CREATED:20230907T062906Z
+LAST-MODIFIED:20230907T062906Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:June 7\, 1929 - Marceline News puts out its first issue
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19420501
+DTEND;VALUE=DATE:19420502
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:278rq2lcmrhlej2cdl63mtkog6@google.com
+CREATED:20230906T050335Z
+DESCRIPTION:Marceline's first hospital\, the B. B. Putman Memorial Hospital
+ \, closed on May 1\, 1942.<br> <br> <br><a href="www.MarcelineHistory.org">
+ www.MarcelineHistory.org</a>
+LAST-MODIFIED:20230907T063119Z
+LOCATION:108 E Howell Ave\, Marceline\, MO 64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:May 1\, 1942 - B. B. Putman Memorial Hospital closes.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20231023T140000
+DTEND;TZID=America/Chicago:20231023T150000
+RRULE:FREQ=MONTHLY;WKST=MO;BYDAY=4MO
+EXDATE;TZID=America/Chicago:20231225T140000
+DTSTAMP:20240301T091507Z
+UID:1qtnq9n5onqm3b4qq0qt8vpdsk@google.com
+CREATED:20231017T071454Z
+DESCRIPTION:<h1><strong><b>Monthly meeting</b></strong></h1><p>Attend the m
+ onthly meeting of the Marceline Historical Society – the 4th Monday of ever
+ y month @ 2pm\, at the <a href="https://www.marcelinelibrary.org/">Marcelin
+ e Carnegie Library</a>.</p><p><span>Join other Marceline residents each mon
+ th to discuss ways to capture\, save\, and share Marceline's history. </spa
+ n><a href="http://www.MarcelineHistory.org">www.MarcelineHistory.org</a><br
+ ></p>
+LAST-MODIFIED:20240211T204707Z
+LOCATION:Marceline Carnegie Library\, 119 E California Ave\, Marceline\, MO
+  64658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Historical Society meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20240129T140000
+DTEND;TZID=America/Chicago:20240129T150000
+DTSTAMP:20240301T091507Z
+UID:1qtnq9n5onqm3b4qq0qt8vpdsk@google.com
+RECURRENCE-ID;TZID=America/Chicago:20240122T140000
+CREATED:20231017T071454Z
+DESCRIPTION:<h1><strong><b>Monthly meeting</b></strong></h1><p>Attend the m
+ onthly meeting of the Marceline Historical Society – the 4th Monday of ever
+ y month @ 2pm\, at the <a href="https://www.marcelinelibrary.org/">Marcelin
+ e Carnegie Library</a>.</p><p><span>Join other Marceline residents each mon
+ th to discuss ways to capture\, save\, and share Marceline's history. </spa
+ n><a href="http://www.MarcelineHistory.org">www.MarcelineHistory.org</a><br
+ ></p>
+LAST-MODIFIED:20240211T204707Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Marceline Historical Society - SPECIAL meeting - view a portion of 
+ a 1939 film of Marceline
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20240226T140000
+DTEND;TZID=America/Chicago:20240226T150000
+DTSTAMP:20240301T091507Z
+UID:1qtnq9n5onqm3b4qq0qt8vpdsk@google.com
+RECURRENCE-ID;TZID=America/Chicago:20240226T140000
+CREATED:20231017T071454Z
+DESCRIPTION:<h1><strong><b>Monthly meeting</b></strong></h1><p>Attend the m
+ onthly meeting of the Marceline Historical Society – the 4th Monday of ever
+ y month @ 2pm\, at the <a href="https://www.marcelinelibrary.org/">Marcelin
+ e Carnegie Library</a>.</p><p><span>Join other Marceline residents each mon
+ th to discuss ways to capture\, save\, and share Marceline's history. </spa
+ n><a href="http://www.MarcelineHistory.org">www.MarcelineHistory.org</a><br
+ ></p>
+LAST-MODIFIED:20240211T204739Z
+LOCATION:Walsworth Community Center\, 124 E Ritchie Ave\, Marceline\, MO 64
+ 658\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marceline Historical Society meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20240306
+DTEND;VALUE=DATE:20240307
+RRULE:FREQ=YEARLY
+DTSTAMP:20240301T091507Z
+UID:0qu4ohlh9r3f4apqab6krrvodi@google.com
+CREATED:20230907T061502Z
+DESCRIPTION:The <span>City of Marceline was incorporated on </span><span>Ma
+ rch 6\, 1888.</span><br><span><br></span><br><a href="https://www.Marceline
+ History.org">https://www.MarcelineHistory.org</a>
+LAST-MODIFIED:20240228T094137Z
+LOCATION:Marceline\, MO 64658\, USA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:March 6\, 1888 - City of Marceline is incorporated
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
