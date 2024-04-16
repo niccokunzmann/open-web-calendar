@@ -5,6 +5,12 @@ name: "Build, Test & Publish"
 
 on: [push]
 
+# cancel builds in progress if a new push has been made to the same ref
+# see https://stackoverflow.com/a/70972844/1320237
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
