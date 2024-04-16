@@ -114,4 +114,4 @@ jobs:
         with:
           allowUpdates: true
           body: "For a list of changes, please refer to the [Changelog](https://open-web-calendar.quelltext.eu/changelog/)."
-          generateReleaseNotes: true
+          generateReleaseNotes: false
