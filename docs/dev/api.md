@@ -68,10 +68,12 @@ you have several options:
 
 If you add a new parameter as a developer,
 
-- Add it with a default value to the [default_specification]
+- Add the parameter with a default value to the [default_specification]
 - Add an implementation, depending on its use in the `app.py` or the templates
   of the JavaScript files.
   The specification is already available in all of them to use.
+- Add tests in [features/configure-the-calendar.feature]({{link.code}}/features/configure-the-calendar.feature) to check that the calendar responds to the feature.
+- Add tests in [features/edit-the-calendar.feature]({{link.code}}/features/edit-the-calendar.feature) to make sure that the parameter can be used when a calendar is edited.
 
 ## Compiling the Specification
 
@@ -117,7 +119,7 @@ There is a [getSpecification()](https://github.com/niccokunzmann/open-web-calend
 specification from the inputs.
 Generally, the `specification` variable should be used.
 
-[default_specification]: https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml
+[default_specification]: {{link.code}}/default_specification.yml
 
 ## Architecture
 
