@@ -1,5 +1,5 @@
 {
-  "css": ".dhx_cal_event_line.dhx_cal_event_line_start.dhx_cal_event_line_end.TRANSP-OPAQUE { background-color: red;  }\n.dhx_cal_event_line.dhx_cal_event_line_start.dhx_cal_event_line_end.TRANSP-TRANSPARENT { background-color: orange; }\n\n.event {\n height: 77px;\n}\n.dhx_after .dhx_month_body, .dhx_month_body, .dhx_before .dhx_month_body {\n  background-color: lightgreen;\n}",
+  "css": ".dhx_cal_event_line.dhx_cal_event_line_start.dhx_cal_event_line_end.TRANSP-OPAQUE { background-color: red;  }\n.dhx_cal_event_line.dhx_cal_event_line_start.dhx_cal_event_line_end.TRANSP-TRANSPARENT { background-color: orange; }\n\n.event {\n height: 79px;\n transform: translate(-1.5px, -1.5px);\n  width: 14.3% !important;\n}\n.dhx_after .dhx_month_body, .dhx_month_body, .dhx_before .dhx_month_body {\n  background-color: lightgreen;\n}",
   "skin": "dhtmlxscheduler_flat.css",
   "url": "https://open-web-calendar.quelltext.eu/assets/calendars/free-busy-events.ics"
 }
