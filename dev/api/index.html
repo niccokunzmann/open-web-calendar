@@ -840,9 +840,9 @@ You can use this API to customize the calendar on the fly.</p>
 </li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<p>All configuration parameters are described sufficiently in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification</a>.
+<p>All configuration parameters are described sufficiently in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a>.
 That is the reference.
-E.g. if you find the parameter <code>title</code> in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification</a>,
+E.g. if you find the parameter <code>title</code> in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a>,
 you have several options:</p>
 <ul>
 <li>
@@ -866,10 +866,12 @@ you have several options:</p>
 <h2 id="adding-parameters">Adding Parameters<a class="headerlink" href="#adding-parameters" title="Permanent link">&para;</a></h2>
 <p>If you add a new parameter as a developer,</p>
 <ul>
-<li>Add it with a default value to the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification</a></li>
+<li>Add the parameter with a default value to the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></li>
 <li>Add an implementation, depending on its use in the <code>app.py</code> or the templates
   of the JavaScript files.
   The specification is already available in all of them to use.</li>
+<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> to check that the calendar responds to the feature.</li>
+<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> to make sure that the parameter can be used when a calendar is edited.</li>
 </ul>
 <h2 id="compiling-the-specification">Compiling the Specification<a class="headerlink" href="#compiling-the-specification" title="Permanent link">&para;</a></h2>
 <p>You can change the calendar behavior and looks with parameters.
@@ -896,7 +898,7 @@ calendar.html?title=CALENDAR
 </code></pre></div>
 </li>
 <li>
-<p><strong><a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification</a></strong><br />
+<p><strong><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></strong><br />
     This file contains the default parameters.
     They must not be hard-coded in the source code. All of them are there.
     Query parameters and the <code>specification_url</code> override these values.</p>
@@ -945,7 +947,7 @@ the locations on the Internet.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 17, 2024</span>
   </span>
 
     
