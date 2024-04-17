@@ -80,3 +80,9 @@ hour-format-title: Prikaz sata
 hour-format-description: Možeš birati između 24-satnog i 12-satnog sata. Potoji više
   opcija.
 hour-format-specification-link: Pogledaj specifikaciju.
+style-css-classes: 'Ovo su primjeri CSS klasa za stiliziranje događaja:'
+event-status-tentative: nesigurno
+event-status-confirmed: potvrđeno
+event-status-cancelled: otkazano
+event-status-title: Stanje događaja
+event-status-description: 'Promijeni izgled opisa događaja ovisno o stanju:'
