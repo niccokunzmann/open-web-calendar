@@ -22,7 +22,7 @@ flask==3.0.3
     #   flask-caching
 flask-caching==2.1.0
     # via -r requirements.in
-gunicorn==21.2.0
+gunicorn==22.0.0
     # via -r requirements.in
 icalendar==5.0.12
     # via
