@@ -3,6 +3,7 @@
     <head>
         <title>Open Web Calendar</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="alternate" type="text/calendar" href="/calendar.ics{{ get_query_string() }}" />
         <script type="text/javascript">
             var specification = {{ specification | tojson | safe }};
         </script>
