@@ -5,10 +5,17 @@ import sys
 import traceback
 import io
 from icalendar import Calendar
+from lxml import etree
+from urllib.parse import urljoin
+
 
 def get_text_from_url(url):
     """Return the text from a url."""
     return requests.get(url).text
+
+
+class InvalidCalendarFeed(ValueError):
+    """The calendar feed provided is not ICS."""
 
 
 class ConversionStrategy:
@@ -42,12 +49,31 @@ class ConversionStrategy:
             for e in e.map(self.retrieve_calendar, enumerate(urls)):
                 pass # no error should pass silently; import this
 
+    def get_calendars_from_url(self, url):
+        """Return a lis of calendars from a URL."""
+        calendar_text = self.get_text_from_url(url)
+        try:
+            return Calendar.from_ical(calendar_text, multiple=True)
+        except ValueError:
+            # ValueError: Content line could not be parsed into parts:
+            # find the alt link
+            # see https://stackoverflow.com/a/11466033/1320237
+            htmlparser = etree.HTMLParser()
+            tree = etree.XML(calendar_text, htmlparser)
+            links = tree.xpath('//link[@rel = "alternate" and @type = "text/calendar"]')
+            result = []
+            for link in links:
+                href = link.get("href")
+                new_url = urljoin(url, href)
+                calendar_text = self.get_text_from_url(new_url)
+                result += Calendar.from_ical(calendar_text, multiple=True)
+            return result
+
     def retrieve_calendar(self, index_url):
         """Retrieve a calendar from a url"""
         try:
             index, url = index_url
-            calendar_text = self.get_text_from_url(url)
-            calendars = Calendar.from_ical(calendar_text, multiple=True)
+            calendars = self.get_calendars_from_url(url)
             self.collect_components_from(index, calendars)
         except:
             ty, err, tb = sys.exc_info()
