@@ -5,6 +5,7 @@
 
 You might want to:
 - **[Try&nbsp;it&nbsp;out][web]**
+- [Contribute!](https://open-web-calendar.quelltext.eu/contributing/)
 - [Read the documentation][docs]
 
 
