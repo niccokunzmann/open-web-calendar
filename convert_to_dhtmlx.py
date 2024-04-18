@@ -8,6 +8,7 @@ import pytz
 from clean_html import clean_html, remove_html
 from collections import defaultdict
 from typing import List
+from urllib.parse import unquote
 
 
 def is_date(date):
@@ -63,7 +64,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "start_date_iso_0": start.isoformat(),
             "end_date_iso_0": end.isoformat(),
             "text": name,
-            "description": clean_html(calendar_event.get("DESCRIPTION", ""), self.specification),
+            "description": self.get_event_description(calendar_event),
             "location": calendar_event.get("LOCATION", None),
             "geo": geo,
             "uid": uid,
@@ -104,6 +105,24 @@ class ConvertToDhtmlx(ConversionStrategy):
             "type": "error",
             "css-classes": ["error"]
         }
+
+    def get_event_description(self, event):
+        """Return a formatted description of the event.
+
+        HTML is cleaned.
+        """
+        # CMS4Schools.com
+        description = event.get("X-ALT-DESC")
+        if description is None or not hasattr(description, "params") or description.params.get("FMTTYPE") != "text/html":
+            description = event.get("DESCRIPTION", "")
+            if hasattr(description, "params"):
+                altrep = description.params.get("ALTREP")
+                if altrep is not None and "," in altrep:
+                    data, content = altrep.split(",", 1)
+                    if data == "data:text/html":
+                        # Thunderbird html
+                        description = unquote(content)
+        return clean_html(description, self.specification)
 
     def merge(self):
         return jsonify(self.components)

@@ -76,7 +76,6 @@ def step_impl(context, uid, text):
 
 @when(u'we click on the event "{text}"')
 def step_impl(context, text):
-    print(repr(f"//div[contains(@class, 'event') and contains(text(), '{text}')]"))
     events = context.browser.find_elements(By.XPATH, "//div[contains(@class, 'event')]")
     chosen_events = [event for event in events if text in event.get_attribute("innerText")]
     assert len(chosen_events) == 1, f"There should only be one event with the text {text} but there are {len(chosen_events)}: {chosen_events}"
@@ -135,7 +134,6 @@ def step_impl(context, cls):
 
 @when(u"we open the about page")
 def step_impl(context):
-    print([x for x in dir(context.browser) if "find" in x ])
     button = context.browser.find_element(By.ID, "infoIcon")
     button.click()
     WebDriverWait(context.browser, 10).until(EC.presence_of_element_located((By.ID, "translate-license")))
@@ -187,7 +185,7 @@ def step_impl(context, text, field_id):
     input = context.browser.find_element(By.ID, field_id)
     input.clear() # see https://stackoverflow.com/a/7809907/1320237
     input.send_keys(text)
-    print(f"{field_id}.value == {input.get_attribute('value')}")
+    print(f"Expecting {field_id}.value == {input.get_attribute('value')}")
 
 
 @then('"{text}" is written in "{field_id}"')
