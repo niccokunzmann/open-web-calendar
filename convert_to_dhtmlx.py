@@ -63,7 +63,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "start_date_iso_0": start.isoformat(),
             "end_date_iso_0": end.isoformat(),
             "text": name,
-            "description": clean_html(calendar_event.get("DESCRIPTION", ""), self.specification),
+            "description": self.get_event_description(calendar_event),
             "location": calendar_event.get("LOCATION", None),
             "geo": geo,
             "uid": uid,
@@ -104,6 +104,13 @@ class ConvertToDhtmlx(ConversionStrategy):
             "type": "error",
             "css-classes": ["error"]
         }
+
+    def get_event_description(self, event):
+        """Return a formatted description of the event.
+
+        HTML is cleaned.
+        """
+        return clean_html(calendar_event.get("DESCRIPTION", ""), self.specification)
 
     def merge(self):
         return jsonify(self.components)
