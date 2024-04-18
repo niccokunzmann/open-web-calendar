@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+//
+// SPDX-License-Identifier: GPL-2.0-only
+
 /*
  * Copy symbol on code blocks.
  * see https://github.com/mkdocs/mkdocs/discussions/3177#discussioncomment-5573419

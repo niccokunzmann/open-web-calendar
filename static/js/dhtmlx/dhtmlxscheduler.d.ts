@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 (c) XB Software Ltd.
+//
+// SPDX-License-Identifier: GPL-2.0-only
+
 // Type definitions for dhtmlxScheduler <%= pkg.version %>
 // Project: http://dhtmlx.com/docs/products/dhtmlxScheduler
 
