@@ -67,9 +67,10 @@ def calendar_urls():
     """
     mapping = {}
     for file in os.listdir(CALENDAR_DIRECTORY):
+        url = "http://test.examples.local/" + file
+        with open(os.path.join(CALENDAR_DIRECTORY, file)) as f:
+            cache_url(url, f.read())
+        mapping[file] = url
         if file.lower().endswith(".ics"):
-            url = "http://test.examples.local/" + file
-            with open(os.path.join(CALENDAR_DIRECTORY, file)) as f:
-                cache_url(url, f.read())
             mapping[file[:-4]] = url
     return mapping
