@@ -97,6 +97,9 @@ Modifications:
 
 You can change the design based on whether you are free or busy.
 
+This calendar has changed CSS so that the background is green and the
+events are either orange or red.
+
 {{calendar_iframe("free-and-busy.json")}}
 
 
