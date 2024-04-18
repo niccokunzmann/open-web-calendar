@@ -1,0 +1,1192 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CMS4Schools.com//NONSGML Pro//EN
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240301
+DTEND:20240302
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2845
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Toast with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Minestrone Soup<br />Cantaloupe<br />Saltine Crackers<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Banana Oat Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nToast with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nMinestrone Soup\n\nCantaloupe\n\nSaltine Crackers\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nBanana Oat Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240304
+DTEND:20240305
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2851
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Borscht Soup with Beef<br />Mandarin Oranges<br />Saltine Crackers<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cauliflower<br />Carrot Bread<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nBorscht Soup with Beef\n\nMandarin Oranges\n\nSaltine Crackers\n\n1% Milk\n\nSnack\n\nCauliflower\n\nCarrot Bread\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240305
+DTEND:20240306
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2857
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Toasted English Muffin with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Pineapple Tidbits<br />Mashed Red Potatoes<br />Dinner Roll with butter<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Vanilla Yogurt<br />Waffles<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nToasted English Muffin with sunflower butter\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nPineapple Tidbits\n\nMashed Red Potatoes\n\nDinner Roll with butter\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240306
+DTEND:20240307
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2863
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Cinnamon Swirl Toast with butter<br />String Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Stir-Fry with Chicken, Broccoli, Carrots, Green Pepper<br />Brown Rice<br />Peaches<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Strawberries<br />Banana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nCinnamon Swirl Toast with butter\n\nString Cheese\n\n1% Milk\n\nLunch\n\nStir-Fry with Chicken, Broccoli, Carrots, Green Pepper\n\nBrown Rice\n\nPeaches\n\n1% Milk\n\nSnack\n\nStrawberries\n\nBanana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240307
+DTEND:20240308
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2869
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Pizza with Ground Beef and Cheese<br />Romaine Salad with dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Quesadillas with salsa&nbsp;<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nCheerios\n\n1% Milk\n\nLunch\n\nPizza with Ground Beef and Cheese\n\nRomaine Salad with dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nQuesadillas with salsa \n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240308
+DTEND:20240309
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2875
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Fruit Cocktail<br />Toasted Bagel with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Parmesan Chicken with Rotini Noodles<br />Peas&nbsp;<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baked Zucchini Squash<br />Townhouse Crackers<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nFruit Cocktail\n\nToasted Bagel with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nParmesan Chicken with Rotini Noodles\n\nPeas \n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBaked Zucchini Squash\n\nTownhouse Crackers\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240311
+DTEND:20240312
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2881
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Ground Beef Sweet Potato Casserole<br />with Rotini Noodles<br />Grape Halves<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Kiwi and Apple<br />Cheerios<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nGround Beef Sweet Potato Casserole\n\nwith Rotini Noodles\n\nGrape Halves\n\n1% Milk\n\nSnack\n\nKiwi and Apple\n\nCheerios\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240312
+DTEND:20240313
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2887
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Egg and Cheese Burrito with salsa<br />Romaine Salad with dressing<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Garden Harvest Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nWaffles\n\n1% Milk\n\nLunch\n\nEgg and Cheese Burrito with salsa\n\nRomaine Salad with dressing\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nPineapple\n\nGarden Harvest Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240313
+DTEND:20240314
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2893
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Diced Peaches<br />Toasted English Muffin with Sliced Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Homemade Chicken Corn Chowder<br />Orange Slices<br />Dinner Roll with butter<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers with ranch<br />Corn Tortilla Chip<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nDiced Peaches\n\nToasted English Muffin with Sliced Cheese\n\n1% Milk\n\nLunch\n\nHomemade Chicken Corn Chowder\n\nOrange Slices\n\nDinner Roll with butter\n\n1% Milk\n\nSnack\n\nCucumbers with ranch\n\nCorn Tortilla Chip\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240314
+DTEND:20240315
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2899
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Toast with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Picadillo<br />Brown Rice<br />Apple Slices<br />Baby Carrots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Zunana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nToast with sunflower butter\n\n1% Milk\n\nLunch\n\nPicadillo\n\nBrown Rice\n\nApple Slices\n\nBaby Carrots\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nZunana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240315
+DTEND:20240316
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2906
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Toasted Bread Sticks<br />Cottage Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillets<br />Noodles with butter<br />Mashed Sweet Potato<br />Honeydew<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nToasted Bread Sticks\n\nCottage Cheese\n\n1% Milk\n\nLunch\n\nBaked Cod Fillets\n\nNoodles with butter\n\nMashed Sweet Potato\n\nHoneydew\n\n1% Milk\n\nSnack\n\nMixed Berries\n\nOatmeal\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240318
+DTEND:20240319
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2911
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Chicken Breast<br />Gallo Pinto with Brown Rice<br />Cooked Carrots<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Graham Crackers<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nCheerios\n\n1% Milk\n\nLunch\n\nBaked Chicken Breast\n\nGallo Pinto with Brown Rice\n\nCooked Carrots\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nGraham Crackers\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240319
+DTEND:20240320
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2917
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Taco Pizza with Cheese, Tomato, and Vegetarian Refried Beans<br />Broccoli and Cauliflower Salad<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Celery Sticks with sunflower butter<br />Toasted English Muffin with butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nTaco Pizza with Cheese, Tomato, and Vegetarian Refried Beans\n\nBroccoli and Cauliflower Salad\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nCelery Sticks with sunflower butter\n\nToasted English Muffin with butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240320
+DTEND:20240321
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2923
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pineapple<br />Toasted Bagel with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Sloppy Joes on a Bun<br />Corn<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Baked Oatmeal<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPineapple\n\nToasted Bagel with sunflower butter\n\n1% Milk\n\nLunch\n\nSloppy Joes on a Bun\n\nCorn\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBlueberries\n\nBaked Oatmeal\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240321
+DTEND:20240322
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2929
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />French Toast Sticks<br />Vanilla Yogurt<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Fish Taco with salsa and cheese<br />Romaine Salad with dressing<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Bananas<br />Zunana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nFrench Toast Sticks\n\nVanilla Yogurt\n\n1% Milk\n\nLunch\n\nFish Taco with salsa and cheese\n\nRomaine Salad with dressing\n\nApple Slices\n\n1% Milk\n\nSnack\n\nBananas\n\nZunana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240322
+DTEND:20240323
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2935
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Honeydew<br />Cinnamon Bread<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Ground Beef Stroganoff<br />Steamed Cauliflower<br />Apricots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Broccoli<br />Bread Sticks<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nHoneydew\n\nCinnamon Bread\n\n1% Milk\n\nLunch\n\nGround Beef Stroganoff\n\nSteamed Cauliflower\n\nApricots\n\n1% Milk\n\nSnack\n\nBroccoli\n\nBread Sticks\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240325
+DTEND:20240326
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2941
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Egg and Veggie Bake<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Chicken Breast<br />Egg Noodles with butter<br />Steamed Carrots<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pear Slices<br />Bread Sticks<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nEgg and Veggie Bake\n\n1% Milk\n\nLunch\n\nBaked Chicken Breast\n\nEgg Noodles with butter\n\nSteamed Carrots\n\nApple Slices\n\n1% Milk\n\nSnack\n\nPear Slices\n\nBread Sticks\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240326
+DTEND:20240327
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2947
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Brown Rice Pilaf<br />Sugar Snap Peas<br />Cantaloupe<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Toasted Bagel with sunflower butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nWaffles\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nBrown Rice Pilaf\n\nSugar Snap Peas\n\nCantaloupe\n\n1% Milk\n\nSnack\n\nPineapple\n\nToasted Bagel with sunflower butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240327
+DTEND:20240328
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2953
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Meatloaf<br />Steamed Cauliflower<br />Bread with Butter<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pico de Gallo<br />Corn Tortilla Chips<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nMeatloaf\n\nSteamed Cauliflower\n\nBread with Butter\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nPico de Gallo\n\nCorn Tortilla Chips\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240328
+DTEND:20240329
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2959
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Chicken Salad Roll-Up<br />Spinach Salad with dressing<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers<br />Zucchini Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nChicken Salad Roll-Up\n\nSpinach Salad with dressing\n\nApple Slices\n\n1% Milk\n\nSnack\n\nCucumbers\n\nZucchini Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240329
+DTEND:20240330
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2965
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Rice Chex<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Pinto Bean Soup<br />Mixed Vegetables<br />Dinner Roll with butter<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew<br />Banana Oat Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nRice Chex\n\n1% Milk\n\nLunch\n\nPinto Bean Soup\n\nMixed Vegetables\n\nDinner Roll with butter\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nHoneydew\n\nBanana Oat Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240401
+DTEND:20240402
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2977
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Brown Rice<br />Fruit Cocktail<br />Cabbage Salad<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Kiwi &amp; Pineapple<br />Toasted English Muffin with sunflower butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nPancakes\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nBrown Rice\n\nFruit Cocktail\n\nCabbage Salad\n\n1% Milk\n\nSnack\n\nKiwi & Pineapple\n\nToasted English Muffin with sunflower butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240402
+DTEND:20240403
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2983
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Toasted Cheese Sandwich<br />Tomato Soup<br />Pears<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Toasted Bagel w/ Butter<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nToasted Cheese Sandwich\n\nTomato Soup\n\nPears\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nToasted Bagel w/ Butter\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240403
+DTEND:20240404
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2989
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Bread Stick<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Hamburger on a Bun<br />Mashed Sweet Potato<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Raspberries<br />Vanilla Yogurt<br />Raspberry Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nBread Stick\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nHamburger on a Bun\n\nMashed Sweet Potato\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nRaspberries\n\nVanilla Yogurt\n\nRaspberry Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240404
+DTEND:20240405
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2995
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Rice Chex<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Cheesy Chicken Salsa Bake<br />Romaine Salad with dressing<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Toasted Rye Bread with cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nRice Chex\n\n1% Milk\n\nLunch\n\nCheesy Chicken Salsa Bake\n\nRomaine Salad with dressing\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nToasted Rye Bread with cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240405
+DTEND:20240406
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3001
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Beef and Cheese Casserole<br />Apple Slices<br />Peas<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers<br />Carrot Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nBeef and Cheese Casserole\n\nApple Slices\n\nPeas\n\n1% Milk\n\nSnack\n\nCucumbers\n\nCarrot Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240408
+DTEND:20240409
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3007
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Toasted Bagel with butter<br />Sliced Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Parmesan Chicken<br />Rotini Noodles<br />Green Beans<br />Kiwi and Pear Salad<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew&nbsp;<br />Banana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nToasted Bagel with butter\n\nSliced Cheese\n\n1% Milk\n\nLunch\n\nParmesan Chicken\n\nRotini Noodles\n\nGreen Beans\n\nKiwi and Pear Salad\n\n1% Milk\n\nSnack\n\nHoneydew \n\nBanana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240409
+DTEND:20240410
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3013
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apricots<br />Baked Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tuna Melt on a Bun<br />Spinach Salad with tomato, green pepper, and dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Zucchini Squash Rounds<br />Garden Harvest Bread<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApricots\n\nBaked Oatmeal\n\n1% Milk\n\nLunch\n\nTuna Melt on a Bun\n\nSpinach Salad with tomato, green pepper, and dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nZucchini Squash Rounds\n\nGarden Harvest Bread\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240410
+DTEND:20240411
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3019
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tacos with beef, cheese, refried beans, salsa<br />Corn<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Pancakes<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nTacos with beef, cheese, refried beans, salsa\n\nCorn\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBlueberries\n\nPancakes\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240411
+DTEND:20240412
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3025
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pineapple Tidbits<br />Toasted English Muffin with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Macaroni and Cheese<br />Cooked Carrots<br />Pear Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Bananas<br />Cheerios<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPineapple Tidbits\n\nToasted English Muffin with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nBaked Macaroni and Cheese\n\nCooked Carrots\n\nPear Slices\n\n1% Milk\n\nSnack\n\nBananas\n\nCheerios\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240412
+DTEND:20240413
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3031
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />French Toast Sticks<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Chicken and Broccoli Dijon<br />Brown Rice<br />Cantaloupe<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Applesauce<br />Cornbread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nFrench Toast Sticks\n\n1% Milk\n\nLunch\n\nChicken and Broccoli Dijon\n\nBrown Rice\n\nCantaloupe\n\n1% Milk\n\nSnack\n\nApplesauce\n\nCornbread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240415
+DTEND:20240416
+SUMMARY:Head Start Menu (ages 3-5)
+UID:2973
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Classrooms Closed &mdash; Spring All Staff Event</body></html>
+DESCRIPTION:Classrooms Closed — Spring All Staff Event
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240416
+DTEND:20240417
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3037
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Scrambled Eggs<br />Toast with Butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Black Bean Chili with Cheddar Cheese<br />Fruit Cocktail<br />Cornbread<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Celery Sticks and Sunbutter<br />Corn Tortilla Chips<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nScrambled Eggs\n\nToast with Butter\n\n1% Milk\n\nLunch\n\nBlack Bean Chili with Cheddar Cheese\n\nFruit Cocktail\n\nCornbread\n\n1% Milk\n\nSnack\n\nCelery Sticks and Sunbutter\n\nCorn Tortilla Chips\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240417
+DTEND:20240418
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3043
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />String Cheese<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Chicken Noodle Soup<br />Mixed Vegetables<br />Apricots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Cinnamon Bread with butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nString Cheese\n\nCheerios\n\n1% Milk\n\nLunch\n\nChicken Noodle Soup\n\nMixed Vegetables\n\nApricots\n\n1% Milk\n\nSnack\n\nPineapple\n\nCinnamon Bread with butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240418
+DTEND:20240419
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3049
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Oatmeal<br />Bananas<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Spaghetti with meat sauce<br />Romaine Salad with dressing<br />Peaches<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pear Slices<br />Garden Harvest Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nOatmeal\n\nBananas\n\n1% Milk\n\nLunch\n\nSpaghetti with meat sauce\n\nRomaine Salad with dressing\n\nPeaches\n\n1% Milk\n\nSnack\n\nPear Slices\n\nGarden Harvest Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240419
+DTEND:20240420
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3055
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />Toasted Bagels with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Salmon Melt on a Bun<br />Cooked Carrots<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew<br />Graham Crackers<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nToasted Bagels with sunflower butter\n\n1% Milk\n\nLunch\n\nSalmon Melt on a Bun\n\nCooked Carrots\n\nApple Slices\n\n1% Milk\n\nSnack\n\nHoneydew\n\nGraham Crackers\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240422
+DTEND:20240423
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3061
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Toasted Rye Bread with cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Sunbutter and Fruit Spread Sandwiches<br />String Cheese<br />Cucumbers<br />Pear Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Broccoli with ranch<br />Breadsticks<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nToasted Rye Bread with cheese\n\n1% Milk\n\nLunch\n\nSunbutter and Fruit Spread Sandwiches\n\nString Cheese\n\nCucumbers\n\nPear Slices\n\n1% Milk\n\nSnack\n\nBroccoli with ranch\n\nBreadsticks\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240423
+DTEND:20240424
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3067
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Fiesta Chicken with Brown Rice<br />Green Beans<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Zucchini Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nFiesta Chicken with Brown Rice\n\nGreen Beans\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nPineapple\n\nZucchini Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240424
+DTEND:20240425
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3073
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Rice Chex<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Lasagna with beef and cheese<br />Pea Salad<br />Apricots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Strawberries<br />Oatmeal<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nRice Chex\n\n1% Milk\n\nLunch\n\nLasagna with beef and cheese\n\nPea Salad\n\nApricots\n\n1% Milk\n\nSnack\n\nStrawberries\n\nOatmeal\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240425
+DTEND:20240426
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3079
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Toasted Bagel with butter<br />String Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tuna Salad on a Bun<br />Romaine and Green Pepper Salad with dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Blueberry Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nToasted Bagel with butter\n\nString Cheese\n\n1% Milk\n\nLunch\n\nTuna Salad on a Bun\n\nRomaine and Green Pepper Salad with dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nBlueberries\n\nBlueberry Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240426
+DTEND:20240427
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3085
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Toast with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Minestrone Soup<br />Cantaloupe<br />Saltine Crackers<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Banana Oat Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nToast with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nMinestrone Soup\n\nCantaloupe\n\nSaltine Crackers\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nBanana Oat Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240429
+DTEND:20240430
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3091
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Borscht Soup with Beef<br />Mandarin Oranges<br />Saltine Crackers<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cauliflower<br />Carrot Bread<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nBorscht Soup with Beef\n\nMandarin Oranges\n\nSaltine Crackers\n\n1% Milk\n\nSnack\n\nCauliflower\n\nCarrot Bread\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240430
+DTEND:20240501
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3097
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Toasted English Muffin with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Pineapple Tidbits<br />Mashed Red Potatoes<br />Dinner Roll with butter<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Vanilla Yogurt<br />Waffles<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nToasted English Muffin with sunflower butter\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nPineapple Tidbits\n\nMashed Red Potatoes\n\nDinner Roll with butter\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240501
+DTEND:20240502
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3103
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Cinnamon Swirl Toast with butter<br />String Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Stir-Fry with Chicken, Broccoli, Carrots, Green Pepper<br />Brown Rice<br />Peaches<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Strawberries<br />Banana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nCinnamon Swirl Toast with butter\n\nString Cheese\n\n1% Milk\n\nLunch\n\nStir-Fry with Chicken, Broccoli, Carrots, Green Pepper\n\nBrown Rice\n\nPeaches\n\n1% Milk\n\nSnack\n\nStrawberries\n\nBanana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240502
+DTEND:20240503
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3109
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Pizza with Ground Beef and Cheese<br />Romaine Salad with dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Quesadillas with salsa&nbsp;<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nCheerios\n\n1% Milk\n\nLunch\n\nPizza with Ground Beef and Cheese\n\nRomaine Salad with dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nQuesadillas with salsa \n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240503
+DTEND:20240504
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3117
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Classrooms Closed &mdash; Professional Development Day&nbsp;</body></html>
+DESCRIPTION:Classrooms Closed — Professional Development Day 
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240506
+DTEND:20240507
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3128
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Ground Beef Sweet Potato Casserole<br />with Rotini Noodles<br />Grape Halves<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Kiwi and Apple<br />Cheerios<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nGround Beef Sweet Potato Casserole\n\nwith Rotini Noodles\n\nGrape Halves\n\n1% Milk\n\nSnack\n\nKiwi and Apple\n\nCheerios\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240507
+DTEND:20240508
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3133
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Egg and Cheese Burrito with salsa<br />Romaine Salad with dressing<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Garden Harvest Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nWaffles\n\n1% Milk\n\nLunch\n\nEgg and Cheese Burrito with salsa\n\nRomaine Salad with dressing\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nPineapple\n\nGarden Harvest Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240508
+DTEND:20240509
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3139
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Diced Peaches<br />Toasted English Muffin with Sliced Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Homemade Chicken Corn Chowder<br />Orange Slices<br />Dinner Roll with butter<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers with ranch<br />Corn Tortilla Chip<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nDiced Peaches\n\nToasted English Muffin with Sliced Cheese\n\n1% Milk\n\nLunch\n\nHomemade Chicken Corn Chowder\n\nOrange Slices\n\nDinner Roll with butter\n\n1% Milk\n\nSnack\n\nCucumbers with ranch\n\nCorn Tortilla Chip\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240509
+DTEND:20240510
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3145
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Toast with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Picadillo<br />Brown Rice<br />Apple Slices<br />Baby Carrots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Zunana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nToast with sunflower butter\n\n1% Milk\n\nLunch\n\nPicadillo\n\nBrown Rice\n\nApple Slices\n\nBaby Carrots\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nZunana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240510
+DTEND:20240511
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3151
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Toasted Bread Sticks<br />Cottage Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillets<br />Noodles with butter<br />Mashed Sweet Potato<br />Honeydew<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nToasted Bread Sticks\n\nCottage Cheese\n\n1% Milk\n\nLunch\n\nBaked Cod Fillets\n\nNoodles with butter\n\nMashed Sweet Potato\n\nHoneydew\n\n1% Milk\n\nSnack\n\nMixed Berries\n\nOatmeal\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240513
+DTEND:20240514
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3157
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Chicken Breast<br />Gallo Pinto with Brown Rice<br />Cooked Carrots<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Graham Crackers<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nCheerios\n\n1% Milk\n\nLunch\n\nBaked Chicken Breast\n\nGallo Pinto with Brown Rice\n\nCooked Carrots\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nGraham Crackers\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240514
+DTEND:20240515
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3163
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Taco Pizza with Cheese, Tomato, and Vegetarian Refried Beans<br />Broccoli and Cauliflower Salad<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Celery Sticks with sunflower butter<br />Toasted English Muffin with butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nTaco Pizza with Cheese, Tomato, and Vegetarian Refried Beans\n\nBroccoli and Cauliflower Salad\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nCelery Sticks with sunflower butter\n\nToasted English Muffin with butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240515
+DTEND:20240516
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3169
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pineapple<br />Toasted Bagel with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Sloppy Joes on a Bun<br />Corn<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Baked Oatmeal<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPineapple\n\nToasted Bagel with sunflower butter\n\n1% Milk\n\nLunch\n\nSloppy Joes on a Bun\n\nCorn\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBlueberries\n\nBaked Oatmeal\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240516
+DTEND:20240517
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3175
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />French Toast Sticks<br />Vanilla Yogurt<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Fish Taco with salsa and cheese<br />Romaine Salad with dressing<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Bananas<br />Zunana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nFrench Toast Sticks\n\nVanilla Yogurt\n\n1% Milk\n\nLunch\n\nFish Taco with salsa and cheese\n\nRomaine Salad with dressing\n\nApple Slices\n\n1% Milk\n\nSnack\n\nBananas\n\nZunana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240517
+DTEND:20240518
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3181
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Honeydew<br />Cinnamon Bread<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Ground Beef Stroganoff<br />Steamed Cauliflower<br />Apricots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Broccoli<br />Bread Sticks<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nHoneydew\n\nCinnamon Bread\n\n1% Milk\n\nLunch\n\nGround Beef Stroganoff\n\nSteamed Cauliflower\n\nApricots\n\n1% Milk\n\nSnack\n\nBroccoli\n\nBread Sticks\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240520
+DTEND:20240521
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3187
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Egg and Veggie Bake<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Chicken Breast<br />Egg Noodles with butter<br />Steamed Carrots<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pear Slices<br />Bread Sticks<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nEgg and Veggie Bake\n\n1% Milk\n\nLunch\n\nBaked Chicken Breast\n\nEgg Noodles with butter\n\nSteamed Carrots\n\nApple Slices\n\n1% Milk\n\nSnack\n\nPear Slices\n\nBread Sticks\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240521
+DTEND:20240522
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3193
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Brown Rice Pilaf<br />Sugar Snap Peas<br />Cantaloupe<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Toasted Bagel with sunflower butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nWaffles\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nBrown Rice Pilaf\n\nSugar Snap Peas\n\nCantaloupe\n\n1% Milk\n\nSnack\n\nPineapple\n\nToasted Bagel with sunflower butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240522
+DTEND:20240523
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3199
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Meatloaf<br />Steamed Cauliflower<br />Bread with Butter<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pico de Gallo<br />Corn Tortilla Chips<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nMeatloaf\n\nSteamed Cauliflower\n\nBread with Butter\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nPico de Gallo\n\nCorn Tortilla Chips\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240523
+DTEND:20240524
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3205
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Chicken Salad Roll-Up<br />Spinach Salad with dressing<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers<br />Zucchini Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nChicken Salad Roll-Up\n\nSpinach Salad with dressing\n\nApple Slices\n\n1% Milk\n\nSnack\n\nCucumbers\n\nZucchini Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240524
+DTEND:20240525
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3211
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Rice Chex<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Pinto Bean Soup<br />Mixed Vegetables<br />Dinner Roll with butter<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew<br />Banana Oat Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nRice Chex\n\n1% Milk\n\nLunch\n\nPinto Bean Soup\n\nMixed Vegetables\n\nDinner Roll with butter\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nHoneydew\n\nBanana Oat Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240527
+DTEND:20240528
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3123
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Memorial Day Holiday &mdash; Reach Dane Closed&nbsp;</body></html>
+DESCRIPTION:Memorial Day Holiday — Reach Dane Closed 
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240528
+DTEND:20240529
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3217
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Toasted Cheese Sandwich<br />Tomato Soup<br />Pears<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Toasted Bagel w/ Butter<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nToasted Cheese Sandwich\n\nTomato Soup\n\nPears\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nToasted Bagel w/ Butter\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240529
+DTEND:20240530
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3223
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Bread Stick<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Hamburger on a Bun<br />Mashed Sweet Potato<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Raspberries<br />Vanilla Yogurt<br />Raspberry Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nBread Stick\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nHamburger on a Bun\n\nMashed Sweet Potato\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nRaspberries\n\nVanilla Yogurt\n\nRaspberry Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240530
+DTEND:20240531
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3229
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Rice Chex<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Cheesy Chicken Salsa Bake<br />Romaine Salad with dressing<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Toasted Rye Bread with cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nRice Chex\n\n1% Milk\n\nLunch\n\nCheesy Chicken Salsa Bake\n\nRomaine Salad with dressing\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nToasted Rye Bread with cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240531
+DTEND:20240601
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3236
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Beef and Cheese Casserole<br />Apple Slices<br />Peas<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers<br />Carrot Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nBeef and Cheese Casserole\n\nApple Slices\n\nPeas\n\n1% Milk\n\nSnack\n\nCucumbers\n\nCarrot Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240603
+DTEND:20240604
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3241
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Toasted Bagel with butter<br />Sliced Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Parmesan Chicken<br />Rotini Noodles<br />Green Beans<br />Kiwi and Pear Salad<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew&nbsp;<br />Banana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nToasted Bagel with butter\n\nSliced Cheese\n\n1% Milk\n\nLunch\n\nParmesan Chicken\n\nRotini Noodles\n\nGreen Beans\n\nKiwi and Pear Salad\n\n1% Milk\n\nSnack\n\nHoneydew \n\nBanana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240604
+DTEND:20240605
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3247
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apricots<br />Baked Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tuna Melt on a Bun<br />Spinach Salad with tomato, green pepper, and dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Zucchini Squash Rounds<br />Garden Harvest Bread<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApricots\n\nBaked Oatmeal\n\n1% Milk\n\nLunch\n\nTuna Melt on a Bun\n\nSpinach Salad with tomato, green pepper, and dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nZucchini Squash Rounds\n\nGarden Harvest Bread\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240605
+DTEND:20240606
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3253
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tacos with beef, cheese, refried beans, salsa<br />Corn<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Pancakes<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nTacos with beef, cheese, refried beans, salsa\n\nCorn\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBlueberries\n\nPancakes\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240606
+DTEND:20240607
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3259
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pineapple Tidbits<br />Toasted English Muffin with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Macaroni and Cheese<br />Cooked Carrots<br />Pear Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Bananas<br />Cheerios<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPineapple Tidbits\n\nToasted English Muffin with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nBaked Macaroni and Cheese\n\nCooked Carrots\n\nPear Slices\n\n1% Milk\n\nSnack\n\nBananas\n\nCheerios\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240607
+DTEND:20240608
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3265
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />French Toast Sticks<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Chicken and Broccoli Dijon<br />Brown Rice<br />Cantaloupe<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Applesauce<br />Cornbread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nFrench Toast Sticks\n\n1% Milk\n\nLunch\n\nChicken and Broccoli Dijon\n\nBrown Rice\n\nCantaloupe\n\n1% Milk\n\nSnack\n\nApplesauce\n\nCornbread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240610
+DTEND:20240611
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3271
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Cantaloupe<br />Toasted English Muffin with butter<br />Cottage Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Chicken Breast<br />Brown Rice with Potatoes, Carrots, Onions, and Tomatoes<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots with ranch<br />Saltine Crackers<br />Sliced Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nCantaloupe\n\nToasted English Muffin with butter\n\nCottage Cheese\n\n1% Milk\n\nLunch\n\nBaked Chicken Breast\n\nBrown Rice with Potatoes, Carrots, Onions, and Tomatoes\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBaby Carrots with ranch\n\nSaltine Crackers\n\nSliced Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240611
+DTEND:20240612
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3277
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Scrambled Eggs<br />Toast with Butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Black Bean Chili with Cheddar Cheese<br />Fruit Cocktail<br />Cornbread<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Celery Sticks and Sunbutter<br />Corn Tortilla Chips<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nScrambled Eggs\n\nToast with Butter\n\n1% Milk\n\nLunch\n\nBlack Bean Chili with Cheddar Cheese\n\nFruit Cocktail\n\nCornbread\n\n1% Milk\n\nSnack\n\nCelery Sticks and Sunbutter\n\nCorn Tortilla Chips\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240612
+DTEND:20240613
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3283
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />String Cheese<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Chicken Noodle Soup<br />Mixed Vegetables<br />Apricots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Toasted Cinnamon Bread with butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nString Cheese\n\nCheerios\n\n1% Milk\n\nLunch\n\nChicken Noodle Soup\n\nMixed Vegetables\n\nApricots\n\n1% Milk\n\nSnack\n\nPineapple\n\nToasted Cinnamon Bread with butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240613
+DTEND:20240614
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3289
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Oatmeal<br />Bananas<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Spaghetti with meat sauce<br />Romaine Salad with dressing<br />Peaches<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pear Slices<br />Garden Harvest Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nOatmeal\n\nBananas\n\n1% Milk\n\nLunch\n\nSpaghetti with meat sauce\n\nRomaine Salad with dressing\n\nPeaches\n\n1% Milk\n\nSnack\n\nPear Slices\n\nGarden Harvest Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240614
+DTEND:20240615
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3295
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />Toasted Bagels with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Salmon Melt on a Bun<br />Cooked Carrots<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew<br />Graham Crackers<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nToasted Bagels with sunflower butter\n\n1% Milk\n\nLunch\n\nSalmon Melt on a Bun\n\nCooked Carrots\n\nApple Slices\n\n1% Milk\n\nSnack\n\nHoneydew\n\nGraham Crackers\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240617
+DTEND:20240618
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3307
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Toasted Rye Bread with cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Sunbutter and Fruit Spread Sandwiches<br />String Cheese<br />Cucumbers<br />Pear Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Broccoli with ranch<br />Breadsticks<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nToasted Rye Bread with cheese\n\n1% Milk\n\nLunch\n\nSunbutter and Fruit Spread Sandwiches\n\nString Cheese\n\nCucumbers\n\nPear Slices\n\n1% Milk\n\nSnack\n\nBroccoli with ranch\n\nBreadsticks\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240618
+DTEND:20240619
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3313
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Fiesta Chicken with Brown Rice<br />Green Beans<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Zucchini Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nFiesta Chicken with Brown Rice\n\nGreen Beans\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nPineapple\n\nZucchini Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240619
+DTEND:20240620
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3303
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Juneteenth Holiday &mdash; Reach Dane Closed</body></html>
+DESCRIPTION:Juneteenth Holiday — Reach Dane Closed
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240620
+DTEND:20240621
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3319
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Toasted Bagel with butter<br />String Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tuna Salad on a Bun<br />Romaine and Green Pepper Salad with dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Blueberry Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nToasted Bagel with butter\n\nString Cheese\n\n1% Milk\n\nLunch\n\nTuna Salad on a Bun\n\nRomaine and Green Pepper Salad with dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nBlueberries\n\nBlueberry Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240621
+DTEND:20240622
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3325
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Toast with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Minestrone Soup<br />Cantaloupe<br />Saltine Crackers<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Banana Oat Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nToast with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nMinestrone Soup\n\nCantaloupe\n\nSaltine Crackers\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nBanana Oat Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240624
+DTEND:20240625
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3331
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Borscht Soup with Beef<br />Mandarin Oranges<br />Saltine Crackers<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cauliflower<br />Carrot Bread<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nBorscht Soup with Beef\n\nMandarin Oranges\n\nSaltine Crackers\n\n1% Milk\n\nSnack\n\nCauliflower\n\nCarrot Bread\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240625
+DTEND:20240626
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3337
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Toasted English Muffin with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Pineapple Tidbits<br />Mashed Red Potatoes<br />Dinner Roll with butter<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Vanilla Yogurt<br />Waffles<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nToasted English Muffin with sunflower butter\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nPineapple Tidbits\n\nMashed Red Potatoes\n\nDinner Roll with butter\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240626
+DTEND:20240627
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3343
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Cinnamon Swirl Toast with butter<br />String Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Stir-Fry with Chicken, Broccoli, Carrots, Green Pepper<br />Brown Rice<br />Peaches<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Strawberries<br />Banana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nCinnamon Swirl Toast with butter\n\nString Cheese\n\n1% Milk\n\nLunch\n\nStir-Fry with Chicken, Broccoli, Carrots, Green Pepper\n\nBrown Rice\n\nPeaches\n\n1% Milk\n\nSnack\n\nStrawberries\n\nBanana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240627
+DTEND:20240628
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3349
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Pizza with Ground Beef and Cheese<br />Romaine Salad with dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Quesadillas with salsa&nbsp;<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nCheerios\n\n1% Milk\n\nLunch\n\nPizza with Ground Beef and Cheese\n\nRomaine Salad with dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nQuesadillas with salsa \n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240628
+DTEND:20240629
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3355
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Fruit Cocktail<br />Toasted Bagel with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Parmesan Chicken with Rotini<br />Peas<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baked Zucchini Squash<br />Townhouse Crackers<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nFruit Cocktail\n\nToasted Bagel with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nParmesan Chicken with Rotini\n\nPeas\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBaked Zucchini Squash\n\nTownhouse Crackers\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240701
+DTEND:20240702
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3361
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Ground Beef Sweet Potato Casserole<br />with Rotini Noodles<br />Grape Halves<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Kiwi and Apple<br />Cheerios<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nGround Beef Sweet Potato Casserole\n\nwith Rotini Noodles\n\nGrape Halves\n\n1% Milk\n\nSnack\n\nKiwi and Apple\n\nCheerios\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240702
+DTEND:20240703
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3367
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Egg and Cheese Burrito with salsa<br />Romaine Salad with dressing<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Garden Harvest Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nWaffles\n\n1% Milk\n\nLunch\n\nEgg and Cheese Burrito with salsa\n\nRomaine Salad with dressing\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nPineapple\n\nGarden Harvest Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240703
+DTEND:20240704
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3375
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Classrooms Closed &mdash; 4th of July Observed&nbsp;</body></html>
+DESCRIPTION:Classrooms Closed — 4th of July Observed 
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240704
+DTEND:20240705
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3381
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Reach Dane Closed &mdash; 4th of July Holiday&nbsp;</body></html>
+DESCRIPTION:Reach Dane Closed — 4th of July Holiday 
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240705
+DTEND:20240706
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3387
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Classrooms Closed &mdash; 4th of July Observed&nbsp;</body></html>
+DESCRIPTION:Classrooms Closed — 4th of July Observed 
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240708
+DTEND:20240709
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3391
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Chicken Breast<br />Gallo Pinto with Brown Rice<br />Cooked Carrots<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Graham Crackers<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nCheerios\n\n1% Milk\n\nLunch\n\nBaked Chicken Breast\n\nGallo Pinto with Brown Rice\n\nCooked Carrots\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nGraham Crackers\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240709
+DTEND:20240710
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3397
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Taco Pizza with Cheese, Tomato, and Vegetarian Refried Beans<br />Broccoli and Cauliflower Salad<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Celery Sticks with sunflower butter<br />Toasted English Muffin with butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nTaco Pizza with Cheese, Tomato, and Vegetarian Refried Beans\n\nBroccoli and Cauliflower Salad\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nCelery Sticks with sunflower butter\n\nToasted English Muffin with butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240710
+DTEND:20240711
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3403
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pineapple<br />Toasted Bagel with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Sloppy Joes on a Bun<br />Corn<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Baked Oatmeal<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPineapple\n\nToasted Bagel with sunflower butter\n\n1% Milk\n\nLunch\n\nSloppy Joes on a Bun\n\nCorn\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBlueberries\n\nBaked Oatmeal\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240711
+DTEND:20240712
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3409
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />French Toast Sticks<br />Vanilla Yogurt<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Fish Taco with salsa and cheese<br />Romaine Salad with dressing<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Bananas<br />Zunana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nFrench Toast Sticks\n\nVanilla Yogurt\n\n1% Milk\n\nLunch\n\nFish Taco with salsa and cheese\n\nRomaine Salad with dressing\n\nApple Slices\n\n1% Milk\n\nSnack\n\nBananas\n\nZunana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240712
+DTEND:20240713
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3415
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Honeydew<br />Cinnamon Bread<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Ground Beef Stroganoff<br />Steamed Cauliflower<br />Apricots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Broccoli<br />Bread Sticks<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nHoneydew\n\nCinnamon Bread\n\n1% Milk\n\nLunch\n\nGround Beef Stroganoff\n\nSteamed Cauliflower\n\nApricots\n\n1% Milk\n\nSnack\n\nBroccoli\n\nBread Sticks\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240715
+DTEND:20240716
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3421
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Egg and Veggie Bake<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Chicken Breast<br />Egg Noodles with butter<br />Steamed Carrots<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pear Slices<br />Bread Sticks<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nEgg and Veggie Bake\n\n1% Milk\n\nLunch\n\nBaked Chicken Breast\n\nEgg Noodles with butter\n\nSteamed Carrots\n\nApple Slices\n\n1% Milk\n\nSnack\n\nPear Slices\n\nBread Sticks\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240716
+DTEND:20240717
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3427
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Brown Rice Pilaf<br />Sugar Snap Peas<br />Cantaloupe<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Toasted Bagel with sunflower butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nWaffles\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nBrown Rice Pilaf\n\nSugar Snap Peas\n\nCantaloupe\n\n1% Milk\n\nSnack\n\nPineapple\n\nToasted Bagel with sunflower butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240717
+DTEND:20240718
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3433
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Meatloaf<br />Steamed Cauliflower<br />Bread with Butter<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pico de Gallo<br />Corn Tortilla Chips<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nMeatloaf\n\nSteamed Cauliflower\n\nBread with Butter\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nPico de Gallo\n\nCorn Tortilla Chips\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240718
+DTEND:20240719
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3439
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Chicken Salad Roll-Up<br />Spinach Salad with dressing<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers<br />Zucchini Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nChicken Salad Roll-Up\n\nSpinach Salad with dressing\n\nApple Slices\n\n1% Milk\n\nSnack\n\nCucumbers\n\nZucchini Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240719
+DTEND:20240720
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3445
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Rice Chex<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Pinto Bean Soup<br />Mixed Vegetables<br />Dinner Roll with butter<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew<br />Banana Oat Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nRice Chex\n\n1% Milk\n\nLunch\n\nPinto Bean Soup\n\nMixed Vegetables\n\nDinner Roll with butter\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nHoneydew\n\nBanana Oat Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240722
+DTEND:20240723
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3451
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Brown Rice<br />Fruit Cocktail<br />Cabbage Salad<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Kiwi and Pineapple<br />Toasted English Muffin with sunflower butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nPancakes\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nBrown Rice\n\nFruit Cocktail\n\nCabbage Salad\n\n1% Milk\n\nSnack\n\nKiwi and Pineapple\n\nToasted English Muffin with sunflower butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240723
+DTEND:20240724
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3457
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Toasted Cheese Sandwich<br />Tomato Soup<br />Pears<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Toasted Bagel with Butter<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nToasted Cheese Sandwich\n\nTomato Soup\n\nPears\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nToasted Bagel with Butter\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240724
+DTEND:20240725
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3463
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Bread Stick<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Hamburger on a Bun<br />Mashed Sweet Potato<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Raspberries<br />Vanilla Yogurt<br />Raspberry Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nBread Stick\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nHamburger on a Bun\n\nMashed Sweet Potato\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nRaspberries\n\nVanilla Yogurt\n\nRaspberry Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240725
+DTEND:20240726
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3469
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Rice Chex<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Cheesy Chicken Salsa Bake<br />Romaine Salad with dressing<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Toasted Rye Bread with cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nRice Chex\n\n1% Milk\n\nLunch\n\nCheesy Chicken Salsa Bake\n\nRomaine Salad with dressing\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nToasted Rye Bread with cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240726
+DTEND:20240727
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3475
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Beef and Cheese Casserole<br />Apple Slices<br />Peas<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers<br />Carrot Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nBeef and Cheese Casserole\n\nApple Slices\n\nPeas\n\n1% Milk\n\nSnack\n\nCucumbers\n\nCarrot Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240729
+DTEND:20240730
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3481
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Toasted Bagel with butter<br />Sliced Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Parmesan Chicken<br />Rotini Noodles<br />Green Beans<br />Kiwi and Pear Salad<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew&nbsp;<br />Banana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nToasted Bagel with butter\n\nSliced Cheese\n\n1% Milk\n\nLunch\n\nParmesan Chicken\n\nRotini Noodles\n\nGreen Beans\n\nKiwi and Pear Salad\n\n1% Milk\n\nSnack\n\nHoneydew \n\nBanana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240730
+DTEND:20240731
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3487
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apricots<br />Baked Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tuna Melt on a Bun<br />Spinach Salad with tomato, green pepper, and dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Zucchini Squash Rounds<br />Garden Harvest Bread<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApricots\n\nBaked Oatmeal\n\n1% Milk\n\nLunch\n\nTuna Melt on a Bun\n\nSpinach Salad with tomato, green pepper, and dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nZucchini Squash Rounds\n\nGarden Harvest Bread\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240731
+DTEND:20240801
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3493
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Vanilla Yogurt<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tacos with beef, cheese, refried beans, salsa<br />Corn<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Pancakes<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk\n\nLunch\n\nTacos with beef, cheese, refried beans, salsa\n\nCorn\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBlueberries\n\nPancakes\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240801
+DTEND:20240802
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3501
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Classrooms Closed &mdash; Professional Development Day</body></html>
+DESCRIPTION:Classrooms Closed — Professional Development Day
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240802
+DTEND:20240803
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3507
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Classrooms Closed &mdash; Cleaning Day</body></html>
+DESCRIPTION:Classrooms Closed — Cleaning Day
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240805
+DTEND:20240806
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3511
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Cantaloupe<br />Toasted English Muffin with butter<br />Cottage Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Chicken Breast<br />Brown Rice with Potatoes, Carrots, Onions, and Tomatoes<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots with ranch<br />Saltine Crackers<br />Sliced Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nCantaloupe\n\nToasted English Muffin with butter\n\nCottage Cheese\n\n1% Milk\n\nLunch\n\nBaked Chicken Breast\n\nBrown Rice with Potatoes, Carrots, Onions, and Tomatoes\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBaby Carrots with ranch\n\nSaltine Crackers\n\nSliced Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240806
+DTEND:20240807
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3517
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Scrambled Eggs<br />Toast with Butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Black Bean Chili with Cheddar Cheese<br />Fruit Cocktail<br />Cornbread<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Celery Sticks with sunflower butter<br />Corn Tortilla Chips<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nScrambled Eggs\n\nToast with Butter\n\n1% Milk\n\nLunch\n\nBlack Bean Chili with Cheddar Cheese\n\nFruit Cocktail\n\nCornbread\n\n1% Milk\n\nSnack\n\nCelery Sticks with sunflower butter\n\nCorn Tortilla Chips\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240807
+DTEND:20240808
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3523
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />String Cheese<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Chicken Noodle Soup<br />Mixed Vegetables<br />Apricots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Toasted Cinnamon Bread with butter<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nString Cheese\n\nCheerios\n\n1% Milk\n\nLunch\n\nChicken Noodle Soup\n\nMixed Vegetables\n\nApricots\n\n1% Milk\n\nSnack\n\nPineapple\n\nToasted Cinnamon Bread with butter\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240808
+DTEND:20240809
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3529
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Oatmeal<br />Bananas<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Spaghetti with meat sauce<br />Romaine Salad with dressing<br />Peaches<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pear Slices<br />Garden Harvest Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nOatmeal\n\nBananas\n\n1% Milk\n\nLunch\n\nSpaghetti with meat sauce\n\nRomaine Salad with dressing\n\nPeaches\n\n1% Milk\n\nSnack\n\nPear Slices\n\nGarden Harvest Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240809
+DTEND:20240810
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3535
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Strawberries<br />Toasted Bagels with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Salmon Melt on a Bun<br />Cooked Carrots<br />Apple Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Honeydew<br />Graham Crackers<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nStrawberries\n\nToasted Bagels with sunflower butter\n\n1% Milk\n\nLunch\n\nSalmon Melt on a Bun\n\nCooked Carrots\n\nApple Slices\n\n1% Milk\n\nSnack\n\nHoneydew\n\nGraham Crackers\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240812
+DTEND:20240813
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3541
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Toasted Rye Bread with cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Sunflower Butter and Fruit Spread Sandwiches<br />String Cheese<br />Cucumbers<br />Pear Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Broccoli with ranch<br />Breadsticks<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nToasted Rye Bread with cheese\n\n1% Milk\n\nLunch\n\nSunflower Butter and Fruit Spread Sandwiches\n\nString Cheese\n\nCucumbers\n\nPear Slices\n\n1% Milk\n\nSnack\n\nBroccoli with ranch\n\nBreadsticks\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240813
+DTEND:20240814
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3547
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Fiesta Chicken with Brown Rice<br />Green Beans<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Zucchini Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nFiesta Chicken with Brown Rice\n\nGreen Beans\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nPineapple\n\nZucchini Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240814
+DTEND:20240815
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3553
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Rice Chex<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Lasagna with beef and cheese<br />Pea Salad<br />Apricots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Strawberries<br />Oatmeal<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nRice Chex\n\n1% Milk\n\nLunch\n\nLasagna with beef and cheese\n\nPea Salad\n\nApricots\n\n1% Milk\n\nSnack\n\nStrawberries\n\nOatmeal\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240815
+DTEND:20240816
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3559
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Toasted Bagel with butter<br />String Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Tuna Salad on a Bun<br />Romaine and Green Pepper Salad with dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Blueberries<br />Blueberry Muffin<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nToasted Bagel with butter\n\nString Cheese\n\n1% Milk\n\nLunch\n\nTuna Salad on a Bun\n\nRomaine and Green Pepper Salad with dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nBlueberries\n\nBlueberry Muffin\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240816
+DTEND:20240817
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3565
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Peaches<br />Toast with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Minestrone Soup<br />Cantaloupe<br />Saltine Crackers<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Banana Oat Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPeaches\n\nToast with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nMinestrone Soup\n\nCantaloupe\n\nSaltine Crackers\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nBanana Oat Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240819
+DTEND:20240820
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3571
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Borscht Soup with Beef<br />Mandarin Oranges<br />Saltine Crackers<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cauliflower<br />Carrot Bread<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nMixed Berries\n\nOatmeal\n\n1% Milk\n\nLunch\n\nBorscht Soup with Beef\n\nMandarin Oranges\n\nSaltine Crackers\n\n1% Milk\n\nSnack\n\nCauliflower\n\nCarrot Bread\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240820
+DTEND:20240821
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3577
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Apple Slices<br />Toasted English Muffin with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillet<br />Pineapple Tidbits<br />Mashed Red Potatoes<br />Dinner Roll with butter<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Vanilla Yogurt<br />Waffles<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApple Slices\n\nToasted English Muffin with sunflower butter\n\n1% Milk\n\nLunch\n\nBaked Cod Fillet\n\nPineapple Tidbits\n\nMashed Red Potatoes\n\nDinner Roll with butter\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nVanilla Yogurt\n\nWaffles\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240821
+DTEND:20240822
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3583
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Cinnamon Swirl Toast with butter<br />String Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Stir-Fry with Chicken, Broccoli, Carrots, Green Pepper<br />Brown Rice<br />Peaches<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Strawberries<br />Banana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nCinnamon Swirl Toast with butter\n\nString Cheese\n\n1% Milk\n\nLunch\n\nStir-Fry with Chicken, Broccoli, Carrots, Green Pepper\n\nBrown Rice\n\nPeaches\n\n1% Milk\n\nSnack\n\nStrawberries\n\nBanana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240822
+DTEND:20240823
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3589
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Cheerios<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Pizza with Ground Beef and Cheese<br />Romaine Salad with dressing<br />Tropical Fruit<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baby Carrots<br />Quesadillas with salsa&nbsp;<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nCheerios\n\n1% Milk\n\nLunch\n\nPizza with Ground Beef and Cheese\n\nRomaine Salad with dressing\n\nTropical Fruit\n\n1% Milk\n\nSnack\n\nBaby Carrots\n\nQuesadillas with salsa \n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240823
+DTEND:20240824
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3595
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Fruit Cocktail<br />Toasted Bagel with butter<br />Scrambled Eggs<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Parmesan Chicken with Rotini<br />Peas<br />Orange Slices<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Baked Zucchini Squash<br />Townhouse Crackers<br />Cottage Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nFruit Cocktail\n\nToasted Bagel with butter\n\nScrambled Eggs\n\n1% Milk\n\nLunch\n\nParmesan Chicken with Rotini\n\nPeas\n\nOrange Slices\n\n1% Milk\n\nSnack\n\nBaked Zucchini Squash\n\nTownhouse Crackers\n\nCottage Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240826
+DTEND:20240827
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3601
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Blueberries<br />Vanilla Yogurt<br />Pancakes<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Ground Beef Sweet Potato Casserole<br />with Rotini Noodles<br />Grape Halves<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Kiwi and Apple<br />Cheerios<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBlueberries\n\nVanilla Yogurt\n\nPancakes\n\n1% Milk\n\nLunch\n\nGround Beef Sweet Potato Casserole\n\nwith Rotini Noodles\n\nGrape Halves\n\n1% Milk\n\nSnack\n\nKiwi and Apple\n\nCheerios\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240827
+DTEND:20240828
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3607
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Applesauce<br />Waffles<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Egg and Cheese Burrito with salsa<br />Romaine Salad with dressing<br />Fruit Cocktail<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Pineapple<br />Garden Harvest Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nApplesauce\n\nWaffles\n\n1% Milk\n\nLunch\n\nEgg and Cheese Burrito with salsa\n\nRomaine Salad with dressing\n\nFruit Cocktail\n\n1% Milk\n\nSnack\n\nPineapple\n\nGarden Harvest Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240828
+DTEND:20240829
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3613
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Diced Peaches<br />Toasted English Muffin with Sliced Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Homemade Chicken Corn Chowder<br />Orange Slices<br />Dinner Roll with butter<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cucumbers with ranch<br />Corn Tortilla Chip<br />String Cheese<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nDiced Peaches\n\nToasted English Muffin with Sliced Cheese\n\n1% Milk\n\nLunch\n\nHomemade Chicken Corn Chowder\n\nOrange Slices\n\nDinner Roll with butter\n\n1% Milk\n\nSnack\n\nCucumbers with ranch\n\nCorn Tortilla Chip\n\nString Cheese\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240829
+DTEND:20240830
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3619
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Pear Slices<br />Toast with sunflower butter<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Picadillo<br />Brown Rice<br />Apple Slices<br />Baby Carrots<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Cantaloupe<br />Zunana Bread<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nPear Slices\n\nToast with sunflower butter\n\n1% Milk\n\nLunch\n\nPicadillo\n\nBrown Rice\n\nApple Slices\n\nBaby Carrots\n\n1% Milk\n\nSnack\n\nCantaloupe\n\nZunana Bread\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240830
+DTEND:20240831
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3625
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body><u><strong>Breakfast</strong></u><br />Bananas<br />Toasted Bread Sticks<br />Cottage Cheese<br />1% Milk<hr /><u><strong>Lunch</strong></u><br />Baked Cod Fillets<br />Noodles with butter<br />Mashed Sweet Potato<br />Honeydew<br />1% Milk<hr /><u><strong>Snack</strong></u><br />Mixed Berries<br />Oatmeal<br />1% Milk</body></html>
+DESCRIPTION:Breakfast\n\nBananas\n\nToasted Bread Sticks\n\nCottage Cheese\n\n1% Milk\n\nLunch\n\nBaked Cod Fillets\n\nNoodles with butter\n\nMashed Sweet Potato\n\nHoneydew\n\n1% Milk\n\nSnack\n\nMixed Berries\n\nOatmeal\n\n1% Milk
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20240407T111927Z
+DTSTART:20240902
+DTEND:20240903
+SUMMARY:Head Start Menu (ages 3-5)
+UID:3633
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title></head><body>Reach Dane Closed &mdash; Labor Day Holiday</body></html>
+DESCRIPTION:Reach Dane Closed — Labor Day Holiday
+END:VEVENT
+END:VCALENDAR

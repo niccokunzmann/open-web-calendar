@@ -59,6 +59,12 @@ def runner(app):
     return app.test_cli_runner()
 
 
+calendar_files = {}
+for file in os.listdir(CALENDAR_DIRECTORY):
+    with open(os.path.join(CALENDAR_DIRECTORY, file)) as f:
+        calendar_files[file] = f.read()
+
+
 @pytest.fixture()
 def calendar_urls():
     """Mapping the calendar name without .ics to the cached url.
@@ -66,11 +72,23 @@ def calendar_urls():
     The files are located in the CALENDAR_FOLDER.
     """
     mapping = {}
-    for file in os.listdir(CALENDAR_DIRECTORY):
+    for file, content in calendar_files.items():
         url = "http://test.examples.local/" + file
-        with open(os.path.join(CALENDAR_DIRECTORY, file)) as f:
-            cache_url(url, f.read())
+        cache_url(url, content)
         mapping[file] = url
         if file.lower().endswith(".ics"):
             mapping[file[:-4]] = url
+    return mapping
+
+
+@pytest.fixture()
+def calendar_content():
+    """Mapping the calendar name without .ics to the calendar content.
+
+    The files are located in the CALENDAR_FOLDER.
+    """
+    mapping = {}
+    for file, content in calendar_files.items():
+        if file.lower().endswith(".ics"):
+            mapping[file[:-4]] = content
     return mapping

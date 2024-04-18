@@ -8,6 +8,7 @@ import pytz
 from clean_html import clean_html, remove_html
 from collections import defaultdict
 from typing import List
+from urllib.parse import unquote
 
 
 def is_date(date):
@@ -110,7 +111,17 @@ class ConvertToDhtmlx(ConversionStrategy):
 
         HTML is cleaned.
         """
-        return clean_html(calendar_event.get("DESCRIPTION", ""), self.specification)
+        # CMS4Schools.com
+        description = event.get("X-ALT-DESC")
+        if description is None or description.params.get("FMTTYPE") != "text/html":
+            description = event.get("DESCRIPTION", "")
+            altrep = description.params.get("ALTREP")
+            if altrep is not None and "," in altrep:
+                data, content = altrep.split(",", 1)
+                if data == "data:text/html":
+                    # Thunderbird html
+                    description = unquote(content)
+        return clean_html(description, self.specification)
 
     def merge(self):
         return jsonify(self.components)
