@@ -1,0 +1,20 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Open Web Calendar
+Upstream-Contact: Nicco Kunzmann <niccokunzmann@rambler.ru>
+Source: https://github.com/niccokunzmann/open-web-calendar
+
+Files: translations/**.yml
+Copyright: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+License: CC-BY-SA-4.0
+
+Files: features/calendars/*.ics
+Copyright: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+License: CC-BY-SA-4.0
+
+Files: features/*.feature
+Copyright: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+License: GPL-2.0-only
+
+Files: test-requirements.* requirements.* docs-requirements.*
+Copyright: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+License: GPL-2.0-only
