@@ -113,14 +113,15 @@ class ConvertToDhtmlx(ConversionStrategy):
         """
         # CMS4Schools.com
         description = event.get("X-ALT-DESC")
-        if description is None or description.params.get("FMTTYPE") != "text/html":
+        if description is None or not hasattr(description, "params") or description.params.get("FMTTYPE") != "text/html":
             description = event.get("DESCRIPTION", "")
-            altrep = description.params.get("ALTREP")
-            if altrep is not None and "," in altrep:
-                data, content = altrep.split(",", 1)
-                if data == "data:text/html":
-                    # Thunderbird html
-                    description = unquote(content)
+            if hasattr(description, "params"):
+                altrep = description.params.get("ALTREP")
+                if altrep is not None and "," in altrep:
+                    data, content = altrep.split(",", 1)
+                    if data == "data:text/html":
+                        # Thunderbird html
+                        description = unquote(content)
         return clean_html(description, self.specification)
 
     def merge(self):

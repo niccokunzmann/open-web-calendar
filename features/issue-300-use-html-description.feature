@@ -1,15 +1,14 @@
 Feature: I would like to use the HTML style of the event if given.
 
-  Scenario Outline: When I attach a URL to an event, this url is also opening in the target location.
+  Scenario Outline: The links of HTML styled event descriptions change the target.
     Given we add the calendar "event-with-html-markup"
-      And we set the "target" parameter to "<config_target>"
+      And we set the "target" parameter to "<target>"
      When we look at 2024-04-14
       And we click on the event "Link with URLs"
-     Then the link "http://open-web-web-calendar.quelltext.eu/" targets "<link_target>"
-      And the link "http://open-web-web-calendar.quelltext.eu/" opens "http://open-web-web-calendar.quelltext.eu/"
+     Then the link "Examples" targets "<target>"
+      And the link "Examples" opens "https://open-web-calendar.quelltext.eu/templates/"
 
     Examples:
-      | config_target | link_target |
-      |               | _top        |
-      | _self         | _self       |
-      | _blank        | _blank      |
+      | target |
+      | _self  |
+      | _blank |
