@@ -9,6 +9,8 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+- v1.33
+    - Update dependencies
 - v1.32
     - Update Italian translation by albanobattistella
     - Open links in event descriptions in new tab or as configured, see [Issue 287](https://github.com/niccokunzmann/open-web-calendar/issues/287)
