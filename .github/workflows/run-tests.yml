@@ -29,6 +29,9 @@ jobs:
         # run Firefox in iPhone 11 responsive layout
         - python: "3.9"
           tox_env: "web -- -D window=375x812"
+        # Licensing REUSE
+        - python: "3.12"
+          tox_env: "reuse"
     steps:
       - uses: actions/checkout@v3
       - name: Setup Python
