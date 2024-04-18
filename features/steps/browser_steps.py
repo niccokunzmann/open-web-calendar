@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 from urllib.parse import urlencode

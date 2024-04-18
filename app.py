@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
 from flask import Flask, render_template, make_response, request, jsonify, \
     redirect, send_from_directory, Response
 from flask_caching import Cache
