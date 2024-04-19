@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
 """Use the HTML description where given.
 
 See https://github.com/niccokunzmann/open-web-calendar/issues/300

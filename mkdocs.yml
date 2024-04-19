@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Open Web Calendar
 # site url, see https://www.mkdocs.org/user-guide/configuration/#site_url
@@ -142,6 +146,7 @@ nav:
     - dev/index.md
     - dev/api.md
     - dev/maintain.md
+    - dev/license.md
   - SECURITY.md
   - changelog.md
   - dunno.md

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 (c) XB Software Ltd.
+//
+// SPDX-License-Identifier: GPL-2.0-only
+
 /*!
  * @license
  * 

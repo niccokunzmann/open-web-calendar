@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
 comments: true
 description: "You can use the hosted version of the Open Web Calendar yourself."
 ---
