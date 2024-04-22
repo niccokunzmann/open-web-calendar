@@ -1,72 +1,706 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://weblate.org/static/style.css" />
-  <link rel="stylesheet" href="https://s.weblate.org/cdn/font-source/source-sans-3.css">
-  <link rel="stylesheet" href="https://s.weblate.org/cdn/font-source/source-code-pro.css">
-
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="Weblate error page." />
-
-  <link rel="image_src" type="image/png" href="https://weblate.org/static/weblate-128.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="https://weblate.org/static/logo-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://weblate.org/static/logo-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://weblate.org/static/weblate-180.png"/>
-  <link rel="mask-icon" href="https://weblate.org/static/weblate-black.svg" color="#144d3f">
-  <meta name="msapplication-TileColor" content="#144d3f">
-  <meta name="msapplication-config" content="https://weblate.org/browserconfig.xml">
-  <link rel="manifest" href="https://weblate.org/site.webmanifest">
-  <meta name="theme-color" content="#144d3f">
-
-  <meta property="og:image" content="https://weblate.org/static/og.png" />
-
-  <script src="https://weblate-cdn.com/a5ba5dc29f39498aa734528a54b50d0a/weblate.js" async></script>
-
-  <title class="l10n">Weblate Server Maintenance</title>
-</head>
-<body class="page light">
-	<div class="line"></div>
-    <header>
-        <div class="row">
-            <div class="logo"><a href="https://weblate.org/">Weblate</a></div>
-        </div>
-    </header>
-
-<section class="content">
-    <div class="row">
-        <div class="wrap">
-            <h1 class="section-title min-m l10n">Maintenance in progress</h1>
-            <div class="page-desc">
-                <p class="l10n">This site is currently down for maintenance.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="465" xml:lang="en">
+<defs>
 
 
-    <footer>
-    	<div class="row">
-        	<a class="f-logo" href="https://weblate.org/">weblate</a>
-			<div class="footicons">
-            	<a href="https://www.linkedin.com/company/weblate/" class="icon icon-in" title="LinkedIn"></a>
-            	<a href="https://twitter.com/WeblateOrg" class="icon icon-tw" title="Twitter"></a>
-            	<a href="https://www.facebook.com/WeblateOrg" class="icon icon-fb" title="Facebook"></a>
-            	<a href="https://github.com/WeblateOrg/weblate" class="icon icon-git" title="GitHub"></a>
-            </div>
+  <style type="text/css">@import url(https://s.weblate.org/cdn/font-source/source-sans-3.css);</style>
 
-            <div class="clear"></div>
-            <div class="footer-center">
-                <a href="https://status.weblate.org/" class="service-status l10n">Service Status</a>
-            </div>
-			<div class="footer-left">
-                Copyright © <a href="https://cihar.com/">Michal Čihař</a> • <a href="https://docs.weblate.org/en/latest/license.html" class="l10n">Licensed GNU GPLv3+</a>
-            </div>
-            <div class="footer-right"><a href="https://weblate.org/terms/" class="l10n">Terms and Privacy</a> • Design by <a href="https://vitavalka.com/">Vita Valka</a></div>
-		</div>
-    </footer>
 
-  </body>
-</html>
+</defs>
+<g id="layer1">
+
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ar/" xlink:title="Arabic">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="20"
+   id="text20">Arabic</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="20"
+   id="percent20">32%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect20"
+   width="48"
+   height="6"
+   x="200"
+   rx="2"
+   y="14" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/be/" xlink:title="Belarusian">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="35"
+   id="text35">Belarusian</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="35"
+   id="percent35">35%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect35"
+   width="52"
+   height="6"
+   x="200"
+   rx="2"
+   y="29" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ca/" xlink:title="Catalan">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="50"
+   id="text50">Catalan</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="50"
+   id="percent50">29%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect50"
+   width="43"
+   height="6"
+   x="200"
+   rx="2"
+   y="44" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/zh_Hans/" xlink:title="Chinese (Simplified)">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="65"
+   id="text65">Chinese (Simplified)</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="65"
+   id="percent65">81%</text>
+<rect
+   style="fill:#38f;fill-opacity:1;stroke:none"
+   id="rect65"
+   width="122"
+   height="6"
+   x="200"
+   rx="2"
+   y="59" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/hr/" xlink:title="Croatian">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="80"
+   id="text80">Croatian</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="80"
+   id="percent80">100%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect80"
+   width="150"
+   height="6"
+   x="200"
+   rx="2"
+   y="74" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/cs/" xlink:title="Czech">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="95"
+   id="text95">Czech</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="95"
+   id="percent95">35%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect95"
+   width="53"
+   height="6"
+   x="200"
+   rx="2"
+   y="89" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/da/" xlink:title="Danish">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="110"
+   id="text110">Danish</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="110"
+   id="percent110">24%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect110"
+   width="36"
+   height="6"
+   x="200"
+   rx="2"
+   y="104" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/nl/" xlink:title="Dutch">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="125"
+   id="text125">Dutch</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="125"
+   id="percent125">23%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect125"
+   width="35"
+   height="6"
+   x="200"
+   rx="2"
+   y="119" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/en/" xlink:title="English">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="140"
+   id="text140">English</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="140"
+   id="percent140">100%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect140"
+   width="150"
+   height="6"
+   x="200"
+   rx="2"
+   y="134" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/fi/" xlink:title="Finnish">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="155"
+   id="text155">Finnish</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="155"
+   id="percent155">61%</text>
+<rect
+   style="fill:#38f;fill-opacity:1;stroke:none"
+   id="rect155"
+   width="92"
+   height="6"
+   x="200"
+   rx="2"
+   y="149" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/fr/" xlink:title="French">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="170"
+   id="text170">French</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="170"
+   id="percent170">85%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect170"
+   width="127"
+   height="6"
+   x="200"
+   rx="2"
+   y="164" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/de/" xlink:title="German">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="185"
+   id="text185">German</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="185"
+   id="percent185">100%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect185"
+   width="150"
+   height="6"
+   x="200"
+   rx="2"
+   y="179" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/el/" xlink:title="Greek">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="200"
+   id="text200">Greek</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="200"
+   id="percent200">35%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect200"
+   width="52"
+   height="6"
+   x="200"
+   rx="2"
+   y="194" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/he/" xlink:title="Hebrew">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="215"
+   id="text215">Hebrew</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="215"
+   id="percent215">40%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect215"
+   width="60"
+   height="6"
+   x="200"
+   rx="2"
+   y="209" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/hu/" xlink:title="Hungarian">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="230"
+   id="text230">Hungarian</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="230"
+   id="percent230">28%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect230"
+   width="42"
+   height="6"
+   x="200"
+   rx="2"
+   y="224" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/id/" xlink:title="Indonesian">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="245"
+   id="text245">Indonesian</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="245"
+   id="percent245">87%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect245"
+   width="130"
+   height="6"
+   x="200"
+   rx="2"
+   y="239" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/it/" xlink:title="Italian">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="260"
+   id="text260">Italian</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="260"
+   id="percent260">100%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect260"
+   width="150"
+   height="6"
+   x="200"
+   rx="2"
+   y="254" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ja/" xlink:title="Japanese">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="275"
+   id="text275">Japanese</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="275"
+   id="percent275">35%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect275"
+   width="52"
+   height="6"
+   x="200"
+   rx="2"
+   y="269" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/nb_NO/" xlink:title="Norwegian Bokmål">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="290"
+   id="text290">Norwegian Bokmål</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="290"
+   id="percent290">90%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect290"
+   width="135"
+   height="6"
+   x="200"
+   rx="2"
+   y="284" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/pl/" xlink:title="Polish">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="305"
+   id="text305">Polish</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="305"
+   id="percent305">49%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect305"
+   width="73"
+   height="6"
+   x="200"
+   rx="2"
+   y="299" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/pt/" xlink:title="Portuguese">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="320"
+   id="text320">Portuguese</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="320"
+   id="percent320">31%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect320"
+   width="47"
+   height="6"
+   x="200"
+   rx="2"
+   y="314" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ro/" xlink:title="Romanian">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="335"
+   id="text335">Romanian</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="335"
+   id="percent335">25%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect335"
+   width="38"
+   height="6"
+   x="200"
+   rx="2"
+   y="329" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ru/" xlink:title="Russian">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="350"
+   id="text350">Russian</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="350"
+   id="percent350">55%</text>
+<rect
+   style="fill:#38f;fill-opacity:1;stroke:none"
+   id="rect350"
+   width="83"
+   height="6"
+   x="200"
+   rx="2"
+   y="344" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/si/" xlink:title="Sinhala">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="365"
+   id="text365">Sinhala</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="365"
+   id="percent365">25%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect365"
+   width="37"
+   height="6"
+   x="200"
+   rx="2"
+   y="359" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/sk/" xlink:title="Slovak">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="380"
+   id="text380">Slovak</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="380"
+   id="percent380">50%</text>
+<rect
+   style="fill:#38f;fill-opacity:1;stroke:none"
+   id="rect380"
+   width="75"
+   height="6"
+   x="200"
+   rx="2"
+   y="374" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/es/" xlink:title="Spanish">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="395"
+   id="text395">Spanish</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="395"
+   id="percent395">100%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect395"
+   width="150"
+   height="6"
+   x="200"
+   rx="2"
+   y="389" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/sv/" xlink:title="Swedish">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="410"
+   id="text410">Swedish</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="410"
+   id="percent410">25%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect410"
+   width="37"
+   height="6"
+   x="200"
+   rx="2"
+   y="404" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/tr/" xlink:title="Turkish">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="425"
+   id="text425">Turkish</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="425"
+   id="percent425">100%</text>
+<rect
+   style="fill:#2eccaa;fill-opacity:1;stroke:none"
+   id="rect425"
+   width="150"
+   height="6"
+   x="200"
+   rx="2"
+   y="419" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/uk/" xlink:title="Ukrainian">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="440"
+   id="text440">Ukrainian</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="440"
+   id="percent440">35%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect440"
+   width="52"
+   height="6"
+   x="200"
+   rx="2"
+   y="434" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/cy/" xlink:title="Welsh">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="455"
+   id="text455">Welsh</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="455"
+   id="percent455">45%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect455"
+   width="67"
+   height="6"
+   x="200"
+   rx="2"
+   y="449" />
+</a>
+
+
+</g>
+</svg>
+
+
