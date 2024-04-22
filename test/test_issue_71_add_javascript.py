@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+"""Test adding JavaScript to the calendar.
+
+This allows people to
+- add DHTMLX scheduler customizations
+- configure the scheduler themselves
+"""
+import pytest
+
+@pytest.mark.parametrize(
+    "query,tags",
+    [
+        ("?javascript_url=https://tippi.js/embed.js", ['<script src="https://tippi.js/embed.js"']),
+        ("?javascript_url=/feature1.js&javascript_url=/feature2.js", ['<script src="/feature1.js"', '<script src="/feature2.js"']),
+    ]
+)
+def test_embed_js_link(client, query, tags):
+    """Check that the JS links are used."""
+    response = client.get(f"/calendar.html{query}")
+    for html in tags:
+        assert html in response.text

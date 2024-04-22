@@ -41,6 +41,9 @@ SPDX-License-Identifier: GPL-2.0-only
             {% if specification['style-event-status-cancelled'] %}.STATUS-CANCELLED { text-decoration: line-through; }{% endif %}
             {{ specification['css'] | safe }}
         </style>
+        {% for link in specification.javascript_url %}
+        <script src="{{ link | safe }}" charset="utf-8"></script>
+        {% endfor %}
     </head>
     <body>
         <div id="scheduler_here" class="dhx_cal_container"

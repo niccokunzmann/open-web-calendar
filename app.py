@@ -158,7 +158,7 @@ def get_specification(query=None):
                 value[i] = False
             elif value[i] in ("true", "True"):
                 value[i] = True
-        if len(value) == 1:
+        if len(value) == 1 and type(specification.get(parameter)) != list:
             value = value[0]
         specification[parameter] = value
     return specification

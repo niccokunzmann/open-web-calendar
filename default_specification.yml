@@ -153,6 +153,16 @@ style-event-status-tentative: false
 style-event-status-confirmed: false
 style-event-status-cancelled: false
 
+## This adds JavaScript to the calendar.
+## You can add JavaScript directly or as a link.
+## Please note that there might be no guarantees when it comes to your code working.
+## We recommend adding your feature to the project and testing them to make
+## sure that they are maintained in the future.
+## I.e. add a checkbox to activate your script.
+javascript: ""
+## The linked JavaScript documents are expected to be UTF-8 encoded.
+javascript_url: []
+
 ###################### Clean HTML ######################
 ##
 ## Clean HTML removes possibilities of hacking your site.
