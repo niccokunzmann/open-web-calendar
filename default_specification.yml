@@ -90,6 +90,8 @@ skin: "dhtmlxscheduler_material.css"
 
 ## You can embed custom css code, i.e. to change the background or font.
 css: ""
+## You can also specify one or more urls to style sheets.
+css_url: []
 
 ## The target is the place where links are opened.
 ## "_top" opens the link where the website is embedded.
