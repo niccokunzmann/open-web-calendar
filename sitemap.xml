@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://open-web-calendar.quelltext.eu/index.de/</loc>
+         <lastmod>2024-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://open-web-calendar.quelltext.eu/templates/</loc>
          <lastmod>2024-04-23</lastmod>
          <changefreq>daily</changefreq>
