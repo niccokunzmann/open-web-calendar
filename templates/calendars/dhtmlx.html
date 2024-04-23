@@ -22,13 +22,16 @@ SPDX-License-Identifier: GPL-2.0-only
             charset="utf-8"></script>
         <script src="js/common.js"
             charset="utf-8"></script>
-        <link href="css/dhtmlx/{{ specification['skin'] | safe }}"
+        <link href="css/dhtmlx/{{ specification.skin }}"
             rel="stylesheet" type="text/css" charset="utf-8">
         <link href="css/dhtmlx/style.css"
             rel="stylesheet" type="text/css" charset="utf-8">
-        <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
+        <link rel="icon" type="image/x-icon" href="{{ specification.favicon }}">
         <!-- see https://docs.dhtmlx.com/scheduler/localization.html -->
-        <script src="locale_{{ specification['language'] | safe }}.js" charset="utf-8"></script>
+        <script src="locale_{{ specification['language'] }}.js" charset="utf-8"></script>
+        {% for link in specification.css_url %}
+        <link href="{{ link }}" rel="stylesheet" type="text/css" charset="utf-8">
+        {% endfor %}
         <style>
             html, body{
                 margin:0px;
@@ -39,8 +42,12 @@ SPDX-License-Identifier: GPL-2.0-only
             {% if specification['style-event-status-tentative'] %}.STATUS-TENTATIVE { font-style: italic; }{% endif %}
             {% if specification['style-event-status-confirmed'] %}.event { font-weight: normal; } .STATUS-CONFIRMED { font-weight: bold; }{% endif %}
             {% if specification['style-event-status-cancelled'] %}.STATUS-CANCELLED { text-decoration: line-through; }{% endif %}
-            {{ specification['css'] | safe }}
+            {{ specification['css'] }}
         </style>
+        {% for link in specification.javascript_url %}
+        <script src="{{ link }}" charset="utf-8"></script>
+        {% endfor %}
+        <script type="text/javascript">{{ specification.javascript }}</script>
     </head>
     <body>
         <div id="scheduler_here" class="dhx_cal_container"
