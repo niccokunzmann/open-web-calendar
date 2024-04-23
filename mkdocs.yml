@@ -47,14 +47,14 @@ theme:
   font:
     text: Ubuntu
     code: Ubuntu Mono
-  language: en
+  # language: en
   # logo, see https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
   logo: assets/img/logo/owc.svg
   favicon: assets/img/logo/owc.svg
   # instant loading, see https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
   features:
-    - navigation.instant
-    - navigation.instant.prefetch
+    # - navigation.instant
+    # - navigation.instant.prefetch
     - header.autohide
     - announce.dismiss
     - navigation.footer
@@ -65,6 +65,7 @@ theme:
   # theme, see
   name: material
   custom_dir: docs/overrides
+
 plugins:
   # privacy, see https://squidfunk.github.io/mkdocs-material/plugins/privacy/
   - privacy # asset filtering can be circumvented by html escaping the content
@@ -76,7 +77,8 @@ plugins:
 #  - offline
   - social
   # blog, see https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
-  - blog
+  # incompatible with translation
+#  - blog
 #      authors_profiles: true # sponsors only
   - rss:
       match_path: blog/posts/.*
@@ -85,26 +87,32 @@ plugins:
       categories:
         - categories
         - tags
-      enabled: !ENV [CI, false]
 #  - tags\
-  # git revision, see https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
-  - git-revision-date-localized:
-      enable_creation_date: true
   # markdownextradata, see https://github.com/rosscdh/mkdocs-markdownextradata-plugin
   - markdownextradata
   # macros, see https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/
   - macros
   # meta description, see https://github.com/prcr/mkdocs-meta-descriptions-plugin
   - meta-descriptions
+  - i18n:
+      reconfigure_material: true
+      languages:
+        - locale: en
+          name: English
+          default: true
+        - locale: de
+          name: Deutsch
+          nav_translations:
+            Hosting: Aufsetzen
+            Development: Entwicklung
+            News: Neuigkeiten
+
+  # git revision, see https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
+  - git-revision-date-localized:
+      enable_creation_date: true
+
 
 extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
-  alternate:
-    - name: English
-      link: /en/
-      lang: en
-    - name: Deutsch
-      link: /de/
-      lang: de
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/niccokunzmann/open-web-calendar/
@@ -137,7 +145,8 @@ nav:
   - index.md
   - templates.md
   - contributing.md
-  - blog/index.md
+  - News:
+    - news/2024-04-10-website.md
   - Hosting:
     - host/hosted.md
     - host/self.md
