@@ -25,13 +25,13 @@ jobs:
         # see https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
         include:
         # run Firefox
-        - python: "3.9"
+        - python: "3.11"
           tox_env: web
         # run Chrome
-        - python: "3.9"
+        - python: "3.11"
           tox_env: "web -- -D browser=chrome"
         # run Firefox in iPhone 11 responsive layout
-        - python: "3.9"
+        - python: "3.11"
           tox_env: "web -- -D window=375x812"
         # Licensing REUSE
         - python: "3.12"
