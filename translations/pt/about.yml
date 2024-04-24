@@ -1,1 +1,9 @@
-{}
+links-edit: Editar uma cópia do calendário.
+timezone-browser: 'Este é o fuso horário do seu dispositivo:'
+timezone-choice: 'Pode efetuar a alteração do fuso horário do calendário aqui:'
+description: Aqui encontrará mais informações sobre o calendário. Verifique as hiperligações
+  abaixo para utilizar o calendário de outras formas.
+links-ics: Utilize este link para subscrever ao calendário ou para adicionar os eventos
+  ao seu calendário pessoal.
+project-title: Sobre o projeto "Open Web Calendar"
+license: Licença
