@@ -10,7 +10,7 @@ description: "Was ist Möglich - probier es aus!"
 
 ![](assets/img/logo/github-social-preview.svg)
 
-Eine hoch-flexible Kalenderanzeige für Deine Webseite.
+Eine hoch flexible Kalenderanzeige für Deine Webseite.
 
 Passe den Kalender in wenigen Minuten an deine Bedürfnisse an!
 

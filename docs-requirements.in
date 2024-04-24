@@ -1,0 +1,9 @@
+mkdocs-material
+mkdocs-rss-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-material[imaging]
+mkdocs-markdownextradata-plugin
+mkdocs-macros-plugin
+mkdocs[i18n]
+mkdocs-meta-descriptions-plugin
+mkdocs-static-i18n[material]

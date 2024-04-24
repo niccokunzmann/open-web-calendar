@@ -15,13 +15,13 @@ This section clarifies how to maintain the project.
 1. Enter your virtual environment. E.g.
 
     ```sh
-    source .tox/py39/bin/activate
+    source .tox/py311/bin/activate
     ```
 
 2. Install all dependencies:
 
     ```sh
-    pip install --upgrade -r requirements.in -r test-requirements.in pip-tools
+    pip install --upgrade -r requirements.in -r test-requirements.in -r docs-requirements.in pip-tools
     ```
 
 3. Fix the dependencies:
@@ -30,6 +30,7 @@ This section clarifies how to maintain the project.
     rm *requirements.txt
     pip-compile --output-file=requirements.txt requirements.in
     pip-compile --output-file=test-requirements.txt test-requirements.in
+    pip-compile --output-file=docs-requirements.txt docs-requirements.in
     ```
 
 4. Create a branch, commit:
