@@ -42,3 +42,16 @@ labels_date: "Data"
 labels_description: "Descrição"
 labels_week_agenda_tab: "Dia"
 language-en: "Portuguese"
+date_month_short_mar: Mar
+date_month_short_jun: Jun
+date_month_short_jul: Jul
+date_month_short_jan: Jan
+date_month_short_nov: Nov
+labels_next: Próximo
+labels_prev: Anterior
+labels_year: Ano
+labels_month: Mês
+labels_day: Dia
+labels_hour: Hora
+labels_minute: Minuto
+language: Inglês
