@@ -2,196 +2,196 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://open-web-calendar.quelltext.eu/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/SECURITY/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/SECURITY/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/SECURITY/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/changelog/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/changelog/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/changelog/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/contributing/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/contributing/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/contributing/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/dunno/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dunno/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dunno/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/templates/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/templates/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/templates/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/dev/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dev/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dev/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/dev/api/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dev/api/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dev/api/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/dev/license/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dev/license/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dev/license/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/dev/maintain/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dev/maintain/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dev/maintain/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/host/docker/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/host/docker/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/host/docker/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/host/hosted/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/host/hosted/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/host/hosted/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/host/self/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/host/self/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/host/self/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/news/2024-04-10-website/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/news/2024-04-10-website/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/news/2024-04-10-website/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/SECURITY/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/SECURITY/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/SECURITY/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/changelog/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/changelog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/changelog/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/contributing/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/contributing/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/contributing/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/dunno/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dunno/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dunno/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/templates/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/templates/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/templates/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/dev/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dev/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dev/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/dev/api/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dev/api/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dev/api/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/dev/license/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dev/license/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dev/license/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/dev/maintain/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/dev/maintain/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/dev/maintain/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/host/docker/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/host/docker/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/host/docker/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/host/hosted/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/host/hosted/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/host/hosted/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/host/self/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/host/self/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/host/self/"/>
     </url>
     <url>
         <loc>https://open-web-calendar.quelltext.eu/de/news/2024-04-10-website/</loc>
-        <lastmod>2024-04-25</lastmod>
+        <lastmod>2024-05-02</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/news/2024-04-10-website/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/news/2024-04-10-website/"/>
