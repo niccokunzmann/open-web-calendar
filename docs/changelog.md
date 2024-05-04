@@ -19,6 +19,8 @@ The latest version might not be released, yet.
     - Use calendar feeds from alternate links to "text/calendar" content, see [Issue 309](https://github.com/niccokunzmann/open-web-calendar/issues/309)
     - Use HTML description from various sources, see [Issue 300](https://github.com/niccokunzmann/open-web-calendar/issues/300)
     - Allow JavaScript customization of the calendar, see [Issue 71](https://github.com/niccokunzmann/open-web-calendar/issues/71)
+    - Improve Portuguese by qeepoo
+    - Increase Python version for Docker to 3.11 
 - v1.32
     - Update Italian translation by albanobattistella
     - Open links in event descriptions in new tab or as configured, see [Issue 287](https://github.com/niccokunzmann/open-web-calendar/issues/287)
