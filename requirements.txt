@@ -70,7 +70,7 @@ soupsieve==2.5
     # via beautifulsoup4
 urllib3==2.2.1
     # via requests
-werkzeug==3.0.2
+werkzeug==3.0.3
     # via flask
 x-wr-timezone==0.0.7
     # via recurring-ical-events
