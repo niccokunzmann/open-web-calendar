@@ -81,7 +81,7 @@ mkdocs-meta-descriptions-plugin==3.0.0
     # via -r docs-requirements.in
 mkdocs-rss-plugin==1.12.2
     # via -r docs-requirements.in
-mkdocs-static-i18n[material]==1.2.2
+mkdocs-static-i18n[material]==1.2.3
     # via -r docs-requirements.in
 packaging==24.0
     # via
