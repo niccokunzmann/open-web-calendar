@@ -65,7 +65,7 @@ mkdocs[i18n]==1.5.3
     #   mkdocs-meta-descriptions-plugin
     #   mkdocs-rss-plugin
     #   mkdocs-static-i18n
-mkdocs-git-revision-date-localized-plugin==1.2.4
+mkdocs-git-revision-date-localized-plugin==1.2.5
     # via -r docs-requirements.in
 mkdocs-macros-plugin==1.0.5
     # via -r docs-requirements.in
