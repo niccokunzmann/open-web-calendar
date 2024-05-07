@@ -11,6 +11,10 @@ version: 2
 updates:
   - package-ecosystem: "pip" # See documentation for possible values
     directory: "/" # Location of package manifests
+    groups:
+      pip-requirements:
+        patterns:
+          - "*"
     schedule:
       interval: "weekly"
   # https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot
