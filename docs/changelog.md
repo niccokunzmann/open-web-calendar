@@ -13,6 +13,8 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+- v1.34
+    - Allow hosters to close the Host Header Injection vulnerability, see [PR 366](https://github.com/niccokunzmann/open-web-calendar/pull/366)
 - v1.33
     - Update dependencies
     - Add alternate link to "text/calendar" content to ease subscribing for other calendars, see [Issue 308](https://github.com/niccokunzmann/open-web-calendar/issues/308)
@@ -20,7 +22,7 @@ The latest version might not be released, yet.
     - Use HTML description from various sources, see [Issue 300](https://github.com/niccokunzmann/open-web-calendar/issues/300)
     - Allow JavaScript customization of the calendar, see [Issue 71](https://github.com/niccokunzmann/open-web-calendar/issues/71)
     - Improve Portuguese by qeepoo
-    - Increase Python version for Docker to 3.11 
+    - Increase Python version for Docker to 3.11
 - v1.32
     - Update Italian translation by albanobattistella
     - Open links in event descriptions in new tab or as configured, see [Issue 287](https://github.com/niccokunzmann/open-web-calendar/issues/287)
