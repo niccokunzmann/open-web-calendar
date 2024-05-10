@@ -33,7 +33,6 @@ CACHE_REQUESTED_URLS_FOR_SECONDS = int(os.environ.get("CACHE_REQUESTED_URLS_FOR_
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 if ALLOWED_HOSTS == [""]:
     ALLOWED_HOSTS =  []
-print(ALLOWED_HOSTS)
 
 # constants
 HERE = os.path.dirname(__file__) or "."
