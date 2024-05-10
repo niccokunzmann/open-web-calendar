@@ -20,6 +20,8 @@ flask==3.0.3
     # via
     #   -r requirements.in
     #   flask-caching
+flask-allowedhosts==1.2.0
+    # via -r requirements.in
 flask-caching==2.3.0
     # via -r requirements.in
 gunicorn==22.0.0
