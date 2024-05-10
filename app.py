@@ -252,6 +252,14 @@ def unhandledException(error):
     </html>
     """.format(traceback=file.getvalue()), 500 # return error code from https://stackoverflow.com/a/7824605
 
+@app.errorhandler(403)
+def host_not_allowed(error):
+    return render_template(
+        "403.html",
+        hostname=request.host.split(':')[0],
+        allowed_hosts=", ".join(ALLOWED_HOSTS)
+        ), 403
+
 # make serializable for multiprocessing
 #app.__reduce__ = lambda: __name__ + ".app"
 
