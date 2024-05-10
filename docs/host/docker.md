@@ -59,7 +59,7 @@ services:
     ports:
       - '80:80'
     environment:
-      - WORKERS=4
+      - ALLOWED_HOSTS=
     restart: unless-stopped
 ```
 
@@ -109,6 +109,7 @@ services:
       - HTTP_PROXY=socks5h://tor-socks-proxy:9150
       - HTTPS_PROXY=socks5h://tor-socks-proxy:9150
       - ALL_PROXY=socks5h://tor-socks-proxy:9150
+      - ALLOWED_HOSTS=
     # optional: create a private network so OWC cannot access the Internet directly
     networks:
       - no-internet-only-tor
