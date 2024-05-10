@@ -1,4 +1,5 @@
 flask-caching
+flask-allowedhosts
 flask
 icalendar
 requests

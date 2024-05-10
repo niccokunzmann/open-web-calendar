@@ -6,6 +6,7 @@
 
 from flask import Flask, render_template, make_response, request, jsonify, \
     redirect, send_from_directory, Response
+from flask_allowedhosts import limit_hosts
 from flask_caching import Cache
 import json
 import os
@@ -29,6 +30,9 @@ import mimetypes
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600))
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+if ALLOWED_HOSTS == [""]:
+    ALLOWED_HOSTS =  []
 
 # constants
 HERE = os.path.dirname(__file__) or "."
@@ -161,6 +165,7 @@ def get_specification(query=None):
         if len(value) == 1 and type(specification.get(parameter)) != list:
             value = value[0]
         specification[parameter] = value
+
     return specification
 
 
@@ -178,6 +183,7 @@ def render_app_template(template, specification):
     )
 
 @app.route("/calendar.<type>", methods=['GET', 'OPTIONS'])
+@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
 #@cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
 def get_calendar(type):
@@ -211,20 +217,24 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
 
 @app.route("/")
 @app.route("/index.html")
+@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 def serve_index():
     specification = get_specification()
     return render_app_template("index.html", specification)
 
 @app.route("/about.html")
+@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 def serve_about():
     specification = get_specification()
     return render_app_template("about.html", specification)
 
 @app.route("/configuration.js")
+@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 def serve_configuration():
     return make_js_file_response("/* generated */\nconst configuration = {};".format(json.dumps(get_configuration())))
 
 @app.route("/locale_<lang>.js")
+@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 def serve_locale(lang):
     """Serve the locale translations for the web frontend DHTMLX."""
     return make_js_file_response(render_template("locale.js", locale=json.dumps(translate.dhtmlx(lang), indent="  ")))

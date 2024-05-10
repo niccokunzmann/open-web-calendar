@@ -43,14 +43,29 @@ Environment variables only influence the running of the server.
 If you want to change the default design, read the next section.
 These environment variables can be used to configure the service:
 
-- `APP_DEBUG` default `true`, values `true` or `false`, always `false` in the Docker container  
-    Set the debug flag for the app.
+- `ALLOWED_HOSTS` default empty  
+    The hosts divided by comma that the Open Web Calendar permits.
+    This is required to mitigate the Host Header Injection vulnerability.  
+    You will see this text if the host is not allowed:
+
+    > **Forbidden**
+    >
+    > You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
+
+    Examples:
+    
+    - permit one host: `localhost`
+    - permit several hosts: `open-web-calendar.hosted.quelltext.eu,192.168.0.42`
+    - permit all hosts (vulnerable): empty
+
 - `PORT` default `5000`, default `80` in the Docker container  
     The port that the service is running on.
 - `WORKERS` default `4` only for the Docker container  
     The number of parallel workers to handle requests.
 - `CACHE_REQUESTED_URLS_FOR_SECONDS` default `600`  
     Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.
+- `APP_DEBUG` default `true`, values `true` or `false`, always `false` in the Docker container  
+    Set the debug flag for the app.
 
 ## SSRF Protection with a Proxy Server
 
