@@ -30,7 +30,10 @@ import mimetypes
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600))
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+if ALLOWED_HOSTS == [""]:
+    ALLOWED_HOSTS =  []
+print(ALLOWED_HOSTS)
 
 # constants
 HERE = os.path.dirname(__file__) or "."
