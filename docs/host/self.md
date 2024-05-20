@@ -53,7 +53,7 @@ These environment variables can be used to configure the service:
     > You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
 
     Examples:
-    
+
     - permit one host: `localhost`
     - permit several hosts: `open-web-calendar.hosted.quelltext.eu,192.168.0.42`
     - permit all hosts (vulnerable): empty
@@ -66,6 +66,8 @@ These environment variables can be used to configure the service:
     Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.
 - `APP_DEBUG` default `true`, values `true` or `false`, always `false` in the Docker container  
     Set the debug flag for the app.
+
+There are **[more environment variables](https://flask.palletsprojects.com/en/3.0.x/config/)** available to configure the application.
 
 ## SSRF Protection with a Proxy Server
 
