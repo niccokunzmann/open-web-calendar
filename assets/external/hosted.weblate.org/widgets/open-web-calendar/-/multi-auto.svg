@@ -228,11 +228,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="155"
-   id="percent155">10%</text>
+   id="percent155">75%</text>
 <rect
-   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   style="fill:#38f;fill-opacity:1;stroke:none"
    id="rect155"
-   width="15"
+   width="113"
    height="6"
    x="200"
    rx="2"
