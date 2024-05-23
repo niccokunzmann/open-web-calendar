@@ -6,7 +6,8 @@
 
 from flask import Flask, render_template, make_response, request, jsonify, \
     redirect, send_from_directory, Response
-from flask_allowedhosts import limit_hosts
+from flask_allowedhosts import limit_hosts as _limit_hosts
+from flask_allowedhosts.utils import get_real_host
 from flask_caching import Cache
 import json
 import os
@@ -69,6 +70,22 @@ def cache_url(url, text):
         get_text_from_url(url)
     finally:
         del __URL_CACHE[url]
+
+
+def host_denied():
+    """A request has been made with an invalid Host header."""
+    client_ip = request.remote_addr
+    host_name = request.host.split(':')[0]
+    if client_ip != host_name:
+        host_name = get_real_host(client_ip)
+    return render_template(
+        "403.html",
+        hostname=host_name,
+        allowed_hosts=", ".join(ALLOWED_HOSTS)
+        ), 403
+
+
+limit_hosts = _limit_hosts(allowed_hosts=ALLOWED_HOSTS, on_denied=host_denied)
 
 
 @app.after_request
@@ -183,7 +200,7 @@ def render_app_template(template, specification):
     )
 
 @app.route("/calendar.<type>", methods=['GET', 'OPTIONS'])
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@limit_hosts
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
 #@cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
 def get_calendar(type):
@@ -217,24 +234,24 @@ for folder_name in os.listdir(STATIC_FOLDER_PATH):
 
 @app.route("/")
 @app.route("/index.html")
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@limit_hosts
 def serve_index():
     specification = get_specification()
     return render_app_template("index.html", specification)
 
 @app.route("/about.html")
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@limit_hosts
 def serve_about():
     specification = get_specification()
     return render_app_template("about.html", specification)
 
 @app.route("/configuration.js")
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@limit_hosts
 def serve_configuration():
     return make_js_file_response("/* generated */\nconst configuration = {};".format(json.dumps(get_configuration())))
 
 @app.route("/locale_<lang>.js")
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@limit_hosts
 def serve_locale(lang):
     """Serve the locale translations for the web frontend DHTMLX."""
     return make_js_file_response(render_template("locale.js", locale=json.dumps(translate.dhtmlx(lang), indent="  ")))
@@ -261,14 +278,6 @@ def unhandledException(error):
         </body>
     </html>
     """.format(traceback=file.getvalue()), 500 # return error code from https://stackoverflow.com/a/7824605
-
-@app.errorhandler(403)
-def host_not_allowed(error):
-    return render_template(
-        "403.html",
-        hostname=request.host.split(':')[0],
-        allowed_hosts=", ".join(ALLOWED_HOSTS)
-        ), 403
 
 # make serializable for multiprocessing
 #app.__reduce__ = lambda: __name__ + ".app"
