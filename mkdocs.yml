@@ -47,7 +47,7 @@ theme:
   font:
     text: Ubuntu
     code: Ubuntu Mono
-  # language: en
+  language: en
   # logo, see https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
   logo: assets/img/logo/owc.svg
   favicon: assets/img/logo/owc.svg
@@ -59,6 +59,9 @@ theme:
     - announce.dismiss
     - navigation.footer
     - content.action.edit
+#    - navigation.instant
+#    - navigation.tracking
+    - toc.follow
   icon:
     edit: material/pencil
     view: material/eye
@@ -77,16 +80,15 @@ plugins:
 #  - offline
   - social
   # blog, see https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
-  # incompatible with translation
+  # incompatible with translation by i18n
 #  - blog
 #      authors_profiles: true # sponsors only
   - rss:
-      match_path: blog/posts/.*
+      match_path: news/.*
       date_from_meta:
         as_creation: date
       categories:
         - categories
-        - tags
 #  - tags\
   # markdownextradata, see https://github.com/rosscdh/mkdocs-markdownextradata-plugin
   - markdownextradata
@@ -94,30 +96,47 @@ plugins:
   - macros
   # meta description, see https://github.com/prcr/mkdocs-meta-descriptions-plugin
   - meta-descriptions
-  - i18n:
-      reconfigure_material: true
+  # - i18n:
+  #     reconfigure_material: true
+  #     languages:
+  #       - locale: en
+  #         name: English
+  #         default: true
+  #       - locale: de
+  #         name: Deutsch
+  #         nav_translations:
+  #           Hosting: Aufsetzen
+  #           Development: Entwicklung
+  #           News: Neuigkeiten
+
+  - mdpo:
+      locale_dir: ../locale
       languages:
-        - locale: en
-          name: English
-          default: true
-        - locale: de
-          name: Deutsch
-          nav_translations:
-            Hosting: Aufsetzen
-            Development: Entwicklung
-            News: Neuigkeiten
+        - en
+        - de
+      translate:
+        - site_name
+        - site_description
+#        - copyright
+#      min_translated_messages: 50%
 
   # git revision, see https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
-  - git-revision-date-localized:
-      enable_creation_date: true
+#  - git-revision-date-localized:
+#      enable_creation_date: true
+# do not use the language selector
+#  - material-relative-language-selector
 
 
 extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
   social:
+    - icon: fontawesome/solid/globe
+      link: https://open-web-calendar.hosted.quelltext.eu
     - icon: fontawesome/brands/github
       link: https://github.com/niccokunzmann/open-web-calendar/
+      name: GitHub
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/niccokunzmann/open-web-calendar
+      name: Docker
     - icon: fontawesome/brands/mastodon
       link: https://toot.wales/tags/OpenWebCalendar
       name: Nicco Kunzmann
@@ -139,6 +158,14 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
       open_collective: https://opencollective.com/open-web-calendar/
       github_sponsors: https://github.com/sponsors/niccokunzmann
     templates: https://open-web-calendar.quelltext.eu/assets/templates
+
+  # From https://pypi.org/project/mkdocs-mdpo-plugin/
+  alternate:
+    - name: English
+      lang: en
+    - name: Deutsch
+      link: de
+      lang: de
 
 # navigation, see https://www.mkdocs.org/user-guide/configuration/#nav
 nav:
@@ -163,8 +190,15 @@ nav:
 # validation, see https://www.mkdocs.org/user-guide/configuration/#validation
 validation:
   omitted_files: warn
-  absolute_links: warn
-  unrecognized_links: warn
+  absolute_links: info
+  unrecognized_links: info
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    absolute_links: warn
+    unrecognized_links: warn
+    not_found: warn
 
 watch:
   - static/img/logo
