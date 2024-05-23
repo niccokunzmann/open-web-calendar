@@ -14,8 +14,12 @@ These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
 - v1.34
-    -Ensures every HTML document has a lang attribute (html) #347 (https://github.com/niccokunzmann/open-web-calendar/issues/347)
+    - Ensures every HTML document has a lang attribute (html) [Issue 347](https://github.com/niccokunzmann/open-web-calendar/issues/347)
     - Allow hosters to close the Host Header Injection vulnerability, see [PR 366](https://github.com/niccokunzmann/open-web-calendar/pull/366)
+    - Improve documentation and Docker build
+    - Add Esperanto by phlostically
+    - Improve Slovak, Russian, Portuguese, Indonesian by phlostically
+    - Update requirements
 - v1.33
     - Update dependencies
     - Add alternate link to "text/calendar" content to ease subscribing for other calendars, see [Issue 308](https://github.com/niccokunzmann/open-web-calendar/issues/308)
