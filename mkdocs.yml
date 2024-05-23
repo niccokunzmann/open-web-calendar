@@ -110,8 +110,10 @@ plugins:
   #           News: Neuigkeiten
 
   - mdpo:
-      locale_dir: ../locale
+      locale_dir: ../translations
+      lc_messages: true # store all documentation translations separately
       languages:
+        - pot # generate the template files
         - en
         - de
       translate:
