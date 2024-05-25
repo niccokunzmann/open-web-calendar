@@ -33,5 +33,6 @@ jobs:
           git config --global user.name 'OWC Github Actions'
           git config --global user.email 'owc-github-actions@users.noreply.github.com'
           git add translations
-          git commit -m "Update translation files"
-          git push
+          if git commit -m "Update translation files"; then
+            git push
+          fi
