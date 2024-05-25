@@ -61,15 +61,6 @@ msgstr ""
 msgid "Use file name as **slug** like `documentation-index`"
 msgstr ""
 
-msgid "Choose the right `gettext PO file (monolingual)`."
-msgstr ""
-
-msgid ""
-"Set the **Repository browser** to the right URL, replace `index.md`: "
-"`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
-"}}/docs/index.md?plain=1#L{{ line }}`"
-msgstr ""
-
 msgid ""
 "For **Translation license** choose `Create Commons Attribution Share Alike "
 "4.0 International`."
@@ -162,3 +153,54 @@ msgstr ""
 
 msgid "Restrict width and height to 2000px       wzxhzdk:2"
 msgstr ""
+
+msgid "Choose the right File settings:"
+msgstr ""
+
+msgid "File format: `gettext PO file` - **bi**lingual"
+msgstr ""
+
+msgid ""
+"File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`"
+msgstr ""
+
+msgid "Language filter: `^(?!(en)$)[^.]+$` - excludes `en`"
+msgstr ""
+
+msgid "Source language: `English`"
+msgstr ""
+
+msgid "Monolingual base language file: empty"
+msgstr ""
+
+msgid "Edit base file: **not** checked"
+msgstr ""
+
+msgid "Intermediate language file: empty"
+msgstr ""
+
+msgid ""
+"Template for new translations: `translations/en/LC_MESSAGES/<file>.md.po` - "
+"replace `<file>`"
+msgstr ""
+
+msgid "Adding new translation: `Create new language file`"
+msgstr ""
+
+msgid "Language code style: `Default based on the file format`"
+msgstr ""
+
+msgid ""
+"Set the **Repository browser** to the right URL, replace `<file>`: "
+"`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
+"}}/docs/<file>?plain=1#L{{ line }}`"
+msgstr ""
+
+#~ msgid "Choose the right `gettext PO file (monolingual)`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Set the **Repository browser** to the right URL, replace `index.md`: "
+#~ "`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
+#~ "}}/docs/index.md?plain=1#L{{ line }}`"
+#~ msgstr ""
