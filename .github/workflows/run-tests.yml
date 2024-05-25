@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    name: "Build & Run Tests"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -49,6 +50,7 @@ jobs:
         run: tox -e ${{ matrix.tox_env }}
 
   gh-pages:
+    name: "Publish GitHub Actions"
     runs-on: ubuntu-latest
     if: github.ref_name == 'master'
     steps:
@@ -66,7 +68,7 @@ jobs:
         run: tox -e docs -- gh-deploy
 
   dockerhub:
-    name: Push Docker image to Docker Hub
+    name: Publish Docker Image on Docker Hub
     runs-on: ubuntu-latest
     if: github.ref_name == 'master' || startsWith(github.ref, 'refs/tags/v')
     # This environment stores the DOCKERHUB_USERNAME and DOCKERHUB_TOKEN
@@ -108,6 +110,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
   github-release:
+    name: "Publish GitHub Release"
     # only deploy on tags, see https://stackoverflow.com/a/58478262/1320237
     if: startsWith(github.ref, 'refs/tags/v')
     needs:
