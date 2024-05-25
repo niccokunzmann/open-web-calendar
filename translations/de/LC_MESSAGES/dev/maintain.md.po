@@ -76,20 +76,10 @@ msgid ""
 "of this section is to have a consistent outcome."
 msgstr ""
 
-msgid ""
-"Create a new component and copy it from the `documentation-index` component "
-"(Getting Started)."
-msgstr ""
-
 msgid "Use the page title as **title** like `Documentation - Getting Started`"
 msgstr ""
 
 msgid "Use file name as **slug** like `documentation-index`"
-msgstr ""
-
-msgid ""
-"Add Flags, example link: https://hosted.weblate.org/settings/open-web-"
-"calendar/documentation-index/#translation"
 msgstr ""
 
 msgid "add `md-text,safe-html` as **Translation flags**"
@@ -130,6 +120,61 @@ msgstr ""
 
 msgid "Restrict width and height to 2000px       wzxhzdk:2"
 msgstr ""
+
+msgid "Create a component **From existing component**, the `index.html`."
+msgstr ""
+
+msgid "Choose the right `gettext PO file (monolingual)`."
+msgstr ""
+
+msgid ""
+"Set the **Repository browser** to the right URL, replace `index.md`: "
+"`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
+"}}/docs/index.md?plain=1#L{{ line }}`"
+msgstr ""
+
+msgid ""
+"For **Translation license** choose `Create Commons Attribution Share Alike "
+"4.0 International`."
+msgstr ""
+
+msgid "Save."
+msgstr ""
+
+msgid ""
+"Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-"
+"calendar/documentation-index/#translation"
+msgstr ""
+
+msgid "Clear any component alerts."
+msgstr ""
+
+msgid ""
+"These component Add-Ons are automatically installed: "
+"([Page](https://hosted.weblate.org/addons/open-web-calendar/))"
+msgstr ""
+
+msgid "Cleanup translation files"
+msgstr ""
+
+msgid "Contributors in comment"
+msgstr ""
+
+msgid "Add missing languages"
+msgstr ""
+
+#~ msgid "Add **components**:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a new component and copy it from the `documentation-index` component "
+#~ "(Getting Started)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add Flags, example link: https://hosted.weblate.org/settings/open-web-"
+#~ "calendar/documentation-index/#translation"
+#~ msgstr ""
 
 #~ msgid "Notify issues and pull requests about the release."
 #~ msgstr ""

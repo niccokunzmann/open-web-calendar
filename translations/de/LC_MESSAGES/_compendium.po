@@ -13,6 +13,15 @@ msgstr ""
 msgid "Permanent link"
 msgstr ""
 
+#~ msgid "Cleanup translation files"
+#~ msgstr ""
+
+#~ msgid "Contributors in comment"
+#~ msgstr ""
+
+#~ msgid "Add missing languages"
+#~ msgstr ""
+
 #~ msgid "Development"
 #~ msgstr ""
 
