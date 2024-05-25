@@ -186,6 +186,7 @@ nav:
   - templates.md
   - contributing.md
   - News:
+    - news/social-media.md
     - news/2024-04-10-website.md
   - Hosting:
     - host/hosted.md
