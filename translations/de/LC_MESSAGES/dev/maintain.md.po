@@ -82,9 +82,6 @@ msgstr ""
 msgid "Use file name as **slug** like `documentation-index`"
 msgstr ""
 
-msgid "add `md-text,safe-html` as **Translation flags**"
-msgstr ""
-
 msgid "choose **Enforced checks**:"
 msgstr ""
 
@@ -195,6 +192,21 @@ msgid ""
 "`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
 "}}/docs/<file>?plain=1#L{{ line }}`"
 msgstr ""
+
+msgid "Manage strings: **not** checked"
+msgstr ""
+
+msgid "add `md-text,safe-html,xml-text` as **Translation flags**"
+msgstr ""
+
+msgid "XML markup"
+msgstr ""
+
+msgid "XML syntax"
+msgstr ""
+
+#~ msgid "add `md-text,safe-html` as **Translation flags**"
+#~ msgstr ""
 
 #~ msgid "Choose the right `gettext PO file (monolingual)`."
 #~ msgstr ""
