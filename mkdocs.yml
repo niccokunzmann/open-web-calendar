@@ -122,6 +122,12 @@ plugins:
         - site_description
 #        - copyright
 #      min_translated_messages: 50%
+      exclude:
+        - docs/changelog.md
+        - docs/dev/translate.md
+        - docs/dev/maintain.md
+        - docs/dunno.md
+        - docs/news/*
 
   # git revision, see https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
 #  - git-revision-date-localized:
@@ -186,6 +192,7 @@ nav:
     - host/self.md
     - host/docker.md
   - Development:
+    - dev/translate.md
     - dev/index.md
     - dev/api.md
     - dev/maintain.md

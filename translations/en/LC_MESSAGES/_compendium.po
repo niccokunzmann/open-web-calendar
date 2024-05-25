@@ -13,6 +13,9 @@ msgstr ""
 msgid "Permanent link"
 msgstr ""
 
+#~ msgid "Translate"
+#~ msgstr ""
+
 #~ msgid "Cleanup translation files"
 #~ msgstr ""
 
@@ -29,4 +32,29 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "News"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can help us by [translating the "
+#~ "project](https://hosted.weblate.org/engage/open-web-calendar/) to your "
+#~ "language. If your language is not listed, please request to add it!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-calendar/)"
+#~ msgstr ""
+
+#~ msgid "Here, you can see the current translation status:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[![Translation status](https://hosted.weblate.org/widgets/open-web-"
+#~ "calendar/-/multi-auto.svg)](https://hosted.weblate.org/engage/open-web-"
+#~ "calendar/)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Translations are contributed by volunteers and [logged](changelog.md). After"
+#~ " 48 hours they are usually life at the [hosted instance](https://open-web-"
+#~ "calendar.hosted.quelltext.eu)."
 #~ msgstr ""
