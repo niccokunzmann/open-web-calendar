@@ -122,6 +122,15 @@ msgstr ""
 msgid "Add all strings to it"
 msgstr ""
 
+msgid ""
+"Edit the `docs/changelog.md` file in the Changelog Section and add the "
+"changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\""
+"    ```"
+msgstr ""
+
+msgid "Restrict width and height to 2000px       wzxhzdk:2"
+msgstr ""
+
 #~ msgid "Notify issues and pull requests about the release."
 #~ msgstr ""
 
@@ -129,13 +138,4 @@ msgstr ""
 #~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
 #~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\" "
 #~ "git push    ```"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
-#~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\""
-#~ "    ```"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px       wzxhzdk:2"
 #~ msgstr ""
