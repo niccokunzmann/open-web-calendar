@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_zbqrfsom/de/dev/maintain/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_py2xvayz/de/dev/maintain/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_zbqrfsom/de/dev/maintain/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_py2xvayz/de/dev/maintain/index.png" >
       
     
     
@@ -769,8 +769,22 @@ git push origin v1.30</code></li>
 <li>Use file name as <strong>slug</strong> like <code>documentation-index</code></li>
 </ul>
 <ol>
-<li>Choose the right <code>gettext PO file (monolingual)</code>.</li>
-<li>Set the <strong>Repository browser</strong> to the right URL, replace <code>index.md</code>: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/index.md?plain=1#L{{ line }}</code></li>
+<li>Choose the right File settings:</li>
+</ol>
+<ul>
+<li>File format: <code>gettext PO file</code> - <strong>bi</strong>lingual</li>
+<li>File mask: <code>translations/*/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
+<li>Language filter: <code>^(?!(en)$)[^.]+$</code> - excludes <code>en</code></li>
+<li>Source language: <code>English</code></li>
+<li>Monolingual base language file: empty</li>
+<li>Edit base file: <strong>not</strong> checked</li>
+<li>Intermediate language file: empty</li>
+<li>Template for new translations: <code>translations/en/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
+<li>Adding new translation: <code>Create new language file</code></li>
+<li>Language code style: <code>Default based on the file format</code></li>
+</ul>
+<ol>
+<li>Set the <strong>Repository browser</strong> to the right URL, replace <code>&lt;file&gt;</code>: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/&lt;file&gt;?plain=1#L{{ line }}</code></li>
 <li>For <strong>Translation license</strong> choose <code>Create Commons Attribution Share Alike 4.0 International</code>.</li>
 <li>Save.</li>
 <li>Add <strong>Flags</strong>, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation</li>

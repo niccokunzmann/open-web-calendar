@@ -858,9 +858,23 @@ The aim of this section is to have a consistent outcome.</p>
 </ul>
 </li>
 <li>
-<p>Choose the right <code>gettext PO file (monolingual)</code>.</p>
+<p>Choose the right File settings:</p>
+<ul>
+<li>File format: <code>gettext PO file</code> - <strong>bi</strong>lingual</li>
+<li>File mask: <code>translations/*/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
+<li>Language filter: <code>^(?!(en)$)[^.]+$</code> - excludes <code>en</code></li>
+<li>Source language: <code>English</code></li>
+<li>Monolingual base language file: empty</li>
+<li>Edit base file: <strong>not</strong> checked</li>
+<li>Intermediate language file: empty</li>
+<li>Template for new translations: <code>translations/en/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
+<li>Adding new translation: <code>Create new language file</code></li>
+<li>Language code style: <code>Default based on the file format</code></li>
+</ul>
 </li>
-<li>Set the <strong>Repository browser</strong> to the right URL, replace <code>index.md</code>: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/index.md?plain=1#L{{ line }}</code></li>
+<li>
+<p>Set the <strong>Repository browser</strong> to the right URL, replace <code>&lt;file&gt;</code>: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/&lt;file&gt;?plain=1#L{{ line }}</code></p>
+</li>
 <li>For <strong>Translation license</strong> choose <code>Create Commons Attribution Share Alike 4.0 International</code>.</li>
 <li>
 <p>Save.</p>
