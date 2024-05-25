@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 # The purpose of this file is to keep this repository and its dependencies
 # up-to-date.
-name: "Build, Test & Publish"
+name: "Update Repository"
 
 on: [push]
 
