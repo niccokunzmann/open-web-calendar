@@ -32,6 +32,8 @@ for language in os.listdir(TRANSLATIONS_PATH):
     language_path = os.path.join(TRANSLATIONS_PATH, language)
     for file in os.listdir(language_path):
         name, ext = os.path.splitext(file)
+        if ext != ".yml":
+            continue
         if name.endswith(UNUSED):
             name = name[:-len(UNUSED)]
         with open(os.path.join(language_path, file)) as f:
@@ -55,7 +57,7 @@ def string(language: str, file: str, id: str) -> str:
 def html(language: str, file: str, id: str, **template_replacements) -> str:
     """Translate the string identified
     by language, file and id and return an html element.
-    
+
     Any id ending in -html will not be escaped but treated as raw HTML.
     """
     inner_text = string(language, file, id)
@@ -71,7 +73,7 @@ CALENDAR_LABELS = ["dhx_cal_today_button", "day_tab", "week_tab", "month_tab", "
 
 def dhtmlx(language: str):
     """Create a dhtmlx scheduler custom locale from our translations.
-    
+
     See also https://docs.dhtmlx.com/scheduler/localization.html
     """
     def cal(id):

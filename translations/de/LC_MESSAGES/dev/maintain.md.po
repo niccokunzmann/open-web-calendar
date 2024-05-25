@@ -1,0 +1,77 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Code and guide to maintain the Open Web Calendar project."
+msgstr ""
+
+msgid "Notes for Maintainers"
+msgstr ""
+
+msgid "This section clarifies how to maintain the project."
+msgstr ""
+
+msgid "Update Dependencies"
+msgstr ""
+
+msgid "Enter your virtual environment. E.g."
+msgstr ""
+
+msgid "Install all dependencies:"
+msgstr ""
+
+msgid "Fix the dependencies:"
+msgstr ""
+
+msgid "Create a branch, commit:"
+msgstr ""
+
+msgid "Create a Pull Request and see if the tests run."
+msgstr ""
+
+msgid "Release a new Version"
+msgstr ""
+
+msgid "To release a new version:"
+msgstr ""
+
+msgid ""
+"Edit the `docs/changelog.md` file in the Changelog Section and add the "
+"changes."
+msgstr ""
+
+msgid "Create a tag for the version."
+msgstr ""
+
+msgid "Notify issues and pull requests about the release."
+msgstr ""
+
+msgid "Enter your virtual environment. E.g.    wzxhzdk:0"
+msgstr ""
+
+msgid "Install all dependencies:    wzxhzdk:1"
+msgstr ""
+
+msgid ""
+"Fix the dependencies:    ```sh    rm *requirements.txt pip-compile --output-"
+"file=requirements.txt requirements.in pip-compile --output-file=test-"
+"requirements.txt test-requirements.in pip-compile --output-file=docs-"
+"requirements.txt docs-requirements.in    ```"
+msgstr ""
+
+msgid ""
+"Create a branch, commit:    ```sh    git branch -d update git checkout -b "
+"update git add *requirements.txt git commit -m\"Update dependencies\" git "
+"push -u origin update    ```"
+msgstr ""
+
+msgid ""
+"Edit the `docs/changelog.md` file in the Changelog Section and add the "
+"changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\" "
+"git push    ```"
+msgstr ""
+
+msgid ""
+"Create a tag for the version.    ```sh    git tag v1.30 git push origin "
+"v1.30    ```"
+msgstr ""

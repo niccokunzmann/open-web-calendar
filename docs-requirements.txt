@@ -25,6 +25,8 @@ click==8.1.7
     # via mkdocs
 colorama==0.4.6
     # via mkdocs-material
+contextlib-chdir==1.0.2
+    # via mdpo
 cssselect2==0.7.0
     # via cairosvg
 defusedxml==0.7.1
@@ -39,6 +41,8 @@ gitpython==3.1.43
     #   mkdocs-rss-plugin
 idna==3.7
     # via requests
+importlib-metadata-argparse-version==2.0.0
+    # via mdpo
 jinja2==3.1.4
     # via
     #   mkdocs
@@ -53,6 +57,10 @@ markupsafe==2.1.5
     # via
     #   jinja2
     #   mkdocs
+md-ulb-pwrap==0.1.0
+    # via mdpo
+mdpo==2.0.1
+    # via mkdocs-mdpo-plugin
 mergedeep==1.3.4
     # via mkdocs
 mkdocs[i18n]==1.5.3
@@ -64,7 +72,6 @@ mkdocs[i18n]==1.5.3
     #   mkdocs-material
     #   mkdocs-meta-descriptions-plugin
     #   mkdocs-rss-plugin
-    #   mkdocs-static-i18n
 mkdocs-git-revision-date-localized-plugin==1.2.5
     # via -r docs-requirements.in
 mkdocs-macros-plugin==1.0.5
@@ -72,16 +79,16 @@ mkdocs-macros-plugin==1.0.5
 mkdocs-markdownextradata-plugin==0.2.5
     # via -r docs-requirements.in
 mkdocs-material[imaging]==9.5.18
-    # via
-    #   -r docs-requirements.in
-    #   mkdocs-static-i18n
+    # via -r docs-requirements.in
 mkdocs-material-extensions==1.3.1
     # via mkdocs-material
+mkdocs-material-relative-language-selector==1.1.4
+    # via -r docs-requirements.in
+mkdocs-mdpo-plugin @ git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1
+    # via -r docs-requirements.in
 mkdocs-meta-descriptions-plugin==3.0.0
     # via -r docs-requirements.in
 mkdocs-rss-plugin==1.12.2
-    # via -r docs-requirements.in
-mkdocs-static-i18n[material]==1.2.3
     # via -r docs-requirements.in
 packaging==24.0
     # via
@@ -97,10 +104,14 @@ pillow==10.3.0
     #   mkdocs-material
 platformdirs==4.2.1
     # via mkdocs
+polib==1.2.0
+    # via mdpo
 pycparser==2.22
     # via cffi
 pygments==2.17.2
     # via mkdocs-material
+pymd4c==1.3.0
+    # via mdpo
 pymdown-extensions==10.8
     # via
     #   mkdocs-material

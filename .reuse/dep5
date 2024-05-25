@@ -3,7 +3,7 @@ Upstream-Name: Open Web Calendar
 Upstream-Contact: Nicco Kunzmann <niccokunzmann@rambler.ru>
 Source: https://github.com/niccokunzmann/open-web-calendar
 
-Files: translations/**.yml
+Files: translations/**.yml translations/**.po
 Copyright: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 License: CC-BY-SA-4.0
 
