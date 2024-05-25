@@ -49,8 +49,6 @@
       
     
     
-      <link rel="stylesheet" href="../../css/code-blocks.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -64,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_96wyu15b/de/templates/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_y0k1vdfj/de/templates/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -80,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_96wyu15b/de/templates/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_y0k1vdfj/de/templates/index.png" >
       
     
     
@@ -702,9 +700,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#timezones" class="md-nav__link">
+  <a href="#choose-timezones" class="md-nav__link">
     <span class="md-ellipsis">
-      Timezones
+      Choose Timezones
     </span>
   </a>
   
@@ -794,15 +792,38 @@
 <ul>
 <li><a href="host/self.md#ssrf-protection-with-a-proxy-server">proxy parameters</a></li>
 </ul>
-<h2 id="timezones">Timezones<a class="headerlink" href="#timezones" title="Permanent link">&para;</a></h2>
-<p>The calendar allows choosing the time zone that the events are displayed in. Whether you have a local website or an international calendar, all is possible. It is also fairly easy to customize with JavaScript. You can edit the page to see how it is done.</p>
-<p><select id="timezoneOption">
-<br />
-<option value="America/New_York">New York</option></p>
-<option value="Europe/London">London</option>
-<option value="Asia/Singapore">Singapore</option>
-<option value="">My Time Zone</option>
-<p></select></p>
+<h2 id="choose-timezones">Choose Timezones<a class="headerlink" href="#choose-timezones" title="Permanent link">&para;</a></h2>
+<p>For an international calendar, you can allow choosing the time zone that the events are displayed in.</p>
+<!--
+  This is HTML and JavaScript that allows changing a calendar URL specific to a timezone.
+
+  TODO: Choose the time zones that you want the viewer to choose:
+-->
+<p><select id="timezoneOption"><option value="America/New_York">New York</option><option value="Europe/London">London</option><option value="Asia/Singapore">Singapore</option><option value="">My Local Time Zone</option></select></p>
+<script>
+  // TODO: Set the iframe id:
+  var calendarIFrameID = "owcTimezoneExample";
+  var originalUrl;  // the oririginal URL of the iframe
+  var calendarIFrame; // the stored iframe as a variable
+
+  // Save the original URL
+  function setInitialTimezone() {
+    calendarIFrame = document.getElementById(calendarIFrameID);
+    originalUrl = calendarIFrame.src;
+    changeTimezone();
+  }
+
+  // Change to the selected timezone
+  function changeTimezone() {
+    console.log("change timezone: " + timezoneOption.value);
+    calendarIFrame.src = originalUrl + (timezoneOption.value ? "timezone=" + timezoneOption.value : "");
+    console.log("url: " + calendarIFrame.src);
+  }
+
+  window.addEventListener("load", setInitialTimezone);
+  timezoneOption.onchange = changeTimezone;
+</script>
+
 <iframe class="open-web-calendar" id="owcTimezoneExample"
     style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
     src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json&"
@@ -810,17 +831,38 @@
     allowTransparency="true" scrolling="no"
     frameborder="0" height="600px" width="100%"></iframe>
 <p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json" target="_blank">Edit the calendar</a></p>
-<script>
-const originalUrl = owcTimezoneExample.src;
-function changeTimezone() {
-  console.log("change timezone: " + timezoneOption.value);
-  owcTimezoneExample.src = originalUrl + (timezoneOption.value ? "timezone=" + timezoneOption.value : "");
-  console.log("url: " + owcTimezoneExample.src);
-}
-changeTimezone();
-timezoneOption.onchange = changeTimezone;
-</script>
+<p>Below, you can see the source code that you need to add to your website. You might need to adjust the timezone selection and the id of the iframe.</p>
+<div class="highlight"><pre><span></span><code>&lt;!--
+  This is HTML and JavaScript that allows changing a calendar URL specific to a timezone.
 
+  TODO: Choose the time zones that you want the viewer to choose:
+--&gt;
+&lt;select id=&quot;timezoneOption&quot;&gt;&lt;option value=&quot;America/New_York&quot;&gt;New York&lt;/option&gt;&lt;option value=&quot;Europe/London&quot;&gt;London&lt;/option&gt;&lt;option value=&quot;Asia/Singapore&quot;&gt;Singapore&lt;/option&gt;&lt;option value=&quot;&quot;&gt;My Local Time Zone&lt;/option&gt;&lt;/select&gt;
+
+&lt;script&gt;
+  // TODO: Set the iframe id:
+  var calendarIFrameID = &quot;owcTimezoneExample&quot;;
+  var originalUrl;  // the oririginal URL of the iframe
+  var calendarIFrame; // the stored iframe as a variable
+
+  // Save the original URL
+  function setInitialTimezone() {
+    calendarIFrame = document.getElementById(calendarIFrameID);
+    originalUrl = calendarIFrame.src;
+    changeTimezone();
+  }
+
+  // Change to the selected timezone
+  function changeTimezone() {
+    console.log(&quot;change timezone: &quot; + timezoneOption.value);
+    calendarIFrame.src = originalUrl + (timezoneOption.value ? &quot;timezone=&quot; + timezoneOption.value : &quot;&quot;);
+    console.log(&quot;url: &quot; + calendarIFrame.src);
+  }
+
+  window.addEventListener(&quot;load&quot;, setInitialTimezone);
+  timezoneOption.onchange = changeTimezone;
+&lt;/script&gt;
+</code></pre></div>
 <p>Modifications:</p>
 <ul>
 <li>JavaScript</li>
@@ -965,20 +1007,10 @@ The `title` parameter defines the match of the category for discussion.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "announce.dismiss", "navigation.footer", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "announce.dismiss", "navigation.footer", "content.action.edit", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
-      
-        <script src="../../js/popper.js"></script>
-      
-        <script src="../../js/jquery-3.7.1.min.js"></script>
-      
-        <script src="../../js/tippy.js"></script>
-      
-        <script src="../../js/clipboard.min.js"></script>
-      
-        <script src="../../js/code-blocks.js"></script>
       
     
   </body>

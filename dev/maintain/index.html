@@ -53,8 +53,6 @@
       
     
     
-      <link rel="stylesheet" href="../../css/code-blocks.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -853,14 +851,22 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 The aim of this section is to have a consistent outcome.</p>
 <ol>
 <li>
-<p>Create a new component and copy it from the <code>documentation-index</code> component (Getting Started).</p>
+<p>Create a component <strong>From existing component</strong>, the <code>index.html</code>.</p>
 <ul>
 <li>Use the page title as <strong>title</strong> like <code>Documentation - Getting Started</code></li>
 <li>Use file name as <strong>slug</strong> like <code>documentation-index</code></li>
 </ul>
 </li>
 <li>
-<p>Add Flags, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation</p>
+<p>Choose the right <code>gettext PO file (monolingual)</code>.</p>
+</li>
+<li>Set the <strong>Repository browser</strong> to the right URL, replace <code>index.md</code>: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/index.md?plain=1#L{{ line }}</code></li>
+<li>For <strong>Translation license</strong> choose <code>Create Commons Attribution Share Alike 4.0 International</code>.</li>
+<li>
+<p>Save.</p>
+</li>
+<li>
+<p>Add <strong>Flags</strong>, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation</p>
 <ul>
 <li>add <code>md-text,safe-html</code> as <strong>Translation flags</strong></li>
 <li>
@@ -888,7 +894,16 @@ The aim of this section is to have a consistent outcome.</p>
 <li>Add all strings to it</li>
 </ul>
 </li>
+<li>
+<p>Clear any component alerts.</p>
+</li>
 </ol>
+<p>These component Add-Ons are automatically installed: (<a href="https://hosted.weblate.org/addons/open-web-calendar/">Page</a>)</p>
+<ul>
+<li>Cleanup translation files</li>
+<li>Contributors in comment</li>
+<li>Add missing languages</li>
+</ul>
 
 
 
@@ -1044,20 +1059,10 @@ The `title` parameter defines the match of the category for discussion.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "announce.dismiss", "navigation.footer", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "announce.dismiss", "navigation.footer", "content.action.edit", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
-      
-        <script src="../../js/popper.js"></script>
-      
-        <script src="../../js/jquery-3.7.1.min.js"></script>
-      
-        <script src="../../js/tippy.js"></script>
-      
-        <script src="../../js/clipboard.min.js"></script>
-      
-        <script src="../../js/code-blocks.js"></script>
       
     
   </body>
