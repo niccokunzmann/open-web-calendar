@@ -232,12 +232,3 @@ markdown_extensions:
   - pymdownx.snippets: # see https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
       base_path: ["docs/snippets"]
   - attr_list # see https://mrkeo.github.io/reference/images/
-
-#extra_css:
-#  - css/code-blocks.css
-#extra_javascript:
-#  - js/popper.js
-#  - js/jquery-3.7.1.min.js
-#  - js/tippy.js
-#  - js/clipboard.min.js
-#  - js/code-blocks.js
