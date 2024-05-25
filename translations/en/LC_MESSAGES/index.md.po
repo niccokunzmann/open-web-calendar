@@ -1,6 +1,4 @@
 #
-msgid ""
-msgstr ""
 
 msgid "Getting Started"
 msgstr ""
