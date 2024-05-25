@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_py2xvayz/en/dev/maintain/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_z4msimwk/en/dev/maintain/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_py2xvayz/en/dev/maintain/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_z4msimwk/en/dev/maintain/index.png" >
       
     
     
@@ -782,6 +782,7 @@ git push origin v1.30</code></li>
 <li>Template for new translations: <code>translations/en/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
 <li>Adding new translation: <code>Create new language file</code></li>
 <li>Language code style: <code>Default based on the file format</code></li>
+<li>Manage strings: <strong>not</strong> checked</li>
 </ul>
 <ol>
 <li>Set the <strong>Repository browser</strong> to the right URL, replace <code>&lt;file&gt;</code>: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/&lt;file&gt;?plain=1#L{{ line }}</code></li>
@@ -790,7 +791,7 @@ git push origin v1.30</code></li>
 <li>Add <strong>Flags</strong>, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation</li>
 </ol>
 <ul>
-<li>add <code>md-text,safe-html</code> as <strong>Translation flags</strong></li>
+<li>add <code>md-text,safe-html,xml-text</code> as <strong>Translation flags</strong></li>
 <li>
 <p>choose <strong>Enforced checks</strong>:</p>
 <ul>
@@ -798,6 +799,8 @@ git push origin v1.30</code></li>
 <li>Markdown references</li>
 <li>Markdown syntax</li>
 <li>Unsafe HTML</li>
+<li>XML markup</li>
+<li>XML syntax</li>
 </ul>
 </li>
 </ul>
