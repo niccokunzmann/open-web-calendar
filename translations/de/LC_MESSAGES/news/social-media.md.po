@@ -5,5 +5,10 @@ msgstr ""
 msgid "Social Media News"
 msgstr ""
 
-msgid "News from Mastodon:"
+msgid ""
+"News from Mastodon "
+"[#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar):"
 msgstr ""
+
+#~ msgid "News from Mastodon:"
+#~ msgstr ""
