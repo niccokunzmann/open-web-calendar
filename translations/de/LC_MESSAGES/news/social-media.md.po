@@ -1,0 +1,9 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Social Media News"
+msgstr ""
+
+msgid "News from Mastodon:"
+msgstr ""
