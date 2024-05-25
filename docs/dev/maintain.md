@@ -68,12 +68,17 @@ To release a new version:
 We might add more Markdown documentation files to the [Weblate translation]({{link.weblate}}).
 The aim of this section is to have a consistent outcome.
 
-1. Create a new component and copy it from the `documentation-index` component (Getting Started).
+1. Create a component **From existing component**, the `index.html`.
 
     - Use the page title as **title** like `Documentation - Getting Started`
     - Use file name as **slug** like `documentation-index`
 
-2. Add Flags, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation
+2. Choose the right `gettext PO file (monolingual)`.
+3. Set the **Repository browser** to the right URL, replace `index.md`: `https://github.com/niccokunzmann/open-web-calendar/blob/{{branch}}/docs/index.md?plain=1#L{{line}}`
+4. For **Translation license** choose `Create Commons Attribution Share Alike 4.0 International`.
+5. Save.
+
+6. Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation
 
     - add `md-text,safe-html` as **Translation flags**
     - choose **Enforced checks**:
@@ -83,7 +88,7 @@ The aim of this section is to have a consistent outcome.
         - Markdown syntax
         - Unsafe HTML
 
-3. Upload a **screenshot** of the page
+7. Upload a **screenshot** of the page
 
     - Restrict width and height to 2000px
 
@@ -93,3 +98,11 @@ The aim of this section is to have a consistent outcome.
 
     - Click on the empty **Search** button
     - Add all strings to it
+
+8. Clear any component alerts.
+
+These component Add-Ons are automatically installed: ([Page](https://hosted.weblate.org/addons/open-web-calendar/))
+
+- Cleanup translation files
+- Contributors in comment
+- Add missing languages

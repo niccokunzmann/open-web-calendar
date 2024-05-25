@@ -1,0 +1,30 @@
+<!--
+  This is HTML and JavaScript that allows changing a calendar URL specific to a timezone.
+
+  TODO: Choose the time zones that you want the viewer to choose:
+-->
+<select id="timezoneOption"><option value="America/New_York">New York</option><option value="Europe/London">London</option><option value="Asia/Singapore">Singapore</option><option value="">My Local Time Zone</option></select>
+
+<script>
+  // TODO: Set the iframe id:
+  var calendarIFrameID = "owcTimezoneExample";
+  var originalUrl;  // the oririginal URL of the iframe
+  var calendarIFrame; // the stored iframe as a variable
+
+  // Save the original URL
+  function setInitialTimezone() {
+    calendarIFrame = document.getElementById(calendarIFrameID);
+    originalUrl = calendarIFrame.src;
+    changeTimezone();
+  }
+
+  // Change to the selected timezone
+  function changeTimezone() {
+    console.log("change timezone: " + timezoneOption.value);
+    calendarIFrame.src = originalUrl + (timezoneOption.value ? "timezone=" + timezoneOption.value : "");
+    console.log("url: " + calendarIFrame.src);
+  }
+  
+  window.addEventListener("load", setInitialTimezone);
+  timezoneOption.onchange = changeTimezone;
+</script>

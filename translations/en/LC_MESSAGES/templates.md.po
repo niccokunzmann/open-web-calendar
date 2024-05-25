@@ -58,16 +58,6 @@ msgstr ""
 msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
 msgstr ""
 
-msgid "Timezones"
-msgstr ""
-
-msgid ""
-"The calendar allows choosing the time zone that the events are displayed in."
-" Whether you have a local website or an international calendar, all is "
-"possible. It is also fairly easy to customize with JavaScript. You can edit "
-"the page to see how it is done."
-msgstr ""
-
 msgid "JavaScript"
 msgstr ""
 
@@ -126,12 +116,6 @@ msgid ""
 "target=\"_blank\">Edit the calendar</a>"
 msgstr ""
 
-msgid "<select id=\"timezoneOption\">    wzxhzdk:3"
-msgstr ""
-
-msgid "</select>"
-msgstr ""
-
 msgid ""
 "<a href=\"https://open-web-"
 "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
@@ -145,3 +129,64 @@ msgid ""
 "calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
 "target=\"_blank\">Edit the calendar</a>"
 msgstr ""
+
+msgid ""
+"Below, you can see the source code that you need to add to your website. You"
+" might need to adjust the timezone selection and the id of the iframe."
+msgstr ""
+
+msgid ""
+"For an international calendar, you can allow choosing the time zone that the"
+" events are displayed in."
+msgstr ""
+
+msgid "Choose Timezones"
+msgstr ""
+
+msgid ""
+"<select id=\"timezoneOption\"><option value=\"America/New_York\">New "
+"York</option><option value=\"Europe/London\">London</option><option "
+"value=\"Asia/Singapore\">Singapore</option><option value=\"\">My Local Time "
+"Zone</option></select>"
+msgstr ""
+
+#~ msgid "<select id=\"timezoneOption\"></select>"
+#~ msgstr ""
+
+#~ msgid "</select>"
+#~ msgstr ""
+
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:5"
+#~ msgstr ""
+
+#~ msgid "Timezones"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The calendar allows choosing the time zone that the events are displayed in."
+#~ " Whether you have a local website or an international calendar, all is "
+#~ "possible. It is possible to customize with JavaScript."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The calendar allows choosing the time zone that the events are displayed in."
+#~ " Whether you have a local website or an international calendar, all is "
+#~ "possible. It is also fairly easy to customize with JavaScript."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here, you can see the source code that you need to add to your website:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The calendar allows choosing the time zone that the events are displayed in."
+#~ " Whether you have a local website or an international calendar, all is "
+#~ "possible. It is also fairly easy to customize with JavaScript. You can edit "
+#~ "the page to see how it is done."
+#~ msgstr ""
+
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:3"
+#~ msgstr ""
+
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:6"
+#~ msgstr ""

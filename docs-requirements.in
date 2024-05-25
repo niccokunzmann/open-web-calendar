@@ -10,3 +10,5 @@ mkdocs-meta-descriptions-plugin
 #mkdocs-mdpo-plugin
 git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1
 mkdocs-material-relative-language-selector
+
+mkdocs-exclude

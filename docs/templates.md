@@ -65,32 +65,21 @@ Modifications:
 
 - [proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)
 
-## Timezones
+## Choose Timezones
 
-The calendar allows choosing the time zone that the events are displayed in.
-Whether you have a local website or an international calendar, all is possible.
-It is also fairly easy to customize with JavaScript.
-You can edit the page to see how it is done.
+For an international calendar, you can allow choosing the time zone that the
+events are displayed in.
 
-<select id="timezoneOption">
-  <option value="America/New_York">New York</option>
-  <option value="Europe/London">London</option>
-  <option value="Asia/Singapore">Singapore</option>
-  <option value="">My Time Zone</option>
-</select>
+--8<-- "choose-timezone.html"
 
 {{calendar_iframe("timezone-example.json", id="owcTimezoneExample")}}
 
-<script>
-const originalUrl = owcTimezoneExample.src;
-function changeTimezone() {
-  console.log("change timezone: " + timezoneOption.value);
-  owcTimezoneExample.src = originalUrl + (timezoneOption.value ? "timezone=" + timezoneOption.value : "");
-  console.log("url: " + owcTimezoneExample.src);
-}
-changeTimezone();
-timezoneOption.onchange = changeTimezone;
-</script>
+Below, you can see the source code that you need to add to your website.
+You might need to adjust the timezone selection and the id of the iframe.
+
+```
+--8<-- "choose-timezone.html"
+```
 
 Modifications:
 
