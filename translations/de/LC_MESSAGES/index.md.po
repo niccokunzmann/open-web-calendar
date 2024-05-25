@@ -1,108 +1,110 @@
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 22:37+0200\n"
-"PO-Revision-Date: 2024-05-25 20:37+0000\n"
+"PO-Revision-Date: 2024-05-25 21:50+0000\n"
 "Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-index/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
 msgid "Getting Started"
-msgstr ""
+msgstr "Anfang"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
+msgstr "Schau, was möglich ist oder probiere den Offenen Web-Kalender aus!"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
 msgid "A highly flexible calendar display for your website."
-msgstr ""
+msgstr "Eine hoch-flexibel anpassbare Kalenderanzeige für Deine Webseite."
 
 msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
+msgstr "Gib in wenigen Minuten einem Kalender deine persönliche Note!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
+msgstr "**[Probiere es aus!](https://open-web-calendar.hosted.quelltext.eu)**"
 
 msgid "[See Examples](templates.md)"
-msgstr ""
+msgstr "[Sieh die Beispiel an](templates.md)"
 
 msgid "Features"
-msgstr ""
+msgstr "Fähigkeiten"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "Sofortige Terminanzeige"
 
 msgid "<center>✔</center>"
-msgstr ""
+msgstr "<center>✔</center>"
 
 msgid "Embed with an HTML snippet"
-msgstr ""
+msgstr "Mit HTML einbetten"
 
 msgid "Desktop and Mobile"
-msgstr ""
+msgstr "Computer und Smartphone"
 
 msgid "Multi-Language Support"
-msgstr ""
+msgstr "Viele Sprachen"
 
 msgid "Fixed and Automatic Timezone"
-msgstr ""
+msgstr "Feste und Automatische Zeitzonen"
 
 msgid "Easy Editing"
-msgstr ""
+msgstr "Einfaches Anpassen"
 
 msgid "Designs To Choose"
-msgstr ""
+msgstr "Auswahl an Designs"
 
 msgid "Multiple Calendar Sources"
-msgstr ""
+msgstr "Mehrere Kalenderquellen"
 
 msgid "Style per Calendar, Category and more"
-msgstr ""
+msgstr "Hervorheben von Kalendern, Kategorien und mehr"
 
 msgid "Custom CSS"
-msgstr ""
+msgstr "Eigenes CSS"
 
 msgid "Day, Week, Month, Agenda"
-msgstr ""
+msgstr "Tag, Woche, Monat, Agenda"
 
 msgid "Work Week"
-msgstr ""
+msgstr "Arbeitswoche"
 
 msgid "Custom Date & Time Range"
-msgstr ""
+msgstr "Eigene Tages- and Zeitabschnitte"
 
 msgid "Custom Title & Icon"
-msgstr ""
+msgstr "Eigener Titel und Icon"
 
 msgid "Click on Event Location"
-msgstr ""
+msgstr "Öffne Terminorte"
 
 msgid "Styled Event Descriptions"
-msgstr ""
+msgstr "Stilisierte Terminbeschreibungen"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr ""
+msgstr "Freie Software - Kein Lock-In"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self.md)"
 msgstr ""
+"[Bereitgestellt](https://open-web-calendar.hosted.quelltext.eu) oder [auf "
+"eigenem Server](host/self.md)"
 
 msgid "Subscribe Link"
-msgstr ""
+msgstr "Link zum Abbonieren"
 
 msgid "Community and Paid Support"
-msgstr ""
+msgstr "Gemeinschaftliche und Bezahlte Hilfe"
 
 msgid "[Developer API](dev/api.md)"
-msgstr ""
+msgstr "[Entwickler API](dev/api.md)"
