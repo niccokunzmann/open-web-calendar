@@ -205,11 +205,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="140"
-   id="percent140">82%</text>
+   id="percent140">70%</text>
 <rect
    style="fill:#38f;fill-opacity:1;stroke:none"
    id="rect140"
-   width="123"
+   width="105"
    height="6"
    x="200"
    rx="2"
@@ -297,11 +297,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="200"
-   id="percent200">82%</text>
+   id="percent200">70%</text>
 <rect
    style="fill:#38f;fill-opacity:1;stroke:none"
    id="rect200"
-   width="123"
+   width="105"
    height="6"
    x="200"
    rx="2"
