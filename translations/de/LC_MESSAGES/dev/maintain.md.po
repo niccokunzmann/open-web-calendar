@@ -43,9 +43,6 @@ msgstr ""
 msgid "Create a tag for the version."
 msgstr ""
 
-msgid "Notify issues and pull requests about the release."
-msgstr ""
-
 msgid "Enter your virtual environment. E.g.    wzxhzdk:0"
 msgstr ""
 
@@ -66,12 +63,79 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Edit the `docs/changelog.md` file in the Changelog Section and add the "
-"changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\" "
-"git push    ```"
-msgstr ""
-
-msgid ""
 "Create a tag for the version.    ```sh    git tag v1.30 git push origin "
 "v1.30    ```"
 msgstr ""
+
+msgid "Translate Documentation Files"
+msgstr ""
+
+msgid ""
+"We might add more Markdown documentation files to the [Weblate "
+"translation](https://hosted.weblate.org/engage/open-web-calendar/). The aim "
+"of this section is to have a consistent outcome."
+msgstr ""
+
+msgid ""
+"Create a new component and copy it from the `documentation-index` component "
+"(Getting Started)."
+msgstr ""
+
+msgid "Use the page title as **title** like `Documentation - Getting Started`"
+msgstr ""
+
+msgid "Use file name as **slug** like `documentation-index`"
+msgstr ""
+
+msgid ""
+"Add Flags, example link: https://hosted.weblate.org/settings/open-web-"
+"calendar/documentation-index/#translation"
+msgstr ""
+
+msgid "add `md-text,safe-html` as **Translation flags**"
+msgstr ""
+
+msgid "choose **Enforced checks**:"
+msgstr ""
+
+msgid "Markdown links"
+msgstr ""
+
+msgid "Markdown references"
+msgstr ""
+
+msgid "Markdown syntax"
+msgstr ""
+
+msgid "Unsafe HTML"
+msgstr ""
+
+msgid "Upload a **screenshot** of the page"
+msgstr ""
+
+msgid "Restrict width and height to 2000px"
+msgstr ""
+
+msgid "Click on the empty **Search** button"
+msgstr ""
+
+msgid "Add all strings to it"
+msgstr ""
+
+#~ msgid "Notify issues and pull requests about the release."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
+#~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\" "
+#~ "git push    ```"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
+#~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\""
+#~ "    ```"
+#~ msgstr ""
+
+#~ msgid "Restrict width and height to 2000px       wzxhzdk:2"
+#~ msgstr ""

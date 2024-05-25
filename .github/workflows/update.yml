@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+# The purpose of this file is to keep this repository and its dependencies
+# up-to-date.
+name: "Update Repository"
+
+on: [push]
+
+# cancel builds in progress if a new push has been made to the same ref
+# see https://stackoverflow.com/a/70972844/1320237
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-translation-po-files:
+    name: Update Translation PO Files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+      - name: Install tox
+        run: pip install tox
+      - name: Build the documentation
+        run: tox -e docs -- build
+      - name: Check status
+        run: git status
+      - name: Push updates translation files
+        run: |
+          git config --global user.name 'OWC Github Actions'
+          git config --global user.email 'owc-github-actions@users.noreply.github.com'
+          git add translations
+          if git commit -m "Update translation files"; then
+            git push
+          fi

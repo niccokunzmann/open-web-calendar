@@ -54,7 +54,6 @@ To release a new version:
     ```sh
     git add docs/changelog.md
     git commit -m"log changes"
-    git push
     ```
 
 2. Create a tag for the version.
@@ -64,4 +63,33 @@ To release a new version:
     git push origin v1.30
     ```
 
-3. Notify issues and pull requests about the release.
+## Translate Documentation Files
+
+We might add more Markdown documentation files to the [Weblate translation]({{link.weblate}}).
+The aim of this section is to have a consistent outcome.
+
+1. Create a new component and copy it from the `documentation-index` component (Getting Started).
+
+    - Use the page title as **title** like `Documentation - Getting Started`
+    - Use file name as **slug** like `documentation-index`
+
+2. Add Flags, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation
+
+    - add `md-text,safe-html` as **Translation flags**
+    - choose **Enforced checks**:
+
+        - Markdown links
+        - Markdown references
+        - Markdown syntax
+        - Unsafe HTML
+
+3. Upload a **screenshot** of the page
+
+    - Restrict width and height to 2000px
+
+        ```sh
+        convert 'Screenshot.png' -resize x2000 'Getting-started.png'
+        ```
+
+    - Click on the empty **Search** button
+    - Add all strings to it
