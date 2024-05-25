@@ -85,6 +85,7 @@ The aim of this section is to have a consistent outcome.
     - Template for new translations: `translations/en/LC_MESSAGES/<file>.md.po` - replace `<file>`
     - Adding new translation: `Create new language file`
     - Language code style: `Default based on the file format`
+    - Manage strings: **not** checked
 
 3. Set the **Repository browser** to the right URL, replace `<file>`: `https://github.com/niccokunzmann/open-web-calendar/blob/{{branch}}/docs/<file>?plain=1#L{{line}}`
 4. For **Translation license** choose `Create Commons Attribution Share Alike 4.0 International`.
@@ -92,13 +93,15 @@ The aim of this section is to have a consistent outcome.
 
 6. Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation
 
-    - add `md-text,safe-html` as **Translation flags**
+    - add `md-text,safe-html,xml-text` as **Translation flags**
     - choose **Enforced checks**:
 
         - Markdown links
         - Markdown references
         - Markdown syntax
         - Unsafe HTML
+        - XML markup
+        - XML syntax
 
 7. Upload a **screenshot** of the page
 
