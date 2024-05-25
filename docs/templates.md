@@ -25,8 +25,7 @@ description: "Play with a variety of Calendars for your own project."
 
 
 We have prepared a variety of different styles so you can edit them to your needs.
-For each style, you can click on the `?` question mark in the corner
-and edit the calendar.
+For each style, you can edit the calendar and shape is as you need it.
 If you are inspired, you can also just head over and [start from scratch]({{link.web}}).
 
 > Are you proud of your calendar? Share it here!
