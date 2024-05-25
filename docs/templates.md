@@ -18,9 +18,7 @@ description: "Play with a variety of Calendars for your own project."
     sandbox="allow-scripts allow-same-origin allow-top-navigation"
     allowTransparency="true" scrolling="no"
     frameborder="0" height="600px" width="{{width}}"></iframe>
-<a href="{{link.web}}/index.html?specification_url={{link.templates}}/{{spec}}" target="_blank">
-  Edit the calendar
-</a>
+<a href="{{link.web}}/index.html?specification_url={{link.templates}}/{{spec}}" target="_blank">Edit the calendar</a>
 {%- endmacro %}
 
 
