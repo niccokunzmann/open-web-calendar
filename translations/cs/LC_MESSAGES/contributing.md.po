@@ -1,0 +1,89 @@
+# Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-27 01:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.13.0\n"
+
+#
+msgid "You can improve the project yourself. Get started here."
+msgstr ""
+
+msgid ""
+"[![Sponsor with "
+"GitHub](https://img.shields.io/github/sponsors/niccokunzmann?logo=github&label=GitHub%20Sponsors)](https://github.com/sponsors/niccokunzmann)"
+" [![Support on Open "
+"Collective](https://img.shields.io/opencollective/all/open-web-"
+"calendar?label=support%20on%20open%20collective)](https://opencollective.com/open-"
+"web-calendar/) [![Fund Issues with "
+"Polar](https://img.shields.io/github/issues/niccokunzmann/open-web-"
+"calendar?logo=github&label=issues%20seek%20funding&color=%230062ff)](https://polar.sh/niccokunzmann/open-"
+"web-calendar)"
+msgstr ""
+
+msgid "There are several ways in which you can help this project:"
+msgstr ""
+
+msgid ""
+"[Use it](https://open-web-calendar.hosted.quelltext.eu) and [report "
+"errors](https://github.com/niccokunzmann/open-web-calendar/issues)"
+msgstr ""
+
+msgid ""
+"[Donate using Open Collective](https://opencollective.com/open-web-"
+"calendar/)"
+msgstr ""
+
+msgid ""
+"[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
+"calendar)"
+msgstr ""
+
+msgid ""
+"[Donate using GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
+msgstr ""
+
+msgid ""
+"Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
+"calendar/issues) e.g. those especially to get started, labeled [good first "
+"issue](https://github.com/niccokunzmann/open-web-"
+"calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), "
+"leave a note and work on it."
+msgstr ""
+
+msgid ""
+"If you customized a calendar, please consider [contributing it as a "
+"template](templates.md) for others to use."
+msgstr ""
+
+msgid ""
+"If you are part of a company and you would like to commission work, please "
+"get in touch with Nicco Kunzmann."
+msgstr ""
+
+msgid "Contribute ♥️"
+msgstr ""
+
+msgid "[Translate this project](dev/translate.md)"
+msgstr ""
+
+#~ msgid "[Translate this project](translate.md)"
+#~ msgstr ""
+
+#~ msgid "Contributing ♥️"
+#~ msgstr ""
+
+#~ msgid "[Translate this project][translate]"
+#~ msgstr ""
+
+#, fuzzy
+#~ msgid "[translate]: #translate"
+#~ msgstr "[translate]: #translate"
