@@ -1,0 +1,72 @@
+# Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-27 00:50+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.13.0\n"
+
+#
+msgid ""
+"Embed a highly customizable web calendar into your website using ICal source"
+" links"
+msgstr ""
+
+msgid "Open Web Calendar"
+msgstr ""
+
+msgid "Permanent link"
+msgstr ""
+
+#~ msgid "Translate"
+#~ msgstr ""
+
+#~ msgid "Cleanup translation files"
+#~ msgstr ""
+
+#~ msgid "Contributors in comment"
+#~ msgstr ""
+
+#~ msgid "Add missing languages"
+#~ msgstr ""
+
+#~ msgid "Development"
+#~ msgstr ""
+
+#~ msgid "Hosting"
+#~ msgstr ""
+
+#~ msgid "News"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can help us by [translating the "
+#~ "project](https://hosted.weblate.org/engage/open-web-calendar/) to your "
+#~ "language. If your language is not listed, please request to add it!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-calendar/)"
+#~ msgstr ""
+
+#~ msgid "Here, you can see the current translation status:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[![Translation status](https://hosted.weblate.org/widgets/open-web-"
+#~ "calendar/-/multi-auto.svg)](https://hosted.weblate.org/engage/open-web-"
+#~ "calendar/)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Translations are contributed by volunteers and [logged](changelog.md). After"
+#~ " 48 hours they are usually life at the [hosted instance](https://open-web-"
+#~ "calendar.hosted.quelltext.eu)."
+#~ msgstr ""
