@@ -1,1 +1,40 @@
-{}
+title-title: Tytuł
+first-hour-title: Pierwsza godzina
+time-increment-60: 1 godzina
+style-days: Jeśli chcesz mieć inny kolor na dni, możesz to również określić.
+about: The Open Calendar używa kalendarzy ICS/iCal i wyświetla je w jednym kalendarzu.
+  Możesz używać go z Nextcloud, Outlook, Google Calendar, Meetup i innymi kalendarzami
+  wspierającymi ICS standard.
+calendar-urls: 'Żeby połączyć kilka kalendarzy, wprowadź odnośniki ICS kalendarzy
+  tutaj:'
+time-increment-30: 30 minut
+time-increment-10: 10 minut
+time-increment-15: 15 minut
+language-title: Język
+language-description: Możesz ustawić język kalendarza.
+skins-title: Skórki
+links-title: Linki
+links-self: Otwórz połączony dokument w tej samej ramce, w której został kliknięty.
+links-description: Wydarzenia mogą mieć lokalizacje i adresy URL. Jeśli osadzisz kalendarz
+  na stronie internetowej, możesz wybrać, gdzie kliknięty link otwiera stronę.
+links-parent: Otwórz połączony dokument w ramce nadrzędnej.
+links-blank: Otwórz połączony dokument w nowym oknie lub nowej karcie.
+links-top: Otwórz połączony dokument w pełnej części okna.
+style-background: Możesz zmienić kolor tła kalendarza.
+controls-date: Data
+calendar-code: 'Aby osadzić kalendarz, użyj tego kodu na swojej stronie:'
+calendar-code-execution: Poniżej możesz zobaczyć powstały kalendarz.
+section-customization: Możesz dokonać dodatkowych dostosowań kalendarza.
+title-description: 'Aby zmienić tytuł, wpisz tutaj nazwę kalendarza:'
+starting-date-title: Data rozpoczęcia
+starting-date-description: 'Aby zmienić datę początkową kalendarza:'
+last-hour-title: Ostatnia godzina
+time-increment-description: 'Zmień przyrost czasu w widoku dnia i tygodnia:'
+time-increment-title: Przyrost czasu
+skins-description: Możesz wybrać różne skórki kalendarza.
+style-title: Niestandardowe style CSS
+style-description: Za pomocą CSS możesz zmienić kolor swojego kalendarza i wielu innych
+  właściwości. Twoje dostosowanie ma pierwszeństwo przed wybraną skórką. Poniżej możesz
+  wybrać jedną z kilku dostosowań, które dla Ciebie przygotowaliśmy.
+style-click: Możesz zmienić kolor elementów, które można kliknąć.
+style-date: Możesz zmienić kolor tła bieżącej daty.
