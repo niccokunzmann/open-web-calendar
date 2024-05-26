@@ -76,18 +76,18 @@ The aim of this section is to have a consistent outcome.
 2. Choose the right File settings:
 
     - File format: `gettext PO file` - **bi**lingual
-    - File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`
-    - Language filter: `^(?!(en)$)[^.]+$` - excludes `en`
-    - Source language: `English`
     - Repository browser: `https://github.com/niccokunzmann/open-web-calendar/blob/{{branch}}/docs/<file>?plain=1#L{{line}}` - replace `<file>`
+    - File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`
     - Monolingual base language file: empty
     - Edit base file: **not** checked
     - Intermediate language file: empty
-    - Template for new translations: `translations/en/LC_MESSAGES/<file>.md.po` - replace `<file>`
     - Adding new translation: `Create new language file`
-    - Language code style: `Default based on the file format`
-    - Manage strings: **not** checked
+    - Template for new translations: `translations/en/LC_MESSAGES/<file>.md.po` - replace `<file>`
     - Translation license: `Create Commons Attribution Share Alike 4.0 International`
+    - Language code style: `Default based on the file format`
+    - Language filter: `^(?!(en)$)[^.]+$` - excludes `en`
+    - Source language: `English`
+    - Manage strings: **not** checked
 3. Save.
 
 4. Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation
