@@ -11,10 +11,12 @@ translated_documentation_languages="en"
 
 for lang in `ls ../translations`; do
   for po in ../translations/$lang/LC_MESSAGES/**.po ; do
-    msgstr_count="`grep -F 'msgstr' \"$po\" | grep -iv 'X-Generator' | wc -l`"
+    msgstr_count="`grep -F 'msgstr' \"$po\" | wc -l`"
     empty_msgstr_count="`grep -F 'msgstr ""' \"$po\" | wc -l`"
-    if [ "$msgstr_count" != "$empty_msgstr_count" ]; then
-      echo -e "$lang\t has a translation in `basename \"$po\"`\t$po"
+    # add to count because of auto-generated messages: X-Generator
+    min_messages=$(( empty_msgstr_count + 1 ))
+    if test "$msgstr_count" -gt  "$min_messages" ; then
+      echo -e "$lang\t has a translation in `basename \"$po\"`\t$po ($msgstr_count, $min_messages)"
       if [[ "$translated_documentation_languages" != *"$lang"* ]]; then
         translated_documentation_languages="$translated_documentation_languages $lang"
       fi
