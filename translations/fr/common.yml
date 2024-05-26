@@ -1,3 +1,8 @@
 source-code: Voir le code source.
 project-name: Open Web Calendar
 improve: Participez à améliorer le projet et découvrez comment contribuer.
+project-description: C'est un calendrier qui fournit une intégration à un site web
+  pour de nombreux calendriers différents. Il est également possible d'intégrer un
+  lien ICS. Les calendriers sont hautement configurables, par exemple pour avoir plusieurs
+  sources et s'adapter au site web. Si vous aimez ce projet, pensez à donner de votre
+  temps ou de votre argent pour qu'il reste gratuit et accessible à tous.
