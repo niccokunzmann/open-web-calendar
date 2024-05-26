@@ -43,6 +43,6 @@ for lang in $translated_documentation_languages; do
       continue
     fi
     echo "Adding extra.alternate: $lang as $name"
-    sed -i "s/# add extra.alternate languages above/    - name: $name\n      link: $lang\n      link: $lang\n# add extra.alternate languages above/" ../mkdocs.yml
+    sed -i "s/# add extra.alternate languages above/    - name: $name\n      link: $lang\n      lang: $lang\n# add extra.alternate languages above/" ../mkdocs.yml
   fi
 done

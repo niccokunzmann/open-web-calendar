@@ -118,6 +118,7 @@ plugins:
         - en
         - de
         - es
+        - nb_NO
 # add mdpo.languages above
       translate:
         - site_name
@@ -183,10 +184,10 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
       lang: de
     - name: Español
       link: es
-      link: es
-    - name: Español
-      link: es
-      link: es
+      lang: es
+    - name: Norsk bokmål
+      link: nb_NO
+      lang: nb_NO
 # add extra.alternate languages above
 
 # navigation, see https://www.mkdocs.org/user-guide/configuration/#nav
