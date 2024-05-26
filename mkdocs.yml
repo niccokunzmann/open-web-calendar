@@ -117,6 +117,8 @@ plugins:
         - pot # generate the template files
         - en
         - de
+        - es
+# add mdpo.languages above
       translate:
         - site_name
         - site_description
@@ -179,6 +181,10 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Deutsch
       link: de
       lang: de
+    - name: Español
+      link: es
+      link: es
+# add extra.alternate languages above
 
 # navigation, see https://www.mkdocs.org/user-guide/configuration/#nav
 nav:
