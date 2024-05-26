@@ -184,6 +184,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Español
       link: es
       link: es
+    - name: Español
+      link: es
+      link: es
 # add extra.alternate languages above
 
 # navigation, see https://www.mkdocs.org/user-guide/configuration/#nav

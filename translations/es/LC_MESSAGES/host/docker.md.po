@@ -145,11 +145,11 @@ msgstr ""
 msgid "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 msgstr "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 
-#~ msgid "Start the container:    wzxhzdk:4"
-#~ msgstr ""
+msgid "Start the container:    wzxhzdk:4"
+msgstr ""
 
-#~ msgid "docker compose pull "
-#~ msgstr ""
+msgid "docker compose pull "
+msgstr ""
 
-#~ msgid "docker compose up -d "
-#~ msgstr ""
+msgid "docker compose up -d "
+msgstr ""
