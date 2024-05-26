@@ -1,17 +1,35 @@
-#
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-27 00:50+0200\n"
+"PO-Revision-Date: 2024-05-26 22:50+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-common-translations/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
+
+#
 
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
+"Füge einen hoch-anpassbaren Webkalender in Deine Webseite ein, auf der Basis "
+"von ICS-Links"
 
 msgid "Open Web Calendar"
-msgstr ""
+msgstr "Offener Web-Kalender"
 
 msgid "Permanent link"
-msgstr ""
+msgstr "Fester Link"
 
 msgid ""
 "<a href=\"https://open-web-"
