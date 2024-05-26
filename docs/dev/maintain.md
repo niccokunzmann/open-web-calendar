@@ -79,6 +79,7 @@ The aim of this section is to have a consistent outcome.
     - File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`
     - Language filter: `^(?!(en)$)[^.]+$` - excludes `en`
     - Source language: `English`
+    - Repository browser: `https://github.com/niccokunzmann/open-web-calendar/blob/{{branch}}/docs/<file>?plain=1#L{{line}}` - replace `<file>`
     - Monolingual base language file: empty
     - Edit base file: **not** checked
     - Intermediate language file: empty
@@ -86,12 +87,10 @@ The aim of this section is to have a consistent outcome.
     - Adding new translation: `Create new language file`
     - Language code style: `Default based on the file format`
     - Manage strings: **not** checked
+    - Translation license: `Create Commons Attribution Share Alike 4.0 International`
+3. Save.
 
-3. Set the **Repository browser** to the right URL, replace `<file>`: `https://github.com/niccokunzmann/open-web-calendar/blob/{{branch}}/docs/<file>?plain=1#L{{line}}`
-4. For **Translation license** choose `Create Commons Attribution Share Alike 4.0 International`.
-5. Save.
-
-6. Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation
+4. Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation
 
     - add `md-text,safe-html,xml-text` as **Translation flags**
     - choose **Enforced checks**:
@@ -103,7 +102,7 @@ The aim of this section is to have a consistent outcome.
         - XML markup
         - XML syntax
 
-7. Upload a **screenshot** of the page
+5. Upload a **screenshot** of the page
 
     - Restrict width and height to 2000px
 
@@ -114,10 +113,12 @@ The aim of this section is to have a consistent outcome.
     - Click on the empty **Search** button
     - Add all strings to it
 
-8. Clear any component alerts.
+6. Go to the **Manage** -> **Add-ons** and add:
 
-These component Add-Ons are automatically installed: ([Page](https://hosted.weblate.org/addons/open-web-calendar/))
+    - Add missing languages
+    - Cleanup translation files
+    - Contributors in comment
 
-- Cleanup translation files
-- Contributors in comment
-- Add missing languages
+    These component Add-Ons are installed project-wide but need activation, too.
+
+7. Clear any component alerts.

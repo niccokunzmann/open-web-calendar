@@ -121,11 +121,6 @@ msgstr ""
 msgid "Create a component **From existing component**, the `index.html`."
 msgstr ""
 
-msgid ""
-"For **Translation license** choose `Create Commons Attribution Share Alike "
-"4.0 International`."
-msgstr ""
-
 msgid "Save."
 msgstr ""
 
@@ -135,11 +130,6 @@ msgid ""
 msgstr ""
 
 msgid "Clear any component alerts."
-msgstr ""
-
-msgid ""
-"These component Add-Ons are automatically installed: "
-"([Page](https://hosted.weblate.org/addons/open-web-calendar/))"
 msgstr ""
 
 msgid "Cleanup translation files"
@@ -187,12 +177,6 @@ msgstr ""
 msgid "Language code style: `Default based on the file format`"
 msgstr ""
 
-msgid ""
-"Set the **Repository browser** to the right URL, replace `<file>`: "
-"`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
-"}}/docs/<file>?plain=1#L{{ line }}`"
-msgstr ""
-
 msgid "Manage strings: **not** checked"
 msgstr ""
 
@@ -204,6 +188,40 @@ msgstr ""
 
 msgid "XML syntax"
 msgstr ""
+
+msgid ""
+"Repository browser: `https://github.com/niccokunzmann/open-web-"
+"calendar/blob/{{ branch }}/docs/<file>?plain=1#L{{ line }}` - replace "
+"`<file>`"
+msgstr ""
+
+msgid ""
+"Translation license: `Create Commons Attribution Share Alike 4.0 "
+"International`"
+msgstr ""
+
+msgid "Go to the **Manage** -> **Add-ons** and add:"
+msgstr ""
+
+msgid ""
+"These component Add-Ons are installed project-wide but need activation, too."
+msgstr ""
+
+#~ msgid ""
+#~ "For **Translation license** choose `Create Commons Attribution Share Alike "
+#~ "4.0 International`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These component Add-Ons are automatically installed: "
+#~ "([Page](https://hosted.weblate.org/addons/open-web-calendar/))"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Set the **Repository browser** to the right URL, replace `<file>`: "
+#~ "`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
+#~ "}}/docs/<file>?plain=1#L{{ line }}`"
+#~ msgstr ""
 
 #~ msgid "add `md-text,safe-html` as **Translation flags**"
 #~ msgstr ""
