@@ -70,7 +70,7 @@ The aim of this section is to have a consistent outcome.
 
 1. Create a component **From existing component**, the `index.html`.
 
-    - Use the page title as **title** like `Documentation - Getting Started`
+    - Use the page title as **title** like `Documentation - 00 - Getting Started`
     - Use file name as **slug** like `documentation-index`
 
 2. Choose the right File settings:
@@ -122,3 +122,5 @@ The aim of this section is to have a consistent outcome.
     These component Add-Ons are installed project-wide but need activation, too.
 
 7. Clear any component alerts.
+8. Skip through all the strings. If some strings are not for translation,
+    add the flag `read-only`.

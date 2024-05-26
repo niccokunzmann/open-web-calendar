@@ -76,9 +76,6 @@ msgid ""
 "of this section is to have a consistent outcome."
 msgstr ""
 
-msgid "Use the page title as **title** like `Documentation - Getting Started`"
-msgstr ""
-
 msgid "Use file name as **slug** like `documentation-index`"
 msgstr ""
 
@@ -206,6 +203,18 @@ msgstr ""
 msgid ""
 "These component Add-Ons are installed project-wide but need activation, too."
 msgstr ""
+
+msgid ""
+"Use the page title as **title** like `Documentation - 00 - Getting Started`"
+msgstr ""
+
+msgid ""
+"Skip through all the strings. If some strings are not for translation, add "
+"the flag `read-only`."
+msgstr ""
+
+#~ msgid "Use the page title as **title** like `Documentation - Getting Started`"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "For **Translation license** choose `Create Commons Attribution Share Alike "
