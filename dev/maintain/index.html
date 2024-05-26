@@ -907,7 +907,7 @@ The aim of this section is to have a consistent outcome.</p>
 <li>
 <p>Create a component <strong>From existing component</strong>, the <code>index.html</code>.</p>
 <ul>
-<li>Use the page title as <strong>title</strong> like <code>Documentation - Getting Started</code></li>
+<li>Use the page title as <strong>title</strong> like <code>Documentation - 00 - Getting Started</code></li>
 <li>Use file name as <strong>slug</strong> like <code>documentation-index</code></li>
 </ul>
 </li>
@@ -915,18 +915,18 @@ The aim of this section is to have a consistent outcome.</p>
 <p>Choose the right File settings:</p>
 <ul>
 <li>File format: <code>gettext PO file</code> - <strong>bi</strong>lingual</li>
-<li>File mask: <code>translations/*/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
-<li>Language filter: <code>^(?!(en)$)[^.]+$</code> - excludes <code>en</code></li>
-<li>Source language: <code>English</code></li>
 <li>Repository browser: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/&lt;file&gt;?plain=1#L{{ line }}</code> - replace <code>&lt;file&gt;</code></li>
+<li>File mask: <code>translations/*/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
 <li>Monolingual base language file: empty</li>
 <li>Edit base file: <strong>not</strong> checked</li>
 <li>Intermediate language file: empty</li>
-<li>Template for new translations: <code>translations/en/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
 <li>Adding new translation: <code>Create new language file</code></li>
+<li>Template for new translations: <code>translations/en/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
+<li>Translation license: <code>Create Commons Attribution Share Alike 4.0 International</code></li>
 <li>Language code style: <code>Default based on the file format</code></li>
-<li>Manage strings: <strong>not</strong> checked</li>
-<li>Translation license: <code>Create Commons Attribution Share Alike 4.0 International</code>
+<li>Language filter: <code>^(?!(en)$)[^.]+$</code> - excludes <code>en</code></li>
+<li>Source language: <code>English</code></li>
+<li>Manage strings: <strong>not</strong> checked
 3. Save.</li>
 </ul>
 </li>
@@ -973,6 +973,8 @@ The aim of this section is to have a consistent outcome.</p>
 <li>
 <p>Clear any component alerts.</p>
 </li>
+<li>Skip through all the strings. If some strings are not for translation,
+    add the flag <code>read-only</code>.</li>
 </ol>
 
 
