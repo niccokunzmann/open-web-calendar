@@ -25,17 +25,18 @@ jobs:
           python-version: 3.11
       - name: Install tox
         run: pip install tox
-      - name: Build the documentation
-        run: tox -e docs -- build
+      # run adding languages before the build to make sure that it succeeds
       - name: Add missing languages
         run: ./scripts/find-translated-documentation-languages.sh
+      - name: Build the documentation
+        run: tox -e docs -- build
       - name: Check status
         run: git status
       - name: Push updates translation files
         run: |
           git config --global user.name 'OWC Github Actions'
           git config --global user.email 'owc-github-actions@users.noreply.github.com'
-          git add translations
+          git add translations mkdocs.yml
           if git commit -m "Update translation files"; then
             if ! git push; then
               echo "ERROR: Push failed."
