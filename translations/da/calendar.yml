@@ -32,3 +32,8 @@ labels_date: "Dato"
 labels_description: "Beskrivelse"
 labels_week_agenda_tab: "Dagsorden"
 language-en: "Danish"
+labels_year: År
+labels_month: Måned
+labels_day: Dag
+labels_hour: Time
+labels_minute: Minut
