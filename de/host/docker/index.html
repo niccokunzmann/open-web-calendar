@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Embed a highly customizable web calendar into your website using ICal source links">
+        <meta name="description" content="Füge einen hoch-anpassbaren Webkalender in Deine Webseite ein, auf der Basis von ICS-Links">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Hosting with Docker - Open Web Calendar</title>
+        <title>Hosting with Docker - Offener Web-Kalender</title>
       
     
     
@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_paidwhxu/de/host/docker/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ytb9fi24/de/host/docker/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_paidwhxu/de/host/docker/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ytb9fi24/de/host/docker/index.png" >
       
     
     
@@ -812,9 +812,9 @@
   
 
 
-<h1 id="hosting-with-docker">Hosting with Docker<a class="headerlink" href="#hosting-with-docker" title="Permanent link">&para;</a></h1>
+<h1 id="hosting-with-docker">Hosting with Docker<a class="headerlink" href="#hosting-with-docker" title="Fester Link">&para;</a></h1>
 <p>You can use <code>docker</code> and <code>docker compose</code> to host the Open Web Calendar.</p>
-<h2 id="build-the-image">Build the Image<a class="headerlink" href="#build-the-image" title="Permanent link">&para;</a></h2>
+<h2 id="build-the-image">Build the Image<a class="headerlink" href="#build-the-image" title="Fester Link">&para;</a></h2>
 <p>First, clone the repository:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/niccokunzmann/open-web-calendar
 <span class="nb">cd</span><span class="w"> </span>open-web-calendar
@@ -823,15 +823,15 @@
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>--tag<span class="w"> </span>niccokunzmann/open-web-calendar<span class="w"> </span>.
 </code></pre></div>
 <p>This will create the image <code>niccokunzmann/open-web-calendar</code>.</p>
-<h2 id="run-the-docker-image">Run the Docker Image<a class="headerlink" href="#run-the-docker-image" title="Permanent link">&para;</a></h2>
+<h2 id="run-the-docker-image">Run the Docker Image<a class="headerlink" href="#run-the-docker-image" title="Fester Link">&para;</a></h2>
 <p>You can use the existing image: <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">niccokunzmann/open-web-calendar</a>.</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>niccokunzmann/open-web-calendar
 </code></pre></div>
 <p>Then, you should see your service running at <a href="http://localhost:5000">http://localhost:5000</a>.</p>
-<h2 id="container-tags">Container Tags<a class="headerlink" href="#container-tags" title="Permanent link">&para;</a></h2>
+<h2 id="container-tags">Container Tags<a class="headerlink" href="#container-tags" title="Fester Link">&para;</a></h2>
 <p>The container <code>niccokunzmann/open-web-calendar:latest</code> contains the latest release. Containers are also tagged with the version from the <a href="../changelog.md">changelog</a>, e.g. <code>niccokunzmann/open-web-calendar:v1.10</code>.</p>
 <p>If you wish to run the latest development version, use <code>niccokunzmann/open-web-calendar:master</code>. This includes unchecked translations.</p>
-<h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h2>
+<h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Fester Link">&para;</a></h2>
 <p>Use the pre-build Dockerhub image with <code>docker compose</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
@@ -853,14 +853,14 @@
 <li>The container will be pulled automatically from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> and then starts.</li>
 </ol>
 <p><strong>Important Note:</strong> If you use this service, consider setting up <a href="https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47">log rotation</a> as it is very talkative.</p>
-<h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="Permanent link">&para;</a></h2>
+<h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="Fester Link">&para;</a></h2>
 <p>If you want to update your image with the latest version from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> run this:</p>
 <div class="highlight"><pre><span></span><code>docker compose pull
 </code></pre></div>
 <p>Note: You need to restart the container after pulling in order for the update to apply:</p>
 <div class="highlight"><pre><span></span><code>docker compose up -d
 </code></pre></div>
-<h2 id="preventing-ssrf-attacks-using-a-tor-proxy">Preventing SSRF attacks using a Tor proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-tor-proxy" title="Permanent link">&para;</a></h2>
+<h2 id="preventing-ssrf-attacks-using-a-tor-proxy">Preventing SSRF attacks using a Tor proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-tor-proxy" title="Fester Link">&para;</a></h2>
 <p>The Open Web Calendar can be configured to use a proxy to request <code>.ics</code> and other files. The following example shows the usage of a Tor proxy. You can try it out at <a href="https://tor.open-web-calendar.hosted.quelltext.eu/">tor.open-web-calendar.hosted.quelltext.eu</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
@@ -896,7 +896,7 @@
 <span class="w">    </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>The configuration above prevents access to the internal network as the requests are sent over the Tor network. A bonus feature is that calendars can be accessed and hosted as a Tor Hidden Service using an <code>.onion</code> address. E.g. a calendar file can be served from a Raspberry Pi behind a home network&rsquo;s firewall. This <a href="https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics">example calendar</a> uses <a href="http://3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion/one-day-event-repeat-every-day.ics">this onion address</a>.</p>
-<h2 id="automatic-updates">Automatic Updates<a class="headerlink" href="#automatic-updates" title="Permanent link">&para;</a></h2>
+<h2 id="automatic-updates">Automatic Updates<a class="headerlink" href="#automatic-updates" title="Fester Link">&para;</a></h2>
 <p>If you have not fixed your version but you use the <code>latest</code> or <code>master</code> tag, you can automatically update all the services required.</p>
 <p>Create an <code>update.sh</code> file next to your <code>docker-compose.yml</code> file and add this content:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
