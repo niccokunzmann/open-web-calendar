@@ -918,6 +918,7 @@ The aim of this section is to have a consistent outcome.</p>
 <li>File mask: <code>translations/*/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
 <li>Language filter: <code>^(?!(en)$)[^.]+$</code> - excludes <code>en</code></li>
 <li>Source language: <code>English</code></li>
+<li>Repository browser: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/&lt;file&gt;?plain=1#L{{ line }}</code> - replace <code>&lt;file&gt;</code></li>
 <li>Monolingual base language file: empty</li>
 <li>Edit base file: <strong>not</strong> checked</li>
 <li>Intermediate language file: empty</li>
@@ -925,14 +926,9 @@ The aim of this section is to have a consistent outcome.</p>
 <li>Adding new translation: <code>Create new language file</code></li>
 <li>Language code style: <code>Default based on the file format</code></li>
 <li>Manage strings: <strong>not</strong> checked</li>
+<li>Translation license: <code>Create Commons Attribution Share Alike 4.0 International</code>
+3. Save.</li>
 </ul>
-</li>
-<li>
-<p>Set the <strong>Repository browser</strong> to the right URL, replace <code>&lt;file&gt;</code>: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/&lt;file&gt;?plain=1#L{{ line }}</code></p>
-</li>
-<li>For <strong>Translation license</strong> choose <code>Create Commons Attribution Share Alike 4.0 International</code>.</li>
-<li>
-<p>Save.</p>
 </li>
 <li>
 <p>Add <strong>Flags</strong>, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation</p>
@@ -966,15 +962,18 @@ The aim of this section is to have a consistent outcome.</p>
 </ul>
 </li>
 <li>
+<p>Go to the <strong>Manage</strong> -&gt; <strong>Add-ons</strong> and add:</p>
+<ul>
+<li>Add missing languages</li>
+<li>Cleanup translation files</li>
+<li>Contributors in comment</li>
+</ul>
+<p>These component Add-Ons are installed project-wide but need activation, too.</p>
+</li>
+<li>
 <p>Clear any component alerts.</p>
 </li>
 </ol>
-<p>These component Add-Ons are automatically installed: (<a href="https://hosted.weblate.org/addons/open-web-calendar/">Page</a>)</p>
-<ul>
-<li>Cleanup translation files</li>
-<li>Contributors in comment</li>
-<li>Add missing languages</li>
-</ul>
 
 
 

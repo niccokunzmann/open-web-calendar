@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ytb9fi24/de/dev/maintain/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_txduycw8/de/dev/maintain/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ytb9fi24/de/dev/maintain/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_txduycw8/de/dev/maintain/index.png" >
       
     
     
@@ -830,6 +830,7 @@ git push origin v1.30</code></li>
 <li>File mask: <code>translations/*/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
 <li>Language filter: <code>^(?!(en)$)[^.]+$</code> - excludes <code>en</code></li>
 <li>Source language: <code>English</code></li>
+<li>Repository browser: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/&lt;file&gt;?plain=1#L{{ line }}</code> - replace <code>&lt;file&gt;</code></li>
 <li>Monolingual base language file: empty</li>
 <li>Edit base file: <strong>not</strong> checked</li>
 <li>Intermediate language file: empty</li>
@@ -837,10 +838,9 @@ git push origin v1.30</code></li>
 <li>Adding new translation: <code>Create new language file</code></li>
 <li>Language code style: <code>Default based on the file format</code></li>
 <li>Manage strings: <strong>not</strong> checked</li>
+<li>Translation license: <code>Create Commons Attribution Share Alike 4.0 International</code></li>
 </ul>
 <ol>
-<li>Set the <strong>Repository browser</strong> to the right URL, replace <code>&lt;file&gt;</code>: <code>https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch }}/docs/&lt;file&gt;?plain=1#L{{ line }}</code></li>
-<li>For <strong>Translation license</strong> choose <code>Create Commons Attribution Share Alike 4.0 International</code>.</li>
 <li>Save.</li>
 <li>Add <strong>Flags</strong>, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation</li>
 </ol>
@@ -869,14 +869,17 @@ git push origin v1.30</code></li>
 <li>Add all strings to it</li>
 </ul>
 <ol>
-<li>Clear any component alerts.</li>
+<li>Go to the <strong>Manage</strong> -&gt; <strong>Add-ons</strong> and add:</li>
 </ol>
-<p>These component Add-Ons are automatically installed: (<a href="https://hosted.weblate.org/addons/open-web-calendar/">Page</a>)</p>
 <ul>
+<li>Add missing languages</li>
 <li>Cleanup translation files</li>
 <li>Contributors in comment</li>
-<li>Add missing languages</li>
 </ul>
+<p>These component Add-Ons are installed project-wide but need activation, too.</p>
+<ol>
+<li>Clear any component alerts.</li>
+</ol>
 
 
 
