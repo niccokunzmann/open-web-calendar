@@ -107,10 +107,9 @@ Set the debug flag for the app.
 The Open Web Calendar uses libraries whose behavior can be further customized.
 
 - **Flask** has **[more environment variables](https://flask.palletsprojects.com/en/3.0.x/config/)** available to configure how the application serves content.
-- **Requests** is used the get the `.ics` files. You can [configure a proxy].
+- **Requests** is used the get the `.ics` files. You can [configure a proxy](#ssrf-protection-with-a-proxy-server).
 
 ### SSRF Protection with a Proxy Server
-[configure a proxy]: #ssrf-protection-with-a-proxy-server
 
 The Open Web Calendar can be used to access the local network behind a firewall,
 see [Issue 250](https://github.com/niccokunzmann/open-web-calendar/issues/250).
