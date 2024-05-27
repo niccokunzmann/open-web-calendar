@@ -36,7 +36,7 @@ Give a calendar your personal touch within minutes!
 | Click on Event Location | <center>✔</center> |
 | Styled Event Descriptions | <center>✔</center> |
 | FOSS - No Vendor Lock-In | <center>✔</center> |
-| [Hosted]({{link.web}}) and [Self-Hosted](host/self.md) | <center>✔</center> |
+| [Hosted]({{link.web}}) and [Self-Hosted](host/self) | <center>✔</center> |
 | Subscribe Link | <center>✔</center> |
 | Community and Paid Support | <center>✔</center> |
-| [Developer API](dev/api.md) | <center>✔</center> |
+| [Developer API](dev/api) | <center>✔</center> |

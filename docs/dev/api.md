@@ -129,7 +129,7 @@ Generally, the `specification` variable should be used.
 
 Below, you can find a picture of the architecture.
 
-![architecture](../assets/img/architecture.svg)
+![architecture](/assets/img/architecture.svg)
 
 The base of a calendar is the specification, given in the various forms.
 This specification influences all the steps.

@@ -247,3 +247,6 @@ markdown_extensions:
   - pymdownx.snippets: # see https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
       base_path: ["docs/snippets"]
   - attr_list # see https://mrkeo.github.io/reference/images/
+
+hooks:
+  - docs/hooks/set_canonical_url.py
