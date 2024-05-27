@@ -1,17 +1,17 @@
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:50+0200\n"
-"PO-Revision-Date: 2024-05-26 22:50+0000\n"
+"PO-Revision-Date: 2024-05-27 21:07+0000\n"
 "Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/documentation-common-translations/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-common-translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
@@ -73,7 +73,7 @@ msgstr ""
 "target=\"_blank\">Passe den Kalender an</a>"
 
 msgid "See also:"
-msgstr ""
+msgstr "Siehe auch:"
 
 #, fuzzy
 msgid ""
@@ -83,14 +83,15 @@ msgstr ""
 "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/master/default_specification.yml"
 
-#, fuzzy
 msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
+msgstr "[Benutze einen Proxy]: #ssrf-protection-with-a-proxy-server"
 
 msgid ""
 "After you have set up your own server, you can [configure the "
 "behavior](../configure)."
 msgstr ""
+"Nachdem Du einen Server aufgesetzt hast, [kannst Du sein Verhalten "
+"anpassen](../configure)."
 
 #~ msgid ""
 #~ "The configuration of all calendars is rooted in the "
