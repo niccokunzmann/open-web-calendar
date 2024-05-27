@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Embed a highly customizable web calendar into your website using ICal source links">
+        <meta name="description" content="Agregue un calendario web altamente personalizable a tu página web basado en enlaces ICal">
       
       
       
@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_446gnehu/es/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hyvoxi7j/es/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_446gnehu/es/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hyvoxi7j/es/dev/api/index.png" >
       
     
     
@@ -291,11 +291,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
+      <a href="../../../de/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Contribute ♥️
+    Beitragen ♥️
   </span>
   
 
@@ -833,7 +833,7 @@
   
 
 
-<h1 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
+<h1 id="api">API<a class="headerlink" href="#api" title="Enlace permanente">&para;</a></h1>
 <p>Generally, the Open Web Calendar is there to be used without restriction. You can use this API to customize the calendar on the fly.</p>
 <p>This section can be of use if one of these applies:</p>
 <ul>
@@ -843,7 +843,7 @@
 <li>You want to extend the functionality of the Open Web Calendar.</li>
 <li>You want to use the Open Web Calendar as a proxy to request JSON events for your self-made event feed.</li>
 </ul>
-<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
+<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Enlace permanente">&para;</a></h2>
 <p>The basic parameters are the same at these endpoints:</p>
 <ul>
 <li><code>/index.html</code> - edit the calendar</li>
@@ -859,7 +859,7 @@
 <li><code>from=YYYY-MM-DD</code> - the start of the period in which events happen (inclusive)</li>
 <li><code>to=YYYY-MM-DD</code> - the end of the period in which events happen (exclusive)</li>
 </ul>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Enlace permanente">&para;</a></h2>
 <p>All configuration parameters are described sufficiently in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a>. That is the reference. E.g. if you find the parameter <code>title</code> in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a>, you have several options:</p>
 <ul>
 <li>Change it as query parameter
@@ -874,7 +874,7 @@
   "title": "calendar"
 }</code></li>
 </ul>
-<h2 id="adding-parameters">Adding Parameters<a class="headerlink" href="#adding-parameters" title="Permanent link">&para;</a></h2>
+<h2 id="adding-parameters">Adding Parameters<a class="headerlink" href="#adding-parameters" title="Enlace permanente">&para;</a></h2>
 <p>If you add a new parameter as a developer,</p>
 <ul>
 <li>Add the parameter with a default value to the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></li>
@@ -882,7 +882,7 @@
 <li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> to check that the calendar responds to the feature.</li>
 <li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> to make sure that the parameter can be used when a calendar is edited.</li>
 </ul>
-<h2 id="compiling-the-specification">Compiling the Specification<a class="headerlink" href="#compiling-the-specification" title="Permanent link">&para;</a></h2>
+<h2 id="compiling-the-specification">Compiling the Specification<a class="headerlink" href="#compiling-the-specification" title="Enlace permanente">&para;</a></h2>
 <p>You can change the calendar behavior and looks with parameters. These are the places to specify parameters:</p>
 <ol>
 <li><strong>Query parameters</strong> All parameters to the calendar url are put into the specification. The query parameters have the highest precedence. Examples:
@@ -897,11 +897,11 @@ calendar.html?title=CALENDAR</code></li>
 <p><strong><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></strong> This file contains the default parameters. They must not be hard-coded in the source code. All of them are there. Query parameters and the <code>specification_url</code> override these values.</p>
 </li>
 </ol>
-<h2 id="specification-in-the-calendar">Specification in the Calendar<a class="headerlink" href="#specification-in-the-calendar" title="Permanent link">&para;</a></h2>
+<h2 id="specification-in-the-calendar">Specification in the Calendar<a class="headerlink" href="#specification-in-the-calendar" title="Enlace permanente">&para;</a></h2>
 <p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compiles the specification from the given parameters in <code>get_specification()</code>. In the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> you can access the specification through the <code>specification</code> variable. The specification is available to JavaScript as the <code>specification</code> variable.</p>
-<h2 id="specification-in-the-index-page">Specification in the Index Page<a class="headerlink" href="#specification-in-the-index-page" title="Permanent link">&para;</a></h2>
+<h2 id="specification-in-the-index-page">Specification in the Index Page<a class="headerlink" href="#specification-in-the-index-page" title="Enlace permanente">&para;</a></h2>
 <p>The default specification is available before the calendar is built via JavaScript in the <code>configuration.default_specification</code> variable. There is a <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a> function which created the specification from the inputs. Generally, the <code>specification</code> variable should be used.</p>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Enlace permanente">&para;</a></h2>
 <p>Below, you can find a picture of the architecture.</p>
 <p><img alt="architecture" src="/assets/img/architecture.svg" /></p>
 <p>The base of a calendar is the specification, given in the various forms. This specification influences all the steps.</p>
