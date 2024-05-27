@@ -6,13 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Embed a highly customizable web calendar into your website using ICal source links">
+        <meta name="description" content="Configure a hosted instance.">
       
       
       
-        <link rel="canonical" href="https://open-web-calendar.quelltext.eu/en/dev/index.md">
+        <link rel="canonical" href="https://open-web-calendar.quelltext.eu/host/configure/">
       
       
+        <link rel="prev" href="../docker/">
+      
+      
+        <link rel="next" href="../../dev/translate/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -23,7 +27,7 @@
     
     
       
-        <title>Setup & Tests - Open Web Calendar</title>
+        <title>Server Configuration - Open Web Calendar</title>
       
     
     
@@ -43,8 +47,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.2196aa76.css">
         <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
       
     
@@ -58,11 +62,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Setup & Tests - Open Web Calendar" >
+        <meta  property="og:title"  content="Server Configuration - Open Web Calendar" >
       
-        <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
+        <meta  property="og:description"  content="Configure a hosted instance." >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_xlhuaiyu/en/dev/index.png" >
+        <meta  property="og:image"  content="https://open-web-calendar.quelltext.eu/assets/images/social/host/configure.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -70,15 +74,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://open-web-calendar.quelltext.eu/en/dev/index.md" >
+        <meta  property="og:url"  content="https://open-web-calendar.quelltext.eu/host/configure/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Setup & Tests - Open Web Calendar" >
+        <meta  name="twitter:title"  content="Server Configuration - Open Web Calendar" >
       
-        <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
+        <meta  name="twitter:description"  content="Configure a hosted instance." >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_xlhuaiyu/en/dev/index.png" >
+        <meta  name="twitter:image"  content="https://open-web-calendar.quelltext.eu/assets/images/social/host/configure.png" >
       
     
     
@@ -99,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup-tests" class="md-skip">
+        <a href="#server-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +119,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../de/" title="Open Web Calendar" class="md-header__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
+    <a href="../.." title="Open Web Calendar" class="md-header__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
       
   <img src="../../assets/img/logo/owc.svg" alt="logo">
 
@@ -134,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup & Tests
+              Server Configuration
             
           </span>
         </div>
@@ -222,7 +226,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../de/" title="Open Web Calendar" class="md-nav__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
+    <a href="../.." title="Open Web Calendar" class="md-nav__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
       
   <img src="../../assets/img/logo/owc.svg" alt="logo">
 
@@ -251,11 +255,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../de/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Anfang
+    Getting Started
   </span>
   
 
@@ -271,11 +275,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../de/templates/" class="md-nav__link">
+      <a href="../../templates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Beispiele
+    Examples
   </span>
   
 
@@ -291,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -346,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../news/social-media/" class="md-nav__link">
+      <a href="../../news/social-media/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -367,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../news/2024-04-10-website/" class="md-nav__link">
+      <a href="../../news/2024-04-10-website/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -392,17 +396,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -416,7 +422,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Hosting
@@ -430,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../host/hosted/" class="md-nav__link">
+      <a href="../hosted/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -451,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../host/self/" class="md-nav__link">
+      <a href="../self/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -472,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../host/docker/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -490,10 +496,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../host/configure/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Server Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -502,6 +528,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-default-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the Default Calendar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allowed_hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALLOWED_HOSTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      PORT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      WORKERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_requested_urls_for_seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_REQUESTED_URLS_FOR_SECONDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      APP_DEBUG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssrf-protection-with-a-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSRF Protection with a Proxy Server
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -556,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="translate/" class="md-nav__link">
+      <a href="../../dev/translate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./" class="md-nav__link">
+      <a href="../../dev/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -598,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="api/" class="md-nav__link">
+      <a href="../../dev/api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -619,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="maintain/" class="md-nav__link">
+      <a href="../../dev/maintain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -640,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="license/" class="md-nav__link">
+      <a href="../../dev/license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -668,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SECURITY/" class="md-nav__link">
+      <a href="../../SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dunno/" class="md-nav__link">
+      <a href="../../dunno/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,47 +881,89 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#clone-the-repository" class="md-nav__link">
+  <a href="#configuring-the-default-calendar" class="md-nav__link">
     <span class="md-ellipsis">
-      Clone the Repository
+      Configuring the Default Calendar
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-app" class="md-nav__link">
+  <a href="#configuring-the-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the App
+      Configuring the Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allowed_hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALLOWED_HOSTS
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#running-tests" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
     <span class="md-ellipsis">
-      Running Tests
+      PORT
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#browser-testing" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
     <span class="md-ellipsis">
-      Browser Testing
+      WORKERS
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#cache_requested_urls_for_seconds" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentation
+      CACHE_REQUESTED_URLS_FOR_SECONDS
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      APP_DEBUG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssrf-protection-with-a-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSRF Protection with a Proxy Server
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -807,7 +982,7 @@
                   
 
   
-    <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/translations/en/LC_MESSAGES/dev/index.md.po" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/docs/host/configure.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -815,53 +990,100 @@
   
 
 
-<h1 id="setup-tests">Setup &amp; Tests<a class="headerlink" href="#setup-tests" title="Permanent link">&para;</a></h1>
-<p>This section guides you through everything you need to know to develop the software: build it and make changes.</p>
-<h2 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/niccokunzmann/open-web-calendar
-<span class="nb">cd</span><span class="w"> </span>open-web-calendar
+<h1 id="server-configuration">Server Configuration<a class="headerlink" href="#server-configuration" title="Permanent link">&para;</a></h1>
+<p>If you want to change the Open Web Calendar to serve your needs, this is
+well possible.
+You can choose to</p>
+<ul>
+<li>Change how the default calendar looks.</li>
+<li>Change how the server works.</li>
+</ul>
+<h2 id="configuring-the-default-calendar">Configuring the Default Calendar<a class="headerlink" href="#configuring-the-default-calendar" title="Permanent link">&para;</a></h2>
+<p>The configuration of all calendars is rooted in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a>.
+All those values can be changed through a copy of this file hosted on the web
+through the calendar parameter <code>specification_url</code>.
+Each parameter should be documented in <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a>.</p>
+<p>If you modify the default specification, you modify <strong>all calendars</strong> that are hosted at your instance.
+Calendars still override some values for their configuration.
+Those which they do not override are affected.
+Not all values are exposed to the configuration page to be changed.
+Those values can still be changed in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a> and the query parameters.</p>
+<p>You might want to change these values:</p>
+<ul>
+<li><code>title</code></li>
+<li><code>language</code></li>
+<li><code>favicon</code></li>
+<li><code>source_code</code> - if you made changes</li>
+<li><code>contributing</code> - if you want to redirect to contribute to your project</li>
+</ul>
+<p>Related:</p>
+<ul>
+<li><a href="../../dev/api">API</a></li>
+</ul>
+<h2 id="configuring-the-server">Configuring the Server<a class="headerlink" href="#configuring-the-server" title="Permanent link">&para;</a></h2>
+<p>Environment variables only influence the running of the server.
+These environment variables can be used to configure the service:</p>
+<h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="Permanent link">&para;</a></h3>
+<p>default empty</p>
+<p>The hosts divided by comma that the Open Web Calendar permits.
+This is required to mitigate the Host Header Injection vulnerability.<br />
+You will see this text if the host is not allowed:</p>
+<blockquote>
+<p><strong>Forbidden:</strong>
+You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*  </p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>permit one host: <code>ALLOWED_HOSTS=localhost</code></li>
+<li>permit several hosts: <code>ALLOWED_HOSTS=open-web-calendar.hosted.quelltext.eu,192.168.0.42</code></li>
+<li>permit all hosts (vulnerable): <code>ALLOWED_HOSTS=</code></li>
+</ul>
+<h3 id="port">PORT<a class="headerlink" href="#port" title="Permanent link">&para;</a></h3>
+<p>default <code>5000</code>, default <code>80</code> in the Docker container  </p>
+<p>The port that the service is running on.</p>
+<p>Examples:</p>
+<ul>
+<li>Serve on HTTP port: <code>PORT=80</code></li>
+</ul>
+<h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Permanent link">&para;</a></h3>
+<p>default <code>4</code>, only for the Docker container</p>
+<p>The number of parallel workers to handle requests.</p>
+<p>Examples:</p>
+<ul>
+<li>Only use one worker: <code>WORKERS=1</code></li>
+</ul>
+<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Permanent link">&para;</a></h3>
+<p>default <code>600</code></p>
+<p>Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.</p>
+<p>Examples:</p>
+<ul>
+<li>Refresh fast: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
+</ul>
+<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Permanent link">&para;</a></h3>
+<p>default <code>true</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>Set the debug flag for the app.</p>
+<h3 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Permanent link">&para;</a></h3>
+<p>The Open Web Calendar uses libraries whose behavior can be further customized.</p>
+<ul>
+<li><strong>Flask</strong> has <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more environment variables</a></strong> available to configure how the application serves content.</li>
+<li><strong>Requests</strong> is used the get the <code>.ics</code> files. You can <a href="#ssrf-protection-with-a-proxy-server">configure a proxy</a>.</li>
+</ul>
+<h3 id="ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server<a class="headerlink" href="#ssrf-protection-with-a-proxy-server" title="Permanent link">&para;</a></h3>
+<p>The Open Web Calendar can be used to access the local network behind a firewall,
+see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>.
+This free access is intended to show calendars from everywhere.
+Since <code>requests</code> is used by the Open Web Calender,
+it can use a proxy as described in the
+<a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>.
+The proxy can then handle the filtering.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
 </code></pre></div>
-<h2 id="running-the-app">Running the App<a class="headerlink" href="#running-the-app" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Optional: Install virtualenv and Python3 and create a virtual environment.
-   <code>sh
-   virtualenv -p python3 ENV
-source ENV/bin/activate</code></li>
-<li>Install the packages.
-   <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div></li>
-<li>Start the app.
-   <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>app.py
-</code></pre></div></li>
-</ol>
-<p>You can <a href="../../host/configure">configure the app</a> through environment variables.</p>
-<h2 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h2>
-<p>To run the tests, we use <code>tox</code>. <code>tox</code> tests all different Python versions which we want to be compatible to.</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>tox
-</code></pre></div>
-<p>Run all tests:</p>
-<div class="highlight"><pre><span></span><code>tox
-</code></pre></div>
-<p>Run a specific Python version:</p>
-<div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>py39
-</code></pre></div>
-<h2 id="browser-testing">Browser Testing<a class="headerlink" href="#browser-testing" title="Permanent link">&para;</a></h2>
-<p>We use selenium to test the app in different browsers. By default, Firefox is used. You can test the features like this:</p>
-<div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>web
-</code></pre></div>
-<p>If you like to change the browser, use</p>
-<div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>web<span class="w"> </span>--<span class="w"> </span>-D<span class="w"> </span><span class="nv">browser</span><span class="o">=</span>firefox
-tox<span class="w"> </span>-e<span class="w"> </span>web<span class="w"> </span>--<span class="w"> </span>-D<span class="w"> </span><span class="nv">browser</span><span class="o">=</span>chrome
-</code></pre></div>
-<p>You can also change the layout of the window to test the responsive design:</p>
-<div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>web<span class="w"> </span>--<span class="w"> </span>-D<span class="w"> </span><span class="nv">window</span><span class="o">=</span>375x812<span class="w"> </span><span class="c1"># iPhone11 size</span>
-</code></pre></div>
-<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
-<p>You can build the documentation with <code>tox</code>, too. It is located in the <code>docs</code> directory.</p>
-<div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>docs<span class="w"> </span>--<span class="w"> </span>build<span class="w"> </span><span class="c1"># ./site</span>
-tox<span class="w"> </span>-e<span class="w"> </span>docs<span class="w"> </span>--<span class="w"> </span>serve
-</code></pre></div>
-<p>We are using <a href="https://www.mkdocs.org">mkdocs</a> with the <a href="https://squidfunk.github.io/mkdocs-material/">material theme</a>.</p>
+<p>See also:</p>
+<ul>
+<li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF using a Tor proxy</a></li>
+</ul>
 
 
 
@@ -890,6 +1112,58 @@ The `title` parameter defines the match of the category for discussion.
 
 -->
 
+  <h2 id="__comments">Comments</h2>
+  <script src="&#x68;&#x74;&#x74;&#x70;&#x73;&#x3a;&#x2f;&#x2f;&#x67;&#x69;&#x73;&#x63;&#x75;&#x73;&#x2e;&#x61;&#x70;&#x70;&#x2f;&#x63;&#x6c;&#x69;&#x65;&#x6e;&#x74;&#x2e;&#x6a;&#x73;"
+            data-repo="niccokunzmann/open-web-calendar"
+            data-repo-id="MDEwOlJlcG9zaXRvcnkxNzA4ODYyNzY="
+            data-category-id="DIC_kwDOCi-EhM4CesB-"
+            data-mapping="og:title"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="noborder_light"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+<!--  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>-->
+
                 
               </article>
             </div>
@@ -903,13 +1177,51 @@ The `title` parameter defines the match of the category for discussion.
         <footer class="md-footer">
   
     
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hosting with Docker">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Hosting with Docker
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../dev/translate/" class="md-footer__link md-footer__link--next" aria-label="Next: Translate">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Translate
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://open-web-calendar.quelltext.eu/">Open Web Calendar Documentation</a> by <span property="cc:attributionName">Nicco Kunzmann and Open Web Calendar Contributors</span><br/> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></span> 
+      <span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://open-web-calendar.quelltext.eu/">Open Web Calendar Documentation</a> by <span property="cc:attributionName">Nicco Kunzmann and Open Web Calendar Contributors</span><br/> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="../../assets/external/mirrors.creativecommons.org/presskit/icons/cc.342ac5e2.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="../../assets/external/mirrors.creativecommons.org/presskit/icons/by.342ac5e2.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="../../assets/external/mirrors.creativecommons.org/presskit/icons/sa.342ac5e2.svg" alt=""></a></span> 
     </div>
   
   

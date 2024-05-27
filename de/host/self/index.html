@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_67_m3bzf/de/host/self/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_xlhuaiyu/de/host/self/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_67_m3bzf/de/host/self/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_xlhuaiyu/de/host/self/index.png" >
       
     
     
@@ -486,6 +486,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -727,33 +748,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default Parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Environment Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ssrf-protection-with-a-proxy-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      SSRF Protection with a Proxy Server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#vercel" class="md-nav__link">
     <span class="md-ellipsis">
       Vercel
@@ -807,6 +801,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#further-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Configuration
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -833,50 +836,10 @@
 <h1 id="self-hosting-deployment">Self-Hosting &amp; Deployment<a class="headerlink" href="#self-hosting-deployment" title="Fester Link">&para;</a></h1>
 <p>You do not have to host the Open Web Calendar yourself but you are encouraged to. It is intended to work behind a company firewall, through a proxy and also without access to the Internet.</p>
 <p>Several hosting options are already documented. We are grateful if you can add your favorite one, too.</p>
-<h2 id="default-parameters">Default Parameters<a class="headerlink" href="#default-parameters" title="Fester Link">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a>.</p>
-<p>If you modify the default specification, you modify <strong>all calendars</strong> that are hosted at your instance. You might want to change these values:</p>
-<ul>
-<li><code>title</code></li>
-<li><code>language</code></li>
-<li><code>favicon</code></li>
-<li><code>source_code</code> - if you made changes</li>
-<li><code>contributing</code> - if you want to redirect to contribute to your project</li>
-</ul>
-<p>Related:</p>
-<ul>
-<li><a href="../dev/api.md">API</a></li>
-</ul>
-<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Fester Link">&para;</a></h2>
-<p>Environment variables only influence the running of the server. If you want to change the default design, read the next section. These environment variables can be used to configure the service:</p>
-<ul>
-<li><code>ALLOWED_HOSTS</code> default empty The hosts divided by comma that the Open Web Calendar permits. This is required to mitigate the Host Header Injection vulnerability. You will see this text if the host is not allowed:</li>
-</ul>
-<blockquote>
-<p><strong>Forbidden</strong></p>
-<p>You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.</p>
-</blockquote>
-<p>Examples:</p>
-<ul>
-<li>permit one host: <code>localhost</code></li>
-<li>permit several hosts: <code>open-web-calendar.hosted.quelltext.eu,192.168.0.42</code></li>
-<li>permit all hosts (vulnerable): empty</li>
-<li><code>PORT</code> default <code>5000</code>, default <code>80</code> in the Docker container The port that the service is running on.</li>
-<li><code>WORKERS</code> default <code>4</code> only for the Docker container The number of parallel workers to handle requests.</li>
-<li><code>CACHE_REQUESTED_URLS_FOR_SECONDS</code> default <code>600</code> Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.</li>
-<li><code>APP_DEBUG</code> default <code>true</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container Set the debug flag for the app.</li>
-</ul>
-<p>There are <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more environment variables</a></strong> available to configure the application.</p>
-<h2 id="ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server<a class="headerlink" href="#ssrf-protection-with-a-proxy-server" title="Fester Link">&para;</a></h2>
-<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calender, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
-</code></pre></div>
-<p>See also:</p>
-<ul>
-<li><a href="docker.md#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF using a Tor proxy</a></li>
-</ul>
+<ol>
+<li><strong>Choose a hoster.</strong> These are listed below.</li>
+<li><a href="../configure"><strong>Read about Configuration</strong></a>.</li>
+</ol>
 <h2 id="vercel">Vercel<a class="headerlink" href="#vercel" title="Fester Link">&para;</a></h2>
 <p>You can create a fork of this repository which automatically deploys to <a href="https://vercel.com/">Vercel</a>:</p>
 <p><a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fniccokunzmann%2Fopen-web-calendar.git"><img alt="Deploy with Vercel" src="https://vercel.com/button" /></a></p>
@@ -899,10 +862,12 @@
 <li><a href="https://github.com/YunoHost-Apps/open-web-calendar_ynh/blob/master/ALL_README.md">Repository</a></li>
 </ul>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Fester Link">&para;</a></h2>
-<p>If you run your own server, you can choose to run the Open Web Calender with Docker. Building, running and updating are <a href="docker.md">documented here</a>.</p>
+<p>If you run your own server, you can choose to run the Open Web Calender with Docker. Building, running and updating are <a href="../docker">documented here</a>.</p>
 <h2 id="update-notifications">Update Notifications<a class="headerlink" href="#update-notifications" title="Fester Link">&para;</a></h2>
 <p>If you wish to receive notifications about new updates of the software, watch the <a href="https://github.com/niccokunzmann/open-web-calendar/">GitHub repository</a>.</p>
-<p><img alt="Repository, Watch, Custom, Releases" src="../assets/img/subscribe-to-release.png" /></p>
+<p><img alt="Repository, Watch, Custom, Releases" src="/assets/img/subscribe-to-release.png" /></p>
+<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Fester Link">&para;</a></h2>
+<p>After you have set up your own server, you can <a href="../configure">configure the behavior</a>.</p>
 
 
 
