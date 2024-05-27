@@ -178,6 +178,7 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
   # From https://pypi.org/project/mkdocs-mdpo-plugin/
   # note that longer language codes might need a mapping in
   #     docs/overrides/partials/languages
+  # see also https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#custom-translations
   alternate:
     - name: English
       lang: en
