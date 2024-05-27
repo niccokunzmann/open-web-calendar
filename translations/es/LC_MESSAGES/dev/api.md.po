@@ -185,9 +185,6 @@ msgstr ""
 msgid "Below, you can find a picture of the architecture."
 msgstr ""
 
-msgid "![architecture](../assets/img/architecture.svg)"
-msgstr ""
-
 msgid ""
 "The base of a calendar is the specification, given in the various forms. "
 "This specification influences all the steps."
@@ -247,3 +244,9 @@ msgid ""
 "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
 "calendar/raw/master/default_specification.yml"
 msgstr ""
+
+msgid "![architecture](/assets/img/architecture.svg)"
+msgstr ""
+
+#~ msgid "![architecture](../assets/img/architecture.svg)"
+#~ msgstr ""

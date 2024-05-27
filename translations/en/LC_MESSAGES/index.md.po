@@ -90,24 +90,32 @@ msgstr "Styled Event Descriptions"
 msgid "FOSS - No Vendor Lock-In"
 msgstr "FOSS - No Vendor Lock-In"
 
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self.md)"
-msgstr ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self.md)"
-
 msgid "Subscribe Link"
 msgstr "Subscribe Link"
 
 msgid "Community and Paid Support"
 msgstr "Community and Paid Support"
 
-msgid "[Developer API](dev/api.md)"
-msgstr "[Developer API](dev/api.md)"
-
 msgid "[See Examples](templates)"
 msgstr ""
+
+msgid ""
+"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+"Hosted](host/self)"
+msgstr ""
+
+msgid "[Developer API](dev/api)"
+msgstr ""
+
+#~ msgid ""
+#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+#~ "Hosted](host/self.md)"
+#~ msgstr ""
+#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+#~ "Hosted](host/self.md)"
+
+#~ msgid "[Developer API](dev/api.md)"
+#~ msgstr "[Developer API](dev/api.md)"
 
 #~ msgid "[See Examples](templates.md)"
 #~ msgstr "[See Examples](templates.md)"

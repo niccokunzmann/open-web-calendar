@@ -50,7 +50,7 @@ jobs:
         run: tox -e ${{ matrix.tox_env }}
 
   gh-pages:
-    name: "Publish GitHub Actions"
+    name: "Publish Documentation to GitHub Pages"
     runs-on: ubuntu-latest
     if: github.ref_name == 'master'
     steps:
@@ -66,6 +66,27 @@ jobs:
       - name: mkdocs
         # Run tox using the version of Python in `PATH`
         run: tox -e docs -- gh-deploy
+
+  link-check:
+    name: "Check Links in Documentation"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # required for mkdocs git date, see  https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file#note-when-using-build-environments
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+      - name: Install tox
+        run: pip install tox linkchecker
+      - name: Check Links
+        run: scripts/check-links-in-documentation.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: checked-links.html
+          path: linkchecker-out.html
+
 
   dockerhub:
     name: Publish Docker Image on Docker Hub
