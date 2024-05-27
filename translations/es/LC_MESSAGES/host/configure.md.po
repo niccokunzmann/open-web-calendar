@@ -161,10 +161,6 @@ msgid ""
 "to configure how the application serves content."
 msgstr ""
 
-msgid ""
-"**Requests** is used the get the `.ics` files. You can [configure a proxy]."
-msgstr ""
-
 msgid "SSRF Protection with a Proxy Server"
 msgstr ""
 
@@ -182,6 +178,15 @@ msgid ""
 "[Prevent SSRF using a Tor proxy](../docker#preventing-ssrf-attacks-using-a-"
 "tor-proxy)"
 msgstr ""
+
+msgid ""
+"**Requests** is used the get the `.ics` files. You can [configure a "
+"proxy](#ssrf-protection-with-a-proxy-server)."
+msgstr ""
+
+#~ msgid ""
+#~ "**Requests** is used the get the `.ics` files. You can [configure a proxy]."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "If you modify the default specification, you modify **all calendars** that "
