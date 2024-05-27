@@ -11,11 +11,6 @@ msgstr ""
 msgid "Supported Versions"
 msgstr ""
 
-msgid ""
-"Only the `master` branch receives security updates. When an security update "
-"is made, it is released with the [latest version](changelog.md)."
-msgstr ""
-
 msgid "Version"
 msgstr ""
 
@@ -42,3 +37,13 @@ msgid ""
 "[@niccokunzmann](https://github.com/niccokunzmann/) or open an issue if you "
 "think it is a minor thread."
 msgstr ""
+
+msgid ""
+"Only the `master` branch receives security updates. When an security update "
+"is made, it is released with the [latest version](../changelog)."
+msgstr ""
+
+#~ msgid ""
+#~ "Only the `master` branch receives security updates. When an security update "
+#~ "is made, it is released with the [latest version](changelog.md)."
+#~ msgstr ""

@@ -33,9 +33,6 @@ msgstr "Give a calendar your personal touch within minutes!"
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
 msgstr "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
 
-msgid "[See Examples](templates.md)"
-msgstr "[See Examples](templates.md)"
-
 msgid "Features"
 msgstr "Features"
 
@@ -108,3 +105,9 @@ msgstr "Community and Paid Support"
 
 msgid "[Developer API](dev/api.md)"
 msgstr "[Developer API](dev/api.md)"
+
+msgid "[See Examples](templates)"
+msgstr ""
+
+#~ msgid "[See Examples](templates.md)"
+#~ msgstr "[See Examples](templates.md)"

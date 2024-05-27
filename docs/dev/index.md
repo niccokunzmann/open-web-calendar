@@ -40,7 +40,7 @@ cd open-web-calendar
     python3 app.py
     ```
 
-You can [configure the app through environment](../host/self.md#environment-variables) variables.
+You can [configure the app](../../host/configure) through environment variables.
 
 ## Running Tests
 

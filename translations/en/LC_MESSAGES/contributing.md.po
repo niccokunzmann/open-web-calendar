@@ -48,11 +48,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If you customized a calendar, please consider [contributing it as a "
-"template](templates.md) for others to use."
-msgstr ""
-
-msgid ""
 "If you are part of a company and you would like to commission work, please "
 "get in touch with Nicco Kunzmann."
 msgstr ""
@@ -60,8 +55,29 @@ msgstr ""
 msgid "Contribute ♥️"
 msgstr ""
 
-msgid "[Translate this project](dev/translate.md)"
+msgid ""
+"If you customized a calendar, please consider [contributing it as a "
+"template](../templates) for others to use."
 msgstr ""
+
+msgid "[Translate this project](../dev/translate)"
+msgstr ""
+
+#~ msgid "[Translate this project](../dev/translate.md)"
+#~ msgstr ""
+
+#~ msgid "[Translate this project](dev/translate.md)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you customized a calendar, please consider [contributing it as a "
+#~ "template](templates) for others to use."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you customized a calendar, please consider [contributing it as a "
+#~ "template](templates.md) for others to use."
+#~ msgstr ""
 
 #~ msgid "[Translate this project](translate.md)"
 #~ msgstr ""

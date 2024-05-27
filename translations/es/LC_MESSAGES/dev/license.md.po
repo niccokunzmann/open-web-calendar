@@ -26,9 +26,6 @@ msgstr ""
 msgid "documentation"
 msgstr ""
 
-msgid "translations"
-msgstr ""
-
 msgid "`.ics` calendar files"
 msgstr ""
 
@@ -57,3 +54,9 @@ msgid ""
 "Add information to the `.reuse/dep5` file for folders under a certain "
 "license."
 msgstr ""
+
+msgid "translations of the source code"
+msgstr ""
+
+#~ msgid "translations"
+#~ msgstr ""

@@ -39,12 +39,6 @@ msgid "Container Tags"
 msgstr ""
 
 msgid ""
-"The container `niccokunzmann/open-web-calendar:latest` contains the latest "
-"release. Containers are also tagged with the version from the "
-"[changelog](../changelog.md), e.g. `niccokunzmann/open-web-calendar:v1.10`."
-msgstr ""
-
-msgid ""
 "If you wish to run the latest development version, use `niccokunzmann/open-"
 "web-calendar:master`. This includes unchecked translations."
 msgstr ""
@@ -62,11 +56,6 @@ msgstr ""
 msgid ""
 "Copy the `docker-compose.yml` file to the directory from where you want to "
 "run the container."
-msgstr ""
-
-msgid ""
-"If needed change the port mapping and [environment "
-"variables](self.md#environment-variables)."
 msgstr ""
 
 msgid "Start the container:"
@@ -153,3 +142,61 @@ msgstr ""
 
 msgid "docker compose up -d "
 msgstr ""
+
+msgid ""
+"The container `niccokunzmann/open-web-calendar:latest` contains the latest "
+"release. Containers are also tagged with the version from the "
+"[changelog](../../changelog), e.g. `niccokunzmann/open-web-calendar:v1.10`."
+msgstr ""
+
+msgid ""
+"[SSRF Protection with a Proxy Server](../configure#ssrf-protection-with-a-"
+"proxy-server)"
+msgstr ""
+
+msgid ""
+"If needed change the port mapping and [environment variables](../configure)."
+msgstr ""
+
+#~ msgid ""
+#~ "If needed change the port mapping and [environment "
+#~ "variables](../configure#environment-variables)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If needed change the port mapping and [environment "
+#~ "variables](../self#environment-variables)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[SSRF Protection with a Proxy Server](../self#ssrf-protection-with-a-proxy-"
+#~ "server)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[SSRF Protection with a Proxy Server](../hosted#ssrf-protection-with-a-"
+#~ "proxy-server)"
+#~ msgstr ""
+
+#~ msgid "[](../hosted#ssrf-protection-with-a-proxy-server)"
+#~ msgstr ""
+
+#~ msgid "../hosted#ssrf-protection-with-a-proxy-server"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If needed change the port mapping and [environment "
+#~ "variables](self.md#environment-variables)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The container `niccokunzmann/open-web-calendar:latest` contains the latest "
+#~ "release. Containers are also tagged with the version from the "
+#~ "[changelog](../changelog), e.g. `niccokunzmann/open-web-calendar:v1.10`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The container `niccokunzmann/open-web-calendar:latest` contains the latest "
+#~ "release. Containers are also tagged with the version from the "
+#~ "[changelog](../changelog.md), e.g. `niccokunzmann/open-web-calendar:v1.10`."
+#~ msgstr ""

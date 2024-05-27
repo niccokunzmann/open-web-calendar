@@ -32,9 +32,6 @@ msgstr ""
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
 msgstr ""
 
-msgid "[See Examples](templates.md)"
-msgstr "[Vis eksempler](templates.md)"
-
 msgid "Features"
 msgstr "Funksjoner"
 
@@ -105,3 +102,9 @@ msgstr "Gemenskapsdrevet og betalt støtte"
 
 msgid "[Developer API](dev/api.md)"
 msgstr "[Utvikler-API](dev/api.md)"
+
+msgid "[See Examples](templates)"
+msgstr ""
+
+#~ msgid "[See Examples](templates.md)"
+#~ msgstr "[Vis eksempler](templates.md)"

@@ -3,7 +3,7 @@ Upstream-Name: Open Web Calendar
 Upstream-Contact: Nicco Kunzmann <niccokunzmann@rambler.ru>
 Source: https://github.com/niccokunzmann/open-web-calendar
 
-Files: translations/**.yml translations/**.po docs/snippets/** docs/overrides/partials/languages/*
+Files: translations/**.po docs/snippets/** docs/overrides/partials/languages/*
 Copyright: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 License: CC-BY-SA-4.0
 
@@ -11,7 +11,7 @@ Files: features/calendars/*.ics
 Copyright: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 License: CC-BY-SA-4.0
 
-Files: features/*.feature
+Files: features/*.feature translations/**.yml
 Copyright: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 License: GPL-2.0-only
 

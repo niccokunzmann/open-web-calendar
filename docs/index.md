@@ -15,7 +15,7 @@ A highly flexible calendar display for your website.
 Give a calendar your personal touch within minutes!
 
 - **[Try it out now!]({{link.web}})**
-- [See Examples](templates.md)
+- [See Examples](templates)
 
 | Features |  |
 | --- | --- |

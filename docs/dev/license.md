@@ -24,7 +24,6 @@ annotate them accordingly.
 We use `CC-BY-SA-4.0` for:
 
 - documentation
-- translations
 - `.ics` calendar files
 - images
 
@@ -35,6 +34,7 @@ reuse annotate --year 2024 --copyright="Nicco Kunzmann and Open Web Calendar Con
 We use `GPL-2.0-only` for:
 
 - source code
+- translations of the source code
 - build information
 - HTML files
 

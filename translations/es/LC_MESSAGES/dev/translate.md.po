@@ -30,12 +30,6 @@ msgstr ""
 msgid "Translator Guide"
 msgstr ""
 
-msgid ""
-"Translations are contributed by volunteers and [logged](changelog.md). After"
-" 48 hours they are usually life at the [hosted instance](https://open-web-"
-"calendar.hosted.quelltext.eu)."
-msgstr ""
-
 msgid "The most important file is probably the **calendar file**."
 msgstr ""
 
@@ -92,3 +86,21 @@ msgstr ""
 
 msgid "We use \"Du\" and \"Dein\", not \"Sie\" or \"Ihr\"."
 msgstr ""
+
+msgid ""
+"Translations are contributed by volunteers and [logged](../../changelog). "
+"After 48 hours they are usually life at the [hosted instance](https://open-"
+"web-calendar.hosted.quelltext.eu)."
+msgstr ""
+
+#~ msgid ""
+#~ "Translations are contributed by volunteers and [logged](../changelog). After"
+#~ " 48 hours they are usually life at the [hosted instance](https://open-web-"
+#~ "calendar.hosted.quelltext.eu)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Translations are contributed by volunteers and [logged](changelog.md). After"
+#~ " 48 hours they are usually life at the [hosted instance](https://open-web-"
+#~ "calendar.hosted.quelltext.eu)."
+#~ msgstr ""

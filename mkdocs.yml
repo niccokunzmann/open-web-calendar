@@ -205,6 +205,7 @@ nav:
     - host/hosted.md
     - host/self.md
     - host/docker.md
+    - host/configure.md
   - Development:
     - dev/translate.md
     - dev/index.md

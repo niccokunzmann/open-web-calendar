@@ -32,9 +32,6 @@ msgstr "Gib in wenigen Minuten einem Kalender deine persönliche Note!"
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
 msgstr "**[Probiere es aus!](https://open-web-calendar.hosted.quelltext.eu)**"
 
-msgid "[See Examples](templates.md)"
-msgstr "[Sieh die Beispiel an](templates.md)"
-
 msgid "Features"
 msgstr "Fähigkeiten"
 
@@ -107,3 +104,9 @@ msgstr "Gemeinschaftliche und Bezahlte Hilfe"
 
 msgid "[Developer API](dev/api.md)"
 msgstr "[Entwickler API](dev/api.md)"
+
+msgid "[See Examples](templates)"
+msgstr ""
+
+#~ msgid "[See Examples](templates.md)"
+#~ msgstr "[Sieh die Beispiel an](templates.md)"

@@ -59,9 +59,6 @@ msgid ""
 "day-event-repeat-every-day.ics)"
 msgstr ""
 
-msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
-msgstr ""
-
 msgid "Choose Timezones"
 msgstr ""
 
@@ -153,3 +150,10 @@ msgid ""
 "calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
 "target=\"_blank\">Edit the calendar</a>"
 msgstr ""
+
+msgid ""
+"[proxy parameters](../host/configure#ssrf-protection-with-a-proxy-server)"
+msgstr ""
+
+#~ msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
+#~ msgstr ""

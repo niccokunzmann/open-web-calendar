@@ -20,7 +20,7 @@ Here, you can see the current translation status:
 
 ## Translator Guide
 
-Translations are contributed by volunteers and [logged](changelog.md).
+Translations are contributed by volunteers and [logged](../../changelog).
 After 48 hours they are usually life at the [hosted instance]({{link.web}}).
 
 1. The most important file is probably the **calendar file**.

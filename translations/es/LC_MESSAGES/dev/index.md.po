@@ -29,11 +29,6 @@ msgstr ""
 msgid "Start the app."
 msgstr ""
 
-msgid ""
-"You can [configure the app through environment](../host/self.md#environment-"
-"variables) variables."
-msgstr ""
-
 msgid "Running Tests"
 msgstr ""
 
@@ -94,3 +89,26 @@ msgstr ""
 
 msgid "Start the app.    wzxhzdk:2"
 msgstr ""
+
+msgid ""
+"You can [configure the app](../../host/configure) through environment "
+"variables."
+msgstr ""
+
+#~ msgid ""
+#~ "You can [configure the app](../../host/self) through environment variables."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can [configure the app through environment](../../host/self) variables."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can [configure the app through environment](../../host/self#environment-"
+#~ "variables) variables."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can [configure the app through environment](../host/self.md#environment-"
+#~ "variables) variables."
+#~ msgstr ""

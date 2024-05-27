@@ -1,0 +1,6 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Configuration"
+msgstr ""

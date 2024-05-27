@@ -10,7 +10,7 @@ comments: false
 
 # Social Media News
 
-News from Mastodon [#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar):
+News from Mastodon [#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar).
 
 <div id="mt-container" class="mt-container">
   <div class="mt-body" role="feed">

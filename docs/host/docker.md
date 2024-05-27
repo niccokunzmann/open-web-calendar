@@ -41,7 +41,7 @@ Then, you should see your service running at [http://localhost:5000](http://loca
 ## Container Tags
 
 The container `niccokunzmann/open-web-calendar:latest` contains the latest release.
-Containers are also tagged with the version from the [changelog](../changelog.md), e.g.
+Containers are also tagged with the version from the [changelog](../../changelog), e.g.
 `niccokunzmann/open-web-calendar:v1.10`.
 
 If you wish to run the latest development version, use `niccokunzmann/open-web-calendar:master`.
@@ -66,7 +66,7 @@ services:
 To deploy the Open Web Calendar with `docker compose`, follow these steps:
 
 1. Copy the `docker-compose.yml` file to the directory from where you want to run the container.
-2. If needed change the port mapping and [environment variables](self.md#environment-variables).
+2. If needed change the port mapping and [environment variables](../configure).
 3. Start the container:
 
     ```sh
@@ -141,6 +141,10 @@ E.g. a calendar file can be served from a Raspberry Pi behind a home
 network's firewall.
 This [example calendar](https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics) uses [this onion address](http://3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion/one-day-event-repeat-every-day.ics).
 
+See also:
+
+- [SSRF Protection with a Proxy Server](../configure#ssrf-protection-with-a-proxy-server)
+
 ## Automatic Updates
 
 If you have not fixed your version but you use the `latest` or `master` tag,
@@ -186,5 +190,11 @@ And add this line:
 ```crontab
 3 * * * * /path/to/update.sh 1> /path/to/update.sh.log 2> /path/to/update.sh.log
 ```
+
+## Further Configuration
+
+After you have set up your own server,
+you can [configure the behavior](../configure).
+
 
 [Dockerhub]: {{link.dockerhub}}

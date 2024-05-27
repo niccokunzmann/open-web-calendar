@@ -11,7 +11,7 @@ description: How to report security concerns about the Open Web Calendar project
 ## Supported Versions
 
 Only the `master` branch receives security updates.
-When an security update is made, it is released with the [latest version](changelog.md).
+When an security update is made, it is released with the [latest version](../changelog).
 
 | Version       | Supported          |
 | ------------- | ------------------ |
