@@ -2,9 +2,6 @@
 msgid ""
 msgstr ""
 
-msgid "New Website"
-msgstr ""
-
 msgid ""
 "As the Open Web Calendar is funded by "
 "[NLNet](https://nlnet.nl/project/OpenWebCalendar/), it was also suggested to"
@@ -30,3 +27,9 @@ msgid ""
 "Commission's [Next Generation Internet programme](https://ngi.eu/). You "
 "might be able to get funded, too!"
 msgstr ""
+
+msgid "New Website & Funding"
+msgstr ""
+
+#~ msgid "New Website"
+#~ msgstr ""
