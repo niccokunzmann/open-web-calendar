@@ -1,37 +1,55 @@
-#
+# gallegonovato <fran-carro@hotmail.es>, 2024.
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-27 23:07+0200\n"
+"PO-Revision-Date: 2024-05-27 21:07+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-common-translations/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
+
+#
 
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
+"Agregue un calendario web altamente personalizable a tu página web basado en "
+"enlaces ICal"
 
 msgid "Open Web Calendar"
-msgstr ""
+msgstr "Open Web Calendar"
 
 msgid "Permanent link"
-msgstr ""
+msgstr "Enlace permanente"
 
 msgid "See also:"
-msgstr ""
+msgstr "Ver también:"
 
-#, fuzzy
 msgid ""
 "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/master/default_specification.yml"
 msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
+"[default_specification.yml]: https://github.com/niccokunzmann/"
+"open-web-calendar/blob/master/default_specification.yml"
 
-#, fuzzy
 msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
+msgstr "[configurar un proxy]: #ssrf-protection-with-a-proxy-server"
 
 msgid ""
 "After you have set up your own server, you can [configure the "
 "behavior](../configure)."
 msgstr ""
+"Después de haber configurado tu propio servidor, puedes [configurar el "
+"comportamiento](../configure)."
 
 #~ msgid ""
 #~ "The configuration of all calendars is rooted in the "
