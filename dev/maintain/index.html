@@ -945,16 +945,33 @@ The aim of this section is to have a consistent outcome.</p>
 <li>Template for new translations: <code>translations/en/LC_MESSAGES/&lt;file&gt;.md.po</code> - replace <code>&lt;file&gt;</code></li>
 <li>Translation license: <code>Create Commons Attribution Share Alike 4.0 International</code></li>
 <li>Language code style: <code>Default based on the file format</code></li>
-<li>Language filter: <code>^(?!(en)$)[^.]+$</code> - excludes <code>en</code></li>
-<li>Source language: <code>English</code></li>
-<li>Manage strings: <strong>not</strong> checked
-3. Save.</li>
+<li>
+<p>Language filter:</p>
+<div class="highlight"><pre><span></span><code>^(?!(en)$)[^.]+$
+</code></pre></div>
+<p>excludes <code>en</code></p>
+</li>
+<li>
+<p>Source language: <code>English</code></p>
+</li>
+<li>Manage strings: <strong>not</strong> checked</li>
 </ul>
 </li>
 <li>
-<p>Add <strong>Flags</strong>, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation</p>
+<p><strong>Save</strong></p>
+</li>
+<li>
+<p>In the <strong>Settings</strong> 🠚 <strong>Translation</strong>:</p>
 <ul>
-<li>add <code>md-text,safe-html,xml-text</code> as <strong>Translation flags</strong></li>
+<li>Check <strong>Suggestion voting</strong></li>
+<li>Set <strong>Automatically accept suggestions</strong> to <code>2</code></li>
+<li>Check <strong>Allow translation propagation</strong></li>
+<li><strong>Un</strong>check <strong>Manage strings</strong></li>
+<li>
+<p>Add <strong>Translation flags</strong>:</p>
+<div class="highlight"><pre><span></span><code>md-text,safe-html,xml-text
+</code></pre></div>
+</li>
 <li>
 <p>choose <strong>Enforced checks</strong>:</p>
 <ul>
@@ -966,13 +983,16 @@ The aim of this section is to have a consistent outcome.</p>
 <li>XML syntax</li>
 </ul>
 </li>
+<li>
+<p><strong>Save</strong></p>
+</li>
 </ul>
 </li>
 <li>
 <p>Upload a <strong>screenshot</strong> of the page</p>
 <ul>
 <li>
-<p>Restrict width and height to 2000px</p>
+<p>Restrict width and height to 2000px:</p>
 <div class="highlight"><pre><span></span><code>convert<span class="w"> </span><span class="s1">&#39;Screenshot.png&#39;</span><span class="w"> </span>-resize<span class="w"> </span>x2000<span class="w"> </span><span class="s1">&#39;Getting-started.png&#39;</span>
 </code></pre></div>
 </li>
@@ -983,13 +1003,13 @@ The aim of this section is to have a consistent outcome.</p>
 </ul>
 </li>
 <li>
-<p>Go to the <strong>Manage</strong> -&gt; <strong>Add-ons</strong> and add:</p>
+<p>Go to the <strong>Manage</strong> 🠚 <strong>Add-ons</strong> and add:</p>
 <ul>
-<li>Add missing languages</li>
-<li>Cleanup translation files</li>
-<li>Contributors in comment</li>
+<li>Add missing languages (enabled in project, will activate after 24h)</li>
+<li>Cleanup translation files (enabled in project)</li>
+<li>Contributors in comment (enabled in project)</li>
 </ul>
-<p>These component Add-Ons are installed project-wide but need activation, too.</p>
+<p>These component Add-Ons are installed project-wide.</p>
 </li>
 <li>
 <p>Clear any component alerts.</p>
