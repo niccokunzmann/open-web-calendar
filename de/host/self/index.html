@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Füge einen hoch-anpassbaren Webkalender in Deine Webseite ein, auf der Basis von ICS-Links">
+        <meta name="description" content="Es gibt mehrere Wege, den offenen Web-Kalender aufzusetzen und damit anzupassen.">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Self-Hosting & Deployment - Offener Web-Kalender</title>
+        <title>Eigener Server - Offener Web-Kalender</title>
       
     
     
@@ -58,11 +58,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Self-Hosting & Deployment - Open Web Calendar" >
+        <meta  property="og:title"  content="Eigener Server - Open Web Calendar" >
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hvedrzet/de/host/self/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rjlqyte3/de/host/self/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -74,11 +74,11 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Self-Hosting & Deployment - Open Web Calendar" >
+        <meta  name="twitter:title"  content="Eigener Server - Open Web Calendar" >
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hvedrzet/de/host/self/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rjlqyte3/de/host/self/index.png" >
       
     
     
@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#self-hosting-deployment" class="md-skip">
+        <a href="#eigener-server" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -134,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Self-Hosting & Deployment
+              Eigener Server
             
           </span>
         </div>
@@ -434,7 +434,7 @@
         
   
   <span class="md-ellipsis">
-    Hosted Version
+    Bereitgestellte Version
   </span>
   
 
@@ -455,7 +455,7 @@
         
   
   <span class="md-ellipsis">
-    Self-Hosting & Deployment
+    Eigener Server
   </span>
   
 
@@ -793,9 +793,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-notifications" class="md-nav__link">
+  <a href="#nachrichten-uber-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Notifications
+      Nachrichten über Updates
     </span>
   </a>
   
@@ -833,38 +833,38 @@
   
 
 
-<h1 id="self-hosting-deployment">Self-Hosting &amp; Deployment<a class="headerlink" href="#self-hosting-deployment" title="Fester Link">&para;</a></h1>
-<p>You do not have to host the Open Web Calendar yourself but you are encouraged to. It is intended to work behind a company firewall, through a proxy and also without access to the Internet.</p>
-<p>Several hosting options are already documented. We are grateful if you can add your favorite one, too.</p>
+<h1 id="eigener-server">Eigener Server<a class="headerlink" href="#eigener-server" title="Fester Link">&para;</a></h1>
+<p>Du musst den offenen Web-Kalender nicht selbst aufsetzen, kannst es aber gern tun. Der Kalender soll hinter einer Firmen-Firewall funktionieren, durch einen Proxy und auch ohne Internetzugriff.</p>
+<p>Mehrere Hosting-Optionen sind schon dokumentiert. Wir sind dankbar, wenn Du deine Lieblingsoption hier dokumentierst.</p>
 <ol>
-<li><strong>Choose a hoster.</strong> These are listed below.</li>
-<li><a href="../configure"><strong>Read about Configuration</strong></a>.</li>
+<li><strong>Wähle einen Dienstleister</strong> Mehrere sind unten gelistet.</li>
+<li><a href="../configure"><strong>Lies, wie man den Server anpasst</strong></a>.</li>
 </ol>
 <h2 id="vercel">Vercel<a class="headerlink" href="#vercel" title="Fester Link">&para;</a></h2>
-<p>You can create a fork of this repository which automatically deploys to <a href="https://vercel.com/">Vercel</a>:</p>
+<p>Du kannst einen Klon erstellen, der automatisch auf <a href="https://vercel.com/">Vercel</a> aufgesetzt wird:</p>
 <p><a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fniccokunzmann%2Fopen-web-calendar.git"><img alt="Deploy with Vercel" src="https://vercel.com/button" /></a></p>
-<p>Alternatively you can create a one off deploy by cloning this repository and running <code>npx vercel</code> at the root.</p>
+<p>Alternativ kannst du den Server einmalig aufsetzen, indem Du einen lokalen Klon erstellst und darin <code>npx vercel</code> ausführst.</p>
 <h2 id="heroku">Heroku<a class="headerlink" href="#heroku" title="Fester Link">&para;</a></h2>
-<p>You can deploy the app using <a href="https://heroku.com">Heroku</a>.</p>
+<p>Du kannst den Server mit <a href="https://heroku.com">Heroku</a> aufsetzen.</p>
 <p><a href="https://heroku.com/deploy?template=https://github.com/niccokunzmann/open-web-calendar"><img alt="Deploy to Heroku" src="https://www.herokucdn.com/deploy/button.svg" /></a></p>
-<p>Heroku uses <a href="https://gunicorn.org/">gunicorn</a> to run the server, see the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/Procfile">Procfile</a>.</p>
+<p>Heroku benutzt<a href="https://gunicorn.org/">gunicorn</a>, um den Server auszuführen, siehe <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/Procfile">Procfile</a>.</p>
 <h2 id="cloudron">Cloudron<a class="headerlink" href="#cloudron" title="Fester Link">&para;</a></h2>
-<p>The Open Web Calendar has been integrated into <a href="https://www.cloudron.io/">Cloudron</a>.</p>
+<p>Der offene Web-Kalender ist auf <a href="https://www.cloudron.io/">Cloudron</a> verfügbar.</p>
 <ul>
-<li><a href="https://docs.cloudron.io/apps/openwebcalendar/">Cloudron Documentation</a></li>
-<li><a href="https://git.cloudron.io/cloudron/openwebcalendar-app">Cloudron Repository</a></li>
+<li><a href="https://docs.cloudron.io/apps/openwebcalendar/">Cloudrons Dokumentation</a></li>
+<li><a href="https://git.cloudron.io/cloudron/openwebcalendar-app">Cloudrons Repository</a></li>
 </ul>
 <h2 id="yunohost">YunoHost<a class="headerlink" href="#yunohost" title="Fester Link">&para;</a></h2>
-<p>The Open Web Calendar is available as an app for <a href="https://yunohost.org/">YunoHost</a>.</p>
+<p>Der offene Web-Kalender ist als App für <a href="https://yunohost.org/">YunoHost</a> erhältlich.</p>
 <p><a href="https://install-app.yunohost.org/?app=open-web-calendar"><img alt="Install Open Web Calendar with YunoHost" src="https://install-app.yunohost.org/install-with-yunohost.svg" /></a></p>
 <ul>
-<li><a href="https://apps.yunohost.org/app/open-web-calendar">App Description</a></li>
-<li><a href="https://github.com/YunoHost-Apps/open-web-calendar_ynh/blob/master/ALL_README.md">Repository</a></li>
+<li><a href="https://apps.yunohost.org/app/open-web-calendar">Appbeschreibung</a></li>
+<li><a href="https://github.com/YunoHost-Apps/open-web-calendar_ynh/blob/master/ALL_README.md">Verzeichnis</a></li>
 </ul>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Fester Link">&para;</a></h2>
-<p>If you run your own server, you can choose to run the Open Web Calender with Docker. Building, running and updating are <a href="../docker">documented here</a>.</p>
-<h2 id="update-notifications">Update Notifications<a class="headerlink" href="#update-notifications" title="Fester Link">&para;</a></h2>
-<p>If you wish to receive notifications about new updates of the software, watch the <a href="https://github.com/niccokunzmann/open-web-calendar/">GitHub repository</a>.</p>
+<p>Wenn Du deinen eigenen Serer aufsetzen willst, dann kannst du auch Docker verwenden. Bauen, starten und Updates sind <a href="../docker">hier beschrieben</a>.</p>
+<h2 id="nachrichten-uber-updates">Nachrichten über Updates<a class="headerlink" href="#nachrichten-uber-updates" title="Fester Link">&para;</a></h2>
+<p>Wenn Du über neue Versionen benachrichtigt werden möchtest, dann überwache das <a href="https://github.com/niccokunzmann/open-web-calendar/">GitHub-Repository</a>.</p>
 <p><img alt="Repository, Watch, Custom, Releases" src="/assets/img/subscribe-to-release.png" /></p>
 <h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Fester Link">&para;</a></h2>
 <p>Nachdem Du einen Server aufgesetzt hast, <a href="../configure">kannst Du sein Verhalten anpassen</a>.</p>
