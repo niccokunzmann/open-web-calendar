@@ -85,14 +85,30 @@ The aim of this section is to have a consistent outcome.
     - Template for new translations: `translations/en/LC_MESSAGES/<file>.md.po` - replace `<file>`
     - Translation license: `Create Commons Attribution Share Alike 4.0 International`
     - Language code style: `Default based on the file format`
-    - Language filter: `^(?!(en)$)[^.]+$` - excludes `en`
+    - Language filter:
+
+        ```
+        ^(?!(en)$)[^.]+$
+        ```
+
+        excludes `en`
+
     - Source language: `English`
     - Manage strings: **not** checked
-3. Save.
 
-4. Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-calendar/documentation-index/#translation
+3. **Save**
+4. In the **Settings** 🠚 **Translation**:
 
-    - add `md-text,safe-html,xml-text` as **Translation flags**
+    - Check **Suggestion voting**
+    - Set **Automatically accept suggestions** to `2`
+    - Check **Allow translation propagation**
+    - **Un**check **Manage strings**
+    - Add **Translation flags**:
+
+        ```
+        md-text,safe-html,xml-text
+        ```
+
     - choose **Enforced checks**:
 
         - Markdown links
@@ -102,9 +118,11 @@ The aim of this section is to have a consistent outcome.
         - XML markup
         - XML syntax
 
+    - **Save**
+
 5. Upload a **screenshot** of the page
 
-    - Restrict width and height to 2000px
+    - Restrict width and height to 2000px:
 
         ```sh
         convert 'Screenshot.png' -resize x2000 'Getting-started.png'
@@ -113,13 +131,13 @@ The aim of this section is to have a consistent outcome.
     - Click on the empty **Search** button
     - Add all strings to it
 
-6. Go to the **Manage** -> **Add-ons** and add:
+6. Go to the **Manage** 🠚 **Add-ons** and add:
 
-    - Add missing languages
-    - Cleanup translation files
-    - Contributors in comment
+    - Add missing languages (enabled in project, will activate after 24h)
+    - Cleanup translation files (enabled in project)
+    - Contributors in comment (enabled in project)
 
-    These component Add-Ons are installed project-wide but need activation, too.
+    These component Add-Ons are installed project-wide.
 
 7. Clear any component alerts.
 8. Skip through all the strings. If some strings are not for translation,
