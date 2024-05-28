@@ -69,9 +69,6 @@ msgstr ""
 msgid "`contributing` - if you want to redirect to contribute to your project"
 msgstr ""
 
-msgid "Related:"
-msgstr ""
-
 msgid "[API](../../dev/api)"
 msgstr ""
 
@@ -196,6 +193,9 @@ msgid ""
 "**Requests** is used the get the `.ics` files. You can [configure a "
 "proxy](#ssrf-protection-with-a-proxy-server)."
 msgstr ""
+
+#~ msgid "Related:"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "**Requests** is used the get the `.ics` files. You can [configure a proxy]."
