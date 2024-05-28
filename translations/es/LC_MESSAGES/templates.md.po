@@ -207,39 +207,13 @@ msgid ""
 msgstr ""
 "[parámetros del proxy](../host/configure#ssrf-protection-with-a-proxy-server)"
 
-msgid "<select id=\"timezoneOption\"></select>"
-msgstr ""
-
-msgid "</select>"
-msgstr ""
-
-msgid "<select id=\"timezoneOption\">    wzxhzdk:5"
-msgstr ""
-
-msgid ""
-"The calendar allows choosing the time zone that the events are displayed in. "
-"Whether you have a local website or an international calendar, all is "
-"possible. It is possible to customize with JavaScript."
-msgstr ""
-
-msgid ""
-"The calendar allows choosing the time zone that the events are displayed in. "
-"Whether you have a local website or an international calendar, all is "
-"possible. It is also fairly easy to customize with JavaScript."
-msgstr ""
-
-msgid ""
-"The calendar allows choosing the time zone that the events are displayed in. "
-"Whether you have a local website or an international calendar, all is "
-"possible. It is also fairly easy to customize with JavaScript. You can edit "
-"the page to see how it is done."
-msgstr ""
-
-msgid "<select id=\"timezoneOption\">    wzxhzdk:3"
-msgstr ""
-
-msgid "<select id=\"timezoneOption\">    wzxhzdk:6"
-msgstr ""
+#, fuzzy
+#~| msgid ""
+#~| "[proxy parameters](../host/configure#ssrf-protection-with-a-proxy-server)"
+#~ msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
+#~ msgstr ""
+#~ "[parámetros del proxy](../host/configure#ssrf-protection-with-a-proxy-"
+#~ "server)"
 
 #, fuzzy
 #~| msgid ""
