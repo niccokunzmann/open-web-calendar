@@ -39,7 +39,7 @@ You might want to change these values:
 
 [default_specification.yml]: https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml
 
-Related:
+See also:
 
 - [API](../../dev/api)
 
