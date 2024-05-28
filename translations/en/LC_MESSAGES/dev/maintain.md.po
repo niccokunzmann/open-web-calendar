@@ -58,14 +58,6 @@ msgstr ""
 msgid "Use file name as **slug** like `documentation-index`"
 msgstr ""
 
-msgid "Save."
-msgstr ""
-
-msgid ""
-"Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-"
-"calendar/documentation-index/#translation"
-msgstr ""
-
 msgid "choose **Enforced checks**:"
 msgstr ""
 
@@ -84,9 +76,6 @@ msgstr ""
 msgid "Upload a **screenshot** of the page"
 msgstr ""
 
-msgid "Restrict width and height to 2000px"
-msgstr ""
-
 msgid "Click on the empty **Search** button"
 msgstr ""
 
@@ -94,15 +83,6 @@ msgid "Add all strings to it"
 msgstr ""
 
 msgid "Clear any component alerts."
-msgstr ""
-
-msgid "Cleanup translation files"
-msgstr ""
-
-msgid "Contributors in comment"
-msgstr ""
-
-msgid "Add missing languages"
 msgstr ""
 
 msgid "Enter your virtual environment. E.g.    wzxhzdk:0"
@@ -135,9 +115,6 @@ msgid ""
 "v1.30    ```"
 msgstr ""
 
-msgid "Restrict width and height to 2000px       wzxhzdk:2"
-msgstr ""
-
 msgid "Choose the right File settings:"
 msgstr ""
 
@@ -146,9 +123,6 @@ msgstr ""
 
 msgid ""
 "File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`"
-msgstr ""
-
-msgid "Language filter: `^(?!(en)$)[^.]+$` - excludes `en`"
 msgstr ""
 
 msgid "Source language: `English`"
@@ -177,9 +151,6 @@ msgstr ""
 msgid "Manage strings: **not** checked"
 msgstr ""
 
-msgid "add `md-text,safe-html,xml-text` as **Translation flags**"
-msgstr ""
-
 msgid "XML markup"
 msgstr ""
 
@@ -197,13 +168,6 @@ msgid ""
 "International`"
 msgstr ""
 
-msgid "Go to the **Manage** -> **Add-ons** and add:"
-msgstr ""
-
-msgid ""
-"These component Add-Ons are installed project-wide but need activation, too."
-msgstr ""
-
 msgid ""
 "Use the page title as **title** like `Documentation - 00 - Getting Started`"
 msgstr ""
@@ -212,6 +176,87 @@ msgid ""
 "Skip through all the strings. If some strings are not for translation, add "
 "the flag `read-only`."
 msgstr ""
+
+msgid "Language filter:"
+msgstr ""
+
+msgid "excludes `en`"
+msgstr ""
+
+msgid "**Save**"
+msgstr ""
+
+msgid "In the **Settings** 🠚 **Translation**:"
+msgstr ""
+
+msgid "Check **Suggestion voting**"
+msgstr ""
+
+msgid "Set **Automatically accept suggestions** to `2`"
+msgstr ""
+
+msgid "Check **Allow translation propagation**"
+msgstr ""
+
+msgid "**Un**check **Manage strings**"
+msgstr ""
+
+msgid "Add **Translation flags**:"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:"
+msgstr ""
+
+msgid "Go to the **Manage** 🠚 **Add-ons** and add:"
+msgstr ""
+
+msgid "Add missing languages (enabled in project, will activate after 24h)"
+msgstr ""
+
+msgid "Cleanup translation files (enabled in project)"
+msgstr ""
+
+msgid "Contributors in comment (enabled in project)"
+msgstr ""
+
+msgid "These component Add-Ons are installed project-wide."
+msgstr ""
+
+#~ msgid "Save."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add **Flags**, example link: https://hosted.weblate.org/settings/open-web-"
+#~ "calendar/documentation-index/#translation"
+#~ msgstr ""
+
+#~ msgid "Restrict width and height to 2000px"
+#~ msgstr ""
+
+#~ msgid "Cleanup translation files"
+#~ msgstr ""
+
+#~ msgid "Contributors in comment"
+#~ msgstr ""
+
+#~ msgid "Add missing languages"
+#~ msgstr ""
+
+#~ msgid "Restrict width and height to 2000px       wzxhzdk:2"
+#~ msgstr ""
+
+#~ msgid "Language filter: `^(?!(en)$)[^.]+$` - excludes `en`"
+#~ msgstr ""
+
+#~ msgid "add `md-text,safe-html,xml-text` as **Translation flags**"
+#~ msgstr ""
+
+#~ msgid "Go to the **Manage** -> **Add-ons** and add:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These component Add-Ons are installed project-wide but need activation, too."
+#~ msgstr ""
 
 #~ msgid "Use the page title as **title** like `Documentation - Getting Started`"
 #~ msgstr ""
@@ -242,4 +287,18 @@ msgstr ""
 #~ "Set the **Repository browser** to the right URL, replace `index.md`: "
 #~ "`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
 #~ "}}/docs/index.md?plain=1#L{{ line }}`"
+#~ msgstr ""
+
+#~ msgid "Language filter:       wzxhzdk:2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "excludes `en`    - Source language: `English`    - Manage strings: **not** "
+#~ "checked"
+#~ msgstr ""
+
+#~ msgid "Add **Translation flags**:       wzxhzdk:3"
+#~ msgstr ""
+
+#~ msgid "Restrict width and height to 2000px:       wzxhzdk:4"
 #~ msgstr ""
