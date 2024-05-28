@@ -1,32 +1,44 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Prefill add-on <noreply-addon-prefill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-28 10:39+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-05-28 08:41+0000\n"
+"Last-Translator: Prefill add-on <noreply-addon-prefill@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-hosted-version/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #
+#, fuzzy
 msgid "You can use the hosted version of the Open Web Calendar yourself."
-msgstr ""
+msgstr "You can use the hosted version of the Open Web Calendar yourself."
 
+#, fuzzy
 msgid "Hosted Version"
-msgstr ""
+msgstr "Hosted Version"
 
+#, fuzzy
 msgid ""
 "There is a version from which you can access calendars which are hosted in "
 "[Tor Onion Services](https://tb-manual.torproject.org/onion-services/): "
 "[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-"
 "calendar.hosted.quelltext.eu)."
 msgstr ""
+"There is a version from which you can access calendars which are hosted in ["
+"Tor Onion Services](https://tb-manual.torproject.org/onion-services/): [tor."
+"open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted."
+"quelltext.eu)."
 
+#, fuzzy
 msgid ""
 "A hosted version exists at [open-web-"
 "calendar.hosted.quelltext.eu](https://open-web-"
@@ -35,11 +47,20 @@ msgid ""
 "improvements go there after max. 48 hours. This version is intended to stay "
 "free of charge and is funded by [donation ♥️](../../contributing)."
 msgstr ""
+"A hosted version exists at [open-web-calendar.hosted.quelltext.eu](https"
+"://open-web-calendar.hosted.quelltext.eu). You can use this version if you "
+"like. It is deployed from the latest version on the `master` branch. Thus, "
+"translation improvements go there after max. 48 hours. This version is "
+"intended to stay free of charge and is funded by [donation "
+"♥️](../../contributing)."
 
+#, fuzzy
 msgid ""
 "[How to configure all calendar parameters](../configure/#configuring-the-"
 "default-calendar)"
 msgstr ""
+"[How to configure all calendar parameters](../configure/#configuring-the-"
+"default-calendar)"
 
 #~ msgid ""
 #~ "[How to configure all parameters](../configure/#configuring-the-default-"
