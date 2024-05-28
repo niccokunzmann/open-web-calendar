@@ -1,0 +1,236 @@
+# Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-28 17:45+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.13.0\n"
+
+#
+msgid "Configure a hosted instance."
+msgstr ""
+
+msgid ""
+"If you want to change the Open Web Calendar to serve your needs, this is "
+"well possible. You can choose to"
+msgstr ""
+
+msgid "Change how the default calendar looks."
+msgstr ""
+
+msgid "Change how the server works."
+msgstr ""
+
+msgid "You might want to change these values:"
+msgstr ""
+
+msgid "Server Configuration"
+msgstr ""
+
+msgid ""
+"If you modify the default specification, you modify **all calendars** that "
+"are hosted at your instance. Calendars still override some values for their "
+"configuration. Those which they do not override are affected. Not all values"
+" are exposed to the configuration page to be changed. Those values can still"
+" be changed in the [default_specification.yml] and the query parameters."
+msgstr ""
+
+msgid "Configuring the Default Calendar"
+msgstr ""
+
+msgid ""
+"The configuration of all calendars is rooted in the "
+"[default_specification.yml]. All those values can be changed through a copy "
+"of this file hosted on the web through the calendar parameter "
+"`specification_url`. Each parameter should be documented in "
+"[default_specification.yml]."
+msgstr ""
+
+msgid "`title`"
+msgstr ""
+
+msgid "`language`"
+msgstr ""
+
+msgid "`favicon`"
+msgstr ""
+
+msgid "`source_code` - if you made changes"
+msgstr ""
+
+msgid "`contributing` - if you want to redirect to contribute to your project"
+msgstr ""
+
+msgid "Related:"
+msgstr ""
+
+msgid "[API](../../dev/api)"
+msgstr ""
+
+msgid "Configuring the Server"
+msgstr ""
+
+msgid ""
+"Environment variables only influence the running of the server. These "
+"environment variables can be used to configure the service:"
+msgstr ""
+
+msgid "ALLOWED_HOSTS"
+msgstr ""
+
+msgid "default empty"
+msgstr ""
+
+msgid ""
+"The hosts divided by comma that the Open Web Calendar permits. This is "
+"required to mitigate the Host Header Injection vulnerability. You will see "
+"this text if the host is not allowed:"
+msgstr ""
+
+msgid ""
+"**Forbidden:** You don't have the permission to access the requested "
+"resource. It is either read-protected or not readable by the server.*"
+msgstr ""
+
+msgid "Examples:"
+msgstr ""
+
+msgid "permit one host: `ALLOWED_HOSTS=localhost`"
+msgstr ""
+
+msgid ""
+"permit several hosts: `ALLOWED_HOSTS=open-web-"
+"calendar.hosted.quelltext.eu,192.168.0.42`"
+msgstr ""
+
+msgid "permit all hosts (vulnerable): `ALLOWED_HOSTS=`"
+msgstr ""
+
+msgid "PORT"
+msgstr ""
+
+msgid "default `5000`, default `80` in the Docker container"
+msgstr ""
+
+msgid "The port that the service is running on."
+msgstr ""
+
+msgid "Serve on HTTP port: `PORT=80`"
+msgstr ""
+
+msgid "WORKERS"
+msgstr ""
+
+msgid "default `4`, only for the Docker container"
+msgstr ""
+
+msgid "The number of parallel workers to handle requests."
+msgstr ""
+
+msgid "Only use one worker: `WORKERS=1`"
+msgstr ""
+
+msgid "CACHE_REQUESTED_URLS_FOR_SECONDS"
+msgstr ""
+
+msgid "default `600`"
+msgstr ""
+
+msgid ""
+"Seconds to cache the calendar files that get downloaded to reduce bandwidth "
+"and delay."
+msgstr ""
+
+msgid "Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
+msgstr ""
+
+msgid "APP_DEBUG"
+msgstr ""
+
+msgid ""
+"default `true`, values `true` or `false`, always `false` in the Docker "
+"container"
+msgstr ""
+
+msgid "Set the debug flag for the app."
+msgstr ""
+
+msgid ""
+"The Open Web Calendar uses libraries whose behavior can be further "
+"customized."
+msgstr ""
+
+msgid ""
+"**Flask** has **[more environment "
+"variables](https://flask.palletsprojects.com/en/3.0.x/config/)** available "
+"to configure how the application serves content."
+msgstr ""
+
+msgid "SSRF Protection with a Proxy Server"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar can be used to access the local network behind a "
+"firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/250). This free access is intended to show calendars from "
+"everywhere. Since `requests` is used by the Open Web Calender, it can use a "
+"proxy as described in the [`requests` "
+"documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
+" The proxy can then handle the filtering."
+msgstr ""
+
+msgid ""
+"[Prevent SSRF using a Tor proxy](../docker#preventing-ssrf-attacks-using-a-"
+"tor-proxy)"
+msgstr ""
+
+msgid ""
+"**Requests** is used the get the `.ics` files. You can [configure a "
+"proxy](#ssrf-protection-with-a-proxy-server)."
+msgstr ""
+
+#~ msgid ""
+#~ "**Requests** is used the get the `.ics` files. You can [configure a proxy]."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration Those which they do not override are affected. Not all values "
+#~ "are exposed to the configuration page to be changed. Those values can still "
+#~ "be changed in the [default_specification.yml] and the query parameters."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration Those which they do not override are affected. Not all values "
+#~ "are exposed to the configuration page to be changed. Those values can still "
+#~ "be changed in the [default_specification.yml] and the parameters."
+#~ msgstr ""
+
+#~ msgid "Configuring the Open Web Calender"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration Those which they do not override are affected. Not all values "
+#~ "are exposed to the configuration page to be changed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration Those which they do not override are affected."
+#~ msgstr ""
+
+#~ msgid "Configure"
+#~ msgstr ""
