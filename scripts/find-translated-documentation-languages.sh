@@ -10,7 +10,8 @@ cd "`dirname \"$0\"`"
 translated_documentation_languages="en"
 
 for lang in `ls ../translations`; do
-  for po in ../translations/$lang/LC_MESSAGES/**.po ; do
+  for file in index.md.po contributing.md.po ; do
+    po="../translations/$lang/LC_MESSAGES/$file"
     msgstr_count="`grep -F 'msgstr' \"$po\" | wc -l`"
     empty_msgstr_count="`grep -F 'msgstr ""' \"$po\" | wc -l`"
     # add to count because of auto-generated messages: X-Generator
