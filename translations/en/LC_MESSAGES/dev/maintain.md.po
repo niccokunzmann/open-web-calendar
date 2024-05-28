@@ -222,6 +222,20 @@ msgstr ""
 msgid "These component Add-Ons are installed project-wide."
 msgstr ""
 
+msgid "Language filter:       wzxhzdk:2"
+msgstr ""
+
+msgid ""
+"excludes `en`    - Source language: `English`    - Manage strings: **not** "
+"checked"
+msgstr ""
+
+msgid "Add **Translation flags**:       wzxhzdk:3"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:       wzxhzdk:4"
+msgstr ""
+
 #~ msgid "Save."
 #~ msgstr ""
 
@@ -287,18 +301,4 @@ msgstr ""
 #~ "Set the **Repository browser** to the right URL, replace `index.md`: "
 #~ "`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
 #~ "}}/docs/index.md?plain=1#L{{ line }}`"
-#~ msgstr ""
-
-#~ msgid "Language filter:       wzxhzdk:2"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "excludes `en`    - Source language: `English`    - Manage strings: **not** "
-#~ "checked"
-#~ msgstr ""
-
-#~ msgid "Add **Translation flags**:       wzxhzdk:3"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px:       wzxhzdk:4"
 #~ msgstr ""

@@ -222,6 +222,20 @@ msgstr ""
 msgid "These component Add-Ons are installed project-wide."
 msgstr ""
 
+msgid "Language filter:       wzxhzdk:2"
+msgstr ""
+
+msgid ""
+"excludes `en`    - Source language: `English`    - Manage strings: **not** "
+"checked"
+msgstr ""
+
+msgid "Add **Translation flags**:       wzxhzdk:3"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:       wzxhzdk:4"
+msgstr ""
+
 #~ msgid "Language filter: `^(?!(en)$)[^.]+$` - excludes `en`"
 #~ msgstr ""
 
@@ -275,18 +289,4 @@ msgstr ""
 #~ msgid ""
 #~ "These component Add-Ons are automatically installed: "
 #~ "([Page](https://hosted.weblate.org/addons/open-web-calendar/))"
-#~ msgstr ""
-
-#~ msgid "Language filter:       wzxhzdk:2"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "excludes `en`    - Source language: `English`    - Manage strings: **not** "
-#~ "checked"
-#~ msgstr ""
-
-#~ msgid "Add **Translation flags**:       wzxhzdk:3"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px:       wzxhzdk:4"
 #~ msgstr ""

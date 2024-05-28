@@ -222,6 +222,20 @@ msgstr ""
 msgid "These component Add-Ons are installed project-wide."
 msgstr ""
 
+msgid "Language filter:       wzxhzdk:2"
+msgstr ""
+
+msgid ""
+"excludes `en`    - Source language: `English`    - Manage strings: **not** "
+"checked"
+msgstr ""
+
+msgid "Add **Translation flags**:       wzxhzdk:3"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:       wzxhzdk:4"
+msgstr ""
+
 #~ msgid "Restrict width and height to 2000px"
 #~ msgstr ""
 
@@ -309,18 +323,4 @@ msgstr ""
 #~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
 #~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\" "
 #~ "git push    ```"
-#~ msgstr ""
-
-#~ msgid "Language filter:       wzxhzdk:2"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "excludes `en`    - Source language: `English`    - Manage strings: **not** "
-#~ "checked"
-#~ msgstr ""
-
-#~ msgid "Add **Translation flags**:       wzxhzdk:3"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px:       wzxhzdk:4"
 #~ msgstr ""
