@@ -88,7 +88,7 @@ jobs:
           path: linkchecker-out.html
 
   check-translation-files:
-    name: "Check Links in Documentation"
+    name: "Safeguard Weblate"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
