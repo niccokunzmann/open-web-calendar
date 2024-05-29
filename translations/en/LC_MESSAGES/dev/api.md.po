@@ -90,15 +90,6 @@ msgid ""
 "parameter `title` in the [default_specification], you have several options:"
 msgstr ""
 
-msgid "Change it as query parameter"
-msgstr ""
-
-msgid "Add it to your own specification as YML:"
-msgstr ""
-
-msgid "Add it to your own specification as JSON:"
-msgstr ""
-
 msgid "Adding Parameters"
 msgstr ""
 
@@ -219,17 +210,6 @@ msgstr ""
 "[default_specification]: https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//default_specification.yml"
 
-msgid "Change it as query parameter    wzxhzdk:0"
-msgstr ""
-
-msgid "Add it to your own specification as YML:    wzxhzdk:1"
-msgstr ""
-
-msgid ""
-"Add it to your own specification as JSON:    ```json    {   \"title\": "
-"\"calendar\" }    ```"
-msgstr ""
-
 msgid ""
 "**Query parameters** All parameters to the calendar url are put into the "
 "specification. The query parameters have the highest precedence. Examples:"
@@ -248,5 +228,75 @@ msgstr ""
 msgid "![architecture](/assets/img/architecture.svg)"
 msgstr ""
 
+msgid "Query Parameter"
+msgstr ""
+
+msgid "YAML"
+msgstr ""
+
+msgid "JSON"
+msgstr ""
+
+msgid "Change the title in a YAML specification:"
+msgstr ""
+
+msgid "Change the title in a JSON specification:"
+msgstr ""
+
+msgid "Change the title in a query parameter:"
+msgstr ""
+
+#~ msgid "=== YAML"
+#~ msgstr ""
+
+#~ msgid "=== JSON"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the title in a YAML specification:  ```YAML title: calendar ``` "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the title in a JSON specification:  ```json {   \"title\": "
+#~ "\"calendar\" } ``` "
+#~ msgstr ""
+
+#~ msgid "Change the title by query parameter"
+#~ msgstr ""
+
+#~ msgid "Add it to your own specification as YML:"
+#~ msgstr ""
+
+#~ msgid "Add it to your own specification as JSON:"
+#~ msgstr ""
+
+#~ msgid "Add it to your own specification as YML:    wzxhzdk:1"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add it to your own specification as JSON:    ```json    {   \"title\": "
+#~ "\"calendar\" }    ```"
+#~ msgstr ""
+
+#~ msgid "Change the title with a query parameter"
+#~ msgstr ""
+
+#~ msgid "Change it as query parameter"
+#~ msgstr ""
+
+#~ msgid "Change it as query parameter    wzxhzdk:0"
+#~ msgstr ""
+
 #~ msgid "![architecture](../assets/img/architecture.svg)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the title in a YAML specification:  ```json {   \"title\": "
+#~ "\"calendar\" } ``` "
+#~ msgstr ""
+
+#~ msgid "```YAML title: calendar ``` "
+#~ msgstr ""
+
+#~ msgid "```json {   \"title\": \"calendar\" } ``` "
 #~ msgstr ""

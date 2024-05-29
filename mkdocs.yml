@@ -63,6 +63,7 @@ theme:
 #    - navigation.tracking
     - toc.follow
     - content.code.copy
+    - content.tabs.link
   icon:
     edit: material/pencil
     view: material/eye
@@ -247,6 +248,11 @@ markdown_extensions:
   - pymdownx.snippets: # see https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
       base_path: ["docs/snippets"]
   - attr_list # see https://mrkeo.github.io/reference/images/
-
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.superfences
 hooks:
   - docs/hooks/set_canonical_url.py
