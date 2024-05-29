@@ -220,7 +220,7 @@ msgstr ""
 #~ msgid "</select>"
 #~ msgstr ""
 
-#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:5"
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:5"
 #~ msgstr ""
 
 #~ msgid "Timezones"
@@ -245,10 +245,10 @@ msgstr ""
 #~ "the page to see how it is done."
 #~ msgstr ""
 
-#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:3"
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:3"
 #~ msgstr ""
 
-#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:6"
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:6"
 #~ msgstr ""
 
 #~ msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"

@@ -245,7 +245,7 @@ msgstr ""
 #~ msgid ""
 #~ "Below, you can see the source code that you need to add to your website. You"
 #~ " might need to adjust the timezone selection and the id of the iframe. "
-#~ "wzxhzdk:5"
+#~ "wzxhzdk:5"
 #~ msgstr ""
 
 #~ msgid ""
@@ -321,7 +321,7 @@ msgstr ""
 #~ msgid "</select>"
 #~ msgstr ""
 
-#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:5"
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:5"
 #~ msgstr ""
 
 #~ msgid "Timezones"
@@ -350,8 +350,8 @@ msgstr ""
 #~ "the page to see how it is done."
 #~ msgstr ""
 
-#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:3"
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:3"
 #~ msgstr ""
 
-#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:6"
+#~ msgid "<select id=\"timezoneOption\">    wzxhzdk:6"
 #~ msgstr ""
