@@ -87,6 +87,13 @@ jobs:
           name: checked-links.html
           path: linkchecker-out.html
 
+  check-translation-files:
+    name: "Check Links in Documentation"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: "Make sure that Weblate can use the translation files"
+        run: scripts/make-sure-weblate-can-use-the-translation-files.sh
 
   dockerhub:
     name: Publish Docker Image on Docker Hub
