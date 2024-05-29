@@ -1,12 +1,13 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # Prefill add-on <noreply-addon-prefill@weblate.org>, 2024.
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-28 10:40+0200\n"
-"PO-Revision-Date: 2024-05-28 08:41+0000\n"
-"Last-Translator: Prefill add-on <noreply-addon-prefill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-30 15:45+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/open-web-calendar/"
 "documentation-hosted-version/fr/>\n"
 "Language: fr\n"
@@ -25,17 +26,12 @@ msgstr "You can use the hosted version of the Open Web Calendar yourself."
 msgid "Hosted Version"
 msgstr "Hosted Version"
 
-#, fuzzy
 msgid ""
 "There is a version from which you can access calendars which are hosted in "
 "[Tor Onion Services](https://tb-manual.torproject.org/onion-services/): "
 "[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-"
 "calendar.hosted.quelltext.eu)."
 msgstr ""
-"There is a version from which you can access calendars which are hosted in ["
-"Tor Onion Services](https://tb-manual.torproject.org/onion-services/): [tor."
-"open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted."
-"quelltext.eu)."
 
 #, fuzzy
 msgid ""
