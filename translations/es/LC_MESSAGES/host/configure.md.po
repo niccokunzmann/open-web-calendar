@@ -1,26 +1,44 @@
-#
+# gallegonovato <fran-carro@hotmail.es>, 2024.
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-30 01:18+0200\n"
+"PO-Revision-Date: 2024-05-29 23:18+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-server-configuration/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
+
+#
 
 msgid "Configure a hosted instance."
-msgstr ""
+msgstr "Personaliza tu propio servidor."
 
 msgid ""
 "If you want to change the Open Web Calendar to serve your needs, this is "
 "well possible. You can choose to"
 msgstr ""
+"Si deseas cambiar el Calendario Web Abierto para satisfacer tus necesidades, "
+"se puede hacer. Puedes elegir"
 
 msgid "Change how the default calendar looks."
-msgstr ""
+msgstr "Cambiar la apariencia del calendario predeterminado."
 
 msgid "Change how the server works."
-msgstr ""
+msgstr "Cambiar el funcionamiento del servidor."
 
 msgid "You might want to change these values:"
-msgstr ""
+msgstr "Es probable que desees cambiar estos valores:"
 
 msgid "Server Configuration"
-msgstr ""
+msgstr "Configuración del servidor"
 
 msgid ""
 "If you modify the default specification, you modify **all calendars** that "
@@ -29,9 +47,15 @@ msgid ""
 " are exposed to the configuration page to be changed. Those values can still"
 " be changed in the [default_specification.yml] and the query parameters."
 msgstr ""
+"Si modificas las especificaciones por defecto, modificarás **todos los "
+"calendarios** que estén alojados en tu instancia. Los calendarios siguen "
+"cancelando algunos valores de tu configuración. Aquellos que no los cancelen "
+"se verán afectados. No todos los valores están expuestos en la página de "
+"configuración para ser modificados. Esos valores aún pueden cambiarse en "
+"[default_specification.yml] y en los parámetros de la consulta."
 
 msgid "Configuring the Default Calendar"
-msgstr ""
+msgstr "Configurar el calendario predeterminado"
 
 msgid ""
 "The configuration of all calendars is rooted in the "
@@ -40,6 +64,12 @@ msgid ""
 "`specification_url`. Each parameter should be documented in "
 "[default_specification.yml]."
 msgstr ""
+"La configuración de todos los calendarios tiene su raíz en "
+"[default_specification.yml]. Todos esos valores se pueden cambiar a través "
+"de una copia de este archivo alojada en la web a través del parámetro "
+"calendario.\n"
+"` especificación_url` . Cada parámetro debe documentarse en "
+"[default_specification.yml]."
 
 msgid "`title`"
 msgstr ""
@@ -51,33 +81,38 @@ msgid "`favicon`"
 msgstr ""
 
 msgid "`source_code` - if you made changes"
-msgstr ""
+msgstr "`source_code` - si has realizado cambios"
 
 msgid "`contributing` - if you want to redirect to contribute to your project"
-msgstr ""
+msgstr "`contribuir` - si deseas redirigir a contribuir a tu proyecto"
 
 msgid "[API](../../dev/api)"
-msgstr ""
+msgstr "[API](../../dev/api)"
 
 msgid "Configuring the Server"
-msgstr ""
+msgstr "Configurando el servidor"
 
 msgid ""
 "Environment variables only influence the running of the server. These "
 "environment variables can be used to configure the service:"
 msgstr ""
+"Las variables de entorno solo influyen en el funcionamiento del servidor. "
+"Estas variables del entorno se pueden utilizar para configurar el servicio:"
 
 msgid "ALLOWED_HOSTS"
 msgstr ""
 
 msgid "default empty"
-msgstr ""
+msgstr "vacío predeterminado"
 
 msgid ""
 "The hosts divided by comma that the Open Web Calendar permits. This is "
 "required to mitigate the Host Header Injection vulnerability. You will see "
 "this text if the host is not allowed:"
 msgstr ""
+"Los hosts divididos por comas que permite el Calendario Web Abierto. Esto es "
+"necesario para mitigar la vulnerabilidad Host Header Injection. Verá este "
+"texto si el host no está permitido:"
 
 msgid ""
 "**Forbidden:** You don't have the permission to access the requested "
@@ -85,56 +120,60 @@ msgid ""
 msgstr ""
 
 msgid "Examples:"
-msgstr ""
+msgstr "Ejemplos:"
 
 msgid "permit one host: `ALLOWED_HOSTS=localhost`"
-msgstr ""
+msgstr "permitir un host: ` ALLOWED_HOSTS=hostlocal`"
 
 msgid ""
 "permit several hosts: `ALLOWED_HOSTS=open-web-"
 "calendar.hosted.quelltext.eu,192.168.0.42`"
 msgstr ""
+"permitir varios hosts:`ALLOWED_HOSTS=open-web-calendar.hosted.quelltext."
+"eu,192.168.0.42`"
 
 msgid "permit all hosts (vulnerable): `ALLOWED_HOSTS=`"
-msgstr ""
+msgstr "permitir todos los hosts (vulnerable): ` ALLOWED_HOSTS=`"
 
 msgid "PORT"
 msgstr ""
 
 msgid "default `5000`, default `80` in the Docker container"
-msgstr ""
+msgstr "por defecto` 5000` , predeterminado` 80` en el contenedor Docker"
 
 msgid "The port that the service is running on."
-msgstr ""
+msgstr "El puerto en el que se ejecuta el servicio."
 
 msgid "Serve on HTTP port: `PORT=80`"
-msgstr ""
+msgstr "Servir en el puerto HTTP:` PUERTO=80`"
 
 msgid "WORKERS"
 msgstr ""
 
 msgid "default `4`, only for the Docker container"
-msgstr ""
+msgstr "por defecto ` 4 ` , solo para el contenedor Docker"
 
 msgid "The number of parallel workers to handle requests."
 msgstr ""
 
 msgid "Only use one worker: `WORKERS=1`"
-msgstr ""
+msgstr "Utilice sólo un trabajador: `WORKERS=1`"
 
 msgid "CACHE_REQUESTED_URLS_FOR_SECONDS"
 msgstr ""
 
 msgid "default `600`"
-msgstr ""
+msgstr "por defecto `600`"
 
 msgid ""
 "Seconds to cache the calendar files that get downloaded to reduce bandwidth "
 "and delay."
 msgstr ""
+"Segundos para almacenar en la caché los archivos del calendario que se "
+"descargan para reducir el ancho de banda y las demoras."
 
 msgid "Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
-msgstr ""
+msgstr "Actualización rápida: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
 
 msgid "APP_DEBUG"
 msgstr ""
@@ -145,12 +184,14 @@ msgid ""
 msgstr ""
 
 msgid "Set the debug flag for the app."
-msgstr ""
+msgstr "Establecer el indicador de depuración para la aplicación."
 
 msgid ""
 "The Open Web Calendar uses libraries whose behavior can be further "
 "customized."
 msgstr ""
+"El Calendario web abierto utiliza bibliotecas cuyo comportamiento se puede "
+"personalizar aún más."
 
 msgid ""
 "**Flask** has **[more environment "
@@ -180,6 +221,8 @@ msgid ""
 "**Requests** is used the get the `.ics` files. You can [configure a "
 "proxy](#ssrf-protection-with-a-proxy-server)."
 msgstr ""
+"** Peticiones** se utiliza para obtener el ` .ics` archivos. Puede ["
+"configurar un proxy](#ssrf-protection-with-a-proxy-server)."
 
 #~ msgid "Related:"
 #~ msgstr ""
