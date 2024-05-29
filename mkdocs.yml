@@ -246,7 +246,7 @@ markdown_extensions:
   - pymdownx.details # see https://facelessuser.github.io/pymdown-extensions/extensions/details/
   - abbr
   - pymdownx.snippets: # see https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
-      base_path: ["docs/snippets"]
+      base_path: ["docs/snippets", "docs/assets/templates"]
   - attr_list # see https://mrkeo.github.io/reference/images/
   - pymdownx.tabbed:
       alternate_style: true
