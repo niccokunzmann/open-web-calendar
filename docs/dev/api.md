@@ -47,19 +47,25 @@ That is the reference.
 E.g. if you find the parameter `title` in the [default_specification],
 you have several options:
 
-- Change it as query parameter
+=== "Query Parameter"
+
+    Change the title in a query parameter:
 
     ```sh
     /index.html?title=calendar`
     ```
 
-- Add it to your own specification as YML:
+=== "YAML"
+
+    Change the title in a YAML specification:
 
     ```YAML
     title: calendar
     ```
 
-- Add it to your own specification as JSON:
+=== "JSON"
+
+    Change the title in a JSON specification:
 
     ```json
     {
