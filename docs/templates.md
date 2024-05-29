@@ -12,12 +12,35 @@ description: "Play with a variety of Calendars for your own project."
 <!-- Page level macros, see https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/#page-level-macros -->
 
 {% macro calendar_iframe(spec, width="100%", params="", id="") -%}
+
 <iframe class="open-web-calendar" id="{{id}}"
-    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-    src="{{link.web}}/calendar.html?specification_url={{link.templates}}/{{spec}}&{{params}}"
-    sandbox="allow-scripts allow-same-origin allow-top-navigation"
-    allowTransparency="true" scrolling="no"
-    frameborder="0" height="600px" width="{{width}}"></iframe>
+style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+src="{{link.web}}/calendar.html?specification_url={{link.templates}}/{{spec}}&{{params}}"
+sandbox="allow-scripts allow-same-origin allow-top-navigation"
+allowTransparency="true" scrolling="no"
+frameborder="0" height="600px" width="{{width}}"></iframe>
+
+{%- endmacro %}
+
+{% macro calendar_example(spec, width="100%", params="", id="") -%}
+
+=== "Calendar"
+
+    {{ calendar_iframe(spec, width, params, id) }}
+
+=== "Specification"
+
+
+    ```json
+    --8<-- "{{ spec }}"
+    ```
+
+=== "HTML"
+
+    ```html
+    {{ calendar_iframe(spec, width, params, id) }}
+    ```
+
 <a href="{{link.web}}/index.html?specification_url={{link.templates}}/{{spec}}" target="_blank">Edit the calendar</a>
 {%- endmacro %}
 
@@ -32,7 +55,7 @@ If you are inspired, you can also just head over and [start from scratch]({{link
 
 Here is an example of a one day view of a Christmas day:
 
-{{calendar_iframe("christmas-day.json", "300px")}}
+{{calendar_example("christmas-day.json", "300px")}}
 
 Modifications:
 
@@ -46,7 +69,7 @@ If you are at home, planning the days with the family, events might have
 different categories depending on who they are for: `work` or `personal`.
 Events can be single events or occur every day.
 
-{{calendar_iframe("family-planning.json")}}
+{{calendar_example("family-planning.json")}}
 
 Modifications:
 
@@ -71,7 +94,7 @@ events are displayed in.
 
 --8<-- "choose-timezone.html"
 
-{{calendar_iframe("timezone-example.json", id="owcTimezoneExample")}}
+{{calendar_example("timezone-example.json", id="owcTimezoneExample")}}
 
 Below, you can see the source code that you need to add to your website.
 You might need to adjust the timezone selection and the id of the iframe.
@@ -92,7 +115,7 @@ You can change the design based on whether you are free or busy.
 This calendar has changed CSS so that the background is green and the
 events are either orange or red.
 
-{{calendar_iframe("free-and-busy.json")}}
+{{calendar_example("free-and-busy.json")}}
 
 
 Modifications:
