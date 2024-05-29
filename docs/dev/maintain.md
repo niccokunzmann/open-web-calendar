@@ -99,8 +99,8 @@ The aim of this section is to have a consistent outcome.
 3. **Save**
 4. In the **Settings** 🠚 **Translation**:
 
-    - Check **Suggestion voting**
-    - Set **Automatically accept suggestions** to `2`
+    - **Un**check **Suggestion voting**
+    - Set **Automatically accept suggestions** to `0`
     - Check **Allow translation propagation**
     - **Un**check **Manage strings**
     - Add **Translation flags**:
