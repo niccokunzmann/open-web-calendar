@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Agregue un calendario web altamente personalizable a tu página web basado en enlaces ICal">
+        <meta name="description" content="Personaliza tu propio servidor.">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Server Configuration - Open Web Calendar</title>
+        <title>Configuración del servidor - Open Web Calendar</title>
       
     
     
@@ -58,11 +58,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Server Configuration - Open Web Calendar" >
+        <meta  property="og:title"  content="Configuración del servidor - Open Web Calendar" >
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ujanftxs/es/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_va0v6fge/es/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -74,11 +74,11 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Server Configuration - Open Web Calendar" >
+        <meta  name="twitter:title"  content="Configuración del servidor - Open Web Calendar" >
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ujanftxs/es/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_va0v6fge/es/host/configure/index.png" >
       
     
     
@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#server-configuration" class="md-skip">
+        <a href="#configuracion-del-servidor" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -134,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Server Configuration
+              Configuración del servidor
             
           </span>
         </div>
@@ -748,22 +748,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-the-default-calendar" class="md-nav__link">
+  <a href="#configurar-el-calendario-predeterminado" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring the Default Calendar
+      Configurar el calendario predeterminado
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-the-server" class="md-nav__link">
+  <a href="#configurando-el-servidor" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring the Server
+      Configurando el servidor
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuring the Server">
+    <nav class="md-nav" aria-label="Configurando el servidor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -857,70 +857,71 @@
   
 
 
-<h1 id="server-configuration">Server Configuration<a class="headerlink" href="#server-configuration" title="Enlace permanente">&para;</a></h1>
-<p>If you want to change the Open Web Calendar to serve your needs, this is well possible. You can choose to</p>
+<h1 id="configuracion-del-servidor">Configuración del servidor<a class="headerlink" href="#configuracion-del-servidor" title="Enlace permanente">&para;</a></h1>
+<p>Si deseas cambiar el Calendario Web Abierto para satisfacer tus necesidades, se puede hacer. Puedes elegir</p>
 <ul>
-<li>Change how the default calendar looks.</li>
-<li>Change how the server works.</li>
+<li>Cambiar la apariencia del calendario predeterminado.</li>
+<li>Cambiar el funcionamiento del servidor.</li>
 </ul>
-<h2 id="configuring-the-default-calendar">Configuring the Default Calendar<a class="headerlink" href="#configuring-the-default-calendar" title="Enlace permanente">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a>.</p>
-<p>If you modify the default specification, you modify <strong>all calendars</strong> that are hosted at your instance. Calendars still override some values for their configuration. Those which they do not override are affected. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a> and the query parameters.</p>
-<p>You might want to change these values:</p>
+<h2 id="configurar-el-calendario-predeterminado">Configurar el calendario predeterminado<a class="headerlink" href="#configurar-el-calendario-predeterminado" title="Enlace permanente">&para;</a></h2>
+<p>La configuración de todos los calendarios tiene su raíz en <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a>. Todos esos valores se pueden cambiar a través de una copia de este archivo alojada en la web a través del parámetro calendario.
+<code>especificación_url</code> . Cada parámetro debe documentarse en <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a>.</p>
+<p>Si modificas las especificaciones por defecto, modificarás <strong>todos los calendarios</strong> que estén alojados en tu instancia. Los calendarios siguen cancelando algunos valores de tu configuración. Aquellos que no los cancelen se verán afectados. No todos los valores están expuestos en la página de configuración para ser modificados. Esos valores aún pueden cambiarse en <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml">default_specification.yml</a> y en los parámetros de la consulta.</p>
+<p>Es probable que desees cambiar estos valores:</p>
 <ul>
 <li><code>title</code></li>
 <li><code>language</code></li>
 <li><code>favicon</code></li>
-<li><code>source_code</code> - if you made changes</li>
-<li><code>contributing</code> - if you want to redirect to contribute to your project</li>
+<li><code>source_code</code> - si has realizado cambios</li>
+<li><code>contribuir</code> - si deseas redirigir a contribuir a tu proyecto</li>
 </ul>
 <p>Ver también:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
 </ul>
-<h2 id="configuring-the-server">Configuring the Server<a class="headerlink" href="#configuring-the-server" title="Enlace permanente">&para;</a></h2>
-<p>Environment variables only influence the running of the server. These environment variables can be used to configure the service:</p>
+<h2 id="configurando-el-servidor">Configurando el servidor<a class="headerlink" href="#configurando-el-servidor" title="Enlace permanente">&para;</a></h2>
+<p>Las variables de entorno solo influyen en el funcionamiento del servidor. Estas variables del entorno se pueden utilizar para configurar el servicio:</p>
 <h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="Enlace permanente">&para;</a></h3>
-<p>default empty</p>
-<p>The hosts divided by comma that the Open Web Calendar permits. This is required to mitigate the Host Header Injection vulnerability. You will see this text if the host is not allowed:</p>
+<p>vacío predeterminado</p>
+<p>Los hosts divididos por comas que permite el Calendario Web Abierto. Esto es necesario para mitigar la vulnerabilidad Host Header Injection. Verá este texto si el host no está permitido:</p>
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
-<p>Examples:</p>
+<p>Ejemplos:</p>
 <ul>
-<li>permit one host: <code>ALLOWED_HOSTS=localhost</code></li>
-<li>permit several hosts: <code>ALLOWED_HOSTS=open-web-calendar.hosted.quelltext.eu,192.168.0.42</code></li>
-<li>permit all hosts (vulnerable): <code>ALLOWED_HOSTS=</code></li>
+<li>permitir un host: <code>ALLOWED_HOSTS=hostlocal</code></li>
+<li>permitir varios hosts:<code>ALLOWED_HOSTS=open-web-calendar.hosted.quelltext.eu,192.168.0.42</code></li>
+<li>permitir todos los hosts (vulnerable): <code>ALLOWED_HOSTS=</code></li>
 </ul>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Enlace permanente">&para;</a></h3>
-<p>default <code>5000</code>, default <code>80</code> in the Docker container</p>
-<p>The port that the service is running on.</p>
-<p>Examples:</p>
+<p>por defecto<code>5000</code> , predeterminado<code>80</code> en el contenedor Docker</p>
+<p>El puerto en el que se ejecuta el servicio.</p>
+<p>Ejemplos:</p>
 <ul>
-<li>Serve on HTTP port: <code>PORT=80</code></li>
+<li>Servir en el puerto HTTP:<code>PUERTO=80</code></li>
 </ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Enlace permanente">&para;</a></h3>
-<p>default <code>4</code>, only for the Docker container</p>
+<p>por defecto <code>4</code> , solo para el contenedor Docker</p>
 <p>The number of parallel workers to handle requests.</p>
-<p>Examples:</p>
+<p>Ejemplos:</p>
 <ul>
-<li>Only use one worker: <code>WORKERS=1</code></li>
+<li>Utilice sólo un trabajador: <code>WORKERS=1</code></li>
 </ul>
 <h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Enlace permanente">&para;</a></h3>
-<p>default <code>600</code></p>
-<p>Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.</p>
-<p>Examples:</p>
+<p>por defecto <code>600</code></p>
+<p>Segundos para almacenar en la caché los archivos del calendario que se descargan para reducir el ancho de banda y las demoras.</p>
+<p>Ejemplos:</p>
 <ul>
-<li>Refresh fast: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
+<li>Actualización rápida: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
 </ul>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Enlace permanente">&para;</a></h3>
 <p>default <code>true</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
-<p>Set the debug flag for the app.</p>
+<p>Establecer el indicador de depuración para la aplicación.</p>
 <h3 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Enlace permanente">&para;</a></h3>
-<p>The Open Web Calendar uses libraries whose behavior can be further customized.</p>
+<p>El Calendario web abierto utiliza bibliotecas cuyo comportamiento se puede personalizar aún más.</p>
 <ul>
 <li><strong>Flask</strong> has <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more environment variables</a></strong> available to configure how the application serves content.</li>
-<li><strong>Requests</strong> is used the get the <code>.ics</code> files. You can <a href="#ssrf-protection-with-a-proxy-server">configure a proxy</a>.</li>
+<li>** Peticiones** se utiliza para obtener el <code>.ics</code> archivos. Puede <a href="#ssrf-protection-with-a-proxy-server">configurar un proxy</a>.</li>
 </ul>
 <h3 id="ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server<a class="headerlink" href="#ssrf-protection-with-a-proxy-server" title="Enlace permanente">&para;</a></h3>
 <p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calender, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
