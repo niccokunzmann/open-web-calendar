@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wxakd0hp/en/templates/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__qwnuqeo/en/templates/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wxakd0hp/en/templates/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__qwnuqeo/en/templates/index.png" >
       
     
     
@@ -757,15 +757,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#recurring-events-with-categories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recurring Events with Categories
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#events-hosted-as-a-tor-hidden-service" class="md-nav__link">
     <span class="md-ellipsis">
       Events Hosted as a Tor Hidden Service
@@ -833,27 +824,93 @@
 </blockquote>
 <h2 id="mobile-one-day-calendar-feed">Mobile One Day Calendar Feed<a class="headerlink" href="#mobile-one-day-calendar-feed" title="Permanent link">&para;</a></h2>
 <p>Here is an example of a one day view of a Christmas day:</p>
-<iframe class="open-web-calendar" id=""
-    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json&"
-    sandbox="allow-scripts allow-same-origin allow-top-navigation"
-    allowTransparency="true" scrolling="no"
-    frameborder="0" height="600px" width="300px"></iframe>
-<p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json" target="_blank">Edit the calendar</a></p>
-<p>Modifications:</p>
-<ul>
-<li>start and end time</li>
-<li>fixed date</li>
-<li>CSS</li>
-</ul>
-<h2 id="recurring-events-with-categories">Recurring Events with Categories<a class="headerlink" href="#recurring-events-with-categories" title="Permanent link">&para;</a></h2>
-<p>If you are at home, planning the days with the family, events might have different categories depending on who they are for: <code>work</code> or <code>personal</code>. Events can be single events or occur every day.</p>
-<iframe class="open-web-calendar" id=""
-    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json&"
-    sandbox="allow-scripts allow-same-origin allow-top-navigation"
-    allowTransparency="true" scrolling="no"
-    frameborder="0" height="600px" width="100%"></iframe>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="calendar" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="calendar">Calendar</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>&lt;iframe class=&rdquo;open-web-calendar&rdquo; id=&rdquo;&ldquo;</p>
+</div>
+</div>
+</div>
+<p>style=&rdquo;background:url(&lsquo;https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif&rsquo;) center center no-repeat; border-radius: 10px;&rdquo; src=&rdquo;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json&amp;&rdquo; sandbox=&rdquo;allow-scripts allow-same-origin allow-top-navigation&rdquo; allowTransparency=&rdquo;true&rdquo; scrolling=&rdquo;no&rdquo; frameborder=&rdquo;0&rdquo; height=&rdquo;600px&rdquo; width=&rdquo;300px&rdquo;&gt;</iframe></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="specification" name="__tabbed_2" type="radio" /><input id="html" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="specification">Specification</label><label for="html">HTML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;controls&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;today&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;css&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.dhx_cal_navline { display: none !important; height: 0 !important; }\n.dhx_cal_header { top: 0px !important; }\n.dhx_cal_data { top: 35px !important; }&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-12-24&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;hour_format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%g:%i %a&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;skin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dhtmlxscheduler_flat.css&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;starting_hour&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;day&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tabs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Europe/London&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Christmas Calendar&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://open-web-calendar.quelltext.eu/assets/calendars/christmas.ics&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>```html
+&lt;iframe class=&rdquo;open-web-calendar&rdquo; id=&rdquo;&ldquo;</p>
+</div>
+</div>
+</div>
+<p>style=&rdquo;background:url(&lsquo;https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif&rsquo;) center center no-repeat; border-radius: 10px;&rdquo; src=&rdquo;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json&amp;&rdquo; sandbox=&rdquo;allow-scripts allow-same-origin allow-top-navigation&rdquo; allowTransparency=&rdquo;true&rdquo; scrolling=&rdquo;no&rdquo; frameborder=&rdquo;0&rdquo; height=&rdquo;600px&rdquo; width=&rdquo;300px&rdquo;&gt;</iframe></p>
+<div class="highlight"><pre><span></span><code>&lt;a href=&quot;https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json&quot; target=&quot;_blank&quot;&gt;Edit the calendar&lt;/a&gt;
+
+Modifications:
+
+- start and end time
+- fixed date
+- CSS
+
+## Recurring Events with Categories
+
+If you are at home, planning the days with the family, events might have
+different categories depending on who they are for: `work` or `personal`.
+Events can be single events or occur every day.
+
+=== &quot;Calendar&quot;
+
+&lt;iframe class=&quot;open-web-calendar&quot; id=&quot;&quot;
+style=&quot;background:url(&#39;https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif&#39;) center center no-repeat; border-radius: 10px;&quot;
+src=&quot;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json&amp;&quot;
+sandbox=&quot;allow-scripts allow-same-origin allow-top-navigation&quot;
+allowTransparency=&quot;true&quot; scrolling=&quot;no&quot;
+frameborder=&quot;0&quot; height=&quot;600px&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;
+
+=== &quot;Specification&quot;
+
+
+```json
+{
+  &quot;css&quot;: &quot;.event.CATEGORY-work .dhx_body, .event.CATEGORY-work .dhx_title { background: #E3B024 !important; }\n.CATEGORY-personal  .dhx_title, .CATEGORY-personal .dhx_body { background: #73E324 !important; }\n.dhx_cal_navline, .dhx_scale_bar, .dhx_cal_container, .dhx_cal_header, .dhx_cal_scale_placeholder, .dhx_scale_holder, .dhx_scale_hour {background-color: #f9f06b;}.dhx_scale_holder_now, .dhx_now .dhx_month_head, .dhx_now .dhx_month_body { background-color: #f8e45c;}&quot;,
+  &quot;date&quot;: &quot;2024-04-08&quot;,
+  &quot;ending_hour&quot;: &quot;22&quot;,
+  &quot;specification_url&quot;: &quot;https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json&quot;,
+  &quot;start_of_week&quot;: &quot;work&quot;,
+  &quot;starting_hour&quot;: &quot;8&quot;,
+  &quot;tab&quot;: &quot;week&quot;,
+  &quot;timezone&quot;: &quot;Europe/London&quot;,
+  &quot;title&quot;: &quot;Family Planning&quot;,
+  &quot;url&quot;: &quot;https://open-web-calendar.quelltext.eu/assets/calendars/categories.ics&quot;
+}
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="html_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="html_1">HTML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;open-web-calendar&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;&quot;</span>
+<span class="na">style</span><span class="o">=</span><span class="s">&quot;background:url(&#39;https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif&#39;) center center no-repeat; border-radius: 10px;&quot;</span>
+<span class="na">src</span><span class="o">=</span><span class="s">&quot;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json&amp;&quot;</span>
+<span class="na">sandbox</span><span class="o">=</span><span class="s">&quot;allow-scripts allow-same-origin allow-top-navigation&quot;</span>
+<span class="na">allowTransparency</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span>
+<span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600px&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div>
 <p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json" target="_blank">Edit the calendar</a></p>
 <p>Modifications:</p>
 <ul>
@@ -862,7 +919,8 @@
 <li>CSS</li>
 </ul>
 <h2 id="events-hosted-as-a-tor-hidden-service">Events Hosted as a Tor Hidden Service<a class="headerlink" href="#events-hosted-as-a-tor-hidden-service" title="Permanent link">&para;</a></h2>
-<p>This calendar is not styled but contains events that can be hosted behind a firewall on a little anonymous server. <a href="https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics">Example</a></p>
+<p>This calendar is not styled but contains events that can be hosted behind
+a firewall on a little anonymous server. <a href="https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics">Example</a></p>
 <p>Modifications:</p>
 <ul>
 <li><a href="../host/configure#ssrf-protection-with-a-proxy-server">proxy parameters</a></li>
@@ -899,14 +957,53 @@
   timezoneOption.onchange = changeTimezone;
 </script>
 
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="calendar_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="calendar_1">Calendar</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <iframe class="open-web-calendar" id="owcTimezoneExample"
-    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json&"
-    sandbox="allow-scripts allow-same-origin allow-top-navigation"
-    allowTransparency="true" scrolling="no"
-    frameborder="0" height="600px" width="100%"></iframe>
+style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json&"
+sandbox="allow-scripts allow-same-origin allow-top-navigation"
+allowTransparency="true" scrolling="no"
+frameborder="0" height="600px" width="100%"></iframe>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="specification_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="specification_1">Specification</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;controls&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;today&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;date&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;skin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dhtmlxscheduler_contrast_white.css&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;day&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tabs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;week&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;day&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timezone Example&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://open-web-calendar.quelltext.eu/assets/calendars/timezone-example.ics&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="html_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="html_2">HTML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;open-web-calendar&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;owcTimezoneExample&quot;</span>
+<span class="na">style</span><span class="o">=</span><span class="s">&quot;background:url(&#39;https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif&#39;) center center no-repeat; border-radius: 10px;&quot;</span>
+<span class="na">src</span><span class="o">=</span><span class="s">&quot;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json&amp;&quot;</span>
+<span class="na">sandbox</span><span class="o">=</span><span class="s">&quot;allow-scripts allow-same-origin allow-top-navigation&quot;</span>
+<span class="na">allowTransparency</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span>
+<span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600px&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div>
 <p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json" target="_blank">Edit the calendar</a></p>
-<p>Below, you can see the source code that you need to add to your website. You might need to adjust the timezone selection and the id of the iframe.</p>
+<p>Below, you can see the source code that you need to add to your website.
+You might need to adjust the timezone selection and the id of the iframe.
 <div class="highlight"><pre><span></span><code>&lt;!--
   This is HTML and JavaScript that allows changing a calendar URL specific to a timezone.
 
@@ -937,7 +1034,7 @@
   window.addEventListener(&quot;load&quot;, setInitialTimezone);
   timezoneOption.onchange = changeTimezone;
 &lt;/script&gt;
-</code></pre></div>
+</code></pre></div></p>
 <p>Modifications:</p>
 <ul>
 <li>JavaScript</li>
@@ -946,12 +1043,41 @@
 <h2 id="free-and-busy">Free and Busy<a class="headerlink" href="#free-and-busy" title="Permanent link">&para;</a></h2>
 <p>You can change the design based on whether you are free or busy.</p>
 <p>This calendar has changed CSS so that the background is green and the events are either orange or red.</p>
-<iframe class="open-web-calendar" id=""
-    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json&"
-    sandbox="allow-scripts allow-same-origin allow-top-navigation"
-    allowTransparency="true" scrolling="no"
-    frameborder="0" height="600px" width="100%"></iframe>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="calendar_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="calendar_2">Calendar</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>&lt;iframe class=&rdquo;open-web-calendar&rdquo; id=&rdquo;&ldquo;</p>
+</div>
+</div>
+</div>
+<p>style=&rdquo;background:url(&lsquo;https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif&rsquo;) center center no-repeat; border-radius: 10px;&rdquo;
+src=&rdquo;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json&amp;&rdquo;
+sandbox=&rdquo;allow-scripts allow-same-origin allow-top-navigation&rdquo;
+allowTransparency=&rdquo;true&rdquo; scrolling=&rdquo;no&rdquo;
+frameborder=&rdquo;0&rdquo; height=&rdquo;600px&rdquo; width=&rdquo;100%&rdquo;&gt;</iframe></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="specification_2" name="__tabbed_8" type="radio" /><input id="html_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="specification_2">Specification</label><label for="html_3">HTML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;css&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.dhx_cal_event_line.dhx_cal_event_line_start.dhx_cal_event_line_end.TRANSP-OPAQUE { background-color: red;  }\n.dhx_cal_event_line.dhx_cal_event_line_start.dhx_cal_event_line_end.TRANSP-TRANSPARENT { background-color: orange; }\n\n.event {\n height: 79px;\n transform: translate(-1.5px, -1.5px);\n  width: 14.3% !important;\n}\n.dhx_after .dhx_month_body, .dhx_month_body, .dhx_before .dhx_month_body {\n  background-color: lightgreen;\n}\n\n.dhx_month_head:before {\n  content: \&quot;Free\&quot;;\n  display: inline-block;\n  transform: translateY(19px);\n}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;skin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dhtmlxscheduler_flat.css&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://open-web-calendar.quelltext.eu/assets/calendars/free-busy-events.ics&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tabs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>```html
+&lt;iframe class=&rdquo;open-web-calendar&rdquo; id=&rdquo;&ldquo;</p>
+</div>
+</div>
+</div>
+<p>style=&rdquo;background:url(&lsquo;https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif&rsquo;) center center no-repeat; border-radius: 10px;&rdquo;
+src=&rdquo;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json&amp;&rdquo;
+sandbox=&rdquo;allow-scripts allow-same-origin allow-top-navigation&rdquo;
+allowTransparency=&rdquo;true&rdquo; scrolling=&rdquo;no&rdquo;
+frameborder=&rdquo;0&rdquo; height=&rdquo;600px&rdquo; width=&rdquo;100%&rdquo;&gt;</iframe>
+    ```</p>
 <p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json" target="_blank">Edit the calendar</a></p>
 <p>Modifications:</p>
 <ul>
@@ -963,7 +1089,8 @@
 <ol>
 <li>Place all required <code>.ics</code> files in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/assets/calendars">calendars</a> directory.</li>
 <li>Download the specification of the calendar. And add it to the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/assets/templates">templates</a> directory.</li>
-<li>Edit this file and add a section.</li>
+<li>Edit this file and add a section.
+```</li>
 </ol>
 
 
