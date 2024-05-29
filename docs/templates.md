@@ -14,11 +14,11 @@ description: "Play with a variety of Calendars for your own project."
 {% macro calendar_iframe(spec, width="100%", params="", id="") -%}
 
 <iframe class="open-web-calendar" id="{{id}}"
-style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-src="{{link.web}}/calendar.html?specification_url={{link.templates}}/{{spec}}&{{params}}"
-sandbox="allow-scripts allow-same-origin allow-top-navigation"
-allowTransparency="true" scrolling="no"
-frameborder="0" height="600px" width="{{width}}"></iframe>
+    style="background:url('https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="{{link.web}}/calendar.html?specification_url={{link.templates}}/{{spec}}&{{params}}"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="{{width}}"></iframe>
 
 {%- endmacro %}
 
