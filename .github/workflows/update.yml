@@ -32,6 +32,8 @@ jobs:
         run: tox -e docs -- build
       - name: Check status
         run: git status
+      - name: "Make sure that Weblate can use the translation files"
+        run: scripts/make-sure-weblate-can-use-the-translation-files.sh
       - name: Push updates translation files
         run: |
           git config --global user.name 'OWC Github Actions'
