@@ -189,12 +189,6 @@ msgstr ""
 msgid "In the **Settings** 🠚 **Translation**:"
 msgstr ""
 
-msgid "Check **Suggestion voting**"
-msgstr ""
-
-msgid "Set **Automatically accept suggestions** to `2`"
-msgstr ""
-
 msgid "Check **Allow translation propagation**"
 msgstr ""
 
@@ -235,6 +229,18 @@ msgstr ""
 
 msgid "Restrict width and height to 2000px:       wzxhzdk:4"
 msgstr ""
+
+msgid "**Un**check **Suggestion voting**"
+msgstr ""
+
+msgid "Set **Automatically accept suggestions** to `0`"
+msgstr ""
+
+#~ msgid "Check **Suggestion voting**"
+#~ msgstr ""
+
+#~ msgid "Set **Automatically accept suggestions** to `2`"
+#~ msgstr ""
 
 #~ msgid "Language filter: `^(?!(en)$)[^.]+$` - excludes `en`"
 #~ msgstr ""
