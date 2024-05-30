@@ -1,97 +1,134 @@
-#
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-31 18:26+0200\n"
+"PO-Revision-Date: 2024-05-31 16:26+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-api/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
+
+#
 
 msgid ""
 "The API of the Open Web Calendar allows more customization than the "
 "configuration page."
 msgstr ""
+"Die API des offenen Web-Kalenders erlaubt mehr Anpassungen als die "
+"Konfigurationsseite anzeigt."
 
 msgid "API"
-msgstr ""
+msgstr "API"
 
 msgid ""
 "Generally, the Open Web Calendar is there to be used without restriction. "
 "You can use this API to customize the calendar on the fly."
 msgstr ""
+"Generell ist der offene Web-Kalender da, um ohne Enschränkung genutzt zu "
+"werden. Die API kann genutzt werden, um Kalender dynamisch anzupassen."
 
 msgid "This section can be of use if one of these applies:"
-msgstr ""
+msgstr "Dieses Dokument ist von Belang, wenn davon was zutrifft:"
 
 msgid "You are a web developer who wants to embed the Open Web Calendar."
 msgstr ""
+"Du bist ein Web-Entwickler, der den offenen Web-Kalender einbauen möchte."
 
 msgid ""
 "You want to exploit the full flexibility, not just what is exposed on the "
 "configuration page."
 msgstr ""
+"Du möchtest die volle Flexibilität, nicht nur das, was mit der "
+"Konfigurationsseite möglich ist."
 
 msgid ""
 "You want to use JavaScript to dynamically generate the calendar design and "
 "options."
 msgstr ""
+"Du nutzt JavaScript, um dynamisch das Kalenderdesign und die Optionen "
+"anzupassen."
 
 msgid "You want to extend the functionality of the Open Web Calendar."
-msgstr ""
+msgstr "Du möchtest die Funktionalität des offenen Web-Kalenders erweitern."
 
 msgid ""
 "You want to use the Open Web Calendar as a proxy to request JSON events for "
 "your self-made event feed."
 msgstr ""
+"Du möchtest den offenen Web-Kalender als Proxy benutzen, um JSON-Daten zu "
+"Terminen selbst anzuzeigen."
 
 msgid "Endpoints"
-msgstr ""
+msgstr "Endpunkte"
 
 msgid "The basic parameters are the same at these endpoints:"
-msgstr ""
+msgstr "Diese Endpunkte benutzen die selben Parameter:"
 
 msgid "`/index.html` - edit the calendar"
-msgstr ""
+msgstr "`/index.html` - Editiere den Kalender"
 
 msgid "`/about.html` - view the about page"
-msgstr ""
+msgstr "`/about.html` - Zeige die Beschreibung des Kalenders an"
 
 msgid "`/calendar.html` - view the calendar"
-msgstr ""
+msgstr "`/calendar.html` - Zeige den Kalender an"
 
 msgid "`/calendar.spec` - download the specification"
-msgstr ""
+msgstr "`/calendar.spec` - Lade die Spezifikation herunter"
 
 msgid "`/calendar.ics` - subscribe to the ics file"
-msgstr ""
+msgstr "`/calendar.ics` - Lade die ICS-Kalenderdatei herunter"
 
 msgid ""
 "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
 " you CAN use this but you cannot be sure that the JSON schema remains the "
 "same. If you want that, add tests."
 msgstr ""
+"`/calendar.events.json` - FLEXIBEL - hole die Termine als JSON. Bitte wisse, "
+"dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-"
+"Schema so bleibt. Wenn du das willst, füge neue Tests hinzu."
 
 msgid "Additional parameters are required:"
-msgstr ""
+msgstr "Zusätzliche Parameter sind nötig:"
 
 msgid "`timezone=UTC` - the timezone that you need to display the events in"
-msgstr ""
+msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"
 
 msgid ""
 "`from=YYYY-MM-DD` - the start of the period in which events happen "
 "(inclusive)"
 msgstr ""
+"`from=YYYY-MM-DD` - der Start des Zeitabschnitts, der angezeit werden soll "
+"(eingeschlossen)"
 
 msgid ""
 "`to=YYYY-MM-DD` - the end of the period in which events happen (exclusive)"
 msgstr ""
+"`to=YYYY-MM-DD` - Das Ende des Zeitabschnitts, in dem Termine angezeigt "
+"werden sollen (nicht eingeschlossen)"
 
 msgid "Parameters"
-msgstr ""
+msgstr "Parameter"
 
 msgid ""
 "All configuration parameters are described sufficiently in the "
 "[default_specification]. That is the reference. E.g. if you find the "
 "parameter `title` in the [default_specification], you have several options:"
 msgstr ""
+"Alle Konfigurationsparameter sind ausreichend in der [default_specification] "
+"beschrieben. Das ist die Referenz. Z.B. wenn Du den Parameter `title` in der "
+"[default_specification] findest, dann hast du mehrere Optionen:"
 
 msgid "Adding Parameters"
-msgstr ""
+msgstr "Parameter hinzufügen"
 
 msgid "If you add a new parameter as a developer,"
 msgstr ""
