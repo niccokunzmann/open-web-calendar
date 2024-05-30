@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_nxj667ry/es/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_q3uy280i/es/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_nxj667ry/es/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_q3uy280i/es/host/configure/index.png" >
       
     
     
@@ -821,9 +821,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ssrf-protection-with-a-proxy-server" class="md-nav__link">
+  <a href="#proteccion-ssrf-a-traves-de-un-proxy" class="md-nav__link">
     <span class="md-ellipsis">
-      SSRF Protection with a Proxy Server
+      Protección SSRF a través de un proxy
     </span>
   </a>
   
@@ -902,7 +902,7 @@
 </ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Enlace permanente">&para;</a></h3>
 <p>por defecto <code>4</code> , solo para el contenedor Docker</p>
-<p>The number of parallel workers to handle requests.</p>
+<p>El número de trabajadores paralelos para gestionar las peticiones.</p>
 <p>Ejemplos:</p>
 <ul>
 <li>Utilice sólo un trabajador: <code>WORKERS=1</code></li>
@@ -915,23 +915,23 @@
 <li>Actualización rápida: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
 </ul>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Enlace permanente">&para;</a></h3>
-<p>default <code>true</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>por defecto los valores <code>true</code>, <code>true</code> o <code>false</code>, siempre <code>false</code> en el contenedor Docker</p>
 <p>Establecer el indicador de depuración para la aplicación.</p>
 <h3 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Enlace permanente">&para;</a></h3>
-<p>El Calendario web abierto utiliza bibliotecas cuyo comportamiento se puede personalizar aún más.</p>
+<p>Open Web Calendar utiliza bibliotecas cuyo comportamiento se puede personalizar aún más.</p>
 <ul>
-<li><strong>Flask</strong> has <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more environment variables</a></strong> available to configure how the application serves content.</li>
+<li><strong>Flask</strong> tiene <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">más variables de entorno</a></strong> disponibles para configurar cómo la aplicación entrega el contenido.</li>
 <li>** Peticiones** se utiliza para obtener el <code>.ics</code> archivos. Puede <a href="#ssrf-protection-with-a-proxy-server">configurar un proxy</a>.</li>
 </ul>
-<h3 id="ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server<a class="headerlink" href="#ssrf-protection-with-a-proxy-server" title="Enlace permanente">&para;</a></h3>
-<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calender, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
+<h3 id="proteccion-ssrf-a-traves-de-un-proxy">Protección SSRF a través de un proxy<a class="headerlink" href="#proteccion-ssrf-a-traves-de-un-proxy" title="Enlace permanente">&para;</a></h3>
+<p>El Calendario web abierto puede utilizarse para acceder a la red local detrás de un cortafuegos, véase <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Edición 250</a>. Este acceso libre está pensado para mostrar calendarios de todas partes. Dado que el Open Web Calender utiliza <code>peticiones</code>, puede utilizar un proxy como se describe en la <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies">documentación de las<code>peticiones</code></a>. El proxy puede entonces manejar el filtrado.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
 </code></pre></div>
 <p>Ver también:</p>
 <ul>
-<li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF using a Tor proxy</a></li>
+<li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevenir SSRF usando un proxy Tor</a></li>
 </ul>
 
 
