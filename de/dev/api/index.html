@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Füge einen hoch-anpassbaren Webkalender in Deine Webseite ein, auf der Basis von ICS-Links">
+        <meta name="description" content="Die API des offenen Web-Kalenders erlaubt mehr Anpassungen als die Konfigurationsseite anzeigt.">
       
       
       
@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_o0ynx8yv/de/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_43gnv99n/de/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_o0ynx8yv/de/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_43gnv99n/de/dev/api/index.png" >
       
     
     
@@ -748,27 +748,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#endpoints" class="md-nav__link">
+  <a href="#endpunkte" class="md-nav__link">
     <span class="md-ellipsis">
-      Endpoints
+      Endpunkte
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#parameter" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters
+      Parameter
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-parameters" class="md-nav__link">
+  <a href="#parameter-hinzufugen" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Parameters
+      Parameter hinzufügen
     </span>
   </a>
   
@@ -834,33 +834,33 @@
 
 
 <h1 id="api">API<a class="headerlink" href="#api" title="Fester Link">&para;</a></h1>
-<p>Generally, the Open Web Calendar is there to be used without restriction. You can use this API to customize the calendar on the fly.</p>
-<p>This section can be of use if one of these applies:</p>
+<p>Generell ist der offene Web-Kalender da, um ohne Enschränkung genutzt zu werden. Die API kann genutzt werden, um Kalender dynamisch anzupassen.</p>
+<p>Dieses Dokument ist von Belang, wenn davon was zutrifft:</p>
 <ul>
-<li>You are a web developer who wants to embed the Open Web Calendar.</li>
-<li>You want to exploit the full flexibility, not just what is exposed on the configuration page.</li>
-<li>You want to use JavaScript to dynamically generate the calendar design and options.</li>
-<li>You want to extend the functionality of the Open Web Calendar.</li>
-<li>You want to use the Open Web Calendar as a proxy to request JSON events for your self-made event feed.</li>
+<li>Du bist ein Web-Entwickler, der den offenen Web-Kalender einbauen möchte.</li>
+<li>Du möchtest die volle Flexibilität, nicht nur das, was mit der Konfigurationsseite möglich ist.</li>
+<li>Du nutzt JavaScript, um dynamisch das Kalenderdesign und die Optionen anzupassen.</li>
+<li>Du möchtest die Funktionalität des offenen Web-Kalenders erweitern.</li>
+<li>Du möchtest den offenen Web-Kalender als Proxy benutzen, um JSON-Daten zu Terminen selbst anzuzeigen.</li>
 </ul>
-<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Fester Link">&para;</a></h2>
-<p>The basic parameters are the same at these endpoints:</p>
+<h2 id="endpunkte">Endpunkte<a class="headerlink" href="#endpunkte" title="Fester Link">&para;</a></h2>
+<p>Diese Endpunkte benutzen die selben Parameter:</p>
 <ul>
-<li><code>/index.html</code> - edit the calendar</li>
-<li><code>/about.html</code> - view the about page</li>
-<li><code>/calendar.html</code> - view the calendar</li>
-<li><code>/calendar.spec</code> - download the specification</li>
-<li><code>/calendar.ics</code> - subscribe to the ics file</li>
-<li><code>/calendar.events.json</code> - FLEXIBLE - get the events as JSON Please note that you CAN use this but you cannot be sure that the JSON schema remains the same. If you want that, add tests.</li>
+<li><code>/index.html</code> - Editiere den Kalender</li>
+<li><code>/about.html</code> - Zeige die Beschreibung des Kalenders an</li>
+<li><code>/calendar.html</code> - Zeige den Kalender an</li>
+<li><code>/calendar.spec</code> - Lade die Spezifikation herunter</li>
+<li><code>/calendar.ics</code> - Lade die ICS-Kalenderdatei herunter</li>
+<li><code>/calendar.events.json</code> - FLEXIBEL - hole die Termine als JSON. Bitte wisse, dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-Schema so bleibt. Wenn du das willst, füge neue Tests hinzu.</li>
 </ul>
-<p>Additional parameters are required:</p>
+<p>Zusätzliche Parameter sind nötig:</p>
 <ul>
-<li><code>timezone=UTC</code> - the timezone that you need to display the events in</li>
-<li><code>from=YYYY-MM-DD</code> - the start of the period in which events happen (inclusive)</li>
-<li><code>to=YYYY-MM-DD</code> - the end of the period in which events happen (exclusive)</li>
+<li><code>timezone=UTC</code> - die Zeitzone, in der die Termine angezeigt werden</li>
+<li><code>from=YYYY-MM-DD</code> - der Start des Zeitabschnitts, der angezeit werden soll (eingeschlossen)</li>
+<li><code>to=YYYY-MM-DD</code> - Das Ende des Zeitabschnitts, in dem Termine angezeigt werden sollen (nicht eingeschlossen)</li>
 </ul>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Fester Link">&para;</a></h2>
-<p>All configuration parameters are described sufficiently in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a>. That is the reference. E.g. if you find the parameter <code>title</code> in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a>, you have several options:</p>
+<h2 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Fester Link">&para;</a></h2>
+<p>Alle Konfigurationsparameter sind ausreichend in der <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a> beschrieben. Das ist die Referenz. Z.B. wenn Du den Parameter <code>title</code> in der <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a> findest, dann hast du mehrere Optionen:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="query-parameter" name="__tabbed_1" type="radio" /><input id="yaml" name="__tabbed_1" type="radio" /><input id="json" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="query-parameter">Query Parameter</label><label for="yaml">YAML</label><label for="json">JSON</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -882,7 +882,7 @@
 </div>
 </div>
 </div>
-<h2 id="adding-parameters">Adding Parameters<a class="headerlink" href="#adding-parameters" title="Fester Link">&para;</a></h2>
+<h2 id="parameter-hinzufugen">Parameter hinzufügen<a class="headerlink" href="#parameter-hinzufugen" title="Fester Link">&para;</a></h2>
 <p>If you add a new parameter as a developer,</p>
 <ul>
 <li>Add the parameter with a default value to the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></li>
