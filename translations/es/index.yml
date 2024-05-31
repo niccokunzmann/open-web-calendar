@@ -32,10 +32,10 @@ language-title: Idioma
 links-self: Abra el documento vinculado en el mismo marco en el que se hizo clic.
 skins-contrast-white: Contraste claro
 timezone-title: Zona horaria
-spec-host-html: Puede <a href="javascript:downloadJSONSpecification()">descargar esta
-  especificación</a> y colocarla en algún lugar de la web. De esta forma sigues teniendo
-  el control sobre la personalización del calendario después de haber compartido el
-  enlace, por ejemplo, en GitHub en un <a href="https://gist.github.com/">Gist</a>.
+spec-host-html: Puedes <a href="javascript:downloadJSONSpecification()">descargar
+  esta especificación</a> y colocarla en algún lugar de la web. De esta forma sigues
+  teniendo el control sobre la personalización del calendario después de haber compartido
+  el enlace, por ejemplo, en GitHub en un <a href="https://gist.github.com/">Gist</a>.
 calendar-code: 'Para insetar el calendario, utilice este código en su página web:'
 last-hour-title: Última hora
 links-title: Enlaces
@@ -49,9 +49,9 @@ skins-title: Diseños
 language-description: Puedes configurar el idioma del calendario.
 section-customization: Puede personalizar aún más el calendario.
 first-hour-description: 'Para cambiar la hora de inicio de la vista del calendario:'
-about: Open Web Calendar utiliza calendarios ICS/ICal en línea y los muestra en un
-  solo calendario. Puede utilizarlo con Nextcloud, Outlook, Google Calendar, Meetup
-  y otros sistemas de calendario que utilicen el estándar ICS.
+about: El Calendario web abierto utiliza calendarios ICS/ICal en línea y los muestra
+  en un solo calendario. Puede utilizarlo con Nextcloud, Outlook, Google Calendar,
+  Meetup y otros sistemas de calendario que utilicen el estándar ICS.
 links-description: Los eventos pueden tener ubicaciones y direcciones URL. Si inserta
   el calendario en una página web, puede elegir dónde se abre la página al hacer clic
   en el enlace.
