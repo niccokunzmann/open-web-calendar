@@ -1,29 +1,34 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# albanobattistella <albano_battistella@hotmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:51+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-06-01 20:34+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-common-translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
+"Incorpora un calendario web altamente personalizzabile nel tuo sito web "
+"utilizzando i collegamenti sorgente ICal"
 
 msgid "Open Web Calendar"
-msgstr ""
+msgstr "Apri Calendario Web"
 
 msgid "Permanent link"
-msgstr ""
+msgstr "Link permanente"
 
 #~ msgid "Translate"
 #~ msgstr ""
