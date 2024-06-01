@@ -962,17 +962,15 @@ You can use this API to customize the calendar on the fly.</p>
 <li><code>/calendar.html</code> - view the calendar</li>
 <li><code>/calendar.spec</code> - download the specification</li>
 <li><code>/calendar.ics</code> - subscribe to the ics file</li>
-<li>
-<p><code>/calendar.events.json</code> - FLEXIBLE - get the events as JSON<br />
+<li><code>/calendar.events.json</code> - FLEXIBLE - get the events as JSON<br />
     Please note that you CAN use this but you cannot be sure that the
-    JSON schema remains the same. If you want that, add tests.</p>
-<p>Additional parameters are required:</p>
+    JSON schema remains the same. If you want that, add tests.</li>
+</ul>
+<p>Additional parameters are required for <code>/calendar.events.json</code>:</p>
 <ul>
 <li><code>timezone=UTC</code> - the timezone that you need to display the events in</li>
 <li><code>from=YYYY-MM-DD</code> - the start of the period in which events happen (inclusive)</li>
 <li><code>to=YYYY-MM-DD</code> - the end of the period in which events happen (exclusive)</li>
-</ul>
-</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <p>All configuration parameters are described sufficiently in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a>.
