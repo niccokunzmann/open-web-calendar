@@ -61,18 +61,6 @@ msgid "`/calendar.ics` - subscribe to the ics file"
 msgstr ""
 
 msgid ""
-"`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
-" you CAN use this but you cannot be sure that the JSON schema remains the "
-"same. If you want that, add tests."
-msgstr ""
-
-msgid "Additional parameters are required:"
-msgstr ""
-
-msgid "`timezone=UTC` - the timezone that you need to display the events in"
-msgstr ""
-
-msgid ""
 "`from=YYYY-MM-DD` - the start of the period in which events happen "
 "(inclusive)"
 msgstr ""
@@ -211,12 +199,6 @@ msgstr ""
 "calendar/tree/master//default_specification.yml"
 
 msgid ""
-"**Query parameters** All parameters to the calendar url are put into the "
-"specification. The query parameters have the highest precedence. Examples:"
-"    ```txt    index.html?language=de calendar.html?title=CALENDAR    ```"
-msgstr ""
-
-msgid ""
 "**specification_url** If you specify this query parameter, the editor "
 "configuration is loaded from this url, too. Query parameters are still more "
 "important than what is written in this file. The source format can be YAML "
@@ -245,6 +227,33 @@ msgstr ""
 
 msgid "Change the title in a query parameter:"
 msgstr ""
+
+msgid ""
+"`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+" you CAN use this but you cannot be sure that the JSON schema remains the "
+"same. If you want that, add tests."
+msgstr ""
+
+msgid "Additional parameters are required for `/calendar.events.json`:"
+msgstr ""
+
+msgid "`timezone=UTC` - the timezone that you need to display the events in"
+msgstr ""
+
+msgid ""
+"**Query parameters** All parameters to the calendar url are put into the "
+"specification. The query parameters have the highest precedence. Examples:"
+"    ```txt    index.html?language=de calendar.html?title=CALENDAR    ```"
+msgstr ""
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests. Additional parameters are required:"
+#~ msgstr ""
+
+#~ msgid "Additional parameters are required:"
+#~ msgstr ""
 
 #~ msgid "=== YAML"
 #~ msgstr ""
@@ -299,4 +308,24 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "```json {   \"title\": \"calendar\" } ``` "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests. Additional parameters are required:"
+#~ "          - `timezone=UTC` - the timezone that you need to display the "
+#~ "events in"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Query parameters** All parameters to the calendar url are put into the "
+#~ "specification. The query parameters have the highest precedence. Examples:"
+#~ "    ```    index.html?language=de calendar.html?title=CALENDAR    ```"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Query parameters** All parameters to the calendar url are put into the "
+#~ "specification. The query parameters have the highest precedence. Examples:"
+#~ "         index.html?language=de      calendar.html?title=CALENDAR"
 #~ msgstr ""

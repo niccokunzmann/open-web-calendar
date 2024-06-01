@@ -34,11 +34,11 @@ The basic parameters are the same at these endpoints:
     Please note that you CAN use this but you cannot be sure that the
     JSON schema remains the same. If you want that, add tests.
 
-    Additional parameters are required:
+Additional parameters are required for `/calendar.events.json`:
 
-    - `timezone=UTC` - the timezone that you need to display the events in
-    - `from=YYYY-MM-DD` - the start of the period in which events happen (inclusive)
-    - `to=YYYY-MM-DD` - the end of the period in which events happen (exclusive)
+- `timezone=UTC` - the timezone that you need to display the events in
+- `from=YYYY-MM-DD` - the start of the period in which events happen (inclusive)
+- `to=YYYY-MM-DD` - the end of the period in which events happen (exclusive)
 
 ## Parameters
 

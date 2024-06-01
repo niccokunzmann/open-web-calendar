@@ -15,6 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
+#, mdpo-site_description
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
@@ -22,6 +23,7 @@ msgstr ""
 "Agregue un calendario web altamente personalizable a tu página web basado en"
 " enlaces ICal"
 
+#, mdpo-site_name
 msgid "Open Web Calendar"
 msgstr "Open Web Calendar"
 
@@ -282,3 +284,15 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edita este archivo y añade una sección."
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
+#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
+#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"

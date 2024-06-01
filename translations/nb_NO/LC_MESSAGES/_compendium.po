@@ -2,11 +2,13 @@
 msgid ""
 msgstr ""
 
+#, mdpo-site_description
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
 
+#, mdpo-site_name
 msgid "Open Web Calendar"
 msgstr ""
 
@@ -32,6 +34,15 @@ msgid ""
 "After you have set up your own server, you can [configure the "
 "behavior](../configure)."
 msgstr ""
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "The configuration of all calendars is rooted in the "

@@ -34,6 +34,15 @@ msgid ""
 msgstr ""
 
 #~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr ""
+
+#~ msgid ""
 #~ "The configuration of all calendars is rooted in the "
 #~ "[default_specification.yml]. All those values can be changed through a copy "
 #~ "of this file hosted on the web through the calendar parameter "
