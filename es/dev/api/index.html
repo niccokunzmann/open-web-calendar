@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="La API de Open Web Calendar permite más personalización que la página de configuración.">
+        <meta name="description" content="La API del Calendario web abierto permite más personalización que la página de configuración.">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>API - Open Web Calendar</title>
+        <title>API - Calendario web abierto</title>
       
     
     
@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_2wcg6y6m/es/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_vcyq4c8l/es/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_2wcg6y6m/es/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_vcyq4c8l/es/dev/api/index.png" >
       
     
     
@@ -834,14 +834,14 @@
 
 
 <h1 id="api">API<a class="headerlink" href="#api" title="Enlace permanente">&para;</a></h1>
-<p>Generalmente, Open Web Calendar está ahí para usarse sin restricciones. Puedes utilizar esta API para personalizar el calendario sobre la marcha.</p>
+<p>Generalmente, Calendario web abierto está ahí para usarse sin restricciones. Puedes utilizar esta API para personalizar el calendario sobre la marcha.</p>
 <p>Esta sección puede serle útil si se da alguna de estas circunstancias:</p>
 <ul>
 <li>Eres un desarrollador web que desea integrar el Calendario web abierto.</li>
 <li>Quieres explotar toda la flexibilidad, no solo lo que se expone en la página de configuración.</li>
 <li>Deseas utilizar JavaScript para generar dinámicamente el diseño y las opciones del calendario.</li>
-<li>Deseas ampliar las funciones de Open Web Calendar.</li>
-<li>Deseas utilizar Open Web Calendar como proxy para solicitar eventos JSON para tu fuente de eventos de creación propia.</li>
+<li>Deseas ampliar las funciones de Calendario web abierto.</li>
+<li>Deseas utilizar Calendario web abierto como proxy para solicitar eventos JSON para tu fuente de eventos de creación propia.</li>
 </ul>
 <h2 id="punto-final-de-comunicacion">Punto final de comunicación<a class="headerlink" href="#punto-final-de-comunicacion" title="Enlace permanente">&para;</a></h2>
 <p>Los parámetros básicos son los mismos en estos puntos finales:</p>
@@ -865,7 +865,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Cambiar el título en un parámetro de consulta:</p>
-<div class="highlight"><pre><span></span><code>/index.html?title<span class="o">=</span>calendar<span class="sb">`</span>
+<div class="highlight"><pre><span></span><code>/index.html?title<span class="o">=</span>calendar
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -893,10 +893,7 @@
 <h2 id="compilacion-de-la-especificacion">Compilación de la especificación<a class="headerlink" href="#compilacion-de-la-especificacion" title="Enlace permanente">&para;</a></h2>
 <p>Puedes cambiar el comportamiento y la apariencia del calendario en los parámetros. Estos son los lugares para especificar parámetros:</p>
 <ol>
-<li><strong>Query parameters</strong> Todos los parámetros de la url del calendario se introducen en la especificación. Los parámetros de consulta tienen la mayor precedencia. Ejemplos:
-   <code>txt
-   index.html?language=de
-calendar.html?title=CALENDAR</code></li>
+<li><strong>Parámetros de la consulta</strong> Todos los parámetros de la url del calendario se introducen en las especificaciones. Los parámetros de consulta tienen la mayor prioridad. Ejemplos:    <code>txt    index.html?language=de calendar.html?title=CALENDAR</code></li>
 <li>
 <p><strong>specification_url</strong> Si especificad este parámetro de consulta, la configuración del editor también se carga desde esta url. Los parámetros de consulta siguen siendo más importantes que lo que está escrito en este archivo. El formato fuente puede ser YAML o JSON. Ejemplos:
         calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml</p>
