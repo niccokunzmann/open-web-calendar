@@ -183,9 +183,6 @@ msgstr ""
 msgid "[**Read about Configuration**](../configure)."
 msgstr "[**Leer sobre configuración**](../configure)."
 
-msgid "Further Configuration"
-msgstr ""
-
 #~ msgid ""
 #~ "After you have set up your own server, you can [configure the behavior of "
 #~ "the server](../configure)."

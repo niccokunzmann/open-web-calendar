@@ -181,27 +181,6 @@ msgid ""
 "proxy](#ssrf-protection-with-a-proxy-server)."
 msgstr ""
 
-msgid "See also:"
-msgstr ""
-
-msgid "Further Configuration"
-msgstr ""
-
-#, fuzzy
-msgid ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-
-#, fuzzy
-msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-
-msgid "Permanent link"
-msgstr ""
-
 #~ msgid "Related:"
 #~ msgstr ""
 

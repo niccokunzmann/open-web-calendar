@@ -2,13 +2,11 @@
 msgid ""
 msgstr ""
 
-#, mdpo-site_description
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
 
-#, mdpo-site_name
 msgid "Open Web Calendar"
 msgstr ""
 

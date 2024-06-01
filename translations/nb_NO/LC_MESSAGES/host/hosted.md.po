@@ -59,24 +59,6 @@ msgstr ""
 "[How to configure all calendar parameters](../configure/#configuring-the-"
 "default-calendar)"
 
-msgid "See also:"
-msgstr ""
-
-#, fuzzy
-msgid ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-
-#, fuzzy
-msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-
-msgid "Permanent link"
-msgstr ""
-
 #~ msgid ""
 #~ "[How to configure all parameters](../configure/#configuring-the-default-"
 #~ "calendar)"

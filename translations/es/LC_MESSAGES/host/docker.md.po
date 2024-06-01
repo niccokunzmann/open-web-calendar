@@ -158,9 +158,6 @@ msgid ""
 "If needed change the port mapping and [environment variables](../configure)."
 msgstr ""
 
-msgid "Further Configuration"
-msgstr ""
-
 #~ msgid ""
 #~ "If needed change the port mapping and [environment "
 #~ "variables](../configure#environment-variables)."

@@ -497,21 +497,6 @@ msgid ""
 " Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88)."
 msgstr ""
 
-#, fuzzy
-msgid ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-
-#, fuzzy
-msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-
-msgid "Permanent link"
-msgstr ""
-
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
 

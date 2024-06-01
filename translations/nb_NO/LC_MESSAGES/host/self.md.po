@@ -139,29 +139,6 @@ msgstr ""
 msgid "[**Read about Configuration**](../configure)."
 msgstr ""
 
-msgid "Further Configuration"
-msgstr ""
-
-msgid ""
-"After you have set up your own server, you can [configure the "
-"behavior](../configure)."
-msgstr ""
-
-#, fuzzy
-msgid ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-
-#, fuzzy
-msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-
-msgid "Permanent link"
-msgstr ""
-
 #~ msgid ""
 #~ "After you have set up your own server, you can [configure the behavior of "
 #~ "the server](../configure)."
