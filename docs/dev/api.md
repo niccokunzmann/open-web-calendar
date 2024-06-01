@@ -52,7 +52,7 @@ you have several options:
     Change the title in a query parameter:
 
     ```sh
-    /index.html?title=calendar`
+    /index.html?title=calendar
     ```
 
 === "YAML"
