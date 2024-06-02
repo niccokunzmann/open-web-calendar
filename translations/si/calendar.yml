@@ -33,3 +33,7 @@ labels_date: "Datum"
 labels_description: "Opis"
 labels_week_agenda_tab: "Zadeva"
 language-en: "Slovenian"
+date_month_full_apr: අප්රේල්
+date_month_full_sep: September
+date_month_full_nov: නොවැම්බර්
+language: සිංහල
