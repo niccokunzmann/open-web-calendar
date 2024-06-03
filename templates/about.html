@@ -41,7 +41,7 @@ SPDX-License-Identifier: GPL-2.0-only
                     </select>
                     {{ html("timezone-browser") }}
                     <span class="timezone-of-browser"">{{ html("index.loading") }}</span>
-                  </li>
+                </li>
             </ul>
             <h2>{{ html("project-title") }}</h2>
             <p class="description">
@@ -50,6 +50,7 @@ SPDX-License-Identifier: GPL-2.0-only
             <ul>
                 <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>
                 <li><a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a></li>
+                <li><a href="{{ specification["privacy_policy"] | safe }}">{{ html("privacy-policy") }}</a></li>
             </ul>
             <h2>{{ html("license") }}</h2>
             <p>

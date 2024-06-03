@@ -213,6 +213,9 @@ contributing: "https://open-web-calendar.quelltext.eu/contributing/"
 ## This is a link to the translations page
 translate: "https://hosted.weblate.org/engage/open-web-calendar/"
 
+## This is a link to the privacy policy
+privacy_policy: "https://open-web-calendar.quelltext.eu/host/privacy-policy/"
+
 ###################### You will probably not change this. ######################
 ##
 ## The template is the file which shows the calendar.

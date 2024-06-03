@@ -22,7 +22,14 @@ source-code: "View the source code."
 # https://open-web-calendar.hosted.quelltext.eu/about.html#translate-improve
 improve: "Help improve the project and learn how to contribute."
 
+
 # This is the name of the project.
 # Translate this if it makes sense for your language.
 # https://open-web-calendar.hosted.quelltext.eu/
 project-name: "Open Web Calendar"
+
+
+# This is a link in the footer of the index and on the about page leading to the project's privacy policy.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-privacy-policy
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-privacy-policy
+privacy-policy: "Privacy Policy"
