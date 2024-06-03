@@ -29,15 +29,47 @@ Those which they do not override are affected.
 Not all values are exposed to the configuration page to be changed.
 Those values can still be changed in the [default_specification.yml] and the query parameters.
 
-You might want to change these values:
+You might want to change the following values.
 
-- `title`
-- `language`
-- `favicon`
-- `source_code` - if you made changes
-- `contributing` - if you want to redirect to contribute to your project
+### `title`
+
+The title of your website.
+
+### `language`
+
+This is the default language.
+You might want to change this to serve the configuration page better to a
+local audience.
+
+### `favicon`
+
+This is a link to the website icon.
+
+### `source_code`
+
+If you made changes, you are legally required to disclose them to visitors.
+Please adjust the link or contribute them back to the main project.
+
+### `contributing`
+
+If you want to redirect to contribute to your project.
+
+### `privacy_policy`
+
+If you host this service yourself, you can use the default [privacy policy][privacy-policy].
+
+If for some reason you decide to collect data i.e. in the HTTPS proxy
+or log IP-addresses, then you need to create your own privacy policy.
+You can link to the one of this project.
+
+### More Values
+
+There are loads more values that can be changed.
+Please refer to the [default_specification.yml].
+These values are all documented.
 
 [default_specification.yml]: https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml
+[privacy-policy]: ../privacy-policy
 
 See also:
 

@@ -59,7 +59,7 @@ theme:
     - announce.dismiss
     - navigation.footer
     - content.action.edit
-#    - navigation.instant
+    - navigation.instant
 #    - navigation.tracking
     - toc.follow
     - content.code.copy
@@ -218,6 +218,7 @@ nav:
     - dev/license.md
   - SECURITY.md
   - changelog.md
+  - host/privacy-policy.md
   - dunno.md
 
 # validation, see https://www.mkdocs.org/user-guide/configuration/#validation
