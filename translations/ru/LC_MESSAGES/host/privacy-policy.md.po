@@ -1,0 +1,46 @@
+# Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-03 17:45+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.13.0\n"
+
+#
+msgid "Open Web Calendar Privacy Policy"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar does not collect any personal information from "
+"visitors of the website."
+msgstr ""
+
+msgid ""
+"Calendars may contain personal information. For the purpose of serving the "
+"content fast, the calendar files are cached for a short while. As expected, "
+"content of calendars is only processed to display them as a website."
+msgstr ""
+
+msgid "Documentation Website"
+msgstr ""
+
+msgid ""
+"This website contains the project documentation. It is hosted on GitHub "
+"Pages. Their [Privacy Policy][privacy-policy] applies."
+msgstr ""
+
+#, fuzzy
+msgid ""
+"[privacy-policy]: https://docs.github.com/en/site-policy/privacy-policies/"
+msgstr ""
+"[privacy-policy]: https://docs.github.com/en/site-policy/privacy-policies/"
