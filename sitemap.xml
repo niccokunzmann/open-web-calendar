@@ -85,6 +85,12 @@
          <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/en/host/hosted/"/><xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/host/hosted/"/><xhtml:link rel="alternate" hreflang="es" href="https://open-web-calendar.quelltext.eu/es/host/hosted/"/><xhtml:link rel="alternate" hreflang="nb_NO" href="https://open-web-calendar.quelltext.eu/nb_NO/host/hosted/"/>
     </url>
     <url>
+         <loc>https://open-web-calendar.quelltext.eu/host/privacy-policy/.canonical</loc>
+         <lastmod>2024-06-03</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://open-web-calendar.quelltext.eu/en/host/privacy-policy/"/><xhtml:link rel="alternate" hreflang="de" href="https://open-web-calendar.quelltext.eu/de/host/privacy-policy/"/><xhtml:link rel="alternate" hreflang="es" href="https://open-web-calendar.quelltext.eu/es/host/privacy-policy/"/><xhtml:link rel="alternate" hreflang="nb_NO" href="https://open-web-calendar.quelltext.eu/nb_NO/host/privacy-policy/"/>
+    </url>
+    <url>
          <loc>https://open-web-calendar.quelltext.eu/host/self/.canonical</loc>
          <lastmod>2024-06-03</lastmod>
          <changefreq>daily</changefreq>
