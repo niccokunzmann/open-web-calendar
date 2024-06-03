@@ -13,6 +13,15 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+## v1.35
+
+- Add link to Privacy Policy.
+- Update dependencies
+- Improve Spanish by gallegonovato, German by Nicco Kunzmann, Sinhala by Dilitha Ransara, Norwegian Bokmål by Allan Nordhøy
+- Improve documentation, translate documentation to German and Spanish
+- Build documentation with Python 3.11
+- Update documentation languages automatically
+- Allow translating the documentation with Weblate
 
 ## v1.34
 
