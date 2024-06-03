@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_vcyq4c8l/es/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_w5lzq578/es/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_vcyq4c8l/es/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_w5lzq578/es/dev/api/index.png" >
       
     
     
@@ -853,7 +853,7 @@
 <li><code>/calendar.ics</code> - suscribirse al archivo ics</li>
 <li><code>/calendar.events.json</code> - FLEXIBLE - obtén los eventos como JSON Por favor, ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el esquema JSON siga siendo el mismo. Si quieres eso, añade tests.</li>
 </ul>
-<p>Additional parameters are required for <code>/calendar.events.json</code>:</p>
+<p>Parámetros adicionales requeridos para <code>/calendario.eventos.json</code> :</p>
 <ul>
 <li><code>timezone=UTC</code> - la zona horaria en la que debe mostrar los eventos</li>
 <li><code>from=YYYY-MM-DD</code> - el inicio del periodo en el que ocurren los eventos (inclusive)</li>
@@ -895,8 +895,7 @@
 <ol>
 <li><strong>Parámetros de la consulta</strong> Todos los parámetros de la url del calendario se introducen en las especificaciones. Los parámetros de consulta tienen la mayor prioridad. Ejemplos:    <code>txt    index.html?language=de calendar.html?title=CALENDAR</code></li>
 <li>
-<p><strong>specification_url</strong> Si especificad este parámetro de consulta, la configuración del editor también se carga desde esta url. Los parámetros de consulta siguen siendo más importantes que lo que está escrito en este archivo. El formato fuente puede ser YAML o JSON. Ejemplos:
-        calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml</p>
+<p><strong>specification_url</strong> Si especificas este parámetro de consulta, la configuración del editor también se carga desde esta url. Los parámetros de consulta siguen siendo más importantes que el archivo. El formato fuente puede ser YAML o JSON. Ejemplos:         calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml</p>
 </li>
 <li>
 <p><strong><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></strong> Este archivo contiene los parámetros por defecto. No deben estar codificados en el código fuente. Todos ellos están ahí. Los parámetros de consulta y la <code>specification_url</code> anulan estos valores.</p>
