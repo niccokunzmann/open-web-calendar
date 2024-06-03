@@ -1,31 +1,55 @@
-#
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-03 17:45+0200\n"
+"PO-Revision-Date: 2024-06-03 15:45+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-privacy-policy/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
+
+#
 
 msgid "Open Web Calendar Privacy Policy"
-msgstr ""
+msgstr "Datenschutzerklärung für den offenen Web-Kalender"
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Datenschutzerklärung"
 
 msgid ""
 "The Open Web Calendar does not collect any personal information from "
 "visitors of the website."
 msgstr ""
+"Der offene Web-Kalender speichert keine personenbezogenen Daten von "
+"Besuchern der Webseite."
 
 msgid ""
 "Calendars may contain personal information. For the purpose of serving the "
 "content fast, the calendar files are cached for a short while. As expected, "
 "content of calendars is only processed to display them as a website."
 msgstr ""
+"Kalender können personenbezogene Daten enthalten. Um den Kalender schnell "
+"anzuzeigen, werden die Kalenderdateien kurz zwischengespeichert. Wie "
+"erwartet, wird der Inhalt der Kalender nur verarbeitet, um ihn als Webseite "
+"anzuzeigen."
 
 msgid "Documentation Website"
-msgstr ""
+msgstr "Dokumentationsseite"
 
 msgid ""
 "This website contains the project documentation. It is hosted on GitHub "
 "Pages. Their [Privacy Policy][privacy-policy] applies."
 msgstr ""
+"Diese Webseite enthält die Projektdokumentation. Sie wird von GitHub Pages "
+"abgerufen, deren [Datenschutzerklätrung][privacy-policy] trifft zu."
 
 #, fuzzy
 msgid ""
