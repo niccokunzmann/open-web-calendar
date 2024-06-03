@@ -7,16 +7,13 @@ msgstr ""
 "POT-Creation-Date: 2024-06-03 17:45+0200\n"
 "PO-Revision-Date: 2024-06-03 15:45+0000\n"
 "Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/"
-"documentation-privacy-policy/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/documentation-privacy-policy/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: ENCODING\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
-
-#
 
 msgid "Open Web Calendar Privacy Policy"
 msgstr "Datenschutzerklärung für den offenen Web-Kalender"
