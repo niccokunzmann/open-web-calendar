@@ -497,6 +497,29 @@ msgid ""
 " Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88)."
 msgstr ""
 
+msgid "v1.35"
+msgstr ""
+
+msgid "Add link to Privacy Policy."
+msgstr ""
+
+msgid ""
+"Improve Spanish by gallegonovato, German by Nicco Kunzmann, Sinhala by "
+"Dilitha Ransara, Norwegian Bokmål by Allan Nordhøy"
+msgstr ""
+
+msgid "Improve documentation, translate documentation to German and Spanish"
+msgstr ""
+
+msgid "Build documentation with Python 3.11"
+msgstr ""
+
+msgid "Update documentation languages automatically"
+msgstr ""
+
+msgid "Allow translating the documentation with Weblate"
+msgstr ""
+
 #~ msgid ""
 #~ "This calendar is not styled but contains events that can be hosted behind a "
 #~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
