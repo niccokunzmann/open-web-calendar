@@ -520,6 +520,14 @@ msgstr ""
 msgid "Allow translating the documentation with Weblate"
 msgstr ""
 
+msgid "v1.36"
+msgstr ""
+
+msgid ""
+"Make event title a link to the event if it has a URL set, see [Issue "
+"388](https://github.com/niccokunzmann/open-web-calendar/issues/388)"
+msgstr ""
+
 #~ msgid ""
 #~ "This calendar is not styled but contains events that can be hosted behind a "
 #~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
