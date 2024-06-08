@@ -115,3 +115,8 @@ div.dhx_agenda_line > span {
         line-height: 3.75vw;
     }
 }
+
+/* The possible link in the title. */
+.dhx_cal_qi_tcontent a {
+  color: inherit;
+}

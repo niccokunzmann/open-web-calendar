@@ -1,0 +1,536 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:10@gancio.antroposofiachile.net
+SUMMARY:El Significado Espiritual de las Envolturas Embrionarias a la Luz d
+	e la Antroposofía
+DTSTAMP:20240601T195912Z
+DTSTART:20240601T200000Z
+DTEND:20240601T230000Z
+DESCRIPTION:por Carina Vaca Zeller
+URL:https://gancio.antroposofiachile.net/event/el-significado-espiritual-de
+	-las-envolturas-embrionarias-a-la-luz-de-la-antroposofia
+LOCATION:Colegio Micael - Simón González 8848\, La Reina\, Santiago de Chil
+	e
+STATUS:CONFIRMED
+CATEGORIES:medicina antroposófica,gestación
+X-ALT-DESC;FMTTYPE=text/html:<p>por Carina Vaca Zeller</p>
+END:VEVENT
+BEGIN:VEVENT
+UID:12@gancio.antroposofiachile.net
+SUMMARY:El Congreso de Navidad: Ciclo de Historia Universal
+DTSTAMP:20240601T195912Z
+DTSTART:20240608T133000Z
+DTEND:20240608T160000Z
+DESCRIPTION:Estudio\n\nPresentan: Tomás Lambertini y Pablo Porcel\n\nHabra
+	́ café y alimentos biodinámicos. Aporte económico voluntario.
+URL:https://gancio.antroposofiachile.net/event/el-congreso-de-navidad-ciclo
+	-de-historia-universal
+LOCATION:Colegio Micael - Simón González 8848\, La Reina\, Santiago de Chil
+	e
+STATUS:CONFIRMED
+CATEGORIES:
+X-ALT-DESC;FMTTYPE=text/html:<p>Estudio</p><p><em>Presentan: Tomás Lambert
+	ini </em>y <em>Pablo Porcel</em></p><p><em>Habrá café y alimentos biodin
+	ámicos. Aporte económico voluntario.</em></p>
+END:VEVENT
+BEGIN:VEVENT
+UID:13@gancio.antroposofiachile.net
+SUMMARY:El Ciclo de Historia Universal y su vínculo con el Congreso de Navi
+	dad
+DTSTAMP:20240601T195912Z
+DTSTART:20240615T133000Z
+DTEND:20240615T160000Z
+DESCRIPTION:Conversatorio sobre el tema\n\nHabrá café y alimentos biodina
+	́micos. Aporte económico voluntario.
+URL:https://gancio.antroposofiachile.net/event/el-ciclo-de-historia-univers
+	al-y-su-vinculo-con-el-congreso-de-navidad
+LOCATION:Colegio Micael - Simón González 8848\, La Reina\, Santiago de Chil
+	e
+STATUS:CONFIRMED
+CATEGORIES:
+X-ALT-DESC;FMTTYPE=text/html:<p>Conversatorio sobre el tema</p><p><em>Habra
+	́ café y alimentos biodinámicos. Aporte económico voluntario.</em></p>
+END:VEVENT
+BEGIN:VEVENT
+UID:11@gancio.antroposofiachile.net
+SUMMARY:Ponencias Virtuales: Cada Niño un Nuevo Acertijo
+DTSTAMP:20240601T195912Z
+DTSTART:20240625T120000Z
+DTEND:20240707T133000Z
+URL:https://gancio.antroposofiachile.net/event/ponencias-virtuales-cada-nin
+	o-un-nuevo-acertijo
+LOCATION:online - https://camphill.edu
+STATUS:CONFIRMED
+CATEGORIES:camphill,educación waldorf,pedagogía curativa
+END:VEVENT
+BEGIN:VEVENT
+UID:8@gancio.antroposofiachile.net
+SUMMARY:Desarrollo infantil y pantallas: Gabriela Krisam Romero
+DTSTAMP:20240601T195912Z
+DTSTART:20240628T230000Z
+DTEND:20240629T010000Z
+DESCRIPTION:Médica Escolar Antroposófica\, www.dragabrielakrisam.cl\n[http:
+	//www.dragabrielakrisam.cl]\n\nParte del Ciclo de Encuentros:\n\nhttps://e
+	ticadigital.cl/noticias/ciclo-de-encuentros-tecnologia-digital-antroposofi
+	a-y-desarrollo-humano/\n[https://eticadigital.cl/noticias/ciclo-de-encuent
+	ros-tecnologia-digital-antroposofia-y-desarrollo-humano/]
+URL:https://gancio.antroposofiachile.net/event/desarrollo-infantil-y-pantal
+	las-gabriela-krisam-romero
+LOCATION:Centro Venus - Riquelme 043\, Limache
+STATUS:CONFIRMED
+CATEGORIES:medicina antroposófica,tecnología digital,ética digital,antropos
+	ofía
+X-ALT-DESC;FMTTYPE=text/html:<p>Médica Escolar Antroposófica, <a target="_b
+	lank" href="http://www.dragabrielakrisam.cl">www.dragabrielakrisam.cl</a><
+	/p><p>Parte del Ciclo de Encuentros:</p><p><a target="_blank" href="https:
+	//eticadigital.cl/noticias/ciclo-de-encuentros-tecnologia-digital-antropos
+	ofia-y-desarrollo-humano/">https://eticadigital.cl/noticias/ciclo-de-encue
+	ntros-tecnologia-digital-antroposofia-y-desarrollo-humano/</a></p>
+END:VEVENT
+BEGIN:VEVENT
+UID:3@gancio.antroposofiachile.net
+SUMMARY:Retiro Antroposófico Latinoamericano
+DTSTAMP:20240601T195912Z
+DTSTART:20240705T060000Z
+DTEND:20240710T215900Z
+DESCRIPTION:RETIRO ANTROPOSÓFICO\n\nLATINOAMERICANO\n\ncon Joan Melé\n\nPre
+	sidente de la Fundación Dinero y Conciencia\n\nTe invitamos a renovar el i
+	mpulso del Congreso de Navidad\n\ncomo comunidad latinoamericana y llevarl
+	o al mundo\n\ncon coraje\, esperanza y alegría.\n\nQue para bien resulte..
+	.\n\nDel 5 al 10 de julio\, 2024\n\nMedellín\, Colombia\n\nRETIRO ANTROPOS
+	ÓFICO LATINOAMERICANO\n\ncon Joan Melé\n\nInspirados en el "Congreso de Na
+	vidad"\, y con la firme voluntad de contribuir a\nla\n\nconformación de un
+	a verdadera Comunidad Micaelita comprometida en la vida\n\nsocial en todos
+	 sus ámbitos\, convocamos este primer encuentro-retiro\n\nespecialmente di
+	rigido a personas que actualmente están trabajando en el mundo\n\nen los d
+	iversos ámbitos de la Antroposofía\, en especial a Maestros Waldorf\,\n\nM
+	édicos antroposóficos y Agricultores biodinámicos.\n\nAdemás de revivir ju
+	ntos los principios fundamentales de la Ciencia Espiritual\,\nque\n\npermi
+	ten conocer en profundidad al Ser Humano y abrirle el camino hacia su\n\np
+	ropia libertad\, compartiremos muchas actividades artísticas y sociales\,\
+	ndiálogos y\n\ntertulias. El principal objetivo de este retiro es "el encu
+	entro" de Yoes\, "el\ninterés por\n\nel otro ser humano"\, más allá de sim
+	patías y antipatías\, y\, en última instancia\,\nel\n\ncompromiso para cre
+	ar una Comunidad al servicio de Micael\, es decir\, al servicio\n\nde Cris
+	to.\n\nEs una llamada a salir de la zona de confort de la individualidad y
+	 del grupo de\n\nafinidad\, y a crear alianzas para actuar juntos en el mu
+	ndo. Ante el combate\n\nespiritual en el que ya estamos inmersos\, la conf
+	rontación con las entidades\n\nopositoras solo es posible si somos capaces
+	 de crear esa Comunidad y esas\n\nalianzas.\n\nQueremos "recordar" y "aviv
+	ar" el fuego del entusiasmo que se despertó en\n\nnosotros el día que por 
+	primera vez encontramos\, en una conferencia o en un\nlibro\,\n\na Rudolf 
+	Steiner y a la Antroposofía. Aspiramos a inflamar esa llama de\nPentecosté
+	s\n\nen cada uno de los participantes\, para que luego volvamos a nuestros
+	 lugares de\n\ntrabajo como nuevos apóstoles modernos\, aportando\, por me
+	dio de nuestra\n\nPalabra amorosa\, luz a las mentes y calor a los corazon
+	es de todos aquellos que\n\nviven en el dolor de una vida apartada del esp
+	íritu.\n\nCon el propósito de mostrar una idea aproximada de los contenido
+	s\, mostramos a\n\ncontinuación un programa orientativo de los temas que s
+	e trabajarán durante el\n\nencuentro:\n\n• Origen y evolución del Mundo y 
+	del Ser Humano: "El Plan divino".\n\n• Las Jerarquías Espirituales y su ac
+	tividad en el universo. La evolución desde\nel\n\npunto de vista de las Je
+	rarquías.\n\n• El misterio del Mal en la evolución del universo.\n\n• La "
+	Caída" y la "expulsión del Paraíso": significado de estas imágenes.\n\n• E
+	l largo camino de redención: la Gran Herida y el proceso de curación.\n\n•
+	 La estructuración de la conciencia: percibir y pensar.\n\n• De Jesús a Cr
+	isto: las etapas preparatorias y el Misterio del Gólgota.\n\n• Los Bodhisa
+	ttvas.\n\n• Los Grandes Iniciados: Manes\, Skythianos\, Buda\, Zarathustra
+	.\n\n• El concilio espiritual del siglo IV.\n\n• Christian Rosacruz y su m
+	isión.\n\n• El combate de Micael con el dragón: la caída de los espíritus 
+	de las\ntinieblas.\n\n• En el alba de una nueva era: Rudolf Steiner.\n\n• 
+	El camino de ejercitación interior. Diferencias entre la meditación orient
+	al y\nla\n\nmeditación moderna.\n\n• La reconstrucción del Templo perdido.
+	\n\n• El Primer Goetheanum.\n\n• La Trimembración Social y la primera Escu
+	ela Waldorf.\n\n• El Curso de Economía de 1922.\n\n• La celeste Sofía y el
+	 Ser Antroposofía.\n\n• El Congreso de Navidad y la fundación de los Nuevo
+	s Misterios.\n\n• La "meditación de la Piedra de Fundación".\n\n• El Karma
+	 de la Sociedad Antroposófica.\n\n• El Curso de Agricultura del año 1924.\
+	n\n• Fundamentos para una ampliación del arte de curar (1925)\n\n• El Post
+	humanismo y la encarnación del mal.\n\n• ¿Cuándo un acto es completamente 
+	libre? La Filosofía de la libertad.\n\n• La época de Micael y el nuevo aco
+	ntecimiento del Grial.\n\n• La Escuela Libre Superior para la Ciencia Espi
+	ritual: la Primera Clase.\n\nJoan Melé - profesor\n\nPresidente de la Fund
+	ación Dinero y Conciencia\, conferenciante\,\n\nconsultor y formador en va
+	lores. Lidera el proceso de desarrollo\n\nde la Banca Ética Latinoamerican
+	a.\n\nCon 44 años de experiencia profesional en el sector de la banca\, ha
+	 sido\nsubdirector\n\ngeneral de Triodos Bank en España\, miembro de su Co
+	mité Ejecutivo y\n\nvicepresidente de la Fundación Triodos. En enero de 20
+	15 renunció a su cargo\npara\n\npromover la Banca Ética en Latinoamérica y
+	 dedicarse de lleno a su labor de\ndifusión\n\nsobre temas de economía con
+	sciente\, empresas sostenibles y educación en valores.\n\nJoan Melé es aut
+	or de los siguientes libros:\n\nJoan Melé ha dado miles de conferencias y 
+	realizado cientos de talleres por toda\n\nLatinoamérica y Europa. También 
+	es lector de la primera clase en Barcelona.\n\nPuedes conocer a Joan Melé 
+	en un evento empresarial en 2017 - Ver video (20’)\n\nEl segundo video es 
+	una charla online titulada "El Ser Antroposofía y la\nTrimembración\n\nSoc
+	ial” del 2021 y sirve para adentrarse en los temas del retiro - Ver video\
+	n\nGabriela Henke - arte\n\nEx alumna Waldorf y más de 30 años de experien
+	cia docente de arte\n\nen escuela y seminario Waldorf de Argentina. Artete
+	rapeuta y pintora\n\nformada en la escuela de Bellas Artes. Realizó una cl
+	ínica en la\n\nneueKUNSTschule de Basilea\, Suiza\, y expuso en el Goethea
+	num.\n\nLibertad Aguilar - euritmia\n\nPosgrado en Euritmia Artística en "
+	Spring Valley" en NY. Maestría en\n\nArtes con énfasis en Euritmia Terapéu
+	tica en la "Universidad Alanus"\n\nen Bonn. Candidata al Doctorado en Educ
+	ación de la línea Estudios\n\nInterculturales de la Universidad de Antioqu
+	ia.\n\nJuan Bottero - dinámicas sociales\n\nResponsable de Ecosistema de l
+	a Banca Ética Latinoamericana. Ex\n\nalumno Waldorf\, licenciado en sociol
+	ogía (UBA)\, colaborador de la\n\nSección de Ciencias Sociales del Goethea
+	num.\n\nNathaly Caratar - canto\n\nMaestra en música\, participó en el sem
+	inario–taller: “Lúdica y\n\ndidáctica de la clase de música en la escuela 
+	Waldorf”\, participó del\n\nseminario de maestros Waldorf del Colegio Wald
+	orf Isolda Echavarría\n\ny actualmente cursa último año de Músico Terapia 
+	en IPMT.\n\nAstrid Hincapié - co-organizadora\n\nRectora del Colegio Waldo
+	rf Isolda Echavarría. Administradora de\n\nEmpresas de la Universidad de A
+	ntioquia. Realizó el seminario de\n\npedagogía Waldorf del Colegio Waldorf
+	 Isolda Echavarría.\n\nActualmente se encuentra cursando pedagogía de Emer
+	gencia.\n\nEscuela Waldorf Isolda Echavarría - Medellín\, CO\n\nEn la mism
+	a escuela se dará las conferencias\, talleres\, la alimentación y la\nposi
+	bilidad\n\nde dormir con colchones en el piso sin costo extra.\n\nSi desea
+	 tener información sobre posibles hospedajes cerca de la escuela o mas\n\n
+	detalle sobre el hospedaje en la escuela\, puedes contactarnos y consultar
+	.\n\nFechas\n\nComenzaremos el viernes 5/7 con una recepción a las 15:00 y
+	 la primer\nconferencia\n\na las 18:00. Terminaremos el miércoles 10/7 ant
+	es del mediodía.\n\nPrecio\n\n300 USD por persona (incluye alojamiento en 
+	la escuela y alimentación).\n\n250 USD si se paga antes del 30 de abril.\n
+	\n*Importante: Cupos limitados. Si no se llega a un numero mínimo para el 
+	31 de\n\nmayo se anula.\n\n\n\nContacto: comunicaciones@waldorfisolda.edu.
+	co / Teléfono: 604 4031020
+URL:https://gancio.antroposofiachile.net/event/retiro-antroposofico-latinoa
+	mericano
+LOCATION:Medellín\, Colombia - Escuela Waldorf Isolda Echavarría
+STATUS:CONFIRMED
+CATEGORIES:retiro
+X-ALT-DESC;FMTTYPE=text/html:<p>RETIRO ANTROPOSÓFICO</p><p>LATINOAMERICANO<
+	/p><p>con Joan Melé</p><p>Presidente de la Fundación Dinero y Conciencia</
+	p><p>Te invitamos a renovar el impulso del Congreso de Navidad</p><p>como 
+	comunidad latinoamericana y llevarlo al mundo</p><p>con coraje, esperanza 
+	y alegría.</p><p>Que para bien resulte...</p><p>Del 5 al 10 de julio, 2024
+	</p><p>Medellín, Colombia</p><p>RETIRO ANTROPOSÓFICO LATINOAMERICANO</p><p
+	>con Joan Melé</p><p>Inspirados en el "Congreso de Navidad", y con la firm
+	e voluntad de contribuir a la</p><p>conformación de una verdadera Comunida
+	d Micaelita comprometida en la vida</p><p>social en todos sus ámbitos, con
+	vocamos este primer encuentro-retiro</p><p>especialmente dirigido a person
+	as que actualmente están trabajando en el mundo</p><p>en los diversos ámbi
+	tos de la Antroposofía, en especial a Maestros Waldorf,</p><p>Médicos antr
+	oposóficos y Agricultores biodinámicos.</p><p>Además de revivir juntos los
+	 principios fundamentales de la Ciencia Espiritual, que</p><p>permiten con
+	ocer en profundidad al Ser Humano y abrirle el camino hacia su</p><p>propi
+	a libertad, compartiremos muchas actividades artísticas y sociales, diálog
+	os y</p><p>tertulias. El principal objetivo de este retiro es "el encuentr
+	o" de Yoes, "el interés por</p><p>el otro ser humano", más allá de simpatí
+	as y antipatías, y, en última instancia, el</p><p>compromiso para crear un
+	a Comunidad al servicio de Micael, es decir, al servicio</p><p>de Cristo.<
+	/p><p>Es una llamada a salir de la zona de confort de la individualidad y 
+	del grupo de</p><p>afinidad, y a crear alianzas para actuar juntos en el m
+	undo. Ante el combate</p><p>espiritual en el que ya estamos inmersos, la c
+	onfrontación con las entidades</p><p>opositoras solo es posible si somos c
+	apaces de crear esa Comunidad y esas</p><p>alianzas.</p><p>Queremos "recor
+	dar" y "avivar" el fuego del entusiasmo que se despertó en</p><p>nosotros 
+	el día que por primera vez encontramos, en una conferencia o en un libro,<
+	/p><p>a Rudolf Steiner y a la Antroposofía. Aspiramos a inflamar esa llama
+	 de Pentecostés</p><p>en cada uno de los participantes, para que luego vol
+	vamos a nuestros lugares de</p><p>trabajo como nuevos apóstoles modernos, 
+	aportando, por medio de nuestra</p><p>Palabra amorosa, luz a las mentes y 
+	calor a los corazones de todos aquellos que</p><p>viven en el dolor de una
+	 vida apartada del espíritu.</p><p>Con el propósito de mostrar una idea ap
+	roximada de los contenidos, mostramos a</p><p>continuación un programa ori
+	entativo de los temas que se trabajarán durante el</p><p>encuentro:</p><p>
+	• Origen y evolución del Mundo y del Ser Humano: "El Plan divino".</p><p>•
+	 Las Jerarquías Espirituales y su actividad en el universo. La evolución d
+	esde el</p><p>punto de vista de las Jerarquías.</p><p>• El misterio del Ma
+	l en la evolución del universo.</p><p>• La "Caída" y la "expulsión del Par
+	aíso": significado de estas imágenes.</p><p>• El largo camino de redención
+	: la Gran Herida y el proceso de curación.</p><p>• La estructuración de la
+	 conciencia: percibir y pensar.</p><p>• De Jesús a Cristo: las etapas prep
+	aratorias y el Misterio del Gólgota.</p><p>• Los Bodhisattvas.</p><p>• Los
+	 Grandes Iniciados: Manes, Skythianos, Buda, Zarathustra.</p><p>• El conci
+	lio espiritual del siglo IV.</p><p>• Christian Rosacruz y su misión.</p><p
+	>• El combate de Micael con el dragón: la caída de los espíritus de las ti
+	nieblas.</p><p>• En el alba de una nueva era: Rudolf Steiner.</p><p>• El c
+	amino de ejercitación interior. Diferencias entre la meditación oriental y
+	 la</p><p>meditación moderna.</p><p>• La reconstrucción del Templo perdido
+	.</p><p>• El Primer Goetheanum.</p><p>• La Trimembración Social y la prime
+	ra Escuela Waldorf.</p><p>• El Curso de Economía de 1922.</p><p>• La celes
+	te Sofía y el Ser Antroposofía.</p><p>• El Congreso de Navidad y la fundac
+	ión de los Nuevos Misterios.</p><p>• La "meditación de la Piedra de Fundac
+	ión".</p><p>• El Karma de la Sociedad Antroposófica.</p><p>• El Curso de A
+	gricultura del año 1924.</p><p>• Fundamentos para una ampliación del arte 
+	de curar (1925)</p><p>• El Posthumanismo y la encarnación del mal.</p><p>•
+	 ¿Cuándo un acto es completamente libre? La Filosofía de la libertad.</p><
+	p>• La época de Micael y el nuevo acontecimiento del Grial.</p><p>• La Esc
+	uela Libre Superior para la Ciencia Espiritual: la Primera Clase.</p><p>Jo
+	an Melé - profesor</p><p>Presidente de la Fundación Dinero y Conciencia, c
+	onferenciante,</p><p>consultor y formador en valores. Lidera el proceso de
+	 desarrollo</p><p>de la Banca Ética Latinoamericana.</p><p>Con 44 años de 
+	experiencia profesional en el sector de la banca, ha sido subdirector</p><
+	p>general de Triodos Bank en España, miembro de su Comité Ejecutivo y</p><
+	p>vicepresidente de la Fundación Triodos. En enero de 2015 renunció a su c
+	argo para</p><p>promover la Banca Ética en Latinoamérica y dedicarse de ll
+	eno a su labor de difusión</p><p>sobre temas de economía consciente, empre
+	sas sostenibles y educación en valores.</p><p>Joan Melé es autor de los si
+	guientes libros:</p><p>Joan Melé ha dado miles de conferencias y realizado
+	 cientos de talleres por toda</p><p>Latinoamérica y Europa. También es lec
+	tor de la primera clase en Barcelona.</p><p>Puedes conocer a Joan Melé en 
+	un evento empresarial en 2017 - Ver video (20’)</p><p>El segundo video es 
+	una charla online titulada "El Ser Antroposofía y la Trimembración</p><p>S
+	ocial” del 2021 y sirve para adentrarse en los temas del retiro - Ver vide
+	o</p><p>Gabriela Henke - arte</p><p>Ex alumna Waldorf y más de 30 años de 
+	experiencia docente de arte</p><p>en escuela y seminario Waldorf de Argent
+	ina. Arteterapeuta y pintora</p><p>formada en la escuela de Bellas Artes. 
+	Realizó una clínica en la</p><p>neueKUNSTschule de Basilea, Suiza, y expus
+	o en el Goetheanum.</p><p>Libertad Aguilar - euritmia</p><p>Posgrado en Eu
+	ritmia Artística en "Spring Valley" en NY. Maestría en</p><p>Artes con énf
+	asis en Euritmia Terapéutica en la "Universidad Alanus"</p><p>en Bonn. Can
+	didata al Doctorado en Educación de la línea Estudios</p><p>Interculturale
+	s de la Universidad de Antioquia.</p><p>Juan Bottero - dinámicas sociales<
+	/p><p>Responsable de Ecosistema de la Banca Ética Latinoamericana. Ex</p><
+	p>alumno Waldorf, licenciado en sociología (UBA), colaborador de la</p><p>
+	Sección de Ciencias Sociales del Goetheanum.</p><p>Nathaly Caratar - canto
+	</p><p>Maestra en música, participó en el seminario–taller: “Lúdica y</p><
+	p>didáctica de la clase de música en la escuela Waldorf”, participó del</p
+	><p>seminario de maestros Waldorf del Colegio Waldorf Isolda Echavarría</p
+	><p>y actualmente cursa último año de Músico Terapia en IPMT.</p><p>Astrid
+	 Hincapié - co-organizadora</p><p>Rectora del Colegio Waldorf Isolda Echav
+	arría. Administradora de</p><p>Empresas de la Universidad de Antioquia. Re
+	alizó el seminario de</p><p>pedagogía Waldorf del Colegio Waldorf Isolda E
+	chavarría.</p><p>Actualmente se encuentra cursando pedagogía de Emergencia
+	.</p><p>Escuela Waldorf Isolda Echavarría - Medellín, CO</p><p>En la misma
+	 escuela se dará las conferencias, talleres, la alimentación y la posibili
+	dad</p><p>de dormir con colchones en el piso sin costo extra.</p><p>Si des
+	ea tener información sobre posibles hospedajes cerca de la escuela o mas</
+	p><p>detalle sobre el hospedaje en la escuela, puedes contactarnos y consu
+	ltar.</p><p>Fechas</p><p>Comenzaremos el viernes 5/7 con una recepción a l
+	as 15:00 y la primer conferencia</p><p>a las 18:00. Terminaremos el miérco
+	les 10/7 antes del mediodía.</p><p>Precio</p><p>300 USD por persona (inclu
+	ye alojamiento en la escuela y alimentación).</p><p>250 USD si se paga ant
+	es del 30 de abril.</p><p>*Importante: Cupos limitados. Si no se llega a u
+	n numero mínimo para el 31 de</p><p>mayo se anula.</p><p></p><p>Contacto: 
+	comunicaciones@waldorfisolda.edu.co / Teléfono: 604 4031020</p>
+END:VEVENT
+BEGIN:VEVENT
+UID:9@gancio.antroposofiachile.net
+SUMMARY:V congreso Iberoamericano Madres y Padres Waldorf
+DTSTAMP:20240601T195912Z
+DTSTART:20240721T120000Z
+DTEND:20240726T230000Z
+URL:https://gancio.antroposofiachile.net/event/v-congreso-iberoamericano-ma
+	dres-y-padres-waldorf
+LOCATION:Colegio Micael - Simón González 8848\, La Reina\, Santiago de Chil
+	e
+STATUS:CONFIRMED
+CATEGORIES:educación waldorf,congreso
+END:VEVENT
+BEGIN:VEVENT
+UID:2@gancio.antroposofiachile.net
+SUMMARY:Taller de Euritmia
+DTSTAMP:20240601T195912Z
+DTSTART:20240730T220000Z
+DESCRIPTION:Del Otro Lado Euritmia\n\ndelotroladoeuritmia@gmail.com\n\n2024
+	\n\nEstimada Comunidad Educativa:\n\nSomos Camilo Bravo Lizana y Eduardo V
+	illarroel Aguirre\, profesores y maestros\n\nWaldorf\, que viajamos a Arge
+	ntina con el sueño de estudiar en la única escuela\n\ngratuita de Euritmia
+	 en el mundo. Pasados cinco años y concluida la formación\n\nacadémica nos
+	 encontramos en la última etapa de este proceso\, donde tenemos\n\nque via
+	jar a Brasil a realizar una residencia artística de dos meses\, lo que\nco
+	nlleva\n\nun costo que debe ser solventado por nosotros. La extensa jornad
+	a de preparación\n\ny permanencia de este proceso de formación impedirá qu
+	e podamos trabajar y\n\ngenerar dinero para costear lo que se requiere. ¿Q
+	ué es lo que se requiere?\nPasajes\n\na Brasil\, alojamiento\, comida\, es
+	pacio para ensayar\, traslados dentro de Brasil\,\n\nvestuarios\, además d
+	e honorarios de 4 profesores de euritmia y un músico.\n\nTeniendo en cuent
+	a la importancia y la necesidad de esta disciplina en proyectos\ne\n\nimpu
+	lsos antroposóficos\, es que nos encontramos con el fuerte deseo de expand
+	ir\n\nlo aprendido y compartirlo de una forma cercana y práctica. Creemos 
+	fuertemente\n\nque el desarrollo de este nuevo arte y que el futuro lengua
+	je de nuestra\nsociedad\n\nserá a través del movimiento\, es por esto que\
+	, poniendo semillas donde exista\n\ntierra fértil\, las comunidades podrán
+	 establecer y fortalecer los motivos y\n\npropósitos que encienden el cami
+	no antroposófico.\n\nHemos aprendido a través de la pedagogía Waldorf que 
+	toda enseñanza está llena\n\nde imágenes bellas y verdaderas\, entendiendo
+	 con esto la práctica pedagógica\n\ncomo un desarrollo salutogénico para e
+	l futuro. Si enfatizamos en el desarrollo\ny\n\nfortalecimiento del camino
+	 interior del maestro y la maestra\, seremos capaces de\n\ndar un paso más
+	 allá en lo que concierne a nuestro actual estado de conciencia.\n\nEs por
+	 esto que durante tres meses (mayo\, junio y julio) estaremos haciendo una
+	\n\ngira en Chile\, con el objetivo de compartir lo aprendido y poder reca
+	udar fondos\n\npara completar este sueño. Si te llegó este documento y lo 
+	estás leyendo y\nquieres\n\nque tu iniciativa sea parte de esta gira o dif
+	undir y vincular una red para\npoder\n\nentregar estos talleres a la comun
+	idad\, contáctanos a este mail:\n\ndelotroladoeuritmia@gmail.com o al What
+	sapp +5491124008963.\n\nTaller para maestras/os.\n\nEste taller tiene como
+	 objetivo el desarrollo del camino interior de las y los\n\nmaestros en la
+	s siguientes temáticas:\n\nEntregar herramientas de autocuidado desde la E
+	uritmia para el trabajo diario de\n\nmaestras y maestros.\n\nEjercitar mov
+	imientos para fortalecimiento del Yo\; para iniciar\, transitar y\ndejar e
+	n la\n\nescuela el quehacer pedagógico.\n\nEl Yo como un templo. Cuidar\, 
+	ordenar y mantener limpio el ámbito del sentir\,\n\npensar y de la volunta
+	d.\n\nAtraer las fuerzas espirituales mediante ejercicios ‘conscientes’ qu
+	e conlleven\no me\n\nhagan parte del puente entre lo dormido y lo que se q
+	uiere despertar en los y\nlas\n\nestudiantes.\n\nIncentivar un lenguaje en
+	 común\, en donde la afinación del propio instrumento\n\ngenere la sinfoní
+	a entre las personas que conforman la comunidad de maestras y\n\nmaestros.
+	\n\nEl ejercicio de mantenernos en movimiento colectivamente genera un nue
+	vo\n\ncuerpo dentro de la comunidad. Es por esto que el ejercicio que pued
+	a hacer cada\n\nYo es la suma de nuevos aires y nuevas soluciones a proble
+	máticas que se\n\npresenten ante nuevas situaciones. A través de este leng
+	uaje en común\,\ncultivamos\n\nun cuerpo etérico más robusto que es flexib
+	le a las prácticas pedagógicas\ndiarias.\n\nTaller para familias.\n\nEl mo
+	vimiento genera lenguaje\, el lenguaje ideas y para poder expresar estas\n
+	ideas\n\nocupamos el habla. ¿Es el habla la mejor forma de comunicarnos? E
+	ste taller es\nuna\n\ninvitación que\, a través del movimiento interno en 
+	consonancia con otros\,\n\nestableceremos un puente para el desarrollo de 
+	un nuevo lenguaje en común. Para\nesto\n\nes que proponemos lo siguiente:\
+	n\nMovernos colectivamente en donde la percepción mía y de los demás conll
+	even a un\n\nmotivo colectivo y consciente.\n\nEntregar herramientas para 
+	el cuidado de una comunidad armoniosa. Es a través de\nla\n\nEuritmia soci
+	al que desarrollaremos estas temáticas de una forma práctica y\nlúdica.\n\
+	nRealizando los elementos de la euritmia\, se cultiva una integración y un
+	a\narmonización\n\ndel cuerpo físico con el ámbito afectivo y estético del
+	 alma. Cuando decimos que\nel\n\nalma participa\, queremos decir que se es
+	timula la vida afectiva y a partir de\neste\n\nmovimiento interior\, sale 
+	su movimiento exterior.\n\nLa importancia de entregar este taller para las
+	 madres y padres será una\ncontribución a\n\nlos procesos sociales y al de
+	sarrollo interior de la comunidad\, generando un\nvínculo\n\narmonioso ent
+	re lo que sucede en la escuela y en los procesos familiares. El\nritmo de\
+	n\nlos movimientos vive en el dinamismo de la respiración. Respirar es con
+	traer y\nexpandir\,\n\nfrenar y soltar\, características esenciales para u
+	na comunidad saludable.\n\nCostos:\n\nValor de Taller para maestras/os: es
+	tá pensado para ser desarrollado en 6 horas\n\ncronológicas\, para realiza
+	r en dos días (3 horas por día) o en tres días (dos\nhoras\n\ndiarias) $5.
+	000 por hora por persona.\n\nValor de Taller para familias: será realizado
+	 en una jornada\n\nde 2 horas\n\naproximadamente. $20.000 por persona (no 
+	excluyente)\n\nSolicitudes:\n\nUna sala amplia que permita el movimiento d
+	e las personas\, ojalá con piso de\nmadera.\n\nUn músico que nos pueda aco
+	mpañar durante las jornadas (1 hora por día).\n\nEstamos disponibles a rec
+	ibir sugerencias y llegar a acuerdos en relación a los\nhorarios\n\ny días
+	 para la realización de los talleres. Tenemos mucho entusiasmo de poder\n\
+	ncompartir el arte de la euritmia\, quedamos atentos a su respuesta.\n\nCa
+	milo Bravo y Eduardo Villarroel\n\nDel Otro Lado Euritmia
+URL:https://gancio.antroposofiachile.net/event/taller-de-euritmia
+LOCATION:Chile - Chile
+STATUS:CONFIRMED
+CATEGORIES:euritmia
+X-ALT-DESC;FMTTYPE=text/html:<p>Del Otro Lado Euritmia</p><p>delotroladoeur
+	itmia@gmail.com</p><p>2024</p><p>Estimada Comunidad Educativa:</p><p>Somos
+	 Camilo Bravo Lizana y Eduardo Villarroel Aguirre, profesores y maestros</
+	p><p>Waldorf, que viajamos a Argentina con el sueño de estudiar en la únic
+	a escuela</p><p>gratuita de Euritmia en el mundo. Pasados cinco años y con
+	cluida la formación</p><p>académica nos encontramos en la última etapa de 
+	este proceso, donde tenemos</p><p>que viajar a Brasil a realizar una resid
+	encia artística de dos meses, lo que conlleva</p><p>un costo que debe ser 
+	solventado por nosotros. La extensa jornada de preparación</p><p>y permane
+	ncia de este proceso de formación impedirá que podamos trabajar y</p><p>ge
+	nerar dinero para costear lo que se requiere. ¿Qué es lo que se requiere? 
+	Pasajes</p><p>a Brasil, alojamiento, comida, espacio para ensayar, traslad
+	os dentro de Brasil,</p><p>vestuarios, además de honorarios de 4 profesore
+	s de euritmia y un músico.</p><p>Teniendo en cuenta la importancia y la ne
+	cesidad de esta disciplina en proyectos e</p><p>impulsos antroposóficos, e
+	s que nos encontramos con el fuerte deseo de expandir</p><p>lo aprendido y
+	 compartirlo de una forma cercana y práctica. Creemos fuertemente</p><p>qu
+	e el desarrollo de este nuevo arte y que el futuro lenguaje de nuestra soc
+	iedad</p><p>será a través del movimiento, es por esto que, poniendo semill
+	as donde exista</p><p>tierra fértil, las comunidades podrán establecer y f
+	ortalecer los motivos y</p><p>propósitos que encienden el camino antroposó
+	fico.</p><p>Hemos aprendido a través de la pedagogía Waldorf que toda ense
+	ñanza está llena</p><p>de imágenes bellas y verdaderas, entendiendo con es
+	to la práctica pedagógica</p><p>como un desarrollo salutogénico para el fu
+	turo. Si enfatizamos en el desarrollo y</p><p>fortalecimiento del camino i
+	nterior del maestro y la maestra, seremos capaces de</p><p>dar un paso más
+	 allá en lo que concierne a nuestro actual estado de conciencia.</p><p>Es 
+	por esto que durante tres meses (mayo, junio y julio) estaremos haciendo u
+	na</p><p>gira en Chile, con el objetivo de compartir lo aprendido y poder 
+	recaudar fondos</p><p>para completar este sueño. Si te llegó este document
+	o y lo estás leyendo y quieres</p><p>que tu iniciativa sea parte de esta g
+	ira o difundir y vincular una red para poder</p><p>entregar estos talleres
+	 a la comunidad, contáctanos a este mail:</p><p>delotroladoeuritmia@gmail.
+	com o al Whatsapp +5491124008963.</p><p>Taller para maestras/os.</p><p>Est
+	e taller tiene como objetivo el desarrollo del camino interior de las y lo
+	s</p><p>maestros en las siguientes temáticas:</p><p>Entregar herramientas 
+	de autocuidado desde la Euritmia para el trabajo diario de</p><p>maestras 
+	y maestros.</p><p>Ejercitar movimientos para fortalecimiento del Yo; para 
+	iniciar, transitar y dejar en la</p><p>escuela el quehacer pedagógico.</p>
+	<p>El Yo como un templo. Cuidar, ordenar y mantener limpio el ámbito del s
+	entir,</p><p>pensar y de la voluntad.</p><p>Atraer las fuerzas espirituale
+	s mediante ejercicios ‘conscientes’ que conlleven o me</p><p>hagan parte d
+	el puente entre lo dormido y lo que se quiere despertar en los y las</p><p
+	>estudiantes.</p><p>Incentivar un lenguaje en común, en donde la afinación
+	 del propio instrumento</p><p>genere la sinfonía entre las personas que co
+	nforman la comunidad de maestras y</p><p>maestros.</p><p>El ejercicio de m
+	antenernos en movimiento colectivamente genera un nuevo</p><p>cuerpo dentr
+	o de la comunidad. Es por esto que el ejercicio que pueda hacer cada</p><p
+	>Yo es la suma de nuevos aires y nuevas soluciones a problemáticas que se<
+	/p><p>presenten ante nuevas situaciones. A través de este lenguaje en comú
+	n, cultivamos</p><p>un cuerpo etérico más robusto que es flexible a las pr
+	ácticas pedagógicas diarias.</p><p>Taller para familias.</p><p>El movimien
+	to genera lenguaje, el lenguaje ideas y para poder expresar estas ideas</p
+	><p>ocupamos el habla. ¿Es el habla la mejor forma de comunicarnos? Este t
+	aller es una</p><p>invitación que, a través del movimiento interno en cons
+	onancia con otros,</p><p>estableceremos un puente para el desarrollo de un
+	 nuevo lenguaje en común. Para esto</p><p>es que proponemos lo siguiente:<
+	/p><p>Movernos colectivamente en donde la percepción mía y de los demás co
+	nlleven a un</p><p>motivo colectivo y consciente.</p><p>Entregar herramien
+	tas para el cuidado de una comunidad armoniosa. Es a través de la</p><p>Eu
+	ritmia social que desarrollaremos estas temáticas de una forma práctica y 
+	lúdica.</p><p>Realizando los elementos de la euritmia, se cultiva una inte
+	gración y una armonización</p><p>del cuerpo físico con el ámbito afectivo 
+	y estético del alma. Cuando decimos que el</p><p>alma participa, queremos 
+	decir que se estimula la vida afectiva y a partir de este</p><p>movimiento
+	 interior, sale su movimiento exterior.</p><p>La importancia de entregar e
+	ste taller para las madres y padres será una contribución a</p><p>los proc
+	esos sociales y al desarrollo interior de la comunidad, generando un víncu
+	lo</p><p>armonioso entre lo que sucede en la escuela y en los procesos fam
+	iliares. El ritmo de</p><p>los movimientos vive en el dinamismo de la resp
+	iración. Respirar es contraer y expandir,</p><p>frenar y soltar, caracterí
+	sticas esenciales para una comunidad saludable.</p><p>Costos:</p><p>Valor 
+	de Taller para maestras/os: está pensado para ser desarrollado en 6 horas<
+	/p><p>cronológicas, para realizar en dos días (3 horas por día) o en tres 
+	días (dos horas</p><p>diarias) $5.000 por hora por persona.</p><p>Valor de
+	 Taller para familias: será realizado en una jornada</p><p> de 2 horas</p>
+	<p>aproximadamente. $20.000 por persona (no excluyente)</p><p>Solicitudes:
+	</p><p>Una sala amplia que permita el movimiento de las personas, ojalá co
+	n piso de madera.</p><p>Un músico que nos pueda acompañar durante las jorn
+	adas (1 hora por día).</p><p>Estamos disponibles a recibir sugerencias y l
+	legar a acuerdos en relación a los horarios</p><p>y días para la realizaci
+	ón de los talleres. Tenemos mucho entusiasmo de poder</p><p>compartir el a
+	rte de la euritmia, quedamos atentos a su respuesta.</p><p>Camilo Bravo y 
+	Eduardo Villarroel</p><p>Del Otro Lado Euritmia</p>
+END:VEVENT
+BEGIN:VEVENT
+UID:14@gancio.antroposofiachile.net
+SUMMARY:El Congreso de Navidad: Ciclo de Historia Universal
+DTSTAMP:20240601T195912Z
+DTSTART:20240824T133000Z
+DTEND:20240824T160000Z
+DESCRIPTION:Estudio\n\nPresentan: Tomás Lambertini y Pablo Porcel\n\nHabra
+	́ café y alimentos biodinámicos. Aporte económico voluntario.
+URL:https://gancio.antroposofiachile.net/event/el-congreso-de-navidad-ciclo
+	-de-historia-universal-1
+LOCATION:Colegio Micael - Simón González 8848\, La Reina\, Santiago de Chil
+	e
+STATUS:CONFIRMED
+CATEGORIES:
+X-ALT-DESC;FMTTYPE=text/html:<p>Estudio</p><p><em>Presentan: Tomás Lambert
+	ini </em>y <em>Pablo Porcel</em></p><p><em>Habrá café y alimentos biodin
+	ámicos. Aporte económico voluntario.</em></p>
+END:VEVENT
+BEGIN:VEVENT
+UID:5@gancio.antroposofiachile.net
+SUMMARY:Cuidados de la salud y la enfermedad\, en el hogar: Prevención y tr
+	atamientos básicos para enfermedades alérgicas
+DTSTAMP:20240601T195912Z
+DTSTART:20240901T070000Z
+DTEND:20240901T223000Z
+URL:https://gancio.antroposofiachile.net/event/cuidados-de-la-salud-y-la-en
+	fermedad-en-el-hogar-prevencion-y-tratamientos-basicos-para-enfermedades-a
+	lergicas
+LOCATION:online - https://antroposofiachile.net
+STATUS:CONFIRMED
+CATEGORIES:medicina antroposófica
+X-ALT-DESC;FMTTYPE=text/html:<p></p>
+END:VEVENT
+END:VCALENDAR

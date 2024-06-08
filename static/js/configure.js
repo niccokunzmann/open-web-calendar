@@ -80,8 +80,15 @@ function joinHtmlLines(lines) {
  * Use these instead of custom edits in the scheduler.template replacements.
  */
 var template = {
-    "summary": function(event) {
+    "plain_summary": function(event) {
         return escapeHtml(event.text);
+    },
+    "formatted_summary": function(event) {
+      var summary = template.plain_summary(event);
+      if (event.url) {
+        summary = makeLink(event.url, "🔗 " + summary);
+      }
+      return summary;
     },
     "details": function(event) {
         var details = document.createElement("div");
@@ -311,7 +318,7 @@ function loadCalendar() {
     // see https://docs.dhtmlx.com/scheduler/custom_events_content.html
     // see https://docs.dhtmlx.com/scheduler/api__scheduler_event_bar_text_template.html
     scheduler.templates.event_bar_text = function(start, end, event){
-        return template.summary(event);
+        return template.plain_summary(event);
     }
 /*    scheduler.templates.event_bar_date = function(start, end, event){
       console.log("event_bar_date");
@@ -327,7 +334,7 @@ function loadCalendar() {
     // see https://docs.dhtmlx.com/scheduler/tooltips.html
     if (HAS_TOOLTIP) {
         scheduler.templates.tooltip_text = function(start, end, event) {
-            return template.summary(event) + template.details(event) + template.location(event);
+            return template.formatted_summary(event) + template.details(event) + template.location(event);
         };
         scheduler.tooltip.config.delta_x = 1;
         scheduler.tooltip.config.delta_y = 1;
@@ -335,7 +342,7 @@ function loadCalendar() {
     // quick info
     // see https://docs.dhtmlx.com/scheduler/extensions_list.html#quickinfo
     scheduler.templates.quick_info_title = function(start, end, event){
-        return template.summary(event);
+        return template.formatted_summary(event);
     }
     scheduler.templates.quick_info_content = function(start, end, event){
         return template.details(event) +
