@@ -17,6 +17,7 @@ jobs:
   update-translation-po-files:
     name: Update Translation PO Files
     runs-on: ubuntu-latest
+    if: github.ref_name == 'master'
     steps:
       - uses: actions/checkout@v4
       - name: Setup Python
