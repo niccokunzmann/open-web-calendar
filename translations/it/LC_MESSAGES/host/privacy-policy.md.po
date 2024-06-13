@@ -1,43 +1,56 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# albanobattistella <albano_battistella@hotmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-03 17:45+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-06-14 03:03+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-privacy-policy/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #
 msgid "Open Web Calendar Privacy Policy"
-msgstr ""
+msgstr "Informativa sulla privacy di Open Web Calendar"
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Privacy Policy"
 
 msgid ""
 "The Open Web Calendar does not collect any personal information from "
 "visitors of the website."
 msgstr ""
+"Open Web Calendar non raccoglie alcuna informazione personale dai visitatori "
+"del sito web."
 
 msgid ""
 "Calendars may contain personal information. For the purpose of serving the "
 "content fast, the calendar files are cached for a short while. As expected, "
 "content of calendars is only processed to display them as a website."
 msgstr ""
+"I calendari possono contenere informazioni personali. Allo scopo di fornire "
+"rapidamente il contenuto, i file del calendario vengono memorizzati nella "
+"cache per un breve periodo. Come previsto, il contenuto dei calendari viene "
+"elaborato solo per visualizzarli come sito web."
 
 msgid "Documentation Website"
-msgstr ""
+msgstr "Documentazione del sito web"
 
+#, fuzzy
 msgid ""
 "This website contains the project documentation. It is hosted on GitHub "
 "Pages. Their [Privacy Policy][privacy-policy] applies."
 msgstr ""
+"Questo sito web contiene la documentazione del progetto. È ospitato sulle "
+"pagine GitHub. Si applica la loro [Informativa sulla privacy] [Informativa "
+"sulla privacy]."
 
 #, fuzzy
 msgid ""
