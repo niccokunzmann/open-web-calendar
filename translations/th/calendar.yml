@@ -1,1 +1,22 @@
-{}
+date_month_full_sep: กันยายน
+date_month_full_dec: ธันวาคม
+date_month_short_jan: ม.ค
+date_month_short_feb: ก.พ.
+date_month_short_mar: มี.ค.
+date_month_short_apr: เม.ย.
+date_month_short_may: พ.ค.
+date_month_short_jun: มิ.ย.
+date_month_short_jul: ก.ค.
+date_month_short_aug: ส.ค.
+date_month_short_sep: ก.ย.
+date_month_full_jan: มกราคม
+date_month_full_feb: กุมภาพันธ์
+date_month_full_may: พฤษภาคม
+date_month_full_jun: มิถุนายน
+date_month_full_jul: กรกฎาคม
+date_month_full_oct: ตุลาคม
+date_month_full_mar: มีนาคม
+date_month_full_apr: เมษายน
+date_month_full_aug: สิงหาคม
+date_month_full_nov: พฤศจิกายน
+date_month_short_oct: ต.ค.
