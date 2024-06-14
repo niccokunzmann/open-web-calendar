@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.0\n"
 
-#
 msgid "Configure a hosted instance."
 msgstr ""
 
@@ -26,9 +25,6 @@ msgid "Change how the default calendar looks."
 msgstr ""
 
 msgid "Change how the server works."
-msgstr ""
-
-msgid "You might want to change these values:"
 msgstr ""
 
 msgid "Server Configuration"
@@ -60,15 +56,6 @@ msgid "`language`"
 msgstr ""
 
 msgid "`favicon`"
-msgstr ""
-
-msgid "`source_code` - if you made changes"
-msgstr ""
-
-msgid "`contributing` - if you want to redirect to contribute to your project"
-msgstr ""
-
-msgid "Related:"
 msgstr ""
 
 msgid "[API](../../dev/api)"
@@ -195,6 +182,80 @@ msgid ""
 "**Requests** is used the get the `.ics` files. You can [configure a "
 "proxy](#ssrf-protection-with-a-proxy-server)."
 msgstr ""
+
+msgid "You might want to change the following values."
+msgstr ""
+
+msgid "The title of your website."
+msgstr ""
+
+msgid ""
+"This is the default language. You might want to change this to serve the "
+"configuration page better to a local audience."
+msgstr ""
+
+msgid "This is a link to the website icon."
+msgstr ""
+
+msgid "`source_code`"
+msgstr ""
+
+msgid ""
+"If you made changes, you are legally required to disclose them to visitors. "
+"Please adjust the link or contribute them back to the main project."
+msgstr ""
+
+msgid "`contributing`"
+msgstr ""
+
+msgid "If you want to redirect to contribute to your project."
+msgstr ""
+
+msgid "`privacy_policy`"
+msgstr ""
+
+msgid ""
+"If you host this service yourself, you can use the default [privacy "
+"policy][privacy-policy]."
+msgstr ""
+
+msgid ""
+"If for some reason you decide to collect data i.e. in the HTTPS proxy or log"
+" IP-addresses, then you need to create your own privacy policy. You can link"
+" to the one of this project."
+msgstr ""
+
+msgid "More Values"
+msgstr ""
+
+msgid ""
+"There are loads more values that can be changed. Please refer to the "
+"[default_specification.yml]. These values are all documented."
+msgstr ""
+
+#, fuzzy
+msgid ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/default_specification.yml"
+msgstr ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/default_specification.yml"
+
+#, fuzzy
+msgid "[privacy-policy]: ../privacy-policy"
+msgstr "[privacy-policy]: ../privacy-policy"
+
+#~ msgid "You might want to change these values:"
+#~ msgstr ""
+
+#~ msgid "`source_code` - if you made changes"
+#~ msgstr ""
+
+#~ msgid "`contributing` - if you want to redirect to contribute to your project"
+#~ msgstr ""
+
+#~ msgid "Related:"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "**Requests** is used the get the `.ics` files. You can [configure a proxy]."

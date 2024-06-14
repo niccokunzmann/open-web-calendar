@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.0\n"
 
-#
 msgid ""
 "The API of the Open Web Calendar allows more customization than the "
 "configuration page."
@@ -76,9 +75,6 @@ msgid ""
 "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
 " you CAN use this but you cannot be sure that the JSON schema remains the "
 "same. If you want that, add tests."
-msgstr ""
-
-msgid "Additional parameters are required:"
 msgstr ""
 
 msgid "`timezone=UTC` - the timezone that you need to display the events in"
@@ -257,6 +253,12 @@ msgstr ""
 
 msgid "Change the title in a query parameter:"
 msgstr ""
+
+msgid "Additional parameters are required for `/calendar.events.json`:"
+msgstr ""
+
+#~ msgid "Additional parameters are required:"
+#~ msgstr ""
 
 #~ msgid "=== YAML"
 #~ msgstr ""

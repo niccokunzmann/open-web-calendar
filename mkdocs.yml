@@ -120,6 +120,8 @@ plugins:
         - de
         - es
         - nb_NO
+        - it
+        - th
 # add mdpo.languages above
       translate:
         - site_name
@@ -192,6 +194,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Norsk bokmål
       link: nb_NO
       lang: nb_NO
+    - name: Italiano
+      link: it
+      lang: it
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/
