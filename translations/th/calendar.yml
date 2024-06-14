@@ -20,3 +20,12 @@ date_month_full_apr: เมษายน
 date_month_full_aug: สิงหาคม
 date_month_full_nov: พฤศจิกายน
 date_month_short_oct: ต.ค.
+date_day_full_sun: วันอาทิตย์
+date_day_full_mon: วันจันทร์
+date_day_full_tue: วันอังคาร
+date_day_full_wed: วันพุธ
+date_day_full_thu: วันพฤหัสบดี
+date_day_full_fri: วันศุกร์
+date_day_full_sat: วันเสาร์
+date_month_short_nov: พ.ย.
+date_month_short_dec: ธ.ค.
