@@ -49,11 +49,12 @@ class ConversionStrategy:
         urls = self.specification["url"]
         if isinstance(urls, str):
             urls = [urls]
-        assert (
-            len(urls) <= self.MAXIMUM_THREADS
-        ), f"You can only merge {MAXIMUM_THREADS} urls. If you like more, open an issue."
+        assert len(urls) <= self.MAXIMUM_THREADS, (
+            f"You can only merge {self.MAXIMUM_THREADS} urls."
+            " If you like more, open an issue."
+        )
         with ThreadPoolExecutor(max_workers=self.MAXIMUM_THREADS) as e:
-            for e in e.map(self.retrieve_calendar, enumerate(urls)):
+            for _e in e.map(self.retrieve_calendar, enumerate(urls)):
                 pass  # no error should pass silently; import this
 
     def get_calendars_from_url(self, url):
