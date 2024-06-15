@@ -87,11 +87,11 @@ def calendar_urls():
     """
     mapping = {}
     for file, content in calendar_files.items():
-        url = "http://test.examples.local/" + file
+        url = "http://test.examples.local/" + file.name
         cache_url(url, content)
-        mapping[file] = url
-        if file.lower().endswith(".ics"):
-            mapping[file[:-4]] = url
+        mapping[file.name] = url
+        if file.suffix.lower() == ".ics":
+            mapping[file.stem] = url
     return mapping
 
 
@@ -103,6 +103,6 @@ def calendar_content():
     """
     mapping = {}
     for file, content in calendar_files.items():
-        if file.lower().endswith(".ics"):
-            mapping[file[:-4]] = content
+        if file.suffix.lower() == ".ics":
+            mapping[file.stem] = content
     return mapping
