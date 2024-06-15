@@ -37,7 +37,7 @@ for language in os.listdir(TRANSLATIONS_PATH):
     for file in language_path.iterdir():
         if file.suffix != ".yml":
             continue
-        name = file.name
+        name = file.stem
         if name.endswith(UNUSED):
             name = name[: -len(UNUSED)]
         with file.open() as f:
@@ -299,7 +299,6 @@ if __name__ == "__main__":
             f"translated: {strings_translated(language)}/"
             f"{strings_translated(DEFAULT_LANGUAGE)}"
         )
-    print(  # noqa: T201
-        "These languages will be offered to the user: "
-        "{', '.join(map(str, languages_for_the_index_file()))}"
-    )
+    print("These languages will be offered to the user: ")  # noqa: T201
+    for lang, code, percent in languages_for_the_index_file():
+        print(f"{code}\t{percent}%\t{lang}")  # noqa: T201
