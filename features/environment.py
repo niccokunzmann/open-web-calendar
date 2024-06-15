@@ -7,16 +7,13 @@
 see https://behave.readthedocs.io/en/stable/practical_tips.html#selenium-example
 """
 
-import os
-import sys
-
-HERE = os.path.dirname(__file__ or ".")
-sys.path.append(os.path.join(HERE, ".."))
-
 import http.server
 import multiprocessing
+import random
 import socketserver
 import subprocess
+import sys
+from pathlib import Path
 
 from behave import fixture, use_fixture
 from selenium import webdriver
@@ -25,12 +22,16 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
 from werkzeug import run_simple
 
-from app import app
+HERE = Path(__file__)
+sys.path.append(HERE / "..")
+from app import app  # noqa: E402
+
+CALENDAR_FOLDER = HERE / "calendars"
 
 
 def locate_command(command: str):
     """Locate a command on the command line or return ''."""
-    code, output = subprocess.getstatusoutput(f"which {command}")
+    code, output = subprocess.getstatusoutput(f"which {command}")  # noqa: S605
     if code == 0:
         return output.strip()
     return ""
@@ -45,12 +46,13 @@ def browser_firefox(context):
     # specify firefox executible and gecko drivers
     # see https://stackoverflow.com/a/76852633
     # see https://stackoverflow.com/a/71766991/1320237
-    geckodriver_path = "/snap/bin/geckodriver"  # specify the path to your geckodriver
+    # specify the path to your geckodriver
+    geckodriver_path = Path("/snap/bin/geckodriver")
     # Set the language for the tests
     opts.set_preference("intl.accept_languages", "en-US, en")
     # construct the arguments
-    kw = dict(options=opts)
-    if os.path.exists(geckodriver_path):
+    kw = {"options": opts}
+    if geckodriver_path.exists():
         kw["service"] = Service(executable_path=geckodriver_path)
     browser = Firefox(**kw)
     context.browser = browser
@@ -117,7 +119,7 @@ def set_window_size(context):
         context.browser.set_window_size(int(width), int(height))
 
 
-def serve_calendar_files(host, port, directory=os.path.join(HERE, "calendars")):
+def serve_calendar_files(host, port, directory=CALENDAR_FOLDER):
     """Serve the calendar files so they can be requested.
 
     see https://stackoverflow.com/a/52531444/1320237
@@ -137,10 +139,7 @@ def serve_calendar_files(host, port, directory=os.path.join(HERE, "calendars")):
 
 def get_free_port(start=10000, end=60000):
     """Return a free port number."""
-    import random
-
-    port = random.randint(start, end)
-    return port
+    return random.randint(start, end)  # noqa: S311
 
 
 @fixture
