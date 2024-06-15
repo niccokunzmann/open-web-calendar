@@ -1,19 +1,13 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
-
 """
 This test the algorithm written
 in the api.md file.
 """
 
-import sys
-
 import pytest
 from werkzeug.datastructures import MultiDict
-
-print(sys.path)
-
 
 from app import cache_url, get_default_specification, get_specification
 
@@ -84,6 +78,6 @@ def test_boolean_values_of_parameters():
     spec = get_specification(
         query=MultiDict({"clean_html_style": "false", "clean_html_links": "True"})
     )
-    assert spec["clean_html_embedded"] == True, "default"
-    assert spec["clean_html_style"] == False
-    assert spec["clean_html_links"] == True
+    assert spec["clean_html_embedded"] is True, "default"
+    assert spec["clean_html_style"] is False
+    assert spec["clean_html_links"] is True
