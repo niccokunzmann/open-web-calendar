@@ -190,37 +190,37 @@ def get_query_string():
 
 
 def render_app_template(template, specification):
-    translation_file = os.path.splitext(template)[0]
+    translation_file = Path(template).stem
     return render_template(
         template,
         specification=specification,
         configuration=get_configuration(),
         json=json,
         get_query_string=get_query_string,
-        html=lambda id, **template_replacements: translate.html(
-            specification["language"], translation_file, id, **template_replacements
+        html=lambda tid, **template_replacements: translate.html(
+            specification["language"], translation_file, tid, **template_replacements
         ),
     )
 
 
-@app.route("/calendar.<type>", methods=["GET", "OPTIONS"])
+@app.route("/calendar.<ext>", methods=["GET", "OPTIONS"])
 @limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
 # @cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
-def get_calendar(type):
+def get_calendar(ext):
     """Return a calendar."""
     specification = get_specification()
-    if type == "spec":
+    if ext == "spec":
         return jsonify(specification)
-    if type == "events.json":
+    if ext == "events.json":
         strategy = ConvertToDhtmlx(specification, get_text_from_url)
         strategy.retrieve_calendars()
         return set_js_headers(strategy.merge())
-    if type == "ics":
+    if ext == "ics":
         strategy = ConvertToICS(specification, get_text_from_url)
         strategy.retrieve_calendars()
         return set_js_headers(strategy.merge())
-    if type == "html":
+    if ext == "html":
         template_name = specification["template"]
         all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
         assert (
@@ -231,17 +231,18 @@ def get_calendar(type):
         template = CALENDARS_TEMPLATE_FOLDER_NAME + "/" + template_name
         return render_app_template(template, specification)
     raise ValueError(
-        f"Cannot use extension {type}. Please see the documentation or report an error."
+        f"Cannot use extension {ext}. Please see the documentation or report an error."
     )
 
 
-for folder_name in os.listdir(STATIC_FOLDER_PATH):
-    folder_path = os.path.join(STATIC_FOLDER_PATH, folder_name)
-    if not os.path.isdir(folder_path):
+for folder_path in STATIC_FOLDER_PATH.iterdir():
+    if not folder_path.is_dir():
         continue
 
-    @app.route("/" + folder_name + "/<path:path>", endpoint="static/" + folder_name)
-    def send_static(path, folder_name=folder_name):
+    @app.route(
+        "/" + folder_path.name + "/<path:path>", endpoint="static/" + folder_path.name
+    )
+    def send_static(path, folder_name=folder_path.name):
         return send_from_directory("static/" + folder_name, path)
 
 
@@ -280,7 +281,7 @@ def serve_locale(lang):
 
 
 @app.errorhandler(500)
-def unhandledException(error):
+def unhandled_exception(error):
     """Called when an error occurs.
 
     See https://stackoverflow.com/q/14993318
@@ -296,7 +297,11 @@ def unhandledException(error):
         </head>
         <body>
             <h1>Internal Server Error</h1>
-            <p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
+            <p>
+                The server encountered an internal error and was unable to
+                complete your request.  Either the server is overloaded or
+                there is an error in the application.
+            </p>
             <pre>\r\n{file.getvalue()}
             </pre>
         </body>

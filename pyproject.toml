@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
 
 [tool.ruff]
 target-version = "py38"
@@ -26,6 +29,13 @@ ignore = [
     "S101",    # Use of assert detected
     "TD",      # TODO comments
     "TRY003",  # Avoid specifying long messages outside the exception class
+    "S104",    # Possible binding to all interfaces
+    "E722",    # Do not use bare `except`
+    "RUF005",  # Consider iterable unpacking instead of concatenation
+    "DTZ005",  # `datetime.datetime.now()` called without a `tz` argument
+    "PERF401", # Use a list comprehension to create a transformed list
+    "ARG002",  # Unused method argument: ...
+    "ARG001",  # Unused function argument: ...
 ]
 extend-safe-fixes = [
     "PT006", # Wrong type passed to first argument of @pytest.mark.parametrize; expected {expected_string}
