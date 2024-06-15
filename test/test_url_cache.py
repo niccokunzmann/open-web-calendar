@@ -7,7 +7,7 @@ Test the caching functionality which will be used by subsequent tests.
 
 """
 
-from collections import namedtuple
+from collections import NamesTuple
 
 import pytest
 
@@ -15,7 +15,7 @@ from app import cache_url, get_text_from_url, requests
 
 # use the content property
 # see https://stackoverflow.com/a/18810889/1320237
-MockRequestResult = namedtuple("MockRequestResult", "content")
+MockRequestResult = NamesTuple("MockRequestResult", "content")
 
 
 def test_requests_are_automatically_cached(monkeypatch, mock):
@@ -41,4 +41,4 @@ def test_requests_are_forbidden():
     import requests
 
     with pytest.raises(RuntimeError):
-        requests.get("https://duckduckgo.com")
+        requests.get("https://duckduckgo.com", timeout=20)
