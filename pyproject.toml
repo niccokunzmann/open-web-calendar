@@ -56,3 +56,12 @@ extend-safe-fixes = [
     "F811",   # Redefinition of unused `step_impl` from line 52
     "T201",   # `print` found
 ]
+
+"static/js/dhtmlx/locale/convert.py" = [
+  "INP001",    # File `static/js/dhtmlx/locale/convert.py` is part of an implicit namespace package. Add an `__init__.py`
+  "T201",      # print found
+  "PTH123",
+  "S307",
+  "PTH103",
+  "PLW2901"
+]

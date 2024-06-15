@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
-
 """Script to convert the DHTMLX calendar translations for yaml files."""
 
 import os
@@ -25,7 +24,9 @@ def used(s):
             s.startswith("labels_")
             and not any(
                 x in s
-                for x in "repeat drag message button icon new confirm section select recurring labels_year_tab labels_grid_tab labels_full_day".split()
+                for x in "repeat drag message button icon new confirm section "
+                "select recurring labels_year_tab labels_grid_tab"
+                "labels_full_day".split()
             )
         )
         or s
@@ -35,8 +36,8 @@ def used(s):
     )
 
 
-def add(l, v):
-    global yaml
+def add(l, v):  # noqa: E741
+    global yaml  # noqa: PLW0603
     k = "_".join(l)
     # sanitize
     #    v = v.strip()
