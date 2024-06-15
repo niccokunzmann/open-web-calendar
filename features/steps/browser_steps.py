@@ -11,17 +11,15 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as EC  # noqa: N812
 from selenium.webdriver.support.ui import Select, WebDriverWait
 
 
 def specification_to_query(spec):
     """Convert the specification to a query string for the url."""
     result = []
-    for k, v in spec.items():
-        if not isinstance(v, list):
-            v = [v]
-        for v in v:
+    for k, vs in spec.items():
+        for v in vs if isinstance(vs, list) else [vs]:
             result.append(urlencode({k: v}))
     return "&".join(result)
 
@@ -31,11 +29,12 @@ def get_url(context, url):
     print(
         f"Visiting {re.sub('^http://localhost:[0-9]+/', 'http://localhost:5000/', url)}"
     )
-    for i in range(20):
+    for _i in range(20):
         try:
             return context.browser.get(url)
-        except TimeoutException:
+        except TimeoutException:  # noqa: PERF203
             pass
+    raise
 
 
 @given('we add the calendar "{calendar_name}"')
@@ -92,8 +91,8 @@ def step_impl(context, uid, text):
         len(events) == 1
     ), f"There should only be one event with UID {uid} but there are {len(events)}."
     event = events[0]
-    innerText = event.get_attribute("innerText")
-    assert innerText == text, f"Expected {text!r} but got {innerText!r}"
+    inner_text = event.get_attribute("innerText")
+    assert inner_text == text, f"Expected {text!r} but got {inner_text!r}"
 
 
 @when('we click on the event "{text}"')
@@ -102,9 +101,10 @@ def step_impl(context, text):
     chosen_events = [
         event for event in events if text in event.get_attribute("innerText")
     ]
-    assert (
-        len(chosen_events) == 1
-    ), f"There should only be one event with the text {text} but there are {len(chosen_events)}: {chosen_events}"
+    assert len(chosen_events) == 1, (
+        f"There should only be one event with the text {text} "
+        "but there are {len(chosen_events)}: {chosen_events}"
+    )
     event = chosen_events[0]
     event.click()
 
@@ -117,8 +117,7 @@ def step_impl(context, text):
 
 def get_body_text(context):
     body = context.browser.find_elements(By.XPATH, "//body")[0]
-    innerText = body.get_attribute("innerText")
-    return innerText
+    return body.get_attribute("innerText")
 
 
 @then('we cannot find an XPATH "{xpath}"')
@@ -156,7 +155,10 @@ def step_impl(context, uid, css_class):
     elements_by_uid = context.browser.find_elements(By.CLASS_NAME, f"UID-{uid}")
     elements_by_class = context.browser.find_elements(By.CLASS_NAME, css_class)
     found_elements = set(elements_by_uid) & set(elements_by_class)
-    assert found_elements, f"Expected at least one event with UID {uid} to have the css class {css_class} but none did."
+    assert found_elements, (
+        f"Expected at least one event with UID {uid} "
+        "to have the css class {css_class} but none did."
+    )
 
 
 @then("we cannot see a {cls}")
@@ -183,7 +185,8 @@ def step_impl(context, dropdown_text):
     assert options, f"Could not find option with text {dropdown_text!r}"
     if len(options) != 1:
         print(
-            f"Expected one option but found many: {', '.join(repr(o.get_attribute('innerText')) for o in options)}"
+            f"Expected one option but found many: "
+            f"{', '.join(repr(o.get_attribute('innerText')) for o in options)}"
         )
     option = options[0]
     option.click()  # see https://stackoverflow.com/a/7972225/1320237
@@ -223,17 +226,17 @@ def step_impl(context):
 @when('we write "{text}" into "{field_id}"')
 def step_impl(context, text, field_id):
     """Write text into text input."""
-    input = context.browser.find_element(By.ID, field_id)
-    input.clear()  # see https://stackoverflow.com/a/7809907/1320237
-    input.send_keys(text)
-    print(f"Expecting {field_id}.value == {input.get_attribute('value')}")
+    input_element = context.browser.find_element(By.ID, field_id)
+    input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
+    input_element.send_keys(text)
+    print(f"Expecting {field_id}.value == {input_element.get_attribute('value')}")
 
 
 @then('"{text}" is written in "{field_id}"')
 def step_impl(context, text, field_id):
     """Check that a field has a value."""
-    input = context.browser.find_element(By.ID, field_id)
-    actual_text = input.get_attribute("value")
+    input_element = context.browser.find_element(By.ID, field_id)
+    actual_text = input_element.get_attribute("value")
     assert (
         actual_text == text
     ), f"Expected {text!r} in {field_id} but got {actual_text!r}."
@@ -242,8 +245,8 @@ def step_impl(context, text, field_id):
 @when('we write the date {day}/{month}/{year} into "{field_id}"')
 def step_impl(context, year, month, day, field_id):
     """Write text into text input."""
-    input = context.browser.find_element(By.ID, field_id)
-    input.clear()  # see https://stackoverflow.com/a/7809907/1320237
+    input_element = context.browser.find_element(By.ID, field_id)
+    input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
     # construct the text, see https://stackoverflow.com/a/35855868/1320237
     text = context.browser.execute_script(
         f"return (new Date({year}, {month} - 1, {day})).toLocaleDateString()"
@@ -252,17 +255,17 @@ def step_impl(context, year, month, day, field_id):
     # For filling inputs and date inputs
     # see https://stackoverflow.com/a/35127217/1320237
     # see https://stackoverflow.com/a/39532746/1320237
-    ActionChains(context.browser).move_to_element(input).click().send_keys(
+    ActionChains(context.browser).move_to_element(input_element).click().send_keys(
         text
     ).perform()
-    value = input.get_attribute("value")
+    value = input_element.get_attribute("value")
     if not value:
         # this works in Chrome, see https://stackoverflow.com/a/21314269/1320237
         context.browser.execute_script(
             f'document.getElementById({field_id!r}).value = "{year}-{month}-{day}"'
         )
-        input.send_keys(Keys.CONTROL)
-        value = input.get_attribute("value")
+        input_element.send_keys(Keys.CONTROL)
+        value = input_element.get_attribute("value")
     print(f"{field_id}.value == {value}")
 
 
@@ -274,7 +277,8 @@ def step_impl(context, choice, select_id):
     select = Select(element)
     select.select_by_visible_text(choice)
     print(
-        f"{select_id} selected {element.get_attribute('value')!r} though text {choice!r}"
+        f"{select_id} selected {element.get_attribute('value')!r} "
+        f"though text {choice!r}"
     )
 
 
@@ -315,31 +319,32 @@ def step_impl(context, tag, text):
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
     elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
-    assert (
-        len(elements) == 1
-    ), f"There should only be one {tag} with the text {text!r} but there are {len(elements)}."
+    assert len(elements) == 1, (
+        f"There should only be one {tag} with the text "
+        r"{text!r} but there are {len(elements)}."
+    )
     element = elements[0]
     element.click()
 
 
 @then('the checkbox with id "{id:S}" is checked')
-def step_impl(context, id):
+def step_impl(context, eid):
     """Check the checkbox status."""
-    element = context.browser.find_element(By.ID, id)
+    element = context.browser.find_element(By.ID, eid)
     assert element.get_attribute("checked")
 
 
 @then('the checkbox with id "{id}" is not checked')
-def step_impl(context, id):
+def step_impl(context, eid):
     """Check the checkbox status."""
-    element = context.browser.find_element(By.ID, id)
+    element = context.browser.find_element(By.ID, eid)
     assert not element.get_attribute("checked")
 
 
 @when('we click on the {tag_name:S} with id "{id}"')
-def step_impl(context, tag_name, id):
+def step_impl(context, tag_name, eid):
     """Click on elements with an id."""
-    element = context.browser.find_element(By.ID, id)
+    element = context.browser.find_element(By.ID, eid)
     element.click()
 
 
@@ -373,10 +378,10 @@ def assert_tag_with_text_attribute_equals(
         len(elements) >= 1
     ), f"Expected at least one <{tag}> with text {text!r} but got {len(elements)}."
     actual_values = [element.get_attribute(attribute) for element in elements]
-    assert (
-        expected_value in actual_values
-    ), f"Expected a <{tag}> with the text {text!r} to have an attribute {attribute} with the value \n{expected_value!r} but the values are \n{{}}.".format(
-        "\n".join(map(repr, actual_values))
+    assert expected_value in actual_values, (
+        f"Expected a <{tag}> with the text {text!r} to have an attribute "
+        f"{attribute} with the value \n{expected_value!r} but the values are "
+        f"\n{{}}.".format("\n".join(map(repr, actual_values)))
     )
 
 
