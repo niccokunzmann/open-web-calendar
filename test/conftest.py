@@ -2,27 +2,27 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
-import os
 import sys
+from pathlib import Path
 from unittest.mock import Mock
 
 import pytest
 import requests
 
 # constants
-HERE = os.path.dirname(__file__) or "."
-CALENDAR_DIRECTORY = os.path.join(HERE, "..", "features", "calendars")
+HERE = Path(__file__).parent
+CALENDAR_DIRECTORY = HERE / ".." / "features" / "calendars"
 
 # relative imports
-sys.path.append(os.path.join(os.path.abspath(HERE), ".."))
-sys.path.append(os.path.abspath(HERE))
-from app import DEFAULT_SPECIFICATION, cache_url
+sys.path.append(HERE.absolute() / "..")
+sys.path.append(HERE.absolute())
+from app import DEFAULT_SPECIFICATION, cache_url  # noqa: E402
 
 DEFAULT_SPECIFICATION["url"] = []
 
 
 @pytest.fixture(autouse=True)
-def no_requests(monkeypatch):
+def _no_requests(monkeypatch):
     """Prevent requests from sending out requests
 
     See https://docs.pytest.org/en/latest/monkeypatch.html#example-preventing-requests-from-remote-operations
@@ -74,8 +74,8 @@ def runner(app):
 
 
 calendar_files = {}
-for file in os.listdir(CALENDAR_DIRECTORY):
-    with open(os.path.join(CALENDAR_DIRECTORY, file)) as f:
+for file in CALENDAR_DIRECTORY.iterdir():
+    with file.open() as f:
         calendar_files[file] = f.read()
 
 
