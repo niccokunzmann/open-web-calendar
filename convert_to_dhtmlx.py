@@ -1,9 +1,9 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+from __future__ import annotations
 
 import datetime
-from typing import List
 from urllib.parse import unquote
 
 import pytz
@@ -148,7 +148,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         today = (
             parse_date(self.specification["date"])
             if self.specification.get("date")
-            else datetime.datetime.utcnow()
+            else datetime.datetime.now(self.timezone)
         )
         to_date = (
             parse_date(self.specification["to"])
@@ -167,7 +167,7 @@ class ConvertToDhtmlx(ConversionStrategy):
                     json_event = self.convert_ical_event(calendar_index, event)
                     self.components.append(json_event)
 
-    def get_event_classes(self, event) -> List[str]:
+    def get_event_classes(self, event) -> list[str]:
         """Return the CSS classes that should be used for the event styles."""
         classes = []
         for attr in ["UID", "TRANSP", "STATUS", "CLASS", "PRIORITY"]:
@@ -180,7 +180,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             classes.append(f"CATEGORY-{category}")
         return classes
 
-    def get_event_categories(self, event) -> List[str]:
+    def get_event_categories(self, event) -> list[str]:
         """Return the categories of the event."""
         categories = event.get("CATEGORIES", None)
         return categories.cats if categories is not None else []
