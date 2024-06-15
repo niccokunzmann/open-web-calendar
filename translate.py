@@ -47,7 +47,7 @@ for language in os.listdir(TRANSLATIONS_PATH):
 def string(language: str, file: str, tid: str) -> str:
     """Translate a string identified by language, file and id."""
     if "." in tid:
-        file, tid = id.split(".", 1)
+        file, tid = tid.split(".", 1)
     language = LANGUAGE_ALIAS.get(language, language)
     for source in (
         TRANSLATIONS.get(language, {}).get(file, {}),

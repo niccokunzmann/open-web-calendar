@@ -178,7 +178,7 @@ def get_specification(query=None):
                 value[i] = False
             elif value[i] in ("true", "True"):
                 value[i] = True
-        if len(value) == 1 and isinstance(specification.get(parameter), list):
+        if len(value) == 1 and not isinstance(specification.get(parameter), list):
             value = value[0]
         specification[parameter] = value
 
