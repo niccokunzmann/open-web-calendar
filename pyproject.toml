@@ -51,6 +51,7 @@ extend-safe-fixes = [
     "PT012",  # pytest.raises() block should contain a single simple statement
     "PT015",  # Assertion always fails, replace with pytest.fail()
     "T201",   # print found
+    "T203",   # `pprint` found
 ]
 "features/*" = [
     "F811",   # Redefinition of unused `step_impl` from line 52
@@ -64,4 +65,8 @@ extend-safe-fixes = [
   "S307",
   "PTH103",
   "PLW2901"
+]
+
+"docs/hooks/set_canonical_url.py" = [
+  "INP001"    # File `docs/hooks/set_canonical_url.py` is part of an implicit namespace package. Add an `__init__.py`.
 ]

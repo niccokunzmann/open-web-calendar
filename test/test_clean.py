@@ -12,15 +12,15 @@ from clean_html import clean_html, remove_html
 
 
 @pytest.mark.parametrize(
-    ("input", "spec", "expected_output"),
+    ("html", "spec", "expected_output"),
     [
         ("<script>js</script>a", {"clean_html_scripts": True}, "a"),
         ("<malicious>", {"clean_html_remove_unknown_tags": True}, ""),
     ],
 )
-def test_clean_html_from_spec(input, spec, expected_output):
+def test_clean_html_from_spec(html, spec, expected_output):
     """Specify how to clean the HTML content."""
-    output = clean_html(input, spec=spec).replace("\n", "")
+    output = clean_html(html, spec=spec).replace("\n", "")
     assert output == expected_output
 
 
