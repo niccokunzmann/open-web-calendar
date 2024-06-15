@@ -1,13 +1,14 @@
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# nissara pengpol <fon_nissara@hotmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-26 22:54+0200\n"
-"PO-Revision-Date: 2024-05-26 20:54+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-06-14 11:23+0000\n"
+"Last-Translator: nissara pengpol <fon_nissara@hotmail.com>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,28 +17,28 @@ msgstr ""
 "X-Generator: Weblate 5.6-dev\n"
 
 msgid "Getting Started"
-msgstr ""
+msgstr "เริ่มต้นใช้งาน"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
+msgstr "ดูคุณลักษณะหรือลองใช้ Open Web Calendar ได้ด้วยตัวคุณเอง!"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
 msgid "A highly flexible calendar display for your website."
-msgstr ""
+msgstr "การแสดงปฏิทินที่มีความยืดหยุ่นสูงสำหรับเว็บไซต์ของคุณ"
 
 msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
+msgstr "ปรับแต่งปฏิทินในแบบของตัวคุณเองได้ภายในไม่กี่นาที!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
+msgstr "**[ลองใช้ตอนนี้!](https://open-web-calendar.hosted.quelltext.eu)**"
 
 msgid "Features"
-msgstr ""
+msgstr "คุณสมบัติ"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "การซิงค์เหตุการณ์ทันที"
 
 msgid "<center>✔</center>"
 msgstr ""

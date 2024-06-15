@@ -1,31 +1,35 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# nissara pengpol <fon_nissara@hotmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 05:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-06-14 11:23+0000\n"
+"Last-Translator: nissara pengpol <fon_nissara@hotmail.com>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/documentation-common-translations/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
+"ฝังปฏิทินเว็บที่ปรับแต่งได้สูงลงในหน้าเว็บไซต์ของคุณโดยใช้ลิงก์แหล่งที่มาของ"
+" ICal"
 
 msgid "Open Web Calendar"
-msgstr ""
+msgstr "Open Web Calendar"
 
 msgid "Permanent link"
-msgstr ""
+msgstr "ลิงค์ถาวร"
 
 msgid "See also:"
-msgstr ""
+msgstr "ดูเพิ่มเติม:"
 
 #, fuzzy
 msgid ""
@@ -35,14 +39,15 @@ msgstr ""
 "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/master/default_specification.yml"
 
-#, fuzzy
 msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
+msgstr "[ตั้งค่าพร็อกซี่]: #ssrf-protection-with-a-proxy-server"
 
 msgid ""
 "After you have set up your own server, you can [configure the "
 "behavior](../configure)."
 msgstr ""
+"หลังจากที่คุณตั้งค่าเซิร์ฟเวอร์ของคุณเองแล้ว คุณสามารถ "
+"[กำหนดค่าลักษณะการทำงาน](../configure) ได้"
 
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"

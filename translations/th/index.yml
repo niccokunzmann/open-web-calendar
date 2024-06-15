@@ -1,1 +1,10 @@
-{}
+about: โครงการ Open Web Calendar ใช้ปฏิทิน ICS/ICal แบบออนไลน์และแสดงลงในปฏิทินเดียว
+  คุณสามารถใช้กับ Nextcloud, Outlook, Google Calendar, Meetup และระบบปฏิทินอื่นๆ ที่ใช้มาตรฐาน
+  ICS
+calendar-code: 'หากต้องการฝังปฏิทิน ให้ใช้โค้ดนี้บนเว็บไซต์ของคุณ:'
+title-title: ชื่อหัวข้อ
+starting-date-title: วันที่เริ่มต้น
+calendar-urls: 'หากต้องการรวมปฏิทินหลายรายการ โปรดป้อน URL ของปฏิทิน ICS ที่นี่:'
+section-customization: คุณสามารถปรับแต่งปฏิทินเพิ่มเติมได้
+calendar-code-execution: คุณสามารถดูปฏิทินผลลัพธ์ได้ที่ด้านล่าง
+title-description: 'หากต้องการเปลี่ยนชื่อ โปรดป้อนชื่อปฏิทินที่นี่:'

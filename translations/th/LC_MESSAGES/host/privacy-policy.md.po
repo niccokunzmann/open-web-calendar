@@ -1,42 +1,52 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# nissara pengpol <fon_nissara@hotmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 05:04+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-06-14 11:24+0000\n"
+"Last-Translator: nissara pengpol <fon_nissara@hotmail.com>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/documentation-privacy-policy/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 msgid "Open Web Calendar Privacy Policy"
-msgstr ""
+msgstr "นโยบายความเป็นส่วนตัวของ Open Web Calendar"
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "นโยบายความเป็นส่วนตัว"
 
 msgid ""
 "The Open Web Calendar does not collect any personal information from "
 "visitors of the website."
 msgstr ""
+"Open Web Calendar จะไม่รวบรวมข้อมูลส่วนบุคคลใด ๆ จากผู้เยี่ยมชมเว็บไซต์"
 
 msgid ""
 "Calendars may contain personal information. For the purpose of serving the "
 "content fast, the calendar files are cached for a short while. As expected, "
 "content of calendars is only processed to display them as a website."
 msgstr ""
+"ปฏิทินอาจมีข้อมูลส่วนบุคคล "
+"เพื่อวัตถุประสงค์ในการให้บริการเนื้อหาอย่างรวดเร็ว "
+"ไฟล์ปฏิทินจะถูกแคชไว้ชั่วคราว "
+"เนื้อหาของปฏิทินจะได้รับการประมวลผลเพื่อแสดงเป็นเว็บไซต์เท่านั้น"
 
 msgid "Documentation Website"
-msgstr ""
+msgstr "เว็บไซต์เอกสาร"
 
+#, fuzzy
 msgid ""
 "This website contains the project documentation. It is hosted on GitHub "
 "Pages. Their [Privacy Policy][privacy-policy] applies."
 msgstr ""
+"เว็บไซต์นี้มีเอกสารประกอบโครงการ โฮสต์บนหน้า GitHub [นโยบายความเป็นส่วนตัว] "
+"[นโยบายความเป็นส่วนตัว] จึงมีผลบังคับใช้ด้วย"
 
 #, fuzzy
 msgid ""
