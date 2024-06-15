@@ -6,32 +6,31 @@
 
 see https://behave.readthedocs.io/en/stable/practical_tips.html#selenium-example
 """
-import  sys
+
 import os
+import sys
 
 HERE = os.path.dirname(__file__ or ".")
 sys.path.append(os.path.join(HERE, ".."))
 
-from behave import fixture, use_fixture
-from selenium.webdriver import Firefox, FirefoxProfile
-from selenium import webdriver
-from app import app
-from werkzeug import run_simple
-import multiprocessing
-from selenium.webdriver import FirefoxOptions
-from selenium.webdriver.firefox.service import Service
-import tempfile
-from selenium.webdriver.common.by import By
-import shutil
-from behave.log_capture import capture
 import http.server
+import multiprocessing
 import socketserver
-from selenium.webdriver.chrome.service import Service
 import subprocess
 
-def locate_command(command:str):
+from behave import fixture, use_fixture
+from selenium import webdriver
+from selenium.webdriver import Firefox, FirefoxOptions
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service
+from werkzeug import run_simple
+
+from app import app
+
+
+def locate_command(command: str):
     """Locate a command on the command line or return ''."""
-    code, output = subprocess.getstatusoutput(f'which {command}')
+    code, output = subprocess.getstatusoutput(f"which {command}")
     if code == 0:
         return output.strip()
     return ""
@@ -48,7 +47,7 @@ def browser_firefox(context):
     # see https://stackoverflow.com/a/71766991/1320237
     geckodriver_path = "/snap/bin/geckodriver"  # specify the path to your geckodriver
     # Set the language for the tests
-    opts.set_preference('intl.accept_languages', 'en-US, en')
+    opts.set_preference("intl.accept_languages", "en-US, en")
     # construct the arguments
     kw = dict(options=opts)
     if os.path.exists(geckodriver_path):
@@ -67,13 +66,25 @@ def browser_chrome(context):
     # for an example
     # lots of options come from https://stackoverflow.com/a/52340526/1320237
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless") # from https://stackoverflow.com/q/56637973/1320237
-    options.add_argument("start-maximized"); # https://stackoverflow.com/a/26283818/1689770
-    options.add_argument("enable-automation"); # https://stackoverflow.com/a/43840128/1689770
-    options.add_argument("--no-sandbox"); # https://stackoverflow.com/a/50725918/1689770
-    options.add_argument("--disable-dev-shm-usage"); # https://stackoverflow.com/a/50725918/1689770
-    options.add_argument("--disable-browser-side-navigation"); # https://stackoverflow.com/a/49123152/1689770
-    options.add_argument("--disable-gpu"); # https://stackoverflow.com/questions/51959986/how-to-solve-selenium-chromedriver-timed-out-receiving-message-from-renderer-exc
+    options.add_argument(
+        "--headless"
+    )  # from https://stackoverflow.com/q/56637973/1320237
+    options.add_argument(
+        "start-maximized"
+    )  # https://stackoverflow.com/a/26283818/1689770
+    options.add_argument(
+        "enable-automation"
+    )  # https://stackoverflow.com/a/43840128/1689770
+    options.add_argument("--no-sandbox")  # https://stackoverflow.com/a/50725918/1689770
+    options.add_argument(
+        "--disable-dev-shm-usage"
+    )  # https://stackoverflow.com/a/50725918/1689770
+    options.add_argument(
+        "--disable-browser-side-navigation"
+    )  # https://stackoverflow.com/a/49123152/1689770
+    options.add_argument(
+        "--disable-gpu"
+    )  # https://stackoverflow.com/questions/51959986/how-to-solve-selenium-chromedriver-timed-out-receiving-message-from-renderer-exc
 
     # executable_path from https://stackoverflow.com/a/76550727/1320237
     path = locate_command("chromium.chromedriver") or locate_command("chromedriver")
@@ -82,11 +93,13 @@ def browser_chrome(context):
     yield context.browser
     context.browser.quit()
 
+
 @fixture
 def browser_safari(context):
     context.browser = webdriver.Safari()
     yield context.browser
     context.browser.quit()
+
 
 browsers = {
     "firefox": browser_firefox,
@@ -113,6 +126,7 @@ def serve_calendar_files(host, port, directory=os.path.join(HERE, "calendars")):
     class Handler(http.server.SimpleHTTPRequestHandler):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, directory=directory, **kwargs)
+
     try:
         with socketserver.TCPServer((host, port), Handler) as httpd:
             print("serving calendars at port", port)
@@ -124,6 +138,7 @@ def serve_calendar_files(host, port, directory=os.path.join(HERE, "calendars")):
 def get_free_port(start=10000, end=60000):
     """Return a free port number."""
     import random
+
     port = random.randint(start, end)
     return port
 
@@ -147,7 +162,9 @@ def calendars_server(context):
     calendar_port = 8001
     # from https://werkzeug.palletsprojects.com/en/2.1.x/serving/#shutting-down-the-server
     # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
-    p = multiprocessing.Process(target=serve_calendar_files, args=("localhost", calendar_port))
+    p = multiprocessing.Process(
+        target=serve_calendar_files, args=("localhost", calendar_port)
+    )
     p.start()
     context.calendars_url = f"http://localhost:{calendar_port}/"
     yield
@@ -164,6 +181,4 @@ def before_all(context):
 
 def before_scenario(context, scenario):
     """Reset the calendar for each scenario."""
-    context.specification = {
-        "url": []
-    }
+    context.specification = {"url": []}

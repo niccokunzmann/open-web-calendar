@@ -3,17 +3,20 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 import datetime
-from icalendar import Event, Calendar, Timezone
-from icalendar.prop import vDDDTypes
+
 from flask import Response
+from icalendar import Calendar, Event, Timezone
+from icalendar.prop import vDDDTypes
+
 from conversion_base import ConversionStrategy
+
 
 class ConvertToICS(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern."""
 
     def created(self):
         self.title = self.specification["title"]
-        self.timezones = set() # ids
+        self.timezones = set()  # ids
 
     def is_event(self, component):
         """Whether a component is an event."""
@@ -54,7 +57,7 @@ class ConvertToICS(ConversionStrategy):
         calendar["CALSCALE"] = "GREGORIAN"
         calendar["METHOD"] = "PUBLISH"
         calendar["X-WR-CALNAME"] = self.title
-        calendar["X-PROD-SOURCE"] = "https://github.com/niccokunzmann/open-web-calendar/"
+        calendar["X-PROD-SOURCE"] = self.specification["source_code"]
         return calendar
 
     def merge(self):

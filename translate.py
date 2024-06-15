@@ -3,26 +3,29 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 """Translations of the program into other languages."""
-import os
-import yaml
-from html import escape
-from markupsafe import Markup
-from collections import defaultdict
 
-HERE = os.path.dirname(__file__) or "."
-TRANSLATIONS_PATH = os.path.join(HERE, "translations")
+import os
+from collections import defaultdict
+from html import escape
+from pathlib import Path
+
+import yaml
+from markupsafe import Markup
+
+HERE = Path(__file__).parent
+TRANSLATIONS_PATH = HERE / "translations"
 
 DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
-TRANSLATIONS = {} # lang -> file -> id -> string
-LANGUAGE_ALIAS = { # name also usable -> name in the translations directory
+TRANSLATIONS = {}  # lang -> file -> id -> string
+LANGUAGE_ALIAS = {  # name also usable -> name in the translations directory
     "nb": "nb_NO",
     "ua": "uk",
     "jp": "ja",
     "cn": "zh_Hans",
     "no": "nb_NO",
-} # rename language codes
+}  # rename language codes
 UNUSED = "-unused"
 
 # Parse the directory structure.
@@ -35,9 +38,10 @@ for language in os.listdir(TRANSLATIONS_PATH):
         if ext != ".yml":
             continue
         if name.endswith(UNUSED):
-            name = name[:-len(UNUSED)]
+            name = name[: -len(UNUSED)]
         with open(os.path.join(language_path, file)) as f:
             file_translations[name].update(yaml.safe_load(f))
+
 
 def string(language: str, file: str, id: str) -> str:
     """Translate a string identified by language, file and id."""
@@ -54,6 +58,7 @@ def string(language: str, file: str, id: str) -> str:
             return source[id]
     raise KeyError(f"The translation id '{id}' was not to be found in any file.")
 
+
 def html(language: str, file: str, id: str, **template_replacements) -> str:
     """Translate the string identified
     by language, file and id and return an html element.
@@ -69,16 +74,81 @@ def html(language: str, file: str, id: str, **template_replacements) -> str:
     return Markup(f'<span id="translate-{id}" class="translation">{inner_text}</span>')
 
 
-CALENDAR_LABELS = ["dhx_cal_today_button", "day_tab", "week_tab", "month_tab", "new_event", "icon_save", "icon_cancel", "icon_details", "icon_edit", "icon_delete", "confirm_closing", "confirm_deleting", "section_description", "section_time", "full_day", "confirm_recurring", "section_recurring", "button_recurring", "button_recurring_open", "button_edit_series", "button_edit_occurrence", "agenda_tab", "date", "description", "year_tab", "week_agenda_tab", "grid_tab", "drag_to_create", "drag_to_move", "message_ok", "message_cancel", "next", "prev", "year", "month", "day", "hour", "minute", "repeat_radio_day", "repeat_radio_week", "repeat_radio_month", "repeat_radio_year", "repeat_radio_day_type", "repeat_text_day_count", "repeat_radio_day_type2", "repeat_week", "repeat_text_week_count", "repeat_radio_month_type", "repeat_radio_month_start", "repeat_text_month_day", "repeat_text_month_count", "repeat_text_month_count2_before", "repeat_text_month_count2_after", "repeat_year_label", "select_year_day2", "repeat_text_year_day", "select_year_month", "repeat_radio_end", "repeat_text_occurences_count", "repeat_radio_end2", "repeat_radio_end3"]
+CALENDAR_LABELS = [
+    "dhx_cal_today_button",
+    "day_tab",
+    "week_tab",
+    "month_tab",
+    "new_event",
+    "icon_save",
+    "icon_cancel",
+    "icon_details",
+    "icon_edit",
+    "icon_delete",
+    "confirm_closing",
+    "confirm_deleting",
+    "section_description",
+    "section_time",
+    "full_day",
+    "confirm_recurring",
+    "section_recurring",
+    "button_recurring",
+    "button_recurring_open",
+    "button_edit_series",
+    "button_edit_occurrence",
+    "agenda_tab",
+    "date",
+    "description",
+    "year_tab",
+    "week_agenda_tab",
+    "grid_tab",
+    "drag_to_create",
+    "drag_to_move",
+    "message_ok",
+    "message_cancel",
+    "next",
+    "prev",
+    "year",
+    "month",
+    "day",
+    "hour",
+    "minute",
+    "repeat_radio_day",
+    "repeat_radio_week",
+    "repeat_radio_month",
+    "repeat_radio_year",
+    "repeat_radio_day_type",
+    "repeat_text_day_count",
+    "repeat_radio_day_type2",
+    "repeat_week",
+    "repeat_text_week_count",
+    "repeat_radio_month_type",
+    "repeat_radio_month_start",
+    "repeat_text_month_day",
+    "repeat_text_month_count",
+    "repeat_text_month_count2_before",
+    "repeat_text_month_count2_after",
+    "repeat_year_label",
+    "select_year_day2",
+    "repeat_text_year_day",
+    "select_year_month",
+    "repeat_radio_end",
+    "repeat_text_occurences_count",
+    "repeat_radio_end2",
+    "repeat_radio_end3",
+]
+
 
 def dhtmlx(language: str):
     """Create a dhtmlx scheduler custom locale from our translations.
 
     See also https://docs.dhtmlx.com/scheduler/localization.html
     """
+
     def cal(id):
         """Shortcut to get an id for the calendar."""
         return string(language, CALENDAR_FILE, id)
+
     result = {
         "labels": {
             "month_for_recurring": [
@@ -103,7 +173,7 @@ def dhtmlx(language: str):
                 cal("labels_day_for_recurring_thu"),
                 cal("labels_day_for_recurring_fri"),
                 cal("labels_day_for_recurring_sat"),
-            ]
+            ],
         },
         "date": {
             "month_full": [
@@ -151,8 +221,8 @@ def dhtmlx(language: str):
                 cal("date_day_short_thu"),
                 cal("date_day_short_fri"),
                 cal("date_day_short_sat"),
-            ]
-        }
+            ],
+        },
     }
     for label in CALENDAR_LABELS:
         result["labels"][label] = cal("labels_" + label)
@@ -175,6 +245,7 @@ def dhtmlx_languages() -> list:
 
 FILES = tuple(TRANSLATIONS[DEFAULT_LANGUAGE])
 
+
 def strings_translated(language, files=FILES) -> int:
     """Return the number of translations strings."""
     language = LANGUAGE_ALIAS.get(language, language)
@@ -183,7 +254,11 @@ def strings_translated(language, files=FILES) -> int:
 
 def fraction_translated(language, files=FILES) -> float:
     """Return the 0 <= fraction <= 1 of translation."""
-    return 1.0*strings_translated(language, files) / strings_translated(DEFAULT_LANGUAGE, files)
+    return (
+        1.0
+        * strings_translated(language, files)
+        / strings_translated(DEFAULT_LANGUAGE, files)
+    )
 
 
 def languages_for_the_index_file(minimal_fraction_translated=0.5):
@@ -196,17 +271,30 @@ def languages_for_the_index_file(minimal_fraction_translated=0.5):
         fraction = fraction_translated(code, files=files)
         if fraction >= minimal_fraction_translated:
             for other in result[:]:
-                 if other[1] == code:
-                     # merge languages with duplicate code
-                     language = language + "/" + other[0]
-                     result.remove(other)
+                if other[1] == code:
+                    # merge languages with duplicate code
+                    language = language + "/" + other[0]
+                    result.remove(other)
             result.append([language, code, int(fraction * 100)])
     return result
 
-__all__ = ["html", "string", "dhtmlx", "dhtmlx_languages", "fraction_translated", "strings_translated", "languages_for_the_index_file"]
+
+__all__ = [
+    "html",
+    "string",
+    "dhtmlx",
+    "dhtmlx_languages",
+    "fraction_translated",
+    "strings_translated",
+    "languages_for_the_index_file",
+]
 
 
 if __name__ == "__main__":
     for language in sorted(TRANSLATIONS):
-        print(f"{language} is {int(fraction_translated(language) * 100)}% translated: {strings_translated(language)}/{strings_translated(DEFAULT_LANGUAGE)}")
-    print(f"These languages will be offered to the user: {', '.join(map(str, languages_for_the_index_file()))}")
+        print(
+            f"{language} is {int(fraction_translated(language) * 100)}% translated: {strings_translated(language)}/{strings_translated(DEFAULT_LANGUAGE)}"
+        )
+    print(
+        f"These languages will be offered to the user: {', '.join(map(str, languages_for_the_index_file()))}"
+    )

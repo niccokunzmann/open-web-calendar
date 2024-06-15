@@ -4,48 +4,57 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
-from flask import Flask, render_template, make_response, request, jsonify, \
-    redirect, send_from_directory, Response
-from flask_allowedhosts import limit_hosts
-from flask_caching import Cache
+import io
 import json
 import os
 import tempfile
-import requests
-import icalendar
-import datetime
-from dateutil.rrule import rrulestr
-from pprint import pprint
-import yaml
 import traceback
-import io
-import sys
+from pathlib import Path
+
+import pytz
+import requests
+import yaml
+from flask import (
+    Flask,
+    Response,
+    jsonify,
+    make_response,
+    render_template,
+    request,
+    send_from_directory,
+)
+from flask_allowedhosts import limit_hosts
+from flask_caching import Cache
+
+import translate
 from convert_to_dhtmlx import ConvertToDhtmlx
 from convert_to_ics import ConvertToICS
-import pytz
-import translate
-import mimetypes
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
 PORT = int(os.environ.get("PORT", "5000"))
-CACHE_REQUESTED_URLS_FOR_SECONDS = int(os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600))
+CACHE_REQUESTED_URLS_FOR_SECONDS = int(
+    os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
+)
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
-if ALLOWED_HOSTS == [""]:
-    ALLOWED_HOSTS =  []
+if [""] == ALLOWED_HOSTS:
+    ALLOWED_HOSTS = []
+REQUESTS_TIMEOUT = int(os.environ.get("SOURCE_TIMEOUT", "60"))
 
 # constants
-HERE = os.path.dirname(__file__) or "."
-DEFAULT_SPECIFICATION_PATH = os.path.join(HERE, "default_specification.yml")
+HERE = Path(__file__).parent
+DEFAULT_SPECIFICATION_PATH = HERE / "default_specification.yml"
 TEMPLATE_FOLDER_NAME = "templates"
-TEMPLATE_FOLDER = os.path.join(HERE, TEMPLATE_FOLDER_NAME)
+TEMPLATE_FOLDER = HERE / TEMPLATE_FOLDER_NAME
 CALENDARS_TEMPLATE_FOLDER_NAME = "calendars"
-CALENDAR_TEMPLATE_FOLDER = os.path.join(TEMPLATE_FOLDER, CALENDARS_TEMPLATE_FOLDER_NAME)
+CALENDAR_TEMPLATE_FOLDER = TEMPLATE_FOLDER / CALENDARS_TEMPLATE_FOLDER_NAME
 STATIC_FOLDER_NAME = "static"
-STATIC_FOLDER_PATH = os.path.join(HERE, STATIC_FOLDER_NAME)
-DHTMLX_LANGUAGES_FILE = os.path.join(STATIC_FOLDER_PATH, "js", "dhtmlx", "locale", "languages.json")
+STATIC_FOLDER_PATH = HERE / STATIC_FOLDER_NAME
+DHTMLX_LANGUAGES_FILE = (
+    STATIC_FOLDER_PATH / "js" / "dhtmlx" / "locale" / "languages.json"
+)
 DEFAULT_REQUEST_HEADERS = {
-  "user-agent": "open-web-calendar",
+    "user-agent": "open-web-calendar",
 }
 
 # specification
@@ -55,13 +64,19 @@ PARAM_SPECIFICATION_URL = "specification_url"
 app = Flask(__name__, template_folder="templates")
 # Check Configuring Flask-Cache section for more details
 CACHE_CONFIG = {
-    'CACHE_TYPE': 'FileSystemCache',
-    'CACHE_DIR': tempfile.mkdtemp(prefix="owc-cache-")}
+    "CACHE_TYPE": "FileSystemCache",
+    "CACHE_DIR": tempfile.mkdtemp(prefix="owc-cache-"),
+}
 cache = Cache(app, config=CACHE_CONFIG)
 
 # caching
 
 __URL_CACHE = {}
+
+# This is an in-app override of the default_specification.yml
+DEFAULT_SPECIFICATION = {}
+
+
 def cache_url(url, text):
     """Cache the value of a url."""
     __URL_CACHE[url] = text
@@ -82,48 +97,43 @@ def add_header(r):
     r.headers["Expires"] = "0"
     return r
 
+
 # configuration
+
 
 def get_configuration():
     """Return the configuration for the browser"""
-    config = {
+    return {
         "default_specification": get_default_specification(),
-        "timezones": pytz.all_timezones, # see https://stackoverflow.com/a/13867319
-        "dhtmlx": {
-            "languages": translate.dhtmlx_languages()
-        },
-        "index": {
-            "languages": translate.languages_for_the_index_file()
-        }
+        "timezones": pytz.all_timezones,  # see https://stackoverflow.com/a/13867319
+        "dhtmlx": {"languages": translate.dhtmlx_languages()},
+        "index": {"languages": translate.languages_for_the_index_file()},
     }
-    return config
 
-def set_JS_headers(response):
+
+def set_js_headers(response):
     response = make_response(response)
-    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers["Access-Control-Allow-Origin"] = "*"
     # see https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
-    response.headers['Access-Control-Allow-Headers'] = request.headers.get("Access-Control-Request-Headers")
-    response.headers['Content-Type'] = 'text/calendar'
+    response.headers["Access-Control-Allow-Headers"] = request.headers.get(
+        "Access-Control-Request-Headers"
+    )
+    if "Content-Type" not in response.headers:
+        response.headers["Content-Type"] = "text/calendar"
     return response
 
-def set_js_headers(func):
-    """Set the response headers for a valid CORS request."""
-    def with_js_response(*args, **kw):
-        return set_JS_headers(func(*args, **kw))
-    return with_js_response
 
-
-def make_js_file_response(content:str) -> Response:
+def make_js_file_response(content: str) -> Response:
     """Modify the response to set the content type for .js files."""
     response = make_response(content)
-    set_JS_headers(response)
-    response.headers['Content-Type'] = "text/javascript"
+    set_js_headers(response)
+    response.headers["Content-Type"] = "text/javascript"
     return response
 
 
 @cache.memoize(
-    CACHE_REQUESTED_URLS_FOR_SECONDS,
-    forced_update=lambda: bool(__URL_CACHE))
+    CACHE_REQUESTED_URLS_FOR_SECONDS, forced_update=lambda: bool(__URL_CACHE)
+)
 def get_text_from_url(url):
     """Return the text from a url.
 
@@ -131,12 +141,18 @@ def get_text_from_url(url):
     """
     if __URL_CACHE:
         return __URL_CACHE[url]
-    return requests.get(url, headers=DEFAULT_REQUEST_HEADERS).content
+    return requests.get(
+        url, headers=DEFAULT_REQUEST_HEADERS, timeout=REQUESTS_TIMEOUT
+    ).content
+
 
 def get_default_specification():
     """Return the default specification."""
-    with open(DEFAULT_SPECIFICATION_PATH, encoding="UTF-8") as file:
-        return yaml.safe_load(file)
+    with DEFAULT_SPECIFICATION_PATH.open(encoding="UTF-8") as file:
+        spec = yaml.safe_load(file)
+        spec.update(DEFAULT_SPECIFICATION)
+        return spec
+
 
 def get_specification(query=None):
     """Build the calendar specification."""
@@ -162,7 +178,7 @@ def get_specification(query=None):
                 value[i] = False
             elif value[i] in ("true", "True"):
                 value[i] = True
-        if len(value) == 1 and type(specification.get(parameter)) != list:
+        if len(value) == 1 and isinstance(specification.get(parameter), list):
             value = value[0]
         specification[parameter] = value
 
@@ -172,20 +188,25 @@ def get_specification(query=None):
 def get_query_string():
     return "?" + request.query_string.decode()
 
+
 def render_app_template(template, specification):
     translation_file = os.path.splitext(template)[0]
-    return render_template(template,
+    return render_template(
+        template,
         specification=specification,
-        configuration = get_configuration(),
+        configuration=get_configuration(),
         json=json,
         get_query_string=get_query_string,
-        html=lambda id, **template_replacements: translate.html(specification["language"], translation_file, id, **template_replacements)
+        html=lambda id, **template_replacements: translate.html(
+            specification["language"], translation_file, id, **template_replacements
+        ),
     )
 
-@app.route("/calendar.<type>", methods=['GET', 'OPTIONS'])
+
+@app.route("/calendar.<type>", methods=["GET", "OPTIONS"])
 @limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
-#@cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
+# @cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
 def get_calendar(type):
     """Return a calendar."""
     specification = get_specification()
@@ -194,26 +215,35 @@ def get_calendar(type):
     if type == "events.json":
         strategy = ConvertToDhtmlx(specification, get_text_from_url)
         strategy.retrieve_calendars()
-        return strategy.merge()
+        return set_js_headers(strategy.merge())
     if type == "ics":
         strategy = ConvertToICS(specification, get_text_from_url)
         strategy.retrieve_calendars()
-        return strategy.merge()
+        return set_js_headers(strategy.merge())
     if type == "html":
         template_name = specification["template"]
         all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
-        assert template_name in all_template_names, "Template names must be file names like \"{}\", not \"{}\".".format("\", \"".join(all_template_names), template_name)
+        assert (
+            template_name in all_template_names
+        ), 'Template names must be file names like "{}", not "{}".'.format(
+            '", "'.join(all_template_names), template_name
+        )
         template = CALENDARS_TEMPLATE_FOLDER_NAME + "/" + template_name
         return render_app_template(template, specification)
-    raise ValueError("Cannot use extension {}. Please see the documentation or report an error.".format(type))
+    raise ValueError(
+        f"Cannot use extension {type}. Please see the documentation or report an error."
+    )
+
 
 for folder_name in os.listdir(STATIC_FOLDER_PATH):
     folder_path = os.path.join(STATIC_FOLDER_PATH, folder_name)
     if not os.path.isdir(folder_path):
         continue
-    @app.route('/' + folder_name + '/<path:path>', endpoint="static/" + folder_name)
+
+    @app.route("/" + folder_name + "/<path:path>", endpoint="static/" + folder_name)
     def send_static(path, folder_name=folder_name):
-        return send_from_directory('static/' + folder_name, path)
+        return send_from_directory("static/" + folder_name, path)
+
 
 @app.route("/")
 @app.route("/index.html")
@@ -222,22 +252,32 @@ def serve_index():
     specification = get_specification()
     return render_app_template("index.html", specification)
 
+
 @app.route("/about.html")
 @limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 def serve_about():
     specification = get_specification()
     return render_app_template("about.html", specification)
 
+
 @app.route("/configuration.js")
 @limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 def serve_configuration():
-    return make_js_file_response("/* generated */\nconst configuration = {};".format(json.dumps(get_configuration())))
+    return make_js_file_response(
+        f"/* generated */\nconst configuration = {json.dumps(get_configuration())};"
+    )
+
 
 @app.route("/locale_<lang>.js")
 @limit_hosts(allowed_hosts=ALLOWED_HOSTS)
 def serve_locale(lang):
     """Serve the locale translations for the web frontend DHTMLX."""
-    return make_js_file_response(render_template("locale.js", locale=json.dumps(translate.dhtmlx(lang), indent="  ")))
+    return make_js_file_response(
+        render_template(
+            "locale.js", locale=json.dumps(translate.dhtmlx(lang), indent="  ")
+        )
+    )
+
 
 @app.errorhandler(500)
 def unhandledException(error):
@@ -247,7 +287,8 @@ def unhandledException(error):
     """
     file = io.StringIO()
     traceback.print_exception(type(error), error, error.__traceback__, file=file)
-    return """
+    return (
+        f"""
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
     <html>
         <head>
@@ -256,22 +297,26 @@ def unhandledException(error):
         <body>
             <h1>Internal Server Error</h1>
             <p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
-            <pre>\r\n{traceback}
+            <pre>\r\n{file.getvalue()}
             </pre>
         </body>
     </html>
-    """.format(traceback=file.getvalue()), 500 # return error code from https://stackoverflow.com/a/7824605
+    """,
+        500,
+    )  # return error code from https://stackoverflow.com/a/7824605
+
 
 @app.errorhandler(403)
 def host_not_allowed(error):
     return render_template(
         "403.html",
-        hostname=request.host.split(':')[0],
-        allowed_hosts=", ".join(ALLOWED_HOSTS)
-        ), 403
+        hostname=request.host.split(":")[0],
+        allowed_hosts=", ".join(ALLOWED_HOSTS),
+    ), 403
+
 
 # make serializable for multiprocessing
-#app.__reduce__ = lambda: __name__ + ".app"
+# app.__reduce__ = lambda: __name__ + ".app"
 
 if __name__ == "__main__":
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
