@@ -7,7 +7,7 @@ import translate
 
 
 @pytest.mark.parametrize(
-    ("language", "file", "id", "expected_value"),
+    ("language", "file", "tid", "expected_value"),
     [
         ("en", "calendar", "language", "English"),
         ("en", "_test", "id1", "test"),
@@ -23,7 +23,7 @@ def test_translate(language, file, tid, expected_value):
 
 
 @pytest.mark.parametrize(
-    ("language", "id", "value", "fill"),
+    ("language", "tid", "value", "fill"),
     [
         ("en", "id2", '<span id="translate-id2" class="translation">test2</span>', {}),
         (

@@ -7,13 +7,17 @@
 See https://github.com/niccokunzmann/open-web-calendar/issues/305
 """
 
+from __future__ import annotations
+
 from typing import NamedTuple
 
 import pytest
 
 from app import ConvertToDhtmlx
 
-CATEGORY = NamedTuple("CATEGORY", ["cats"])
+
+class CATEGORY(NamedTuple):
+    cats: list[str]
 
 
 @pytest.mark.parametrize(
