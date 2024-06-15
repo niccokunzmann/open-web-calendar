@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
-
 import pytest
 
 import translate
@@ -18,9 +17,9 @@ import translate
         ("en", "_test", "calendar.language", "English"),
     ],
 )
-def test_translate(language, file, id, expected_value):
+def test_translate(language, file, tid, expected_value):
     """Translate the id."""
-    assert translate.string(language, file, id) == expected_value
+    assert translate.string(language, file, tid) == expected_value
 
 
 @pytest.mark.parametrize(
@@ -53,9 +52,9 @@ def test_translate(language, file, id, expected_value):
         ),
     ],
 )
-def test_convert_html(language, id, value, fill):
+def test_convert_html(language, tid, value, fill):
     """Check that html conversion works."""
-    assert translate.html(language, "_test", id, **fill) == value
+    assert translate.html(language, "_test", tid, **fill) == value
 
 
 @pytest.mark.parametrize("language", ["en", "de"])
@@ -202,7 +201,9 @@ def test_ua_calendar():
     }
     cal = translate.dhtmlx("ua")
 
-    def compare(expected, b, gone=[]):
+    def compare(expected, b, gone=None):
+        if gone is None:
+            gone = []
         for k in expected:
             assert k in b
             if isinstance(expected[k], (list, str)):
