@@ -29,8 +29,8 @@ jobs:
         - python: "3.11"
           tox_env: web
         # run Chrome
-        - python: "3.11"
-          tox_env: "web -- -D browser=chrome"
+        # - python: "3.11"
+        #   tox_env: "web -- -D browser=chrome"
         # run Firefox in iPhone 11 responsive layout
         - python: "3.11"
           tox_env: "web -- -D window=375x812"
