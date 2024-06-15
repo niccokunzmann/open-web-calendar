@@ -327,21 +327,21 @@ def step_impl(context, tag, text):
     element.click()
 
 
-@then('the checkbox with id "{id:S}" is checked')
+@then('the checkbox with id "{eid:S}" is checked')
 def step_impl(context, eid):
     """Check the checkbox status."""
     element = context.browser.find_element(By.ID, eid)
     assert element.get_attribute("checked")
 
 
-@then('the checkbox with id "{id}" is not checked')
+@then('the checkbox with id "{eid}" is not checked')
 def step_impl(context, eid):
     """Check the checkbox status."""
     element = context.browser.find_element(By.ID, eid)
     assert not element.get_attribute("checked")
 
 
-@when('we click on the {tag_name:S} with id "{id}"')
+@when('we click on the {tag_name:S} with id "{eid}"')
 def step_impl(context, tag_name, eid):
     """Click on elements with an id."""
     element = context.browser.find_element(By.ID, eid)
