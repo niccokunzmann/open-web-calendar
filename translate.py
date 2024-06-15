@@ -15,6 +15,7 @@ from markupsafe import Markup
 HERE = Path(__file__).parent
 TRANSLATIONS_PATH = HERE / "translations"
 
+
 DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
@@ -32,21 +33,21 @@ UNUSED = "-unused"
 # translations/<lang>/<file>.yml
 for language in os.listdir(TRANSLATIONS_PATH):
     TRANSLATIONS[language] = file_translations = defaultdict(dict)
-    language_path = os.path.join(TRANSLATIONS_PATH, language)
-    for file in os.listdir(language_path):
-        name, ext = os.path.splitext(file)
-        if ext != ".yml":
+    language_path = TRANSLATIONS_PATH / language
+    for file in language_path.iterdir():
+        if file.suffix != ".yml":
             continue
+        name = file.name
         if name.endswith(UNUSED):
             name = name[: -len(UNUSED)]
-        with open(os.path.join(language_path, file)) as f:
+        with file.open() as f:
             file_translations[name].update(yaml.safe_load(f))
 
 
-def string(language: str, file: str, id: str) -> str:
+def string(language: str, file: str, tid: str) -> str:
     """Translate a string identified by language, file and id."""
-    if "." in id:
-        file, id = id.split(".", 1)
+    if "." in tid:
+        file, tid = id.split(".", 1)
     language = LANGUAGE_ALIAS.get(language, language)
     for source in (
         TRANSLATIONS.get(language, {}).get(file, {}),
@@ -54,24 +55,24 @@ def string(language: str, file: str, id: str) -> str:
         TRANSLATIONS.get(language, {}).get(DEFAULT_FILE, {}),
         TRANSLATIONS.get(DEFAULT_LANGUAGE, {}).get(DEFAULT_FILE, {}),
     ):
-        if id in source:
-            return source[id]
-    raise KeyError(f"The translation id '{id}' was not to be found in any file.")
+        if tid in source:
+            return source[tid]
+    raise KeyError(f"The translation id '{tid}' was not to be found in any file.")
 
 
-def html(language: str, file: str, id: str, **template_replacements) -> str:
+def html(language: str, file: str, tid: str, **template_replacements) -> str:
     """Translate the string identified
     by language, file and id and return an html element.
 
     Any id ending in -html will not be escaped but treated as raw HTML.
     """
-    inner_text = string(language, file, id)
+    inner_text = string(language, file, tid)
     if template_replacements:
         inner_text = inner_text.format(**template_replacements)
-    if not id.endswith("-html"):
+    if not tid.endswith("-html"):
         inner_text = escape(inner_text)
-    id = escape(id)
-    return Markup(f'<span id="translate-{id}" class="translation">{inner_text}</span>')
+    tid = escape(tid)
+    return Markup(f'<span id="translate-{tid}" class="translation">{inner_text}</span>')
 
 
 CALENDAR_LABELS = [
@@ -145,9 +146,9 @@ def dhtmlx(language: str):
     See also https://docs.dhtmlx.com/scheduler/localization.html
     """
 
-    def cal(id):
+    def cal(tid):
         """Shortcut to get an id for the calendar."""
-        return string(language, CALENDAR_FILE, id)
+        return string(language, CALENDAR_FILE, tid)
 
     result = {
         "labels": {
@@ -232,10 +233,10 @@ def dhtmlx(language: str):
 def dhtmlx_languages() -> list:
     """Return tuples of language name and language code."""
     result = set()
-    for id in ("language", "language-en"):
-        default = string(DEFAULT_LANGUAGE, "calendar", id)
+    for tid in ("language", "language-en"):
+        default = string(DEFAULT_LANGUAGE, "calendar", tid)
         for code in TRANSLATIONS:
-            language = string(code, "calendar", id)
+            language = string(code, "calendar", tid)
             if language != default or code == DEFAULT_LANGUAGE:
                 result.add((language, code))
     result = list(result)
@@ -262,7 +263,8 @@ def fraction_translated(language, files=FILES) -> float:
 
 
 def languages_for_the_index_file(minimal_fraction_translated=0.5):
-    """Return a list of tuples of language name and code for all languages that are translated enough to offer the to a user.
+    """Return a list of tuples of language name and code for all languages
+    that are translated enough to offer the to a user.
     (language name, code, translated%)
     """
     files = ("index", "common")
@@ -273,7 +275,7 @@ def languages_for_the_index_file(minimal_fraction_translated=0.5):
             for other in result[:]:
                 if other[1] == code:
                     # merge languages with duplicate code
-                    language = language + "/" + other[0]
+                    language = language + "/" + other[0]  # noqa: PLW2901
                     result.remove(other)
             result.append([language, code, int(fraction * 100)])
     return result
@@ -292,9 +294,12 @@ __all__ = [
 
 if __name__ == "__main__":
     for language in sorted(TRANSLATIONS):
-        print(
-            f"{language} is {int(fraction_translated(language) * 100)}% translated: {strings_translated(language)}/{strings_translated(DEFAULT_LANGUAGE)}"
+        print(  # noqa: T201
+            f"{language} is {int(fraction_translated(language) * 100)}% "
+            f"translated: {strings_translated(language)}/"
+            f"{strings_translated(DEFAULT_LANGUAGE)}"
         )
-    print(
-        f"These languages will be offered to the user: {', '.join(map(str, languages_for_the_index_file()))}"
+    print(  # noqa: T201
+        "These languages will be offered to the user: "
+        "{', '.join(map(str, languages_for_the_index_file()))}"
     )
