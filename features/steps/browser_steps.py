@@ -321,7 +321,7 @@ def step_impl(context, tag, text):
     elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
     assert len(elements) == 1, (
         f"There should only be one {tag} with the text "
-        r"{text!r} but there are {len(elements)}."
+        f"{text!r} but there are {len(elements)}."
     )
     element = elements[0]
     element.click()
