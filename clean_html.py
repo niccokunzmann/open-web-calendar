@@ -9,8 +9,9 @@ See https://stackoverflow.com/questions/3073881/clean-up-html-in-python
 """
 
 import re
+import warnings
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from lxml.html.clean import Cleaner
 
 CLEAN_HTML_SPECIFICATION_PREFIX = "clean_html_"
@@ -28,7 +29,11 @@ def clean_html(bad_html: str, spec: dict) -> str:
     - the default_specification.yml file, clean_html_* attributes
     - https://lxml.de/api/lxml.html.clean.Cleaner-class.html
     """
-    tree = BeautifulSoup(bad_html, "html.parser")
+    with warnings.catch_warnings():
+        # ignore that input might be short
+        # see https://stackoverflow.com/a/17654868/1320237
+        warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
+        tree = BeautifulSoup(bad_html, "html.parser")
     bad_html = tree.prettify()
     kw = DEFAULT_SPEC.copy()
     kw.update(
