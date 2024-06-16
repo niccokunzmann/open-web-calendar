@@ -14,6 +14,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC  # noqa: N812
 from selenium.webdriver.support.ui import Select, WebDriverWait
 
+# default wait time in seconds
+WAIT = 10
+
 
 def specification_to_query(spec):
     """Convert the specification to a query string for the url."""
@@ -66,7 +69,7 @@ def wait_for_calendar_to_load(context):
     # wait until the loader has stopped spinning
     # see https://stackoverflow.com/a/53242626/1320237
     # see https://stackoverflow.com/a/26567563/1320237
-    WebDriverWait(context.browser, 10).until(
+    WebDriverWait(context.browser, WAIT).until(
         EC.presence_of_element_located(
             (By.XPATH, '//div[@id = "loader" and contains(@class, "hidden")]')
         )
@@ -76,6 +79,9 @@ def wait_for_calendar_to_load(context):
 @then("we see 1 event")
 @then("we see {count} events")
 def step_impl(context, count=1):
+    WebDriverWait(context.browser, WAIT).until(
+        EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'event')]"))
+    )
     events = context.browser.find_elements(By.XPATH, "//div[contains(@class, 'event')]")
     assert (
         len(events) == count
