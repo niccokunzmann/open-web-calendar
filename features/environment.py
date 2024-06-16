@@ -24,9 +24,13 @@ from werkzeug import run_simple
 
 HERE = Path(__file__)
 sys.path.append(HERE / "..")
-from app import app  # noqa: E402
+from app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
 CALENDAR_FOLDER = HERE / "calendars"
+# Set the default timezone of the browser
+# If we would like to set another timezone in the tests, we can write:
+#    Giiven we set the "teimzone" parameter to "Asia/Singapore"
+DEFAULT_SPECIFICATION["timezone"] = "Europe/London"
 
 
 def locate_command(command: str):
