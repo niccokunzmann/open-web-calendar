@@ -103,7 +103,7 @@ def step_impl(context, text):
     ]
     assert len(chosen_events) == 1, (
         f"There should only be one event with the text {text} "
-        "but there are {len(chosen_events)}: {chosen_events}"
+        f"but there are {len(chosen_events)}: {chosen_events}"
     )
     event = chosen_events[0]
     event.click()
@@ -157,7 +157,7 @@ def step_impl(context, uid, css_class):
     found_elements = set(elements_by_uid) & set(elements_by_class)
     assert found_elements, (
         f"Expected at least one event with UID {uid} "
-        "to have the css class {css_class} but none did."
+        f"to have the css class {css_class} but none did."
     )
 
 
