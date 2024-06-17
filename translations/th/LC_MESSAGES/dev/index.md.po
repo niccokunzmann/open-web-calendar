@@ -89,8 +89,31 @@ msgid ""
 "    ```sh    virtualenv -p python3 ENV source ENV/bin/activate    ```"
 msgstr ""
 
-msgid "Install the packages.    wzxhzdk:1"
+msgid "Code Quality"
 msgstr ""
 
-msgid "Start the app.    wzxhzdk:2"
+msgid ""
+"We use [ruff] to improve the code quality. Please install [pre-commit] "
+"before committing. It will ensure that the code is formatted and linted as "
+"expected using [ruff]."
 msgstr ""
+
+#, fuzzy
+msgid "[ruff]: https://docs.astral.sh/ruff/"
+msgstr "[ruff]: https://docs.astral.sh/ruff/"
+
+#, fuzzy
+msgid "[pre-commit]: https://pre-commit.com/"
+msgstr "[pre-commit]: https://pre-commit.com/"
+
+#~ msgid "Install the packages.    wzxhzdk:1"
+#~ msgstr ""
+
+#~ msgid "Start the app.    wzxhzdk:2"
+#~ msgstr ""
+
+#~ msgid "Install the packages.    wzxhzdk:2"
+#~ msgstr ""
+
+#~ msgid "Start the app.    wzxhzdk:3"
+#~ msgstr ""
