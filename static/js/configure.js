@@ -6,6 +6,13 @@
  *
  */
 
+function parseDate(yyyy_mm_dd) {
+    // parse a date without timezone information
+    // see https://stackoverflow.com/questions/17545708/parse-date-without-timezone-javascript
+    var numbers = yyyy_mm_dd.match(/(\d+)-0?(\d+)-0?(\d+)/)
+    return new Date(parseInt(numbers[1]), parseInt(numbers[2]) - 1, parseInt(numbers[3]))
+}
+
 function escapeHtml(unsafe) {
     // from https://stackoverflow.com/a/6234804
     return unsafe
@@ -312,7 +319,7 @@ function loadCalendar() {
     }
     scheduler.config.first_hour = parseInt(specification["starting_hour"]);
     scheduler.config.last_hour = parseInt(specification["ending_hour"]);
-    var date = specification["date"] ? new Date(specification["date"]) : new Date();
+    var date = specification["date"] ? parseDate(specification["date"]) : new Date();
     scheduler.init('scheduler_here', date, specification["tab"]);
 
     // see https://docs.dhtmlx.com/scheduler/custom_events_content.html

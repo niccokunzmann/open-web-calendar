@@ -1,18 +1,18 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+from __future__ import annotations
 
 import datetime
-from flask import jsonify
-from conversion_base import ConversionStrategy
-import recurring_ical_events
-import icalendar
-from dateutil.parser import parse as parse_date
-import pytz
-from clean_html import clean_html, remove_html
-from collections import defaultdict
-from typing import List
 from urllib.parse import unquote
+
+import pytz
+import recurring_ical_events
+from dateutil.parser import parse as parse_date
+from flask import jsonify
+
+from clean_html import clean_html
+from conversion_base import ConversionStrategy
 
 
 def is_date(date):
@@ -41,7 +41,9 @@ class ConvertToDhtmlx(ConversionStrategy):
         # see https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat
         # see https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
         if is_date(date):
-            date = datetime.datetime(date.year, date.month, date.day, tzinfo=self.timezone)
+            date = datetime.datetime(
+                date.year, date.month, date.day, tzinfo=self.timezone
+            )
         elif date.tzinfo is None:
             date = self.timezone.localize(date)
         # convert to other timezone, see https://stackoverflow.com/a/54376154
@@ -58,7 +60,9 @@ class ConvertToDhtmlx(ConversionStrategy):
             geo = {"lon": geo.longitude, "lat": geo.latitude}
         name = calendar_event.get("SUMMARY", "")
         sequence = str(calendar_event.get("SEQUENCE", 0))
-        uid = calendar_event.get("UID", "") # issue 69: UID is helpful for debugging but not required
+        uid = calendar_event.get(
+            "UID", ""
+        )  # issue 69: UID is helpful for debugging but not required
         start_date = self.date_to_string(start)
         return {
             "start_date": start_date,
@@ -78,14 +82,18 @@ class ConvertToDhtmlx(ConversionStrategy):
             "url": calendar_event.get("URL"),
             "id": uid + "-" + start_date.replace(" ", "-").replace(":", "-"),
             "type": "event",
-            "color": calendar_event.get("COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", "")),
+            "color": calendar_event.get(
+                "COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", "")
+            ),
             "categories": self.get_event_categories(calendar_event),
-            "css-classes": ["event"] + self.get_event_classes(calendar_event) + [f"CALENDAR-INDEX-{calendar_index}"]
+            "css-classes": ["event"]
+            + self.get_event_classes(calendar_event)
+            + [f"CALENDAR-INDEX-{calendar_index}"],
         }
 
     def convert_error(self, error, url, tb_s):
         """Create an error which can be used by the dhtmlx scheduler."""
-        now = datetime.datetime.now();
+        now = datetime.datetime.now()
         now_iso = now.isoformat()
         now_s = self.date_to_string(now)
         return {
@@ -95,7 +103,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "end_date_iso": now_iso,
             "start_date_iso_0": now_iso,
             "end_date_iso_0": now_iso,
-            "text":  type(error).__name__,
+            "text": type(error).__name__,
             "description": str(error),
             "traceback": tb_s,
             "location": None,
@@ -107,7 +115,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "url": url,
             "id": id(error),
             "type": "error",
-            "css-classes": ["error"]
+            "css-classes": ["error"],
         }
 
     def get_event_description(self, event):
@@ -117,7 +125,11 @@ class ConvertToDhtmlx(ConversionStrategy):
         """
         # CMS4Schools.com
         description = event.get("X-ALT-DESC")
-        if description is None or not hasattr(description, "params") or description.params.get("FMTTYPE") != "text/html":
+        if (
+            description is None
+            or not hasattr(description, "params")
+            or description.params.get("FMTTYPE") != "text/html"
+        ):
             description = event.get("DESCRIPTION", "")
             if hasattr(description, "params"):
                 altrep = description.params.get("ALTREP")
@@ -136,7 +148,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         today = (
             parse_date(self.specification["date"])
             if self.specification.get("date")
-            else datetime.datetime.utcnow()
+            else datetime.datetime.now(self.timezone)
         )
         to_date = (
             parse_date(self.specification["to"])
@@ -155,7 +167,7 @@ class ConvertToDhtmlx(ConversionStrategy):
                     json_event = self.convert_ical_event(calendar_index, event)
                     self.components.append(json_event)
 
-    def get_event_classes(self, event) -> List[str]:
+    def get_event_classes(self, event) -> list[str]:
         """Return the CSS classes that should be used for the event styles."""
         classes = []
         for attr in ["UID", "TRANSP", "STATUS", "CLASS", "PRIORITY"]:
@@ -163,12 +175,12 @@ class ConvertToDhtmlx(ConversionStrategy):
             if value is not None:
                 classes.append(f"{attr}-{value}")
         if event.get("CLASS") not in [None, "PUBLIC", "CONFIDENTIAL", "PRIVATE"]:
-            classes.append("CLASS-PRIVATE") # unrecognized is private
+            classes.append("CLASS-PRIVATE")  # unrecognized is private
         for category in self.get_event_categories(event):
             classes.append(f"CATEGORY-{category}")
         return classes
 
-    def get_event_categories(self, event) -> List[str]:
+    def get_event_categories(self, event) -> list[str]:
         """Return the categories of the event."""
         categories = event.get("CATEGORIES", None)
         return categories.cats if categories is not None else []

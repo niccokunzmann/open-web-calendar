@@ -2,31 +2,38 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
-import os
 import sys
-import pytest
+from pathlib import Path
 from unittest.mock import Mock
+
+import pytest
 import requests
 
 # constants
-HERE = os.path.dirname(__file__) or "."
-CALENDAR_DIRECTORY = os.path.join(HERE, "..", "features", "calendars")
+HERE = Path(__file__).parent
+CALENDAR_DIRECTORY = HERE / ".." / "features" / "calendars"
 
 # relative imports
-sys.path.append(os.path.join(os.path.abspath(HERE), ".."))
-sys.path.append(os.path.abspath(HERE))
-from app import cache_url
+sys.path.append(HERE.absolute() / "..")
+sys.path.append(HERE.absolute())
+from app import DEFAULT_SPECIFICATION, cache_url  # noqa: E402
+
+DEFAULT_SPECIFICATION["url"] = []
 
 
 @pytest.fixture(autouse=True)
-def no_requests(monkeypatch):
+def _no_requests(monkeypatch):
     """Prevent requests from sending out requests
 
     See https://docs.pytest.org/en/latest/monkeypatch.html#example-preventing-requests-from-remote-operations
     """
+
     def test_cannot_call_outside(*args, **kw):
-        raise RuntimeError("Tests are not allowed to make requests to the"
-                           " Internet. You can use cache_url() to mock that.")
+        raise RuntimeError(
+            "Tests are not allowed to make requests to the"
+            " Internet. You can use cache_url() to mock that."
+        )
+
     monkeypatch.setattr(requests.sessions.Session, "request", test_cannot_call_outside)
 
 
@@ -42,13 +49,16 @@ def app():
     See https://flask.palletsprojects.com/en/2.2.x/testing/
     """
     from app import app
-    app.config.update({
-        "TESTING": True,
-    })
+
+    app.config.update(
+        {
+            "TESTING": True,
+        }
+    )
 
     # other setup can go here
 
-    yield app
+    return app
 
     # clean up / reset resources here
 
@@ -64,8 +74,8 @@ def runner(app):
 
 
 calendar_files = {}
-for file in os.listdir(CALENDAR_DIRECTORY):
-    with open(os.path.join(CALENDAR_DIRECTORY, file)) as f:
+for file in CALENDAR_DIRECTORY.iterdir():
+    with file.open() as f:
         calendar_files[file] = f.read()
 
 
@@ -77,11 +87,11 @@ def calendar_urls():
     """
     mapping = {}
     for file, content in calendar_files.items():
-        url = "http://test.examples.local/" + file
+        url = "http://test.examples.local/" + file.name
         cache_url(url, content)
-        mapping[file] = url
-        if file.lower().endswith(".ics"):
-            mapping[file[:-4]] = url
+        mapping[file.name] = url
+        if file.suffix.lower() == ".ics":
+            mapping[file.stem] = url
     return mapping
 
 
@@ -93,6 +103,6 @@ def calendar_content():
     """
     mapping = {}
     for file, content in calendar_files.items():
-        if file.lower().endswith(".ics"):
-            mapping[file[:-4]] = content
+        if file.suffix.lower() == ".ics":
+            mapping[file.stem] = content
     return mapping

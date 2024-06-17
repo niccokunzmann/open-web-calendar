@@ -2,43 +2,47 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
-from behave import given, when, then
-from selenium.webdriver.common.by import By
-from urllib.parse import urlencode
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
 import json
-from selenium.common.exceptions import TimeoutException
 import re
+from urllib.parse import urlencode
+
+from behave import given, then, when
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC  # noqa: N812
+from selenium.webdriver.support.ui import Select, WebDriverWait
+
+# default wait time in seconds
+WAIT = 10
 
 
 def specification_to_query(spec):
     """Convert the specification to a query string for the url."""
     result = []
-    for k, v in spec.items():
-        if not isinstance(v, list):
-            v = [v]
-        for v in v:
+    for k, vs in spec.items():
+        for v in vs if isinstance(vs, list) else [vs]:
             result.append(urlencode({k: v}))
     return "&".join(result)
 
 
 def get_url(context, url):
     """Replace getting the URL to mitigate a TimeoutException in Chrome."""
-    print(f"Visiting {re.sub('^http://localhost:[0-9]+/', 'http://localhost:5000/', url)}")
-    for i in range(20):
+    print(
+        f"Visiting {re.sub('^http://localhost:[0-9]+/', 'http://localhost:5000/', url)}"
+    )
+    for _i in range(20):
         try:
             return context.browser.get(url)
-        except TimeoutException:
+        except TimeoutException:  # noqa: PERF203
             pass
+    raise
 
 
 @given('we add the calendar "{calendar_name}"')
 def step_impl(context, calendar_name):
-    assert not ".ics" in calendar_name
+    assert ".ics" not in calendar_name
     calendar_url = context.calendars_url + calendar_name + ".ics"
     context.specification["url"].append(calendar_url)
 
@@ -48,55 +52,78 @@ def step_impl(context, parameter_name, parameter_value):
     context.specification[parameter_name] = json.loads(parameter_value)
 
 
-@when(u'we look at {date}')
+@when("we look at {date}")
 def step_impl(context, date):
     context.specification["date"] = date
     context.browser.delete_all_cookies()
-    url = context.index_page + "calendar.html?" + specification_to_query(context.specification)
+    url = (
+        context.index_page
+        + "calendar.html?"
+        + specification_to_query(context.specification)
+    )
     get_url(context, url)
     wait_for_calendar_to_load(context)
+
 
 def wait_for_calendar_to_load(context):
     # wait until the loader has stopped spinning
     # see https://stackoverflow.com/a/53242626/1320237
     # see https://stackoverflow.com/a/26567563/1320237
-    WebDriverWait(context.browser, 10).until(EC.presence_of_element_located((By.XPATH, '//div[@id = "loader" and contains(@class, "hidden")]')))
+    WebDriverWait(context.browser, WAIT).until(
+        EC.presence_of_element_located(
+            (By.XPATH, '//div[@id = "loader" and contains(@class, "hidden")]')
+        )
+    )
 
 
-@then(u'we see 1 event')
-@then(u'we see {count} events')
+@then("we see 1 event")
+@then("we see {count} events")
 def step_impl(context, count=1):
+    WebDriverWait(context.browser, WAIT).until(
+        EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'event')]"))
+    )
     events = context.browser.find_elements(By.XPATH, "//div[contains(@class, 'event')]")
-    assert len(events) == count, f"Expected {count} events but {len(events)} were found: {repr(events)}"
+    assert (
+        len(events) == count
+    ), f"Expected {count} events but {len(events)} were found: {events!r}"
 
-@then(u'we see that event "{uid}" has the text "{text}"')
+
+@then('we see that event "{uid}" has the text "{text}"')
 def step_impl(context, uid, text):
-    events = context.browser.find_elements(By.XPATH, f"//div[contains(@event_id, {repr(uid)})]")
-    assert len(events) == 1, f"There should only be one event with UID {uid} but there are {len(events)}."
+    events = context.browser.find_elements(
+        By.XPATH, f"//div[contains(@event_id, {uid!r})]"
+    )
+    assert (
+        len(events) == 1
+    ), f"There should only be one event with UID {uid} but there are {len(events)}."
     event = events[0]
-    innerText = event.get_attribute("innerText")
-    assert innerText == text, f"Expected {repr(text)} but got {repr(innerText)}"
+    inner_text = event.get_attribute("innerText")
+    assert inner_text == text, f"Expected {text!r} but got {inner_text!r}"
 
 
-@when(u'we click on the event "{text}"')
+@when('we click on the event "{text}"')
 def step_impl(context, text):
     events = context.browser.find_elements(By.XPATH, "//div[contains(@class, 'event')]")
-    chosen_events = [event for event in events if text in event.get_attribute("innerText")]
-    assert len(chosen_events) == 1, f"There should only be one event with the text {text} but there are {len(chosen_events)}: {chosen_events}"
+    chosen_events = [
+        event for event in events if text in event.get_attribute("innerText")
+    ]
+    assert len(chosen_events) == 1, (
+        f"There should only be one event with the text {text} "
+        f"but there are {len(chosen_events)}: {chosen_events}"
+    )
     event = chosen_events[0]
     event.click()
 
 
 @when('we click on a link containing "{text}"')
 def step_impl(context, text):
-    event = context.browser.find_element(By.XPATH, f"//a[contains(text(), {repr(text)})]")
+    event = context.browser.find_element(By.XPATH, f"//a[contains(text(), {text!r})]")
     event.click()
 
 
 def get_body_text(context):
     body = context.browser.find_elements(By.XPATH, "//body")[0]
-    innerText = body.get_attribute("innerText")
-    return innerText
+    return body.get_attribute("innerText")
 
 
 @then('we cannot find an XPATH "{xpath}"')
@@ -107,19 +134,29 @@ def step_impl(context, xpath):
     assert not elements
 
 
-@then(u'we cannot see the text "{text}"')
+@then('we cannot see the text "{text}"')
 def step_impl(context, text):
-    assert text not in get_body_text(context), f"{repr(text)} is visible but should not be visible"
+    body = get_body_text(context)
+    index = body.find(text)
+    start = 0 if index < 10 else index - 10
+    end = -1 if index > len(body) else index + 10
+    assert (
+        index == -1
+    ), f"{text!r} is visible but should not be visible: {body[start:end]!r}"
 
 
-@then(u'we can see the text "{text}"')
+@then('we can see the text "{text}"')
 def step_impl(context, text):
-    assert text in get_body_text(context), f"{repr(text)} is invisible but should be visible"
+    assert text in get_body_text(
+        context
+    ), f"{text!r} is invisible but should be visible"
 
 
-@then(u'we can see a {cls}')
+@then("we can see a {cls}")
 def step_impl(context, cls):
-    assert context.browser.find_elements(By.CLASS_NAME, cls), f"Expected to find elements of class {cls}"
+    assert context.browser.find_elements(
+        By.CLASS_NAME, cls
+    ), f"Expected to find elements of class {cls}"
 
 
 @then('we can see an event with UID "{uid}" with css class "{css_class}"')
@@ -128,28 +165,41 @@ def step_impl(context, uid, css_class):
     elements_by_uid = context.browser.find_elements(By.CLASS_NAME, f"UID-{uid}")
     elements_by_class = context.browser.find_elements(By.CLASS_NAME, css_class)
     found_elements = set(elements_by_uid) & set(elements_by_class)
-    assert found_elements, f"Expected at least one event with UID {uid} to have the css class {css_class} but none did."
+    assert found_elements, (
+        f"Expected at least one event with UID {uid} "
+        f"to have the css class {css_class} but none did."
+    )
 
 
-@then(u'we cannot see a {cls}')
+@then("we cannot see a {cls}")
 def step_impl(context, cls):
-    assert not context.browser.find_elements(By.CLASS_NAME, cls), f"Expected to not find elements of class {cls}"
+    assert not context.browser.find_elements(
+        By.CLASS_NAME, cls
+    ), f"Expected to not find elements of class {cls}"
 
 
-@when(u"we open the about page")
+@when("we open the about page")
 def step_impl(context):
     button = context.browser.find_element(By.ID, "infoIcon")
     button.click()
-    WebDriverWait(context.browser, 10).until(EC.presence_of_element_located((By.ID, "translate-license")))
+    WebDriverWait(context.browser, 10).until(
+        EC.presence_of_element_located((By.ID, "translate-license"))
+    )
 
-@when(u'we select "{dropdown_text}"')
+
+@when('we select "{dropdown_text}"')
 def step_impl(context, dropdown_text):
-    options = context.browser.find_elements(By.XPATH, f"//option[contains(text(), {repr(dropdown_text)})]")
-    assert options, f"Could not find option with text {repr(dropdown_text)}"
+    options = context.browser.find_elements(
+        By.XPATH, f"//option[contains(text(), {dropdown_text!r})]"
+    )
+    assert options, f"Could not find option with text {dropdown_text!r}"
     if len(options) != 1:
-        print(f"Expected one option but found many: {', '.join(repr(o.get_attribute('innerText')) for o in options)}")
+        print(
+            f"Expected one option but found many: "
+            f"{', '.join(repr(o.get_attribute('innerText')) for o in options)}"
+        )
     option = options[0]
-    option.click() # see https://stackoverflow.com/a/7972225/1320237
+    option.click()  # see https://stackoverflow.com/a/7972225/1320237
     wait_for_calendar_to_load(context)
 
 
@@ -175,7 +225,7 @@ def click_button(context, selector_type, selector):
 # Browser steps for configuring the calendar.
 
 
-@given('we are on the configuration page')
+@given("we are on the configuration page")
 def step_impl(context):
     """Visit the configuration page and wait for it to load."""
     context.browser.delete_all_cookies()
@@ -186,38 +236,46 @@ def step_impl(context):
 @when('we write "{text}" into "{field_id}"')
 def step_impl(context, text, field_id):
     """Write text into text input."""
-    input = context.browser.find_element(By.ID, field_id)
-    input.clear() # see https://stackoverflow.com/a/7809907/1320237
-    input.send_keys(text)
-    print(f"Expecting {field_id}.value == {input.get_attribute('value')}")
+    input_element = context.browser.find_element(By.ID, field_id)
+    input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
+    input_element.send_keys(text)
+    print(f"Expecting {field_id}.value == {input_element.get_attribute('value')}")
 
 
 @then('"{text}" is written in "{field_id}"')
 def step_impl(context, text, field_id):
     """Check that a field has a value."""
-    input = context.browser.find_element(By.ID, field_id)
-    actual_text = input.get_attribute('value')
-    assert actual_text == text, f"Expected {repr(text)} in {field_id} but got {repr(actual_text)}."
+    input_element = context.browser.find_element(By.ID, field_id)
+    actual_text = input_element.get_attribute("value")
+    assert (
+        actual_text == text
+    ), f"Expected {text!r} in {field_id} but got {actual_text!r}."
 
 
 @when('we write the date {day}/{month}/{year} into "{field_id}"')
 def step_impl(context, year, month, day, field_id):
     """Write text into text input."""
-    input = context.browser.find_element(By.ID, field_id)
-    input.clear() # see https://stackoverflow.com/a/7809907/1320237
+    input_element = context.browser.find_element(By.ID, field_id)
+    input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
     # construct the text, see https://stackoverflow.com/a/35855868/1320237
-    text = context.browser.execute_script(f"return (new Date({year}, {month} - 1, {day})).toLocaleDateString()")
+    text = context.browser.execute_script(
+        f"return (new Date({year}, {month} - 1, {day})).toLocaleDateString()"
+    )
     print("text =", repr(text))
     # For filling inputs and date inputs
     # see https://stackoverflow.com/a/35127217/1320237
     # see https://stackoverflow.com/a/39532746/1320237
-    ActionChains(context.browser).move_to_element(input).click().send_keys(text).perform()
-    value = input.get_attribute('value')
+    ActionChains(context.browser).move_to_element(input_element).click().send_keys(
+        text
+    ).perform()
+    value = input_element.get_attribute("value")
     if not value:
         # this works in Chrome, see https://stackoverflow.com/a/21314269/1320237
-        context.browser.execute_script(f'document.getElementById({repr(field_id)}).value = "{year}-{month}-{day}"');
-        input.send_keys(Keys.CONTROL)
-        value = input.get_attribute('value')
+        context.browser.execute_script(
+            f'document.getElementById({field_id!r}).value = "{year}-{month}-{day}"'
+        )
+        input_element.send_keys(Keys.CONTROL)
+        value = input_element.get_attribute("value")
     print(f"{field_id}.value == {value}")
 
 
@@ -228,7 +286,10 @@ def step_impl(context, choice, select_id):
     # see https://stackoverflow.com/a/28613320/1320237
     select = Select(element)
     select.select_by_visible_text(choice)
-    print(f"{select_id} selected {repr(element.get_attribute('value'))} though text {repr(choice)}")
+    print(
+        f"{select_id} selected {element.get_attribute('value')!r} "
+        f"though text {choice!r}"
+    )
 
 
 def get_specification(context) -> dict:
@@ -246,7 +307,9 @@ def assert_specification_has_value(context, attribute, expected_value="no value"
     """Make sure the specification has a certain value."""
     specification = get_specification(context)
     actual_value = specification.get(attribute, "no value")
-    assert actual_value == expected_value, f"specification.{attribute}: expected {expected_value} but got {actual_value}."
+    assert (
+        actual_value == expected_value
+    ), f"specification.{attribute}: expected {expected_value} but got {actual_value}."
 
 
 @then('"{attribute}" is specified as {expected_value}')
@@ -261,43 +324,49 @@ def step_impl(context, attribute):
     assert_specification_has_value(context, attribute)
 
 
-@when(u'we click on the {tag:S} "{text}"')
+@when('we click on the {tag:S} "{text}"')
 def step_impl(context, tag, text):
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
-    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {repr(text)}]]")
-    assert len(elements) == 1, f"There should only be one {tag} with the text {repr(text)} but there are {len(elements)}."
+    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
+    assert len(elements) == 1, (
+        f"There should only be one {tag} with the text "
+        f"{text!r} but there are {len(elements)}."
+    )
     element = elements[0]
     element.click()
 
 
-@then('the checkbox with id "{id:S}" is checked')
-def step_impl(context, id):
+@then('the checkbox with id "{eid:S}" is checked')
+def step_impl(context, eid):
     """Check the checkbox status."""
-    element = context.browser.find_element(By.ID, id)
+    element = context.browser.find_element(By.ID, eid)
     assert element.get_attribute("checked")
 
 
-@then('the checkbox with id "{id}" is not checked')
-def step_impl(context, id):
+@then('the checkbox with id "{eid}" is not checked')
+def step_impl(context, eid):
     """Check the checkbox status."""
-    element = context.browser.find_element(By.ID, id)
+    element = context.browser.find_element(By.ID, eid)
     assert not element.get_attribute("checked")
 
 
-@when('we click on the {tag_name:S} with id "{id}"')
-def step_impl(context, tag_name, id):
+@when('we click on the {tag_name:S} with id "{eid}"')
+def step_impl(context, tag_name, eid):
     """Click on elements with an id."""
-    element = context.browser.find_element(By.ID, id)
+    element = context.browser.find_element(By.ID, eid)
     element.click()
 
 
 ## Link verification
 
+
 @then('the link "{link_text}" targets "{link_target}"')
 def step_impl(context, link_text, link_target):
     """Check the target of a link."""
-    assert_tag_with_text_attribute_equals(context, "a", link_text, "target", link_target)
+    assert_tag_with_text_attribute_equals(
+        context, "a", link_text, "target", link_target
+    )
 
 
 @then('the link "{link_text}" opens "{link_href}"')
@@ -306,13 +375,24 @@ def step_impl(context, link_text, link_href):
     assert_tag_with_text_attribute_equals(context, "a", link_text, "href", link_href)
 
 
-def assert_tag_with_text_attribute_equals(context, tag, text, attribute, expected_value):
+def assert_tag_with_text_attribute_equals(
+    context, tag, text, attribute, expected_value
+):
     """Make sure that an attribute of a tag has a certain value."""
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
-    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[contains(., {repr(text)})]]")
-    assert len(elements) >= 1, f"Expected at least one <{tag}> with text {repr(text)} but got {len(elements)}."
+    elements = context.browser.find_elements(
+        By.XPATH, f"//{tag}[text()[contains(., {text!r})]]"
+    )
+    assert (
+        len(elements) >= 1
+    ), f"Expected at least one <{tag}> with text {text!r} but got {len(elements)}."
     actual_values = [element.get_attribute(attribute) for element in elements]
-    assert expected_value in actual_values, f"Expected a <{tag}> with the text {repr(text)} to have an attribute {attribute} with the value \n{repr(expected_value)} but the values are \n{{}}.".format('\n'.join(map(repr, actual_values)))
+    assert expected_value in actual_values, (
+        f"Expected a <{tag}> with the text {text!r} to have an attribute "
+        f"{attribute} with the value \n{expected_value!r} but the values are "
+        f"\n{{}}.".format("\n".join(map(repr, actual_values)))
+    )
+
 
 ## Other

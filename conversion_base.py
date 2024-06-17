@@ -2,20 +2,21 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
-from concurrent.futures import ThreadPoolExecutor
-from threading import RLock
-import requests
+import io
 import sys
 import traceback
-import io
+from concurrent.futures import ThreadPoolExecutor
+from threading import RLock
+from urllib.parse import urljoin
+
+import requests
 from icalendar import Calendar
 from lxml import etree
-from urllib.parse import urljoin
 
 
 def get_text_from_url(url):
     """Return the text from a url."""
-    return requests.get(url).text
+    return requests.get(url, timeout=10).text
 
 
 class InvalidCalendarFeed(ValueError):
@@ -48,10 +49,13 @@ class ConversionStrategy:
         urls = self.specification["url"]
         if isinstance(urls, str):
             urls = [urls]
-        assert len(urls) <= self.MAXIMUM_THREADS, "You can only merge {} urls. If you like more, open an issue.".format(MAXIMUM_THREADS)
+        assert len(urls) <= self.MAXIMUM_THREADS, (
+            f"You can only merge {self.MAXIMUM_THREADS} urls."
+            " If you like more, open an issue."
+        )
         with ThreadPoolExecutor(max_workers=self.MAXIMUM_THREADS) as e:
-            for e in e.map(self.retrieve_calendar, enumerate(urls)):
-                pass # no error should pass silently; import this
+            for _e in e.map(self.retrieve_calendar, enumerate(urls)):
+                pass  # no error should pass silently; import this
 
     def get_calendars_from_url(self, url):
         """Return a lis of calendars from a URL."""

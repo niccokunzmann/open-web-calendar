@@ -19,6 +19,19 @@ git clone https://github.com/niccokunzmann/open-web-calendar
 cd open-web-calendar
 ```
 
+## Code Quality
+
+We use [ruff] to improve the code quality.
+Please install [pre-commit] before committing.
+It will ensure that the code is formatted and linted as expected using [ruff].
+
+```sh
+pre-commit install
+```
+
+[ruff]: https://docs.astral.sh/ruff/
+[pre-commit]:  https://pre-commit.com/
+
 ## Running the App
 
 1. Optional: Install virtualenv and Python3 and create a virtual environment.
