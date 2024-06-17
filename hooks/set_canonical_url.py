@@ -11,7 +11,7 @@ This makes the links easily detectable by the link checker.
 
 CANONICAL_EXT = ".canonical"
 
-def on_page_markdown(markdown, *, page, config, files):
 
+def on_page_markdown(markdown, *, page, config, files):
     if not page.canonical_url.endswith(CANONICAL_EXT):
         page.canonical_url = page.canonical_url + CANONICAL_EXT
