@@ -7,18 +7,18 @@
 see https://behave.readthedocs.io/en/stable/practical_tips.html#selenium-example
 """
 
+import copy
 import http.server
 import multiprocessing
 import random
 import socketserver
 import subprocess
 import sys
-import time
-import requests
 import threading
-import copy
-
+import time
 from pathlib import Path
+
+import requests
 from behave import fixture, use_fixture
 from selenium import webdriver
 from selenium.webdriver import Firefox, FirefoxOptions
@@ -144,7 +144,7 @@ def app_server(context):
     p.terminate()
 
 
-def wait_for_http_server(url, on_error=lambda:None):
+def wait_for_http_server(url, on_error=lambda: None):
     """Make sure the HTTP server is up and running."""
     print(f"HTTP SERVER: Waiting for {url} to start ... ", end="")
     timeout = time.time() + WAIT
@@ -172,7 +172,7 @@ def calendars_server(context):
     """
     # reuse address
     # see https://zaiste.net/posts/python_simplehttpserver_not_closing_port/
-    socketserver.TCPServer.allow_reuse_address=True
+    socketserver.TCPServer.allow_reuse_address = True
     port = 8001
     host = "localhost"
     context.calendars_url = f"http://{host}:{port}/"
@@ -180,6 +180,7 @@ def calendars_server(context):
     class Handler(http.server.SimpleHTTPRequestHandler):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, directory=CALENDAR_FOLDER, **kwargs)
+
     try:
         httpd = socketserver.TCPServer((host, port), Handler)
     except OSError as e:
@@ -194,12 +195,15 @@ def calendars_server(context):
     # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
     t = threading.Thread(target=httpd.serve_forever)
     t.start()
+
     def final():
         httpd.server_close()
         httpd.shutdown()
+
     wait_for_http_server(context.calendars_url, on_error=final)
     yield
     final()
+
 
 def before_all(context):
     browser = browsers[context.config.userdata["browser"]]
@@ -219,6 +223,8 @@ DEFAULT_SPECIFICATION.update(
         "date": "1605-11-05",
     }
 )
+
+
 def before_scenario(context, scenario):
     """Reset the calendar for each scenario.
 
