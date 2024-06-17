@@ -13,8 +13,11 @@ import random
 import socketserver
 import subprocess
 import sys
-from pathlib import Path
+import time
+import requests
+import threading
 
+from pathlib import Path
 from behave import fixture, use_fixture
 from selenium import webdriver
 from selenium.webdriver import Firefox, FirefoxOptions
@@ -22,11 +25,13 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
 from werkzeug import run_simple
 
-HERE = Path(__file__)
+HERE = Path(__file__).parent.absolute()
 sys.path.append(HERE / "..")
 from app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
 CALENDAR_FOLDER = HERE / "calendars"
+# timeout in seconds
+WAIT = 10
 
 
 def locate_command(command: str):
@@ -119,24 +124,6 @@ def set_window_size(context):
         context.browser.set_window_size(int(width), int(height))
 
 
-def serve_calendar_files(host, port, directory=CALENDAR_FOLDER):
-    """Serve the calendar files so they can be requested.
-
-    see https://stackoverflow.com/a/52531444/1320237
-    """
-
-    class Handler(http.server.SimpleHTTPRequestHandler):
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, directory=directory, **kwargs)
-
-    try:
-        with socketserver.TCPServer((host, port), Handler) as httpd:
-            print("serving calendars at port", port)
-            httpd.serve_forever()
-    except OSError as e:
-        print("\n", e)
-
-
 def get_free_port(start=10000, end=60000):
     """Return a free port number."""
     return random.randint(start, end)  # noqa: S311
@@ -151,24 +138,67 @@ def app_server(context):
     p = multiprocessing.Process(target=run_simple, args=("localhost", app_port, app))
     p.start()
     context.index_page = f"http://localhost:{app_port}/"
+    wait_for_http_server(context.index_page, on_error=p.terminate)
     yield
     p.terminate()
+
+
+def wait_for_http_server(url, on_error=lambda:None):
+    """Make sure the HTTP server is up and running."""
+    print(f"HTTP SERVER: Waiting for {url} to start ... ", end="")
+    timeout = time.time() + WAIT
+    ty = err = tb = None
+    while time.time() < timeout:
+        try:
+            requests.get(url, timeout=WAIT)
+            ty = err = tb = None
+            break
+        except:
+            ty, err, tb = sys.exc_info()
+            time.sleep(0.01)
+    if err is not None:
+        print("FAIL")
+        on_error()
+        raise err.with_traceback(tb)
+    print("OK")
 
 
 @fixture
 def calendars_server(context):
-    """Start the flask app in a server."""
-    calendar_port = 8001
+    """Serve the calendar files so they can be requested.
+
+    see https://stackoverflow.com/a/52531444/1320237
+    """
+    # reuse address
+    # see https://zaiste.net/posts/python_simplehttpserver_not_closing_port/
+    socketserver.TCPServer.allow_reuse_address=True
+    port = 8001
+    host = "localhost"
+    context.calendars_url = f"http://{host}:{port}/"
+
+    class Handler(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, directory=CALENDAR_FOLDER, **kwargs)
+    try:
+        httpd = socketserver.TCPServer((host, port), Handler)
+    except OSError as e:
+        if e.errno == 98:
+            # OSError: [Errno 98] Address already in use
+            wait_for_http_server(context.calendars_url)
+            yield
+            return
+        else:
+            raise
     # from https://werkzeug.palletsprojects.com/en/2.1.x/serving/#shutting-down-the-server
     # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
-    p = multiprocessing.Process(
-        target=serve_calendar_files, args=("localhost", calendar_port)
-    )
-    p.start()
-    context.calendars_url = f"http://localhost:{calendar_port}/"
+    t = threading.Thread(target=httpd.serve_forever)
+    t.start()
+    def final():
+        httpd.server_close()
+        httpd.shutdown()
+    wait_for_http_server(context.calendars_url, on_error=final)
     yield
-    p.terminate()
-
+    final()
 
 def before_all(context):
     browser = browsers[context.config.userdata["browser"]]
@@ -178,21 +208,19 @@ def before_all(context):
     use_fixture(calendars_server, context)
 
 
+# Set the default timezone of the browser
+# If we would like to set another timezone in the tests, we can write:
+#    Given we set the "teimzone" parameter to "Asia/Singapore"
+DEFAULT_SPECIFICATION.update(
+    {
+        "url": [],
+        "timezone": "Europe/Moscow",
+        "date": "1605-11-05",
+    }
+)
 def before_scenario(context, scenario):
     """Reset the calendar for each scenario.
 
     Empty url and set the timezone and other parameters.
     """
-    # Set the default timezone of the browser
-    # If we would like to set another timezone in the tests, we can write:
-    #    Given we set the "teimzone" parameter to "Asia/Singapore"
-    DEFAULT_SPECIFICATION.update(
-        {
-            "url": [],
-            "timezone": "Europe/Moscow",
-            "date": "1605-11-05",
-        }
-    )
-    context.specification = {
-        "url": [],
-    }
+    context.specification = DEFAULT_SPECIFICATION.copy()
