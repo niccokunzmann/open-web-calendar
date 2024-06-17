@@ -528,6 +528,14 @@ msgid ""
 "388](https://github.com/niccokunzmann/open-web-calendar/issues/388)"
 msgstr ""
 
+msgid "Improve Code Quality"
+msgstr ""
+
+msgid ""
+"Improve Thai translation by nissara pengpol, Ukrainian by mondstern and "
+"Italian by albanobattistella"
+msgstr ""
+
 #~ msgid ""
 #~ "This calendar is not styled but contains events that can be hosted behind a "
 #~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
