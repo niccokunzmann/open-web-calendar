@@ -16,6 +16,7 @@ import sys
 import time
 import requests
 import threading
+import copy
 
 from pathlib import Path
 from behave import fixture, use_fixture
@@ -223,4 +224,4 @@ def before_scenario(context, scenario):
 
     Empty url and set the timezone and other parameters.
     """
-    context.specification = DEFAULT_SPECIFICATION.copy()
+    context.specification = copy.deepcopy(DEFAULT_SPECIFICATION)
