@@ -13,6 +13,10 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+## v1.37
+
+
+
 ## v1.36
 
 - Make event title a link to the event if it has a URL set, see [Issue 388](https://github.com/niccokunzmann/open-web-calendar/issues/388)
