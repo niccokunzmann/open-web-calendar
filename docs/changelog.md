@@ -15,7 +15,10 @@ The latest version might not be released, yet.
 
 ## v1.36
 
-- Make event title a link to the event if it has a URL set, see [Issue 388](https://github.com/niccokunzmann/open-web-calendar/issues/388) 
+- Make event title a link to the event if it has a URL set, see [Issue 388](https://github.com/niccokunzmann/open-web-calendar/issues/388)
+- Improve Code Quality
+- Improve Thai translation by nissara pengpol, Ukrainian by mondstern and Italian by albanobattistella
+- Update dependencies
 
 ## v1.35
 
