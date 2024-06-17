@@ -52,7 +52,7 @@ trio-websocket==0.11.1
     # via selenium
 typing-extensions==4.11.0
     # via selenium
-urllib3[socks]==2.2.1
+urllib3[socks]==2.2.2
     # via selenium
 wsproto==1.2.0
     # via trio-websocket
