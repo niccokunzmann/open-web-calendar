@@ -27,10 +27,6 @@ sys.path.append(HERE / "..")
 from app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
 CALENDAR_FOLDER = HERE / "calendars"
-# Set the default timezone of the browser
-# If we would like to set another timezone in the tests, we can write:
-#    Giiven we set the "teimzone" parameter to "Asia/Singapore"
-DEFAULT_SPECIFICATION["timezone"] = "Europe/London"
 
 
 def locate_command(command: str):
@@ -183,5 +179,20 @@ def before_all(context):
 
 
 def before_scenario(context, scenario):
-    """Reset the calendar for each scenario."""
-    context.specification = {"url": []}
+    """Reset the calendar for each scenario.
+
+    Empty url and set the timezone and other parameters.
+    """
+    # Set the default timezone of the browser
+    # If we would like to set another timezone in the tests, we can write:
+    #    Given we set the "teimzone" parameter to "Asia/Singapore"
+    DEFAULT_SPECIFICATION.update(
+        {
+            "url": [],
+            "timezone": "Europe/Moscow",
+            "date": "1605-11-05",
+        }
+    )
+    context.specification = {
+        "url": [],
+    }

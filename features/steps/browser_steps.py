@@ -136,9 +136,13 @@ def step_impl(context, xpath):
 
 @then('we cannot see the text "{text}"')
 def step_impl(context, text):
-    assert text not in get_body_text(
-        context
-    ), f"{text!r} is visible but should not be visible"
+    body = get_body_text(context)
+    index = body.find(text)
+    start = 0 if index < 10 else index - 10
+    end = -1 if index > len(body) else index + 10
+    assert (
+        index == -1
+    ), f"{text!r} is visible but should not be visible: {body[start:end]!r}"
 
 
 @then('we can see the text "{text}"')
