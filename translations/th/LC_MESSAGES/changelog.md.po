@@ -527,3 +527,11 @@ msgid ""
 "#52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull"
 " Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88)."
 msgstr ""
+
+msgid "Improve Code Quality"
+msgstr ""
+
+msgid ""
+"Improve Thai translation by nissara pengpol, Ukrainian by mondstern and "
+"Italian by albanobattistella"
+msgstr ""
