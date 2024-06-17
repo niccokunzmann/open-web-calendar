@@ -536,6 +536,9 @@ msgid ""
 "Italian by albanobattistella"
 msgstr ""
 
+msgid "v1.37"
+msgstr ""
+
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
 

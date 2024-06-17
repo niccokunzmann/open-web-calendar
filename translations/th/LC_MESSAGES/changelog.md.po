@@ -535,3 +535,6 @@ msgid ""
 "Improve Thai translation by nissara pengpol, Ukrainian by mondstern and "
 "Italian by albanobattistella"
 msgstr ""
+
+msgid "v1.37"
+msgstr ""
