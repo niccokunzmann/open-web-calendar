@@ -51,6 +51,22 @@ If you are inspired, you can also just head over and [start from scratch]({{link
 
 > Are you proud of your calendar? Share it here!
 
+## Multiple Calendars
+
+You can embed several calendars into one view. In this example, we show
+different rooms in an office.
+
+{{calendar_example("rooms.json")}}
+
+This is also useful if you have multiple calendar sources - be it
+different places, clubs, applications or organizations.
+
+Modifications:
+
+- CSS
+- hours
+- tab
+
 ## Mobile One Day Calendar Feed
 
 Here is an example of a one day view of a Christmas day:
