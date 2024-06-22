@@ -158,7 +158,7 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
       name: Docker
     - icon: fontawesome/brands/mastodon
       link: https://toot.wales/tags/OpenWebCalendar
-      name: Nicco Kunzmann
+      name: "Mastodon #OpenWebCalendar"
     - icon: fontawesome/solid/paper-plane
       link: mailto:niccokunzmann@rambler.ru
   link:
