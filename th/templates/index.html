@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_j36urky8/th/templates/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_2hwt6urd/th/templates/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_j36urky8/th/templates/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_2hwt6urd/th/templates/index.png" >
       
     
     
@@ -786,6 +786,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#multiple-calendars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Calendars
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       ฟีดปฏิทินบนมือถือในรูปแบบหนึ่งวัน
@@ -869,9 +878,60 @@
 <blockquote>
 <p>คุณภูมิใจกับปฏิทินของคุณหรือไม่? แบ่งปันได้ที่นี่!</p>
 </blockquote>
+<h2 id="multiple-calendars">Multiple Calendars<a class="headerlink" href="#multiple-calendars" title="ลิงค์ถาวร">&para;</a></h2>
+<p>You can embed several calendars into one view. In this example, we show different rooms in an office.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="calendar" name="__tabbed_1" type="radio" /><input id="specification" name="__tabbed_1" type="radio" /><input id="html" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="calendar">Calendar</label><label for="specification">Specification</label><label for="html">HTML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><iframe class="open-web-calendar" id=""
+style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/rooms.json&"
+sandbox="allow-scripts allow-same-origin allow-top-navigation"
+allowTransparency="true" scrolling="no"
+frameborder="0" height="600px" width="100%"></iframe></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;css&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.CALENDAR-INDEX-0 { background-color: #77767b; }.CALENDAR-INDEX-1 { background-color: #f9f06b; }.CALENDAR-INDEX-2 { background-color: #dc8add; }&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-07-05&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;ending_hour&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;18&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;hour_format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%g:%i %a&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;skin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dhtmlxscheduler_flat.css&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;start_of_week&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;su&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;starting_hour&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;week&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Europe/London&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Office Rooms&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;https://open-web-calendar.quelltext.eu/assets/calendars/rooms/call-cell.ics&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;https://open-web-calendar.quelltext.eu/assets/calendars/rooms/kitchen.ics&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;https://open-web-calendar.quelltext.eu/assets/calendars/rooms/meeting-room.ics&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;open-web-calendar&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;&quot;</span>
+<span class="na">style</span><span class="o">=</span><span class="s">&quot;background:url(&#39;/assets/img/circular-loader.gif&#39;) center center no-repeat; border-radius: 10px;&quot;</span>
+<span class="na">src</span><span class="o">=</span><span class="s">&quot;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/rooms.json&amp;&quot;</span>
+<span class="na">sandbox</span><span class="o">=</span><span class="s">&quot;allow-scripts allow-same-origin allow-top-navigation&quot;</span>
+<span class="na">allowTransparency</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span>
+<span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600px&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/rooms.json" target="_blank">Edit the calendar</a></p>
+<p>This is also useful if you have multiple calendar sources - be it different places, clubs, applications or organizations.</p>
+<p>การปรับเปลี่ยน:</p>
+<ul>
+<li>CSS</li>
+<li>hours</li>
+<li>tab</li>
+</ul>
 <h2 id="_2">ฟีดปฏิทินบนมือถือในรูปแบบหนึ่งวัน<a class="headerlink" href="#_2" title="ลิงค์ถาวร">&para;</a></h2>
 <p>นี่คือตัวอย่างมุมมองหนึ่งวันในวันวันคริสต์มาส:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="calendar" name="__tabbed_1" type="radio" /><input id="specification" name="__tabbed_1" type="radio" /><input id="html" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="calendar">Calendar</label><label for="specification">Specification</label><label for="html">HTML</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="calendar_1" name="__tabbed_2" type="radio" /><input id="specification_1" name="__tabbed_2" type="radio" /><input id="html_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="calendar_1">Calendar</label><label for="specification_1">Specification</label><label for="html_1">HTML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><iframe class="open-web-calendar" id=""
@@ -919,7 +979,7 @@ frameborder="0" height="600px" width="300px"></iframe></p>
 </ul>
 <h2 id="recurring-events-with-categories">Recurring Events with Categories<a class="headerlink" href="#recurring-events-with-categories" title="ลิงค์ถาวร">&para;</a></h2>
 <p>If you are at home, planning the days with the family, events might have different categories depending on who they are for: <code>work</code> or <code>personal</code>. Events can be single events or occur every day.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="calendar_1" name="__tabbed_2" type="radio" /><input id="specification_1" name="__tabbed_2" type="radio" /><input id="html_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="calendar_1">Calendar</label><label for="specification_1">Specification</label><label for="html_1">HTML</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="calendar_2" name="__tabbed_3" type="radio" /><input id="specification_2" name="__tabbed_3" type="radio" /><input id="html_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="calendar_2">Calendar</label><label for="specification_2">Specification</label><label for="html_2">HTML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><iframe class="open-web-calendar" id=""
@@ -1000,7 +1060,7 @@ frameborder="0" height="600px" width="100%"></iframe></p>
   timezoneOption.onchange = changeTimezone;
 </script>
 
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="calendar_2" name="__tabbed_3" type="radio" /><input id="specification_2" name="__tabbed_3" type="radio" /><input id="html_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="calendar_2">Calendar</label><label for="specification_2">Specification</label><label for="html_2">HTML</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="calendar_3" name="__tabbed_4" type="radio" /><input id="specification_3" name="__tabbed_4" type="radio" /><input id="html_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="calendar_3">Calendar</label><label for="specification_3">Specification</label><label for="html_3">HTML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><iframe class="open-web-calendar" id="owcTimezoneExample"
@@ -1079,7 +1139,7 @@ frameborder="0" height="600px" width="100%"></iframe></p>
 <h2 id="free-and-busy">Free and Busy<a class="headerlink" href="#free-and-busy" title="ลิงค์ถาวร">&para;</a></h2>
 <p>You can change the design based on whether you are free or busy.</p>
 <p>This calendar has changed CSS so that the background is green and the events are either orange or red.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="calendar_3" name="__tabbed_4" type="radio" /><input id="specification_3" name="__tabbed_4" type="radio" /><input id="html_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="calendar_3">Calendar</label><label for="specification_3">Specification</label><label for="html_3">HTML</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="calendar_4" name="__tabbed_5" type="radio" /><input id="specification_4" name="__tabbed_5" type="radio" /><input id="html_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="calendar_4">Calendar</label><label for="specification_4">Specification</label><label for="html_4">HTML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><iframe class="open-web-calendar" id=""

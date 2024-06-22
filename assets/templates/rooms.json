@@ -1,0 +1,17 @@
+{
+  "css": ".CALENDAR-INDEX-0 { background-color: #77767b; }.CALENDAR-INDEX-1 { background-color: #f9f06b; }.CALENDAR-INDEX-2 { background-color: #dc8add; }",
+  "date": "2024-07-05",
+  "ending_hour": "18",
+  "hour_format": "%g:%i %a",
+  "skin": "dhtmlxscheduler_flat.css",
+  "start_of_week": "su",
+  "starting_hour": "8",
+  "tab": "week",
+  "timezone": "Europe/London",
+  "title": "Office Rooms",
+  "url": [
+    "https://open-web-calendar.quelltext.eu/assets/calendars/rooms/call-cell.ics",
+    "https://open-web-calendar.quelltext.eu/assets/calendars/rooms/kitchen.ics",
+    "https://open-web-calendar.quelltext.eu/assets/calendars/rooms/meeting-room.ics"
+  ]
+}
