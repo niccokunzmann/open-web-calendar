@@ -1,19 +1,21 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # albanobattistella <albano_battistella@hotmail.com>, 2024.
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-03 17:45+0200\n"
-"PO-Revision-Date: 2024-06-14 03:03+0000\n"
-"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/open-web-calendar/documentation-privacy-policy/it/>\n"
+"PO-Revision-Date: 2024-06-22 20:15+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-privacy-policy/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.6-rc\n"
 
 msgid "Open Web Calendar Privacy Policy"
 msgstr "Informativa sulla privacy di Open Web Calendar"
@@ -41,14 +43,13 @@ msgstr ""
 msgid "Documentation Website"
 msgstr "Documentazione del sito web"
 
-#, fuzzy
 msgid ""
 "This website contains the project documentation. It is hosted on GitHub "
 "Pages. Their [Privacy Policy][privacy-policy] applies."
 msgstr ""
 "Questo sito web contiene la documentazione del progetto. È ospitato sulle "
-"pagine GitHub. Si applica la loro [Informativa sulla privacy] [Informativa "
-"sulla privacy]."
+"pagine GitHub. Si applica la loro [Informativa sulla privacy] [privacy-"
+"policy]."
 
 #, fuzzy
 msgid ""
