@@ -1,5 +1,5 @@
 {
-  "css": ".CALENDAR-INDEX-0 { background-color: #77767b; }.CALENDAR-INDEX-1 { background-color: #f9f06b; }.CALENDAR-INDEX-2 { background-color: #dc8add; }",
+  "css": ".CALENDAR-INDEX-0, .CALENDAR-INDEX-0 .dhx_body, .CALENDAR-INDEX-0 .dhx_title { background-color: #77767b; } .CALENDAR-INDEX-1, .CALENDAR-INDEX-1 .dhx_body, .CALENDAR-INDEX-1 .dhx_title  { background-color: #f9f06b; } .CALENDAR-INDEX-2, .CALENDAR-INDEX-2 .dhx_body, .CALENDAR-INDEX-2 .dhx_title  { background-color: #dc8add; }",
   "date": "2024-07-05",
   "ending_hour": "18",
   "hour_format": "%g:%i %a",
