@@ -43,7 +43,8 @@ function updateCalendarInputs() {
         color.type = "color";
         color.classList.add("color-input");
         color.value = "#fefefe";
-        color.setAttribute("cssTemplate", ".CALENDAR-INDEX-" + calendar_index + " { background-color: {color}; }")
+        var cssTemplate = ".CALENDAR-INDEX-" + calendar_index + ", .CALENDAR-INDEX-" + calendar_index + " .dhx_body, .CALENDAR-INDEX-" + calendar_index + " .dhx_title  { background-color: {color}; } \n";
+        color.setAttribute("cssTemplate", cssTemplate);
         color.addEventListener("change", updateUrls);
         color.addEventListener("keyup", updateUrls);
         li.appendChild(color);
