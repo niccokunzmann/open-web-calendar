@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_sv4z1x7x/th/templates/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_nzw3zzqe/th/templates/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_sv4z1x7x/th/templates/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_nzw3zzqe/th/templates/index.png" >
       
     
     
@@ -1094,43 +1094,42 @@ frameborder="0" height="600px" width="100%"></iframe></p>
 <span class="na">sandbox</span><span class="o">=</span><span class="s">&quot;allow-scripts allow-same-origin allow-top-navigation&quot;</span>
 <span class="na">allowTransparency</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span>
 <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600px&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!--</span>
+<span class="cm">  This is HTML and JavaScript that allows changing a calendar URL specific to a timezone.</span>
+
+<span class="cm">  TODO: Choose the time zones that you want the viewer to choose:</span>
+<span class="cm">--&gt;</span>
+<span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;timezoneOption&quot;</span><span class="p">&gt;&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;America/New_York&quot;</span><span class="p">&gt;</span>New York<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Europe/London&quot;</span><span class="p">&gt;</span>London<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Asia/Singapore&quot;</span><span class="p">&gt;</span>Singapore<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>My Local Time Zone<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="c1">// TODO: Set the iframe id:</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">calendarIFrameID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;owcTimezoneExample&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">originalUrl</span><span class="p">;</span><span class="w">  </span><span class="c1">// the oririginal URL of the iframe</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">calendarIFrame</span><span class="p">;</span><span class="w"> </span><span class="c1">// the stored iframe as a variable</span>
+
+<span class="w">  </span><span class="c1">// Save the original URL</span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">setInitialTimezone</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">calendarIFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">calendarIFrameID</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">originalUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calendarIFrame</span><span class="p">.</span><span class="nx">src</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">changeTimezone</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Change to the selected timezone</span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">changeTimezone</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;change timezone: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">timezoneOption</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">calendarIFrame</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">originalUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">timezoneOption</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;timezone=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">timezoneOption</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;url: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">calendarIFrame</span><span class="p">.</span><span class="nx">src</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">setInitialTimezone</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">timezoneOption</span><span class="p">.</span><span class="nx">onchange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">changeTimezone</span><span class="p">;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json" target="_blank">Edit the calendar</a></p>
-<p>Below, you can see the source code that you need to add to your website. You might need to adjust the timezone selection and the id of the iframe.</p>
-<div class="highlight"><pre><span></span><code>&lt;!--
-  This is HTML and JavaScript that allows changing a calendar URL specific to a timezone.
-
-  TODO: Choose the time zones that you want the viewer to choose:
---&gt;
-&lt;select id=&quot;timezoneOption&quot;&gt;&lt;option value=&quot;America/New_York&quot;&gt;New York&lt;/option&gt;&lt;option value=&quot;Europe/London&quot;&gt;London&lt;/option&gt;&lt;option value=&quot;Asia/Singapore&quot;&gt;Singapore&lt;/option&gt;&lt;option value=&quot;&quot;&gt;My Local Time Zone&lt;/option&gt;&lt;/select&gt;
-
-&lt;script&gt;
-  // TODO: Set the iframe id:
-  var calendarIFrameID = &quot;owcTimezoneExample&quot;;
-  var originalUrl;  // the oririginal URL of the iframe
-  var calendarIFrame; // the stored iframe as a variable
-
-  // Save the original URL
-  function setInitialTimezone() {
-    calendarIFrame = document.getElementById(calendarIFrameID);
-    originalUrl = calendarIFrame.src;
-    changeTimezone();
-  }
-
-  // Change to the selected timezone
-  function changeTimezone() {
-    console.log(&quot;change timezone: &quot; + timezoneOption.value);
-    calendarIFrame.src = originalUrl + (timezoneOption.value ? &quot;timezone=&quot; + timezoneOption.value : &quot;&quot;);
-    console.log(&quot;url: &quot; + calendarIFrame.src);
-  }
-
-  window.addEventListener(&quot;load&quot;, setInitialTimezone);
-  timezoneOption.onchange = changeTimezone;
-&lt;/script&gt;
-</code></pre></div>
 <p>การปรับเปลี่ยน:</p>
 <ul>
 <li>JavaScript</li>
