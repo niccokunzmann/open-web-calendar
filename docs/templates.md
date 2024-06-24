@@ -22,7 +22,7 @@ description: "Play with a variety of Calendars for your own project."
 
 {%- endmacro %}
 
-{% macro calendar_example(spec, width="100%", params="", id="") -%}
+{% macro calendar_example(spec, width="100%", params="", id="", html="") -%}
 
 === "Calendar"
 
@@ -39,6 +39,9 @@ description: "Play with a variety of Calendars for your own project."
 
     ```html
     {{ calendar_iframe(spec, width, params, id) }}
+    {% if html != "" %}
+    --8<-- "{{ html }}"
+    {% endif %}
     ```
 
 <a href="{{link.web}}/index.html?specification_url={{link.templates}}/{{spec}}" target="_blank">Edit the calendar</a>
@@ -110,14 +113,7 @@ events are displayed in.
 
 --8<-- "choose-timezone.html"
 
-{{calendar_example("timezone-example.json", id="owcTimezoneExample")}}
-
-Below, you can see the source code that you need to add to your website.
-You might need to adjust the timezone selection and the id of the iframe.
-
-```
---8<-- "choose-timezone.html"
-```
+{{calendar_example("timezone-example.json", id="owcTimezoneExample", html="choose-timezone.html")}}
 
 Modifications:
 
