@@ -34,7 +34,7 @@ pysocks==1.7.1
     # via urllib3
 pytest==8.2.2
     # via -r test-requirements.in
-selenium==4.21.0
+selenium==4.22.0
     # via -r test-requirements.in
 six==1.16.0
     # via
@@ -53,6 +53,8 @@ trio-websocket==0.11.1
 typing-extensions==4.11.0
     # via selenium
 urllib3[socks]==2.2.2
+    # via selenium
+websocket-client==1.8.0
     # via selenium
 wsproto==1.2.0
     # via trio-websocket
