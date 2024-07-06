@@ -10,7 +10,7 @@ attrs==23.2.0
     #   trio
 behave==1.2.6
     # via -r test-requirements.in
-certifi==2024.2.2
+certifi==2024.7.4
     # via selenium
 h11==0.14.0
     # via wsproto

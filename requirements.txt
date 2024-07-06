@@ -10,7 +10,7 @@ blinker==1.7.0
     # via flask
 cachelib==0.9.0
     # via flask-caching
-certifi==2024.2.2
+certifi==2024.7.4
     # via requests
 charset-normalizer==3.3.2
     # via requests
