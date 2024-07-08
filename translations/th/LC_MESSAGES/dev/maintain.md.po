@@ -212,12 +212,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Edit the `docs/changelog.md` file in the Changelog Section and add the "
-"changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\""
-"    ```"
-msgstr ""
-
-msgid ""
 "Create a tag for the version.    ```sh    git tag v1.30 git push origin "
 "v1.30    ```"
 msgstr ""
@@ -235,3 +229,15 @@ msgstr ""
 
 msgid "Restrict width and height to 2000px:       wzxhzdk:4"
 msgstr ""
+
+#~ msgid ""
+#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
+#~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\""
+#~ "    ```"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
+#~ "changes.    ```sh    git checkout master git pull git add docs/changelog.md "
+#~ "git commit -m\"log changes\" git push    ```"
+#~ msgstr ""

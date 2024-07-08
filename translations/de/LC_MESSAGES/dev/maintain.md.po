@@ -103,12 +103,6 @@ msgstr ""
 msgid "Add all strings to it"
 msgstr ""
 
-msgid ""
-"Edit the `docs/changelog.md` file in the Changelog Section and add the "
-"changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\""
-"    ```"
-msgstr ""
-
 msgid "Create a component **From existing component**, the `index.html`."
 msgstr ""
 
@@ -236,6 +230,12 @@ msgstr ""
 msgid "Set **Automatically accept suggestions** to `0`"
 msgstr ""
 
+#~ msgid ""
+#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
+#~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\""
+#~ "    ```"
+#~ msgstr ""
+
 #~ msgid "Check **Suggestion voting**"
 #~ msgstr ""
 
@@ -329,4 +329,10 @@ msgstr ""
 #~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
 #~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\" "
 #~ "git push    ```"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
+#~ "changes.    ```sh    git checkout master git pull git add docs/changelog.md "
+#~ "git commit -m\"log changes\" git push    ```"
 #~ msgstr ""
