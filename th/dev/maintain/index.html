@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_qvjz16ah/th/dev/maintain/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_chcqtki8/th/dev/maintain/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_qvjz16ah/th/dev/maintain/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_chcqtki8/th/dev/maintain/index.png" >
       
     
     
@@ -865,8 +865,11 @@ git push -u origin update</code></li>
 <ol>
 <li>Edit the <code>docs/changelog.md</code> file in the Changelog Section and add the changes.
    <code>sh
-   git add docs/changelog.md
-git commit -m"log changes"</code></li>
+   git checkout master
+git pull
+git add docs/changelog.md
+git commit -m"log changes"
+git push</code></li>
 <li>Create a tag for the version.
    <code>sh
    git tag v1.30

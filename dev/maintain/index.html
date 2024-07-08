@@ -948,8 +948,11 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <ol>
 <li>
 <p>Edit the <code>docs/changelog.md</code> file in the Changelog Section and add the changes.</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>docs/changelog.md
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>master
+git<span class="w"> </span>pull
+git<span class="w"> </span>add<span class="w"> </span>docs/changelog.md
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="s2">&quot;log changes&quot;</span>
+git<span class="w"> </span>push
 </code></pre></div>
 </li>
 <li>
