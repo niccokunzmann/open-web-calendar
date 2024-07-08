@@ -15,7 +15,14 @@ The latest version might not be released, yet.
 
 ## v1.37
 
-
+- Update dependencies
+- Improve German translation by Nicco Kunzmann and Mathieu Graf, Indonesian by Krisna A. Prayoga, Croatian by Milo Ivir, Turkish by Oğuz Ersen, Polish by Eryk Michalak, Spanish by gallegonovato
+- Add calendar example that has multiple source calendars with different styling
+- Fix translation mistakes in Thai and Italian
+- Fix styling for calendar colors in Week and Day view
+- Improve documented exapmple of choosing time zones
+- Add link to Mastodon in documentation
+- Use Ruff as code styler
 
 ## v1.36
 
