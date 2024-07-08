@@ -59,11 +59,10 @@ python-dateutil==2.9.0.post0
 pytz==2024.1
     # via
     #   icalendar
-    #   recurring-ical-events
     #   x-wr-timezone
 pyyaml==6.0.1
     # via -r requirements.in
-recurring-ical-events==2.2.1
+recurring-ical-events==2.2.2
     # via -r requirements.in
 requests[socks]==2.31.0
     # via -r requirements.in
@@ -71,6 +70,8 @@ six==1.16.0
     # via python-dateutil
 soupsieve==2.5
     # via beautifulsoup4
+tzdata==2024.1
+    # via recurring-ical-events
 urllib3==2.2.2
     # via requests
 werkzeug==3.0.3
