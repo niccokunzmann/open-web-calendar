@@ -539,6 +539,32 @@ msgstr ""
 msgid "v1.37"
 msgstr ""
 
+msgid ""
+"Improve German translation by Nicco Kunzmann and Mathieu Graf, Indonesian by"
+" Krisna A. Prayoga, Croatian by Milo Ivir, Turkish by Oğuz Ersen, Polish by "
+"Eryk Michalak, Spanish by gallegonovato"
+msgstr ""
+
+msgid ""
+"Add calendar example that has multiple source calendars with different "
+"styling"
+msgstr ""
+
+msgid "Fix translation mistakes in Thai and Italian"
+msgstr ""
+
+msgid "Fix styling for calendar colors in Week and Day view"
+msgstr ""
+
+msgid "Improve documented exapmple of choosing time zones"
+msgstr ""
+
+msgid "Add link to Mastodon in documentation"
+msgstr ""
+
+msgid "Use Ruff as code styler"
+msgstr ""
+
 #~ msgid ""
 #~ "This calendar is not styled but contains events that can be hosted behind a "
 #~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
