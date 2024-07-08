@@ -52,8 +52,11 @@ To release a new version:
 1. Edit the `docs/changelog.md` file in the Changelog Section and add the changes.
 
     ```sh
+    git checkout master
+    git pull
     git add docs/changelog.md
     git commit -m"log changes"
+    git push
     ```
 
 2. Create a tag for the version.
