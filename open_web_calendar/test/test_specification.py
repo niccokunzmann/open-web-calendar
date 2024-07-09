@@ -9,7 +9,7 @@ in the api.md file.
 import pytest
 from werkzeug.datastructures import MultiDict
 
-from app import cache_url, get_default_specification, get_specification
+from open_web_calendar.app import cache_url, get_default_specification, get_specification
 
 
 def test_specification_equals_default_specification_by_default():

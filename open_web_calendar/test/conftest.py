@@ -14,9 +14,9 @@ HERE = Path(__file__).parent
 CALENDAR_DIRECTORY = HERE / ".." / "features" / "calendars"
 
 # relative imports
-sys.path.append(HERE.absolute() / "..")
+sys.path.append(HERE.absolute() / ".." / "..")
 sys.path.append(HERE.absolute())
-from app import DEFAULT_SPECIFICATION, cache_url  # noqa: E402
+from open_web_calendar.app import DEFAULT_SPECIFICATION, cache_url  # noqa: E402
 
 DEFAULT_SPECIFICATION["url"] = []
 
@@ -48,7 +48,7 @@ def app():
 
     See https://flask.palletsprojects.com/en/2.2.x/testing/
     """
-    from app import app
+    from open_web_calendar.app import app
 
     app.config.update(
         {

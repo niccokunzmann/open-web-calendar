@@ -8,7 +8,7 @@ from pprint import pprint
 
 import pytest
 
-from clean_html import clean_html, remove_html
+from open_web_calendar.clean_html import clean_html, remove_html
 
 
 @pytest.mark.parametrize(

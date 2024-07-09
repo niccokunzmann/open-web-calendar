@@ -11,8 +11,8 @@ import recurring_ical_events
 from dateutil.parser import parse as parse_date
 from flask import jsonify
 
-from clean_html import clean_html
-from conversion_base import ConversionStrategy
+from .clean_html import clean_html
+from .conversion_base import ConversionStrategy
 
 
 def is_date(date):

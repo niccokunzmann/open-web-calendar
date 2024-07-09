@@ -8,7 +8,7 @@ from flask import Response
 from icalendar import Calendar, Event, Timezone
 from icalendar.prop import vDDDTypes
 
-from conversion_base import ConversionStrategy
+from .conversion_base import ConversionStrategy
 
 
 class ConvertToICS(ConversionStrategy):

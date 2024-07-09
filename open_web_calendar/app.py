@@ -26,9 +26,9 @@ from flask import (
 from flask_allowedhosts import limit_hosts
 from flask_caching import Cache
 
-import translate
-from convert_to_dhtmlx import ConvertToDhtmlx
-from convert_to_ics import ConvertToICS
+from . import translate
+from .convert_to_dhtmlx import ConvertToDhtmlx
+from .convert_to_ics import ConvertToICS
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -328,7 +328,8 @@ def main():
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
 
 
-__all__ = ["main", "app"]
+__all__ = ["main", "app", "DEFAULT_SPECIFICATION", "cache_url", "get_text_from_url",
+    "get_default_specification", "get_specification"]
 
 if __name__ == "__main__":
     main()

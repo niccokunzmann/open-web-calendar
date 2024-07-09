@@ -7,7 +7,7 @@ import datetime
 import pytest
 from pytz import timezone, utc
 
-from app import ConvertToDhtmlx
+from open_web_calendar.app import ConvertToDhtmlx
 
 berlin = timezone("Europe/Berlin")
 eastern = timezone("US/Eastern")
