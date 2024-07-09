@@ -10,7 +10,7 @@ build-backend = "hatchling.build"
 name = "open_web_calendar"
 license = {file = "LICENSE"}
 keywords = ["OpenWebCalendar", "calendar", "ics", "rfc5545", "website", "iframe", "embed", "HTML", "icalendar", "scheduling"]
-dynamic = ["urls"]
+dynamic = ["urls", "version"]
 authors = [
   { name="Nicco Kunzmann", email="niccokunzmann@rambler.ru" },
 ]
@@ -39,7 +39,7 @@ classifiers = [
     "Natural Language :: Norwegian",
     "Natural Language :: Spanish",
     "Natural Language :: Turkish",
-    "Natural Language :: Chinese",  # TODO: Test that all languages of the UI are here
+    "Natural Language :: Chinese (Simplified)",  # TODO: Test that all languages of the UI are here
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -81,7 +81,7 @@ docs = [
     "mkdocs[i18n]",
     "mkdocs-meta-descriptions-plugin",
 #mkdocs-mdpo-plugin
-    "git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1",
+    "mkdocs-mdpo-plugin @ git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1",
     "mkdocs-material-relative-language-selector",
     "mkdocs-exclude",
 ]
@@ -103,6 +103,9 @@ source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
 version-file = "open_web_calendar/version.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.ruff]
 target-version = "py38"
