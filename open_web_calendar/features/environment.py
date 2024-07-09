@@ -28,7 +28,7 @@ from werkzeug import run_simple
 
 HERE = Path(__file__).parent.absolute()
 sys.path.append(HERE / "..")
-from app import DEFAULT_SPECIFICATION, app  # noqa: E402
+from open_web_calendar.app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
 CALENDAR_FOLDER = HERE / "calendars"
 # timeout in seconds
