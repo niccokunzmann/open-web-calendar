@@ -147,7 +147,7 @@ extend-safe-fixes = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"test/*" = [
+"open_web_calendar/test/*" = [
     "B011",   # Do not assert False (python -O removes these calls), raise AssertionError()
     "DTZ001", # datetime.datetime() called without a tzinfo argument
     "E501",   # Indentation is not a multiple of {indent_size}
@@ -159,12 +159,12 @@ extend-safe-fixes = [
     "T203",   # `pprint` found
     "RUF001", # String contains ambiguous character
 ]
-"features/*" = [
+"open_web_calendar/features/*" = [
     "F811",   # Redefinition of unused `step_impl` from line 52
     "T201",   # `print` found
 ]
 
-"static/js/dhtmlx/locale/convert.py" = [
+"open_web_calendar/static/js/dhtmlx/locale/convert.py" = [
   "INP001",    # File `static/js/dhtmlx/locale/convert.py` is part of an implicit namespace package. Add an `__init__.py`
   "T201",      # print found
   "PTH123",
