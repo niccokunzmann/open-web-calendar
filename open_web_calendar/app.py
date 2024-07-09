@@ -323,5 +323,12 @@ def host_not_allowed(error):
 # make serializable for multiprocessing
 # app.__reduce__ = lambda: __name__ + ".app"
 
-if __name__ == "__main__":
+def main():
+    """Run the Open Web Calendar"""
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
+
+
+__all__ = ["main", "app"]
+
+if __name__ == "__main__":
+    main()

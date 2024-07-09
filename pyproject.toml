@@ -2,6 +2,108 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "open_web_calendar"
+license = {file = "LICENSE"}
+keywords = ["OpenWebCalendar", "calendar", "ics", "rfc5545", "website", "iframe", "embed", "HTML", "icalendar", "scheduling"]
+dynamic = ["urls"]
+authors = [
+  { name="Nicco Kunzmann", email="niccokunzmann@rambler.ru" },
+]
+maintainers = [
+  { name="Nicco Kunzmann", email="niccokunzmann@rambler.ru" },
+  { name="Open Web Calendar Contributors" },
+]
+description = "Embed a highly customizable web calendar into your website using ICal source links"
+readme = "README.md"
+requires-python = ">=3.8"
+# see https://pypi.python.org/pypi?%3Aaction=list_classifiers
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Flask",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Natural Language :: English",
+    "Natural Language :: Esperanto",
+    "Natural Language :: French",
+    "Natural Language :: German",
+    "Natural Language :: Croatian",
+    "Natural Language :: Indonesian",
+    "Natural Language :: Italian",
+    "Natural Language :: Indonesian",
+    "Natural Language :: Norwegian",
+    "Natural Language :: Polish",
+    "Natural Language :: Norwegian",
+    "Natural Language :: Spanish",
+    "Natural Language :: Turkish",
+    "Natural Language :: Chinese",  # TODO: Test that all languages of the UI are here
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Office/Business :: Scheduling",
+]
+
+dependencies = [
+    "flask-caching",
+    "flask-allowedhosts",
+    "flask",
+    "icalendar",
+    "requests",
+    "requests[socks]",
+    "pyyaml",
+    "recurring-ical-events",
+    "gunicorn",
+    "lxml",
+    "beautifulsoup4",
+    "lxml[html_clean]",
+    "pytz",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "behave",
+    "selenium",
+]
+
+docs = [
+    "mkdocs-material",
+    "mkdocs-rss-plugin",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-material[imaging]",
+    "mkdocs-markdownextradata-plugin",
+    "mkdocs-macros-plugin",
+    "mkdocs[i18n]",
+    "mkdocs-meta-descriptions-plugin",
+#mkdocs-mdpo-plugin
+    "git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1",
+    "mkdocs-material-relative-language-selector",
+    "mkdocs-exclude",
+]
+
+[project.scripts]
+open-web-calendar = "open_web_calendar:main"
+
+[tool.hatch.metadata.hooks.vcs.urls]
+#[project.urls]
+Homepage = "https://open-web-calendar.hosted.quelltext.eu/"
+Repository = "https://github.com/niccokunzmann/open-web-calendar/"
+source_archive = "https://github.com/niccokunzmann/open-web-calendar/archive/{commit_hash}.zip"
+Issues = "https://github.com/niccokunzmann/open-web-calendar/issues"
+Documentation = "https://open-web-calendar.quelltext.eu/"
+Changelog = "https://open-web-calendar.quelltext.eu/changelog/"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "open_web_calendar/version.py"
+
 [tool.ruff]
 target-version = "py38"
 
