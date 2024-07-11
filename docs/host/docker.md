@@ -25,6 +25,7 @@ To build the container yourself, run:
 ```sh
 docker build --tag niccokunzmann/open-web-calendar .
 ```
+
 This will create the image `niccokunzmann/open-web-calendar`.
 
 ## Run the Docker Image
@@ -83,11 +84,15 @@ as it is very talkative.
 
 If you want to update your image with the latest version from [Dockerhub] run this:
 
-    docker compose pull
+```sh
+docker compose pull
+```
 
 Note: You need to restart the container after pulling in order for the update to apply:
 
-    docker compose up -d
+```sh
+docker compose up -d
+```
 
 ## Preventing SSRF attacks using a Tor proxy
 
@@ -95,7 +100,6 @@ The Open Web Calendar can be configured to use a proxy to request `.ics`
 and other files. The following example shows the usage of a Tor proxy.
 You can try it out at
 [tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted.quelltext.eu/).
-
 
 ``` YAML
 version: '3'
