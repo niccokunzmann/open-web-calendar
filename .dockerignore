@@ -9,3 +9,6 @@
 /open_web_calendar/features
 !/requirements.txt
 !/docker
+!/LICENSE
+!/LICENSES
+!/.reuse
