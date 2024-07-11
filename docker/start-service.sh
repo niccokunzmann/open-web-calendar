@@ -4,4 +4,4 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
-gunicorn -w "$WORKERS" -b "0.0.0.0:$PORT" app:app
+gunicorn -w "$WORKERS" -b "0.0.0.0:$PORT" open_web_calendar.app:app
