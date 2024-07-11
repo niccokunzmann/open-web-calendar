@@ -3,20 +3,9 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 # see https://docs.docker.com/engine/reference/builder/#dockerignore-file
-*.md
-vercel.json
-tox.ini
-venv
-test-requirements.*
-test
-scripts
-runtime.txt
-__pycache__
-*.pyc
-Procfile
-architecture.svg
-app.json
-features
-constraints.txt
-Dockerfile
-.tox
+/*
+!/open-web-calendar
+/open_web_calendar/test
+/open_web_calendar/features
+!/requirements.txt
+!/docker
