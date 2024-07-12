@@ -4,7 +4,7 @@
 
 # see https://docs.docker.com/engine/reference/builder/#dockerignore-file
 /*
-!/open-web-calendar
+!/open_web_calendar
 /open_web_calendar/test
 /open_web_calendar/features
 !/requirements.txt
