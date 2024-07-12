@@ -33,3 +33,11 @@ labels_date: "Datum"
 labels_description: "Beskrivning"
 labels_week_agenda_tab: "Dagordning"
 language-en: "Swedish"
+labels_next: Nästa
+labels_prev: Förra
+labels_day: Dag
+labels_hour: Timme
+labels_minute: Minut
+language: Svenska
+labels_year: År
+labels_month: Månad
