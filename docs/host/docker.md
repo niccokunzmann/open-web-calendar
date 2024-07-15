@@ -34,10 +34,16 @@ You can use the existing image:
 [niccokunzmann/open-web-calendar][Dockerhub].
 
 ```sh
-docker run -d --rm -p 5000:80 niccokunzmann/open-web-calendar
+docker run -d --rm -p 5000:80 --name open-web-calendar niccokunzmann/open-web-calendar
 ```
 
 Then, you should see your service running at [http://localhost:5000](http://localhost:5000).
+
+This way, you can stop the service:
+
+```shell
+docker stop open-web-calendar
+```
 
 ## Container Tags
 

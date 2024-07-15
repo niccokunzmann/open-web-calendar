@@ -10,7 +10,7 @@ ADD docker/pip.conf /etc/pip.conf
 # licenses
 ADD LICENSE .
 ADD LICENSES .
-ADD .reuse .
+ADD REUSE.toml .
 
 # server environment variables
 EXPOSE 80

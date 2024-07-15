@@ -11,4 +11,4 @@
 !/docker
 !/LICENSE
 !/LICENSES
-!/.reuse
+!/REUSE.toml
