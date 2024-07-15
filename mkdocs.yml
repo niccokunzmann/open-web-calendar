@@ -217,6 +217,7 @@ nav:
     - host/hosted.md
     - host/self.md
     - host/docker.md
+    - host/pypi.md
     - host/configure.md
   - Development:
     - dev/translate.md
