@@ -325,6 +325,11 @@ def host_not_allowed(error):
 
 def main():
     """Run the Open Web Calendar"""
+    print("""If you want to run the Open Web Calendar in production, please use this command:
+          
+    gunicorn open_web_calendar:app
+    """)
+    
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
 
 
