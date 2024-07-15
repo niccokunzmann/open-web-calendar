@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wr2o_w0x/it/dev/maintain/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__80wla14/it/dev/maintain/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wr2o_w0x/it/dev/maintain/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__80wla14/it/dev/maintain/index.png" >
       
     
     
@@ -804,6 +804,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#translate-documentation-files" class="md-nav__link">
     <span class="md-ellipsis">
       Translate Documentation Files
@@ -875,6 +884,12 @@ git push</code></li>
    git tag v1.30
 git push origin v1.30</code></li>
 </ol>
+<h2 id="package">Package<a class="headerlink" href="#package" title="Link permanente">&para;</a></h2>
+<p>The Open Web Calendar is a package on PyPI. You can build the package locally.</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>build<span class="w"> </span>wheel<span class="w"> </span>twine
+python3<span class="w"> </span>-m<span class="w"> </span>build
+</code></pre></div>
+<p>New versions are automatically uploaded. This process follows <a href="https://packaging.python.org/en/latest/tutorials/packaging-projects/">the official tutorial</a>.</p>
 <h2 id="translate-documentation-files">Translate Documentation Files<a class="headerlink" href="#translate-documentation-files" title="Link permanente">&para;</a></h2>
 <p>We might add more Markdown documentation files to the <a href="https://hosted.weblate.org/engage/open-web-calendar/">Weblate translation</a>. The aim of this section is to have a consistent outcome.</p>
 <ol>

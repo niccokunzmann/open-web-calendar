@@ -1006,15 +1006,18 @@
 <span class="nb">cd</span><span class="w"> </span>open-web-calendar
 </code></pre></div>
 <p>To build the container yourself, run:</p>
-<p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>--tag<span class="w"> </span>niccokunzmann/open-web-calendar<span class="w"> </span>.
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>--tag<span class="w"> </span>niccokunzmann/open-web-calendar<span class="w"> </span>.
 </code></pre></div>
-This will create the image <code>niccokunzmann/open-web-calendar</code>.</p>
+<p>This will create the image <code>niccokunzmann/open-web-calendar</code>.</p>
 <h2 id="run-the-docker-image">Run the Docker Image<a class="headerlink" href="#run-the-docker-image" title="Permanent link">&para;</a></h2>
 <p>You can use the existing image:
 <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">niccokunzmann/open-web-calendar</a>.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>niccokunzmann/open-web-calendar
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>--name<span class="w"> </span>open-web-calendar<span class="w"> </span>niccokunzmann/open-web-calendar
 </code></pre></div>
 <p>Then, you should see your service running at <a href="http://localhost:5000">http://localhost:5000</a>.</p>
+<p>This way, you can stop the service:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>stop<span class="w"> </span>open-web-calendar
+</code></pre></div>
 <h2 id="container-tags">Container Tags<a class="headerlink" href="#container-tags" title="Permanent link">&para;</a></h2>
 <p>The container <code>niccokunzmann/open-web-calendar:latest</code> contains the latest release.
 Containers are also tagged with the version from the <a href="../../changelog">changelog</a>, e.g.
@@ -1051,10 +1054,10 @@ This includes unchecked translations.</p>
 as it is very talkative.</p>
 <h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="Permanent link">&para;</a></h2>
 <p>If you want to update your image with the latest version from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> run this:</p>
-<div class="highlight"><pre><span></span><code>docker compose pull
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull
 </code></pre></div>
 <p>Note: You need to restart the container after pulling in order for the update to apply:</p>
-<div class="highlight"><pre><span></span><code>docker compose up -d
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 <h2 id="preventing-ssrf-attacks-using-a-tor-proxy">Preventing SSRF attacks using a Tor proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-tor-proxy" title="Permanent link">&para;</a></h2>
 <p>The Open Web Calendar can be configured to use a proxy to request <code>.ics</code>
