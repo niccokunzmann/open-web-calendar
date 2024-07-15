@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 import pytest
 
-import translate
+from open_web_calendar import translate
 
 
 @pytest.mark.parametrize(

@@ -21,4 +21,4 @@ fi
 
 source .tox/py39/bin/activate
 
-python3 app.py
+python3 -m open_web_calendar

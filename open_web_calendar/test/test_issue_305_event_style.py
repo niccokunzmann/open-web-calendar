@@ -13,7 +13,7 @@ from typing import NamedTuple
 
 import pytest
 
-from app import ConvertToDhtmlx
+from open_web_calendar.app import ConvertToDhtmlx
 
 
 class CATEGORY(NamedTuple):

@@ -10,8 +10,9 @@ Test the caching functionality which will be used by subsequent tests.
 from typing import NamedTuple
 
 import pytest
+import requests
 
-from app import cache_url, get_text_from_url, requests
+from open_web_calendar.app import cache_url, get_text_from_url
 
 
 # use the content property

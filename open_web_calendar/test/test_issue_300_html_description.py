@@ -15,7 +15,7 @@ Calendars:
 
 from icalendar import Calendar, Event
 
-from app import ConvertToDhtmlx
+from open_web_calendar.app import ConvertToDhtmlx
 
 
 def event_with_uid(calendar_content: str, uid: str) -> Event:

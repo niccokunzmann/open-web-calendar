@@ -66,6 +66,19 @@ To release a new version:
     git push origin v1.30
     ```
 
+## Package
+
+The Open Web Calendar is a package on PyPI.
+You can build the package locally.
+
+```shell
+python3 -m pip install --upgrade build wheel twine
+python3 -m build
+```
+
+New versions are automatically uploaded.
+This process follows [the official tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/).
+
 ## Translate Documentation Files
 
 We might add more Markdown documentation files to the [Weblate translation]({{link.weblate}}).

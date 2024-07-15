@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2024 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+version = 1
+SPDX-PackageName = "Open Web Calendar"
+SPDX-PackageSupplier = "Nicco Kunzmann <niccokunzmann@rambler.ru>"
+SPDX-PackageDownloadLocation = "https://github.com/niccokunzmann/open-web-calendar"
+
+[[annotations]]
+path = ["open_web_calendar/translations/**.po", "docs/snippets/**", "docs/overrides/partials/languages/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+[[annotations]]
+path = "open_web_calendar/features/calendars/**.ics"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+[[annotations]]
+path = ["open_web_calendar/features/**.feature", "open_web_calendar/translations/**.yml"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>"
+SPDX-License-Identifier = "GPL-2.0-only"
+
+[[annotations]]
+path = ["test-requirements.**", "requirements.**", "docs-requirements.**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>"
+SPDX-License-Identifier = "GPL-2.0-only"
+
+[[annotations]]
+path = "open_web_calendar/static/css/dhtmlx/dhtmlxscheduler_material/fonts.googleapis.com/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Christian Robertson <https://fonts.google.com/specimen/Roboto/about> <https://github.com/googlefonts/roboto>"
+SPDX-License-Identifier = "Apache-2.0"

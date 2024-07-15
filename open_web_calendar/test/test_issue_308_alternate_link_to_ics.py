@@ -13,7 +13,7 @@ import html
 
 import pytest
 
-from app import cache_url
+from open_web_calendar.app import cache_url
 
 
 @pytest.mark.parametrize("page", ["index.html", "about.html", "calendar.html"])
