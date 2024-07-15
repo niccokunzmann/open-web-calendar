@@ -37,7 +37,7 @@ CACHE_REQUESTED_URLS_FOR_SECONDS = int(
     os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
 )
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
-if [""] == ALLOWED_HOSTS:
+if ALLOWED_HOSTS == [""]:  # noqa: SIM300
     ALLOWED_HOSTS = []
 REQUESTS_TIMEOUT = int(os.environ.get("SOURCE_TIMEOUT", "60"))
 
