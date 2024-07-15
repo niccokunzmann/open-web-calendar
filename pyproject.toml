@@ -7,16 +7,16 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "open_web_calendar"
+name = "open-web-calendar"
 license = {file = "LICENSE"}
 keywords = ["OpenWebCalendar", "calendar", "ics", "rfc5545", "website", "iframe", "embed", "HTML", "icalendar", "scheduling"]
 dynamic = ["urls", "version"]
 authors = [
   { name="Nicco Kunzmann", email="niccokunzmann@rambler.ru" },
+  { name="Open Web Calendar Contributors" },
 ]
 maintainers = [
   { name="Nicco Kunzmann", email="niccokunzmann@rambler.ru" },
-  { name="Open Web Calendar Contributors" },
 ]
 description = "Embed a highly customizable web calendar into your website using ICal source links"
 readme = "README.md"
@@ -42,7 +42,6 @@ classifiers = [
     "Natural Language :: Chinese (Simplified)",  # TODO: Test that all languages of the UI are here
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
     "Topic :: Office/Business :: Scheduling",
@@ -71,20 +70,20 @@ test = [
     "selenium",
 ]
 
-docs = [
-    "mkdocs-material",
-    "mkdocs-rss-plugin",
-    "mkdocs-git-revision-date-localized-plugin",
-    "mkdocs-material[imaging]",
-    "mkdocs-markdownextradata-plugin",
-    "mkdocs-macros-plugin",
-    "mkdocs[i18n]",
-    "mkdocs-meta-descriptions-plugin",
-#mkdocs-mdpo-plugin
-    "mkdocs-mdpo-plugin @ git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1",
-    "mkdocs-material-relative-language-selector",
-    "mkdocs-exclude",
-]
+#docs = [
+#    "mkdocs-material",
+#    "mkdocs-rss-plugin",
+#    "mkdocs-git-revision-date-localized-plugin",
+#    "mkdocs-material[imaging]",
+#    "mkdocs-markdownextradata-plugin",
+#    "mkdocs-macros-plugin",
+#    "mkdocs[i18n]",
+#    "mkdocs-meta-descriptions-plugin",
+##mkdocs-mdpo-plugin
+#    "mkdocs-mdpo-plugin @ git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1",
+#    "mkdocs-material-relative-language-selector",
+#    "mkdocs-exclude",
+#]
 
 [project.scripts]
 open-web-calendar = "open_web_calendar:main"
@@ -100,6 +99,10 @@ Changelog = "https://open-web-calendar.quelltext.eu/changelog/"
 
 [tool.hatch.version]
 source = "vcs"
+
+[tool.hatch.version.raw-options]
+# see https://github.com/ofek/hatch-vcs/issues/43#issuecomment-1553065222
+local_scheme = "no-local-version"
 
 [tool.hatch.build.hooks.vcs]
 version-file = "open_web_calendar/version.py"
