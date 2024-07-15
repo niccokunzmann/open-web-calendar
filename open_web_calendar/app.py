@@ -37,7 +37,7 @@ CACHE_REQUESTED_URLS_FOR_SECONDS = int(
     os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
 )
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
-if ALLOWED_HOSTS == [""]:
+if [""] == ALLOWED_HOSTS:
     ALLOWED_HOSTS = []
 REQUESTS_TIMEOUT = int(os.environ.get("SOURCE_TIMEOUT", "60"))
 
@@ -326,10 +326,11 @@ def host_not_allowed(error):
 
 def main():
     """Run the Open Web Calendar"""
-    print("""If you want to run the Open Web Calendar in production, please use this command:
-          
+    print("""If you want to run the Open Web Calendar in production,
+please use this command:
+
     gunicorn open_web_calendar:app
-    """)
+    """)  # noqa: T201
 
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
 

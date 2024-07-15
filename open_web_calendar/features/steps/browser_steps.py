@@ -37,7 +37,7 @@ def get_url(context, url):
             return context.browser.get(url)
         except TimeoutException:  # noqa: PERF203
             pass
-    raise  # noqa: PLE0704
+    raise
 
 
 @given('we add the calendar "{calendar_name}"')
