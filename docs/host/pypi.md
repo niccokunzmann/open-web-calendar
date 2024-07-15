@@ -1,3 +1,11 @@
+---
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
+comments: true
+description: "The Open Web Calendar can be installed as a Python package from PyPI."
+---
 # Python Package
 
 ![](https://img.shields.io/pypi/v/open-web-calendar.svg) ![](https://img.shields.io/pypi/pyversions/open-web-calendar.svg)
