@@ -9,4 +9,5 @@ recurring-ical-events
 gunicorn
 lxml
 beautifulsoup4
-lxml[html_clean]
+lxml_html_clean
+pytz
