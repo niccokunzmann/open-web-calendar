@@ -140,7 +140,7 @@ jobs:
     # see https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
     environment:
       name: PyPI
-      url: https://pypi.org/project/recurring-ical-events/
+      url: https://pypi.org/project/open-web-calendar/
     # after using the environment, we need to make the secrets available
     # see https://docs.github.com/en/actions/security-guides/encrypted-secrets#example-using-bash
     env:
