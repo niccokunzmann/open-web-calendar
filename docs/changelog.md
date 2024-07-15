@@ -13,6 +13,11 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+## v1.38
+
+- Create [PyPI package](https://pypi.org/project/open-web-calendar/) and deployment
+- Update dependencies
+
 ## v1.37
 
 - Update dependencies
