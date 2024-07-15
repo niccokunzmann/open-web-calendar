@@ -23,7 +23,7 @@
     
     
       
-        <title>Pypi - Offener Web-Kalender</title>
+        <title>Python Package - Offener Web-Kalender</title>
       
     
     
@@ -58,11 +58,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Pypi - Open Web Calendar" >
+        <meta  property="og:title"  content="Python Package - Open Web Calendar" >
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_2br2f503/de/host/pypi/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_4ubggrdk/de/host/pypi/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -74,11 +74,11 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Pypi - Open Web Calendar" >
+        <meta  name="twitter:title"  content="Python Package - Open Web Calendar" >
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_2br2f503/de/host/pypi/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_4ubggrdk/de/host/pypi/index.png" >
       
     
     
@@ -97,6 +97,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#python-package" class="md-skip">
+          Zum Inhalt
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -129,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pypi
+              Python Package
             
           </span>
         </div>
@@ -506,6 +511,27 @@
   
   
     <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../configure/" class="md-nav__link">
         
   
@@ -771,6 +797,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -793,9 +821,20 @@
   
 
 
-  <h1>Pypi</h1>
-
-
+<h1 id="python-package">Python Package<a class="headerlink" href="#python-package" title="Fester Link">&para;</a></h1>
+<p><img alt="" src="https://img.shields.io/pypi/v/open-web-calendar.svg" /> <img alt="" src="https://img.shields.io/pypi/pyversions/open-web-calendar.svg" /></p>
+<p>The Open Web Calendar is available as a Python package on <a href="https://pypi.org/project/open-web-calendar/">PyPI</a>. If you have Python 3 installed, run this to install the package:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>open-web-calendar
+</code></pre></div>
+<p>After installation, run the Open Web Calendar using <a href="https://pypi.org/project/gunicorn/">Gunicorn</a>:</p>
+<div class="highlight"><pre><span></span><code>gunicorn<span class="w"> </span>open_web_calendar:app
+</code></pre></div>
+<p>You should now see the server running at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.</p>
+<p>For more configuration options, see here:</p>
+<ul>
+<li><a href="https://pypi.org/project/gunicorn/">Gunicorn</a></li>
+<li><a href="../configure">Configuration</a></li>
+</ul>
 
 
 

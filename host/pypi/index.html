@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://open-web-calendar.quelltext.eu/host/pypi/.canonical">
       
       
+        <link rel="prev" href="../docker/">
+      
+      
+        <link rel="next" href="../configure/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -23,7 +27,7 @@
     
     
       
-        <title>Pypi - Open Web Calendar</title>
+        <title>Python Package - Open Web Calendar</title>
       
     
     
@@ -58,7 +62,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Pypi - Open Web Calendar" >
+        <meta  property="og:title"  content="Python Package - Open Web Calendar" >
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
@@ -74,7 +78,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Pypi - Open Web Calendar" >
+        <meta  name="twitter:title"  content="Python Package - Open Web Calendar" >
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
@@ -97,6 +101,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#python-package" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -129,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pypi
+              Python Package
             
           </span>
         </div>
@@ -405,17 +414,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -429,7 +440,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Hosting
@@ -494,6 +505,37 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Python Package
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -771,6 +813,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -793,9 +837,21 @@
   
 
 
-  <h1>Pypi</h1>
-
-
+<h1 id="python-package">Python Package<a class="headerlink" href="#python-package" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/external/img.shields.io/pypi/v/open-web-calendar.svg"> <img alt="" src="../../assets/external/img.shields.io/pypi/pyversions/open-web-calendar.svg"></p>
+<p>The Open Web Calendar is available as a Python package on <a href="https://pypi.org/project/open-web-calendar/">PyPI</a>.
+If you have Python 3 installed, run this to install the package:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>open-web-calendar
+</code></pre></div>
+<p>After installation, run the Open Web Calendar using <a href="https://pypi.org/project/gunicorn/">Gunicorn</a>:</p>
+<div class="highlight"><pre><span></span><code>gunicorn<span class="w"> </span>open_web_calendar:app
+</code></pre></div>
+<p>You should now see the server running at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.</p>
+<p>For more configuration options, see here:</p>
+<ul>
+<li><a href="https://pypi.org/project/gunicorn/">Gunicorn</a></li>
+<li><a href="../configure">Configuration</a></li>
+</ul>
 
 
 
@@ -838,6 +894,44 @@ The `title` parameter defines the match of the category for discussion.
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hosting with Docker">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Hosting with Docker
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../configure/" class="md-footer__link md-footer__link--next" aria-label="Next: Server Configuration">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Server Configuration
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
