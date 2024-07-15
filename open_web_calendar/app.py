@@ -323,18 +323,26 @@ def host_not_allowed(error):
 # make serializable for multiprocessing
 # app.__reduce__ = lambda: __name__ + ".app"
 
+
 def main():
     """Run the Open Web Calendar"""
     print("""If you want to run the Open Web Calendar in production, please use this command:
           
     gunicorn open_web_calendar:app
     """)
-    
+
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
 
 
-__all__ = ["main", "app", "DEFAULT_SPECIFICATION", "cache_url", "get_text_from_url",
-    "get_default_specification", "get_specification"]
+__all__ = [
+    "main",
+    "app",
+    "DEFAULT_SPECIFICATION",
+    "cache_url",
+    "get_text_from_url",
+    "get_default_specification",
+    "get_specification",
+]
 
 if __name__ == "__main__":
     main()

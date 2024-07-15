@@ -7,10 +7,10 @@
 Originally, open_web_calendar/app.py was in this place.
 To provide the same interface, this file was created.
 """
+
 from open_web_calendar import app, main
 
 __all__ = ["app", "main"]
 
 if __name__ == "__main__":
     main()
-
