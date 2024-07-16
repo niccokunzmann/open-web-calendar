@@ -26,10 +26,9 @@ from flask import (
 from flask_allowedhosts import limit_hosts
 from flask_caching import Cache
 
-from . import translate
+from . import translate, version
 from .convert_to_dhtmlx import ConvertToDhtmlx
 from .convert_to_ics import ConvertToICS
-from . import version
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
