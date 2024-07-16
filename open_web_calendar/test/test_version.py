@@ -16,7 +16,7 @@ def test_version_can_be_imported(monkeypatch, no_version_file):
     """Import the version"""
     if no_version_file:
         monkeypatch.delitem(sys.modules, "open_web_calendar")
-        monkeypatch.setitem(sys.modules, "open_web_calendar.version", None)
+        monkeypatch.setitem(sys.modules, "open_web_calendar._version", None)
     import open_web_calendar
 
     assert open_web_calendar.version_tuple == open_web_calendar.__version_tuple__

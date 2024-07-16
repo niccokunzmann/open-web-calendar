@@ -105,7 +105,7 @@ source = "vcs"
 local_scheme = "no-local-version"
 
 [tool.hatch.build.hooks.vcs]
-version-file = "open_web_calendar/version.py"
+version-file = "open_web_calendar/_version.py"
 
 [tool.hatch.metadata]
 allow-direct-references = true
