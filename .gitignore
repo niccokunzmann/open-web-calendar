@@ -113,7 +113,7 @@ tmp
 *.swp
 .vercel
 *save
-open_web_calendar/version.py
+open_web_calendar/_version.py
 
 # mkdocs
 site/

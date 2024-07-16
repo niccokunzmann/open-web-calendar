@@ -70,6 +70,7 @@ jobs:
   link-check:
     name: "Check Links in Documentation"
     runs-on: ubuntu-latest
+    if: ! startsWith(github.ref, 'refs/tags/v')
     steps:
       - uses: actions/checkout@v4
         with:
@@ -103,6 +104,19 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          
+      - name: Create Version Information
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade build
+          # add commit hash to build information
+          sed -i 's/^local_scheme/#local_scheme/g' pyproject.toml
+          python -m build
+    
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -131,6 +145,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
   deploy-tag-to-pypi:
+    name: Publish Package on PyPI
     # only deploy on tags, see https://stackoverflow.com/a/58478262/1320237
     if: startsWith(github.ref, 'refs/tags/v')
     needs:

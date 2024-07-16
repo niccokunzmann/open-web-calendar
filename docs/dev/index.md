@@ -29,6 +29,12 @@ It will ensure that the code is formatted and linted as expected using [ruff].
 pre-commit install
 ```
 
+To format the code before commit without the pre-commit hook, run this:
+
+```shell
+tox -e ruff
+```
+
 [ruff]: https://docs.astral.sh/ruff/
 [pre-commit]:  https://pre-commit.com/
 

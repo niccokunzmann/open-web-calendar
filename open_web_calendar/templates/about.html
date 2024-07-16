@@ -49,7 +49,7 @@ SPDX-License-Identifier: GPL-2.0-only
             </p>
             <ul>
                 <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>
-                <li><a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a></li>
+                <li><a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a> {{ html("version").format(version=configuration["version"]) }}</li>
                 <li><a href="{{ specification["privacy_policy"] | safe }}">{{ html("privacy-policy") }}</a></li>
             </ul>
             <h2>{{ html("license") }}</h2>
