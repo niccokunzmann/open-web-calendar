@@ -167,6 +167,7 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     tor: https://tor.open-web-calendar.hosted.quelltext.eu
     repo: https://github.com/niccokunzmann/open-web-calendar/
     code: https://github.com/niccokunzmann/open-web-calendar/tree/master/
+    pypi: https://pypi.org/project/open-web-calendar/
     issues: https://github.com/niccokunzmann/open-web-calendar/issues
     tags: https://github.com/niccokunzmann/open-web-calendar/tags
     weblate: https://hosted.weblate.org/engage/open-web-calendar/
@@ -219,6 +220,7 @@ nav:
     - host/docker.md
     - host/pypi.md
     - host/configure.md
+    - host/migrate.md
   - Development:
     - dev/translate.md
     - dev/index.md

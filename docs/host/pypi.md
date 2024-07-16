@@ -10,8 +10,8 @@ description: "The Open Web Calendar can be installed as a Python package from Py
 
 ![](https://img.shields.io/pypi/v/open-web-calendar.svg) ![](https://img.shields.io/pypi/pyversions/open-web-calendar.svg)
 
-The Open Web Calendar is available as a Python package on [PyPI](https://pypi.org/project/open-web-calendar/).
-If you have Python 3 installed, run this to install the package:
+The Open Web Calendar is available as a Python package on [PyPI]({{link.pypi}}).
+If you have [Python 3](https://www.python.org/) installed, run this to install the package:
 
 ```shell
 pip install open-web-calendar

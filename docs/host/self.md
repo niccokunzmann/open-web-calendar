@@ -56,6 +56,11 @@ The Open Web Calendar is available as an app for [YunoHost](https://yunohost.org
 If you run your own server, you can choose to run the Open Web Calender with Docker.
 Building, running and updating are [documented here](../docker).
 
+## Python Package
+
+You can choose to run the Open Web Calendar installed as a Python package from PyPI.
+To do this, have a look at [the documentation](../pypi).
+
 ## Update Notifications
 
 If you wish to receive notifications about new updates of the software,
