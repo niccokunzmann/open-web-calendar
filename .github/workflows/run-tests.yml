@@ -155,7 +155,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install wheel twine
+        pip install --upgrade wheel twine build
 #    - name: Check the tag
 #      run: |
 #        PACKAGE_VERSION=`python setup.py --version`
@@ -171,7 +171,7 @@ jobs:
     - name: remove old files
       run: rm -rf dist/*
     - name: build distribution files
-      run: python setup.py bdist_wheel sdist
+      run: python -m build
     - name: deploy to pypi
       run: |
         # You will have to set the variables TWINE_USERNAME and TWINE_PASSWORD
