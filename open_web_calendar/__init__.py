@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 from .app import app, main
-
 from .version import __version__, __version_tuple__, version, version_tuple
 
 __all__ = [
