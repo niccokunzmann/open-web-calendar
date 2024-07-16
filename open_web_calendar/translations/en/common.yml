@@ -33,3 +33,11 @@ project-name: "Open Web Calendar"
 # https://open-web-calendar.hosted.quelltext.eu/#translate-privacy-policy
 # https://open-web-calendar.hosted.quelltext.eu/about.html#translate-privacy-policy
 privacy-policy: "Privacy Policy"
+
+
+# This is a version string next to the source code link.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-version
+# https://open-web-calendar.hosted.quelltext.eu/about.html#translate-version
+version: "Version: {version}"
+
+

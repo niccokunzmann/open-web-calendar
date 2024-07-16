@@ -29,6 +29,7 @@ from flask_caching import Cache
 from . import translate
 from .convert_to_dhtmlx import ConvertToDhtmlx
 from .convert_to_ics import ConvertToICS
+from . import version
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -105,6 +106,8 @@ def get_configuration():
     """Return the configuration for the browser"""
     return {
         "default_specification": get_default_specification(),
+        "version": version.version,
+        "version-list": version.version_tuple,
         "timezones": pytz.all_timezones,  # see https://stackoverflow.com/a/13867319
         "dhtmlx": {"languages": translate.dhtmlx_languages()},
         "index": {"languages": translate.languages_for_the_index_file()},
