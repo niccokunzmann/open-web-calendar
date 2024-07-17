@@ -345,6 +345,7 @@ __all__ = [
     "get_text_from_url",
     "get_default_specification",
     "get_specification",
+    "DEFAULT_REQUEST_HEADERS",
 ]
 
 if __name__ == "__main__":

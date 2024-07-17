@@ -207,6 +207,10 @@ clean_html_remove_tags:
 ## This is required by GPL.
 source_code: "https://github.com/niccokunzmann/open-web-calendar/"
 
+## You can override the version text next to the source code link.
+## If this is empty, the version of the package is used.
+version: ''
+
 ## This is a link to the contribution page
 contributing: "https://open-web-calendar.quelltext.eu/contributing/"
 
