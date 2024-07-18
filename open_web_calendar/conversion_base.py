@@ -75,6 +75,9 @@ class ConversionStrategy:
                 new_url = urljoin(url, href)
                 calendar_text = self.get_text_from_url(new_url)
                 result += Calendar.from_ical(calendar_text, multiple=True)
+            if result == []:
+                # We did not find any link to any calendar from this source.
+                raise
             return result
 
     def retrieve_calendar(self, index_url):

@@ -4,7 +4,7 @@
 
 import json
 import re
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
 from selenium.common.exceptions import TimeoutException
@@ -42,8 +42,13 @@ def get_url(context, url):
 
 @given('we add the calendar "{calendar_name}"')
 def step_impl(context, calendar_name):
-    assert ".ics" not in calendar_name
-    calendar_url = context.calendars_url + calendar_name + ".ics"
+    """Add a calendar to the url field.
+
+    If there is no ending, .ics is added.
+    """
+    if "." not in calendar_name:
+        calendar_name += ".ics"
+    calendar_url = urljoin(context.calendars_url, calendar_name)
     context.specification["url"].append(calendar_url)
 
 
@@ -119,6 +124,16 @@ def step_impl(context, text):
 def step_impl(context, text):
     event = context.browser.find_element(By.XPATH, f"//a[contains(text(), {text!r})]")
     event.click()
+
+
+@when('we click on the link "{text}"')
+@when('we click the link "{text}"')
+def step_impl(context, text):
+    links = context.browser.find_elements(By.XPATH, f"//a[text() = {text!r}]")
+    assert (
+        len(links) == 1
+    ), f"I should click on the link {text!r} but found {len(links)}."
+    links[0].click()
 
 
 def get_body_text(context):

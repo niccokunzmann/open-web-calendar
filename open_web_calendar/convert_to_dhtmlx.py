@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import datetime
+from html import escape
 from urllib.parse import unquote
 
 import pytz
@@ -33,6 +34,21 @@ class ConvertToDhtmlx(ConversionStrategy):
             self.timezone = pytz.timezone(self.specification["timezone"])
         except pytz.UnknownTimeZoneError:
             self.timezone = pytz.FixedOffset(-int(self.specification["timeshift"]))
+        self.today = today = (
+            parse_date(self.specification["date"])
+            if self.specification.get("date")
+            else datetime.datetime.now(self.timezone)
+        )
+        self.to_date = (
+            parse_date(self.specification["to"])
+            if self.specification.get("to")
+            else today.replace(year=today.year + 1)
+        )
+        self.from_date = (
+            parse_date(self.specification["from"])
+            if self.specification.get("from")
+            else today.replace(year=today.year - 1)
+        )
 
     def date_to_string(self, date):
         """Convert a date to a string."""
@@ -93,7 +109,8 @@ class ConvertToDhtmlx(ConversionStrategy):
 
     def convert_error(self, error, url, tb_s):
         """Create an error which can be used by the dhtmlx scheduler."""
-        now = datetime.datetime.now()
+        # always add the error within the requested time range
+        now = self.from_date
         now_iso = now.isoformat()
         now_s = self.date_to_string(now)
         return {
@@ -104,8 +121,8 @@ class ConvertToDhtmlx(ConversionStrategy):
             "start_date_iso_0": now_iso,
             "end_date_iso_0": now_iso,
             "text": type(error).__name__,
-            "description": str(error),
-            "traceback": tb_s,
+            "description": self.clean_html(escape(str(error))),
+            "traceback": self.clean_html(escape(tb_s)),
             "location": None,
             "geo": None,
             "uid": "error",
@@ -138,30 +155,21 @@ class ConvertToDhtmlx(ConversionStrategy):
                     if data == "data:text/html":
                         # Thunderbird html
                         description = unquote(content)
-        return clean_html(description, self.specification)
+        return self.clean_html(description)
+
+    def clean_html(self, html):
+        """Return the cleaned HTML."""
+        return clean_html(html, self.specification)
 
     def merge(self):
         return jsonify(self.components)
 
     def collect_components_from(self, calendar_index, calendars):
         # see https://stackoverflow.com/a/16115575/1320237
-        today = (
-            parse_date(self.specification["date"])
-            if self.specification.get("date")
-            else datetime.datetime.now(self.timezone)
-        )
-        to_date = (
-            parse_date(self.specification["to"])
-            if self.specification.get("to")
-            else today.replace(year=today.year + 1)
-        )
-        from_date = (
-            parse_date(self.specification["from"])
-            if self.specification.get("from")
-            else today.replace(year=today.year - 1)
-        )
         for calendar in calendars:
-            events = recurring_ical_events.of(calendar).between(from_date, to_date)
+            events = recurring_ical_events.of(calendar).between(
+                self.from_date, self.to_date
+            )
             with self.lock:
                 for event in events:
                     json_event = self.convert_ical_event(calendar_index, event)
