@@ -192,3 +192,5 @@ class ConvertToDhtmlx(ConversionStrategy):
         """Return the categories of the event."""
         categories = event.get("CATEGORIES", None)
         return categories.cats if categories is not None else []
+
+__all__ = ["ConvertToDhtmlx"]
