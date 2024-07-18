@@ -16,6 +16,7 @@ The latest version might not be released, yet.
 ## v1.40
 
 - Support webcal:// links
+- Provide docker releases with proper tag release information
 
 ## v1.39
 
