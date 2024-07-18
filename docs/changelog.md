@@ -17,6 +17,8 @@ The latest version might not be released, yet.
 
 - Add version to footer
 - Allow specifying the version of the software through the `version` parameter
+- Fix: show broken calendars again
+- Fix: Remove CSS attack from broken calendar sources
 
 ## v1.38
 
