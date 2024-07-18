@@ -39,9 +39,12 @@ def test_version_in_footer(page, client):
     [
         ("", open_web_calendar.__version__),
         ("v1000.1000BETA", "v1000.1000BETA"),
-    ])
+    ],
+)
 @pytest.mark.parametrize("page", ["about.html", "index.html"])
-def test_version_from_default_specification_is_used(page, version_seen, version_specified, client, monkeypatch):
+def test_version_from_default_specification_is_used(
+    page, version_seen, version_specified, client, monkeypatch
+):
     """The version should also be possible to specify in the default spec."""
     monkeypatch.setitem(DEFAULT_SPECIFICATION, "version", version_specified)
     response = client.get(f"/{page}")
