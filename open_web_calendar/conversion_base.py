@@ -19,10 +19,6 @@ def get_text_from_url(url):
     return requests.get(url, timeout=10).text
 
 
-class InvalidCalendarFeed(ValueError):
-    """The calendar feed provided is not ICS."""
-
-
 class ConversionStrategy:
     """Base class for conversions."""
 
@@ -57,8 +53,10 @@ class ConversionStrategy:
             for _e in e.map(self.retrieve_calendar, enumerate(urls)):
                 pass  # no error should pass silently; import this
 
-    def get_calendars_from_url(self, url):
+    def get_calendars_from_url(self, url: str):
         """Return a lis of calendars from a URL."""
+        if url.startswith("webcal://"):
+            url = url.replace("webcal://", "http://", 1)
         calendar_text = self.get_text_from_url(url)
         try:
             return Calendar.from_ical(calendar_text, multiple=True)
@@ -98,3 +96,6 @@ class ConversionStrategy:
     def merge(self):
         """Return the flask Response for the merged calendars."""
         raise NotImplementedError("to be implemented in subclasses")
+
+
+__all__ = ["ConversionStrategy", "get_text_from_url"]
