@@ -52,7 +52,7 @@ jobs:
   gh-pages:
     name: "Publish Documentation to GitHub Pages"
     runs-on: ubuntu-latest
-    if: github.ref_name == 'master'
+    if: ${{ github.ref_name == 'master' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -70,7 +70,7 @@ jobs:
   link-check:
     name: "Check Links in Documentation"
     runs-on: ubuntu-latest
-    if: ! startsWith(github.ref, 'refs/tags/v')
+    if: ${{ ! startsWith(github.ref, 'refs/tags/v')}}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -92,7 +92,7 @@ jobs:
   dockerhub:
     name: Publish Docker Image on Docker Hub
     runs-on: ubuntu-latest
-    if: github.ref_name == 'master' || startsWith(github.ref, 'refs/tags/v')
+    if: ${{ github.ref_name == 'master' || startsWith(github.ref, 'refs/tags/v') }}
     # This environment stores the DOCKERHUB_USERNAME and DOCKERHUB_TOKEN
     # see https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
     environment:
@@ -147,7 +147,7 @@ jobs:
   deploy-tag-to-pypi:
     name: Publish Package on PyPI
     # only deploy on tags, see https://stackoverflow.com/a/58478262/1320237
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: ${{ startsWith(github.ref, 'refs/tags/v') }}
     needs:
     - run-tests
     runs-on: ubuntu-latest
@@ -209,7 +209,7 @@ jobs:
   github-release:
     name: "Publish GitHub Release"
     # only deploy on tags, see https://stackoverflow.com/a/58478262/1320237
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: ${{ startsWith(github.ref, 'refs/tags/v') }}
     needs:
       - run-tests
       - dockerhub

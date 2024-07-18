@@ -15,6 +15,7 @@ The latest version might not be released, yet.
 
 ## v1.39
 
+- Add version to footer
 - Allow specifying the version of the software through the `version` parameter
 
 ## v1.38
