@@ -113,8 +113,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install --upgrade build
-          # add commit hash to build information
-          sed -i 's/^local_scheme/#local_scheme/g' pyproject.toml
+          if [ "$GITHUB_REF_NAME" == "master" ]; then
+            echo "Adding commit hash to build information"
+            sed -i 's/^local_scheme/#local_scheme/g' pyproject.toml
+          else
+            echo "Using version information from tag"
+          fi
           python -m build
     
       - name: Set up QEMU
