@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wvtdgxo_/es/dev/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8fj05eoa/es/dev/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wvtdgxo_/es/dev/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8fj05eoa/es/dev/index.png" >
       
     
     
@@ -913,6 +913,9 @@
 <h2 id="code-quality">Code Quality<a class="headerlink" href="#code-quality" title="Enlace permanente">&para;</a></h2>
 <p>We use <a href="https://docs.astral.sh/ruff/">ruff</a> to improve the code quality. Please install <a href="https://pre-commit.com/">pre-commit</a> before committing. It will ensure that the code is formatted and linted as expected using <a href="https://docs.astral.sh/ruff/">ruff</a>.</p>
 <div class="highlight"><pre><span></span><code>pre-commit<span class="w"> </span>install
+</code></pre></div>
+<p>To format the code before commit without the pre-commit hook, run this:</p>
+<div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>ruff
 </code></pre></div>
 <h2 id="running-the-app">Running the App<a class="headerlink" href="#running-the-app" title="Enlace permanente">&para;</a></h2>
 <ol>
