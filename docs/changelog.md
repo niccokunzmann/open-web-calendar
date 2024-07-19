@@ -17,6 +17,7 @@ The latest version might not be released, yet.
 
 - Support webcal:// links
 - Provide docker releases with proper tag release information
+- Add choice: Choose the language of the viewer
 
 ## v1.39
 
