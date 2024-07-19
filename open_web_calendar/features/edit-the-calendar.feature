@@ -8,38 +8,39 @@ Feature: The calendar about page has a link to edit an existing calendar.
        Then "<parameter>" is specified as <value>
 
       Examples:
-        | parameter     | value                               |
-        | url           | ["http://url.com","https://url.de"] |
-        | url           | ["url1","url2","url3","url4"]       |
-        | url           | "http://url.com"                    |
-        | language      | "de"                                |
-        | language      | "es"                                |
-        | title         | "New Cal!"                          |
-        | date          | "2024-02-14"                        |
-        | date          | "2023-12-24"                        |
-        | ending_hour   | "19"                                |
-        | starting_hour | "12"                                |
-        | timezone      | "Asia/Kuala_Lumpur"                 |
-        | timezone      | "America/Dawson"                    |
-        | tab           | "agenda"                            |
-        | tab           | "week"                              |
-        | loader        | ""                                  |
-        | loader        | "https://my-custom-loader.uk/l.gif" |
-        | start_of_week | "su"                                |
-        | start_of_week | "work"                              |
-        | tabs          | ["week","day"]                      |
-        | tabs          | ["month","agenda"]                  |
-        | controls      | ["next","previous","today"]         |
-        | controls      | ["date"]                            |
-        | skin          | "dhtmlxscheduler_flat.css"          |
-        | hour_division | "2"                                 |
-        | hour_format   | "%G:%i"                             |
-        | hour_format   | "%g:%i%a"                           |
-        | target        | "_blank"                            |
-        | target        | "_self"                             |
-        | custom-value  | "nanana!"                           |
-        | css           | ".test{/*css*/}"                    |
-
+        | parameter               | value                               |
+        | url                     | ["http://url.com","https://url.de"] |
+        | url                     | ["url1","url2","url3","url4"]       |
+        | url                     | "http://url.com"                    |
+        | language                | "de"                                |
+        | language                | "es"                                |
+        | title                   | "New Cal!"                          |
+        | date                    | "2024-02-14"                        |
+        | date                    | "2023-12-24"                        |
+        | ending_hour             | "19"                                |
+        | starting_hour           | "12"                                |
+        | timezone                | "Asia/Kuala_Lumpur"                 |
+        | timezone                | "America/Dawson"                    |
+        | tab                     | "agenda"                            |
+        | tab                     | "week"                              |
+        | loader                  | ""                                  |
+        | loader                  | "https://my-custom-loader.uk/l.gif" |
+        | start_of_week           | "su"                                |
+        | start_of_week           | "work"                              |
+        | tabs                    | ["week","day"]                      |
+        | tabs                    | ["month","agenda"]                  |
+        | controls                | ["next","previous","today"]         |
+        | controls                | ["date"]                            |
+        | skin                    | "dhtmlxscheduler_flat.css"          |
+        | hour_division           | "2"                                 |
+        | hour_format             | "%G:%i"                             |
+        | hour_format             | "%g:%i%a"                           |
+        | target                  | "_blank"                            |
+        | target                  | "_self"                             |
+        | custom-value            | "nanana!"                           |
+        | css                     | ".test{/*css*/}"                    |
+        | prefer_browser_language | true                                |
+          
   Scenario: When I visit the configuration page, the configuration is
             almost empty.
     Given we are on the configuration page

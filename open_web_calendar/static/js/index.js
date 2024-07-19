@@ -74,6 +74,7 @@ function updateOutputs() {
     updateCalendarOutputs(calendarUrl, specification);
     lastCalendarUrl = calendarUrl;
     updateSpecificationOutput(specification);
+    updateLanguageOutput(specification);
 }
 
 function updateCalendarOutputs(calendarUrl, specification) {
@@ -83,6 +84,21 @@ function updateCalendarOutputs(calendarUrl, specification) {
     displayCalendar(sourceCode);
     showCalendarSourceCode(sourceCode);
 }
+
+function updateLanguageOutput(specification) {
+    var span = document.getElementById("language-chosen");
+    var select = document.getElementById("select-language");
+    span.innerText = select.options[select.selectedIndex].innerText;
+    var sections = [
+        document.getElementById("section_prefer_browser_language_true"),
+        document.getElementById("section_prefer_browser_language_false"),
+    ];
+    if (specification.prefer_browser_language) {
+        sections.reverse();
+    }
+    sections[0].appendChild(span);
+    sections[1].appendChild(select);
+} 
 
 /* Update the output of the specification.
  *
@@ -139,6 +155,7 @@ function getSpecification() {
     setSpecificationValueFromId(spec, "hour_format", "select-hour-format");
     /* language */
     setSpecificationValueFromId(spec, "language", "select-language");
+    spec.prefer_browser_language = document.getElementById("prefer_browser_language_true").checked;
     /* skin */
     setSpecificationValueFromId(spec, "skin", "select-skin");
     /* Start of the week */
@@ -324,6 +341,14 @@ function fillLanguageChoice() {
     // change the specification if the language changes
     // see https://stackoverflow.com/a/7858323/1320237
     select.onchange = updateOutputs;
+    /*  ------ browser selection ------  */
+    var choices = [
+        document.getElementById("prefer_browser_language_false"),
+        document.getElementById("prefer_browser_language_true"),
+    ];
+    choice = choices[specification.prefer_browser_language ? 1 : 0];
+    choice.checked = true;
+    choices.forEach((e) => e.onchange = updateOutputs)
 }
 
 function fillTimezoneChoice() {

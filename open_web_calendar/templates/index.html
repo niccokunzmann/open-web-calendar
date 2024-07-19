@@ -109,8 +109,19 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <h3>{{ html("language-title") }}</h3>
                 <p>
-                    {{ html("language-description") }}<br/>
-                    <select id="select-language"></select><br/>
+                    <fieldset>
+                        <legend>{{ html("language-description") }}</legend>
+                        <div id="section_prefer_browser_language_false">
+                            <input type="radio" name="browser-language" id="prefer_browser_language_false" value="false"  />
+                            <label for="prefer_browser_language_false">{{ html("language-browser-false") }}</label>
+                            <select id="select-language"></select>
+                        </div>
+                        <div id="section_prefer_browser_language_true">
+                            <input type="radio" name="browser-language" id="prefer_browser_language_true" value="true" />
+                            <label for="prefer_browser_language_true">{{ html("language-browser-true") }}</label>
+                            <span id="language-chosen"></span>
+                        </div>
+                    </fieldset>
                     <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
                 </p>
                 <h3>{{ html("skins-title") }}</h3>

@@ -344,6 +344,10 @@ def step_impl(context, tag, text):
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
     elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
+    if not elements:
+        elements = context.browser.find_elements(
+            By.XPATH, f"//{tag}[text()[contains(., {text!r})]]"
+        )
     assert len(elements) == 1, (
         f"There should only be one {tag} with the text "
         f"{text!r} but there are {len(elements)}."
