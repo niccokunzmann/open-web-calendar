@@ -5,7 +5,7 @@ SPDX-License-Identifier: GPL-2.0-only
 -->
 
 <!DOCTYPE html>
-<html lang="{{ specification['language'] }}">
+<html lang="{{ language }}">
     <!-- Mostly copied from https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step2addingschedulertothepage -->
     <head>
         <title>{{ specification["title"] | safe }}</title>
@@ -28,7 +28,7 @@ SPDX-License-Identifier: GPL-2.0-only
             rel="stylesheet" type="text/css" charset="utf-8">
         <link rel="icon" type="image/x-icon" href="{{ specification.favicon }}">
         <!-- see https://docs.dhtmlx.com/scheduler/localization.html -->
-        <script src="locale_{{ specification['language'] }}.js" charset="utf-8"></script>
+        <script src="locale_{{ language }}.js" charset="utf-8"></script>
         {% for link in specification.css_url %}
         <link href="{{ link }}" rel="stylesheet" type="text/css" charset="utf-8">
         {% endfor %}

@@ -5,13 +5,14 @@ SPDX-License-Identifier: GPL-2.0-only
 -->
 
 <!DOCTYPE html>
-<html lang="{{ specification['language'] }}">
+<html lang="{{ language }}">
     <head>
         <title>Open Web Calendar</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="alternate" type="text/calendar" href="/calendar.ics{{ get_query_string() }}" />
         <script type="text/javascript">
-            var specification = {{ specification | tojson | safe }};
+            const specification = {{ specification | tojson | safe }};
+            const language = {{ language | tojson | safe }};
         </script>
         <link href="css/index.css"
             rel="stylesheet" type="text/css" charset="utf-8">

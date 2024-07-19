@@ -99,7 +99,7 @@ def add_header(r):
 
 
 def get_configuration():
-    """Return the configuration for the browser"""
+    """Return the configuration for the browser."""
     return {
         "default_specification": get_default_specification(),
         "version": version.version,
@@ -190,6 +190,13 @@ def get_query_string():
 
 def render_app_template(template, specification):
     translation_file = Path(template).stem
+    language = specification["language"]
+    if specification["prefer_browser_language"]:
+        # see https://stackoverflow.com/a/30441752/1320237
+        # see https://tedboy.github.io/flask/generated/generated/werkzeug.LanguageAccept.html
+        language = request.accept_languages.best_match(
+            translate.LANGUAGE_CODES, language
+        )
     return render_template(
         template,
         specification=specification,
@@ -197,8 +204,9 @@ def render_app_template(template, specification):
         json=json,
         get_query_string=get_query_string,
         html=lambda tid, **template_replacements: translate.html(
-            specification["language"], translation_file, tid, **template_replacements
+            language, translation_file, tid, **template_replacements
         ),
+        language=language,
     )
 
 

@@ -18,7 +18,9 @@ from markupsafe import Markup
 HERE = Path(__file__).parent
 TRANSLATIONS_PATH = HERE / "translations"
 
-
+# The default language is that of the translation system look-up
+# and not to be confused with the language given in the
+# default_specificaition.yml.
 DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
@@ -294,8 +296,8 @@ def languages_for_the_index_file(minimal_fraction_translated=0.5):
 
 
 LANGUAGE_CODES = [
-        code.replace("_", "-") for code in itertools.chain(TRANSLATIONS, LANGUAGE_ALIAS)
-    ]
+    code.replace("_", "-") for code in itertools.chain(TRANSLATIONS, LANGUAGE_ALIAS)
+]
 LANGUAGE_CODES.sort()
 
 __all__ = [
@@ -306,7 +308,7 @@ __all__ = [
     "fraction_translated",
     "strings_translated",
     "languages_for_the_index_file",
-    "LANGUAGE_CODES"
+    "LANGUAGE_CODES",
 ]
 
 

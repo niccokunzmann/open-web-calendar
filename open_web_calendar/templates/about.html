@@ -5,7 +5,7 @@ SPDX-License-Identifier: GPL-2.0-only
 -->
 
 <!doctype html>
-<html lang="{{ specification['language'] }}">
+<html lang="{{ language }}">
     <!-- Mostly copied from https://docs.dhtmlx.com/scheduler/howtostart_nodejs.html#step2addingschedulertothepage -->
     <head>
         <title>{{ specification["title"] | safe }}</title>
@@ -16,7 +16,8 @@ SPDX-License-Identifier: GPL-2.0-only
             rel="stylesheet" type="text/css" charset="utf-8">
 
         <script type="text/javascript">
-            var specification = {{ specification | tojson | safe }};
+            const specification = {{ specification | tojson | safe }};
+            const language = {{ language | tojson }};
         </script>
         <script src="configuration.js"></script>
         <script src="js/common.js"></script>
