@@ -50,9 +50,6 @@ CALENDARS_TEMPLATE_FOLDER_NAME = "calendars"
 CALENDAR_TEMPLATE_FOLDER = TEMPLATE_FOLDER / CALENDARS_TEMPLATE_FOLDER_NAME
 STATIC_FOLDER_NAME = "static"
 STATIC_FOLDER_PATH = HERE / STATIC_FOLDER_NAME
-DHTMLX_LANGUAGES_FILE = (
-    STATIC_FOLDER_PATH / "js" / "dhtmlx" / "locale" / "languages.json"
-)
 DEFAULT_REQUEST_HEADERS = {
     "user-agent": "open-web-calendar",
 }
@@ -102,7 +99,7 @@ def add_header(r):
 
 
 def get_configuration():
-    """Return the configuration for the browser"""
+    """Return the configuration for the browser."""
     return {
         "default_specification": get_default_specification(),
         "version": version.version,
@@ -193,6 +190,13 @@ def get_query_string():
 
 def render_app_template(template, specification):
     translation_file = Path(template).stem
+    language = specification["language"]
+    if specification["prefer_browser_language"]:
+        # see https://stackoverflow.com/a/30441752/1320237
+        # see https://tedboy.github.io/flask/generated/generated/werkzeug.LanguageAccept.html
+        language = request.accept_languages.best_match(
+            translate.LANGUAGE_CODES, language
+        )
     return render_template(
         template,
         specification=specification,
@@ -200,8 +204,9 @@ def render_app_template(template, specification):
         json=json,
         get_query_string=get_query_string,
         html=lambda tid, **template_replacements: translate.html(
-            specification["language"], translation_file, tid, **template_replacements
+            language, translation_file, tid, **template_replacements
         ),
+        language=language,
     )
 
 

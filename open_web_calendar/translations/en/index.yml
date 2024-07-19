@@ -93,7 +93,12 @@ language-title: "Language"
 # Description of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-language-description
 language-description: "You can set the language of the calendar."
-
+# Description of choice
+# https://open-web-calendar.hosted.quelltext.eu/#translate-language-browser-false
+language-browser-false: "The calendar is always in this language:"
+# Description of choice
+# https://open-web-calendar.hosted.quelltext.eu/#translate-language-browser-true
+language-browser-true: "The calendar is in the language of the viewer. If the language is not translated, it shows up in:"
 
 # Heading of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-skins-title

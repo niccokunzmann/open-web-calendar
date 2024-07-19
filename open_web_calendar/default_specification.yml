@@ -77,7 +77,13 @@ hour_division: "1"
 ## Swedish: "sv"
 ## Turkish: "tr"
 ## Ukrainian: "ua"
+## You can find all languages in the "translations" directory.
 language: "en"
+
+## If this is set to true, the language of the web browser
+## is used to display the calendar. If the language of the browser is
+## not known, we use the language defined in the language: field.
+prefer_browser_language: false
 
 ## The skin changes the look of the calendar.
 ## They are located in the static/css/dhtmlx folder.

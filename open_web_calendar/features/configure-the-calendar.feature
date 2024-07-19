@@ -110,3 +110,23 @@ Feature: The calendar has a configuration page that displays and changes the
         | tentative | style-event-status-tentative |
         | confirmed | style-event-status-confirmed |
         | cancelled | style-event-status-cancelled |
+
+    Scenario: By default we display the calendar in one language
+       Given we are on the configuration page
+        Then the checkbox with id "prefer_browser_language_false" is checked
+         And the checkbox with id "prefer_browser_language_true" is not checked
+         And "prefer_browser_language" is not specified
+
+    Scenario: We can choose to display the calendar in the language of the viewer
+       Given we are on the configuration page
+        When we click on the span "The calendar is in the language of the viewer."
+        Then the checkbox with id "prefer_browser_language_false" is not checked
+         And the checkbox with id "prefer_browser_language_true" is checked
+         And "prefer_browser_language" is specified as true
+
+    Scenario: By default we display the calendar in one language
+       Given we are on the configuration page
+        When we click on the span "The calendar is in the language of the viewer."
+         And we click on the span "The calendar is always in this language:"
+        Then "prefer_browser_language" is not specified
+

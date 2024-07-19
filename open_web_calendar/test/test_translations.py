@@ -237,3 +237,42 @@ def test_language_alias_is_not_a_translation_language():
 
 def test_compute_recommendation():
     assert translate.languages_for_the_index_file() != []
+
+
+@pytest.mark.parametrize("code", ["nb-NO", "nb-no", "nb_NO"])
+def test_language_code_with_minus_is_ok(code):
+    """We are also allowed to use the - in language codes."""
+    assert translate.string(code, "calendar", "labels_minute") == "Minutt"
+
+
+@pytest.mark.parametrize("code", ["de-DE", "de-AU", "de_CH", "en-US", "en_US"])
+def test_language_falls_back_to_base(code):
+    """We are also allowed to use the - in language codes."""
+    default_code = code.split("-")[0].split("_")[0]
+    default = translate.string(default_code, "calendar", "language")
+    expected = translate.string(code, "calendar", "language")
+    assert (
+        default == expected
+    ), "The default code should be the same if the language is not given."
+
+
+@pytest.mark.parametrize(
+    ("code", "codes"),
+    [
+        ("en", ["en"]),
+        ("en_US", ["en_US", "en"]),
+        ("de-AU", ["de_AU", "de", "en"]),
+        ("zh-CN", ["zh_Hans", "zh", "en"]),
+    ],
+)
+def test_language_list(code, codes):
+    """Check that we generate the right lookup order."""
+    assert translate.get_language_lookup(code) == codes
+
+
+def test_languages_codes():
+    """We want to make sure all languages can be matched."""
+    assert "en" in translate.LANGUAGE_CODES
+    assert "de" in translate.LANGUAGE_CODES
+    assert "cn" in translate.LANGUAGE_CODES, "alial occurs"
+    assert "nb-NO" in translate.LANGUAGE_CODES, "code with - occurs"

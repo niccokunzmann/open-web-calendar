@@ -4,6 +4,9 @@
 
 """Translations of the program into other languages."""
 
+from __future__ import annotations
+
+import itertools
 import os
 from collections import defaultdict
 from html import escape
@@ -15,7 +18,9 @@ from markupsafe import Markup
 HERE = Path(__file__).parent
 TRANSLATIONS_PATH = HERE / "translations"
 
-
+# The default language is that of the translation system look-up
+# and not to be confused with the language given in the
+# default_specificaition.yml.
 DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
@@ -26,6 +31,7 @@ LANGUAGE_ALIAS = {  # name also usable -> name in the translations directory
     "jp": "ja",
     "cn": "zh_Hans",
     "no": "nb_NO",
+    "zh_CN": "zh_Hans",  # use _!
 }  # rename language codes
 UNUSED = "-unused"
 
@@ -44,19 +50,27 @@ for language in os.listdir(TRANSLATIONS_PATH):
             file_translations[name].update(yaml.safe_load(f))
 
 
+def get_language_lookup(language: str) -> list[str]:
+    """Return a list of languages look up the translations from."""
+    codes = language.replace("-", "_").split("_")
+    languages = [codes[0].lower()]
+    if len(codes) >= 2:
+        languages.insert(0, f"{codes[0].lower()}_{codes[1].upper()}")
+    if DEFAULT_LANGUAGE not in languages:
+        languages.append(DEFAULT_LANGUAGE)
+    return [LANGUAGE_ALIAS.get(lang, lang) for lang in languages]
+
+
 def string(language: str, file: str, tid: str) -> str:
     """Translate a string identified by language, file and id."""
     if "." in tid:
         file, tid = tid.split(".", 1)
-    language = LANGUAGE_ALIAS.get(language, language)
-    for source in (
-        TRANSLATIONS.get(language, {}).get(file, {}),
-        TRANSLATIONS.get(DEFAULT_LANGUAGE, {}).get(file, {}),
-        TRANSLATIONS.get(language, {}).get(DEFAULT_FILE, {}),
-        TRANSLATIONS.get(DEFAULT_LANGUAGE, {}).get(DEFAULT_FILE, {}),
-    ):
-        if tid in source:
-            return source[tid]
+    languages = get_language_lookup(language)
+    for lang_file in (file, DEFAULT_FILE):
+        for lang in languages:
+            source = TRANSLATIONS.get(lang, {}).get(lang_file, {})
+            if tid in source:
+                return source[tid]
     raise KeyError(f"The translation id '{tid}' was not to be found in any file.")
 
 
@@ -281,6 +295,11 @@ def languages_for_the_index_file(minimal_fraction_translated=0.5):
     return result
 
 
+LANGUAGE_CODES = [
+    code.replace("_", "-") for code in itertools.chain(TRANSLATIONS, LANGUAGE_ALIAS)
+]
+LANGUAGE_CODES.sort()
+
 __all__ = [
     "html",
     "string",
@@ -289,10 +308,13 @@ __all__ = [
     "fraction_translated",
     "strings_translated",
     "languages_for_the_index_file",
+    "LANGUAGE_CODES",
 ]
 
 
 if __name__ == "__main__":
+    print("these languages are available:")  # noqa: T201
+    print(LANGUAGE_CODES)  # noqa: T201
     for language in sorted(TRANSLATIONS):
         print(  # noqa: T201
             f"{language} is {int(fraction_translated(language) * 100)}% "
