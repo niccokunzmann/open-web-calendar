@@ -272,7 +272,7 @@ def test_language_list(code, codes):
 
 def test_languages_codes():
     """We want to make sure all languages can be matched."""
-    assert "en" in translate.language_codes()
-    assert "de" in translate.language_codes()
-    assert "cn" in translate.language_codes(), "alial occurs"
-    assert "nb-NO" in translate.language_codes(), "code with - occurs"
+    assert "en" in translate.LANGUAGE_CODES
+    assert "de" in translate.LANGUAGE_CODES
+    assert "cn" in translate.LANGUAGE_CODES, "alial occurs"
+    assert "nb-NO" in translate.LANGUAGE_CODES, "code with - occurs"
