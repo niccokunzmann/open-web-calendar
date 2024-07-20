@@ -90,7 +90,7 @@ function joinHtmlLines(lines) {
  * after v7: we set the skin in the scheduler config
  */
 function getSkin() {
-    var match = specification.skin.match("^dhtmlxscheduler_(.*)\.css");
+    var match = specification.skin.match("^dhtmlxscheduler_(.*)\\.css");
     if (match != null) {
         // dhtmlxscheduler_terrace.css -> 
         return match[1].replaceAll("_", "-");
