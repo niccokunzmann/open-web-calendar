@@ -133,6 +133,12 @@ var template = {
       }
       return "";
     },
+    "calendar_name": function (event) {
+      if (event.calendar_name) {
+          return escapeHtml(event.calendar_name);
+      }
+      return "";
+    },
     "date": function (start, end) {
         /* One day
          * Multiday
