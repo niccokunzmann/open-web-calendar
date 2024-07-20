@@ -111,6 +111,9 @@ skins-description: "You can select different skins for the calendar."
 skins-terrace: "Terrace"
 # This is a name of a skin which does not need translation neccessarily.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
+skins-dark: "Dark"
+# This is a name of a skin which does not need translation neccessarily.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description
 skins-material: "Material"
 # This is a name of a skin which does not need translation neccessarily.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-skins-description

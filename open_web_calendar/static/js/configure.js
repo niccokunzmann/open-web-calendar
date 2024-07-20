@@ -82,6 +82,22 @@ function joinHtmlLines(lines) {
     return lines.filter(isNotWhitespaceString).join("<br/>")
 }
 
+/* get the skin that we are showing
+ * creates compatibility to older versions.
+ * Before scheduler v7, we used separate css files.
+ * 
+ * before v7: dhtmlxscheduler_terrace.css
+ * after v7: we set the skin in the scheduler config
+ */
+function getSkin() {
+    var match = specification.skin.match("^dhtmlxscheduler_(.*)\.css");
+    if (match != null) {
+        // dhtmlxscheduler_terrace.css -> 
+        return match[1].replaceAll("_", "-");
+    }
+    return specification.skin; // we assume valid skin names
+}
+
 /*
  * These are template functions to compose event details.
  * Use these instead of custom edits in the scheduler.template replacements.
@@ -287,6 +303,7 @@ function loadCalendar() {
         tooltip: HAS_TOOLTIP,
         readonly: true,
         limit: true,
+        serialize: true,
     });
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
@@ -297,6 +314,9 @@ function loadCalendar() {
     scheduler.attachEvent("onBeforeViewChange", resetConfig);
     scheduler.attachEvent("onSchedulerResize", resetConfig);
 
+    // set the skin, scheduler v7
+    // see https://docs.dhtmlx.com/scheduler/skins.html#dark
+    scheduler.setSkin(getSkin());
     // we do not allow changes to the source calendar
     scheduler.config.readonly = true;
     /* Add a red line at the current time.
@@ -343,8 +363,8 @@ function loadCalendar() {
         scheduler.templates.tooltip_text = function(start, end, event) {
             return template.formatted_summary(event) + template.details(event) + template.location(event);
         };
-        scheduler.tooltip.config.delta_x = 1;
-        scheduler.tooltip.config.delta_y = 1;
+        scheduler.config.tooltip_offset_x = 1;
+        scheduler.config.tooltip_offset_y = 1;
     }
     // quick info
     // see https://docs.dhtmlx.com/scheduler/extensions_list.html#quickinfo
