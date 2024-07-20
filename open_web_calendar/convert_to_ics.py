@@ -8,7 +8,7 @@ from flask import Response
 from icalendar import Calendar, Event, Timezone
 from icalendar.prop import vDDDTypes
 
-from .conversion_base import ConversionStrategy
+from .conversion_base import CalendarInfo, ConversionStrategy
 
 
 class ConvertToICS(ConversionStrategy):
@@ -26,18 +26,17 @@ class ConvertToICS(ConversionStrategy):
         """Whether a component is an event."""
         return isinstance(component, Timezone)
 
-    def collect_components_from(self, calendar_index, calendars):
-        for calendar in calendars:
-            for component in calendar.walk():
-                if self.is_event(component):
+    def collect_components_from(self, calendar_info: CalendarInfo):
+        for component in calendar_info.calendar.walk():
+            if self.is_event(component):
+                with self.lock:
+                    self.components.append(component)
+            if self.is_timezone(component):
+                tzid = component.get("TZID")
+                if tzid and tzid not in self.timezones:
                     with self.lock:
                         self.components.append(component)
-                if self.is_timezone(component):
-                    tzid = component.get("TZID")
-                    if tzid and tzid not in self.timezones:
-                        with self.lock:
-                            self.components.append(component)
-                            self.timezones.add(tzid)
+                        self.timezones.add(tzid)
 
     def convert_error(self, error, url, tb_s):
         """Create an error which can be used by the dhtmlx scheduler."""

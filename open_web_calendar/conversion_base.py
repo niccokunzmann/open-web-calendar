@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+from __future__ import annotations
 
 import io
 import sys
@@ -17,6 +18,52 @@ from lxml import etree
 def get_text_from_url(url):
     """Return the text from a url."""
     return requests.get(url, timeout=10).text
+
+
+class CalendarInfo:
+    """Provide an easy API for calendar information."""
+
+    def __init__(self, index: int, url: str, calendar: Calendar):
+        """Create a new calendar info."""
+        self._calendar = calendar
+        self._index = index
+        self._url = url
+
+    @property
+    def name(self) -> str:
+        """The name of the calendar."""
+        name = self._calendar.get("name", self._calendar.get("x-wr-calname"))
+        if name is not None:
+            return name
+        return self._url.rsplit("/", 1)[-1].rsplit(".", 1)[0]
+
+    @property
+    def description(self) -> str:
+        """The name of the calendar."""
+        return self._calendar.get("description", self._calendar.get("x-wr-caldesc", ""))
+
+    @property
+    def calendar(self) -> Calendar:
+        """My calendar."""
+        return self._calendar
+
+    @property
+    def index(self) -> int:
+        """The index of the calendar url."""
+        return self._index
+
+    @property
+    def event_css_classes(self) -> list[str]:
+        """The css classes for all events in this calendar."""
+        return [f"CALENDAR-INDEX-{self.index}"]
+
+    def to_json(self) -> dict:
+        """Return this calendar information as JSON."""
+        return {
+            "index": self.index,
+            "name": self.name,
+            "description": self.description,
+        }
 
 
 class ConversionStrategy:
@@ -83,13 +130,14 @@ class ConversionStrategy:
         try:
             index, url = index_url
             calendars = self.get_calendars_from_url(url)
-            self.collect_components_from(index, calendars)
+            for calendar in calendars:
+                self.collect_components_from(CalendarInfo(index, url, calendar))
         except:
             ty, err, tb = sys.exc_info()
             with self.lock:
                 self.components.append(self.error(ty, err, tb, url))
 
-    def collect_components_from(self, index, calendars):
+    def collect_components_from(self, calendar_info: CalendarInfo):
         """Collect all the compenents from the calendar."""
         raise NotImplementedError("to be implemented in subclasses")
 
@@ -98,4 +146,4 @@ class ConversionStrategy:
         raise NotImplementedError("to be implemented in subclasses")
 
 
-__all__ = ["ConversionStrategy", "get_text_from_url"]
+__all__ = ["ConversionStrategy", "get_text_from_url", "CalendarInfo"]

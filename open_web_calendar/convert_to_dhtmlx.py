@@ -13,7 +13,7 @@ from dateutil.parser import parse as parse_date
 from flask import jsonify
 
 from .clean_html import clean_html
-from .conversion_base import ConversionStrategy
+from .conversion_base import CalendarInfo, ConversionStrategy
 
 
 def is_date(date):
@@ -66,7 +66,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         viewed_date = date.astimezone(self.timezone)
         return viewed_date.strftime("%Y-%m-%d %H:%M")
 
-    def convert_ical_event(self, calendar_index, calendar_event):
+    def convert_ical_event(self, calendar_info: CalendarInfo, calendar_event):
         start = calendar_event["DTSTART"].dt
         end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
         if is_date(start) and is_date(end) and end == start:
@@ -104,7 +104,8 @@ class ConvertToDhtmlx(ConversionStrategy):
             "categories": self.get_event_categories(calendar_event),
             "css-classes": ["event"]
             + self.get_event_classes(calendar_event)
-            + [f"CALENDAR-INDEX-{calendar_index}"],
+            + calendar_info.event_css_classes,
+            "calendar": calendar_info.to_json(),
         }
 
     def convert_error(self, error, url, tb_s):
@@ -164,16 +165,15 @@ class ConvertToDhtmlx(ConversionStrategy):
     def merge(self):
         return jsonify(self.components)
 
-    def collect_components_from(self, calendar_index, calendars):
+    def collect_components_from(self, calendar_info: CalendarInfo):
         # see https://stackoverflow.com/a/16115575/1320237
-        for calendar in calendars:
-            events = recurring_ical_events.of(calendar).between(
-                self.from_date, self.to_date
-            )
-            with self.lock:
-                for event in events:
-                    json_event = self.convert_ical_event(calendar_index, event)
-                    self.components.append(json_event)
+        events = recurring_ical_events.of(calendar_info.calendar).between(
+            self.from_date, self.to_date
+        )
+        with self.lock:
+            for event in events:
+                json_event = self.convert_ical_event(calendar_info, event)
+                self.components.append(json_event)
 
     def get_event_classes(self, event) -> list[str]:
         """Return the CSS classes that should be used for the event styles."""

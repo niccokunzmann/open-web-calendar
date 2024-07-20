@@ -2,7 +2,8 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//SabreDAV//SabreDAV//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:test
+NAME:RFC 7986 compatible calendar
+DESCRIPTION:This is a later version with attributes
 X-APPLE-CALENDAR-COLOR:#e78074
 BEGIN:VTIMEZONE
 TZID:Europe/Berlin
