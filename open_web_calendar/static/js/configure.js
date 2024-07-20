@@ -287,6 +287,7 @@ function loadCalendar() {
         tooltip: HAS_TOOLTIP,
         readonly: true,
         limit: true,
+        serialize: true,
     });
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
@@ -297,6 +298,9 @@ function loadCalendar() {
     scheduler.attachEvent("onBeforeViewChange", resetConfig);
     scheduler.attachEvent("onSchedulerResize", resetConfig);
 
+    // set the skin, scheduler v7
+    // see https://docs.dhtmlx.com/scheduler/skins.html#dark
+    scheduler.setSkin(getSkin());
     // we do not allow changes to the source calendar
     scheduler.config.readonly = true;
     /* Add a red line at the current time.
@@ -343,8 +347,8 @@ function loadCalendar() {
         scheduler.templates.tooltip_text = function(start, end, event) {
             return template.formatted_summary(event) + template.details(event) + template.location(event);
         };
-        scheduler.tooltip.config.delta_x = 1;
-        scheduler.tooltip.config.delta_y = 1;
+        scheduler.config.tooltip_offset_x = 1;
+        scheduler.config.tooltip_offset_y = 1;
     }
     // quick info
     // see https://docs.dhtmlx.com/scheduler/extensions_list.html#quickinfo

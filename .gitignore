@@ -118,3 +118,4 @@ open_web_calendar/_version.py
 # mkdocs
 site/
 linkchecker-out.html
+/scheduler

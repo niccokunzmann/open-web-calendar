@@ -358,7 +358,7 @@ function fillTimezoneChoice() {
 
 function initializeSkinChoice() {
     var select = document.getElementById("select-skin");
-    select.value = specification.skin;
+    select.value = getSkin();
     select.onchange = updateOutputs;
 }
 

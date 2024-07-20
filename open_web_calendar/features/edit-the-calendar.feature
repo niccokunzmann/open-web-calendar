@@ -31,7 +31,7 @@ Feature: The calendar about page has a link to edit an existing calendar.
         | tabs                    | ["month","agenda"]                  |
         | controls                | ["next","previous","today"]         |
         | controls                | ["date"]                            |
-        | skin                    | "dhtmlxscheduler_flat.css"          |
+        | skin                    | "flat"          |
         | hour_division           | "2"                                 |
         | hour_format             | "%G:%i"                             |
         | hour_format             | "%g:%i%a"                           |
@@ -76,3 +76,9 @@ Feature: The calendar about page has a link to edit an existing calendar.
       | style-event-status-tentative |
       | style-event-status-confirmed |
       | style-event-status-cancelled |
+
+  Scenario: Skin values are translated from scheduler v6 to scheduler v7
+    Given we set the "skin" parameter to "dhtmlxscheduler_contrast_black.css"
+      And we are on the configuration page
+      Then "skin" is specified as "contrast-black"
+
