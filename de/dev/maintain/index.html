@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_p8hhtkep/de/dev/maintain/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_3kpzlvkr/de/dev/maintain/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_p8hhtkep/de/dev/maintain/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_3kpzlvkr/de/dev/maintain/index.png" >
       
     
     
@@ -837,6 +837,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update-dhtmlx-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update DHTMLX Scheduler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#release-a-new-version" class="md-nav__link">
     <span class="md-ellipsis">
       Release a new Version
@@ -911,6 +920,11 @@ git commit -m"Update dependencies"
 git push -u origin update</code></li>
 <li>Create a Pull Request and see if the tests run.</li>
 </ol>
+<h2 id="update-dhtmlx-scheduler">Update DHTMLX Scheduler<a class="headerlink" href="#update-dhtmlx-scheduler" title="Fester Link">&para;</a></h2>
+<p>DHTMLX Scheduler can be updated from its <a href="https://github.com/DHTMLX/scheduler">GitHub repository</a>. There is a script which updates the scheduler. Still their changelog needs to be considered.</p>
+<div class="highlight"><pre><span></span><code>./scripts/update-scheduler.sh
+</code></pre></div>
+<p>If you update the scheduler, also add this to the changelog.</p>
 <h2 id="release-a-new-version">Release a new Version<a class="headerlink" href="#release-a-new-version" title="Fester Link">&para;</a></h2>
 <p>To release a new version:</p>
 <ol>
