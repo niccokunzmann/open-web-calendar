@@ -87,7 +87,9 @@ def step_impl(context, count=1):
     WebDriverWait(context.browser, WAIT).until(
         EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'event')]"))
     )
-    events = context.browser.find_elements(By.XPATH, "//div[contains(@class, ' event ')]")
+    events = context.browser.find_elements(
+        By.XPATH, "//div[contains(@class, ' event ')]"
+    )
     assert (
         len(events) == count
     ), f"Expected {count} events but {len(events)} were found: {events!r}"
@@ -108,7 +110,9 @@ def step_impl(context, uid, text):
 
 @when('we click on the event "{text}"')
 def step_impl(context, text):
-    events = context.browser.find_elements(By.XPATH, "//div[contains(@class, ' event ')]")
+    events = context.browser.find_elements(
+        By.XPATH, "//div[contains(@class, ' event ')]"
+    )
     chosen_events = [
         event for event in events if text in event.get_attribute("innerText")
     ]
