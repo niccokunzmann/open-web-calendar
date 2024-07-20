@@ -82,22 +82,6 @@ function joinHtmlLines(lines) {
     return lines.filter(isNotWhitespaceString).join("<br/>")
 }
 
-/* get the skin that we are showing
- * creates compatibility to older versions.
- * Before scheduler v7, we used separate css files.
- * 
- * before v7: dhtmlxscheduler_terrace.css
- * after v7: we set the skin in the scheduler config
- */
-function getSkin() {
-    var match = specification.skin.match("^dhtmlxscheduler_(.*)\\.css");
-    if (match != null) {
-        // dhtmlxscheduler_terrace.css -> 
-        return match[1].replaceAll("_", "-");
-    }
-    return specification.skin; // we assume valid skin names
-}
-
 /*
  * These are template functions to compose event details.
  * Use these instead of custom edits in the scheduler.template replacements.

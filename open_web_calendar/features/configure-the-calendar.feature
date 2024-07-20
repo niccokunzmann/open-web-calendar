@@ -81,7 +81,7 @@ Feature: The calendar has a configuration page that displays and changes the
     Scenario: We choose the design
        Given we are on the configuration page
         When we choose "Flat" in "select-skin"
-        Then "skin" is specified as "dhtmlxscheduler_flat.css"
+        Then "skin" is specified as "flat"
 
     Scenario: We choose to divide the hours
        Given we are on the configuration page
