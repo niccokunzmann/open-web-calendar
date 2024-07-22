@@ -13,10 +13,7 @@ class ConvertToMetadata(ConversionStrategy):
 
     def created(self):
         """This instance is created."""
-        self.components = {
-            "calendars": {},
-            "errors": {}
-        }
+        self.components = {"calendars": {}, "errors": {}}
 
     def collect_components_from(self, calendar_info: CalendarInfo):
         self.add_component(calendar_info.to_json())
@@ -35,9 +32,10 @@ class ConvertToMetadata(ConversionStrategy):
             "traceback": traceback,
             "error": str(err),
         }
-        
+
     def merge(self):
         """Return the response."""
         return jsonify(self.components)
+
 
 __all__ = ["ConvertToMetadata"]

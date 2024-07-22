@@ -210,6 +210,7 @@ def render_app_template(template, specification):
         language=language,
     )
 
+
 CALENDAR_DISPATCH = {
     "events.json": ConvertToDhtmlxEvents,
     "json": ConvertToMetadata,
@@ -244,6 +245,7 @@ def get_calendar(ext):
     raise ValueError(
         f"Cannot use extension {ext}. Please see the documentation or report an error."
     )
+
 
 for folder_path in STATIC_FOLDER_PATH.iterdir():
     if not folder_path.is_dir():

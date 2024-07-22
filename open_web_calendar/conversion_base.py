@@ -22,6 +22,7 @@ def get_text_from_url(url):
 
 INDEX_TYPE = tuple[int, int]
 
+
 class CalendarInfo:
     """Provide an easy API for calendar information."""
 
@@ -52,14 +53,17 @@ class CalendarInfo:
     @property
     def index(self) -> INDEX_TYPE:
         """The index of the calendar url.
-        
+
         Since one URL can have several calendars, this is multiple indices."""
         return self._index
 
     @property
     def event_css_classes(self) -> list[str]:
         """The css classes for all events in this calendar."""
-        return [f"CALENDAR-INDEX-{self.index[0]}", f"CALENDAR-INDEX-{self.index[0]}-{self.index[1]}"]
+        return [
+            f"CALENDAR-INDEX-{self.index[0]}",
+            f"CALENDAR-INDEX-{self.index[0]}-{self.index[1]}",
+        ]
 
     @property
     def id(self) -> str:
@@ -165,5 +169,6 @@ class ConversionStrategy:
     def convert_error(self, err: Exception, url: str, traceback: str):
         """Convert an error."""
         raise NotImplementedError("to be implemented in subclasses")
+
 
 __all__ = ["ConversionStrategy", "get_text_from_url", "CalendarInfo", "INDEX_TYPE"]
