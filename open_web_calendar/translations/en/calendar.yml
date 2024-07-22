@@ -53,6 +53,7 @@ labels_month: "Month"
 labels_day: "Day"
 labels_hour: "Hour"
 labels_minute: "Minute"
+labels_calendars: "Calendar List"
 
 # Translate this as the language you are working on.
 # This appears for the users to choose the language.

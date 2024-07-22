@@ -151,6 +151,7 @@ CALENDAR_LABELS = [
     "repeat_text_occurences_count",
     "repeat_radio_end2",
     "repeat_radio_end3",
+    "calendars",
 ]
 
 

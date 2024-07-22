@@ -220,6 +220,7 @@ function getHeader() {
       "month": specification.tabs.includes("month"),
       "today": specification.controls.includes("today"),
       "agenda": specification.tabs.includes("agenda"),
+      "calendars": specification.controls.includes("calendars"),
     }
     function showSelected(headerElements) {
       return headerElements.filter(function(element){
@@ -235,6 +236,7 @@ function getHeader() {
                     cols: showSelected([
                         "prev",
                         "date",
+                        "calendars",
                         "next",
                     ])
                 },
@@ -257,6 +259,7 @@ function getHeader() {
             "month",
             "agenda",
             "date",
+            "calendars",
             "prev",
             "today",
             "next"
