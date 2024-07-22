@@ -29,13 +29,12 @@ class ConvertToICS(ConversionStrategy):
     def collect_components_from(self, calendar_info: CalendarInfo):
         for component in calendar_info.calendar.walk():
             if self.is_event(component):
-                with self.lock:
-                    self.components.append(component)
+                self.add_component(component)
             if self.is_timezone(component):
                 tzid = component.get("TZID")
                 if tzid and tzid not in self.timezones:
                     with self.lock:
-                        self.components.append(component)
+                        self.add_component(component)
                         self.timezones.add(tzid)
 
     def convert_error(self, error, url, tb_s):

@@ -21,7 +21,7 @@ def is_date(date):
     return isinstance(date, datetime.date) and not isinstance(date, datetime.datetime)
 
 
-class ConvertToDhtmlx(ConversionStrategy):
+class ConvertToDhtmlxEvents(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern.
 
     - timeshift_minutes is the timeshift specified by the calendar
@@ -105,7 +105,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "css-classes": ["event"]
             + self.get_event_classes(calendar_event)
             + calendar_info.event_css_classes,
-            "calendar": calendar_info.to_json(),
+            "calendar": calendar_info.id,
         }
 
     def convert_error(self, error, url, tb_s):
@@ -170,10 +170,9 @@ class ConvertToDhtmlx(ConversionStrategy):
         events = recurring_ical_events.of(calendar_info.calendar).between(
             self.from_date, self.to_date
         )
-        with self.lock:
-            for event in events:
-                json_event = self.convert_ical_event(calendar_info, event)
-                self.components.append(json_event)
+        for event in events:
+            json_event = self.convert_ical_event(calendar_info, event)
+            self.add_component(json_event)
 
     def get_event_classes(self, event) -> list[str]:
         """Return the CSS classes that should be used for the event styles."""
@@ -194,4 +193,4 @@ class ConvertToDhtmlx(ConversionStrategy):
         return categories.cats if categories is not None else []
 
 
-__all__ = ["ConvertToDhtmlx"]
+__all__ = ["ConvertToDhtmlxEvents"]

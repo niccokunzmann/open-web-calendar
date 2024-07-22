@@ -20,10 +20,12 @@ def get_text_from_url(url):
     return requests.get(url, timeout=10).text
 
 
+INDEX_TYPE = tuple[int, int]
+
 class CalendarInfo:
     """Provide an easy API for calendar information."""
 
-    def __init__(self, index: int, url: str, calendar: Calendar):
+    def __init__(self, index: INDEX_TYPE, url: str, calendar: Calendar):
         """Create a new calendar info."""
         self._calendar = calendar
         self._index = index
@@ -48,21 +50,32 @@ class CalendarInfo:
         return self._calendar
 
     @property
-    def index(self) -> int:
-        """The index of the calendar url."""
+    def index(self) -> INDEX_TYPE:
+        """The index of the calendar url.
+        
+        Since one URL can have several calendars, this is multiple indices."""
         return self._index
 
     @property
     def event_css_classes(self) -> list[str]:
         """The css classes for all events in this calendar."""
-        return [f"CALENDAR-INDEX-{self.index}"]
+        return [f"CALENDAR-INDEX-{self.index[0]}", f"CALENDAR-INDEX-{self.index[0]}-{self.index[1]}"]
 
-    def to_json(self) -> dict:
+    @property
+    def id(self) -> str:
         """Return this calendar information as JSON."""
+        return f"{self.index[0]}-{self.index[1]}"
+
+    def to_json(self) -> dict[str, any]:
+        """Return a JSON compatible version of this information."""
         return {
-            "index": self.index,
+            "id": self.id,
+            "type": "calendar",
+            "url-index": self.index[0],
+            "calendar-index": self.index[0],
             "name": self.name,
             "description": self.description,
+            "url": self._url,
         }
 
 
@@ -130,12 +143,16 @@ class ConversionStrategy:
         try:
             index, url = index_url
             calendars = self.get_calendars_from_url(url)
-            for calendar in calendars:
-                self.collect_components_from(CalendarInfo(index, url, calendar))
+            for i, calendar in enumerate(calendars):
+                self.collect_components_from(CalendarInfo((index, i), url, calendar))
         except:
             ty, err, tb = sys.exc_info()
-            with self.lock:
-                self.components.append(self.error(ty, err, tb, url))
+            self.add_component(self.error(ty, err, tb, url))
+
+    def add_component(self, component):
+        """Add a component to the result."""
+        with self.lock:
+            self.components.append(component)
 
     def collect_components_from(self, calendar_info: CalendarInfo):
         """Collect all the compenents from the calendar."""
@@ -145,5 +162,8 @@ class ConversionStrategy:
         """Return the flask Response for the merged calendars."""
         raise NotImplementedError("to be implemented in subclasses")
 
+    def convert_error(self, err: Exception, url: str, traceback: str):
+        """Convert an error."""
+        raise NotImplementedError("to be implemented in subclasses")
 
-__all__ = ["ConversionStrategy", "get_text_from_url", "CalendarInfo"]
+__all__ = ["ConversionStrategy", "get_text_from_url", "CalendarInfo", "INDEX_TYPE"]

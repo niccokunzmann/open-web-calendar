@@ -15,7 +15,7 @@ Calendars:
 
 from icalendar import Calendar, Event
 
-from open_web_calendar.app import ConvertToDhtmlx
+from open_web_calendar.app import ConvertToDhtmlxEvents
 
 
 def event_with_uid(calendar_content: str, uid: str) -> Event:
@@ -31,7 +31,7 @@ def test_description_is_html(calendar_content):
     event = event_with_uid(
         calendar_content["issue-287-links-1"], "1jkma74p98bj79c760660arc07@google.com"
     )
-    description = ConvertToDhtmlx({"timezone": "Europe/London"}).get_event_description(
+    description = ConvertToDhtmlxEvents({"timezone": "Europe/London"}).get_event_description(
         event
     )
     assert '<a href="https://bethanymarceline.com/"' in description
@@ -43,7 +43,7 @@ def test_description_is_parameter(calendar_content):
         calendar_content["event-with-html-markup"],
         "683642b3-9b25-4177-8b46-ec2f65e64020",
     )
-    description = ConvertToDhtmlx({"timezone": "Europe/London"}).get_event_description(
+    description = ConvertToDhtmlxEvents({"timezone": "Europe/London"}).get_event_description(
         event
     )
     assert "<h1>\n Know This Heading!\n</h1>" in description
@@ -52,7 +52,7 @@ def test_description_is_parameter(calendar_content):
 def test_alt_attribute(calendar_content):
     """The HTML description is in an alt attribute."""
     event = event_with_uid(calendar_content["food"], "2851")
-    description = ConvertToDhtmlx({"timezone": "Europe/London"}).get_event_description(
+    description = ConvertToDhtmlxEvents({"timezone": "Europe/London"}).get_event_description(
         event
     )
     assert "Cauliflower\n  <br>" in description

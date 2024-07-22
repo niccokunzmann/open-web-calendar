@@ -27,8 +27,9 @@ from flask_allowedhosts import limit_hosts
 from flask_caching import Cache
 
 from . import translate, version
-from .convert_to_dhtmlx import ConvertToDhtmlx
+from .convert_to_dhtmlx import ConvertToDhtmlxEvents
 from .convert_to_ics import ConvertToICS
+from .convert_to_metadata import ConvertToMetadata
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -209,6 +210,12 @@ def render_app_template(template, specification):
         language=language,
     )
 
+CALENDAR_DISPATCH = {
+    "events.json": ConvertToDhtmlxEvents,
+    "json": ConvertToMetadata,
+    "ics": ConvertToICS,
+}
+
 
 @app.route("/calendar.<ext>", methods=["GET", "OPTIONS"])
 @limit_hosts(allowed_hosts=ALLOWED_HOSTS)
@@ -219,12 +226,9 @@ def get_calendar(ext):
     specification = get_specification()
     if ext == "spec":
         return jsonify(specification)
-    if ext == "events.json":
-        strategy = ConvertToDhtmlx(specification, get_text_from_url)
-        strategy.retrieve_calendars()
-        return set_js_headers(strategy.merge())
-    if ext == "ics":
-        strategy = ConvertToICS(specification, get_text_from_url)
+    if ext in CALENDAR_DISPATCH:
+        Strategy = CALENDAR_DISPATCH[ext]  # noqa: N806
+        strategy = Strategy(specification, get_text_from_url)
         strategy.retrieve_calendars()
         return set_js_headers(strategy.merge())
     if ext == "html":
@@ -240,7 +244,6 @@ def get_calendar(ext):
     raise ValueError(
         f"Cannot use extension {ext}. Please see the documentation or report an error."
     )
-
 
 for folder_path in STATIC_FOLDER_PATH.iterdir():
     if not folder_path.is_dir():
