@@ -7,6 +7,7 @@
  */
 const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
 const CALENDAR_ENDPOINT = "/calendar.html";
+const CALENDAR_INFO_ENDPOINT = "/calendar.json";
 
 
 /* Return the properties of an object.
@@ -57,8 +58,8 @@ function fillTimezoneUIElements(defaultTimeZone) {
     }
 }
 
-function getCalendarUrl(specification) {
-    var url = DEFAULT_URL + CALENDAR_ENDPOINT + "?";
+function getCalendarUrl(specification, calendarEndpoint) {
+    var url = DEFAULT_URL + (calendarEndpoint ? calendarEndpoint : CALENDAR_ENDPOINT) + "?";
     var parameters = [];
     getOwnProperties(specification).forEach(function(property) {
         (Array.isArray(specification[property]) ? specification[property].length ? specification[property] : [""] : [specification[property]]
@@ -67,4 +68,31 @@ function getCalendarUrl(specification) {
         });
     });
     return url + parameters.join("&");
+}
+
+/* Get the calendar information. */
+function getCalendarInfo(onSuccess, spec) {
+    var requestSpec = spec ? spec : specification;
+    var endpoint = getCalendarUrl(requestSpec, CALENDAR_INFO_ENDPOINT);
+
+    // from https://developer.mozilla.org/en-US/docs/Web/API/Request/json
+    //const request = new Request(endpoint, {method: "GET"});  
+    //console.log("GET " + endpoint);
+    //return request;
+    // from https://www.w3schools.com/js/js_json_http.asp
+    var xmlhttp = new XMLHttpRequest();
+    var url = endpoint;
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+            if (this.status == 200) {
+                var value = JSON.parse(this.responseText);
+                onSuccess(value);
+            } else {
+                // TODO: report error
+            }
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 }
