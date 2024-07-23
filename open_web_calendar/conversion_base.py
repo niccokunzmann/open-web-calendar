@@ -8,6 +8,7 @@ import sys
 import traceback
 from concurrent.futures import ThreadPoolExecutor
 from threading import RLock
+from typing import Tuple
 from urllib.parse import urljoin
 
 import requests
@@ -20,7 +21,7 @@ def get_text_from_url(url):
     return requests.get(url, timeout=10).text
 
 
-INDEX_TYPE = tuple[int, int]
+INDEX_TYPE = Tuple[int, int]
 
 
 class CalendarInfo:
