@@ -88,11 +88,12 @@ prefer_browser_language: false
 ## The skin changes the look of the calendar.
 ## They are located in the static/css/dhtmlx folder.
 ## You can choose one of these:
-#skin: "dhtmlxscheduler_contrast_black.css"
-#skin: "dhtmlxscheduler_terrace.css"
-#skin: "dhtmlxscheduler_contrast_white.css"
-#skin: "dhtmlxscheduler_flat.css"
-skin: "dhtmlxscheduler_material.css"
+#skin: "contrast-black"
+#skin: "terrace"
+#skin: "contrast-white"
+#skin: "flat"
+#skin: "dark"
+skin: "material"
 
 ## You can embed custom css code, i.e. to change the background or font.
 css: ""

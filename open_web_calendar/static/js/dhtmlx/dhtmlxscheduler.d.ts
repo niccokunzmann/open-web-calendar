@@ -1,7 +1,3 @@
-// SPDX-FileCopyrightText: 2024 (c) XB Software Ltd.
-//
-// SPDX-License-Identifier: GPL-2.0-only
-
 // Type definitions for dhtmlxScheduler <%= pkg.version %>
 // Project: http://dhtmlx.com/docs/products/dhtmlxScheduler
 
@@ -9,7 +5,91 @@ type SchedulerCallback = (...args: any[]) => any;
 type SchedulerFilterCallback = { (id: string | number, event: any): boolean }
 
 
-type SchedulerEventName = "onAfterEventDisplay"|"onAfterFolderToggle"|"onAfterLightbox"|"onAfterQuickInfo"|"onAfterSchedulerResize"|"onBeforeCollapse"|"onBeforeDrag"|"onBeforeEventChanged"|"onBeforeEventCreated"|"onBeforeEventDelete"|"onBeforeEventDisplay"|"onBeforeEventDragIn"|"onBeforeEventDragOut"|"onBeforeEventPasted"|"onBeforeExpand"|"onBeforeExternalDragIn"|"onBeforeFolderToggle"|"onBeforeLightbox"|"onBeforeParse"|"onBeforeTodayDisplayed"|"onBeforeTooltip"|"onBeforeViewChange"|"onCellClick"|"onCellDblClick"|"onClearAll"|"onClick"|"onCollapse"|"onConfirmedBeforeEventDelete"|"onContextMenu"|"onDataRender"|"onDblClick"|"onDestroy"|"onDragEnd"|"onEmptyClick"|"onError"|"onEventAdded"|"onEventCancel"|"onEventChanged"|"onEventCollision"|"onEventCopied"|"onEventCreated"|"onEventCut"|"onEventDeleted"|"onEventDrag"|"onEventDragIn"|"onEventDragOut"|"onEventDropOut"|"onEventIdChange"|"onEventLoading"|"onEventPasted"|"onEventSave"|"onEventSelected"|"onEventUnselected"|"onExpand"|"onExternalDragIn"|"onLightbox"|"onLightboxButton"|"onLimitViolation"|"onLoadEnd"|"onLoadError"|"onLoadStart"|"onLocationError"|"onMouseDown"|"onMouseMove"|"onOptionsLoad"|"onOptionsLoadFinal"|"onOptionsLoadStart"|"onParse"|"onQuickInfo"|"onSaveError"|"onScaleAdd"|"onScaleDblClick"|"onSchedulerReady"|"onSchedulerResize"|"onTemplatesReady"|"onTimelineCreated"|"onViewChange"|"onViewMoreClick"|"onXLE"|"onXLS"|"onXScaleClick"|"onXScaleDblClick"|"onYScaleClick"|"onYScaleDblClick";
+type SchedulerEventName = "onAfterEventDisplay" |
+	"onAfterFolderToggle" |
+	"onAfterLightbox" |
+	"onAfterQuickInfo" |
+	"onAfterSchedulerResize" |
+	"onBeforeCollapse" |
+	"onBeforeDrag" |
+	"onBeforeEventChanged" |
+	"onBeforeEventCreated" |
+	"onBeforeEventDelete" |
+	"onBeforeEventDisplay" |
+	"onBeforeEventDragIn" |
+	"onBeforeEventDragOut" |
+	"onBeforeEventPasted" |
+	"onBeforeExpand" |
+	"onBeforeExternalDragIn" |
+	"onBeforeFolderToggle" |
+	"onBeforeLightbox" |
+	"onBeforeParse" |
+	"onBeforeQuickInfo" |
+	"onBeforeTodayDisplayed" |
+	"onBeforeTooltip" |
+	"onBeforeViewChange" |
+	"onCellClick" |
+	"onCellDblClick" |
+	"onClearAll" |
+	"onClick" |
+	"onCollapse" |
+	"onConfirmedBeforeEventDelete" |
+	"onContextMenu" |
+	"onDataRender" |
+	"onDblClick" |
+	"onDestroy" |
+	"onDragEnd" |
+	"onEmptyClick" |
+	"onError" |
+	"onEventAdded" |
+	"onEventCancel" |
+	"onEventChanged" |
+	"onEventCollision" |
+	"onEventCopied" |
+	"onEventCreated" |
+	"onEventCut" |
+	"onEventDeleted" |
+	"onEventDrag" |
+	"onEventDragIn" |
+	"onEventDragOut" |
+	"onEventDropOut" |
+	"onEventIdChange" |
+	"onEventLoading" |
+	"onEventPasted" |
+	"onEventSave" |
+	"onEventSelected" |
+	"onEventUnselected" |
+	"onExpand" |
+	"onExternalDragIn" |
+	"onLightbox" |
+	"onLightboxButton" |
+	"onLimitViolation" |
+	"onLoadEnd" |
+	"onLoadError" |
+	"onLoadStart" |
+	"onLocationError" |
+	"onMouseDown" |
+	"onMouseMove" |
+	"onOptionsLoad" |
+	"onOptionsLoadFinal" |
+	"onOptionsLoadStart" |
+	"onParse" |
+	"onQuickInfo" |
+	"onSaveError" |
+	"onScaleAdd" |
+	"onScaleDblClick" |
+	"onSchedulerReady" |
+	"onSchedulerResize" |
+	"onTemplatesReady" |
+	"onTimelineCreated" |
+	"onViewChange" |
+	"onViewMoreClick" |
+	"onXLE" |
+	"onXLS" |
+	"onXScaleClick" |
+	"onXScaleDblClick" |
+	"onYScaleClick" |
+	"onYScaleDblClick";
 
 
 export interface SchedulerTemplates {
@@ -20,6 +100,12 @@ export interface SchedulerTemplates {
 	 * @param end the end date of the view
 	*/
 	agenda_date(start: Date, end: Date): string;
+
+	/**
+	 * specifies the content of the day cell of the Agenda view
+	 * @param date the date which needs formatting
+	*/
+	agenda_day(date: Date): string;
 
 	/**
 	 * specifies the text in the second column of the Agenda view
@@ -85,7 +171,7 @@ export interface SchedulerTemplates {
 	 * @param end the date when an event is scheduled to be completed
 	 * @param ev the event's object
 	*/
-	drag_marker_class(start: Date, end: Date, ev: any): void;
+	drag_marker_class(start: Date, end: Date, ev: any): string;
 
 	/**
 	 * specifies the content of the highlighted block  on the time scale
@@ -93,7 +179,7 @@ export interface SchedulerTemplates {
 	 * @param end the date when an event is scheduled to be completed
 	 * @param ev the event's object
 	*/
-	drag_marker_content(start: Date, end: Date, ev: any): void;
+	drag_marker_content(start: Date, end: Date, ev: any): string;
 
 	/**
 	 * specifies the date of an event. Applied to one-day events only
@@ -263,6 +349,16 @@ export interface SchedulerTemplates {
 	 * specifies the drop-down time selector in the lightbox
 	*/
 	time_picker(): string;
+
+	/**
+	 * specifies the CSS class of the background cell in the Day/Week views
+	*/
+	time_slot_class(): void;
+
+	/**
+	 * specifies the content of the background cell in the Day/Week views
+	*/
+	time_slot_text(): void;
 
 	/**
 	 * specifies the format of start and end dates displayed in the tooltip
@@ -577,6 +673,11 @@ export interface SchedulerConfigOptions {
 	 * sets the date format that is used to parse data from a data set and to send dates back to the server
 	*/
 	date_format: string;
+
+	/**
+	 * adds padding to a view column
+	*/
+	day_column_padding: number;
 
 	/**
 	 * sets the date format for the X-Axis of the Week and Units views
@@ -999,7 +1100,7 @@ export interface SchedulerConfigOptions {
 	scroll_hour: number;
 
 	/**
-	 * specifies the delimiter that will be used to separate several sections/units in the related data property of the event
+	 * specifies the delimeter that will be used to separate several sections/units in the related data property of the event
 	*/
 	section_delimiter: string;
 
@@ -1047,6 +1148,26 @@ export interface SchedulerConfigOptions {
 	 * defines that during event resizing the end date of the event can be swapped for the start date (after the end date becomes scheduled before the start one)
 	*/
 	timeline_swap_resize: boolean;
+
+	/**
+	 * sets the length of time in milliseconds before the tooltip hides
+	*/
+	tooltip_hide_timeout: number;
+
+	/**
+	 * sets the right (if positive) offset of the tooltip's position
+	*/
+	tooltip_offset_x: number;
+
+	/**
+	 * sets the top (if positive) offset of the tooltip's position
+	*/
+	tooltip_offset_y: number;
+
+	/**
+	 * sets the timeout in milliseconds before the tooltip is displayed for a task
+	*/
+	tooltip_timeout: number;
 
 	/**
 	 * enables/disables the touch support in the scheduler
@@ -1227,6 +1348,50 @@ export interface SchedulerLocale {
 	date: SchedulerLocaleDate;
 	labels: SchedulerLocaleLabels;
 }
+
+export interface SchedulerFormBlock {
+
+	/**
+	 * Renders the form block based on the provided configuration.
+	 * @function
+	 * @name SchedulerFormBlock#render
+	 * @param {any} config - The configuration object for the custom lightbox control.
+	 * @returns {string} Returns the HTML string representing the rendered the custom control.
+	 */
+	render: (config: any) => string;
+
+	/**
+	 * Sets the value of the custom lightbox control.
+	 * @function
+	 * @name SchedulerFormBlock#set_value
+	 * @param {HTMLElement} node - HTML object related to HTML defined above.
+	 * @param {*} value - value defined by map_to property.
+	 * @param {Event} ev - The event object.
+	 * @param {any} config - Section configuration object.
+	 * @returns {void}
+	 */
+	set_value: (node: HTMLElement, value: any, ev: Event, config: any) => void;
+
+	/**
+	 * Gets the value of the custom control.
+	 * @function
+	 * @name SchedulerFormBlock#get_value
+	 * @param {HTMLElement} node - HTML object related to HTML defined above.
+	 * @param {Event} ev - The event object.
+	 * @param {any} config - Section configuration object.
+	 * @returns {*} Returns the value of the custom lightbox control.
+	 */
+	get_value: (node: HTMLElement, ev: Event, config: any) => any;
+
+	/**
+	 * Focuses on the custom lightbox control.
+	 * @function
+	 * @name SchedulerFormBlock#focus
+	 * @param {HTMLElement} node - HTML object related to HTML defined above.
+	 * @returns {void}
+	 */
+	focus: (node: HTMLElement) => void;
+	}
 
 export interface SchedulerSizes {
 
@@ -1434,9 +1599,9 @@ export interface SchedulerStatic {
 	alert(config: any): HTMLElement;
 
 	/**
-	 * if the specified expression is false, an errorMessage is shown in the red popup at the top right corner of the screen
+	 * if the specified expression is false, an errorMessage is shown in a red popup at the top right corner of the screen
 	 * @param expression true to assert the expression, false - if assertion fails
-	 * @param errorMessage an error message that will be shown in the red popup
+	 * @param errorMessage an error message that will be shown in a red popup
 	*/
 	assert(expression: boolean, errorMessage: string): void;
 
@@ -1444,9 +1609,9 @@ export interface SchedulerStatic {
 	 * attaches the handler to an inner event of dhtmlxScheduler
 	 * @param name the event's name, case-insensitive
 	 * @param handler the handler function
-	 * @param settings optional, an <a href="#propertiesofsettingsobject">object with settings</a> for the event handler
+	 * @param settings optional, optional, an <a href="#propertiesofsettingsobject">object with settings</a> for the event handler
 	*/
-	attachEvent(name: SchedulerEventName, handler: SchedulerCallback, settings: any): string;
+	attachEvent(name: SchedulerEventName, handler: SchedulerCallback, settings?: any): string;
 
 	/**
 	 * makes the scheduler reflect all data changes in the Backbone model and vice versa
@@ -1455,7 +1620,7 @@ export interface SchedulerStatic {
 	backbone(events: any): void;
 
 	/**
-	 * creates a new function that, when called, has its <i>this</i> keyword set to the provided value
+	 * creates a new function that when called has its <i>this</i> keyword set to the provided value
 	 * @param method the target function
 	 * @param thisArg the value to be passed as the <i>this</i> parameter to the target function when the bound function is called
 	*/
@@ -1536,14 +1701,14 @@ export interface SchedulerStatic {
 	confirm(config: any): HTMLElement;
 
 	/**
-	 * creates a deep copy of provided object
+	 * creates a deep copy of the provided object
 	 * @param event the object that needs to be copied
 	*/
 	copy(event: any): any;
 
 	/**
 	 * creates a new dataProcessor instance and attaches it to scheduler
-	 * @param config dataProcessor configuration object
+	 * @param config a dataProcessor configuration object
 	*/
 	createDataProcessor(config: any): any;
 
@@ -1584,9 +1749,9 @@ export interface SchedulerStatic {
 
 	/**
 	 * removes marking/blocking set by the addMarkedTimespan() method
-	 * @param id optional, the timespan's id
+	 * @param config optional, the timespan's id or the timespan's configuration properties
 	*/
-	deleteMarkedTimespan(id?: string): void;
+	deleteMarkedTimespan(config?: any): void;
 
 	/**
 	 * deletes a section from the currently active view
@@ -1601,7 +1766,7 @@ export interface SchedulerStatic {
 	destroyCalendar(name?: any): void;
 
 	/**
-	 * destroys the scheduler instance
+	 * destroys a scheduler instance
 	*/
 	destructor(): void;
 
@@ -1845,7 +2010,7 @@ export interface SchedulerStatic {
 	 * marks and/or blocks date(s) by applying the default or a custom style to them. Marking is cancelled right after any internal update in the app. Can be used for highlighting
 	 * @param config the configuration object of the timespan to mark/block
 	*/
-	markTimespan(config: any): void;
+	markTimespan(config: any): any[];
 
 	/**
 	 * calls a message box of the specified type
@@ -1857,7 +2022,7 @@ export interface SchedulerStatic {
 	 * adds properties of the 'source' object into the 'target' object
 	 * @param target the target object
 	 * @param source the source object
-	 * @param force if true, properties of the 'source' will overwrite matching properties of the 'target', if there are any. If false, properties that already exist in the 'target' will be omitted
+	 * @param force if true, properties of the 'source' will overwrite the matching properties of the 'target', if there are any. If false, the properties that already exist in the 'target' will be omitted
 	*/
 	mixin(target: any, source: any, force: boolean): void;
 
@@ -1885,7 +2050,7 @@ export interface SchedulerStatic {
 	parse(data: any): void;
 
 	/**
-	 * activates specified extensions
+	 * activates the specified extensions
 	 * @param ext extensions that need to be activated
 	*/
 	plugins(ext: any): void;
@@ -1937,7 +2102,7 @@ export interface SchedulerStatic {
 	/**
 	 * serializes all events loaded into the scheduler
 	*/
-	serialize(): any[];
+	serialize(): void;
 
 	/**
 	 * defines a named collection that can be loaded into Units, Timeline views, or the Lightbox
@@ -1991,6 +2156,12 @@ export interface SchedulerStatic {
 	 * @param mode the loading mode
 	*/
 	setLoadMode(mode: string): void;
+
+	/**
+	 * sets the active skin
+	 * @param skin the name of the skin. The allowed values are: "terrace", "dark", "material", "flat", "contrast-white", "contrast-black"
+	*/
+	setSkin(skin: string): void;
 
 	/**
 	 * sets the user data associated with the specified event
@@ -2124,7 +2295,16 @@ export interface SchedulerStatic {
 	 * @param view optional, (optional) the view name
 	*/
 	updateView(date?: Date, view?: string): void;
-}
+	
+	// /**
+	//  * A key-value mapping of string keys to Scheduler form blocks.
+	//  * The keys represent the names of the custom lightbox controls.
+	//  * The values are objects that implement the SchedulerFormBlock interface.
+	//  */
+	form_blocks: { [key: string]: SchedulerFormBlock };
+
+	[customMethod: string]: any;
+	}
 
 export declare var scheduler: SchedulerStatic;
 

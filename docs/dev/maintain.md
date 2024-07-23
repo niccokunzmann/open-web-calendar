@@ -45,6 +45,18 @@ This section clarifies how to maintain the project.
 
 5. Create a Pull Request and see if the tests run.
 
+## Update DHTMLX Scheduler
+
+DHTMLX Scheduler can be updated from its [GitHub repository](https://github.com/DHTMLX/scheduler).
+There is a script which updates the scheduler.
+Still their changelog needs to be considered.
+
+```shell
+./scripts/update-scheduler.sh
+```
+
+If you update the scheduler, also add this to the changelog.
+
 ## Release a new Version
 
 To release a new version:

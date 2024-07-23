@@ -5,14 +5,14 @@ Feature: The week days of the calendar can be configured.
          And we set the "start_of_week" parameter to "mo"
          And we set the "tab" parameter to "week"
         When we look at 2024-01-18
-        Then we can see the text "Mon, January 15"
-         And we can see the text "Tue, January 16"
-         And we can see the text "Wed, January 17"
-         And we can see the text "Thu, January 18"
-         And we can see the text "Fri, January 19"
-         And we can see the text "Sat, January 20"
-         And we can see the text "Sun, January 21"
-         And we cannot see the text "Sun, January 14"
+        Then we can see the text "Mon 15"
+         And we can see the text "Tue 16"
+         And we can see the text "Wed 17"
+         And we can see the text "Thu 18"
+         And we can see the text "Fri 19"
+         And we can see the text "Sat 20"
+         And we can see the text "Sun 21"
+         And we cannot see the text "Sun 14"
 
 
     Scenario: View the week Mo-Fr
@@ -20,11 +20,11 @@ Feature: The week days of the calendar can be configured.
          And we set the "start_of_week" parameter to "work"
          And we set the "tab" parameter to "week"
         When we look at 2024-01-18
-        Then we can see the text "Mon, January 15"
-         And we can see the text "Tue, January 16"
-         And we can see the text "Wed, January 17"
-         And we can see the text "Thu, January 18"
-         And we can see the text "Fri, January 19"
+        Then we can see the text "Mon 15"
+         And we can see the text "Tue 16"
+         And we can see the text "Wed 17"
+         And we can see the text "Thu 18"
+         And we can see the text "Fri 19"
          And we cannot see the text "Sat"
          And we cannot see the text "Sun"
 
@@ -33,14 +33,14 @@ Feature: The week days of the calendar can be configured.
          And we set the "start_of_week" parameter to "su"
          And we set the "tab" parameter to "week"
         When we look at 2024-01-18
-        Then we can see the text "Sun, January 14"
-         And we can see the text "Mon, January 15"
-         And we can see the text "Tue, January 16"
-         And we can see the text "Wed, January 17"
-         And we can see the text "Thu, January 18"
-         And we can see the text "Fri, January 19"
-         And we can see the text "Sat, January 20"
-         And we cannot see the text "Sun, January 21"
+        Then we can see the text "Sun 14"
+         And we can see the text "Mon 15"
+         And we can see the text "Tue 16"
+         And we can see the text "Wed 17"
+         And we can see the text "Thu 18"
+         And we can see the text "Fri 19"
+         And we can see the text "Sat 20"
+         And we cannot see the text "Sun 21"
 
     Scenario: View the week Mo-Fr on the month view
        Given we add the calendar "one-event"
