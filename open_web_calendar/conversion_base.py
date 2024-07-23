@@ -80,6 +80,7 @@ class CalendarInfo:
             "name": self.name,
             "description": self.description,
             "url": self._url,
+            "event-css-classes": self.event_css_classes,
         }
 
 
