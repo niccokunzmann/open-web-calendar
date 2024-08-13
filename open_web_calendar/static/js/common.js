@@ -5,7 +5,13 @@
 /*
  * Common functions.
  */
-const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
+url = new URL(document.location.href);
+if (url.pathname == "/") {
+    pathname = "";
+} else {
+    pathname = url.pathname;
+}
+const DEFAULT_URL = url.origin + pathname;
 const CALENDAR_ENDPOINT = "/calendar.html";
 
 
