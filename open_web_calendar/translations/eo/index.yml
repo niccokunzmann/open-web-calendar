@@ -35,3 +35,59 @@ style-title: Propra stilo per CSS
 event-status-cancelled: nuligita
 event-status-title: Stato de evento
 calendar-code-execution: Vi povas vidi la rezultan kalendaron ĉi-sube.
+style-click: Vi povas ŝanĝi la koloron de alklakeblaĵoj.
+loader-none: neniu montrilo de ŝargado
+tabs-description: 'La monata vido estas implicita. Tamen, vi povas komence uzi alian
+  vidon. Elektu unu el:'
+style-days: Se vi volas havi alian koloron por la tagoj, tio ankaŭ eblas.
+style-css-classes: 'Jen ekzemploj de CSS-klasoj por eventoj:'
+calendar-urls: 'Por kunigi plurajn kalendarojn, bonvolu tajpi la retadresojn de la
+  ICS-kalendaroj ĉi tie:'
+calendar-code: 'Por uzi la kalendaron, metu la jenan kodon en vian retpaĝon:'
+section-customization: Vi povas plie adapti la kalendaron.
+starting-date-description: 'Por ŝanĝi la komencan daton de la kalendaro:'
+links-description: Eventoj povas havi lokojn kaj retadresojn. Se vi uzas la kalendaron
+  en paĝon, vi povas elekti, ĉu la alklakita hiperligo malfermas la paĝon.
+links-self: Malfermi la alklakitan dokumenton en la saman kadron de la alklako.
+links-parent: Malfermi la ligitan dokumenton en la patran kadron.
+links-blank: Malfermi la ligitan dokumenton en novan fenestron aŭ langeton.
+links-top: Malfermi la ligitan dokumenton en la plena fenestro.
+style-background: Vi povas ŝanĝi la fonan koloron de la kalendaro.
+spec-title: Gastigi la specifon
+spec-description: 'La kalendaro povas esti farita ne nur per la retadreso, sed ankaŭ
+  per specifo en JSON- aŭ YAML-dosiero. La adaptado ĉi-supre generas la jenan specifon:'
+spec-host-html: Vi povas <a href="javascript:downloadJSONSpecification()">elŝuti ĉi
+  tiun specifon</a> kaj metu ĝin ie en Interreto. Tiel vi povas adapti la kalendaron
+  eĉ post sendo de la hiperligo, ekz. per <a href="https://gist.github.com/">GitHub
+  Gist</a>.
+first-hour-description: 'Por ŝanĝi la unuan horon de la kalendara vido:'
+language-browser-true: 'La kalendaro estas en la lingvo de la uzanto. Se la lingvo
+  de la uzanto ne estas disponebla, la jena lingvo estas uzata:'
+style-css: Vi povas uzi viajn proprajn CSS-atributojn laŭplaĉe.
+language-browser-false: 'La kalendaro estas ĉiam en la jena lingvo:'
+loader-default: cirkla montrilo de ŝargado
+title-description: 'Por ŝanĝi la titolon, bonvolu tajpi la titolon de la kalendaro
+  ĉi tie:'
+about: La Malfermita Reta Kalendaro uzas ICS/iCal-kalendarojn Interrete kaj montras
+  ilin en unu kalendaro. Vi povas uzi ĝin kun Nextcloud, Outlook, Google Calendar,
+  Meetup kaj aliaj kalendarsistemoj uzantaj la ICS-normon.
+style-description: Vi povas ŝanĝi la koloron de la kalendaro kaj multajn pli per CSS.
+  Via adaptado havas prioritaton super la etoso elektita de vi. Ĉi-sube, vi povas
+  elekti el kelkaj adaptaĵoj preparitaj por vi.
+style-date: Vi povas ŝanĝi la fonan koloron de la aktuala dato.
+style-days-outside: Kelkaj tagoj de la kalendaro havas alian koloron, se ili ne estas
+  ene de la monato.
+event-status-description: 'Por ŝanĝi la aspekton de la eventa priskribo laŭ la stato:'
+loader-title: Montrilo de ŝargado
+loader-description: Kelkfoje, la servilo postulas iomon da tempo por ŝarĝi la kalendaron.
+  Se la servilo uzas senkostan planon sur Heroku, la servilo devas lanĉiĝi unue.
+controls-description: 'Eble vi ne volas montri ĉiujn regilojn por la uzantoj. Elektu
+  ĉi tie tiujn, kiun vi volas montri:'
+skins-dark: Malhela
+timezone-description: 'La horzono estas tiu specifita de la TTT-legilo de la uzanto.
+  Se vi volas, ke via kalendaro estu fiksita sur unu horzono, vi havas la opcion ĉi-sube.
+  Via TTT-legilo uzas la jenan horzonon:'
+spec-link: 'Post kiam vi metis la specifon ie Interrete, vi povas krei hiperligon
+  kiel jenon:'
+last-hour-description: 'Por ŝanĝi la lastan horon de la kalendara vido:'
+time-increment-description: 'Ŝanĝi tempan krementon en la taga & semajna vido:'

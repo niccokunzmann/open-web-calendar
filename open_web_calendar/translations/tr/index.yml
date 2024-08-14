@@ -87,3 +87,4 @@ event-status-title: Etkinlik Durumu
 event-status-description: 'Duruma bağlı olarak etkinlik açıklamasının görünümünü değiştirin:'
 event-status-confirmed: onaylandı
 event-status-cancelled: iptal edildi
+skins-dark: Koyu

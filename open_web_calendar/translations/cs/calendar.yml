@@ -48,3 +48,10 @@ labels_description: "Poznámka"
 labels_week_agenda_tab: "Program"
 language-en: "Czech"
 labels_next: Další
+labels_day: Den
+labels_hour: Hodina
+labels_year: Rok
+labels_month: Měsíc
+language: Čeština
+labels_minute: Minuta
+labels_prev: Předchozí

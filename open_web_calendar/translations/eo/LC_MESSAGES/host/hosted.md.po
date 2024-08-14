@@ -1,12 +1,13 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # Prefill add-on <noreply-addon-prefill@weblate.org>, 2024.
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-28 10:39+0200\n"
-"PO-Revision-Date: 2024-05-28 08:41+0000\n"
-"Last-Translator: Prefill add-on <noreply-addon-prefill@weblate.org>\n"
+"PO-Revision-Date: 2024-08-14 01:10+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/"
 "open-web-calendar/documentation-hosted-version/eo/>\n"
 "Language: eo\n"
@@ -14,30 +15,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #
-#, fuzzy
 msgid "You can use the hosted version of the Open Web Calendar yourself."
-msgstr "You can use the hosted version of the Open Web Calendar yourself."
+msgstr "Vi mem povas uzi la gastigitan version de la Malfermita Reta Kalendaro."
 
-#, fuzzy
 msgid "Hosted Version"
-msgstr "Hosted Version"
+msgstr "Gastigita versio"
 
-#, fuzzy
 msgid ""
 "There is a version from which you can access calendars which are hosted in "
 "[Tor Onion Services](https://tb-manual.torproject.org/onion-services/): "
 "[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-"
 "calendar.hosted.quelltext.eu)."
 msgstr ""
-"There is a version from which you can access calendars which are hosted in ["
-"Tor Onion Services](https://tb-manual.torproject.org/onion-services/): [tor."
-"open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted."
-"quelltext.eu)."
+"Ekzistas versio, ĉe kiu oni povas uzi kalendarojn gastigitajn per [Tor Onion "
+"Services](https://tb-manual.torproject.org/onion-services/): [tor.open-web-"
+"calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted.quelltext."
+"eu)."
 
-#, fuzzy
 msgid ""
 "A hosted version exists at [open-web-"
 "calendar.hosted.quelltext.eu](https://open-web-"
@@ -46,19 +43,18 @@ msgid ""
 "improvements go there after max. 48 hours. This version is intended to stay "
 "free of charge and is funded by [donation ♥️](../../contributing)."
 msgstr ""
-"A hosted version exists at [open-web-calendar.hosted.quelltext.eu](https"
-"://open-web-calendar.hosted.quelltext.eu). You can use this version if you "
-"like. It is deployed from the latest version on the `master` branch. Thus, "
-"translation improvements go there after max. 48 hours. This version is "
-"intended to stay free of charge and is funded by [donation "
+"Gastigita versio ekzistas ĉe [open-web-calendar.hosted.quelltext.eu](https"
+"://open-web-calendar.hosted.quelltext.eu). Vi povas uzi tiun version "
+"laŭvole. Ĝi estas disponigata laŭ la plej nova versio el la branĉo `master`. "
+"Tial, tradukaj plibonigoj efektiviĝas post maksimume 48 horoj. Ni celas, ke "
+"tiu versio restas senpage uzebla, financate per [donacoj "
 "♥️](../../contributing)."
 
-#, fuzzy
 msgid ""
 "[How to configure all calendar parameters](../configure/#configuring-the-"
 "default-calendar)"
 msgstr ""
-"[How to configure all calendar parameters](../configure/#configuring-the-"
+"[Kiel agordi ĉiujn kalendarajn parametrojn](../configure/#configuring-the-"
 "default-calendar)"
 
 #~ msgid ""

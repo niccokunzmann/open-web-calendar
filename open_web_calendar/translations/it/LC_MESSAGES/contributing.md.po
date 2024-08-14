@@ -1,19 +1,21 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # albanobattistella <albano_battistella@hotmail.com>, 2024.
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 01:04+0200\n"
-"PO-Revision-Date: 2024-06-14 03:03+0000\n"
-"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/open-web-calendar/documentation-contributing/it/>\n"
+"PO-Revision-Date: 2024-08-14 01:10+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-contributing/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 msgid "You can improve the project yourself. Get started here."
 msgstr "Puoi migliorare il progetto tu stesso. Inizia qui."
@@ -84,12 +86,14 @@ msgid "Contribute ♥️"
 msgstr "Contribuire♥️"
 
 msgid "[Translate this project](../dev/translate)"
-msgstr ""
+msgstr "[Traduci questo progetto](../dev/translate)"
 
 msgid ""
 "If you customized a calendar, please consider [contributing it as a "
 "template](../templates) for others to use."
 msgstr ""
+"Se hai personalizzato un calendario, prendi in considerazione l'idea di ["
+"contribuire come modello](../templates) affinché altri possano utilizzarlo."
 
 #~ msgid ""
 #~ "If you customized a calendar, please consider [contributing it as a "

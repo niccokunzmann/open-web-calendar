@@ -92,3 +92,7 @@ event-status-cancelled: cancellato
 event-status-title: Stato dell'evento
 event-status-description: "Cambia l'aspetto della descrizione dell'evento a seconda
   dello stato:"
+language-browser-false: 'Il calendario è sempre in questa lingua:'
+language-browser-true: 'Il calendario è nella lingua dello spettatore. Se la lingua
+  non è tradotta, verrà visualizzata in:'
+skins-dark: Scuro

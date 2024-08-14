@@ -47,3 +47,11 @@ labels_date: "日付"
 labels_description: "説明"
 labels_week_agenda_tab: "日程"
 language-en: "Japanese"
+labels_next: 次へ
+labels_prev: 前へ
+labels_year: 年
+labels_month: 月
+labels_hour: 時
+language: 日本語
+labels_day: 日
+labels_minute: 分

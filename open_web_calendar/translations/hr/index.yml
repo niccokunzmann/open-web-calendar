@@ -86,3 +86,7 @@ event-status-confirmed: potvrđeno
 event-status-cancelled: otkazano
 event-status-title: Stanje događaja
 event-status-description: 'Promijeni izgled opisa događaja ovisno o stanju:'
+language-browser-false: 'Kalendar uvijek koristi ovaj jezik:'
+skins-dark: Tamna
+language-browser-true: 'Kalendar koristi jezik preglednika. Ako jezik nije preveden,
+  koristi se:'

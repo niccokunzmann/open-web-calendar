@@ -47,3 +47,11 @@ labels_date: "Ημερομηνία"
 labels_description: "Περιγραφή"
 labels_week_agenda_tab: "Ημερήσια Διάταξη"
 language-en: "Greek"
+labels_next: Επόμενο
+labels_year: Έτος
+labels_month: Μήνας
+labels_hour: Ώρα
+labels_minute: Λεπτό
+labels_day: Ημέρα
+language: Ελληνικά
+labels_prev: Προηγούμενο

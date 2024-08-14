@@ -48,3 +48,10 @@ labels_description: "Опис"
 labels_week_agenda_tab: "Перелік"
 language-en: "Ukrainian"
 language: Українська
+labels_next: Наступний
+labels_prev: Попередній
+labels_year: Рік
+labels_month: Місяць
+labels_day: День
+labels_hour: Година
+labels_minute: Хвилина

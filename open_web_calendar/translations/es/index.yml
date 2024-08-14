@@ -93,3 +93,7 @@ event-status-description: 'Cambiar el aspecto de la descripción del evento en f
 event-status-tentative: provisional
 event-status-confirmed: confirmado
 event-status-cancelled: cancelado
+language-browser-false: 'El calendario siempre está en este idioma:'
+language-browser-true: 'El calendario está en el idioma del espectador. Si el idioma
+  no está traducido, se muestra en:'
+skins-dark: Oscuro
