@@ -91,3 +91,7 @@ event-status-description: 'Verändere das Aussehen der Terminbeschreibung abhän
   vom Status:'
 event-status-confirmed: Bestätigt
 event-status-cancelled: Abgesagt
+skins-dark: Dunkel
+language-browser-false: 'Der Kalender ist immer in dieser Sprache:'
+language-browser-true: 'Der Kalender ist in der Sprache vom Betrachter. Wenn es die
+  Sprache aber nicht gibt, ist er in:'

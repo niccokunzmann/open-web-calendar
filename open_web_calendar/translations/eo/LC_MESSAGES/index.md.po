@@ -1,107 +1,112 @@
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+# phlostically <phlostically@mailinator.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 07:30+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-08-14 20:52+0000\n"
+"Last-Translator: phlostically <phlostically@mailinator.com>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-index/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #
-
 msgid "Getting Started"
-msgstr ""
+msgstr "Unuaj paŝoj"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
+msgstr "Vidu la funkciojn, aŭ provu mem la Malfermitan Retan Kalendaron!"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
 msgid "A highly flexible calendar display for your website."
-msgstr ""
+msgstr "Tre adaptebla kalendara vido por via retpaĝo."
 
 msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
+msgstr "Facile adaptu la kalendaron laŭ via gusto!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
+msgstr "**[Provu ĝin nun!](https://open-web-calendar.hosted.quelltext.eu)**"
 
 msgid "[See Examples](templates.md)"
-msgstr ""
+msgstr "[Vidi ekzemplojn](templates.md)"
 
 msgid "Features"
-msgstr ""
+msgstr "Funkcioj"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "Tuja sinkronigado de eventoj"
 
 msgid "<center>✔</center>"
-msgstr ""
+msgstr "<center>✔</center>"
 
 msgid "Embed with an HTML snippet"
-msgstr ""
+msgstr "Enmeti per HTML-kodaĵo"
 
 msgid "Desktop and Mobile"
-msgstr ""
+msgstr "Por labortabloj kaj poŝaparatoj"
 
 msgid "Multi-Language Support"
-msgstr ""
+msgstr "Subteno de pluraj lingvoj"
 
 msgid "Fixed and Automatic Timezone"
-msgstr ""
+msgstr "Fiksitaj aŭ aŭtomataj horzonoj"
 
 msgid "Easy Editing"
-msgstr ""
+msgstr "Facila modifado"
 
 msgid "Designs To Choose"
-msgstr ""
+msgstr "Elekteblaj ŝablonoj"
 
 msgid "Multiple Calendar Sources"
-msgstr ""
+msgstr "Pluraj kalendaraj fontoj"
 
 msgid "Style per Calendar, Category and more"
-msgstr ""
+msgstr "Stiloj por kalendaro, kategorio kaj plu"
 
 msgid "Custom CSS"
-msgstr ""
+msgstr "Propra CSS"
 
 msgid "Day, Week, Month, Agenda"
-msgstr ""
+msgstr "Tago, semajno, monato, tagordo"
 
 msgid "Work Week"
-msgstr ""
+msgstr "Laborsemajno"
 
 msgid "Custom Date & Time Range"
-msgstr ""
+msgstr "Propra dato-tempa intervalo"
 
 msgid "Custom Title & Icon"
-msgstr ""
+msgstr "Propraj titolo &amp; piktogramo"
 
 msgid "Click on Event Location"
-msgstr ""
+msgstr "Alklaki eventan lokon"
 
 msgid "Styled Event Descriptions"
-msgstr ""
+msgstr "Stilaj eventaj priskriboj"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr ""
+msgstr "Libera malfermitkoda programo – sen limigo de vendinto"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self.md)"
 msgstr ""
+"[Gastigite](https://open-web-calendar.hosted.quelltext.eu) aŭ [memgastigite]("
+"host/self.md)"
 
 msgid "Subscribe Link"
-msgstr ""
+msgstr "Abona hiperligo"
 
 msgid "Community and Paid Support"
-msgstr ""
+msgstr "Komunuma kaj porpaga helpo"
 
 msgid "[Developer API](dev/api.md)"
-msgstr ""
+msgstr "[API por programistoj](dev/api.md)"

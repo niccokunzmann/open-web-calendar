@@ -1,43 +1,54 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-03 17:45+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-08-14 01:10+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-privacy-policy/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #
 msgid "Open Web Calendar Privacy Policy"
-msgstr ""
+msgstr "Reguloj pri privateco de la Malfermita Reta Kalendaro"
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Reguloj pri privateco"
 
 msgid ""
 "The Open Web Calendar does not collect any personal information from "
 "visitors of the website."
 msgstr ""
+"La Malfermita Reta Kalendaro ne kolektas iujn ajn personajn informojn pri "
+"vizitantoj de la retejo."
 
 msgid ""
 "Calendars may contain personal information. For the purpose of serving the "
 "content fast, the calendar files are cached for a short while. As expected, "
 "content of calendars is only processed to display them as a website."
 msgstr ""
+"Kalendaroj povas enhavi personajn informojn. Por rapide disponigi la "
+"informojn, la kalendardosieroj estas metitaj en kaŝmemoro dum iometa tempo. "
+"Kompreneble, la enhavo de kalendaro estas nur prilaborata por montri ĝin en "
+"retpaĝo."
 
 msgid "Documentation Website"
-msgstr ""
+msgstr "Retejo de dokumentaro"
 
 msgid ""
 "This website contains the project documentation. It is hosted on GitHub "
 "Pages. Their [Privacy Policy][privacy-policy] applies."
 msgstr ""
+"Ĉi tiu retejo enhavas la projektan dokumentaron. Ĝi estas gastigita sur "
+"GitHub Pages, kies [Reguloj pri Privateco][privacy-policy] efektivas."
 
 #, fuzzy
 msgid ""
