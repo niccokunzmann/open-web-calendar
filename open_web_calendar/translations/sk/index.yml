@@ -1,1 +1,89 @@
 controls-date: Dátum
+language-browser-false: 'Kalendár je vždy v tomto jazyku:'
+language-browser-true: 'Kalendár je v jazyku diváka. Ak nie je jazyk preložený, zobrazí
+  sa:'
+first-hour-title: Prvá hodina
+style-background: Môžete zmeniť farbu pozadia kalendára.
+timezone-browser: používať časové pásmo prehliadača
+loading: Načítavanie…
+calendar-urls: 'Ak chcete zlúčiť niekoľko kalendárov, zadajte adresy kalendárov ICS
+  tu:'
+about: Open Web Calendar používa ICS/ICal kalendáre online a zobrazuje ich v jednom
+  kalendári. Môžete ho použiť pomocou štandardu ICS.
+time-increment-60: 1 hodina
+tabs-description: 'Mesiac je predvolený. Môžete si však vybrať ukázať iný pohľad na
+  začiatok. Vyberte si jeden:'
+hour-format-title: Časový dohovor
+skins-contrast-black: Všeobecný
+skins-description: Môžete si vybrať rôzne kože pre kalendár.
+skins-terrace: Aktuality
+skins-material: Materiál
+skins-flat: Rovinatý
+style-title: Vlastný štýl s CSS
+loader-none: žiadne zaťaženie
+loader-default: kruhový nosník
+timezone-title: 'Časové pásmo:'
+timezone-description: 'Časová zóna sa užíva z prehliadača používateľa. Ak chcete,
+  aby váš kalendár bol upevnený v jednom časovom pásme, máte možnosť nižšie. Váš prehliadač
+  využíva túto časové pásmo:'
+time-increment-description: 'Zmena časového prírastku v deň a vizuálovom pohľade:'
+time-increment-10: 10 minút
+calendar-code-execution: Nižšie môžete zobraziť výsledný kalendár.
+skins-contrast-white: Kontrast biela
+links-title: Linky
+configure-week-description: Týždeň môže začať v pondelok alebo v nedeľu.
+tabs-title: Kalendár Tabs
+links-self: Otvorte prepojený dokument v rovnakom ráme, ako to bolo kliknuté.
+event-status-confirmed: potvrdenie
+title-title: Název
+last-hour-title: Posledná hodina
+time-increment-15: 15 minút
+skins-title: Koža
+links-parent: Otvorte prepojený dokument v rodičovskom ráme.
+loader-title: Načítanie animácie
+spec-title: Hosting špecifikácie
+configure-week-title: Dní týždňa
+event-status-title: Stav udalostí
+style-css-classes: 'Toto sú príklady CSS tried na štýlové udalosti:'
+calendar-code: 'Ak chcete vložiť kalendár, použite tento kód na svojich webových stránkach:'
+section-customization: Môžete urobiť ďalšie prispôsobenie kalendára.
+time-increment-30: 30 minút
+title-description: 'Ak chcete zmeniť názov, zadajte názov kalendára tu:'
+links-description: Podujatia môžu mať miesta a URL. Ak ste vložili kalendár na webovú
+  stránku, môžete si vybrať, kde kliknutý odkaz otvorí stránku.
+style-date: Môžete zmeniť farbu pozadia aktuálneho dátumu.
+loader-description: V niektorých prípadoch, server trvá pomerne čas na načítať kalendár.
+  V prípade, že server používa bezplatný plán na Heroku, server musí začať najskôr.
+starting-date-title: Počiatočný dátum
+last-hour-description: 'Ak chcete zmeniť poslednú hodinu kalendára:'
+starting-date-description: 'Ak chcete zmeniť dátum začatia kalendára:'
+first-hour-description: 'Ak chcete zmeniť prvú hodinu zobrazenia kalendára:'
+time-increment-title: Časové vybavenie
+hour-format-description: Môžete si vybrať medzi 24 hodín a 12 hodín. Ďalšie možnosti
+  sú možné.
+hour-format-specification-link: Zobraziť špecifikácie.
+language-description: Môžete nastaviť jazyk kalendára.
+language-title: Jazyk
+skins-dark: Tmavý motív
+controls-description: 'Možno, že nechcete zobraziť všetky ovládacie prvky pre užívateľov
+  vidieť. Vyberte si tu, ktoré ovládacie prvky by ste chceli zobraziť:'
+spec-description: 'Kalendár môže byť generovaný nielen pomocou URL, ale aj prostredníctvom
+  špecifikácie JSON alebo YAML z súboru. Prispôsobenie vyššie vytvára túto špecifikáciu:'
+links-blank: Otvorte prepojený dokument v novom okne alebo záložke.
+style-click: Môžete zmeniť farbu prvkov, ktoré možno kliknúť.
+style-days-outside: Niektoré dni kalendára majú inú farbu, ak nie sú v mesiaci.
+event-status-description: 'Zmena vzhľadu popisu udalostí v závislosti od stavu:'
+event-status-cancelled: zrušené
+spec-link: 'Akonáhle ste umiestnili špecifiká niekde online, môžete vytvoriť odkaz,
+  ako je tento:'
+links-top: Otvorte prepojený dokument v plnom tele okna.
+style-description: Môžete zmeniť farbu kalendára a mnoho ďalších vlastností pomocou
+  CSS. Vaša prispôsobenie má prioritu nad kožou, ktorú si vyberiete. Nižšie si môžete
+  vybrať z niekoľkých úprav, ktoré sme pre vás pripravili.
+style-days: Ak chcete mať inú farbu na dni, môžete to tiež špecifikovať.
+event-status-tentative: nájom
+translate: Začať prekladať
+spec-host-html: Môžete <a href="javascript:downloadJSONSpecification()"> stiahnuť
+  túto špecifikáciu</a> a umiestniť ho niekde na webe. Týmto spôsobom ste stále v
+  kontrole prispôsobenia kalendára po zdieľaní odkazu, napr. na GitHub v <a href="https://gist.github.com/">Gist</a>.
+style-css: Môžete zadať svoje vlastné CSS vlastnosti, ak sa vám páči.
