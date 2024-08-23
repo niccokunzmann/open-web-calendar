@@ -1,43 +1,40 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # Prefill add-on <noreply-addon-prefill@weblate.org>, 2024.
+# Milan Šalka <salka.milan@googlemail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-28 10:40+0200\n"
-"PO-Revision-Date: 2024-05-28 08:41+0000\n"
-"Last-Translator: Prefill add-on <noreply-addon-prefill@weblate.org>\n"
+"PO-Revision-Date: 2024-08-24 08:09+0000\n"
+"Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/open-web-calendar/"
 "documentation-hosted-version/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.7.1-dev\n"
 
 #
-#, fuzzy
 msgid "You can use the hosted version of the Open Web Calendar yourself."
-msgstr "You can use the hosted version of the Open Web Calendar yourself."
+msgstr "Môžete použiť hostenú verziu Open Web Calendar sami."
 
-#, fuzzy
 msgid "Hosted Version"
-msgstr "Hosted Version"
+msgstr "Hostená verzia"
 
-#, fuzzy
 msgid ""
 "There is a version from which you can access calendars which are hosted in "
 "[Tor Onion Services](https://tb-manual.torproject.org/onion-services/): "
 "[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-"
 "calendar.hosted.quelltext.eu)."
 msgstr ""
-"There is a version from which you can access calendars which are hosted in ["
-"Tor Onion Services](https://tb-manual.torproject.org/onion-services/): [tor."
-"open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted."
-"quelltext.eu)."
+"Existuje verzia, z ktorej môžete získať prístup kalendárov, ktoré sú hostené "
+"v [Tor Onion Services](https://tb-manual.torproject.org/onion-services/): "
+"[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar."
+"eu)."
 
-#, fuzzy
 msgid ""
 "A hosted version exists at [open-web-"
 "calendar.hosted.quelltext.eu](https://open-web-"
@@ -46,20 +43,18 @@ msgid ""
 "improvements go there after max. 48 hours. This version is intended to stay "
 "free of charge and is funded by [donation ♥️](../../contributing)."
 msgstr ""
-"A hosted version exists at [open-web-calendar.hosted.quelltext.eu](https"
-"://open-web-calendar.hosted.quelltext.eu). You can use this version if you "
-"like. It is deployed from the latest version on the `master` branch. Thus, "
-"translation improvements go there after max. 48 hours. This version is "
-"intended to stay free of charge and is funded by [donation "
-"♥️](../../contributing)."
+"Hostená verzia existuje na [open-web-calendar.hosted.quelltext.eu](https"
+"://open-web-calendar.hosted.quelltext.eu). Môžete použiť túto verziu, ak sa "
+"vám páči. Je nasadený z najnovšej verzie na `master` vetvy. Tak, zlepšenie "
+"prekladu ísť tam po max. 48 hodín. Táto verzia je určená na pobyt zadarmo a "
+"je financovaná [donation ♥️](../../contributing)."
 
-#, fuzzy
 msgid ""
 "[How to configure all calendar parameters](../configure/#configuring-the-"
 "default-calendar)"
 msgstr ""
-"[How to configure all calendar parameters](../configure/#configuring-the-"
-"default-calendar)"
+"[Ako nakonfigurovať všetky parametre kalendára](../configure/#configuring-"
+"the-default-calendar)"
 
 #~ msgid ""
 #~ "[How to configure all parameters](../configure/#configuring-the-default-"
