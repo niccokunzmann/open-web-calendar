@@ -1,1 +1,68 @@
 controls-date: Dyddiad
+language-browser-false: "Mae'r calendr bob amser yn yr iaith hon:"
+language-browser-true: "Mae'r calendr yn iaith y gwyliwr. Os na chaiff yr iaith ei
+  chyfieithu, mae'n ymddangos yn:"
+title-title: Teitl
+title-description: "I newid y teitl, rhowch enw'r calendr yma:"
+links-self: Agorwch y ddogfen gysylltiedig yn yr un ffrâm ag y cafodd ei chlicio.
+calendar-code: 'I fewnosod y calendr, defnyddiwch y cod hwn ar eich gwefan:'
+calendar-code-execution: Gallwch weld y calendr canlyniadol isod.
+style-title: Arddull Personol gyda CSS
+links-parent: Agorwch y ddogfen gysylltiedig yn y ffrâm rhiant.
+style-background: Gallwch newid lliw cefndir y calendr.
+style-days: Os ydych chi'n hoffi cael lliw gwahanol ar gyfer y dyddiau, gallwch chi
+  nodi hyn hefyd.
+time-increment-description: 'Newid cynyddiad amser yng ngolwg dydd ac wythnos:'
+starting-date-title: Dyddiad cychwyn
+links-top: Agorwch y ddogfen gysylltiedig yng nghorff llawn y ffenestr.
+style-description: Gallwch newid lliw eich calendr a llawer mwy o briodweddau gan
+  ddefnyddio CSS. Mae gan eich addasiad flaenoriaeth dros y Croen a ddewiswch. Isod,
+  gallwch ddewis o ychydig o addasiadau a baratowyd gennym ar eich cyfer chi.
+style-click: Gallwch newid lliw yr elfennau y gellir eu clicio.
+event-status-confirmed: Cadarn
+calendar-urls: 'i uno sawl calendr, mewnbynnwch URLs y calendrau ICS yma:'
+section-customization: Gallwch chi wneud addasiadau ychwanegol o'r calendr.
+starting-date-description: 'I newid dyddiad cychwyn y calendr:'
+first-hour-title: Awr Gyntaf
+last-hour-title: Awr Olaf
+last-hour-description: 'I newid gwedd awr olaf y calendr:'
+time-increment-title: Cynyddiad Amser
+time-increment-10: 10 munud
+time-increment-15: 15 munud
+time-increment-30: 30 munud
+time-increment-60: 1 awr
+language-title: Iaith
+language-description: Gallwch chi osod iaith y calendr.
+skins-title: Crwyn
+skins-description: Gallwch ddewis gwahanol grwyn ar gyfer y calendr.
+skins-terrace: Teras
+skins-material: Deunydd
+links-title: Dolenni
+links-description: Gall fod gan ddigwyddiadau leoliadau a URLs. Os ydych chi'n mewnosod
+  y calendr i mewn i wefan, gallwch ddewis ble mae'r ddolen a gliciwyd yn agor y dudalen.
+links-blank: Agorwch y ddogfen gysylltiedig mewn ffenestr neu dab newydd.
+hour-format-specification-link: Gweld y fanyleb.
+skins-dark: Tywyll
+configure-week-title: Dyddiau'r Wythnos
+configure-week-description: Gall yr wythnos ddechrau ar ddydd Llun neu ddydd Sul.
+style-date: Gallwch newid lliw cefndir y dyddiad cyfredol.
+style-css: Gallwch chi nodi eich priodweddau CSS eich hun os dymunwch.
+event-status-title: Statws Digwyddiad
+event-status-description: 'Newidiwch olwg disgrifiad y digwyddiad yn dibynnu ar y
+  statws:'
+event-status-tentative: Petrus
+event-status-cancelled: diddymedig
+loader-title: Llwytho Animeiddiad
+style-css-classes: 'Dyma enghreifftiau o ddosbarthiadau CSS i steilio digwyddiadau:'
+about: Mae'r Calendr Gwe Agored yn defnyddio calendrau ICS/ICal ar-lein ac yn eu harddangos
+  mewn un calendr. Gallwch ei ddefnyddio gyda Nextcloud, Outlook, Google Calendar,
+  Meetup a systemau calendr eraill gan ddefnyddio'r safon ICS.
+hour-format-description: Gallwch ddewis rhwng y cloc 24 awr a'r cloc 12 awr. Mae mwy
+  o opsiynau yn bosibl.
+first-hour-description: 'I newid gwedd awr gyntaf y calendr:'
+hour-format-title: Confensiwn Cloc
+skins-contrast-black: Cyferbyniad Du
+skins-contrast-white: Cyferbyniad Gwyn
+skins-flat: Gwastad
+style-days-outside: Mae gan rai dyddiau o'r calendr liw gwahanol os nad ydyn nhw o
+  fewn y mis.
