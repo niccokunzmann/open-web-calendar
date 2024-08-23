@@ -1,43 +1,53 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Milan Šalka <salka.milan@googlemail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-03 17:45+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-08-24 08:09+0000\n"
+"Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-privacy-policy/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.7.1-dev\n"
 
 #
 msgid "Open Web Calendar Privacy Policy"
-msgstr ""
+msgstr "Zásady ochrany osobných údajov"
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Ochrana súkromia"
 
 msgid ""
 "The Open Web Calendar does not collect any personal information from "
 "visitors of the website."
 msgstr ""
+"Open Web Calendar nezhromažďuje žiadne osobné údaje od návštevníkov webovej "
+"stránky."
 
 msgid ""
 "Calendars may contain personal information. For the purpose of serving the "
 "content fast, the calendar files are cached for a short while. As expected, "
 "content of calendars is only processed to display them as a website."
 msgstr ""
+"Kalendáre môžu obsahovať osobné údaje. Na účely podávania obsahu rýchlo, "
+"kalendárové súbory sú vložené na krátku chvíľu. Ako sa očakávalo, obsah "
+"kalendárov sa spracúvajú len na ich zobrazenie ako webové stránky."
 
 msgid "Documentation Website"
-msgstr ""
+msgstr "Webová stránka"
 
 msgid ""
 "This website contains the project documentation. It is hosted on GitHub "
 "Pages. Their [Privacy Policy][privacy-policy] applies."
 msgstr ""
+"Táto webová stránka obsahuje projektovú dokumentáciu. To je hostené na "
+"GitHub stránkach. Ich [Ochrana osobných údajov][privacy-policy] platí."
 
 #, fuzzy
 msgid ""
