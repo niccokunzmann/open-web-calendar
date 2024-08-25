@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 
 comments: false
-title: Getting Started
+title: Customize Your Own Online Calendar Display
 description: "See the features or try the Open Web Calendar yourself!"
 ---
 
