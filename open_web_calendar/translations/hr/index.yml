@@ -3,13 +3,13 @@ about: Open Web Calendar koristi ICS/ICal kalendare online i prikazuje ih u jedn
   i drugim sustavima kalendara koji koriste ICS standard.
 calendar-urls: 'Za sjedinjavanje kalendara, ovdje upiši URL-ove ICS kalendara:'
 calendar-code: 'Za ugrađivanje kalendara koristi ovaj kod na tvojoj web stranici:'
-calendar-code-execution: Dolje možeš vidjeti rezultirajući kalendar.
+calendar-code-execution: Evo kako će kalendar izgledati.
 title-title: Naslov
 first-hour-title: Prvi sat
 starting-date-description: 'Za mijenjanje početnog datuma kalendara:'
 last-hour-title: Zadnji sat
 first-hour-description: 'Za mijenjanje prvog sata u prikazu kalendara:'
-time-increment-description: 'Za mijenjanje intervala u prikazu dana i tjedna:'
+time-increment-description: 'Promijeni vremenski interval u prikazu dana i tjedna:'
 time-increment-10: 10 minuta
 time-increment-30: 30 minuta
 language-title: Jezik
@@ -25,23 +25,23 @@ links-description: Događaji mogu imati lokacije i URL-ove. Ako kalendar ugradi�
 links-title: Poveznice
 style-click: Možeš promijeniti boju elemenata koji se mogu pritisnuti.
 style-css: Ako želiš, možeš odrediti vlastita CSS svojstva.
-loader-title: Animacija pri učitavanju
+loader-title: Animacija tijekom učitavanja
 style-date: Možeš promijeniti boju pozadine aktualnog datuma.
 style-days: Ako želiš koristiti drugačiju boju za dane, to također možeš odediti.
 style-days-outside: Neki dani u kalendaru imaju drugačiju boju ako se ne nalaze unutar
   mjeseca.
 loader-default: rotirajuća animacija tijekom učitavanja
 controls-description: 'Možda ne želiš prikazati sve kontrole korisnicima. Ovdje odaberi
-  kontrole želi koje želiš prikazati:'
+  kontrole koje želiš prikazati:'
 controls-date: Datum
 tabs-description: 'Standardno se koristi mjesečni prikaz. Međutim, na početku možeš
-  odabrati drugačiji prikaz. Odaberi jedan:'
+  odabrati drugačiji prikaz. Odaberi prikaz:'
 starting-date-title: Početni datum
 title-description: 'Za mijenjanje naslova ovdje upiši ime kalendara:'
 last-hour-description: 'Za mijenjanje zadnjeg sata u prikazu kalendara:'
 section-customization: Kalendar možeš dodatno prilagoditi.
 time-increment-15: 15 minuta
-time-increment-title: Intervali
+time-increment-title: Vremenski interval
 skins-title: Dizajn
 links-self: Otvori povezani dokument u istom okviru u kojem je pritisnut.
 links-parent: Otvori povezani dokument u nadređenom okviru.
@@ -59,9 +59,9 @@ timezone-browser: koristi vremensku zonu preglednika
 loading: učitavanje …
 translate: Prevedi
 skins-description: Ovdje odaberi dizajn kalendara.
-loader-description: U nekim slučajevima poslužitelj treba dosta vremena za učitavanje
-  kalendara. U slučaju da poslužitelj koristi besplatni plan na Herokuu, poslužitelj
-  se mora prvi pokrenuti.
+loader-description: U nekim slučajevima server treba dosta vremena za učitavanje kalendara.
+  U slučaju da server koristi besplatni plan na platformi Heroku, server se mora prvi
+  pokrenuti.
 timezone-description: 'Vremenska zona se preuzima iz korisničkog preglednika. Ako
   želiš fiksirati vremensku zonu za kalendar odaberi jednu opciju. Tvoj preglednik
   koristi sljedeću vremensku zonu:'
@@ -71,14 +71,13 @@ spec-description: 'Kalendar se može generirati ne samo pomoću URL-a, već i pu
   ili YAML specifikacije iz datoteke. Gornja prilagodba generira ovu specifikaciju:'
 spec-title: Hosting specifikacije
 spec-host-html: <a href="javascript:downloadJSONSpecification()">Ovu specifikaciju
-  možeš preuzeti</a> i postaviti je negdje na web. Na taj način i dalje kontroliraš
+  možeš preuzeti</a> i postaviti je negdje na webu. Na taj način i dalje kontroliraš
   prilagođavanje kalendara nakon dijeljenja poveznice, npr. na GitHub-u u jednom <a
   href="https://gist.github.com/">Gistu</a>.
 configure-week-title: Dani tjedna
 configure-week-description: Početak tjedna može biti ponedjeljak ili nedjelja.
 hour-format-title: Prikaz sata
-hour-format-description: Možeš birati između 24-satnog i 12-satnog sata. Potoji više
-  opcija.
+hour-format-description: Odaberi 24-satni i 12-satni prikaz. Postoje daljnje opcije.
 hour-format-specification-link: Pogledaj specifikaciju.
 style-css-classes: 'Ovo su primjeri CSS klasa za stiliziranje događaja:'
 event-status-tentative: nesigurno
