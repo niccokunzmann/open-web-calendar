@@ -133,6 +133,12 @@ var template = {
       }
       return "";
     },
+    "calendar_name": function (event) {
+      if (event.calendar_name) {
+          return escapeHtml(event.calendar_name);
+      }
+      return "";
+    },
     "date": function (start, end) {
         /* One day
          * Multiday
@@ -214,12 +220,21 @@ function getHeader() {
       "month": specification.tabs.includes("month"),
       "today": specification.controls.includes("today"),
       "agenda": specification.tabs.includes("agenda"),
+      "calendars": specification.controls.includes("calendars"),
     }
     function showSelected(headerElements) {
       return headerElements.filter(function(element){
-        return useHeaderElement[element] != false; // null for absent
+        return useHeaderElement[element.id || element] != false; // null for absent
       });
     }
+    var calendars = {
+        id:"calendars",
+        html: (
+            "<div class='dropdown'>" +
+            escapeHtml(scheduler.locale.labels.calendars) + 
+            "<div id='calendars-list' class='hidden dropdown-content'></div></div>"
+        ),
+        click:toggleCalendars};
     // switch the header to a compact one
     // see https://docs.dhtmlx.com/scheduler/touch_support.html
     if (window.innerWidth < Number.parseInt(specification.compact_layout_width)) {
@@ -239,6 +254,7 @@ function getHeader() {
                         "month",
                         "agenda",
                         "spacer",
+                        calendars,
                         "today"
                     ])
                 }
@@ -251,12 +267,14 @@ function getHeader() {
             "month",
             "agenda",
             "date",
+            calendars,
             "prev",
             "today",
             "next"
         ]);
     }
 }
+
 
 function resetConfig() {
     scheduler.config.header = getHeader();
@@ -296,6 +314,9 @@ function loadCalendar() {
     scheduler.config.responsive_lightbox = true;
     resetConfig();
     scheduler.attachEvent("onBeforeViewChange", resetConfig);
+    scheduler.attachEvent("onAfterViewChange", function() {
+        resetConfigWithCalendarInfo();
+    });
     scheduler.attachEvent("onSchedulerResize", resetConfig);
 
     // set the skin, scheduler v7
@@ -405,6 +426,7 @@ function loadCalendar() {
     //dp.init(scheduler);
 
     setLoader();
+    requestCalendarInfo();
 }
 
 /* Agenda view
@@ -459,5 +481,67 @@ scheduler.attachEvent("onBeforeViewChange", function(old_mode, old_date, mode, d
     }
     return true;
 });
+
+
+/* Request the inform us about the current calendars in use. 
+ *
+ * info is from /calendars.json
+ * {
+    "calendars": {
+        "0-0": {
+        "calendar-index": 0,
+        "description": "",
+        "id": "0-0",
+        "name": "gancio.antroposofiachile.net",
+        "type": "calendar",
+        "url": "http://localhost:8001/gancio.antroposofiachile.net.ics",
+        "url-index": 0
+        }
+    },
+    "errors": {}
+    }
+ */
+
+function resetConfigWithCalendarInfo() {
+    // do nothing. This will be replaced.
+}
+    
+function requestCalendarInfo() {
+    getCalendarInfo(function (info) {
+        resetConfigWithCalendarInfo = function() {
+            console.log("resetConfigWithCalendarInfo");
+            updateCalendarsLegend(info);
+        };
+        resetConfigWithCalendarInfo();
+    });
+}
+
+/* Update the calendars legend info in the header. */
+function updateCalendarsLegend(info) {
+    var calendars = document.getElementById("calendars-list");
+    if (calendars) {
+        calendars.innerHTML = "";
+        getOwnProperties(info.calendars).forEach(function(calendarId){
+            var calendarInfo = info.calendars[calendarId];
+            var cal = document.createElement("div");
+            cal.innerText = calendarInfo.name;
+            calendarInfo["event-css-classes"].forEach(
+                function(t) {
+                    cal.classList.add(t)
+                }
+            );
+            cal.classList.add("dhx_cal_event_line");
+            calendars.appendChild(cal);
+        });
+    }
+}
+
+function toggleCalendars() {
+    resetConfigWithCalendarInfo();
+    var calendars = document.getElementById("calendars-list");
+    if (calendars) {
+        calendars.classList.toggle("hidden");
+    }
+}
 
 window.addEventListener("load", loadCalendar);
