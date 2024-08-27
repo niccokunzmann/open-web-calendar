@@ -1,107 +1,112 @@
+# Milo Ivir <mail@milotype.de>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 07:31+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-08-27 18:46+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-index/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.7.1-dev\n"
 
 #
-
 msgid "Getting Started"
-msgstr ""
+msgstr "Početak"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
+msgstr "Pogledaj značajke ili isprobaj Open Web Calendar!"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
 msgid "A highly flexible calendar display for your website."
-msgstr ""
+msgstr "Vrlo fleksibilan prikaz kalendara za tvoju web stranicu."
 
 msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
+msgstr "Dizajniraj vlastiti kalendar u roku od par minuta!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
+msgstr "**[Isprobaj!](https://open-web-calendar.hosted.quelltext.eu)**"
 
 msgid "[See Examples](templates.md)"
-msgstr ""
+msgstr "[Pogledaj primjere](templates.md)"
 
 msgid "Features"
-msgstr ""
+msgstr "Značajke"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "Trenutno sinkroniziranje događaja"
 
 msgid "<center>✔</center>"
-msgstr ""
+msgstr "<center>✔</center>"
 
 msgid "Embed with an HTML snippet"
-msgstr ""
+msgstr "Ugradi s HTML isječkom"
 
 msgid "Desktop and Mobile"
-msgstr ""
+msgstr "Desktop i mobitel"
 
 msgid "Multi-Language Support"
-msgstr ""
+msgstr "Višejezična podrška"
 
 msgid "Fixed and Automatic Timezone"
-msgstr ""
+msgstr "Fiksna i automatska vremenska zona"
 
 msgid "Easy Editing"
-msgstr ""
+msgstr "Jednostavno uređivanje"
 
 msgid "Designs To Choose"
-msgstr ""
+msgstr "Izbor izgleda"
 
 msgid "Multiple Calendar Sources"
-msgstr ""
+msgstr "Višebrojni izvori kalendara"
 
 msgid "Style per Calendar, Category and more"
-msgstr ""
+msgstr "Stilovi za kalendare, kategorije i još više"
 
 msgid "Custom CSS"
-msgstr ""
+msgstr "Prilagođeni CSS"
 
 msgid "Day, Week, Month, Agenda"
-msgstr ""
+msgstr "Dan, tjedan, mjesec, dnevni red"
 
 msgid "Work Week"
-msgstr ""
+msgstr "Radni tjedan"
 
 msgid "Custom Date & Time Range"
-msgstr ""
+msgstr "Prilagođeni raspon datuma i vremena"
 
 msgid "Custom Title & Icon"
-msgstr ""
+msgstr "Prilagođeni naslov i ikona"
 
 msgid "Click on Event Location"
-msgstr ""
+msgstr "Prikaz mjesta događaja"
 
 msgid "Styled Event Descriptions"
-msgstr ""
+msgstr "Stilizirani opisi događaja"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr ""
+msgstr "FOSS – Bez ovisnosti o dobavljaču"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self.md)"
 msgstr ""
+"[Hosting](https://open-web-calendar.hosted.quelltext.eu) i [vlastiti "
+"hosting](host/self.md)"
 
 msgid "Subscribe Link"
-msgstr ""
+msgstr "Poveznica za pretplatu"
 
 msgid "Community and Paid Support"
-msgstr ""
+msgstr "Zajednica i naplativa podrška"
 
 msgid "[Developer API](dev/api.md)"
-msgstr ""
+msgstr "[API za programere](dev/api.md)"
