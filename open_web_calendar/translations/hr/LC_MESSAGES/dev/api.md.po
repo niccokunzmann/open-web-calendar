@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-30 17:45+0200\n"
-"PO-Revision-Date: 2024-08-26 02:13+0000\n"
+"PO-Revision-Date: 2024-08-27 18:46+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/"
 "open-web-calendar/documentation-api/hr/>\n"
@@ -62,19 +62,19 @@ msgid "The basic parameters are the same at these endpoints:"
 msgstr ""
 
 msgid "`/index.html` - edit the calendar"
-msgstr ""
+msgstr "`/index.html` – uredi kalendar"
 
 msgid "`/about.html` - view the about page"
-msgstr ""
+msgstr "`/about.html` – pogledaj stranicu s informacijama o aplikaciji"
 
 msgid "`/calendar.html` - view the calendar"
-msgstr ""
+msgstr "`/calendar.html` – pogledaj kalendar"
 
 msgid "`/calendar.spec` - download the specification"
-msgstr ""
+msgstr "`/calendar.spec` – preuzmi specifikaciju"
 
 msgid "`/calendar.ics` - subscribe to the ics file"
-msgstr ""
+msgstr "`/calendar.ics` – pretplati se na ics datoteku"
 
 msgid ""
 "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
@@ -110,7 +110,7 @@ msgid ""
 msgstr ""
 
 msgid "Adding Parameters"
-msgstr ""
+msgstr "Dodavanje parametara"
 
 msgid "If you add a new parameter as a developer,"
 msgstr ""
@@ -146,7 +146,7 @@ msgstr ""
 "uređuje."
 
 msgid "Compiling the Specification"
-msgstr ""
+msgstr "Kompiliranje specifikacije"
 
 msgid ""
 "You can change the calendar behavior and looks with parameters. These are "
@@ -172,7 +172,7 @@ msgid ""
 msgstr ""
 
 msgid "Specification in the Calendar"
-msgstr ""
+msgstr "Specifikacija u kalendaru"
 
 msgid ""
 "[app.py](https://github.com/niccokunzmann/open-web-"
@@ -185,7 +185,7 @@ msgid ""
 msgstr ""
 
 msgid "Specification in the Index Page"
-msgstr ""
+msgstr "Specifikacija u stranici indeksa"
 
 msgid ""
 "The default specification is available before the calendar is built via "
@@ -197,10 +197,10 @@ msgid ""
 msgstr ""
 
 msgid "Architecture"
-msgstr ""
+msgstr "Arhitektura"
 
 msgid "Below, you can find a picture of the architecture."
-msgstr ""
+msgstr "Pogledaj sliku arhitekture."
 
 msgid ""
 "The base of a calendar is the specification, given in the various forms. "
@@ -213,20 +213,22 @@ msgid ""
 msgstr ""
 
 msgid "From the calendar files, the events are generated."
-msgstr ""
+msgstr "Događaji se generiraju iz datoteka kalendara."
 
 msgid "Then, different views are chosen to display the events."
-msgstr ""
+msgstr "Zatim se biraju različiti prikazi za prikaz događaja."
 
 msgid ""
 "In the end, these lead to HTML and style changes of the calendar website."
-msgstr ""
+msgstr "Na kraju, to dovodi do promjena HTML-a i stila web stranice kalendara."
 
 msgid ""
 "In the real application, these steps are bit bit mixed up and unordered or "
 "omitted but this explains simply the basic, initial idea behind the event "
 "processing."
 msgstr ""
+"U stvarnoj primjeni, ti su koraci pomalo pomiješani i neuređeni ili "
+"izostavljeni, ali ovo objašnjava osnovnu, početnu ideju o obradi događaja."
 
 #, fuzzy
 msgid ""
@@ -252,22 +254,22 @@ msgid ""
 msgstr ""
 
 msgid "![architecture](/assets/img/architecture.svg)"
-msgstr ""
+msgstr "![arhitektura](/assets/img/architecture.svg)"
 
 msgid "Query Parameter"
 msgstr ""
 
 msgid "YAML"
-msgstr ""
+msgstr "YAML"
 
 msgid "JSON"
-msgstr ""
+msgstr "JSON"
 
 msgid "Change the title in a YAML specification:"
-msgstr ""
+msgstr "Promijeni naslov u YAML specifikaciji:"
 
 msgid "Change the title in a JSON specification:"
-msgstr ""
+msgstr "Promijeni naslov u JSON specifikaciji:"
 
 msgid "Change the title in a query parameter:"
 msgstr ""
