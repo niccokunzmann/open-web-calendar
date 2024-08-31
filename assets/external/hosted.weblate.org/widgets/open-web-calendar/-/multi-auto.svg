@@ -78,13 +78,13 @@
    y="44" />
 </a>
 
-<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/zh_Hans/" xlink:title="Chinese (Simplified)">
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/zh_Hans/" xlink:title="Chinese (Simplified Han script)">
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
    y="65"
-   id="text65">Chinese (Simplified)</text>
+   id="text65">Chinese (Simplified Han script)</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
@@ -113,11 +113,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="80"
-   id="percent80">81%</text>
+   id="percent80">83%</text>
 <rect
    style="fill:#38f;fill-opacity:1;stroke:none"
    id="rect80"
-   width="121"
+   width="125"
    height="6"
    x="200"
    rx="2"
