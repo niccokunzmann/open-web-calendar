@@ -216,18 +216,9 @@ msgid ""
 "v1.30    ```"
 msgstr ""
 
-msgid "Language filter:       wzxhzdk:2"
-msgstr ""
-
 msgid ""
 "excludes `en`    - Source language: `English`    - Manage strings: **not** "
 "checked"
-msgstr ""
-
-msgid "Add **Translation flags**:       wzxhzdk:3"
-msgstr ""
-
-msgid "Restrict width and height to 2000px:       wzxhzdk:4"
 msgstr ""
 
 msgid ""
@@ -236,8 +227,52 @@ msgid ""
 "git commit -m\"log changes\" git push    ```"
 msgstr ""
 
+msgid "Update DHTMLX Scheduler"
+msgstr ""
+
+msgid ""
+"DHTMLX Scheduler can be updated from its [GitHub "
+"repository](https://github.com/DHTMLX/scheduler). There is a script which "
+"updates the scheduler. Still their changelog needs to be considered."
+msgstr ""
+
+msgid "If you update the scheduler, also add this to the changelog."
+msgstr ""
+
+msgid "Package"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar is a package on PyPI. You can build the package "
+"locally."
+msgstr ""
+
+msgid ""
+"New versions are automatically uploaded. This process follows [the official "
+"tutorial](https://packaging.python.org/en/latest/tutorials/packaging-"
+"projects/)."
+msgstr ""
+
+#~ msgid "Language filter:       wzxhzdk:2"
+#~ msgstr ""
+
+#~ msgid "Add **Translation flags**:       wzxhzdk:3"
+#~ msgstr ""
+
+#~ msgid "Restrict width and height to 2000px:       wzxhzdk:4"
+#~ msgstr ""
+
 #~ msgid ""
 #~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
 #~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\""
 #~ "    ```"
+#~ msgstr ""
+
+#~ msgid "Language filter:       wzxhzdk:4"
+#~ msgstr ""
+
+#~ msgid "Add **Translation flags**:       wzxhzdk:5"
+#~ msgstr ""
+
+#~ msgid "Restrict width and height to 2000px:       wzxhzdk:6"
 #~ msgstr ""

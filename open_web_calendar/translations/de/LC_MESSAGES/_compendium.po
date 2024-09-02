@@ -92,6 +92,9 @@ msgstr ""
 "Nachdem Du einen Server aufgesetzt hast, [kannst Du sein Verhalten "
 "anpassen](../configure)."
 
+msgid "Python Package"
+msgstr ""
+
 #~ msgid ""
 #~ "The configuration of all calendars is rooted in the "
 #~ "[default_specification.yml]. All those values can be changed through a copy "

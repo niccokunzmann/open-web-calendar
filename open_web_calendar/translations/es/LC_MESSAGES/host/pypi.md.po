@@ -1,0 +1,34 @@
+#
+msgid ""
+msgstr ""
+
+msgid "The Open Web Calendar can be installed as a Python package from PyPI."
+msgstr ""
+
+msgid ""
+"![](https://img.shields.io/pypi/v/open-web-calendar.svg) "
+"![](https://img.shields.io/pypi/pyversions/open-web-calendar.svg)"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar is available as a Python package on "
+"[PyPI](https://pypi.org/project/open-web-calendar/). If you have [Python "
+"3](https://www.python.org/) installed, run this to install the package:"
+msgstr ""
+
+msgid ""
+"After installation, run the Open Web Calendar using "
+"[Gunicorn](https://pypi.org/project/gunicorn/):"
+msgstr ""
+
+msgid "You should now see the server running at <http://127.0.0.1:8000>."
+msgstr ""
+
+msgid "For more configuration options, see here:"
+msgstr ""
+
+msgid "[Gunicorn](https://pypi.org/project/gunicorn/)"
+msgstr ""
+
+msgid "[Configuration](../configure)"
+msgstr ""

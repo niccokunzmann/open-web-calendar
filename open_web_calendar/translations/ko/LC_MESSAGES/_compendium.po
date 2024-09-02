@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.3\n"
 
-#
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
@@ -43,6 +42,9 @@ msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
 msgid ""
 "After you have set up your own server, you can [configure the "
 "behavior](../configure)."
+msgstr ""
+
+msgid "Python Package"
 msgstr ""
 
 #~ msgid ""

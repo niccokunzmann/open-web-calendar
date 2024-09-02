@@ -29,6 +29,11 @@ msgid ""
 "default-calendar)"
 msgstr ""
 
+msgid ""
+"If you decide later to [setup your own server](../self), you can do this and"
+" [migrate all calendars](../migrate) you use to the other server."
+msgstr ""
+
 #~ msgid ""
 #~ "[How to configure all parameters](../configure/#configuring-the-default-"
 #~ "calendar)"

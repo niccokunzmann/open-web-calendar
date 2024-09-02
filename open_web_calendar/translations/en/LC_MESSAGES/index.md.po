@@ -15,8 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-msgid "Getting Started"
-msgstr "Getting Started"
+msgid "Customize Your Own Online Calendar Display"
+msgstr ""
 
 msgid "See the features or try the Open Web Calendar yourself!"
 msgstr "See the features or try the Open Web Calendar yourself!"
@@ -106,6 +106,9 @@ msgstr ""
 
 msgid "[Developer API](dev/api)"
 msgstr ""
+
+#~ msgid "Getting Started"
+#~ msgstr "Getting Started"
 
 #~ msgid ""
 #~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"

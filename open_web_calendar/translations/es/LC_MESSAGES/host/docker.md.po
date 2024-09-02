@@ -134,15 +134,6 @@ msgstr ""
 msgid "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 msgstr "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 
-msgid "Start the container:    wzxhzdk:4"
-msgstr ""
-
-msgid "docker compose pull "
-msgstr ""
-
-msgid "docker compose up -d "
-msgstr ""
-
 msgid ""
 "The container `niccokunzmann/open-web-calendar:latest` contains the latest "
 "release. Containers are also tagged with the version from the "
@@ -157,6 +148,18 @@ msgstr ""
 msgid ""
 "If needed change the port mapping and [environment variables](../configure)."
 msgstr ""
+
+msgid "This way, you can stop the service:"
+msgstr ""
+
+#~ msgid "Start the container:    wzxhzdk:4"
+#~ msgstr ""
+
+#~ msgid "docker compose pull "
+#~ msgstr ""
+
+#~ msgid "docker compose up -d "
+#~ msgstr ""
 
 #~ msgid ""
 #~ "If needed change the port mapping and [environment "
@@ -244,3 +247,6 @@ msgstr ""
 
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
+
+#~ msgid "Start the container:    wzxhzdk:5"
+#~ msgstr ""

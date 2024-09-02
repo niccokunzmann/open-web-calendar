@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.0\n"
 
-msgid "Getting Started"
+msgid "Customize Your Own Online Calendar Display"
 msgstr ""
 
 msgid "See the features or try the Open Web Calendar yourself!"
@@ -104,6 +104,9 @@ msgstr ""
 
 msgid "[Developer API](dev/api)"
 msgstr ""
+
+#~ msgid "Getting Started"
+#~ msgstr ""
 
 #~ msgid "[See Examples](templates.md)"
 #~ msgstr ""

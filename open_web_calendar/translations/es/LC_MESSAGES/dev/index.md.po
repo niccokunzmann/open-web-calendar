@@ -106,11 +106,15 @@ msgstr "[ruff]: https://docs.astral.sh/ruff/"
 msgid "[pre-commit]: https://pre-commit.com/"
 msgstr "[pre-commit]: https://pre-commit.com/"
 
-msgid "Install the packages.    wzxhzdk:2"
+msgid ""
+"To format the code before commit without the pre-commit hook, run this:"
 msgstr ""
 
-msgid "Start the app.    wzxhzdk:3"
-msgstr ""
+#~ msgid "Install the packages.    wzxhzdk:2"
+#~ msgstr ""
+
+#~ msgid "Start the app.    wzxhzdk:3"
+#~ msgstr ""
 
 #~ msgid "Install the packages.    wzxhzdk:1"
 #~ msgstr ""
@@ -179,3 +183,9 @@ msgstr ""
 
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
+
+#~ msgid "Install the packages.    wzxhzdk:3"
+#~ msgstr ""
+
+#~ msgid "Start the app.    wzxhzdk:4"
+#~ msgstr ""

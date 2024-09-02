@@ -7,8 +7,7 @@ msgstr ""
 "POT-Creation-Date: 2024-05-25 07:30+0200\n"
 "PO-Revision-Date: 2024-08-14 20:52+0000\n"
 "Last-Translator: phlostically <phlostically@mailinator.com>\n"
-"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
-"open-web-calendar/documentation-index/eo/>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,9 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.7-dev\n"
 
-#
-msgid "Getting Started"
-msgstr "Unuaj paŝoj"
+msgid "Customize Your Own Online Calendar Display"
+msgstr ""
 
 msgid "See the features or try the Open Web Calendar yourself!"
 msgstr "Vidu la funkciojn, aŭ provu mem la Malfermitan Retan Kalendaron!"
@@ -34,9 +32,6 @@ msgstr "Facile adaptu la kalendaron laŭ via gusto!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
 msgstr "**[Provu ĝin nun!](https://open-web-calendar.hosted.quelltext.eu)**"
-
-msgid "[See Examples](templates.md)"
-msgstr "[Vidi ekzemplojn](templates.md)"
 
 msgid "Features"
 msgstr "Funkcioj"
@@ -95,18 +90,35 @@ msgstr "Stilaj eventaj priskriboj"
 msgid "FOSS - No Vendor Lock-In"
 msgstr "Libera malfermitkoda programo – sen limigo de vendinto"
 
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self.md)"
-msgstr ""
-"[Gastigite](https://open-web-calendar.hosted.quelltext.eu) aŭ [memgastigite]("
-"host/self.md)"
-
 msgid "Subscribe Link"
 msgstr "Abona hiperligo"
 
 msgid "Community and Paid Support"
 msgstr "Komunuma kaj porpaga helpo"
 
-msgid "[Developer API](dev/api.md)"
-msgstr "[API por programistoj](dev/api.md)"
+msgid "[See Examples](templates)"
+msgstr ""
+
+msgid ""
+"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+"Hosted](host/self)"
+msgstr ""
+
+msgid "[Developer API](dev/api)"
+msgstr ""
+
+#~ msgid "Getting Started"
+#~ msgstr "Unuaj paŝoj"
+
+#~ msgid "[See Examples](templates.md)"
+#~ msgstr "[Vidi ekzemplojn](templates.md)"
+
+#~ msgid ""
+#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+#~ "Hosted](host/self.md)"
+#~ msgstr ""
+#~ "[Gastigite](https://open-web-calendar.hosted.quelltext.eu) aŭ "
+#~ "[memgastigite](host/self.md)"
+
+#~ msgid "[Developer API](dev/api.md)"
+#~ msgstr "[API por programistoj](dev/api.md)"

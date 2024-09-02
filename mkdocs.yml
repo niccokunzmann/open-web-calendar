@@ -123,6 +123,10 @@ plugins:
         - it
         - th
         - eo
+        - hr
+        - ko
+        - ko_LAVA
+        - sk
 # add mdpo.languages above
       translate:
         - site_name
@@ -205,6 +209,12 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Esperanto
       link: eo
       lang: eo
+    - name: Hrvatski
+      link: hr
+      lang: hr
+    - name: Slovenčina
+      link: sk
+      lang: sk
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/

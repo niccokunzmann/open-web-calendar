@@ -106,11 +106,15 @@ msgstr "[ruff]: https://docs.astral.sh/ruff/"
 msgid "[pre-commit]: https://pre-commit.com/"
 msgstr "[pre-commit]: https://pre-commit.com/"
 
-msgid "Install the packages.    wzxhzdk:2"
+msgid ""
+"To format the code before commit without the pre-commit hook, run this:"
 msgstr ""
 
-msgid "Start the app.    wzxhzdk:3"
-msgstr ""
+#~ msgid "Install the packages.    wzxhzdk:2"
+#~ msgstr ""
+
+#~ msgid "Start the app.    wzxhzdk:3"
+#~ msgstr ""
 
 #~ msgid "Install the packages.    wzxhzdk:1"
 #~ msgstr ""
@@ -134,4 +138,10 @@ msgstr ""
 #~ msgid ""
 #~ "You can [configure the app through environment](../host/self.md#environment-"
 #~ "variables) variables."
+#~ msgstr ""
+
+#~ msgid "Install the packages.    wzxhzdk:3"
+#~ msgstr ""
+
+#~ msgid "Start the app.    wzxhzdk:4"
 #~ msgstr ""

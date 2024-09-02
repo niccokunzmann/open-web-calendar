@@ -1,0 +1,44 @@
+#
+msgid ""
+msgstr ""
+
+msgid "How to report security concerns about the Open Web Calendar project."
+msgstr ""
+
+msgid "Security Policy"
+msgstr ""
+
+msgid "Supported Versions"
+msgstr ""
+
+msgid ""
+"Only the `master` branch receives security updates. When an security update "
+"is made, it is released with the [latest version](../changelog)."
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Supported"
+msgstr ""
+
+msgid "master"
+msgstr ""
+
+msgid "✅"
+msgstr ""
+
+msgid "anything else"
+msgstr ""
+
+msgid "❌"
+msgstr ""
+
+msgid "Reporting a Vulnerability"
+msgstr ""
+
+msgid ""
+"If you find a security vulnerability, please report it to the developer "
+"[@niccokunzmann](https://github.com/niccokunzmann/) or open an issue if you "
+"think it is a minor thread."
+msgstr ""

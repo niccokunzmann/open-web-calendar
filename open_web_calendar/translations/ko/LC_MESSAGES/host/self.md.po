@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.3\n"
 
-#
 msgid ""
 "There are various ways to host the Open Web Calendar yourself and customize "
 "the deployment."
@@ -149,6 +148,11 @@ msgid "**Choose a hoster.** These are listed below."
 msgstr ""
 
 msgid "[**Read about Configuration**](../configure)."
+msgstr ""
+
+msgid ""
+"You can choose to run the Open Web Calendar installed as a Python package "
+"from PyPI. To do this, have a look at [the documentation](../pypi)."
 msgstr ""
 
 #~ msgid ""

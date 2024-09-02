@@ -565,6 +565,45 @@ msgstr ""
 msgid "Use Ruff as code styler"
 msgstr ""
 
+msgid "v1.40"
+msgstr ""
+
+msgid "Support webcal:// links"
+msgstr ""
+
+msgid "Provide docker releases with proper tag release information"
+msgstr ""
+
+msgid "Add choice: Choose the language of the viewer"
+msgstr ""
+
+msgid "Update DHTMLX Scheduler to v7.0.5"
+msgstr ""
+
+msgid "v1.39"
+msgstr ""
+
+msgid "Add version to footer"
+msgstr ""
+
+msgid ""
+"Allow specifying the version of the software through the `version` parameter"
+msgstr ""
+
+msgid "Fix: show broken calendars again"
+msgstr ""
+
+msgid "Fix: Remove CSS attack from broken calendar sources"
+msgstr ""
+
+msgid "v1.38"
+msgstr ""
+
+msgid ""
+"Create [PyPI package](https://pypi.org/project/open-web-calendar/) and "
+"deployment"
+msgstr ""
+
 #~ msgid ""
 #~ "This calendar is not styled but contains events that can be hosted behind a "
 #~ "firewall on a little anonymous server. [Example](https://tor.open-web-"

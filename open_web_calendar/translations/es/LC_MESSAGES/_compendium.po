@@ -47,6 +47,9 @@ msgstr ""
 "Después de haber configurado tu propio servidor, puedes [configurar el "
 "comportamiento](../configure)."
 
+msgid "Python Package"
+msgstr ""
+
 #~ msgid ""
 #~ "The configuration of all calendars is rooted in the "
 #~ "[default_specification.yml]. All those values can be changed through a copy "
