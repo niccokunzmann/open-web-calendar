@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --global user.name 'OWC Github Actions'
           git config --global user.email 'owc-github-actions@users.noreply.github.com'
-          git add translations mkdocs.yml
+          git add open_web_calendar/translations mkdocs.yml
           if git commit -m "Update translation files"; then
             if ! git push; then
               echo "ERROR: Push failed."
