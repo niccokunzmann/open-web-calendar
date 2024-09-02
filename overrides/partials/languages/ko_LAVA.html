@@ -1,0 +1,6 @@
+{#-
+  This is an alias file: ko_LAVA -> ko
+  See https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#custom-translations
+-#}
+{% import "partials/languages/ko.html" as ko %}
+{% macro t(key) %}{{ ko.t(key) }}{% endmacro %}
