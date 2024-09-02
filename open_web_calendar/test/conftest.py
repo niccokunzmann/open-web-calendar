@@ -37,12 +37,12 @@ def _no_requests(monkeypatch):
     monkeypatch.setattr(requests.sessions.Session, "request", test_cannot_call_outside)
 
 
-@pytest.fixture()
+@pytest.fixture
 def mock():
     return Mock()
 
 
-@pytest.fixture()
+@pytest.fixture
 def app():
     """Create the app.
 
@@ -63,12 +63,12 @@ def app():
     # clean up / reset resources here
 
 
-@pytest.fixture()
+@pytest.fixture
 def client(app):
     return app.test_client()
 
 
-@pytest.fixture()
+@pytest.fixture
 def runner(app):
     return app.test_cli_runner()
 
@@ -79,7 +79,7 @@ for file in CALENDAR_DIRECTORY.iterdir():
         calendar_files[file] = f.read()
 
 
-@pytest.fixture()
+@pytest.fixture
 def calendar_urls():
     """Mapping the calendar name without .ics to the cached url.
 
@@ -95,7 +95,7 @@ def calendar_urls():
     return mapping
 
 
-@pytest.fixture()
+@pytest.fixture
 def calendar_content():
     """Mapping the calendar name without .ics to the calendar content.
 
