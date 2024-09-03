@@ -152,6 +152,9 @@ msgstr ""
 msgid "This way, you can stop the service:"
 msgstr ""
 
+msgid "Start the container:    wzxhzdk:5"
+msgstr ""
+
 #~ msgid "Start the container:    wzxhzdk:4"
 #~ msgstr ""
 
@@ -229,6 +232,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#~ msgid "Start the container:    wzxhzdk:5"
-#~ msgstr ""

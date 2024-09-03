@@ -152,6 +152,9 @@ msgstr ""
 msgid "This way, you can stop the service:"
 msgstr ""
 
+msgid "Start the container:    wzxhzdk:5"
+msgstr ""
+
 #~ msgid "Start the container:    wzxhzdk:4"
 #~ msgstr ""
 
@@ -247,6 +250,3 @@ msgstr ""
 
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
-
-#~ msgid "Start the container:    wzxhzdk:5"
-#~ msgstr ""

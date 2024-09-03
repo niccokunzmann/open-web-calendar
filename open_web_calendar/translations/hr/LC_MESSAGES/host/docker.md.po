@@ -152,5 +152,5 @@ msgstr ""
 msgid "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 msgstr "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 
-#~ msgid "Start the container:    wzxhzdk:5"
-#~ msgstr ""
+msgid "Start the container:    wzxhzdk:5"
+msgstr ""

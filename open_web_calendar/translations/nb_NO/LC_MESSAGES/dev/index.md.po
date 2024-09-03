@@ -110,6 +110,12 @@ msgid ""
 "To format the code before commit without the pre-commit hook, run this:"
 msgstr ""
 
+msgid "Install the packages.    wzxhzdk:3"
+msgstr ""
+
+msgid "Start the app.    wzxhzdk:4"
+msgstr ""
+
 #~ msgid "Install the packages.    wzxhzdk:2"
 #~ msgstr ""
 
@@ -165,9 +171,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#~ msgid "Install the packages.    wzxhzdk:3"
-#~ msgstr ""
-
-#~ msgid "Start the app.    wzxhzdk:4"
-#~ msgstr ""

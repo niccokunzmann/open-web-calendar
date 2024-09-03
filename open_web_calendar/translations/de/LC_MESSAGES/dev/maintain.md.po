@@ -253,6 +253,15 @@ msgid ""
 "projects/)."
 msgstr ""
 
+msgid "Language filter:       wzxhzdk:4"
+msgstr ""
+
+msgid "Add **Translation flags**:       wzxhzdk:5"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:       wzxhzdk:6"
+msgstr ""
+
 #~ msgid "Language filter:       wzxhzdk:2"
 #~ msgstr ""
 
@@ -361,13 +370,4 @@ msgstr ""
 #~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
 #~ "changes.    ```sh    git add docs/changelog.md git commit -m\"log changes\" "
 #~ "git push    ```"
-#~ msgstr ""
-
-#~ msgid "Language filter:       wzxhzdk:4"
-#~ msgstr ""
-
-#~ msgid "Add **Translation flags**:       wzxhzdk:5"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px:       wzxhzdk:6"
 #~ msgstr ""

@@ -152,6 +152,9 @@ msgstr ""
 msgid "This way, you can stop the service:"
 msgstr ""
 
+msgid "Start the container:    wzxhzdk:5"
+msgstr ""
+
 #~ msgid "Start the container:    wzxhzdk:4"
 #~ msgstr ""
 
@@ -202,7 +205,4 @@ msgstr ""
 #~ "The container `niccokunzmann/open-web-calendar:latest` contains the latest "
 #~ "release. Containers are also tagged with the version from the "
 #~ "[changelog](../changelog.md), e.g. `niccokunzmann/open-web-calendar:v1.10`."
-#~ msgstr ""
-
-#~ msgid "Start the container:    wzxhzdk:5"
 #~ msgstr ""

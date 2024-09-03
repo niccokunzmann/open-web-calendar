@@ -152,6 +152,9 @@ msgstr "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 msgid "This way, you can stop the service:"
 msgstr ""
 
+msgid "Start the container:    wzxhzdk:5"
+msgstr ""
+
 #~ msgid "Start the container:    wzxhzdk:4"
 #~ msgstr ""
 
@@ -159,7 +162,4 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "docker compose up -d "
-#~ msgstr ""
-
-#~ msgid "Start the container:    wzxhzdk:5"
 #~ msgstr ""
