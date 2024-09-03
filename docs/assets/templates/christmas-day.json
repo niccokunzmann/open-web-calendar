@@ -5,6 +5,7 @@
   "css": ".dhx_cal_navline { display: none !important; height: 0 !important; }\n.dhx_cal_header { top: 0px !important; }\n.dhx_cal_data { top: 35px !important; }",
   "date": "2024-12-24",
   "hour_format": "%g:%i %a",
+  "prefer_browser_language": true,
   "skin": "dhtmlxscheduler_flat.css",
   "starting_hour": "9",
   "tab": "day",

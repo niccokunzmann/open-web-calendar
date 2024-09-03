@@ -3,6 +3,7 @@
     "today",
     "date"
   ],
+  "prefer_browser_language": true,
   "skin": "dhtmlxscheduler_contrast_white.css",
   "tab": "day",
   "tabs": [
