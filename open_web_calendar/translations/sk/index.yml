@@ -16,13 +16,13 @@ tabs-description: 'Mesiac je predvolený. Môžete si však vybrať ukázať in�
 hour-format-title: Časový dohovor
 skins-contrast-black: Všeobecný
 skins-description: Môžete si vybrať rôzne kože pre kalendár.
-skins-terrace: Aktuality
+skins-terrace: ''
 skins-material: Materiál
 skins-flat: Rovinatý
 style-title: Vlastný štýl s CSS
 loader-none: žiadne zaťaženie
 loader-default: kruhový nosník
-timezone-title: 'Časové pásmo:'
+timezone-title: 'Časové pásmo'
 timezone-description: 'Časová zóna sa užíva z prehliadača používateľa. Ak chcete,
   aby váš kalendár bol upevnený v jednom časovom pásme, máte možnosť nižšie. Váš prehliadač
   využíva túto časové pásmo:'
