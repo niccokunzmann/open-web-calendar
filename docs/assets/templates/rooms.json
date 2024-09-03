@@ -3,6 +3,7 @@
   "date": "2024-07-05",
   "ending_hour": "18",
   "hour_format": "%g:%i %a",
+  "prefer_browser_language": true,
   "skin": "dhtmlxscheduler_flat.css",
   "start_of_week": "su",
   "starting_hour": "8",

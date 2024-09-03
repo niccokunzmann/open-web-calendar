@@ -2,6 +2,7 @@
   "css": ".event.CATEGORY-work .dhx_body, .event.CATEGORY-work .dhx_title { background: #E3B024 !important; }\n.CATEGORY-personal  .dhx_title, .CATEGORY-personal .dhx_body { background: #73E324 !important; }\n.dhx_cal_navline, .dhx_scale_bar, .dhx_cal_container, .dhx_cal_header, .dhx_cal_scale_placeholder, .dhx_scale_holder, .dhx_scale_hour {background-color: #f9f06b;}.dhx_scale_holder_now, .dhx_now .dhx_month_head, .dhx_now .dhx_month_body { background-color: #f8e45c;}",
   "date": "2024-04-08",
   "ending_hour": "22",
+  "prefer_browser_language": true,
   "specification_url": "https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json",
   "start_of_week": "work",
   "starting_hour": "8",
