@@ -158,6 +158,12 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - icon: fontawesome/brands/github
       link: https://github.com/niccokunzmann/open-web-calendar/
       name: GitHub
+    - icon: fontawesome/solid/language
+      link: https://hosted.weblate.org/engage/open-web-calendar/
+      name: Weblate
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/open-web-calendar/
+      name: PyPI
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/niccokunzmann/open-web-calendar
       name: Docker
