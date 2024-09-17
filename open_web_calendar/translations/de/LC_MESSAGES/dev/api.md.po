@@ -227,10 +227,10 @@ msgstr ""
 #, fuzzy
 msgid ""
 "[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//default_specification.yml"
+"calendar/tree/master/open_web_calendar/default_specification.yml"
 msgstr ""
 "[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//default_specification.yml"
+"calendar/tree/master/open_web_calendar/default_specification.yml"
 
 msgid ""
 "**specification_url** If you specify this query parameter, the editor "

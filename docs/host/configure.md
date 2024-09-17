@@ -68,7 +68,7 @@ There are loads more values that can be changed.
 Please refer to the [default_specification.yml].
 These values are all documented.
 
-[default_specification.yml]: https://github.com/niccokunzmann/open-web-calendar/blob/master/default_specification.yml
+[default_specification.yml]: https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml
 [privacy-policy]: ../privacy-policy
 
 See also:
