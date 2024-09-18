@@ -226,14 +226,6 @@ msgstr ""
 "U stvarnoj primjeni, ti su koraci pomalo pomiješani i neuređeni ili "
 "izostavljeni, ali ovo objašnjava osnovnu, početnu ideju o obradi događaja."
 
-#, fuzzy
-msgid ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-
 msgid ""
 "**Query parameters** All parameters to the calendar url are put into the "
 "specification. The query parameters have the highest precedence. Examples:"
@@ -272,6 +264,22 @@ msgstr ""
 
 msgid "Additional parameters are required for `/calendar.events.json`:"
 msgstr ""
+
+#, fuzzy
+msgid ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//default_specification.yml"
+msgstr ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
 
 #~ msgid "Additional parameters are required:"
 #~ msgstr "Dodatni potrebni parametri:"

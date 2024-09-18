@@ -224,14 +224,6 @@ msgid ""
 "processing."
 msgstr ""
 
-#, fuzzy
-msgid ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-
 msgid ""
 "**specification_url** If you specify this query parameter, the editor "
 "configuration is loaded from this url, too. Query parameters are still more "
@@ -270,6 +262,22 @@ msgid ""
 "specification. The query parameters have the highest precedence. Examples:"
 "    ```txt    index.html?language=de calendar.html?title=CALENDAR    ```"
 msgstr ""
+
+#, fuzzy
+msgid ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//default_specification.yml"
+msgstr ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
 
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"

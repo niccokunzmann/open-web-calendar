@@ -247,6 +247,14 @@ msgstr ""
 msgid "[privacy-policy]: ../privacy-policy"
 msgstr "[privacy-policy]: ../privacy-policy"
 
+#, fuzzy
+msgid ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/open_web_calendar/default_specification.yml"
+msgstr ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/open_web_calendar/default_specification.yml"
+
 #~ msgid "You might want to change these values:"
 #~ msgstr ""
 

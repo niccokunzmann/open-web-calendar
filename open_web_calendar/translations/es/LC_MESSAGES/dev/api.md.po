@@ -270,14 +270,6 @@ msgstr ""
 "omitidos, pero esto explica simplemente la idea básica e inicial detrás del "
 "procesamiento de eventos."
 
-#, fuzzy
-msgid ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-
 msgid "![architecture](/assets/img/architecture.svg)"
 msgstr "![architecture](/assets/img/architecture.svg)"
 
@@ -327,6 +319,22 @@ msgstr ""
 "se introducen en las especificaciones. Los parámetros de consulta tienen la "
 "mayor prioridad. Ejemplos:    ```txt    index.html?language=de "
 "calendar.html?title=CALENDAR    ```"
+
+#, fuzzy
+msgid ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//default_specification.yml"
+msgstr ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
 
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"

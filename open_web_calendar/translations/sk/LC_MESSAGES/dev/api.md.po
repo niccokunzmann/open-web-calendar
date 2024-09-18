@@ -272,14 +272,6 @@ msgstr ""
 "vynechané, ale to vysvetľuje jednoducho základnú, počiatočnú myšlienku za "
 "spracovanie udalostí."
 
-#, fuzzy
-msgid ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-
 msgid "![architecture](/assets/img/architecture.svg)"
 msgstr "![architecture](/asets/img/architecture.svg)"
 
@@ -318,6 +310,22 @@ msgid ""
 "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
 "calendar/raw/master/default_specification.yml"
 msgstr ""
+
+#, fuzzy
+msgid ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//default_specification.yml"
+msgstr ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
 
 #~ msgid "Additional parameters are required:"
 #~ msgstr "Ďalšie parametre sú povinné:"
