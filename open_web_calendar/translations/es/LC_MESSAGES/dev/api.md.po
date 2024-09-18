@@ -273,10 +273,10 @@ msgstr ""
 #, fuzzy
 msgid ""
 "[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//default_specification.yml"
+"calendar/tree/master/open_web_calendar/default_specification.yml"
 msgstr ""
 "[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//default_specification.yml"
+"calendar/tree/master/open_web_calendar/default_specification.yml"
 
 msgid "![architecture](/assets/img/architecture.svg)"
 msgstr "![architecture](/assets/img/architecture.svg)"
