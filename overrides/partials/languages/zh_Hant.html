@@ -1,0 +1,5 @@
+{#-
+  This is an alias file: zh_Hant -> zh-Hant
+-#}
+{% import "partials/languages/zh-Hant.html" as zh_Hant %}
+{% macro t(key) %}{{ zh_Hant.t(key) }}{% endmacro %}
