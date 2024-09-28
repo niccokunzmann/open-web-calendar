@@ -127,6 +127,7 @@ plugins:
         - ko
         - ko_LAVA
         - sk
+        - zh_Hant
 # add mdpo.languages above
       translate:
         - site_name

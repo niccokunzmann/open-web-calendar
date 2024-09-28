@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.3\n"
 
-#
 msgid ""
 "There are various ways to host the Open Web Calendar yourself and customize "
 "the deployment."
