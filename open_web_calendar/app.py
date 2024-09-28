@@ -23,7 +23,7 @@ from flask import (
     request,
     send_from_directory,
 )
-from flask_allowedhosts import limit_hosts
+from flask_allowed_hosts import limit_hosts
 from flask_caching import Cache
 
 from . import translate, version
