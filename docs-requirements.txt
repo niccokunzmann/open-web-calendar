@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=docs-requirements.txt docs-requirements.in
 #
-babel==2.14.0
+babel==2.16.0
     # via
     #   mkdocs
     #   mkdocs-git-revision-date-localized-plugin
@@ -13,13 +13,13 @@ beautifulsoup4==4.12.3
     # via mkdocs-meta-descriptions-plugin
 cachecontrol[filecache]==0.14.0
     # via mkdocs-rss-plugin
-cairocffi==1.6.1
+cairocffi==1.7.1
     # via cairosvg
 cairosvg==2.7.1
     # via mkdocs-material
-certifi==2024.7.4
+certifi==2024.8.30
     # via requests
-cffi==1.16.0
+cffi==1.17.1
     # via cairocffi
 charset-normalizer==3.3.2
     # via requests
@@ -33,7 +33,7 @@ cssselect2==0.7.0
     # via cairosvg
 defusedxml==0.7.1
     # via cairosvg
-filelock==3.15.4
+filelock==3.16.1
     # via cachecontrol
 ghp-import==2.1.0
     # via mkdocs
@@ -43,7 +43,7 @@ gitpython==3.1.43
     # via
     #   mkdocs-git-revision-date-localized-plugin
     #   mkdocs-rss-plugin
-idna==3.7
+idna==3.10
     # via requests
 importlib-metadata-argparse-version==2.0.0
     # via mdpo
@@ -52,7 +52,7 @@ jinja2==3.1.4
     #   mkdocs
     #   mkdocs-macros-plugin
     #   mkdocs-material
-markdown==3.6
+markdown==3.7
     # via
     #   mkdocs
     #   mkdocs-material
@@ -61,13 +61,15 @@ markupsafe==2.1.5
     # via
     #   jinja2
     #   mkdocs
-md-ulb-pwrap==0.1.0
+md-ulb-pwrap==0.1.2
     # via mdpo
 mdpo==2.0.1
     # via mkdocs-mdpo-plugin
 mergedeep==1.3.4
-    # via mkdocs
-mkdocs[i18n]==1.5.3
+    # via
+    #   mkdocs
+    #   mkdocs-get-deps
+mkdocs[i18n]==1.6.1
     # via
     #   -r docs-requirements.in
     #   mkdocs-exclude
@@ -79,13 +81,15 @@ mkdocs[i18n]==1.5.3
     #   mkdocs-rss-plugin
 mkdocs-exclude==1.0.2
     # via -r docs-requirements.in
-mkdocs-git-revision-date-localized-plugin==1.2.6
+mkdocs-get-deps==0.2.0
+    # via mkdocs
+mkdocs-git-revision-date-localized-plugin==1.2.9
     # via -r docs-requirements.in
-mkdocs-macros-plugin==1.0.5
+mkdocs-macros-plugin==1.2.0
     # via -r docs-requirements.in
-mkdocs-markdownextradata-plugin==0.2.5
+mkdocs-markdownextradata-plugin==0.2.6
     # via -r docs-requirements.in
-mkdocs-material[imaging]==9.5.18
+mkdocs-material[imaging]==9.5.38
     # via -r docs-requirements.in
 mkdocs-material-extensions==1.3.1
     # via mkdocs-material
@@ -97,31 +101,32 @@ mkdocs-meta-descriptions-plugin==3.0.0
     # via -r docs-requirements.in
 mkdocs-rss-plugin==1.15.0
     # via -r docs-requirements.in
-msgpack==1.0.8
+msgpack==1.1.0
     # via cachecontrol
-packaging==24.0
+packaging==24.1
     # via
     #   mkdocs
+    #   mkdocs-macros-plugin
     #   mkdocs-meta-descriptions-plugin
-paginate==0.5.6
+paginate==0.5.7
     # via mkdocs-material
 pathspec==0.12.1
     # via mkdocs
-pillow==10.3.0
+pillow==10.4.0
     # via
     #   cairosvg
     #   mkdocs-material
-platformdirs==4.2.1
-    # via mkdocs
+platformdirs==4.3.6
+    # via mkdocs-get-deps
 polib==1.2.0
     # via mdpo
 pycparser==2.22
     # via cffi
-pygments==2.17.2
+pygments==2.18.0
     # via mkdocs-material
 pymd4c==1.3.0
     # via mdpo
-pymdown-extensions==10.8
+pymdown-extensions==10.11
     # via
     #   mkdocs-material
     #   mkdocs-meta-descriptions-plugin
@@ -129,20 +134,21 @@ python-dateutil==2.9.0.post0
     # via
     #   ghp-import
     #   mkdocs-macros-plugin
-pytz==2024.1
+pytz==2024.2
     # via mkdocs-git-revision-date-localized-plugin
-pyyaml==6.0.1
+pyyaml==6.0.2
     # via
     #   mkdocs
+    #   mkdocs-get-deps
     #   mkdocs-macros-plugin
     #   mkdocs-markdownextradata-plugin
     #   pymdown-extensions
     #   pyyaml-env-tag
 pyyaml-env-tag==0.1
     # via mkdocs
-regex==2024.4.16
+regex==2024.9.11
     # via mkdocs-material
-requests==2.31.0
+requests==2.32.3
     # via
     #   cachecontrol
     #   mkdocs-material
@@ -151,7 +157,7 @@ six==1.16.0
     # via python-dateutil
 smmap==5.0.1
     # via gitdb
-soupsieve==2.5
+soupsieve==2.6
     # via beautifulsoup4
 termcolor==2.4.0
     # via mkdocs-macros-plugin
@@ -159,9 +165,9 @@ tinycss2==1.3.0
     # via
     #   cairosvg
     #   cssselect2
-urllib3==2.2.2
+urllib3==2.2.3
     # via requests
-watchdog==4.0.0
+watchdog==5.0.3
     # via mkdocs
 webencodings==0.5.1
     # via
