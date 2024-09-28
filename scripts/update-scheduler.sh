@@ -13,7 +13,7 @@ if [ -d scheduler ]; then
     cd scheduler
     git checkout master
 else
-    git clone https://github.com/DHTMLX/scheduler.git\
+    git clone https://github.com/DHTMLX/scheduler.git
     cd scheduler
 fi
 
