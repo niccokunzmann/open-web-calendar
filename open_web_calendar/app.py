@@ -23,7 +23,7 @@ from flask import (
     request,
     send_from_directory,
 )
-from flask_allowedhosts import limit_hosts
+from flask_allowed_hosts import AllowedHosts
 from flask_caching import Cache
 
 from . import translate, version
@@ -69,6 +69,20 @@ cache = Cache(app, config=CACHE_CONFIG)
 # caching
 
 __URL_CACHE = {}
+
+
+# limiting access
+def host_not_allowed():
+    return render_template(
+        "403.html",
+        hostname=request.host.split(":")[0],
+        allowed_hosts=", ".join(ALLOWED_HOSTS),
+    ), 403
+
+
+allowed_hosts = AllowedHosts(
+    app, allowed_hosts=ALLOWED_HOSTS, on_denied=host_not_allowed
+)
 
 # This is an in-app override of the default_specification.yml
 DEFAULT_SPECIFICATION = {}
@@ -211,7 +225,7 @@ def render_app_template(template, specification):
 
 
 @app.route("/calendar.<ext>", methods=["GET", "OPTIONS"])
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@allowed_hosts.limit()
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
 # @cache.cached(timeout=CACHE_TIMEOUT, query_string=True)
 def get_calendar(ext):
@@ -255,21 +269,21 @@ for folder_path in STATIC_FOLDER_PATH.iterdir():
 
 @app.route("/")
 @app.route("/index.html")
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@allowed_hosts.limit()
 def serve_index():
     specification = get_specification()
     return render_app_template("index.html", specification)
 
 
 @app.route("/about.html")
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@allowed_hosts.limit()
 def serve_about():
     specification = get_specification()
     return render_app_template("about.html", specification)
 
 
 @app.route("/configuration.js")
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@allowed_hosts.limit()
 def serve_configuration():
     return make_js_file_response(
         f"/* generated */\nconst configuration = {json.dumps(get_configuration())};"
@@ -277,7 +291,7 @@ def serve_configuration():
 
 
 @app.route("/locale_<lang>.js")
-@limit_hosts(allowed_hosts=ALLOWED_HOSTS)
+@allowed_hosts.limit()
 def serve_locale(lang):
     """Serve the locale translations for the web frontend DHTMLX."""
     return make_js_file_response(
@@ -316,15 +330,6 @@ def unhandled_exception(error):
     """,
         500,
     )  # return error code from https://stackoverflow.com/a/7824605
-
-
-@app.errorhandler(403)
-def host_not_allowed(error):
-    return render_template(
-        "403.html",
-        hostname=request.host.split(":")[0],
-        allowed_hosts=", ".join(ALLOWED_HOSTS),
-    ), 403
 
 
 # make serializable for multiprocessing

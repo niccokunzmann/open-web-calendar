@@ -4,37 +4,37 @@
 #
 #    pip-compile --output-file=test-requirements.txt test-requirements.in
 #
-attrs==23.2.0
+attrs==24.2.0
     # via
     #   outcome
     #   trio
 behave==1.2.6
     # via -r test-requirements.in
-certifi==2024.7.4
+certifi==2024.8.30
     # via selenium
 h11==0.14.0
     # via wsproto
-idna==3.7
+idna==3.10
     # via trio
 iniconfig==2.0.0
     # via pytest
 outcome==1.3.0.post0
     # via trio
-packaging==24.0
+packaging==24.1
     # via pytest
-parse==1.20.1
+parse==1.20.2
     # via
     #   behave
     #   parse-type
-parse-type==0.6.2
+parse-type==0.6.3
     # via behave
 pluggy==1.5.0
     # via pytest
 pysocks==1.7.1
     # via urllib3
-pytest==8.3.2
+pytest==8.3.3
     # via -r test-requirements.in
-selenium==4.23.1
+selenium==4.25.0
     # via -r test-requirements.in
 six==1.16.0
     # via
@@ -44,15 +44,15 @@ sniffio==1.3.1
     # via trio
 sortedcontainers==2.4.0
     # via trio
-trio==0.25.0
+trio==0.26.2
     # via
     #   selenium
     #   trio-websocket
 trio-websocket==0.11.1
     # via selenium
-typing-extensions==4.9.0
+typing-extensions==4.12.2
     # via selenium
-urllib3[socks]==2.2.2
+urllib3[socks]==2.2.3
     # via selenium
 websocket-client==1.8.0
     # via selenium
