@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_u7ovytoy/th/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_p4ovly_n/th/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_u7ovytoy/th/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_p4ovly_n/th/host/configure/index.png" >
       
     
     
@@ -1057,16 +1057,17 @@
 <p>Environment variables only influence the running of the server. These environment variables can be used to configure the service:</p>
 <h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="ลิงค์ถาวร">&para;</a></h3>
 <p>default empty</p>
-<p>The hosts divided by comma that the Open Web Calendar permits. This is required to mitigate the Host Header Injection vulnerability. You will see this text if the host is not allowed:</p>
+<p>The clients divided by comma that are allowed to access the Open Web Calendar. You will see this text if you try to access the service and you are not allowed:</p>
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
 <p>Examples:</p>
 <ul>
-<li>permit one host: <code>ALLOWED_HOSTS=localhost</code></li>
-<li>permit several hosts: <code>ALLOWED_HOSTS=open-web-calendar.hosted.quelltext.eu,192.168.0.42</code></li>
-<li>permit all hosts (vulnerable): <code>ALLOWED_HOSTS=</code></li>
+<li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
+<li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
+<li>permit everyone to access the server (default): <code>ALLOWED_HOSTS=</code> or <code>ALLOWED_HOSTS=*</code></li>
 </ul>
+<p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="ลิงค์ถาวร">&para;</a></h3>
 <p>default <code>5000</code>, default <code>80</code> in the Docker container</p>
 <p>The port that the service is running on.</p>
