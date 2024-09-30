@@ -22,7 +22,7 @@ The latest version might not be released, yet.
 - Update examples to work with DHTMLX Scheduler v7.1.1
 - Add script to automatically update DHTMLX Scheduler
 - Update dependencies
-- Deprecate Python
+- Deprecate Python 3.8
 - Add Chinese (Traditional Han script) and Korean
 - Update Hebrew by Ori, Chinese (Traditional Han script) by 張可揚, Spanish by gallegonovato, German by Nicco Kunzmann, Slovak by Milan Šalka and Nicco Kunzmann, Croatian by Milo Ivir and Welsh by Siaron James
 - Fix links to new location in the `open_web_calendar` subdirectory
