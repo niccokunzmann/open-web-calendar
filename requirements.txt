@@ -21,13 +21,13 @@ flask==3.0.3
     #   -r requirements.in
     #   flask-allowed-hosts
     #   flask-caching
-flask-allowed-hosts==1.0.3
+flask-allowed-hosts==1.1.1
     # via -r requirements.in
 flask-caching==2.3.0
     # via -r requirements.in
 gunicorn==23.0.0
     # via -r requirements.in
-icalendar==5.0.13
+icalendar==6.0.0
     # via
     #   -r requirements.in
     #   recurring-ical-events
@@ -59,11 +59,10 @@ python-dateutil==2.9.0.post0
 pytz==2024.2
     # via
     #   -r requirements.in
-    #   icalendar
     #   x-wr-timezone
 pyyaml==6.0.2
     # via -r requirements.in
-recurring-ical-events==3.3.0
+recurring-ical-events==3.3.1
     # via -r requirements.in
 requests[socks]==2.32.3
     # via -r requirements.in
@@ -72,7 +71,9 @@ six==1.16.0
 soupsieve==2.6
     # via beautifulsoup4
 tzdata==2024.2
-    # via recurring-ical-events
+    # via
+    #   icalendar
+    #   recurring-ical-events
 urllib3==2.2.3
     # via requests
 werkzeug==3.0.4
