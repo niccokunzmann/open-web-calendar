@@ -93,34 +93,12 @@ msgid "default empty"
 msgstr "implicite malplena"
 
 msgid ""
-"The hosts divided by comma that the Open Web Calendar permits. This is "
-"required to mitigate the Host Header Injection vulnerability. You will see "
-"this text if the host is not allowed:"
-msgstr ""
-"La gastigantoj apartigitaj per komo permesataj de la Malfermita Reta "
-"Kalendaro. Tio estas postulata por malhelpi Gastiganto-Ĉapan Injekton. Vi "
-"vidos la jenan tekston, se la gastiganto estas malpermesata:"
-
-msgid ""
 "**Forbidden:** You don't have the permission to access the requested "
 "resource. It is either read-protected or not readable by the server.*"
 msgstr ""
 
 msgid "Examples:"
 msgstr "Ekzemploj:"
-
-msgid "permit one host: `ALLOWED_HOSTS=localhost`"
-msgstr "permesi unu gastiganton: `ALLOWED_HOSTS=localhost`"
-
-msgid ""
-"permit several hosts: `ALLOWED_HOSTS=open-web-"
-"calendar.hosted.quelltext.eu,192.168.0.42`"
-msgstr ""
-"permesi plurajn gastigantojn: `ALLOWED_HOSTS=open-web-"
-"calendar.hosted.quelltext.eu,192.168.0.42`"
-
-msgid "permit all hosts (vulnerable): `ALLOWED_HOSTS=`"
-msgstr "permesi ĉiujn gastigantojn (tio danĝeras): `ALLOWED_HOSTS=`"
 
 msgid "PORT"
 msgstr ""
@@ -285,6 +263,51 @@ msgid ""
 msgstr ""
 "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/master/open_web_calendar/default_specification.yml"
+
+msgid ""
+"The clients divided by comma that are allowed to access the Open Web "
+"Calendar. You will see this text if you try to access the service and you "
+"are not allowed:"
+msgstr ""
+
+msgid "permit only the same computer: `ALLOWED_HOSTS=localhost`"
+msgstr ""
+
+msgid ""
+"permit several hosts: `ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com`"
+msgstr ""
+
+msgid ""
+"permit everyone to access the server (default): `ALLOWED_HOSTS=` or "
+"`ALLOWED_HOSTS=*`"
+msgstr ""
+
+msgid ""
+"This functionality is provided by [flask-allowed-"
+"hosts](https://pypi.org/project/flask-allowed-hosts/)."
+msgstr ""
+
+#~ msgid ""
+#~ "The hosts divided by comma that the Open Web Calendar permits. This is "
+#~ "required to mitigate the Host Header Injection vulnerability. You will see "
+#~ "this text if the host is not allowed:"
+#~ msgstr ""
+#~ "La gastigantoj apartigitaj per komo permesataj de la Malfermita Reta "
+#~ "Kalendaro. Tio estas postulata por malhelpi Gastiganto-Ĉapan Injekton. Vi "
+#~ "vidos la jenan tekston, se la gastiganto estas malpermesata:"
+
+#~ msgid "permit one host: `ALLOWED_HOSTS=localhost`"
+#~ msgstr "permesi unu gastiganton: `ALLOWED_HOSTS=localhost`"
+
+#~ msgid ""
+#~ "permit several hosts: `ALLOWED_HOSTS=open-web-"
+#~ "calendar.hosted.quelltext.eu,192.168.0.42`"
+#~ msgstr ""
+#~ "permesi plurajn gastigantojn: `ALLOWED_HOSTS=open-web-"
+#~ "calendar.hosted.quelltext.eu,192.168.0.42`"
+
+#~ msgid "permit all hosts (vulnerable): `ALLOWED_HOSTS=`"
+#~ msgstr "permesi ĉiujn gastigantojn (tio danĝeras): `ALLOWED_HOSTS=`"
 
 #, fuzzy
 #~ msgid ""
