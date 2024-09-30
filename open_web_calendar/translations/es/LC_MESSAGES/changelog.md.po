@@ -577,9 +577,6 @@ msgstr ""
 msgid "Add choice: Choose the language of the viewer"
 msgstr ""
 
-msgid "Update DHTMLX Scheduler to v7.0.5"
-msgstr ""
-
 msgid "v1.39"
 msgstr ""
 
@@ -603,6 +600,12 @@ msgid ""
 "Create [PyPI package](https://pypi.org/project/open-web-calendar/) and "
 "deployment"
 msgstr ""
+
+msgid "Update DHTMLX Scheduler to v7.1.1"
+msgstr ""
+
+#~ msgid "Update DHTMLX Scheduler to v7.0.5"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "This calendar is not styled but contains events that can be hosted behind a "
