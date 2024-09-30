@@ -604,5 +604,8 @@ msgstr ""
 msgid "Update DHTMLX Scheduler to v7.1.1"
 msgstr ""
 
+msgid "Deprecate Python 3.8"
+msgstr ""
+
 #~ msgid "Update DHTMLX Scheduler to v7.0.5"
 #~ msgstr ""
