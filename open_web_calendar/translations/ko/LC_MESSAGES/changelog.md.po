@@ -607,5 +607,26 @@ msgstr ""
 msgid "Deprecate Python 3.8"
 msgstr ""
 
+msgid "Update examples to work with DHTMLX Scheduler v7.1.1"
+msgstr ""
+
+msgid "Add script to automatically update DHTMLX Scheduler"
+msgstr ""
+
+msgid "Add Chinese (Traditional Han script) and Korean"
+msgstr ""
+
+msgid ""
+"Update Hebrew by Ori, Chinese (Traditional Han script) by 張可揚, Spanish by "
+"gallegonovato, German by Nicco Kunzmann, Slovak by Milan Šalka and Nicco "
+"Kunzmann, Croatian by Milo Ivir and Welsh by Siaron James"
+msgstr ""
+
+msgid "Fix links to new location in the `open_web_calendar` subdirectory"
+msgstr ""
+
+msgid "Set `__all__` variable for package export"
+msgstr ""
+
 #~ msgid "Update DHTMLX Scheduler to v7.0.5"
 #~ msgstr ""
