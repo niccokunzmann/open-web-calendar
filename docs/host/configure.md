@@ -84,7 +84,7 @@ These environment variables can be used to configure the service:
 
 default empty
 
-The clients divided by comma that the Open Web Calendar permits access to.
+The clients divided by comma that are allowed to access the Open Web Calendar.
 You will see this text if you try to access the service and you are not allowed:
 
 > **Forbidden:**
