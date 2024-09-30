@@ -19,8 +19,14 @@ The latest version might not be released, yet.
 - Provide docker releases with proper tag release information
 - Add choice: Choose the language of the viewer
 - Update DHTMLX Scheduler to v7.1.1
+- Update examples to work with DHTMLX Scheduler v7.1.1
+- Add script to automatically update DHTMLX Scheduler
 - Update dependencies
-- Deprecate Python 3.8
+- Deprecate Python
+- Add Chinese (Traditional Han script) and Korean
+- Update Hebrew by Ori, Chinese (Traditional Han script) by 張可揚, Spanish by gallegonovato, German by Nicco Kunzmann, Slovak by Milan Šalka and Nicco Kunzmann, Croatian by Milo Ivir and Welsh by Siaron James
+- Fix links to new location in the `open_web_calendar` subdirectory
+- Set `__all__` variable for package export
 
 ## v1.39
 
