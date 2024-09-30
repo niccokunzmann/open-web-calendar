@@ -20,6 +20,7 @@ The latest version might not be released, yet.
 - Add choice: Choose the language of the viewer
 - Update DHTMLX Scheduler to v7.1.1
 - Update dependencies
+- Deprecate Python 3.8
 
 ## v1.39
 
