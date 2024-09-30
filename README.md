@@ -15,7 +15,7 @@ You might want to:
 - [Read the documentation][docs]
 
 
-Python: 3.8, 3.9, 3.10, 3.11, 3.12
+Python: 3.9, 3.10, 3.11, 3.12
 
 There are several commercial solutions which allow embedding of calendars into my website.
 I only have a link to an ICS file and want to show a nice-looking calendar on my site.

@@ -20,7 +20,7 @@ maintainers = [
 ]
 description = "Embed a highly customizable web calendar into your website using ICal source links"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 # see https://pypi.python.org/pypi?%3Aaction=list_classifiers
 classifiers = [
     "Development Status :: 5 - Production/Stable",
