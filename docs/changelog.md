@@ -18,7 +18,8 @@ The latest version might not be released, yet.
 - Support webcal:// links
 - Provide docker releases with proper tag release information
 - Add choice: Choose the language of the viewer
-- Update DHTMLX Scheduler to v7.0.5
+- Update DHTMLX Scheduler to v7.1.1
+- Update dependencies
 
 ## v1.39
 
