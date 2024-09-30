@@ -49,7 +49,7 @@ classifiers = [
 
 dependencies = [
     "flask-caching",
-    "flask-allowedhosts",
+    "flask-allowed-hosts",
     "flask",
     "icalendar",
     "requests",
