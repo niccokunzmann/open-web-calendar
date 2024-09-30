@@ -84,18 +84,19 @@ These environment variables can be used to configure the service:
 
 default empty
 
-The hosts divided by comma that the Open Web Calendar permits.
-This is required to mitigate the Host Header Injection vulnerability.  
-You will see this text if the host is not allowed:
+The clients divided by comma that are allowed to access the Open Web Calendar.
+You will see this text if you try to access the service and you are not allowed:
 
 > **Forbidden:**
 > You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.*  
 
 Examples:
 
-- permit one host: `ALLOWED_HOSTS=localhost`
-- permit several hosts: `ALLOWED_HOSTS=open-web-calendar.hosted.quelltext.eu,192.168.0.42`
-- permit all hosts (vulnerable): `ALLOWED_HOSTS=`
+- permit only the same computer: `ALLOWED_HOSTS=localhost`
+- permit several hosts: `ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com`
+- permit everyone to access the server (default): `ALLOWED_HOSTS=` or `ALLOWED_HOSTS=*`
+
+This functionality is provided by [flask-allowed-hosts](https://pypi.org/project/flask-allowed-hosts/).
 
 ### PORT
 
