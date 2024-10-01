@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_vjpdqevk/es/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_v3lfmjnm/es/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_vjpdqevk/es/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_v3lfmjnm/es/host/configure/index.png" >
       
     
     
@@ -1031,8 +1031,7 @@
 <li>Cambiar el funcionamiento del servidor.</li>
 </ul>
 <h2 id="configurar-el-calendario-predeterminado">Configurar el calendario predeterminado<a class="headerlink" href="#configurar-el-calendario-predeterminado" title="Enlace permanente">&para;</a></h2>
-<p>La configuración de todos los calendarios tiene su raíz en <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a>. Todos esos valores se pueden cambiar a través de una copia de este archivo alojada en la web a través del parámetro calendario.
-<code>especificación_url</code> . Cada parámetro debe documentarse en <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a>.</p>
+<p>La configuración de todos los calendarios está enraizada en <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a>. Todos estos valores pueden ser cambiados a través de una copia de este archivo alojado en la web a través del parámetro calendario <code>specification_url</code>. Cada parámetro debe estar documentado en <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a>.</p>
 <p>Si modificas las especificaciones por defecto, modificarás <strong>todos los calendarios</strong> que estén alojados en tu instancia. Los calendarios siguen cancelando algunos valores de tu configuración. Aquellos que no los cancelen se verán afectados. No todos los valores están expuestos en la página de configuración para ser modificados. Esos valores aún pueden cambiarse en <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a> y en los parámetros de la consulta.</p>
 <p>Es posible que quieras cambiar los siguientes valores.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Enlace permanente">&para;</a></h3>
@@ -1058,17 +1057,17 @@
 <p>Las variables de entorno solo influyen en el funcionamiento del servidor. Estas variables del entorno se pueden utilizar para configurar el servicio:</p>
 <h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="Enlace permanente">&para;</a></h3>
 <p>vacío predeterminado</p>
-<p>The clients divided by comma that are allowed to access the Open Web Calendar. You will see this text if you try to access the service and you are not allowed:</p>
+<p>Los clientes separados por comas que tienen permiso para acceder al Open Web Calendar. Verá este texto si intenta acceder al servicio y no tiene permisos:</p>
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
 <p>Ejemplos:</p>
 <ul>
-<li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
-<li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
-<li>permit everyone to access the server (default): <code>ALLOWED_HOSTS=</code> or <code>ALLOWED_HOSTS=*</code></li>
+<li>permitir solo al mismo ordenador: <code>ALLOWED_HOSTS=localhost</code></li>
+<li>permitir varios hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
+<li>permitir a todo el mundo el acceso al servidor (por defecto): <code>ALLOWED_HOSTS=</code> o <code>ALLOWED_HOSTS=*</code></li>
 </ul>
-<p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
+<p>Esta función es proporcionada por <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Enlace permanente">&para;</a></h3>
 <p>por defecto<code>5000</code> , predeterminado<code>80</code> en el contenedor Docker</p>
 <p>El puerto en el que se ejecuta el servicio.</p>
