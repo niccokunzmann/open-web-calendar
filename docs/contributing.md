@@ -18,11 +18,18 @@ description: "You can improve the project yourself. Get started here."
 There are several ways in which you can help this project:
 
 - [Use it]({{link.web}}) and [report errors]({{link.issues}})
-- [Donate using Open Collective]({{link.fund.open_collective}})
-- [Fund specific issues with Polar]({{link.fund.polar}})
-- [Donate using GitHub Sponsors]({{link.fund.github_sponsors}})
-- [Translate this project](../dev/translate)
+- [Fund development & maintenance - Polar]({{link.fund.polar}})
+- [Fund costs - Open Collective]({{link.fund.open_collective}})
+- [Fund sustainability - GitHub Sponsors]({{link.fund.github_sponsors}})
+- [Translate this project to your language](../dev/translate)
 - Have a look at [open issues]({{link.issues}}) e.g. those especially to get started, labeled [good first issue]({{link.good_first_issue}}), leave a note and work on it.
 - If you customized a calendar, please consider [contributing it as a template](../templates) for others to use.
 
-If you are part of a company and you would like to commission work, please get in touch with Nicco Kunzmann.
+If you are part of a company depending on the Open Web Calendar,
+please contact Nicco Kunzmann, the maintainer:
+
+- You need features added.
+- You want to mitigate risks.
+- You need add-ons or integrations.
+
+Support plans and maintenance contracts are available.
