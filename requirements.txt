@@ -21,7 +21,7 @@ flask==3.0.3
     #   -r requirements.in
     #   flask-allowed-hosts
     #   flask-caching
-flask-allowed-hosts==1.1.2
+flask-allowed-hosts==1.2.0
     # via -r requirements.in
 flask-caching==2.3.0
     # via -r requirements.in
