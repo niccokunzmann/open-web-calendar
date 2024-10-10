@@ -41,25 +41,6 @@ msgstr ""
 "chýb](https://github.com/niccokunzmann/open-web-calendar/issues)"
 
 msgid ""
-"[Donate using Open Collective](https://opencollective.com/open-web-"
-"calendar/)"
-msgstr ""
-"[Prispieť pomocou Open kolektívne](https://opencollective.com/open-web-"
-"calendar/)"
-
-msgid ""
-"[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
-"calendar)"
-msgstr ""
-"[Fund konkrétne problémy s Polar](https://polar.sh/niccokunzmann/open-web-"
-"calendar)"
-
-msgid ""
-"[Donate using GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
-msgstr ""
-"[Donate pomocou GitHub sponzorov](https://github.com/sponsors/niccokunzmann)"
-
-msgid ""
 "Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
 "calendar/issues) e.g. those especially to get started, labeled [good first "
 "issue](https://github.com/niccokunzmann/open-web-"
@@ -72,23 +53,77 @@ msgstr ""
 "calendar/issues?q=is%3Aissue+is%3Aopen + označil%3A%22+firstive%22), "
 "zanechať poznámku a pracovať na ňom."
 
-msgid ""
-"If you are part of a company and you would like to commission work, please "
-"get in touch with Nicco Kunzmann."
-msgstr ""
-"Ak ste súčasťou spoločnosti a chcete províziu pracovať, kontaktujte Nicco "
-"Kunzmann."
-
 msgid "Contribute ♥️"
 msgstr "Prispieť"
-
-msgid "[Translate this project](../dev/translate)"
-msgstr ""
 
 msgid ""
 "If you customized a calendar, please consider [contributing it as a "
 "template](../templates) for others to use."
 msgstr ""
+
+msgid ""
+"[Fund development & maintenance - "
+"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
+msgstr ""
+
+msgid ""
+"[Fund costs - Open Collective](https://opencollective.com/open-web-"
+"calendar/)"
+msgstr ""
+
+msgid ""
+"[Fund sustainability - GitHub "
+"Sponsors](https://github.com/sponsors/niccokunzmann)"
+msgstr ""
+
+msgid "[Translate this project to your language](../dev/translate)"
+msgstr ""
+
+msgid ""
+"If you are part of a company depending on the Open Web Calendar, please "
+"contact Nicco Kunzmann, the maintainer:"
+msgstr ""
+
+msgid "You need features added."
+msgstr ""
+
+msgid "You want to mitigate risks."
+msgstr ""
+
+msgid "You need add-ons or integrations."
+msgstr ""
+
+msgid "Support plans and maintenance contracts are available."
+msgstr ""
+
+#~ msgid ""
+#~ "[Donate using Open Collective](https://opencollective.com/open-web-"
+#~ "calendar/)"
+#~ msgstr ""
+#~ "[Prispieť pomocou Open kolektívne](https://opencollective.com/open-web-"
+#~ "calendar/)"
+
+#~ msgid ""
+#~ "[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
+#~ "calendar)"
+#~ msgstr ""
+#~ "[Fund konkrétne problémy s Polar](https://polar.sh/niccokunzmann/open-web-"
+#~ "calendar)"
+
+#~ msgid ""
+#~ "[Donate using GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
+#~ msgstr ""
+#~ "[Donate pomocou GitHub sponzorov](https://github.com/sponsors/niccokunzmann)"
+
+#~ msgid ""
+#~ "If you are part of a company and you would like to commission work, please "
+#~ "get in touch with Nicco Kunzmann."
+#~ msgstr ""
+#~ "Ak ste súčasťou spoločnosti a chcete províziu pracovať, kontaktujte Nicco "
+#~ "Kunzmann."
+
+#~ msgid "[Translate this project](../dev/translate)"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "If you customized a calendar, please consider [contributing it as a "

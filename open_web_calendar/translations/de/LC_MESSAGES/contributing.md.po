@@ -44,28 +44,6 @@ msgstr ""
 "Fehler](https://github.com/niccokunzmann/open-web-calendar/issues)"
 
 msgid ""
-"[Donate using Open Collective](https://opencollective.com/open-web-"
-"calendar/)"
-msgstr ""
-"[Gib Geld mit Open Collective](https://opencollective.com/open-web-"
-"calendar/)"
-
-msgid ""
-"[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
-"calendar)"
-msgstr ""
-"[Fördere bestimmte Weiterentwicklungen mit "
-"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
-
-msgid ""
-"[Donate using GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
-msgstr ""
-"[Gib Geld mit GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
-
-msgid "[Translate this project](../dev/translate)"
-msgstr "[Übersetze das Projekt](../dev/translate)"
-
-msgid ""
 "Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
 "calendar/issues) e.g. those especially to get started, labeled [good first "
 "issue](https://github.com/niccokunzmann/open-web-"
@@ -86,8 +64,65 @@ msgstr ""
 "hinzu](../templates), damit andere ihn nutzen können."
 
 msgid ""
-"If you are part of a company and you would like to commission work, please "
-"get in touch with Nicco Kunzmann."
+"[Fund development & maintenance - "
+"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
 msgstr ""
-"Wenn Du Teil einer Firma bist, dann melde Dich beim Entwickler Nicco "
-"Kunzmann, um die Arbeit zu fördern und Erweiterungen zu bestellen."
+
+msgid ""
+"[Fund costs - Open Collective](https://opencollective.com/open-web-"
+"calendar/)"
+msgstr ""
+
+msgid ""
+"[Fund sustainability - GitHub "
+"Sponsors](https://github.com/sponsors/niccokunzmann)"
+msgstr ""
+
+msgid "[Translate this project to your language](../dev/translate)"
+msgstr ""
+
+msgid ""
+"If you are part of a company depending on the Open Web Calendar, please "
+"contact Nicco Kunzmann, the maintainer:"
+msgstr ""
+
+msgid "You need features added."
+msgstr ""
+
+msgid "You want to mitigate risks."
+msgstr ""
+
+msgid "You need add-ons or integrations."
+msgstr ""
+
+msgid "Support plans and maintenance contracts are available."
+msgstr ""
+
+#~ msgid ""
+#~ "[Donate using Open Collective](https://opencollective.com/open-web-"
+#~ "calendar/)"
+#~ msgstr ""
+#~ "[Gib Geld mit Open Collective](https://opencollective.com/open-web-"
+#~ "calendar/)"
+
+#~ msgid ""
+#~ "[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
+#~ "calendar)"
+#~ msgstr ""
+#~ "[Fördere bestimmte Weiterentwicklungen mit "
+#~ "Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
+
+#~ msgid ""
+#~ "[Donate using GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
+#~ msgstr ""
+#~ "[Gib Geld mit GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
+
+#~ msgid "[Translate this project](../dev/translate)"
+#~ msgstr "[Übersetze das Projekt](../dev/translate)"
+
+#~ msgid ""
+#~ "If you are part of a company and you would like to commission work, please "
+#~ "get in touch with Nicco Kunzmann."
+#~ msgstr ""
+#~ "Wenn Du Teil einer Firma bist, dann melde Dich beim Entwickler Nicco "
+#~ "Kunzmann, um die Arbeit zu fördern und Erweiterungen zu bestellen."

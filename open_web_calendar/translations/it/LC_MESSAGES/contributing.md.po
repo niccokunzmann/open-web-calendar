@@ -42,26 +42,6 @@ msgstr ""
 "errori](https://github.com/niccokunzmann/open-web-calendar/issues)"
 
 msgid ""
-"[Donate using Open Collective](https://opencollective.com/open-web-"
-"calendar/)"
-msgstr ""
-"[Fai una donazione utilizzando Open "
-"Collective](https://opencollective.com/open-web-calendar/)"
-
-msgid ""
-"[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
-"calendar)"
-msgstr ""
-"[Problemi specifici sui fondi con "
-"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
-
-msgid ""
-"[Donate using GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
-msgstr ""
-"[Fai una donazione utilizzando gli sponsor "
-"GitHub](https://github.com/sponsors/niccokunzmann)"
-
-msgid ""
 "Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
 "calendar/issues) e.g. those especially to get started, labeled [good first "
 "issue](https://github.com/niccokunzmann/open-web-"
@@ -74,18 +54,8 @@ msgstr ""
 "calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue %22), "
 "lascia una nota e lavoraci sopra."
 
-msgid ""
-"If you are part of a company and you would like to commission work, please "
-"get in touch with Nicco Kunzmann."
-msgstr ""
-"Se fai parte di un'azienda e desideri commissionare dei lavori, contatta "
-"Nicco Kunzmann."
-
 msgid "Contribute ♥️"
 msgstr "Contribuire♥️"
-
-msgid "[Translate this project](../dev/translate)"
-msgstr "[Traduci questo progetto](../dev/translate)"
 
 msgid ""
 "If you customized a calendar, please consider [contributing it as a "
@@ -93,6 +63,71 @@ msgid ""
 msgstr ""
 "Se hai personalizzato un calendario, prendi in considerazione l'idea di "
 "[contribuire come modello](../templates) affinché altri possano utilizzarlo."
+
+msgid ""
+"[Fund development & maintenance - "
+"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
+msgstr ""
+
+msgid ""
+"[Fund costs - Open Collective](https://opencollective.com/open-web-"
+"calendar/)"
+msgstr ""
+
+msgid ""
+"[Fund sustainability - GitHub "
+"Sponsors](https://github.com/sponsors/niccokunzmann)"
+msgstr ""
+
+msgid "[Translate this project to your language](../dev/translate)"
+msgstr ""
+
+msgid ""
+"If you are part of a company depending on the Open Web Calendar, please "
+"contact Nicco Kunzmann, the maintainer:"
+msgstr ""
+
+msgid "You need features added."
+msgstr ""
+
+msgid "You want to mitigate risks."
+msgstr ""
+
+msgid "You need add-ons or integrations."
+msgstr ""
+
+msgid "Support plans and maintenance contracts are available."
+msgstr ""
+
+#~ msgid ""
+#~ "[Donate using Open Collective](https://opencollective.com/open-web-"
+#~ "calendar/)"
+#~ msgstr ""
+#~ "[Fai una donazione utilizzando Open "
+#~ "Collective](https://opencollective.com/open-web-calendar/)"
+
+#~ msgid ""
+#~ "[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
+#~ "calendar)"
+#~ msgstr ""
+#~ "[Problemi specifici sui fondi con "
+#~ "Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
+
+#~ msgid ""
+#~ "[Donate using GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
+#~ msgstr ""
+#~ "[Fai una donazione utilizzando gli sponsor "
+#~ "GitHub](https://github.com/sponsors/niccokunzmann)"
+
+#~ msgid ""
+#~ "If you are part of a company and you would like to commission work, please "
+#~ "get in touch with Nicco Kunzmann."
+#~ msgstr ""
+#~ "Se fai parte di un'azienda e desideri commissionare dei lavori, contatta "
+#~ "Nicco Kunzmann."
+
+#~ msgid "[Translate this project](../dev/translate)"
+#~ msgstr "[Traduci questo progetto](../dev/translate)"
 
 #~ msgid ""
 #~ "If you customized a calendar, please consider [contributing it as a "
