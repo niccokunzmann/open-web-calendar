@@ -10,8 +10,7 @@
   },
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchCurrentVersion": "!/^0/",
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "automerge": true
     }
   ]
