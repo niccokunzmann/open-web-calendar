@@ -57,7 +57,7 @@ markdown==3.7
     #   mkdocs
     #   mkdocs-material
     #   pymdown-extensions
-markupsafe==2.1.5
+markupsafe==3.0.1
     # via
     #   jinja2
     #   mkdocs
