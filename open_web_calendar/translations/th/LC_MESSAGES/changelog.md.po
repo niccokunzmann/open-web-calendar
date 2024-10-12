@@ -568,9 +568,6 @@ msgstr ""
 msgid "v1.40"
 msgstr ""
 
-msgid "Support webcal:// links"
-msgstr ""
-
 msgid "Provide docker releases with proper tag release information"
 msgstr ""
 
@@ -627,6 +624,27 @@ msgstr ""
 
 msgid "Set `__all__` variable for package export"
 msgstr ""
+
+msgid "v1.41"
+msgstr ""
+
+msgid "Use renovate to auto-update dependencies"
+msgstr ""
+
+msgid "Update Spanish by gallegonovato"
+msgstr ""
+
+msgid "Improve funding documentation"
+msgstr ""
+
+msgid "fix: use flask-allowed-hosts because flask-allowedhosts was deleted"
+msgstr ""
+
+msgid "Support `webcal://` links"
+msgstr ""
+
+#~ msgid "Support webcal:// links"
+#~ msgstr ""
 
 #~ msgid "Update DHTMLX Scheduler to v7.0.5"
 #~ msgstr ""
