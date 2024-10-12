@@ -13,9 +13,17 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+## v1.41
+
+- Update dependencies
+- Use renovate to auto-update dependencies
+- Update Spanish by gallegonovato
+- Improve funding documentation
+- fix: use flask-allowed-hosts because flask-allowedhosts was deleted
+
 ## v1.40
 
-- Support webcal:// links
+- Support `webcal://` links
 - Provide docker releases with proper tag release information
 - Add choice: Choose the language of the viewer
 - Update DHTMLX Scheduler to v7.1.1
