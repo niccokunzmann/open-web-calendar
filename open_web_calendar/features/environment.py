@@ -243,15 +243,15 @@ def before_scenario(context, scenario):
     context.specification = copy.deepcopy(DEFAULT_SPECIFICATION)
 
 
-def after_step(context, step:Step):
+def after_step(context, step: Step):
     """Run after each step to check success."""
     # see https://stackoverflow.com/a/31545036/1320237
     if step.status == Status.failed:
         # https://pythonspot.com/selenium-take-screenshot/
-        browser : WebDriver = context.browser
+        browser: WebDriver = context.browser
         # Take screenshot of element
         # see https://stackoverflow.com/a/53825388/1320237
-        element : WebElement = browser.find_element(By.TAG_NAME, "body")
+        element: WebElement = browser.find_element(By.TAG_NAME, "body")
         file = SCREENSHOTS_FOLDER / f"{Path(step.filename).stem}@line-{step.line}.png"
-        print(f"Test failed, capturing screenshot to {file}")  # noqa: T201
+        print(f"Test failed, capturing screenshot to {file}")
         element.screenshot(str(file))
