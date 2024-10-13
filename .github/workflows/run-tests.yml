@@ -52,7 +52,14 @@ jobs:
       - name: Run tests
         # Run tox using the version of Python in `PATH`
         run: tox -e ${{ matrix.tox_env }}
-
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ matrix.python }}-${{ matrix.tox_env }}
+          path: screenshots
+          if-no-files-found: ignore
+          retention-days: 14
+          compression-level: 0
+  
   gh-pages:
     name: "Publish Documentation to GitHub Pages"
     runs-on: ubuntu-latest
