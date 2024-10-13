@@ -11,4 +11,4 @@ Feature: The calendar is translated into different languages. We want to
         | word        | language |
         | calendrier  | French   |
         | Kalender    | Deutsch  |
-        | calendarios | Español  |
+        | calendarioss | Español  |

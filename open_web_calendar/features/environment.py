@@ -20,17 +20,27 @@ from pathlib import Path
 
 import requests
 from behave import fixture, use_fixture
+from behave.model import Status, Step
 from selenium import webdriver
 from selenium.webdriver import Firefox, FirefoxOptions
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.service import Service as FirefoxService
 from werkzeug import run_simple
 
 HERE = Path(__file__).parent.absolute()
 sys.path.append(HERE / "..")
+from typing import TYPE_CHECKING  # noqa: E402
+
 from open_web_calendar.app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
+if TYPE_CHECKING:
+    from selenium.webdriver.remote.webdriver import WebDriver
+    from selenium.webdriver.remote.webelement import WebElement
+
 CALENDAR_FOLDER = HERE / "calendars"
+SCREENSHOTS_FOLDER = HERE.parent / "screenshots"
+SCREENSHOTS_FOLDER.mkdir(parents=True, exist_ok=True)
 # timeout in seconds
 WAIT = 10
 
@@ -59,7 +69,7 @@ def browser_firefox(context):
     # construct the arguments
     kw = {"options": opts}
     if geckodriver_path.exists():
-        kw["service"] = Service(executable_path=geckodriver_path)
+        kw["service"] = FirefoxService(executable_path=geckodriver_path)
     browser = Firefox(**kw)
     context.browser = browser
     browser.set_page_load_timeout(10)
@@ -96,7 +106,7 @@ def browser_chrome(context):
 
     # executable_path from https://stackoverflow.com/a/76550727/1320237
     path = locate_command("chromium.chromedriver") or locate_command("chromedriver")
-    service = Service(executable_path=path)
+    service = ChromeService(executable_path=path)
     context.browser = webdriver.Chrome(service=service, options=options)
     yield context.browser
     context.browser.quit()
@@ -231,3 +241,17 @@ def before_scenario(context, scenario):
     Empty url and set the timezone and other parameters.
     """
     context.specification = copy.deepcopy(DEFAULT_SPECIFICATION)
+
+
+def after_step(context, step:Step):
+    """Run after each step to check success."""
+    # see https://stackoverflow.com/a/31545036/1320237
+    if step.status == Status.failed:
+        # https://pythonspot.com/selenium-take-screenshot/
+        browser : WebDriver = context.browser
+        # Take screenshot of element
+        # see https://stackoverflow.com/a/53825388/1320237
+        element : WebElement = browser.find_element(By.TAG_NAME, "body")
+        file = SCREENSHOTS_FOLDER / f"{Path(step.filename).stem}@line-{step.line}.png"
+        print(f"Test failed, capturing screenshot to {file}")  # noqa: T201
+        element.screenshot(str(file))
