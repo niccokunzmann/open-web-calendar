@@ -17,7 +17,7 @@ If you have [Python 3](https://www.python.org/) installed, run this to install t
 pip install open-web-calendar
 ```
 
-After installation, run the Open Web Calendar using [Gunicorn](https://pypi.org/project/gunicorn/):
+After installation, run the Open Web Calendar using [Gunicorn]:
 
 ```shell
 gunicorn open_web_calendar:app
@@ -27,5 +27,8 @@ You should now see the server running at [http://127.0.0.1:8000](http://127.0.0.
 
 For more configuration options, see here:
 
-- [Gunicorn](https://pypi.org/project/gunicorn/)
+- [Gunicorn Command Line Arguments](https://docs.gunicorn.org/en/stable/run.html#commonly-used-arguments) and `gunicorn --help`.
 - [Configuration](../configure)
+- [Gunicorn]
+
+[Gunicorn]: https://docs.gunicorn.org/
