@@ -128,7 +128,6 @@ def step_impl(context, text):
 def step_impl(context, text):
     event = context.browser.find_element(By.XPATH, f"//a[contains(text(), {text!r})]")
     event.click()
-    wait_for_calendar_to_load(context)
 
 
 @when('we click on the link "{text}"')
@@ -139,7 +138,6 @@ def step_impl(context, text):
         len(links) == 1
     ), f"I should click on the link {text!r} but found {len(links)}."
     links[0].click()
-    wait_for_calendar_to_load(context)
 
 
 def get_body_text(context):
