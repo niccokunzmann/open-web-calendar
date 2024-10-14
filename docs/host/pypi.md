@@ -38,7 +38,7 @@ This will install your open-web-calendar app in the project folder
 After installation, run the Open Web Calendar using [Gunicorn](https://pypi.org/project/gunicorn/):
 
 ```shell
-/home/username/venv/bin/gunicorn open_web_calendar:app
+gunicorn open_web_calendar:app
 ```
 
 You should now see the server running at [http://127.0.0.1:8000](http://127.0.0.1:8000).
