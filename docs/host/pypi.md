@@ -66,7 +66,8 @@ After=network.target
 [Service]
 User=username
 Group=usergroup
-WorkingDirectory=/home/username/venv
+# This is where you created the virtual environment before
+WorkingDirectory=/home/username/.venv
 Environment="PATH=/home/username/venv/bin"
 ExecStart=/home/username/venv/bin/gunicorn -b 192.168.178.7 open_web_calendar:app
 ExecReload=/bin/kill -s HUP $MAINPID
