@@ -47,7 +47,7 @@ However, in case you have installed the WebPage you are going to use for the int
 In this case you might want to start the open_web_calendar with the dedicated IP-address of the hosting machine.
 
 ```shell
-/home/username/venv/bin/gunicorn -b 192.168.178.7 open_web_calendar:app
+gunicorn -b 0.0.0.0 open_web_calendar:app
 ```
 You should now see the server running at [http://192.168.178.7:8000](http://192.168.178.7:8000) not only from your local machine.
 
