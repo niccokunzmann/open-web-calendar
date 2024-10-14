@@ -29,7 +29,7 @@ source .venv/bin/activate
 ```
 followed by 
 ```shell
-/home/username/venv/bin/pip install open-web-calendar
+pip install open-web-calendar
 ```
 This will install your open-web-calendar app in the project folder  
 /home/username/venv/lib/python3.12/site-packages/open_web_calendar
