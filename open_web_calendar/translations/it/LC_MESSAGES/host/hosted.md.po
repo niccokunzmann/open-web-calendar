@@ -1,20 +1,21 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # Prefill add-on <noreply-addon-prefill@weblate.org>, 2024.
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+# albanobattistella <albano_battistella@hotmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-28 10:40+0200\n"
-"PO-Revision-Date: 2024-08-14 01:10+0000\n"
-"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"PO-Revision-Date: 2024-10-14 10:15+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/open-web-calendar/documentation-hosted-version/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 msgid "You can use the hosted version of the Open Web Calendar yourself."
 msgstr ""
@@ -61,6 +62,8 @@ msgid ""
 "If you decide later to [setup your own server](../self), you can do this and"
 " [migrate all calendars](../migrate) you use to the other server."
 msgstr ""
+"Se in seguito decidi di [configurare un tuo server](../self), puoi farlo e "
+"[migrare tutti i calendari](../migrate) che utilizzi sull'altro server."
 
 #~ msgid ""
 #~ "[How to configure all parameters](../configure/#configuring-the-default-"

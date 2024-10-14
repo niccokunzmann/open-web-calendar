@@ -35,7 +35,7 @@ This will install your open-web-calendar app in the project folder
 /home/username/venv/lib/python3.12/site-packages/open_web_calendar
 
 ## Execution
-After installation, run the Open Web Calendar using [Gunicorn](https://pypi.org/project/gunicorn/):
+After installation, run the Open Web Calendar using [Gunicorn]:
 
 ```shell
 gunicorn open_web_calendar:app
@@ -98,5 +98,8 @@ sudo systemctl status open_web_calendar
 
 For more configuration options, see here:
 
-- [Gunicorn](https://pypi.org/project/gunicorn/)
+- [Gunicorn Command Line Arguments](https://docs.gunicorn.org/en/stable/run.html#commonly-used-arguments) and `gunicorn --help`.
 - [Configuration](../configure)
+- [Gunicorn]
+
+[Gunicorn]: https://docs.gunicorn.org/
