@@ -69,7 +69,7 @@ Group=usergroup
 # This is where you created the virtual environment before
 WorkingDirectory=/home/username/.venv
 Environment="PATH=/home/username/venv/bin"
-ExecStart=/home/username/venv/bin/gunicorn -b 192.168.178.7 open_web_calendar:app
+ExecStart=/home/username/.venv/bin/gunicorn -b 0.0.0.0 open_web_calendar:app
 ExecReload=/bin/kill -s HUP $MAINPID
 KillMode=mixed
 TimeoutStopSec=5
