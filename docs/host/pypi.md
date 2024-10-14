@@ -24,7 +24,8 @@ error: externally-managed-environment
 
 On your productive system, it is strongly recommended to follow the instructions to create a virtual environment using 
 ```shell
-python3 -m venv /home/username/venv
+python3 -m .venv
+source .venv/bin/activate
 ```
 followed by 
 ```shell
