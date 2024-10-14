@@ -126,8 +126,8 @@ def step_impl(context, text):
 
 @when('we click on a link containing "{text}"')
 def step_impl(context, text):
-    event = context.browser.find_element(By.XPATH, f"//a[contains(text(), {text!r})]")
-    event.click()
+    link = context.browser.find_element(By.XPATH, f"//a[contains(text(), {text!r})]")
+    link.click()
 
 
 @when('we click on the link "{text}"')
