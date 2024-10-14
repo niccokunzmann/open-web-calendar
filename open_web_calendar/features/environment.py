@@ -26,6 +26,7 @@ from selenium.webdriver import Firefox, FirefoxOptions
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.remote.webdriver import WebDriver
 from werkzeug import run_simple
 
 HERE = Path(__file__).parent.absolute()
@@ -35,7 +36,6 @@ from typing import TYPE_CHECKING  # noqa: E402
 from open_web_calendar.app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
 if TYPE_CHECKING:
-    from selenium.webdriver.remote.webdriver import WebDriver
     from selenium.webdriver.remote.webelement import WebElement
 
 CALENDAR_FOLDER = HERE / "calendars"
@@ -51,6 +51,12 @@ def locate_command(command: str):
     if code == 0:
         return output.strip()
     return ""
+
+
+def configure_browser(browser: WebDriver):
+    """Make common configurations to the browser."""
+    browser.implicitly_wait(10)
+    browser.set_page_load_timeout(10)
 
 
 @fixture
@@ -72,7 +78,7 @@ def browser_firefox(context):
         kw["service"] = FirefoxService(executable_path=geckodriver_path)
     browser = Firefox(**kw)
     context.browser = browser
-    browser.set_page_load_timeout(10)
+    configure_browser(browser)
     yield context.browser
     # -- CLEANUP-FIXTURE PART:
     context.browser.quit()
@@ -108,6 +114,7 @@ def browser_chrome(context):
     path = locate_command("chromium.chromedriver") or locate_command("chromedriver")
     service = ChromeService(executable_path=path)
     context.browser = webdriver.Chrome(service=service, options=options)
+    configure_browser(context.browser)
     yield context.browser
     context.browser.quit()
 
@@ -115,6 +122,7 @@ def browser_chrome(context):
 @fixture
 def browser_safari(context):
     context.browser = webdriver.Safari()
+    configure_browser(context.browser)
     yield context.browser
     context.browser.quit()
 
