@@ -10,7 +10,7 @@ SPDX-License-Identifier: GPL-2.0-only
     <head>
         <title>{{ specification["title"] | safe }}</title>
         <meta charset="utf-8">
-        <link rel="alternate" type="text/calendar" href="/calendar.ics{{ get_query_string() }}" />
+        <link rel="alternate" type="text/calendar" href="calendar.ics{{ get_query_string() }}" />
         <script type="text/javascript">
             var specification = {{ specification | tojson | safe }};
         </script>
@@ -64,7 +64,7 @@ SPDX-License-Identifier: GPL-2.0-only
         </div>
         <div class="status-window">
             <a class="item" id="errorStatusIcon" href="javascript:toggleErrorWindow();">!</a>
-            <a class="item" id="infoIcon" href="/about.html{{ get_query_string() | safe }}" target="{{ specification['target'] }}">?</a>
+            <a class="item" id="infoIcon" href="about.html{{ get_query_string() | safe }}" target="{{ specification['target'] }}">?</a>
         </div>
     </body>
 </html>
