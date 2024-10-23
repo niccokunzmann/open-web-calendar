@@ -4,6 +4,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
+import datetime
 import io
 import json
 import os
@@ -59,6 +60,9 @@ PARAM_SPECIFICATION_URL = "specification_url"
 
 # globals
 app = Flask(__name__, template_folder="templates")
+
+app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 31536000
+
 # Check Configuring Flask-Cache section for more details
 CACHE_CONFIG = {
     "CACHE_TYPE": "FileSystemCache",
@@ -103,9 +107,16 @@ def add_header(r):
     Add headers to both force latest IE rendering engine or Chrome Frame,
     and also to cache the rendered page for 10 minutes.
     """
-    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    r.headers["Pragma"] = "no-cache"
-    r.headers["Expires"] = "0"
+    if not request.path.startswith("/static/"):
+        r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        r.headers["Pragma"] = "no-cache"
+        r.headers["Expires"] = "0"
+    else:
+        r.headers["Cache-Control"] = "public, max-age=31536000"  # Cache for 1 year
+        r.headers["Expires"] = (
+            datetime.datetime.now() + datetime.timedelta(days=365)
+        ).strftime("%a, %d %b %Y %H:%M:%S GMT")
+
     return r
 
 
@@ -264,7 +275,17 @@ for folder_path in STATIC_FOLDER_PATH.iterdir():
         "/" + folder_path.name + "/<path:path>", endpoint="static/" + folder_path.name
     )
     def send_static(path, folder_name=folder_path.name):
-        return send_from_directory("static/" + folder_name, path)
+        response = send_from_directory("static/" + folder_name, path)
+
+        # Cache everything in static folder
+        response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+        response.headers["Expires"] = (
+            datetime.datetime.now() + datetime.timedelta(days=365)
+        ).strftime("%a, %d %b %Y %H:%M:%S GMT")
+        response.headers["Pragma"] = "public"
+        response.headers["Vary"] = "Accept-Encoding"
+
+        return response
 
 
 @app.route("/")
