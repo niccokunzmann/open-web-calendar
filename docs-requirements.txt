@@ -161,7 +161,7 @@ soupsieve==2.6
     # via beautifulsoup4
 termcolor==2.5.0
     # via mkdocs-macros-plugin
-tinycss2==1.3.0
+tinycss2==1.4.0
     # via
     #   cairosvg
     #   cssselect2
