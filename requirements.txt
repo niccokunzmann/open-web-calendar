@@ -75,7 +75,7 @@ tzdata==2024.2
     #   x-wr-timezone
 urllib3==2.2.3
     # via requests
-werkzeug==3.1.1
+werkzeug==3.1.2
     # via flask
 x-wr-timezone==1.0.1
     # via recurring-ical-events
