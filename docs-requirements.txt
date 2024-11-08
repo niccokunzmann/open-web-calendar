@@ -103,7 +103,7 @@ mkdocs-rss-plugin==1.16.0
     # via -r docs-requirements.in
 msgpack==1.1.0
     # via cachecontrol
-packaging==24.1
+packaging==24.2
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
