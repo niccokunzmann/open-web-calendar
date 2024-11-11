@@ -63,7 +63,7 @@ markupsafe==3.0.2
     #   mkdocs
 md-ulb-pwrap==0.1.2
     # via mdpo
-mdpo==2.0.1
+mdpo==2.1.0
     # via mkdocs-mdpo-plugin
 mergedeep==1.3.4
     # via
