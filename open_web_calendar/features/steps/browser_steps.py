@@ -4,6 +4,7 @@
 
 import json
 import re
+import time
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
@@ -132,7 +133,10 @@ def step_impl(context, text):
         EC.element_to_be_clickable((By.XPATH, xpath))
     )
     # see also https://stackoverflow.com/a/9678084/1320237
+    link.send_keys(Keys.CONTROL)
     link.send_keys(Keys.RETURN)
+    link.click()
+    time.sleep(0.1)
 
 
 @when('we click on the link "{text}"')
