@@ -1,29 +1,35 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Максим Горпиніч <mgorpinic2005@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-11-28 19:00+0000\n"
+"Last-Translator: Максим Горпиніч <mgorpinic2005@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-common-translations/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
+"Вставте веб-календар із широкими можливостями налаштування на свій веб-сайт "
+"за допомогою посилань на джерело ICal"
 
 msgid "Open Web Calendar"
-msgstr ""
+msgstr "Відкрийте веб-календар"
 
 msgid "Permanent link"
-msgstr ""
+msgstr "Постійне посилання"
 
 #~ msgid "Translate"
 #~ msgstr ""
