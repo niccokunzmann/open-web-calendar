@@ -222,6 +222,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Slovenčina
       link: sk
       lang: sk
+    - name: 한국어
+      link: ko
+      lang: ko
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/
