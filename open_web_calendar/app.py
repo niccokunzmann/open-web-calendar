@@ -369,14 +369,14 @@ please use this command:
 
 
 __all__ = [
-    "main",
-    "app",
+    "DEFAULT_REQUEST_HEADERS",
     "DEFAULT_SPECIFICATION",
+    "app",
     "cache_url",
-    "get_text_from_url",
     "get_default_specification",
     "get_specification",
-    "DEFAULT_REQUEST_HEADERS",
+    "get_text_from_url",
+    "main",
 ]
 
 if __name__ == "__main__":

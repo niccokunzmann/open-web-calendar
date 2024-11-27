@@ -301,14 +301,14 @@ LANGUAGE_CODES = [
 LANGUAGE_CODES.sort()
 
 __all__ = [
-    "html",
-    "string",
+    "LANGUAGE_CODES",
     "dhtmlx",
     "dhtmlx_languages",
     "fraction_translated",
-    "strings_translated",
+    "html",
     "languages_for_the_index_file",
-    "LANGUAGE_CODES",
+    "string",
+    "strings_translated",
 ]
 
 
