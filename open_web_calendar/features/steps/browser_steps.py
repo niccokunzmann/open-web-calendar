@@ -126,8 +126,13 @@ def step_impl(context, text):
 
 @when('we click on a link containing "{text}"')
 def step_impl(context, text):
-    link = context.browser.find_element(By.XPATH, f"//a[contains(text(), {text!r})]")
-    link.click()
+    xpath = f"//a[contains(text(), {text!r})]"
+    # from https://stackoverflow.com/a/27603477/1320237
+    link = WebDriverWait(context.browser, 10).until(
+        EC.element_to_be_clickable((By.XPATH, xpath))
+    )
+    # see also https://stackoverflow.com/a/9678084/1320237
+    link.send_keys(Keys.RETURN)
 
 
 @when('we click on the link "{text}"')
