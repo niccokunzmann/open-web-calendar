@@ -25,3 +25,6 @@ calendars](../migrate) you use to the other server.
 See also:
 
 - [How to configure all calendar parameters](../configure/#configuring-the-default-calendar)
+- [Uptime service monitor for the hosted instances][kuma]
+
+[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar
