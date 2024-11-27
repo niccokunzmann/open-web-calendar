@@ -34,6 +34,13 @@ msgid ""
 " [migrate all calendars](../migrate) you use to the other server."
 msgstr ""
 
+msgid "[Uptime service monitor for the hosted instances][kuma]"
+msgstr ""
+
+#, fuzzy
+msgid "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
+msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
+
 #~ msgid ""
 #~ "[How to configure all parameters](../configure/#configuring-the-default-"
 #~ "calendar)"
