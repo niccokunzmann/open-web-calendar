@@ -128,6 +128,7 @@ plugins:
         - ko_LAVA
         - sk
         - zh_Hant
+        - uk
 # add mdpo.languages above
       translate:
         - site_name
@@ -225,6 +226,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: 한국어
       link: ko
       lang: ko
+    - name: Українська
+      link: uk
+      lang: uk
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/
