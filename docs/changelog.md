@@ -13,6 +13,16 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+## v1.42
+
+- Improve gunicorn, PyPI and service documentation
+- Update dependencies
+- Allow debugging UI tests with screenshots
+- Update Italian translation by albanobattistella, German by Nicco Kunzmann, Korean by Paimon (JeaHoon Cha), Ukrainian by Максим Горпиніч, Spanish by gallegonovato
+- Fix UI test failures due to race condition when clicking a link
+- Improve load times for static files
+- Update DHTMLX Scheduler to v7.1.3
+
 ## v1.41
 
 - Update dependencies
