@@ -43,9 +43,13 @@ gitpython==3.1.43
     # via
     #   mkdocs-git-revision-date-localized-plugin
     #   mkdocs-rss-plugin
+hjson==3.1.0
+    # via
+    #   mkdocs-macros-plugin
+    #   super-collections
 idna==3.10
     # via requests
-importlib-metadata-argparse-version==3.0.0
+importlib-metadata-argparse-version==2.0.1
     # via mdpo
 jinja2==3.1.4
     # via
@@ -111,7 +115,9 @@ packaging==24.2
 paginate==0.5.7
     # via mkdocs-material
 pathspec==0.12.1
-    # via mkdocs
+    # via
+    #   mkdocs
+    #   mkdocs-macros-plugin
 pillow==10.4.0
     # via
     #   cairosvg
@@ -159,6 +165,8 @@ smmap==5.0.1
     # via gitdb
 soupsieve==2.6
     # via beautifulsoup4
+super-collections==0.5.3
+    # via mkdocs-macros-plugin
 termcolor==2.5.0
     # via mkdocs-macros-plugin
 tinycss2==1.4.0
