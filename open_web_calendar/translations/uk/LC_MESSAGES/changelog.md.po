@@ -642,3 +642,27 @@ msgid ""
 "#52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull"
 " Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88)."
 msgstr ""
+
+msgid "v1.42"
+msgstr ""
+
+msgid "Improve gunicorn, PyPI and service documentation"
+msgstr ""
+
+msgid "Allow debugging UI tests with screenshots"
+msgstr ""
+
+msgid ""
+"Update Italian translation by albanobattistella, German by Nicco Kunzmann, "
+"Korean by Paimon (JeaHoon Cha), Ukrainian by Максим Горпиніч, Spanish by "
+"gallegonovato"
+msgstr ""
+
+msgid "Fix UI test failures due to race condition when clicking a link"
+msgstr ""
+
+msgid "Improve load times for static files"
+msgstr ""
+
+msgid "Update DHTMLX Scheduler to v7.1.3"
+msgstr ""
