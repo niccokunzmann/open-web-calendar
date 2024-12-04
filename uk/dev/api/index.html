@@ -62,7 +62,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_yi5mwygm/uk/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_nhmr94y5/uk/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +78,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_yi5mwygm/uk/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_nhmr94y5/uk/dev/api/index.png" >
       
     
     
@@ -963,7 +963,7 @@
 <li><code>/calendar.ics</code> - підписатися на файл ics</li>
 <li><code>/calendar.events.json</code> - ГНУЧКИЙ – отримуйте події як JSON. Зауважте, що ви МОЖЕТЕ використовувати це, але не можете бути впевнені, що схема JSON залишиться незмінною. Якщо ви цього хочете, додайте тести.</li>
 </ul>
-<p>Additional parameters are required for <code>/calendar.events.json</code>:</p>
+<p>Для <code>/calendar.events.json</code> необхідні додаткові параметри:</p>
 <ul>
 <li><code>timezone=UTC</code> - часовий пояс, у якому потрібно відображати події</li>
 <li><code>from=YYYY-MM-DD</code> - початок періоду, в якому відбуваються події (включно)</li>
@@ -1003,13 +1003,9 @@
 <h2 id="_4">Складання специфікації<a class="headerlink" href="#_4" title="Постійне посилання">&para;</a></h2>
 <p>Ви можете змінити поведінку та вигляд календаря за допомогою параметрів. Ось місця для визначення параметрів:</p>
 <ol>
-<li><strong>Параметри запиту</strong> Усі параметри URL-адреси календаря містяться в специфікації. Параметри запиту мають найвищий пріоритет. приклади:
-   <code>txt
-   index.html?language=de
-calendar.html?title=CALENDAR</code></li>
+<li><strong>Параметри запит</strong> Усі параметри URL-адреси календаря містяться в специфікації. Параметри запиту мають найвищий пріоритет. приклади:    <code>txt    index.html?language=de calendar.html?title=CALENDAR</code></li>
 <li>
-<p><strong>specification_url</strong> Якщо вказати цей параметр запиту, конфігурація редактора також завантажується з цієї URL-адреси. Параметри запиту все ще важливіші за те, що написано в цьому файлі. Вихідний формат може бути YAML або JSON. приклади:
-        calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml</p>
+<p><strong>specification_url</strong> Якщо вказати цю параметр запиту, конфігурація редактора також завантажується з цієї URL-адреси. Параметри запиту все ще важливіші за те, що написано в цьому файлі. Вихідний формат може бути YAML або JSON. приклади:         calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml</p>
 </li>
 <li>
 <p><strong><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></strong> Цей файл містить параметри за замовчуванням. Вони не повинні бути жорстко закодовані у вихідному коді. Всі вони там. Параметри запиту та <code>specification_url</code> замінюють ці значення.</p>
