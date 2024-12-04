@@ -64,7 +64,7 @@ recurring-ical-events==3.3.4
     # via -r requirements.in
 requests[socks]==2.32.3
     # via -r requirements.in
-six==1.16.0
+six==1.17.0
     # via python-dateutil
 soupsieve==2.6
     # via beautifulsoup4
