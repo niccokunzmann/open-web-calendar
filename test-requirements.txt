@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=test-requirements.txt test-requirements.in
 #
-attrs==24.2.0
+attrs==24.3.0
     # via
     #   outcome
     #   trio
