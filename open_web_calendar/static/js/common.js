@@ -5,7 +5,22 @@
 /*
  * Common functions.
  */
-const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
+url = new URL(document.location.href);
+if (url.pathname == "/") {
+    pathname = "";
+} else {
+    pathname = url.pathname;
+    // delete the last part of the path if html page
+    var parts = pathname.split("/");
+    var lastPart = parts[parts.length - 1];
+    if (lastPart.endsWith(".html")) {
+        pathname = pathname.substring(0, pathname.length - lastPart.length);
+    }
+}
+if (pathname.endsWith("/")) {
+    pathname = pathname.substring(0, pathname.length - 1);
+}
+const DEFAULT_URL = url.origin + pathname;
 const CALENDAR_ENDPOINT = "/calendar.html";
 
 
