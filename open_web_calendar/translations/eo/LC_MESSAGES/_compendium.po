@@ -1,19 +1,21 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+# phlostically <phlostically@mailinator.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:50+0200\n"
-"PO-Revision-Date: 2024-08-14 01:10+0000\n"
-"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
-"Language-Team: Esperanto <https://hosted.weblate.org/projects/open-web-calendar/documentation-common-translations/eo/>\n"
+"PO-Revision-Date: 2024-12-26 16:00+0000\n"
+"Last-Translator: phlostically <phlostically@mailinator.com>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-common-translations/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
@@ -29,13 +31,13 @@ msgid "Permanent link"
 msgstr "Daŭra hiperligo"
 
 msgid "See also:"
-msgstr ""
+msgstr "Vidu ankaŭ:"
 
 msgid "Further Configuration"
-msgstr ""
+msgstr "Pliaj agordoj"
 
 msgid "Python Package"
-msgstr ""
+msgstr "Python-pako"
 
 msgid ""
 "After you have set up your own server, you can [configure the "
