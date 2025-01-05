@@ -128,7 +128,7 @@ polib==1.2.0
     # via mdpo
 pycparser==2.22
     # via cffi
-pygments==2.18.0
+pygments==2.19.0
     # via mkdocs-material
 pymd4c==1.3.0
     # via mdpo
