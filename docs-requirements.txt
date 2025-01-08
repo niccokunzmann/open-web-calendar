@@ -11,7 +11,7 @@ babel==2.16.0
     #   mkdocs-material
 beautifulsoup4==4.12.3
     # via mkdocs-meta-descriptions-plugin
-cachecontrol[filecache]==0.14.1
+cachecontrol[filecache]==0.14.2
     # via mkdocs-rss-plugin
 cairocffi==1.7.1
     # via cairosvg
