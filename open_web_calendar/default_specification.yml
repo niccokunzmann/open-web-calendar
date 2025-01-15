@@ -172,6 +172,16 @@ javascript: ""
 ## The linked JavaScript documents are expected to be UTF-8 encoded.
 javascript_url: []
 
+## This allows configuring the map for GEO and LOCATION attributes of events.
+## We use https://pypi.org/project/icalendar-compatibility/ for this.
+## See https://icalendar-compatibility.readthedocs.io/en/latest/usage.html#custom-map-spec
+## event_url_location needs to contain {location} and can contain {zoom}
+event_url_location: "https://www.openstreetmap.org/search?query={location}"
+## event_url_geo needs to contain {lon} and {lat} can contain {zoom}
+event_url_geo: "https://www.openstreetmap.org/#map=16/{lat}/{lon}"
+## The name of this URL in the user interface
+event_url_name: "OpenStreetMap"
+
 ###################### Clean HTML ######################
 ##
 ## Clean HTML removes possibilities of hacking your site.

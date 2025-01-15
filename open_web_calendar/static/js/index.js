@@ -122,6 +122,29 @@ function setSpecificationValueFromId(specification, key, id) {
   }
 }
 
+
+/* Create a mapping for the map.
+ *
+ */
+
+function getMapOptions() {
+    return {
+        "default" : {
+            "location": configuration.default_specification.event_url_location,
+            "geo": configuration.default_specification.event_url_geo,
+        },
+        "Google Maps" : {
+            "location": "https://www.google.com/maps/search/{location}",
+            "geo": "https://www.google.com/maps/@{lat},{lon},{zoom}z",
+        },
+        "Bing Maps" : {
+            "location": "https://www.bing.com/maps?q={location}&lvl={zoom}",
+            "geo": "https://www.bing.com/maps?brdr=1&cp={lat}%7E{lon}&lvl={zoom}",
+        },
+    }
+}
+
+
 /* This generates the specification of the calendar.
  *
  */
@@ -205,6 +228,23 @@ function getSpecification() {
         var checkbutton = checkbuttons[i];
         spec[checkbutton.id] = checkbutton.checked;
     }
+    /* map */
+    const mapInputs = document.getElementById("select-map");
+    const options = getMapOptions();
+    const optionId = mapInputs.value;
+    const option = options[optionId];
+    if (option == null) {
+        // We use the custom fields
+        const inputGeo = document.getElementById("map-link-geo");
+        spec.event_url_geo = inputGeo.value;
+        const inputLocation = document.getElementById("map-link-location");
+        spec.event_url_location = inputLocation.value;
+    } else {
+        spec.event_url_geo = option.geo;
+        spec.event_url_location = option.location;
+    }
+
+    /**************** Set all specification values before this line ****************/
     /* delete duplicate values */
     getOwnProperties(configuration.default_specification).forEach(function(element){
         if (arraysEqual(spec[element], configuration.default_specification[element])) {
@@ -310,6 +350,61 @@ function fillFirstInputWithData() {
       var urlInputs = document.getElementsByClassName("calendar-url-input");
       urlInputs[urlInputs.length - 1].value = url;
     }
+}
+
+function fillMapInputs() {
+    const mapInputs = document.getElementById("select-map");
+    const lastChild = mapInputs.lastElementChild;
+    const options = getMapOptions();
+    var optionChosen = false;
+    getOwnProperties(options).forEach(function (optionId) {
+        if (optionId != "default") {
+            /* Create an option */
+            var option = document.createElement("option");
+            option.value = optionId;
+            option.text = optionId;
+            mapInputs.appendChild(option);
+        }
+        /* select an option */
+        var option = options[optionId];
+        if (option.geo == specification.event_url_geo && option.location == specification.event_url_location) {
+            mapInputs.value = optionId;
+            optionChosen = true;
+        }
+    });
+    if (!optionChosen) {
+        mapInputs.value = "";
+    }
+    var defaultOption = document.getElementById("map-option-default");
+    defaultOption.text = configuration.default_specification.event_url_name;
+    mapInputs.appendChild(lastChild);
+    const inputGeo = document.getElementById("map-link-geo");
+    inputGeo.value = specification.event_url_geo;
+    const inputLocation = document.getElementById("map-link-location");
+    inputLocation.value = specification.event_url_location;
+    function onSelect() {
+        const optionId = mapInputs.value;
+        // see https://www.w3schools.com/jsref/prop_details_open.asp
+        // open and close the details
+        document.getElementById("map-details").open = optionId == "";
+        const option = options[optionId];
+        if (option) {
+            inputGeo.value = option.geo;
+            inputLocation.value = option.location;    
+        }
+        updateOutputs();
+    };
+    mapInputs.addEventListener("change", onSelect);
+    mapInputs.addEventListener("keyup", onSelect);
+    /* React to typing in the fields */
+    function selectLastOption() {
+        mapInputs.value = "";
+        updateOutputs();
+    }
+//    inputGeo.addEventListener("change", selectLastOption);
+    inputGeo.addEventListener("keyup", selectLastOption);
+//    inputLocation.addEventListener("change", selectLastOption);
+    inputLocation.addEventListener("keyup", selectLastOption);
 }
 
 
@@ -508,6 +603,7 @@ window.addEventListener("load", function(){
     initializeLinkTargetChoice();
     updateCalendarInputs();
     fillFirstInputWithData();
+    fillMapInputs();
     updateCalendarInputs();
     updateControls();
     // updating what can be seen

@@ -147,6 +147,21 @@ SPDX-License-Identifier: GPL-2.0-only
                         <option value="_top">{{ html("links-top") }}</option>
                     </select>
                 </p>
+                <h3>{{ html("map-title") }}</h3>
+                <p>
+                    {{ html("map-description") }}<br/>
+                    <select id="select-map">
+                        <option value="default" id="map-option-default"></option>
+                        <option value="" id="map-option-custom">{{ html("map-custom") }}</option>
+                    </select>
+                    <details id="map-details">
+                        <summary>{{ html("map-custom-summary") }}</summary>
+                        {{ html("map-link-location-description") }}<br/>
+                        <input type="text" id="map-link-location" /><br/>
+                        {{ html("map-link-geo-description") }}<br/>
+                        <input type="text" id="map-link-geo" /><br/>
+                    </details>
+                </p>
                 <h3>{{ html("configure-week-title") }}</h3>
                 <p>
                     <select id="select-start-of-week">
