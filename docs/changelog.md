@@ -13,6 +13,16 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+## v1.43
+
+- Update dependencies
+- Improve Belarusian translation by Yauhen, Ukrainian by Максим Горпиніч, Esperanto by phlostically
+- Update Security Policy
+- Add a way to choose the map, see [Issue 23](https://github.com/niccokunzmann/open-web-calendar/issues/23)
+- [Update DHTMLX Scheduler] to v7.2.1
+
+[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html
+
 ## v1.42
 
 - Improve gunicorn, PyPI and service documentation
@@ -21,7 +31,7 @@ The latest version might not be released, yet.
 - Update Italian translation by albanobattistella, German by Nicco Kunzmann, Korean by Paimon (JeaHoon Cha), Ukrainian by Максим Горпиніч, Spanish by gallegonovato
 - Fix UI test failures due to race condition when clicking a link
 - Improve load times for static files
-- Update DHTMLX Scheduler to v7.1.3
+- [Update DHTMLX Scheduler] to v7.1.3
 
 ## v1.41
 
@@ -36,9 +46,9 @@ The latest version might not be released, yet.
 - Support `webcal://` links
 - Provide docker releases with proper tag release information
 - Add choice: Choose the language of the viewer
-- Update DHTMLX Scheduler to v7.1.1
+- [Update DHTMLX Scheduler] to v7.1.1
 - Update examples to work with DHTMLX Scheduler v7.1.1
-- Add script to automatically update DHTMLX Scheduler
+- Add script to automatically [Update DHTMLX Scheduler]
 - Update dependencies
 - Deprecate Python 3.8
 - Add Chinese (Traditional Han script) and Korean
