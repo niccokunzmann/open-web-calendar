@@ -6,6 +6,8 @@ import sys
 from pathlib import Path
 from unittest.mock import Mock
 
+from flask import Flask
+from flask.testing import FlaskClient
 import pytest
 import requests
 
@@ -43,7 +45,7 @@ def mock():
 
 
 @pytest.fixture
-def app():
+def app() -> Flask:
     """Create the app.
 
     See https://flask.palletsprojects.com/en/2.2.x/testing/
@@ -64,7 +66,7 @@ def app():
 
 
 @pytest.fixture
-def client(app):
+def client(app:Flask) -> FlaskClient:
     return app.test_client()
 
 
@@ -80,12 +82,12 @@ for file in CALENDAR_DIRECTORY.iterdir():
 
 
 @pytest.fixture
-def calendar_urls():
+def calendar_urls() -> dict[str, str]:
     """Mapping the calendar name without .ics to the cached url.
 
     The files are located in the CALENDAR_FOLDER.
     """
-    mapping = {}
+    mapping : dict[str, str] = {}
     for file, content in calendar_files.items():
         url = "http://test.examples.local/" + file.name
         cache_url(url, content)

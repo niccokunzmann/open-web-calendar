@@ -34,6 +34,7 @@ sys.path.append(HERE / "..")
 from typing import TYPE_CHECKING  # noqa: E402
 
 from open_web_calendar.app import DEFAULT_SPECIFICATION, app  # noqa: E402
+import contextlib
 
 if TYPE_CHECKING:
     from selenium.webdriver.remote.webelement import WebElement
@@ -157,9 +158,12 @@ def app_server(context):
     p = multiprocessing.Process(target=run_simple, args=("localhost", app_port, app))
     p.start()
     context.index_page = f"http://localhost:{app_port}/"
-    wait_for_http_server(context.index_page, on_error=p.terminate)
+    def terminate():
+        with contextlib.suppress(PermissionError):
+            p.terminate()  # server is already down
+    wait_for_http_server(context.index_page, on_error=terminate)
     yield
-    p.terminate()
+    terminate()
 
 
 def wait_for_http_server(url, on_error=lambda: None):

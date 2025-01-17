@@ -141,6 +141,10 @@ function getMapOptions() {
             "location": "https://www.bing.com/maps?q={location}&lvl={zoom}",
             "geo": "https://www.bing.com/maps?brdr=1&cp={lat}%7E{lon}&lvl={zoom}",
         },
+        "geo:" : {
+            "location": "",
+            "geo": "geo:{lat},{lon}",
+        }
     }
 }
 

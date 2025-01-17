@@ -1,12 +1,14 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+from __future__ import annotations
 
 import io
 import sys
 import traceback
 from concurrent.futures import ThreadPoolExecutor
 from threading import RLock
+from typing import Any
 from urllib.parse import urljoin
 
 import requests
@@ -25,7 +27,7 @@ class ConversionStrategy:
     # TODO: add as parameters
     MAXIMUM_THREADS = 100
 
-    def __init__(self, specification, get_text_from_url=get_text_from_url):
+    def __init__(self, specification:dict[str, Any], get_text_from_url=get_text_from_url):
         self.specification = specification
         self.lock = RLock()
         self.components = []
