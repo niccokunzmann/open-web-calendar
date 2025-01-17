@@ -13,6 +13,13 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+## v1.43
+
+- Update dependencies
+- Improve Belarusian translation by Yauhen, Ukrainian by Максим Горпиніч, Esperanto by phlostically
+- Update Security Policy
+- Add a way to choose the map, see [Issue 23](https://github.com/niccokunzmann/open-web-calendar/issues/23)
+
 ## v1.42
 
 - Improve gunicorn, PyPI and service documentation
