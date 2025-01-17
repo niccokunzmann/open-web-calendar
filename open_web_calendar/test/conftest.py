@@ -1,15 +1,19 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+from __future__ import annotations
 
 import sys
 from pathlib import Path
+from typing import TYPE_CHECKING
 from unittest.mock import Mock
 
-from flask import Flask
-from flask.testing import FlaskClient
 import pytest
 import requests
+
+if TYPE_CHECKING:
+    from flask import Flask
+    from flask.testing import FlaskClient
 
 # constants
 HERE = Path(__file__).parent
@@ -66,7 +70,7 @@ def app() -> Flask:
 
 
 @pytest.fixture
-def client(app:Flask) -> FlaskClient:
+def client(app: Flask) -> FlaskClient:
     return app.test_client()
 
 
@@ -87,7 +91,7 @@ def calendar_urls() -> dict[str, str]:
 
     The files are located in the CALENDAR_FOLDER.
     """
-    mapping : dict[str, str] = {}
+    mapping: dict[str, str] = {}
     for file, content in calendar_files.items():
         url = "http://test.examples.local/" + file.name
         cache_url(url, content)

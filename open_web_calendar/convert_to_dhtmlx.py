@@ -5,19 +5,19 @@ from __future__ import annotations
 
 import datetime
 from html import escape
-from pprint import pprint
-from typing import Optional
-from urllib.parse import unquote
+from typing import TYPE_CHECKING, Optional
 
 import pytz
 import recurring_ical_events
 from dateutil.parser import parse as parse_date
 from flask import jsonify
-from icalendar import Event
 from icalendar_compatibility import Description, Location, LocationSpec
 
 from .clean_html import clean_html
 from .conversion_base import ConversionStrategy
+
+if TYPE_CHECKING:
+    from icalendar import Event
 
 
 def is_date(date):
@@ -53,7 +53,6 @@ class ConvertToDhtmlx(ConversionStrategy):
             if self.specification.get("from")
             else today.replace(year=today.year - 1)
         )
-        print(self.from_date, '->', self.to_date)
 
     def date_to_string(self, date):
         """Convert a date to a string."""
@@ -70,7 +69,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         # convert to other timezone, see https://stackoverflow.com/a/54376154
         viewed_date = date.astimezone(self.timezone)
         return viewed_date.strftime("%Y-%m-%d %H:%M")
-    
+
     @property
     def location_spec(self) -> LocationSpec:
         return LocationSpec(
@@ -78,7 +77,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             text_url=self.specification.get("event_url_location", ""),
         )
 
-    def convert_ical_event(self, calendar_index, calendar_event:Event):
+    def convert_ical_event(self, calendar_index, calendar_event: Event):
         start = calendar_event["DTSTART"].dt
         end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
         if is_date(start) and is_date(end) and end == start:
@@ -90,14 +89,12 @@ class ConvertToDhtmlx(ConversionStrategy):
             "UID", ""
         )  # issue 69: UID is helpful for debugging but not required
         start_date = self.date_to_string(start)
-        location_map : Optional[dict[str, str]]= {
-                "text": location.text,
-                "url": location.url,
-            }
+        location_map: Optional[dict[str, str]] = {
+            "text": location.text,
+            "url": location.url,
+        }
         if not location_map["text"] and not location_map["url"]:
             location_map = None
-        print("event")
-        print("location_map", location_map, location.url)
         return {
             "start_date": start_date,
             "end_date": self.date_to_string(end),
@@ -152,7 +149,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "css-classes": ["error"],
         }
 
-    def get_event_description(self, event:Event):
+    def get_event_description(self, event: Event):
         """Return a formatted description of the event.
 
         HTML is cleaned.
@@ -160,7 +157,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         description = Description(event).html
         return self.clean_html(description)
 
-    def clean_html(self, html:str):
+    def clean_html(self, html: str):
         """Return the cleaned HTML."""
         return clean_html(html, self.specification)
 
@@ -173,10 +170,6 @@ class ConvertToDhtmlx(ConversionStrategy):
             events = recurring_ical_events.of(calendar).between(
                 self.from_date, self.to_date
             )
-            print("raw calendar")
-            pprint(calendar.events)
-            print("result", self.from_date, '->', self.to_date)
-            pprint(events)
             with self.lock:
                 for event in events:
                     json_event = self.convert_ical_event(calendar_index, event)

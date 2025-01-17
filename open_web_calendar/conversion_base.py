@@ -27,7 +27,9 @@ class ConversionStrategy:
     # TODO: add as parameters
     MAXIMUM_THREADS = 100
 
-    def __init__(self, specification:dict[str, Any], get_text_from_url=get_text_from_url):
+    def __init__(
+        self, specification: dict[str, Any], get_text_from_url=get_text_from_url
+    ):
         self.specification = specification
         self.lock = RLock()
         self.components = []

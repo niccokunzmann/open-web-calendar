@@ -7,6 +7,7 @@
 see https://behave.readthedocs.io/en/stable/practical_tips.html#selenium-example
 """
 
+import contextlib
 import copy
 import http.server
 import multiprocessing
@@ -17,6 +18,7 @@ import sys
 import threading
 import time
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import requests
 from behave import fixture, use_fixture
@@ -29,15 +31,13 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.remote.webdriver import WebDriver
 from werkzeug import run_simple
 
-HERE = Path(__file__).parent.absolute()
-sys.path.append(HERE / "..")
-from typing import TYPE_CHECKING  # noqa: E402
-
-from open_web_calendar.app import DEFAULT_SPECIFICATION, app  # noqa: E402
-import contextlib
-
 if TYPE_CHECKING:
     from selenium.webdriver.remote.webelement import WebElement
+
+HERE = Path(__file__).parent.absolute()
+sys.path.append(HERE / "..")
+
+from open_web_calendar.app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
 CALENDAR_FOLDER = HERE / "calendars"
 SCREENSHOTS_FOLDER = HERE.parent / "screenshots"
@@ -158,9 +158,11 @@ def app_server(context):
     p = multiprocessing.Process(target=run_simple, args=("localhost", app_port, app))
     p.start()
     context.index_page = f"http://localhost:{app_port}/"
+
     def terminate():
         with contextlib.suppress(PermissionError):
             p.terminate()  # server is already down
+
     wait_for_http_server(context.index_page, on_error=terminate)
     yield
     terminate()
