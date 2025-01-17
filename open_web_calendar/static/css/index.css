@@ -98,3 +98,9 @@ main {
 .css-class-example {
   display: inline-block;
 }
+
+#map-link-location, #map-link-geo {
+  /* credits to https://css-tricks.com/styling-texty-inputs-only/ */
+  margin: 2px;
+  width: 100%;
+}
