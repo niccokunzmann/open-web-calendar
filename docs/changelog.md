@@ -19,6 +19,7 @@ The latest version might not be released, yet.
 - Improve Belarusian translation by Yauhen, Ukrainian by Максим Горпиніч, Esperanto by phlostically
 - Update Security Policy
 - Add a way to choose the map, see [Issue 23](https://github.com/niccokunzmann/open-web-calendar/issues/23)
+- Update DHTMLX Scheduler to v7.2.1
 
 ## v1.42
 
