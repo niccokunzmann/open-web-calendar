@@ -55,6 +55,7 @@ def test_invalid_path_for_env_var(monkeypatch):
     with pytest.raises(ValueError):
         get_default_specification()
 
+
 # def test_invalid_value_for_env_var(tmp_path, monkeypatch):
 #     """We can provide invalid values."""
 #     monkeypatch.setitem(os.environ, "OWC_SPECIFICATION", "'invalid-config'")
@@ -66,6 +67,7 @@ def test_an_empty_spec_is_alright(monkeypatch):
     """The spec variable must be ok to be empty."""
     monkeypatch.setitem(os.environ, "OWC_SPECIFICATION", "")
     get_default_specification()
+
 
 def test_no_spec_is_alright(monkeypatch):
     """Not having a spec is ok."""
