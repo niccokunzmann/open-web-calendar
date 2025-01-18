@@ -67,6 +67,8 @@ theme:
   icon:
     edit: material/pencil
     view: material/eye
+    admonition:
+      note: material/information-outline
   # theme, see
   name: material
   custom_dir: docs/overrides
@@ -297,5 +299,6 @@ markdown_extensions:
         kwds:
           case: lower
   - pymdownx.superfences
+  - admonition  # see https://squidfunk.github.io/mkdocs-material/reference/admonitions/
 hooks:
   - docs/hooks/set_canonical_url.py

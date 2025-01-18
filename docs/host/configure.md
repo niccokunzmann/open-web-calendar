@@ -18,16 +18,16 @@ You can choose to
 
 ## Configuring the Default Calendar
 
-The configuration of all calendars is rooted in the [default_specification.yml].
+The configuration of all calendars is rooted in the [default_specification].
 All those values can be changed through a copy of this file hosted on the web
 through the calendar parameter `specification_url`.
-Each parameter should be documented in [default_specification.yml].
+Each parameter should be documented in [default_specification].
 
-If you modify the default specification, you modify **all calendars** that are hosted at your instance.
+To modify **all calendars** hosted on your instance, use the [OWC_SPECIFICATION] environment variable.
 Calendars still override some values for their configuration.
-Those which they do not override are affected.
+Those which they do not override are affected by the default specification.
 Not all values are exposed to the configuration page to be changed.
-Those values can still be changed in the [default_specification.yml] and the query parameters.
+Those values can still be changed in the `specification_url` and the query parameters.
 
 You might want to change the following values.
 
@@ -65,10 +65,11 @@ You can link to the one of this project.
 ### More Values
 
 There are loads more values that can be changed.
-Please refer to the [default_specification.yml].
+Please refer to the [default_specification].
 These values are all documented.
+Please use the [OWC_SPECIFICATION] environment variable to change them.
 
-[default_specification.yml]: https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml
+[default_specification]: ../../assets/default_specification.yml
 [privacy-policy]: ../privacy-policy
 
 See also:
@@ -108,6 +109,33 @@ Examples:
 
 - Serve on HTTP port: `PORT=80`
 
+### OWC_SPECIFICATION
+
+[OWC_SPECIFICATION]: #owc_specification
+
+`OWC_SPECIFICATION` is an optional environment variable.
+
+- It can be a **path** to a file containing valid YAML or JSON.
+- It can be a **string** containing valid YAML or JSON.
+
+Setting `OWC_SPECIFICATION` allows you to replace default values for all calendars.
+
+!!! note
+
+    New versions of the Open Web Calendar can add new configuration parameters.
+    Placing your changes in this variable instead of changing the `default_specification` file
+    will ensure that you do not break the Open Web Calendar in a future version.
+
+In following example, the title for all calendars that do not set their own title will be changed.
+
+```sh
+OWC_SPECIFICATION='{"title": "calendar"}' gunicorn open_web_calendar:app
+```
+
+See also:
+
+- [OWC_SPECIFICATION in the API](../../dev/api#owc_specification)
+
 ### WORKERS
 
 default `4`, only for the Docker container
@@ -127,7 +155,6 @@ Seconds to cache the calendar files that get downloaded to reduce bandwidth and 
 Examples:
 
 - Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`
-
 
 ### APP_DEBUG
 

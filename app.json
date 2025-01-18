@@ -2,7 +2,7 @@
   "name": "Open Web Calendar",
   "description": "Embed a web calendar into your own website.",
   "repository": "https://github.com/niccokunzmann/open-web-calendar",
-  "website": "https://github.com/niccokunzmann/open-web-calendar",
+  "website": "https://open-web-calendar.quelltext.eu/",
   "success_url": "/",
   "env": {
     "APP_DEBUG": {
@@ -19,6 +19,11 @@
       "description": "How many workers should run in parallel to work on requests.",
       "value": "4",
       "required": true
+    },
+    "OWC_SPECIFICATION": {
+      "description": "JSON or YAML content to alter the specification of all calendars.",
+      "value": "{}",
+      "required": false
     }
   },
   "image": "heroku/python",
