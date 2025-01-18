@@ -69,6 +69,13 @@ services:
       - OWC_SPECIFICATION="{'privacy_policy':'http://link-to-my-privacy-policy'}"
       - WORKERS=4
     restart: unless-stopped
+    networks:
+      - owc-net
+
+networks:
+  owc-net: # shield the OWC from accessing other services (SSRF protection)
+    ipam:
+      driver: default  # give OWC Internet access
 ```
 
 To deploy the Open Web Calendar with `docker compose`, follow these steps:
