@@ -43,6 +43,12 @@ msgid ""
 "behavior](../configure)."
 msgstr ""
 
+msgid "Examples:"
+msgstr ""
+
+msgid "OWC_SPECIFICATION"
+msgstr ""
+
 #~ msgid "Translate"
 #~ msgstr ""
 

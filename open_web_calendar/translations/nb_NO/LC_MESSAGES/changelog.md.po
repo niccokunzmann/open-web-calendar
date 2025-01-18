@@ -433,9 +433,6 @@ msgstr ""
 msgid "v1.5"
 msgstr ""
 
-msgid "add link to [Contributing Section](#contributing) in about page"
-msgstr ""
-
 msgid "make event clickable even if there is a tool tip window"
 msgstr ""
 
@@ -691,6 +688,16 @@ msgid ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
 msgstr ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
+
+msgid ""
+"Introduce, test and document the `OWC_SPECIFICATION` environment variable."
+msgstr ""
+
+msgid "add link to [Contributing Section](../contributing) in about page"
+msgstr ""
+
+#~ msgid "add link to [Contributing Section](#contributing) in about page"
+#~ msgstr ""
 
 #~ msgid "Update DHTMLX Scheduler to v7.1.1"
 #~ msgstr ""

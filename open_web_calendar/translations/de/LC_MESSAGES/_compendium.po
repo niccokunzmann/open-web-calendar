@@ -95,6 +95,9 @@ msgstr ""
 msgid "Python Package"
 msgstr "Python-Paket"
 
+msgid "OWC_SPECIFICATION"
+msgstr ""
+
 #~ msgid ""
 #~ "The configuration of all calendars is rooted in the "
 #~ "[default_specification.yml]. All those values can be changed through a copy "

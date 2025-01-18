@@ -44,6 +44,12 @@ msgstr ""
 "Після налаштування власного сервера ви можете [налаштувати "
 "поведінку](../configure)."
 
+msgid "Examples:"
+msgstr ""
+
+msgid "OWC_SPECIFICATION"
+msgstr ""
+
 #~ msgid "Translate"
 #~ msgstr ""
 
