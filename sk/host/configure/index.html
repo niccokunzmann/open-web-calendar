@@ -33,6 +33,14 @@
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg>');}</style>
+
 
 
     
@@ -62,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8yxpnv61/sk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_iy67dnb5/sk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8yxpnv61/sk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_iy67dnb5/sk/host/configure/index.png" >
       
     
     
@@ -964,6 +972,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#owc_specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWC_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#workers" class="md-nav__link">
     <span class="md-ellipsis">
       WORKERS
@@ -1043,8 +1060,8 @@
 <li>Zmeniť, ako funguje server.</li>
 </ul>
 <h2 id="konfiguracia-kalendara-default">Konfigurácia kalendára Default<a class="headerlink" href="#konfiguracia-kalendara-default" title="Permanentný odkaz">&para;</a></h2>
-<p>Konfigurácia všetkých kalendárov je zakorenená v [predvolené_specification.yml]. Všetky tieto hodnoty môžu byť zmenené prostredníctvom kópie tohto súboru hostené na webe prostredníctvom kalendárneho parametra <code>specification_url</code>. Každý parameter by mal byť zdokumentovaný v [predvolené_specification.yml].</p>
-<p>Ak upravujete predvolenú špecifikáciu, upravujete ** všetky kalendáre**, ktoré sú hostené vo vašom prípade. Kalendáre stále prepisujú niektoré hodnoty pre ich konfiguráciu. Tí, ktorí neprepisujú, sú ovplyvnené. Nie všetky hodnoty sú vystavené konfiguračnej stránke, ktorá sa má zmeniť. Tieto hodnoty môžu byť stále zmenené v [predvolené_specification.yml] a parametre query.</p>
+<p>The configuration of all calendars is rooted in the <a href="../../assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="../../assets/default_specification.yml">default_specification</a>.</p>
+<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
 <p>You might want to change the following values.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Permanentný odkaz">&para;</a></h3>
 <p>The title of your website.</p>
@@ -1060,7 +1077,7 @@
 <p>If you host this service yourself, you can use the default <a href="../privacy-policy">privacy policy</a>.</p>
 <p>If for some reason you decide to collect data i.e. in the HTTPS proxy or log IP-addresses, then you need to create your own privacy policy. You can link to the one of this project.</p>
 <h3 id="more-values">More Values<a class="headerlink" href="#more-values" title="Permanentný odkaz">&para;</a></h3>
-<p>There are loads more values that can be changed. Please refer to the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a>. These values are all documented.</p>
+<p>There are loads more values that can be changed. Please refer to the <a href="../../assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
 <p>See also:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
@@ -1073,7 +1090,7 @@
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
-<p>Príklady:</p>
+<p>Examples:</p>
 <ul>
 <li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
 <li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
@@ -1083,21 +1100,41 @@
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Permanentný odkaz">&para;</a></h3>
 <p>predvolené <code>5000</code>, predvolené <code>80</code> v kontajneri Docker</p>
 <p>Prístav, na ktorom funguje služba.</p>
-<p>Príklady:</p>
+<p>Examples:</p>
 <ul>
 <li>Slúžiť na HTTP port: <code>PORT=80</code></li>
+</ul>
+<h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanentný odkaz">&para;</a></h3>
+<p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
+<ul>
+<li>It can be a <strong>path</strong> to a file containing valid YAML or JSON.</li>
+<li>It can be a <strong>string</strong> containing valid YAML or JSON.</li>
+</ul>
+<p>Setting <code>OWC_SPECIFICATION</code> allows you to replace default values for all calendars.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New versions of the Open Web Calendar can add new configuration parameters.
+Placing your changes in this variable instead of changing the <code>default_specification</code> file
+will ensure that you do not break the Open Web Calendar in a future version.</p>
+</div>
+<p>In following example, the title for all calendars that do not set their own title will be changed.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
+</code></pre></div>
+<p>See also:</p>
+<ul>
+<li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Permanentný odkaz">&para;</a></h3>
 <p>predvolené <code>4</code>, len pre kontajner Docker</p>
 <p>Počet paralelných pracovníkov na spracovanie požiadaviek.</p>
-<p>Príklady:</p>
+<p>Examples:</p>
 <ul>
 <li>Používajte iba jedného pracovníka: <code>WORKERS=1</code></li>
 </ul>
 <h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Permanentný odkaz">&para;</a></h3>
 <p>predvolené <code>600</code></p>
 <p>Po druhé vyrovnávanie kalendárových súborov, ktoré sa stiahli na zníženie šírky pásma a oneskorenie.</p>
-<p>Príklady:</p>
+<p>Examples:</p>
 <ul>
 <li>Obnoviť rýchlo: <code>CACHE_RESTED_URLS_FOR_SECONDS=10</code></li>
 </ul>

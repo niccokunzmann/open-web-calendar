@@ -33,6 +33,14 @@
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg>');}</style>
+
 
 
     
@@ -62,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8yxpnv61/es/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_iy67dnb5/es/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8yxpnv61/es/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_iy67dnb5/es/dev/api/index.png" >
       
     
     
@@ -876,18 +884,69 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-anadir-parametros" class="md-nav__link">
+  <a href="#compilacion-de-la-especificacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Cómo añadir parámetros
+      Compilación de la especificación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compilación de la especificación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query parameters
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#specification_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      specification_url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open_web_calendarappdefault_specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      open_web_calendar.app.DEFAULT_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owc_specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWC_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      default_specification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#compilacion-de-la-especificacion" class="md-nav__link">
+  <a href="#como-anadir-parametros" class="md-nav__link">
     <span class="md-ellipsis">
-      Compilación de la especificación
+      Cómo añadir parámetros
     </span>
   </a>
   
@@ -992,25 +1051,36 @@
 </div>
 </div>
 </div>
+<h2 id="compilacion-de-la-especificacion">Compilación de la especificación<a class="headerlink" href="#compilacion-de-la-especificacion" title="Enlace permanente">&para;</a></h2>
+<p>You can change the calendar behavior and looks with parameters. If the same parameter is specified in different places, the earlier place listed below has the highest precedence. These are the places to specify parameters:</p>
+<h3 id="query-parameters">Query parameters<a class="headerlink" href="#query-parameters" title="Enlace permanente">&para;</a></h3>
+<p>All parameters to the calendar url are put into the specification. The query parameters have the highest precedence.</p>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code>index.html?language=de
+calendar.html?title=CALENDAR
+</code></pre></div>
+<h3 id="specification_url">specification_url<a class="headerlink" href="#specification_url" title="Enlace permanente">&para;</a></h3>
+<p>If you specify this query parameter, the editor configuration is loaded from this url, too. Query parameters are still more important than what is written in this file. The source format can be YAML or JSON.</p>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml
+</code></pre></div>
+<h3 id="open_web_calendarappdefault_specification">open_web_calendar.app.DEFAULT_SPECIFICATION<a class="headerlink" href="#open_web_calendarappdefault_specification" title="Enlace permanente">&para;</a></h3>
+<p>This is intended for developers and Python-internal.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">open_web_calendar.app</span><span class="w"> </span><span class="kn">import</span> <span class="n">DEFAULT_SPECIFICATION</span>
+<span class="n">DEFAULT_SPECIFICATION</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;calendar&#39;</span>
+</code></pre></div>
+<h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Enlace permanente">&para;</a></h3>
+<p>This is an optional environment variable. Please read more about it in the <a href="../../host/configure#owc_specification">Server Configuration</a>.</p>
+<h3 id="default_specification"><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a><a class="headerlink" href="#default_specification" title="Enlace permanente">&para;</a></h3>
+<p>This file contains the default parameters. They must not be hard-coded in the source code. All parameters are listed and documented there so this file can be used for reference. Do not modify this file, instead use the <code>OWC_SPECIFICATION</code> environment variable.</p>
 <h2 id="como-anadir-parametros">Cómo añadir parámetros<a class="headerlink" href="#como-anadir-parametros" title="Enlace permanente">&para;</a></h2>
-<p>Si añades un nuevo parámetro como desarrollador,</p>
+<p>If you add a new parameter as a developer:</p>
 <ul>
 <li>Añade el parámetro con un valor por defecto a la <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></li>
 <li>Añadir una implementación, dependiendo de su uso en <code>app.py</code> o a las plantillas de los archivos JavaScript. La especificación ya está disponible en todos ellos para su uso.</li>
 <li>Añade pruebas en <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> para comprobar que el calendario responde a la función.</li>
 <li>Añadir pruebas en <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> para asegurarse de que el parámetro se puede utilizar cuando se edita un calendario.</li>
 </ul>
-<h2 id="compilacion-de-la-especificacion">Compilación de la especificación<a class="headerlink" href="#compilacion-de-la-especificacion" title="Enlace permanente">&para;</a></h2>
-<p>Puedes cambiar el comportamiento y la apariencia del calendario en los parámetros. Estos son los lugares para especificar parámetros:</p>
-<ol>
-<li><strong>Parámetros de la consulta</strong> Todos los parámetros de la url del calendario se introducen en las especificaciones. Los parámetros de consulta tienen la mayor prioridad. Ejemplos:    <code>txt    index.html?language=de calendar.html?title=CALENDAR</code></li>
-<li>
-<p><strong>specification_url</strong> Si especificas este parámetro de consulta, la configuración del editor también se carga desde esta url. Los parámetros de consulta siguen siendo más importantes que el archivo. El formato fuente puede ser YAML o JSON. Ejemplos:         calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml</p>
-</li>
-<li>
-<p><strong><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a></strong> Este archivo contiene los parámetros por defecto. No deben estar codificados en el código fuente. Todos ellos están ahí. Los parámetros de consulta y la <code>specification_url</code> anulan estos valores.</p>
-</li>
-</ol>
 <h2 id="especificacion-en-el-calendario">Especificación en el calendario<a class="headerlink" href="#especificacion-en-el-calendario" title="Enlace permanente">&para;</a></h2>
 <p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compila la especificación a partir de los parámetros dados en <code>get_specification()</code>. En <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> puedes acceder a la especificación a través de la variable <code>specification</code>. La especificación está disponible para JavaScript como la variable <code>specification</code>.</p>
 <h2 id="especificacion-en-la-pagina-index">Especificación en la página Index<a class="headerlink" href="#especificacion-en-la-pagina-index" title="Enlace permanente">&para;</a></h2>

@@ -33,6 +33,14 @@
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg>');}</style>
+
 
 
     
@@ -62,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8yxpnv61/uk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_iy67dnb5/uk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8yxpnv61/uk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_iy67dnb5/uk/host/configure/index.png" >
       
     
     
@@ -964,6 +972,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#owc_specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWC_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#workers" class="md-nav__link">
     <span class="md-ellipsis">
       WORKERS
@@ -1043,8 +1060,8 @@
 <li>Змінити роботу сервера.</li>
 </ul>
 <h2 id="_2">Налаштування календаря за замовчуванням<a class="headerlink" href="#_2" title="Постійне посилання">&para;</a></h2>
-<p>Конфігурація всіх календарів міститься в <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a>. Усі ці значення можна змінити за допомогою копії цього файлу, розміщеного в Інтернеті за допомогою параметра календаря <code>specification_url</code>. Кожен параметр має бути задокументований у <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a>.</p>
-<p>Якщо ви змінюєте специфікацію за замовчуванням, ви змінюєте <strong>усі календарі</strong>, розміщені у вашому екземплярі. Календарі все ще замінюють деякі значення для їх конфігурації. Впливають на ті, які вони не перевизначають. Не всі значення відображаються на сторінці конфігурації, яку потрібно змінити. Ці значення все ще можна змінити в <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a> і параметрах запиту.</p>
+<p>The configuration of all calendars is rooted in the <a href="../../assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="../../assets/default_specification.yml">default_specification</a>.</p>
+<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
 <p>Ви можете змінити наступні значення.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Постійне посилання">&para;</a></h3>
 <p>Назва вашого сайту.</p>
@@ -1060,7 +1077,7 @@
 <p>Якщо ви самостійно розміщуєте цю службу, ви можете використовувати стандартну <a href="../privacy-policy">політику конфіденційності</a>.</p>
 <p>Якщо з якоїсь причини ви вирішите збирати дані, наприклад, у HTTPS-проксі або реєструвати IP-адреси, вам потрібно створити власну політику конфіденційності. Ви можете посилатися на один із цього проекту.</p>
 <h3 id="_3">Більше цінностей<a class="headerlink" href="#_3" title="Постійне посилання">&para;</a></h3>
-<p>Є ще багато значень, які можна змінити. Зверніться до <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/open_web_calendar/default_specification.yml">default_specification.yml</a>. Усі ці значення задокументовані.</p>
+<p>There are loads more values that can be changed. Please refer to the <a href="../../assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
 <p>Дивіться також:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
@@ -1073,7 +1090,7 @@
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
-<p>Приклади:</p>
+<p>Examples:</p>
 <ul>
 <li>дозволяти лише той самий комп’ютер: <code>ALLOWED_HOSTS=localhost</code></li>
 <li>дозволити декілька хостів: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
@@ -1083,21 +1100,41 @@
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Постійне посилання">&para;</a></h3>
 <p>за замовчуванням <code>5000</code>, за замовчуванням <code>80</code> в контейнері Docker</p>
 <p>Порт, на якому працює служба.</p>
-<p>Приклади:</p>
+<p>Examples:</p>
 <ul>
 <li>Обслуговувати через порт HTTP: <code>PORT=80</code></li>
+</ul>
+<h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Постійне посилання">&para;</a></h3>
+<p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
+<ul>
+<li>It can be a <strong>path</strong> to a file containing valid YAML or JSON.</li>
+<li>It can be a <strong>string</strong> containing valid YAML or JSON.</li>
+</ul>
+<p>Setting <code>OWC_SPECIFICATION</code> allows you to replace default values for all calendars.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New versions of the Open Web Calendar can add new configuration parameters.
+Placing your changes in this variable instead of changing the <code>default_specification</code> file
+will ensure that you do not break the Open Web Calendar in a future version.</p>
+</div>
+<p>In following example, the title for all calendars that do not set their own title will be changed.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
+</code></pre></div>
+<p>Дивіться також:</p>
+<ul>
+<li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Постійне посилання">&para;</a></h3>
 <p>за замовчуванням <code>4</code>, лише для контейнера Docker</p>
 <p>Кількість паралельних працівників для обробки запитів.</p>
-<p>Приклади:</p>
+<p>Examples:</p>
 <ul>
 <li>Використовуйте лише один робочий файл: <code>WORKERS=1</code></li>
 </ul>
 <h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Постійне посилання">&para;</a></h3>
 <p>за замовчуванням <code>600</code></p>
 <p>Секунди для кешування файлів календаря, які завантажуються, щоб зменшити пропускну здатність і затримку.</p>
-<p>Приклади:</p>
+<p>Examples:</p>
 <ul>
 <li>Швидке оновлення: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
 </ul>

@@ -33,6 +33,14 @@
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg>');}</style>
+
 
 
     
@@ -62,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8yxpnv61/es/host/docker/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_iy67dnb5/es/host/docker/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -78,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8yxpnv61/es/host/docker/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_iy67dnb5/es/host/docker/index.png" >
       
     
     
@@ -983,7 +991,8 @@
 <span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;80:80&#39;</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ALLOWED_HOSTS=</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OWC_SPECIFICATION=&quot;{&#39;privacy_policy&#39;:&#39;http://link-to-my-privacy-policy&#39;}&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WORKERS=4</span>
 <span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
 </code></pre></div>
 <p>To deploy the Open Web Calendar with <code>docker compose</code>, follow these steps:</p>
@@ -995,7 +1004,12 @@
 </code></pre></div></li>
 <li>The container will be pulled automatically from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> and then starts.</li>
 </ol>
-<p><strong>Important Note:</strong> If you use this service, consider setting up <a href="https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47">log rotation</a> as it is very talkative.</p>
+<div class="admonition note">
+<p class="admonition-title">Growing log files</p>
+<p>If you use this service, consider setting up
+<a href="https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47">log rotation</a>
+as it is very talkative.</p>
+</div>
 <h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="Enlace permanente">&para;</a></h2>
 <p>If you want to update your image with the latest version from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> run this:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull

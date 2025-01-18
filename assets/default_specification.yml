@@ -1,0 +1,247 @@
+## SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+##
+## SPDX-License-Identifier: CC-BY-SA-4.0
+##
+## Specification
+##
+## The specification of the calendar can be written in YAML and JSON.
+## You can copy and paste the specification and adapt it to your needs.
+##
+## Lines with two ## are comments and lines with one # are code which
+## is not in use.
+##
+
+## url can be a single link to an ics file or a list.
+#url: https://your.link.to/a-file.ics
+url:
+- https://www.calendarlabs.com/ical-calendar/ics/46/Germany_Holidays.ics
+#- https://www.calendarlabs.com/ical-calendar/ics/46/Germany_Holidays.ics
+#- https://www.calendarlabs.com/ical-calendar/ics/46/Germany_Holidays.ics
+
+## The title is displayed as the title of the html page.
+title: "Open Web Calendar"
+
+## The favicon of the page
+favicon: "/static/img/logo/owc.svg"
+
+## The starting date of the calendar view in YYYY-MM-DD format
+## Leave empty for today
+date: ""
+
+## First hour of the view
+starting_hour: "0"
+
+## Last hour of the view
+ending_hour: "24"
+
+## example use: restrict calendar view to working hours
+#starting_hour: 8
+#ending_hour: 18
+
+## Hour division
+## size in minute of divisions in day & week views
+## Possibles values:
+## - 1 (1 hour)
+## - 2 (30 minutes)
+## - 4 (15 minutes)
+## - 6 (10 minutes)
+hour_division: "1"
+
+## The language of the calendar. You can choose from these languages:
+## Arabic: "ar"
+## Belarusian: "be"
+## Catalan: "ca"
+## Chinese: "cn"
+## Czech: "cs"
+## Danish: "da"
+## Dutch: "nl"
+## English: "en"
+## Finnish: "fi"
+## French: "fr"
+## German: "de"
+## Greek: "el"
+## Hebrew: "he"
+## Hungarian: "hu"
+## Indonesian: "id"
+## Italian: "it"
+## Japanese: "jp"
+## Norwegian: "no"
+## Norwegian Bokmål: "nb"
+## Polish: "pl"
+## Portuguese: "pt"
+## Romanian: "ro"
+## Russian: "ru"
+## Slovak: "sk"
+## Slovenian: "si"
+## Spanish: "es"
+## Swedish: "sv"
+## Turkish: "tr"
+## Ukrainian: "ua"
+## You can find all languages in the "translations" directory.
+language: "en"
+
+## If this is set to true, the language of the web browser
+## is used to display the calendar. If the language of the browser is
+## not known, we use the language defined in the language: field.
+prefer_browser_language: false
+
+## The skin changes the look of the calendar.
+## They are located in the static/css/dhtmlx folder.
+## You can choose one of these:
+#skin: "contrast-black"
+#skin: "terrace"
+#skin: "contrast-white"
+#skin: "flat"
+#skin: "dark"
+skin: "material"
+
+## You can embed custom css code, i.e. to change the background or font.
+css: ""
+## You can also specify one or more urls to style sheets.
+css_url: []
+
+## The target is the place where links are opened.
+## "_top" opens the link where the website is embedded.
+## "_blank" opens the link in a new tab.
+## "_self" replaces the calendar with the link content.
+## "_parent" opens the link in on the page where the calendar is embedded.
+target: "_top"
+
+## This is the url to a loader animation which is displayed while the
+## calendar loads events.
+loader: "/img/loaders/circular-loader.gif"
+
+## Choose which tab to display when the calendar opens.
+tab: "month"
+#tab: "week"
+#tab: "day"
+#tab: "agenda"
+
+## Choose which tabs can be chosen by the user.
+tabs:
+- "month"
+- "week"
+- "day"
+#- agenda
+
+## Users can control the calendar.
+## You can hide these buttons:
+controls:
+## Users can go to the next day/week/month.
+- "next"
+## Users can go to the previous day/week/month.
+- "previous"
+## Users can go to the current day/week/month.
+- "today"
+## Users can see the date.
+- "date"
+
+## You can describe the calendar with a text so people know what it is about.
+## If this is empty, the description is taken from the project's translations.
+description: ""
+
+## You can choose the start of the week. Either "mo" for Monday or "su" for Sunday. "work" is Mo-Fr.
+start_of_week: mo
+
+## You can fix the calendar to a specific time zone. Default is to take it from the browser.
+## Example values: "Europe/Berlin", "Asia/Shanghai" or "" for the timezone of the user/viewer.
+timezone: ""
+
+## You can change the format of how a time is displayed.
+## See also https://docs.dhtmlx.com/scheduler/settings_format.html
+hour_format: "%H:%i"     # examples: 01:30, 13:45
+#hour_format: "%G:%i"    # examples:  1:30, 13:45
+#hour_format: "%g:%i %a" # examples:  1:30 am, 1:45 pm
+
+## This is the width in pixels at which the calendar switches to a compact
+## layout in order to fit in all the elements.
+compact_layout_width: 600
+
+## This changes the style of events according to their STATUS
+style-event-status-tentative: false
+style-event-status-confirmed: false
+style-event-status-cancelled: false
+
+## This adds JavaScript to the calendar.
+## You can add JavaScript directly or as a link.
+## Please note that there might be no guarantees when it comes to your code working.
+## We recommend adding your feature to the project and testing them to make
+## sure that they are maintained in the future.
+## I.e. add a checkbox to activate your script.
+javascript: ""
+## The linked JavaScript documents are expected to be UTF-8 encoded.
+javascript_url: []
+
+## This allows configuring the map for GEO and LOCATION attributes of events.
+## We use https://pypi.org/project/icalendar-compatibility/ for this.
+## See https://icalendar-compatibility.readthedocs.io/en/latest/usage.html#custom-map-spec
+## event_url_location needs to contain {location} and can contain {zoom}
+event_url_location: "https://www.openstreetmap.org/search?query={location}"
+## event_url_geo needs to contain {lon} and {lat} can contain {zoom}
+event_url_geo: "https://www.openstreetmap.org/#map=16/{lat}/{lon}"
+## The name of this URL in the user interface
+event_url_name: "OpenStreetMap"
+
+###################### Clean HTML ######################
+##
+## Clean HTML removes possibilities of hacking your site.
+## This section enforces strong cleaning by default.
+## See https://lxml.de/api/lxml.html.clean.Cleaner-class.html
+## See https://stackoverflow.com/questions/3073881/clean-up-html-in-python
+## See https://github.com/niccokunzmann/open-web-calendar/issues/165
+## If you disable any cleaning here, you might make your site vulnerable.
+clean_html_page_structure: true
+clean_html_meta: true
+clean_html_embedded: true
+clean_html_links: true
+clean_html_style: true
+clean_html_processing_instructions: true
+clean_html_inline_style: true
+clean_html_scripts: true
+clean_html_javascript: true
+clean_html_comments: true
+clean_html_frames: true
+clean_html_forms: true
+clean_html_annoying_tags: true
+clean_html_remove_unknown_tags: true
+clean_html_safe_attrs_only: true
+clean_html_safe_attrs:
+- src
+- color
+- href
+- title
+- class
+- name
+- id
+clean_html_remove_tags:
+- body
+- head
+- html
+
+###################### Change this if you modify the project. ######################
+##
+## Where the current modifications can be obtained.
+## This is required by GPL.
+source_code: "https://github.com/niccokunzmann/open-web-calendar/"
+
+## You can override the version text next to the source code link.
+## If this is empty, the version of the package is used.
+version: ''
+
+## This is a link to the contribution page
+contributing: "https://open-web-calendar.quelltext.eu/contributing/"
+
+## This is a link to the translations page
+translate: "https://hosted.weblate.org/engage/open-web-calendar/"
+
+## This is a link to the privacy policy
+privacy_policy: "https://open-web-calendar.quelltext.eu/host/privacy-policy/"
+
+###################### You will probably not change this. ######################
+##
+## The template is the file which shows the calendar.
+## It is located in the templates/calendars folder.
+template: "dhtmlx.html"
+
+## This is set by the dhtmlscheduler when the events are displayed.
+timeshift: 0
