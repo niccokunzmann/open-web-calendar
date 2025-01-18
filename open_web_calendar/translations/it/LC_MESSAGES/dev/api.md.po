@@ -263,6 +263,14 @@ msgstr ""
 msgid "If you add a new parameter as a developer:"
 msgstr ""
 
+msgid "index.html?language=de calendar.html?title=CALENDAR "
+msgstr ""
+
+msgid ""
+"calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
+"calendar/raw/master/default_specification.yml "
+msgstr ""
+
 #~ msgid "If you add a new parameter as a developer,"
 #~ msgstr ""
 
@@ -368,12 +376,4 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "```json {   \"title\": \"calendar\" } ``` "
-#~ msgstr ""
-
-#~ msgid "index.html?language=de calendar.html?title=CALENDAR "
-#~ msgstr ""
-
-#~ msgid ""
-#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
-#~ "calendar/raw/master/default_specification.yml "
 #~ msgstr ""

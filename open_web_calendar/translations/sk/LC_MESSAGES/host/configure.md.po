@@ -297,6 +297,16 @@ msgstr "[default_specification]: ../../assets/default_specification.yml"
 msgid "[OWC_SPECIFICATION]: #owc_specification"
 msgstr "[OWC_SPECIFICATION]: #owc_specification"
 
+msgid "Note"
+msgstr ""
+
+msgid ""
+"New versions of the Open Web Calendar can add new configuration parameters. "
+"Placing your changes in this variable instead of changing the "
+"`default_specification` file will ensure that you do not break the Open Web "
+"Calendar in a future version."
+msgstr ""
+
 #~ msgid ""
 #~ "If you modify the default specification, you modify **all calendars** that "
 #~ "are hosted at your instance. Calendars still override some values for their "
@@ -416,14 +426,4 @@ msgstr "[OWC_SPECIFICATION]: #owc_specification"
 #~ msgstr ""
 
 #~ msgid "Configure"
-#~ msgstr ""
-
-#~ msgid "Note"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "New versions of the Open Web Calendar can add new configuration parameters. "
-#~ "Placing your changes in this variable instead of changing the "
-#~ "`default_specification` file will ensure that you do not break the Open Web "
-#~ "Calendar in a future version."
 #~ msgstr ""

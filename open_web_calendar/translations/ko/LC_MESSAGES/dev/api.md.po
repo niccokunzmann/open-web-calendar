@@ -266,6 +266,14 @@ msgstr ""
 msgid "If you add a new parameter as a developer:"
 msgstr ""
 
+msgid "index.html?language=de calendar.html?title=CALENDAR "
+msgstr ""
+
+msgid ""
+"calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
+"calendar/raw/master/default_specification.yml "
+msgstr ""
+
 #~ msgid "If you add a new parameter as a developer,"
 #~ msgstr ""
 
@@ -397,12 +405,4 @@ msgstr ""
 #~ "**Query parameters** All parameters to the calendar url are put into the "
 #~ "specification. The query parameters have the highest precedence. Examples:"
 #~ "         index.html?language=de      calendar.html?title=CALENDAR"
-#~ msgstr ""
-
-#~ msgid "index.html?language=de calendar.html?title=CALENDAR "
-#~ msgstr ""
-
-#~ msgid ""
-#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
-#~ "calendar/raw/master/default_specification.yml "
 #~ msgstr ""

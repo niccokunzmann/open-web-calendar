@@ -696,6 +696,9 @@ msgstr ""
 msgid "add link to [Contributing Section](../contributing) in about page"
 msgstr ""
 
+msgid "v1.44"
+msgstr ""
+
 #~ msgid "add link to [Contributing Section](#contributing) in about page"
 #~ msgstr ""
 
