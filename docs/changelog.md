@@ -13,6 +13,8 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+## v1.44
+
 ## v1.43
 
 - Update dependencies
