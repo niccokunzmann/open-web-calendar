@@ -6,7 +6,6 @@
 from __future__ import annotations
 
 import datetime
-import functools
 import io
 import json
 import os
@@ -174,16 +173,18 @@ def get_text_from_url(url):
 
 
 # @functools.cache
-def get_specification_from_environment_variable(spec:Optional[str]) -> dict[str, Any]:
+def get_specification_from_environment_variable(spec: Optional[str]) -> dict[str, Any]:
     """Return the specification from the env variable stored in a file."""
     if not spec:
         return {}
     path = Path(spec)
     if path.is_file():
         spec = path.read_text(encoding="UTF-8")
-    ret = yaml.safe_load(spec+"\n")
+    ret = yaml.safe_load(spec + "\n")
     if not isinstance(ret, dict):
-        raise ValueError(f"The specification {spec!r} is not a dictionary or a path to a file.")
+        raise ValueError(  # noqa: TRY004
+            f"The specification {spec!r} is not a dictionary or a path to a file."
+        )
     return ret
 
 
@@ -192,11 +193,13 @@ def get_default_specification() -> dict[str, Any]:
 
     The default specification is loaded from the default_specification.yml
     Then, values are overwritten from the environment variable OWC_SPECIFICATION.
-    Then, values are overwritten from the open_web_calendar.app.DEFAULT_SPECIFICATION variable.
+    Then, values are overwritten from open_web_calendar.app.DEFAULT_SPECIFICATION.
     """
     with DEFAULT_SPECIFICATION_PATH.open(encoding="UTF-8") as file:
         spec = yaml.safe_load(file)
-        env_spec = get_specification_from_environment_variable(os.environ.get("OWC_SPECIFICATION"))
+        env_spec = get_specification_from_environment_variable(
+            os.environ.get("OWC_SPECIFICATION")
+        )
         spec.update(env_spec)
         spec.update(DEFAULT_SPECIFICATION)
         return spec
