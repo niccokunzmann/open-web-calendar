@@ -20,6 +20,7 @@ The latest version might not be released, yet.
 - Update Security Policy
 - Add a way to choose the map, see [Issue 23](https://github.com/niccokunzmann/open-web-calendar/issues/23)
 - [Update DHTMLX Scheduler] to v7.2.1
+- Introduce, test and document the `OWC_SPECIFICATION` environment variable.
 
 [Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html
 
@@ -280,7 +281,7 @@ The latest version might not be released, yet.
 
 ## v1.5
 
-- add link to [Contributing Section](#contributing) in about page
+- add link to [Contributing Section](../contributing) in about page
 - make event clickable even if there is a tool tip window
 - [@MrKoga](https://github.com/MrKoga) [donated][github-sponsors] to the project! Thanks!
 

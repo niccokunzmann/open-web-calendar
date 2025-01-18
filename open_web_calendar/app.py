@@ -3,14 +3,17 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+from __future__ import annotations
 
 import datetime
+import functools
 import io
 import json
 import os
 import tempfile
 import traceback
 from pathlib import Path
+from typing import Any, Optional
 
 import pytz
 import requests
@@ -170,10 +173,31 @@ def get_text_from_url(url):
     ).content
 
 
-def get_default_specification():
-    """Return the default specification."""
+# @functools.cache
+def get_specification_from_environment_variable(spec:Optional[str]) -> dict[str, Any]:
+    """Return the specification from the env variable stored in a file."""
+    if not spec:
+        return {}
+    path = Path(spec)
+    if path.is_file():
+        spec = path.read_text(encoding="UTF-8")
+    ret = yaml.safe_load(spec+"\n")
+    if not isinstance(ret, dict):
+        raise ValueError(f"The specification {spec!r} is not a dictionary or a path to a file.")
+    return ret
+
+
+def get_default_specification() -> dict[str, Any]:
+    """Return the default specification.
+
+    The default specification is loaded from the default_specification.yml
+    Then, values are overwritten from the environment variable OWC_SPECIFICATION.
+    Then, values are overwritten from the open_web_calendar.app.DEFAULT_SPECIFICATION variable.
+    """
     with DEFAULT_SPECIFICATION_PATH.open(encoding="UTF-8") as file:
         spec = yaml.safe_load(file)
+        env_spec = get_specification_from_environment_variable(os.environ.get("OWC_SPECIFICATION"))
+        spec.update(env_spec)
         spec.update(DEFAULT_SPECIFICATION)
         return spec
 
@@ -187,10 +211,7 @@ def get_specification(query=None):
     url = query.get(PARAM_SPECIFICATION_URL, None)
     if url:
         url_specification_response = get_text_from_url(url)
-        try:
-            url_specification_values = json.loads(url_specification_response)
-        except json.JSONDecodeError:
-            url_specification_values = yaml.safe_load(url_specification_response)
+        url_specification_values = yaml.safe_load(url_specification_response)
         specification.update(url_specification_values)
     for parameter in query:
         # get a list of arguments
