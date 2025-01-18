@@ -7,7 +7,7 @@ import pytest
 
 from open_web_calendar.app import DEFAULT_SPECIFICATION, get_default_specification
 
-kv = pytest.mark.parametrize("k, v", [("title", "test"), ("c", "d")])
+kv = pytest.mark.parametrize(("k", "v"), [("title", "test"), ("c", "d")])
 
 
 @kv
