@@ -29,7 +29,7 @@ flask-caching==2.3.0
     # via -r requirements.in
 gunicorn==23.0.0
     # via -r requirements.in
-icalendar==6.1.0
+icalendar==6.1.1
     # via
     #   -r requirements.in
     #   icalendar-compatibility
