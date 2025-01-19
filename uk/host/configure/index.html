@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_i3kkv3gq/uk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_su9dq1rx/uk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_i3kkv3gq/uk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_su9dq1rx/uk/host/configure/index.png" >
       
     
     
@@ -1060,8 +1060,8 @@
 <li>Змінити роботу сервера.</li>
 </ul>
 <h2 id="_2">Налаштування календаря за замовчуванням<a class="headerlink" href="#_2" title="Постійне посилання">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="../../assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="../../assets/default_specification.yml">default_specification</a>.</p>
-<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
+<p>Конфігурація всіх календарів базується на <a href="../../assets/default_specification.yml">default_specification</a>. Усі ці значення можна змінити за допомогою копії цього файлу, розміщеного в Інтернеті за допомогою параметра календаря <code>specification_url</code>. Кожен параметр має бути задокументований у <a href="../../assets/default_specification.yml">default_specification</a>.</p>
+<p>Щоб змінити <strong>усі календарі</strong>, розміщені у вашому екземплярі, використовуйте змінну середовища <a href="#owc_specification">OWC_SPECIFICATION</a>. Календарі все ще замінюють деякі значення для їх конфігурації. На ті, які вони не перевизначають, впливає специфікація за замовчуванням. Не всі значення відображаються на сторінці конфігурації, яку потрібно змінити. Ці значення можна змінити в <code>specification_url</code> і параметрах запиту.</p>
 <p>Ви можете змінити наступні значення.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Постійне посилання">&para;</a></h3>
 <p>Назва вашого сайту.</p>
@@ -1077,7 +1077,7 @@
 <p>Якщо ви самостійно розміщуєте цю службу, ви можете використовувати стандартну <a href="../privacy-policy">політику конфіденційності</a>.</p>
 <p>Якщо з якоїсь причини ви вирішите збирати дані, наприклад, у HTTPS-проксі або реєструвати IP-адреси, вам потрібно створити власну політику конфіденційності. Ви можете посилатися на один із цього проекту.</p>
 <h3 id="_3">Більше цінностей<a class="headerlink" href="#_3" title="Постійне посилання">&para;</a></h3>
-<p>There are loads more values that can be changed. Please refer to the <a href="../../assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
+<p>Є ще багато значень, які можна змінити. Будь ласка, зверніться до <a href="../../assets/default_specification.yml">default_specification</a>. Усі ці значення задокументовані. Щоб змінити їх, використовуйте змінну середовища <a href="#owc_specification">OWC_SPECIFICATION</a>.</p>
 <p>Дивіться також:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
@@ -1090,7 +1090,7 @@
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
-<p>Examples:</p>
+<p>Приклади:</p>
 <ul>
 <li>дозволяти лише той самий комп’ютер: <code>ALLOWED_HOSTS=localhost</code></li>
 <li>дозволити декілька хостів: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
@@ -1100,24 +1100,22 @@
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Постійне посилання">&para;</a></h3>
 <p>за замовчуванням <code>5000</code>, за замовчуванням <code>80</code> в контейнері Docker</p>
 <p>Порт, на якому працює служба.</p>
-<p>Examples:</p>
+<p>Приклади:</p>
 <ul>
 <li>Обслуговувати через порт HTTP: <code>PORT=80</code></li>
 </ul>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Постійне посилання">&para;</a></h3>
-<p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
+<p><code>OWC_SPECIFICATION</code> – необов’язкова змінна середовища.</p>
 <ul>
-<li>It can be a <strong>path</strong> to a file containing valid YAML or JSON.</li>
-<li>It can be a <strong>string</strong> containing valid YAML or JSON.</li>
+<li>Це може бути <strong>шлях</strong> до файлу, що містить дійсний YAML або JSON.</li>
+<li>Це може бути <strong>рядок</strong>, що містить дійсний YAML або JSON.</li>
 </ul>
-<p>Setting <code>OWC_SPECIFICATION</code> allows you to replace default values for all calendars.</p>
+<p>Налаштування <code>OWC_SPECIFICATION</code> дозволяє замінити значення за замовчуванням для всіх календарів.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>New versions of the Open Web Calendar can add new configuration parameters.
-Placing your changes in this variable instead of changing the <code>default_specification</code> file
-will ensure that you do not break the Open Web Calendar in a future version.</p>
+<p class="admonition-title">Примітка</p>
+<p>Нові версії Open Web Calendar можуть додавати нові параметри конфігурації. Внесення змін до цієї змінної замість зміни файлу <code>default_specification</code> гарантує, що ви не порушите відкритий веб-календар у майбутній версії.</p>
 </div>
-<p>In following example, the title for all calendars that do not set their own title will be changed.</p>
+<p>У наступному прикладі буде змінено заголовок для всіх календарів, які не встановили власний заголовок.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
 <p>Дивіться також:</p>
@@ -1127,14 +1125,14 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Постійне посилання">&para;</a></h3>
 <p>за замовчуванням <code>4</code>, лише для контейнера Docker</p>
 <p>Кількість паралельних працівників для обробки запитів.</p>
-<p>Examples:</p>
+<p>Приклади:</p>
 <ul>
 <li>Використовуйте лише один робочий файл: <code>WORKERS=1</code></li>
 </ul>
 <h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Постійне посилання">&para;</a></h3>
 <p>за замовчуванням <code>600</code></p>
 <p>Секунди для кешування файлів календаря, які завантажуються, щоб зменшити пропускну здатність і затримку.</p>
-<p>Examples:</p>
+<p>Приклади:</p>
 <ul>
 <li>Швидке оновлення: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
 </ul>
