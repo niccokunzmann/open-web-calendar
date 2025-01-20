@@ -15,6 +15,8 @@ The latest version might not be released, yet.
 
 ## v1.44
 
+- Fix bug introduced by v1.43: The calendar now changes the language again. (parameter `language`), see [Issue 599](https://github.com/niccokunzmann/open-web-calendar/issues/599).
+
 ## v1.43
 
 - Update dependencies
