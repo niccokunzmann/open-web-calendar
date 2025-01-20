@@ -11,3 +11,4 @@ lxml
 beautifulsoup4
 lxml_html_clean
 pytz
+icalendar-compatibility>=0.1.3

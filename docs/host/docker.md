@@ -66,8 +66,16 @@ services:
     ports:
       - '80:80'
     environment:
-      - ALLOWED_HOSTS=
+      - OWC_SPECIFICATION="{'privacy_policy':'http://link-to-my-privacy-policy'}"
+      - WORKERS=4
     restart: unless-stopped
+    networks:
+      - owc-net
+
+networks:
+  owc-net: # shield the OWC from accessing other services (SSRF protection)
+    ipam:
+      driver: default  # give OWC Internet access
 ```
 
 To deploy the Open Web Calendar with `docker compose`, follow these steps:
@@ -82,9 +90,11 @@ To deploy the Open Web Calendar with `docker compose`, follow these steps:
 
 4. The container will be pulled automatically from [Dockerhub] and then starts.
 
-**Important Note:** If you use this service, consider setting up
-[log rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47)
-as it is very talkative.
+!!! note "Growing log files"
+
+    If you use this service, consider setting up
+    [log rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47)
+    as it is very talkative.
 
 ## Update pre-build image with Docker Compose
 

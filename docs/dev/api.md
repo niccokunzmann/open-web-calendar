@@ -73,10 +73,56 @@ you have several options:
     }
     ```
 
+## Compiling the Specification
+
+You can change the calendar behavior and looks with parameters.
+If the same parameter is specified in different places, the earlier place listed below has the highest precedence.
+These are the places to specify parameters:
+
+### Query parameters
+
+All parameters to the calendar url are put into the specification.
+The query parameters have the highest precedence.
+
+Examples:
+
+    index.html?language=de
+    calendar.html?title=CALENDAR
+
+### specification_url
+
+If you specify this query parameter, the editor configuration is loaded from this url, too.
+Query parameters are still more important than what is written in this file.
+The source format can be YAML or JSON.
+
+Examples:
+
+    calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml
+
+### open_web_calendar.app.DEFAULT_SPECIFICATION
+
+This is intended for developers and Python-internal.
+
+```python
+from open_web_calendar.app import DEFAULT_SPECIFICATION
+DEFAULT_SPECIFICATION['title'] = 'calendar'
+```
+
+### OWC_SPECIFICATION
+
+This is an optional environment variable.
+Please read more about it in the [Server Configuration](../../host/configure#owc_specification).
+
+### [default_specification]
+
+This file contains the default parameters.
+They must not be hard-coded in the source code.
+All parameters are listed and documented there so this file can be used for reference.
+Do not modify this file, instead use the `OWC_SPECIFICATION` environment variable.
 
 ## Adding Parameters
 
-If you add a new parameter as a developer,
+If you add a new parameter as a developer:
 
 - Add the parameter with a default value to the [default_specification]
 - Add an implementation, depending on its use in the `app.py` or the templates
@@ -84,36 +130,6 @@ If you add a new parameter as a developer,
   The specification is already available in all of them to use.
 - Add tests in [features/configure-the-calendar.feature]({{link.code}}/features/configure-the-calendar.feature) to check that the calendar responds to the feature.
 - Add tests in [features/edit-the-calendar.feature]({{link.code}}/features/edit-the-calendar.feature) to make sure that the parameter can be used when a calendar is edited.
-
-## Compiling the Specification
-
-You can change the calendar behavior and looks with parameters.
-These are the places to specify parameters:
-
-1. **Query parameters**  
-    All parameters to the calendar url are put into the specification.
-    The query parameters have the highest precedence.  
-    Examples:
-
-    ```txt
-    index.html?language=de
-    calendar.html?title=CALENDAR
-    ```
-
-2. **specification_url**  
-    If you specify this query parameter, the editor configuration is loaded from
-    this url, too.
-    Query parameters are still more important than what is written
-    in this file.
-    The source format can be YAML or JSON.
-    Examples:
-
-        calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml
-
-3. **[default_specification]**  
-    This file contains the default parameters.
-    They must not be hard-coded in the source code. All of them are there.
-    Query parameters and the `specification_url` override these values.
 
 ## Specification in the Calendar
 

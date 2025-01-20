@@ -20,6 +20,6 @@ When an security update is made, it is released with the [latest version](../cha
 
 ## Reporting a Vulnerability
 
-If you find a security vulnerability, please report it to the developer
-[@niccokunzmann](https://github.com/niccokunzmann/) or
-open an issue if you think it is a minor thread.
+If you find a security vulnerability,
+please [report the vulnerability here](https://github.com/niccokunzmann/open-web-calendar/security/) or reach out to
+[@niccokunzmann](https://github.com/niccokunzmann/).

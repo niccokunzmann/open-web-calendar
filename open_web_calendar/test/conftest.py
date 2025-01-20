@@ -1,13 +1,19 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+from __future__ import annotations
 
 import sys
 from pathlib import Path
+from typing import TYPE_CHECKING
 from unittest.mock import Mock
 
 import pytest
 import requests
+
+if TYPE_CHECKING:
+    from flask import Flask
+    from flask.testing import FlaskClient
 
 # constants
 HERE = Path(__file__).parent
@@ -43,7 +49,7 @@ def mock():
 
 
 @pytest.fixture
-def app():
+def app() -> Flask:
     """Create the app.
 
     See https://flask.palletsprojects.com/en/2.2.x/testing/
@@ -64,7 +70,7 @@ def app():
 
 
 @pytest.fixture
-def client(app):
+def client(app: Flask) -> FlaskClient:
     return app.test_client()
 
 
@@ -80,12 +86,12 @@ for file in CALENDAR_DIRECTORY.iterdir():
 
 
 @pytest.fixture
-def calendar_urls():
+def calendar_urls() -> dict[str, str]:
     """Mapping the calendar name without .ics to the cached url.
 
     The files are located in the CALENDAR_FOLDER.
     """
-    mapping = {}
+    mapping: dict[str, str] = {}
     for file, content in calendar_files.items():
         url = "http://test.examples.local/" + file.name
         cache_url(url, content)

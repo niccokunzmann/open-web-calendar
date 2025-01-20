@@ -6,6 +6,8 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 [![Open Web Calendar](https://open-web-calendar.quelltext.eu/assets/img/logo/github-social-preview.svg)][web]
 
+[![](https://badge.fury.io/py/open-web-calendar.svg)](https://pypi.org/project/open-web-calendar/)
+[![](https://img.shields.io/pypi/pyversions/open-web-calendar)](https://pypi.org/project/open-web-calendar)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/niccokunzmann/open-web-calendar/run-tests.yml?logo=github)](https://github.com/niccokunzmann/open-web-calendar/actions)
 ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)
 
@@ -13,9 +15,6 @@ You might want to:
 - **[Try&nbsp;it&nbsp;out][web]**
 - [Contribute!](https://open-web-calendar.quelltext.eu/contributing/)
 - [Read the documentation][docs]
-
-
-Python: 3.9, 3.10, 3.11, 3.12
 
 There are several commercial solutions which allow embedding of calendars into my website.
 I only have a link to an ICS file and want to show a nice-looking calendar on my site.

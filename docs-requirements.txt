@@ -11,19 +11,19 @@ babel==2.16.0
     #   mkdocs-material
 beautifulsoup4==4.12.3
     # via mkdocs-meta-descriptions-plugin
-cachecontrol[filecache]==0.14.1
+cachecontrol[filecache]==0.14.2
     # via mkdocs-rss-plugin
 cairocffi==1.7.1
     # via cairosvg
 cairosvg==2.7.1
     # via mkdocs-material
-certifi==2024.8.30
+certifi==2024.12.14
     # via requests
 cffi==1.17.1
     # via cairocffi
-charset-normalizer==3.4.0
+charset-normalizer==3.4.1
     # via requests
-click==8.1.7
+click==8.1.8
     # via mkdocs
 colorama==0.4.6
     # via mkdocs-material
@@ -37,9 +37,9 @@ filelock==3.16.1
     # via cachecontrol
 ghp-import==2.1.0
     # via mkdocs
-gitdb==4.0.11
+gitdb==4.0.12
     # via gitpython
-gitpython==3.1.43
+gitpython==3.1.44
     # via
     #   mkdocs-git-revision-date-localized-plugin
     #   mkdocs-rss-plugin
@@ -51,7 +51,7 @@ idna==3.10
     # via requests
 importlib-metadata-argparse-version==2.0.1
     # via mdpo
-jinja2==3.1.4
+jinja2==3.1.5
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
@@ -93,7 +93,7 @@ mkdocs-macros-plugin==1.3.7
     # via -r docs-requirements.in
 mkdocs-markdownextradata-plugin==0.2.6
     # via -r docs-requirements.in
-mkdocs-material[imaging]==9.5.47
+mkdocs-material[imaging]==9.5.50
     # via -r docs-requirements.in
 mkdocs-material-extensions==1.3.1
     # via mkdocs-material
@@ -103,7 +103,7 @@ mkdocs-mdpo-plugin @ git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git
     # via -r docs-requirements.in
 mkdocs-meta-descriptions-plugin==3.0.0
     # via -r docs-requirements.in
-mkdocs-rss-plugin==1.17.0
+mkdocs-rss-plugin==1.17.1
     # via -r docs-requirements.in
 msgpack==1.1.0
     # via cachecontrol
@@ -128,11 +128,11 @@ polib==1.2.0
     # via mdpo
 pycparser==2.22
     # via cffi
-pygments==2.18.0
+pygments==2.19.1
     # via mkdocs-material
 pymd4c==1.3.0
     # via mdpo
-pymdown-extensions==10.12
+pymdown-extensions==10.14
     # via
     #   mkdocs-material
     #   mkdocs-meta-descriptions-plugin
@@ -161,7 +161,7 @@ requests==2.32.3
     #   mkdocs-rss-plugin
 six==1.17.0
     # via python-dateutil
-smmap==5.0.1
+smmap==5.0.2
     # via gitdb
 soupsieve==2.6
     # via beautifulsoup4
@@ -173,7 +173,7 @@ tinycss2==1.4.0
     # via
     #   cairosvg
     #   cssselect2
-urllib3==2.2.3
+urllib3==2.3.0
     # via requests
 watchdog==6.0.0
     # via mkdocs

@@ -52,6 +52,9 @@ msgstr ""
 msgid "Python Package"
 msgstr ""
 
+msgid "OWC_SPECIFICATION"
+msgstr ""
+
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
 #~ " you CAN use this but you cannot be sure that the JSON schema remains the "

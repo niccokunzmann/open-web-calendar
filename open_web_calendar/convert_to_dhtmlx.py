@@ -5,15 +5,19 @@ from __future__ import annotations
 
 import datetime
 from html import escape
-from urllib.parse import unquote
+from typing import TYPE_CHECKING, Optional
 
 import pytz
 import recurring_ical_events
 from dateutil.parser import parse as parse_date
 from flask import jsonify
+from icalendar_compatibility import Description, Location, LocationSpec
 
 from .clean_html import clean_html
 from .conversion_base import ConversionStrategy
+
+if TYPE_CHECKING:
+    from icalendar import Event
 
 
 def is_date(date):
@@ -66,20 +70,31 @@ class ConvertToDhtmlx(ConversionStrategy):
         viewed_date = date.astimezone(self.timezone)
         return viewed_date.strftime("%Y-%m-%d %H:%M")
 
-    def convert_ical_event(self, calendar_index, calendar_event):
+    @property
+    def location_spec(self) -> LocationSpec:
+        return LocationSpec(
+            geo_url=self.specification.get("event_url_geo", ""),
+            text_url=self.specification.get("event_url_location", ""),
+        )
+
+    def convert_ical_event(self, calendar_index, calendar_event: Event):
         start = calendar_event["DTSTART"].dt
         end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
         if is_date(start) and is_date(end) and end == start:
             end = datetime.timedelta(days=1) + start
-        geo = calendar_event.get("GEO", None)
-        if geo:
-            geo = {"lon": geo.longitude, "lat": geo.latitude}
+        location = Location(calendar_event, self.location_spec)
         name = calendar_event.get("SUMMARY", "")
         sequence = str(calendar_event.get("SEQUENCE", 0))
         uid = calendar_event.get(
             "UID", ""
         )  # issue 69: UID is helpful for debugging but not required
         start_date = self.date_to_string(start)
+        location_map: Optional[dict[str, str]] = {
+            "text": location.text,
+            "url": location.url,
+        }
+        if not location_map["text"] and not location_map["url"]:
+            location_map = None
         return {
             "start_date": start_date,
             "end_date": self.date_to_string(end),
@@ -89,8 +104,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "end_date_iso_0": end.isoformat(),
             "text": name,
             "description": self.get_event_description(calendar_event),
-            "location": calendar_event.get("LOCATION", None),
-            "geo": geo,
+            "location": location_map,
             "uid": uid,
             "ical": calendar_event.to_ical().decode("UTF-8"),
             "sequence": sequence,
@@ -135,29 +149,15 @@ class ConvertToDhtmlx(ConversionStrategy):
             "css-classes": ["error"],
         }
 
-    def get_event_description(self, event):
+    def get_event_description(self, event: Event):
         """Return a formatted description of the event.
 
         HTML is cleaned.
         """
-        # CMS4Schools.com
-        description = event.get("X-ALT-DESC")
-        if (
-            description is None
-            or not hasattr(description, "params")
-            or description.params.get("FMTTYPE") != "text/html"
-        ):
-            description = event.get("DESCRIPTION", "")
-            if hasattr(description, "params"):
-                altrep = description.params.get("ALTREP")
-                if altrep is not None and "," in altrep:
-                    data, content = altrep.split(",", 1)
-                    if data == "data:text/html":
-                        # Thunderbird html
-                        description = unquote(content)
+        description = Description(event).html
         return self.clean_html(description)
 
-    def clean_html(self, html):
+    def clean_html(self, html: str):
         """Return the cleaned HTML."""
         return clean_html(html, self.specification)
 

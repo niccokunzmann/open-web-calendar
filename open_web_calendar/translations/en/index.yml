@@ -148,6 +148,20 @@ links-top: "Open the linked document in the full body of the window."
 
 
 # Heading of option
+map-title: "Map Links and Location"
+# Description of option
+map-description: "Event locations may have coordinates or text. Configure here which map service to use when clicking on an event's location."
+# Option to choose
+map-custom: "Custom Map"
+# Part of the details view on how to further customize
+map-custom-summary: "Customize the map links"
+# Describe customization
+map-link-location-description: "Enter the URL to the map here and insert {location} where the search query goes."
+# Describe customization
+map-link-geo-description: "Enter the URL to the map here and insert {lat} and {lon} for the coordinates."
+
+
+# Heading of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-start-of-week-title
 configure-week-title: "Days of the Week"
 # Description of option

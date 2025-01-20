@@ -35,7 +35,7 @@ function getQueries() {
         var content = decodeURIComponent(tokens[2]);
         if (Array.isArray(queries[id])) {
             queries[id].push(content);
-        } if (queries[id]) {
+        } else if (queries[id]) {
             queries[id] = [queries[id], content];
         } else {
             queries[id] = content;
@@ -44,16 +44,16 @@ function getQueries() {
     return queries;
 }
 
-// TODO: allow choice through specification
-var GOOGLE_URL = "https://maps.google.com/maps?q=";
-var OSM_URL = "https://www.openstreetmap.org/search?query=";
-
 /* Create a link around the HTML text.
  * Use this instead of creating links manually because it also sets the
  * target according to the specification.
  */
 function makeLink(url, html) {
-  return "<a target='" + specification.target + "' href='" + escapeHtml(url) + "'>" + html + "</a>";
+    const link = document.createElement("a");
+    link.target = specification.target;
+    link.href = url;
+    link.innerHTML = html;
+    return link.outerHTML;
 }
 
 /*
@@ -102,25 +102,17 @@ var template = {
         details.classList.add("details");
         details.innerHTML = event.description;
         // set the target of all the links
-        var links = details.getElementsByTagName("a");
-        for (var i = 0; i < links.length; i++) {
-          var link = links[i];
+        const links = details.getElementsByTagName("a");
+        for (const link of links) {
           link.target = specification.target;
         }
         return details.outerHTML;
     },
     "location": function(event) {
-        if (!event.location && !event.geo) {
+        if (!event.location) {
             return "";
         }
-        var text = escapeHtml(event.location || "🗺");
-        var geoUrl;
-        if (event.geo) {
-            geoUrl = "https://www.openstreetmap.org/?mlon=" + encodeURIComponent(event.geo.lon) + "&mlat=" + encodeURIComponent(event.geo.lat) + "&#map=15/" + encodeURIComponent(event.geo.lat) + "/" + encodeURIComponent(event.geo.lon);
-        } else {
-            geoUrl = OSM_URL + encodeURIComponent(event.location);
-        }
-        return makeLink(geoUrl, text);
+        return makeLink(event.location.url, escapeHtml(event.location.text || "🗺"));
     },
     "debug": function(event) {
         return "<pre class='debug' style='display:none'>" +
@@ -150,8 +142,8 @@ var template = {
 * scheduler.locale is used to load the locale.
 * This creates the required interface.
 */
-var setLocale = function(){};
-var Scheduler = {plugin:function(setLocale_){
+const setLocale = function(){};
+const Scheduler = {plugin:function(setLocale_){
     // this is called by the locale_??.js files.
     setLocale = setLocale_;
 }};
