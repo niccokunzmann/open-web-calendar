@@ -1,24 +1,26 @@
-# Milo Ivir <mail@milotype.de>, 2024.
+# Milo Ivir <mail@milotype.de>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 07:31+0200\n"
-"PO-Revision-Date: 2024-08-27 18:46+0000\n"
+"PO-Revision-Date: 2025-01-21 21:00+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/hr/>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-index/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.7.1-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 msgid "Customize Your Own Online Calendar Display"
-msgstr ""
+msgstr "Prilagodi prikaz tvog internetskog kalendara"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr "Pogledaj značajke ili isprobaj Open Web Calendar!"
+msgstr "Pogledaj značajke ili isprobaj „Otvoreni web kalendar”!"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
@@ -96,15 +98,17 @@ msgid "Community and Paid Support"
 msgstr "Zajednica i naplativa podrška"
 
 msgid "[See Examples](templates)"
-msgstr ""
+msgstr "[Pogledaj primjere](predlošci)"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self)"
 msgstr ""
+"[Eksterni server](https://open-web-calendar.hosted.quelltext.eu) i "
+"[vlastiti server](host/self)"
 
 msgid "[Developer API](dev/api)"
-msgstr ""
+msgstr "[API za programere](dev/api)"
 
 #~ msgid "Getting Started"
 #~ msgstr "Početak"
