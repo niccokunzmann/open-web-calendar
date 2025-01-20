@@ -1,4 +1,4 @@
-about: Open Web Calendar koristi ICS/ICal kalendare online i prikazuje ih u jednom
+about: Otvoreni web kalendar koristi ICS/ICal kalendare online i prikazuje ih u jednom
   kalendaru. Možeš ga koristiti s Nextcloudom, Outlookom, Google kalendarom, Meetupom
   i drugim sustavima kalendara koji koriste ICS standard.
 calendar-urls: 'Za sjedinjavanje kalendara, ovdje upiši URL-ove ICS kalendara:'
@@ -20,7 +20,7 @@ skins-material: Material
 skins-flat: Plošno
 skins-contrast-black: Crni kontrast
 skins-contrast-white: Bijeli kontrast
-links-description: Događaji mogu imati lokacije i URL-ove. Ako kalendar ugradiš u
+links-description: Događaji mogu sadržati mjesta i URL-ove. Ako kalendar ugradiš u
   web stranicu, možeš odabrati gdje će pritisnuta poveznica otvoriti stranicu.
 links-title: Poveznice
 style-click: Možeš promijeniti boju elemenata koji se mogu pritisnuti.
@@ -89,3 +89,12 @@ language-browser-false: 'Kalendar uvijek koristi ovaj jezik:'
 skins-dark: Tamna
 language-browser-true: 'Kalendar koristi jezik preglednika. Ako jezik nije preveden,
   koristi se:'
+map-custom: Prilagođena karta
+map-title: Poveznice za karte i mjesto
+map-description: Mjesta događaja mogu sadržati koordinate ili tekst. Ovdje konfiguriraj
+  kartografsku uslugu koja će se koristiti kada se klikne mjesto događaja.
+map-custom-summary: Prilagodi poveznice na kartu
+map-link-location-description: Ovdje upiši URL karte i umetni {mjesto} kamo pretraga
+  upućuje.
+map-link-geo-description: Ovdje upiši URL karte i umetni {geografsku širinu} i {geografsku
+  dužinu} za koordinate.
