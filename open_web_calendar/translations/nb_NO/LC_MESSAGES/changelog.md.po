@@ -705,6 +705,13 @@ msgid ""
 "599](https://github.com/niccokunzmann/open-web-calendar/issues/599)."
 msgstr ""
 
+msgid ""
+"Improve Ukrainian translation by Максим Горпиніч, German by Nicco Kunzmann"
+msgstr ""
+
+msgid "Document how to create a docker network to mitigate SSRF attacks."
+msgstr ""
+
 #~ msgid "add link to [Contributing Section](#contributing) in about page"
 #~ msgstr ""
 
