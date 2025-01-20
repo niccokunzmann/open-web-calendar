@@ -12,3 +12,15 @@ Feature: The calendar is translated into different languages. We want to
         | calendrier  | French   |
         | Kalender    | Deutsch  |
         | calendarios | Español  |
+
+    Scenario Outline: When I set the language parameter, the calendar changes its language.
+      Given we add the calendar "event-with-html-markup"
+        And we set the "language" parameter to "<language>"
+       When we look at 2024-04-14
+       Then we can see the text "<word>"
+
+      Examples:
+        | word   | language |
+        | MONTH  | en       |
+        | MONAT  | de       |
+        | ДЕНЬ   | ru       |

@@ -138,16 +138,6 @@ var template = {
     }
 }
 
-/* The files use a Scheduler variable.
-* scheduler.locale is used to load the locale.
-* This creates the required interface.
-*/
-const setLocale = function(){};
-const Scheduler = {plugin:function(setLocale_){
-    // this is called by the locale_??.js files.
-    setLocale = setLocale_;
-}};
-
 function showError(element) {
     var icon = document.getElementById("errorStatusIcon");
     icon.classList.add("onError");
@@ -269,7 +259,11 @@ function loadCalendar() {
      */
     scheduler.config.hour_date = specification["hour_format"];
     var format = scheduler.date.date_to_str(scheduler.config.hour_date);
-    setLocale(scheduler);
+
+    // set the locale
+    // loaded from /locale_<lang>.js
+    // see also https://docs.dhtmlx.com/scheduler/api__scheduler_locale_other.html
+    scheduler.i18n.setLocale(OWCLocale);
     // load plugins, see https://docs.dhtmlx.com/scheduler/migration_from_older_version.html#5360
     scheduler.plugins({
         agenda_view: true,
