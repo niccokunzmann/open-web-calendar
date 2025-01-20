@@ -699,6 +699,12 @@ msgstr ""
 msgid "v1.44"
 msgstr ""
 
+msgid ""
+"Fix bug introduced by v1.43: The calendar now changes the language again. "
+"(parameter `language`), see [Issue "
+"599](https://github.com/niccokunzmann/open-web-calendar/issues/599)."
+msgstr ""
+
 #~ msgid "add link to [Contributing Section](#contributing) in about page"
 #~ msgstr ""
 
