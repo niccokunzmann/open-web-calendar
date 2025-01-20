@@ -3,6 +3,4 @@
 // SPDX-License-Identifier: CC-BY-SA-4.0
 /* Generated locale from the calendar sources. */
 
-Scheduler.plugin(function(e){
-    e.locale = {{ locale }};
-});
+const OWCLocale =  {{ locale }};
