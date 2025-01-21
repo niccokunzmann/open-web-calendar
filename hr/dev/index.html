@@ -23,7 +23,7 @@
     
     
       
-        <title>Setup & Tests - Open Web Calendar</title>
+        <title>Setup & Tests - Otvoreni web kalendar</title>
       
     
     
@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_y5a0c1aq/hr/dev/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_63i2nrzj/hr/dev/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_y5a0c1aq/hr/dev/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_63i2nrzj/hr/dev/index.png" >
       
     
     
@@ -942,20 +942,20 @@
   
 
 
-<h1 id="setup-tests">Setup &amp; Tests<a class="headerlink" href="#setup-tests" title="Poveznica">&para;</a></h1>
+<h1 id="setup-tests">Setup &amp; Tests<a class="headerlink" href="#setup-tests" title="Stalna poveznica">&para;</a></h1>
 <p>This section guides you through everything you need to know to develop the software: build it and make changes.</p>
-<h2 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Poveznica">&para;</a></h2>
+<h2 id="clone-the-repository">Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Stalna poveznica">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/niccokunzmann/open-web-calendar
 <span class="nb">cd</span><span class="w"> </span>open-web-calendar
 </code></pre></div>
-<h2 id="code-quality">Code Quality<a class="headerlink" href="#code-quality" title="Poveznica">&para;</a></h2>
+<h2 id="code-quality">Code Quality<a class="headerlink" href="#code-quality" title="Stalna poveznica">&para;</a></h2>
 <p>We use <a href="https://docs.astral.sh/ruff/">ruff</a> to improve the code quality. Please install <a href="https://pre-commit.com/">pre-commit</a> before committing. It will ensure that the code is formatted and linted as expected using <a href="https://docs.astral.sh/ruff/">ruff</a>.</p>
 <div class="highlight"><pre><span></span><code>pre-commit<span class="w"> </span>install
 </code></pre></div>
 <p>To format the code before commit without the pre-commit hook, run this:</p>
 <div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>ruff
 </code></pre></div>
-<h2 id="running-the-app">Running the App<a class="headerlink" href="#running-the-app" title="Poveznica">&para;</a></h2>
+<h2 id="running-the-app">Running the App<a class="headerlink" href="#running-the-app" title="Stalna poveznica">&para;</a></h2>
 <ol>
 <li>Optional: Install virtualenv and Python3 and create a virtual environment.
    <code>sh
@@ -969,7 +969,7 @@ source ENV/bin/activate</code></li>
 </code></pre></div></li>
 </ol>
 <p>You can <a href="../../host/configure">configure the app</a> through environment variables.</p>
-<h2 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Poveznica">&para;</a></h2>
+<h2 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Stalna poveznica">&para;</a></h2>
 <p>To run the tests, we use <code>tox</code>. <code>tox</code> tests all different Python versions which we want to be compatible to.</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>tox
 </code></pre></div>
@@ -979,7 +979,7 @@ source ENV/bin/activate</code></li>
 <p>Run a specific Python version:</p>
 <div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>py39
 </code></pre></div>
-<h2 id="browser-testing">Browser Testing<a class="headerlink" href="#browser-testing" title="Poveznica">&para;</a></h2>
+<h2 id="browser-testing">Browser Testing<a class="headerlink" href="#browser-testing" title="Stalna poveznica">&para;</a></h2>
 <p>We use selenium to test the app in different browsers. By default, Firefox is used. You can test the features like this:</p>
 <div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>web
 </code></pre></div>
@@ -990,7 +990,7 @@ tox<span class="w"> </span>-e<span class="w"> </span>web<span class="w"> </span>
 <p>You can also change the layout of the window to test the responsive design:</p>
 <div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>web<span class="w"> </span>--<span class="w"> </span>-D<span class="w"> </span><span class="nv">window</span><span class="o">=</span>375x812<span class="w"> </span><span class="c1"># iPhone11 size</span>
 </code></pre></div>
-<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Poveznica">&para;</a></h2>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Stalna poveznica">&para;</a></h2>
 <p>You can build the documentation with <code>tox</code>, too. It is located in the <code>docs</code> directory.</p>
 <div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>docs<span class="w"> </span>--<span class="w"> </span>build<span class="w"> </span><span class="c1"># ./site</span>
 tox<span class="w"> </span>-e<span class="w"> </span>docs<span class="w"> </span>--<span class="w"> </span>serve
