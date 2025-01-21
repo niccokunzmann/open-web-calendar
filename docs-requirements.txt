@@ -33,7 +33,7 @@ cssselect2==0.7.0
     # via cairosvg
 defusedxml==0.7.1
     # via cairosvg
-filelock==3.16.1
+filelock==3.17.0
     # via cachecontrol
 ghp-import==2.1.0
     # via mkdocs
