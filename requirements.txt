@@ -73,7 +73,7 @@ six==1.17.0
     # via python-dateutil
 soupsieve==2.6
     # via beautifulsoup4
-tzdata==2024.2
+tzdata==2025.1
     # via
     #   icalendar
     #   recurring-ical-events
