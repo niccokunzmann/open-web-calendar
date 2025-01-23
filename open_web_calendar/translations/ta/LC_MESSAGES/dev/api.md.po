@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.14.6\n"
 
-#
 msgid ""
 "The API of the Open Web Calendar allows more customization than the "
 "configuration page."

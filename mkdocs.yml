@@ -131,6 +131,7 @@ plugins:
         - sk
         - zh_Hant
         - uk
+        - ta
 # add mdpo.languages above
       translate:
         - site_name
