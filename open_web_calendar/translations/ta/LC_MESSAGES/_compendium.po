@@ -1,0 +1,331 @@
+# Languages add-on <noreply-addon-languages@weblate.org>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-23 18:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.14.6\n"
+
+#
+msgid ""
+"Embed a highly customizable web calendar into your website using ICal source"
+" links"
+msgstr ""
+
+msgid "Open Web Calendar"
+msgstr ""
+
+msgid "Permanent link"
+msgstr ""
+
+msgid "See also:"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/default_specification.yml"
+msgstr ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/default_specification.yml"
+
+#, fuzzy
+msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
+msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
+
+msgid ""
+"After you have set up your own server, you can [configure the "
+"behavior](../configure)."
+msgstr ""
+
+msgid "Python Package"
+msgstr ""
+
+msgid "OWC_SPECIFICATION"
+msgstr ""
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The configuration of all calendars is rooted in the "
+#~ "[default_specification.yml]. All those values can be changed through a copy "
+#~ "of this file hosted on the web through the calendar parameter "
+#~ "`specification_url`. Each parameter should be documented in "
+#~ "[default_specification.yml]."
+#~ msgstr ""
+
+#~ msgid "`title`"
+#~ msgstr ""
+
+#~ msgid "`language`"
+#~ msgstr ""
+
+#~ msgid "`favicon`"
+#~ msgstr ""
+
+#~ msgid "`source_code` - if you made changes"
+#~ msgstr ""
+
+#~ msgid "`contributing` - if you want to redirect to contribute to your project"
+#~ msgstr ""
+
+#~ msgid "SSRF Protection with a Proxy Server"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Open Web Calendar can be used to access the local network behind a "
+#~ "firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/issues/250). This free access is intended to show calendars from "
+#~ "everywhere. Since `requests` is used by the Open Web Calender, it can use a "
+#~ "proxy as described in the [`requests` "
+#~ "documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
+#~ " The proxy can then handle the filtering."
+#~ msgstr ""
+
+#~ msgid "[API](../../dev/api)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[Prevent SSRF using a Tor proxy](../docker#preventing-ssrf-attacks-using-a-"
+#~ "tor-proxy)"
+#~ msgstr ""
+
+#~ msgid "ALLOWED_HOSTS"
+#~ msgstr ""
+
+#~ msgid "default empty"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The hosts divided by comma that the Open Web Calendar permits. This is "
+#~ "required to mitigate the Host Header Injection vulnerability. You will see "
+#~ "this text if the host is not allowed:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Forbidden:** You don't have the permission to access the requested "
+#~ "resource. It is either read-protected or not readable by the server.*"
+#~ msgstr ""
+
+#~ msgid "permit one host: `ALLOWED_HOSTS=localhost`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "permit several hosts: `ALLOWED_HOSTS=open-web-"
+#~ "calendar.hosted.quelltext.eu,192.168.0.42`"
+#~ msgstr ""
+
+#~ msgid "permit all hosts (vulnerable): `ALLOWED_HOSTS=`"
+#~ msgstr ""
+
+#~ msgid "PORT"
+#~ msgstr ""
+
+#~ msgid "default `5000`, default `80` in the Docker container"
+#~ msgstr ""
+
+#~ msgid "The port that the service is running on."
+#~ msgstr ""
+
+#~ msgid "WORKERS"
+#~ msgstr ""
+
+#~ msgid "default `4`, only for the Docker container"
+#~ msgstr ""
+
+#~ msgid "The number of parallel workers to handle requests."
+#~ msgstr ""
+
+#~ msgid "Serve on HTTP port: `PORT=80`"
+#~ msgstr ""
+
+#~ msgid "CACHE_REQUESTED_URLS_FOR_SECONDS"
+#~ msgstr ""
+
+#~ msgid "default `600`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Seconds to cache the calendar files that get downloaded to reduce bandwidth "
+#~ "and delay."
+#~ msgstr ""
+
+#~ msgid "Only use one worker: `WORKERS=1`"
+#~ msgstr ""
+
+#~ msgid "Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
+#~ msgstr ""
+
+#~ msgid "APP_DEBUG"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "default `true`, values `true` or `false`, always `false` in the Docker "
+#~ "container"
+#~ msgstr ""
+
+#~ msgid "Set the debug flag for the app."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Environment variables only influence the running of the server. These "
+#~ "environment variables can be used to configure the service:"
+#~ msgstr ""
+
+#~ msgid "Further Configuration"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Open Web Calendar uses libraries whose behavior can be further "
+#~ "customized."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Flask** has **[more environment "
+#~ "variables](https://flask.palletsprojects.com/en/3.0.x/config/)** available "
+#~ "to configure how the application serves content."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Requests** is used the get the `.ics` files. You can [configure a proxy]."
+#~ msgstr ""
+
+#~ msgid "Configuring the Default Calendar"
+#~ msgstr ""
+
+#~ msgid "Configuring the Server"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. You might want to change these values:"
+#~ msgstr ""
+
+#~ msgid "Related:"
+#~ msgstr ""
+
+#~ msgid "Default Parameters"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`ALLOWED_HOSTS` default empty The hosts divided by comma that the Open Web "
+#~ "Calendar permits. This is required to mitigate the Host Header Injection "
+#~ "vulnerability. You will see this text if the host is not allowed: "
+#~ "*Forbidden: You don't have the permission to access the requested resource. "
+#~ "It is either read-protected or not readable by the server.* Examples:"
+#~ msgstr ""
+
+#~ msgid "Examples:"
+#~ msgstr ""
+
+#~ msgid "**Forbidden**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You don't have the permission to access the requested resource. It is either"
+#~ " read-protected or not readable by the server."
+#~ msgstr ""
+
+#~ msgid "Translate"
+#~ msgstr ""
+
+#~ msgid "Cleanup translation files"
+#~ msgstr ""
+
+#~ msgid "Contributors in comment"
+#~ msgstr ""
+
+#~ msgid "Add missing languages"
+#~ msgstr ""
+
+#~ msgid "Development"
+#~ msgstr ""
+
+#~ msgid "Hosting"
+#~ msgstr ""
+
+#~ msgid "News"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can help us by [translating the "
+#~ "project](https://hosted.weblate.org/engage/open-web-calendar/) to your "
+#~ "language. If your language is not listed, please request to add it!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-calendar/)"
+#~ msgstr ""
+
+#~ msgid "Here, you can see the current translation status:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[![Translation status](https://hosted.weblate.org/widgets/open-web-"
+#~ "calendar/-/multi-auto.svg)](https://hosted.weblate.org/engage/open-web-"
+#~ "calendar/)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Translations are contributed by volunteers and [logged](changelog.md). After"
+#~ " 48 hours they are usually life at the [hosted instance](https://open-web-"
+#~ "calendar.hosted.quelltext.eu)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
+
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+
+#~ msgid ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+#~ msgstr ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
