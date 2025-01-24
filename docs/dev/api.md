@@ -97,7 +97,7 @@ The source format can be YAML or JSON.
 
 Examples:
 
-    calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml
+    calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/open_web_calendar/default_specification.yml
 
 ### open_web_calendar.app.DEFAULT_SPECIFICATION
 
@@ -128,24 +128,33 @@ If you add a new parameter as a developer:
 - Add an implementation, depending on its use in the `app.py` or the templates
   of the JavaScript files.
   The specification is already available in all of them to use.
-- Add tests in [features/configure-the-calendar.feature]({{link.code}}/features/configure-the-calendar.feature) to check that the calendar responds to the feature.
-- Add tests in [features/edit-the-calendar.feature]({{link.code}}/features/edit-the-calendar.feature) to make sure that the parameter can be used when a calendar is edited.
+- Add tests in [features/configure-the-calendar.feature] to check that the calendar responds to the feature.
+- Add tests in [features/edit-the-calendar.feature] to make sure that the parameter can be used when a calendar is edited.
+
+[features/configure-the-calendar.feature]: {{link.code}}/open_web_calendar/features/configure-the-calendar.feature
+[features/edit-the-calendar.feature]: {{link.code}}/open_web_calendar/features/edit-the-calendar.feature
+
 
 ## Specification in the Calendar
 
-[app.py](https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81) compiles the specification from the given parameters in `get_specification()`.
-In the [template](https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23) you can access the specification through the `specification` variable.
+[app.py][app.py-81] compiles the specification from the given parameters in `get_specification()`.
+In the [template][dhtmlx-23] you can access the specification through the `specification` variable.
 The specification is available to JavaScript as the `specification` variable.
+
+
+[app.py-81]: https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81
+[dhtmlx-23]: https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23
 
 ## Specification in the Index Page
 
 The default specification is available before the calendar is built via JavaScript in the
 `configuration.default_specification` variable.
-There is a [getSpecification()](https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93) function which created the
+There is a [getSpecification()] function which created the
 specification from the inputs.
 Generally, the `specification` variable should be used.
 
-[default_specification]: {{link.code}}/default_specification.yml
+[default_specification]: {{link.code}}/open_web_calendar/default_specification.yml
+[getSpecification()]: https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93
 
 ## Architecture
 
