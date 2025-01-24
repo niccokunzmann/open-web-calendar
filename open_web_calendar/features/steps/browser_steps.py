@@ -79,6 +79,17 @@ def step_impl(context, date):
     wait_for_calendar_to_load(context)
 
 
+@given("we open the url from issue 563")
+def step_impl(context):
+    url = (
+        "calendar.html?language=zh_Hans&url=https%3A%2F%2Fwww.calendarlabs.com%2Fica"
+        "l-calendar%2Fics%2F46%2FGermany_Holidays.ics&url=%22%3E%3Cimg%20src%3Dx%20o"
+        "nerror%3Dscheduler_here.innerText=%27hacked%27%3E"
+    )
+    get_url(context, context.index_page + url)
+    wait_for_calendar_to_load(context)
+
+
 def wait_for_calendar_to_load(context):
     # wait until the loader has stopped spinning
     # see https://stackoverflow.com/a/53242626/1320237
@@ -154,6 +165,14 @@ def step_impl(context, text):
     assert (
         len(links) == 1
     ), f"I should click on the link {text!r} but found {len(links)}."
+    links[0].click()
+
+
+@when('we click on the first link "{text}"')
+@when('we click the first link "{text}"')
+def step_impl(context, text):
+    links = context.browser.find_elements(By.XPATH, f"//a[text() = {text!r}]")
+    assert len(links) >= 1, f"I should click on the link {text!r} but found none."
     links[0].click()
 
 
@@ -414,6 +433,13 @@ def step_impl(context, link_text, link_target):
 @then('the link "{link_text}" opens "{link_href}"')
 def step_impl(context, link_text, link_href):
     """Check the href of a link."""
+    assert_tag_with_text_attribute_equals(context, "a", link_text, "href", link_href)
+
+
+@then('the link "{link_text}" opens nothing')
+def step_impl(context, link_text):
+    """Check the href of a link."""
+    link_href = context.browser.current_url + "#"
     assert_tag_with_text_attribute_equals(context, "a", link_text, "href", link_href)
 
 

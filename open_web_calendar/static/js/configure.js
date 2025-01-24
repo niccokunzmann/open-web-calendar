@@ -44,6 +44,12 @@ function getQueries() {
     return queries;
 }
 
+function isSafeUrl(urlString) {
+    return !UNSAFE_URL_PROTOCOLS.some(function(protocol) {
+        return urlString.toLowerCase().startsWith(protocol.toLowerCase() + ":");
+    });
+}
+
 /* Create a link around the HTML text.
  * Use this instead of creating links manually because it also sets the
  * target according to the specification.
@@ -51,7 +57,7 @@ function getQueries() {
 function makeLink(url, html) {
     const link = document.createElement("a");
     link.target = specification.target;
-    link.href = url;
+    link.href = isSafeUrl(url) ? url : "#";
     link.innerHTML = html;
     return link.outerHTML;
 }
@@ -162,11 +168,22 @@ function showXHRError(xhr) {
 
 function showEventError(error) {
     // show an error created by app.py -> error_to_dhtmlx
-    var div = document.createElement("div");
-    div.innerHTML = "<h1>" + error.text + "</h1>" +
-        "<a href='" + error.url + "'>" + error.url + "</a>" +
-        "<p>" + error.description + "</p>" +
-        "<pre>" + error.traceback + "</pre>";
+    const div = document.createElement("div");
+    // HEADING
+    const heading = document.createElement("h1");
+    heading.innerText = error.text;
+    div.appendChild(heading);
+    // LINK
+    const link = makeLink(error.url, escapeHtml(error.url));
+    div.innerHTML += link;
+    // DESCRIPTION
+    const description = document.createElement("p");
+    description.innerText = error.description;
+    div.appendChild(description);
+    // TRACEBACK
+    const traceback = document.createElement("pre");
+    traceback.innerText = error.traceback;
+    div.appendChild(traceback);
     showError(div);
 }
 
