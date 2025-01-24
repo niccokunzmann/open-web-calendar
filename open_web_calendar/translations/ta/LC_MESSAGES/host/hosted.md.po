@@ -1,31 +1,41 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2025.
+# தமிழ்நேரம் <anishprabu.t@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-23 18:34+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-01-24 22:37+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-hosted-version/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.14.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 msgid "You can use the hosted version of the Open Web Calendar yourself."
 msgstr ""
+"திறந்த வலை காலெண்டரின் புரவலன் செய்யப்பட்ட பதிப்பை நீங்களே பயன்படுத்தலாம்."
 
 msgid "Hosted Version"
-msgstr ""
+msgstr "புரவலன் செய்யப்பட்ட பதிப்பு"
 
+#, fuzzy
 msgid ""
 "There is a version from which you can access calendars which are hosted in "
 "[Tor Onion Services](https://tb-manual.torproject.org/onion-services/): "
 "[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-"
 "calendar.hosted.quelltext.eu)."
 msgstr ""
+"[டோர் வெங்காய சேவைகள்] (https://tb-manual.torproject.org/onion-services/) இல் "
+"புரவலன் செய்யப்பட்ட காலெண்டர்களை அணுகக்கூடிய ஒரு பதிப்பு உள்ளது: "
+"[Tor.Open-Web-calendar.hosted.QuellText .eu] (https://tor.open-web-"
+"calendar.hosted.quelltext.eu)."
 
+#, fuzzy
 msgid ""
 "A hosted version exists at [open-web-"
 "calendar.hosted.quelltext.eu](https://open-web-"
@@ -34,19 +44,32 @@ msgid ""
 "improvements go there after max. 48 hours. This version is intended to stay "
 "free of charge and is funded by [donation ♥️](../../contributing)."
 msgstr ""
+"புரவலன் செய்யப்பட்ட பதிப்பு [Open-web-calendar.hosted.quelltext.eu] (https://open-"
+"web-calendar.hosted.quelltext.eu) இல் உள்ளது. நீங்கள் விரும்பினால் இந்த பதிப்பைப் "
+"பயன்படுத்தலாம். இது `மாச்டர்` கிளையில் அண்மைக் கால பதிப்பிலிருந்து பயன்படுத்தப்படுகிறது. "
+"இதனால், மொழிபெயர்ப்பு மேம்பாடுகள் மேக்சுக்குப் பிறகு அங்கு செல்கின்றன. 48 மணி நேரம். இந்த "
+"பதிப்பு இலவசமாக இருக்க வேண்டும், மேலும் [நன்கொடை ♥) (../../ பங்களிப்பு) "
+"நிதியளிக்கிறது."
 
 msgid ""
 "[How to configure all calendar parameters](../configure/#configuring-the-"
 "default-calendar)"
 msgstr ""
+"[How பெறுநர் configure அனைத்தும் நாட்காட்டி parameters](../configure/#configuring-"
+"the-default-calendar)"
 
+#, fuzzy
 msgid ""
 "If you decide later to [setup your own server](../self), you can do this and"
 " [migrate all calendars](../migrate) you use to the other server."
 msgstr ""
+"[உங்கள் சொந்த சேவையகத்தை அமைக்கவும்] (../ சுய) செய்ய நீங்கள் பின்னர் முடிவு செய்தால், நீங்கள் "
+"இதைச் செய்யலாம் மற்றும் [அனைத்து காலெண்டர்களையும் நகர்த்தலாம்] (../ இடம்பெயர்வு) நீங்கள் மற்ற "
+"சேவையகத்திற்கு பயன்படுத்தலாம்."
 
+#, fuzzy
 msgid "[Uptime service monitor for the hosted instances][kuma]"
-msgstr ""
+msgstr "[ஓச்ட் செய்யப்பட்ட நிகழ்வுகளுக்கான கூடுதல் பணி மானிட்டர்] [குமா]"
 
 #, fuzzy
 msgid "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"

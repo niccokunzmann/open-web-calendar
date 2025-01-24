@@ -1,19 +1,21 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # Milan Šalka <salka.milan@googlemail.com>, 2024.
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-30 17:46+0200\n"
-"PO-Revision-Date: 2024-08-24 08:09+0000\n"
-"Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/open-web-calendar/documentation-api/sk/>\n"
+"PO-Revision-Date: 2025-01-24 22:37+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-api/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.7.1-dev\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 msgid ""
 "The API of the Open Web Calendar allows more customization than the "
@@ -236,7 +238,7 @@ msgstr ""
 "spracovanie udalostí."
 
 msgid "![architecture](/assets/img/architecture.svg)"
-msgstr "![architecture](/asets/img/architecture.svg)"
+msgstr "![architecture](/assets/img/architecture.svg)"
 
 msgid "Query Parameter"
 msgstr "Požiadavky Para"
