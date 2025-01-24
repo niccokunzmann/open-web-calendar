@@ -69,7 +69,7 @@ Please refer to the [default_specification].
 These values are all documented.
 Please use the [OWC_SPECIFICATION] environment variable to change them.
 
-[default_specification]: ../../assets/default_specification.yml
+[default_specification]: /assets/default_specification.yml
 [privacy-policy]: ../privacy-policy
 
 See also:

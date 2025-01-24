@@ -10,7 +10,6 @@ description: "Play with a variety of Calendars for your own project."
 # Examples
 
 <!-- Page level macros, see https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/#page-level-macros -->
-
 {% macro calendar_iframe(spec, width="100%", params="", id="") -%}
 
 <iframe class="open-web-calendar" id="{{id}}"
@@ -99,8 +98,9 @@ Modifications:
 ## Events Hosted as a Tor Hidden Service
 
 This calendar is not styled but contains events that can be hosted behind
-a firewall on a little anonymous server. [Example](https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics
-)
+a firewall on a little anonymous server. [Example][tor-example]
+
+[tor-example]: https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics
 
 Modifications:
 
@@ -141,6 +141,9 @@ You can **contact us** with the link of the calendar e.g. in an [issue]({{link.i
 
 You can **edit the page** yourself:
 
-1. Place all required `.ics` files in the [calendars](https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/assets/calendars) directory.
-2. Download the specification of the calendar. And add it to the [templates](https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/assets/templates) directory.
+1. Place all required `.ics` files in the [calendars] directory.
+2. Download the specification of the calendar. And add it to the [templates] directory.
 3. Edit this file and add a section.
+
+[calendars]: {{link.code}}/docs/assets/calendars
+[templates]: {{link.code}}/docs/assets/templates
