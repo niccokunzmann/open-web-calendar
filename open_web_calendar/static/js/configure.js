@@ -51,7 +51,7 @@ function getQueries() {
 function makeLink(url, html) {
     const link = document.createElement("a");
     link.target = specification.target;
-    link.href = url;
+    link.href = url.startsWith("javascript:") ? "#" : url;
     link.innerHTML = html;
     return link.outerHTML;
 }
