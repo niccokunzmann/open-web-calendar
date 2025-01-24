@@ -5,7 +5,7 @@
 import json
 import re
 import time
-from urllib.parse import quote, urlencode, urljoin
+from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
 from selenium.common.exceptions import TimeoutException
@@ -73,9 +73,11 @@ def step_impl(context, date):
 
 @given("we open the url from issue 563")
 def step_impl(context):
-    #get_url(context, context.index_page + "calendar.html?language=zh_Hans&url=https%3A%2F%2Fwww.calendarlabs.com%2Fical-calendar%2Fics%2F46%2FGermany_Holidays.ics&url=" + quote("\"><img src%3Dx onerror%3Dscheduler_here.innerText='hacked'>"))
-    
-    url = "calendar.html?language=zh_Hans&url=https%3A%2F%2Fwww.calendarlabs.com%2Fical-calendar%2Fics%2F46%2FGermany_Holidays.ics&url=%22%3E%3Cimg%20src%3Dx%20onerror%3Dscheduler_here.innerText=%27hacked%27%3E"
+    url = (
+        "calendar.html?language=zh_Hans&url=https%3A%2F%2Fwww.calendarlabs.com%2Fica"
+        "l-calendar%2Fics%2F46%2FGermany_Holidays.ics&url=%22%3E%3Cimg%20src%3Dx%20o"
+        "nerror%3Dscheduler_here.innerText=%27hacked%27%3E"
+    )
     get_url(context, context.index_page + url)
     wait_for_calendar_to_load(context)
 
@@ -162,11 +164,8 @@ def step_impl(context, text):
 @when('we click the first link "{text}"')
 def step_impl(context, text):
     links = context.browser.find_elements(By.XPATH, f"//a[text() = {text!r}]")
-    assert (
-        len(links) >= 1
-    ), f"I should click on the link {text!r} but found none."
+    assert len(links) >= 1, f"I should click on the link {text!r} but found none."
     links[0].click()
-
 
 
 def get_body_text(context):
