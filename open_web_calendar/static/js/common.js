@@ -8,6 +8,12 @@
 const DEFAULT_URL = document.location.protocol + "//" + document.location.host;
 const CALENDAR_ENDPOINT = "/calendar.html";
 
+/* Which URL protocols cannot be used for links?
+ * If we choose unsafe instead of safe, we allow that custom links for
+ * apps can be used, too, like tel:
+ */
+const UNSAFE_URL_PROTOCOLS = ["java", "javascript", "vbscript", "data", "file", "about", "chrome", "chrome-extension", "moz-extension"];
+
 
 /* Return the properties of an object.
  *

@@ -44,6 +44,12 @@ function getQueries() {
     return queries;
 }
 
+function isSafeUrl(urlString) {
+    return !UNSAFE_URL_PROTOCOLS.some(function(protocol) {
+        return urlString.toLowerCase().startsWith(protocol.toLowerCase() + ":");
+    });
+}
+
 /* Create a link around the HTML text.
  * Use this instead of creating links manually because it also sets the
  * target according to the specification.
@@ -51,7 +57,7 @@ function getQueries() {
 function makeLink(url, html) {
     const link = document.createElement("a");
     link.target = specification.target;
-    link.href = url.startsWith("javascript:") ? "#" : url;
+    link.href = isSafeUrl(url) ? url : "#";
     link.innerHTML = html;
     return link.outerHTML;
 }

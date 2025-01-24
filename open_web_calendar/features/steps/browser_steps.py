@@ -426,6 +426,13 @@ def step_impl(context, link_text, link_href):
     assert_tag_with_text_attribute_equals(context, "a", link_text, "href", link_href)
 
 
+@then('the link "{link_text}" opens nothing')
+def step_impl(context, link_text):
+    """Check the href of a link."""
+    link_href = context.browser.current_url + "#"
+    assert_tag_with_text_attribute_equals(context, "a", link_text, "href", link_href)
+
+
 def assert_tag_with_text_attribute_equals(
     context, tag, text, attribute, expected_value
 ):
