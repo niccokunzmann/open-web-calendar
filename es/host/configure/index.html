@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_osurxjso/es/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_9r0269pb/es/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_osurxjso/es/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_9r0269pb/es/host/configure/index.png" >
       
     
     
@@ -225,6 +225,12 @@
           <li class="md-select__item">
             <a href="../../../uk" hreflang="uk" class="md-select__link">
               Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ta" hreflang="ta" class="md-select__link">
+              ஆங்கிலம்
             </a>
           </li>
         
@@ -1060,7 +1066,7 @@
 <li>Cambiar el funcionamiento del servidor.</li>
 </ul>
 <h2 id="configurar-el-calendario-predeterminado">Configurar el calendario predeterminado<a class="headerlink" href="#configurar-el-calendario-predeterminado" title="Enlace permanente">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="../../assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="../../assets/default_specification.yml">default_specification</a>.</p>
+<p>The configuration of all calendars is rooted in the <a href="/assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="/assets/default_specification.yml">default_specification</a>.</p>
 <p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
 <p>Es posible que quieras cambiar los siguientes valores.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Enlace permanente">&para;</a></h3>
@@ -1077,7 +1083,7 @@
 <p>Si alojas este servicio tu mismo, puedes utilizar la <a href="../privacy-policy">política de privacidad</a> predeterminada.</p>
 <p>Si por alguna razón decides recoger datos, por ejemplo, en el proxy HTTPS o registrar direcciones IP, entonces necesitas crear tu propia política de privacidad. Puedes enlazar con la de este proyecto.</p>
 <h3 id="mas-valores">Más valores<a class="headerlink" href="#mas-valores" title="Enlace permanente">&para;</a></h3>
-<p>There are loads more values that can be changed. Please refer to the <a href="../../assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
+<p>There are loads more values that can be changed. Please refer to the <a href="/assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
 <p>Ver también:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
@@ -1096,7 +1102,7 @@
 <li>permitir varios hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
 <li>permitir a todo el mundo el acceso al servidor (por defecto): <code>ALLOWED_HOSTS=</code> o <code>ALLOWED_HOSTS=*</code></li>
 </ul>
-<p>Esta función es proporcionada por <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
+<p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Enlace permanente">&para;</a></h3>
 <p>por defecto<code>5000</code> , predeterminado<code>80</code> en el contenedor Docker</p>
 <p>El puerto en el que se ejecuta el servicio.</p>

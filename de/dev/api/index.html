@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_osurxjso/de/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_9r0269pb/de/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_osurxjso/de/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_9r0269pb/de/dev/api/index.png" >
       
     
     
@@ -225,6 +225,12 @@
           <li class="md-select__item">
             <a href="../../../uk" hreflang="uk" class="md-select__link">
               Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ta" hreflang="ta" class="md-select__link">
+              ஆங்கிலம்
             </a>
           </li>
         
@@ -894,9 +900,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#query-parameters" class="md-nav__link">
+  <a href="#url-parameter" class="md-nav__link">
     <span class="md-ellipsis">
-      Query parameters
+      URL-Parameter
     </span>
   </a>
   
@@ -953,27 +959,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#specification-in-the-calendar" class="md-nav__link">
+  <a href="#spezifikation-im-kalender" class="md-nav__link">
     <span class="md-ellipsis">
-      Specification in the Calendar
+      Spezifikation im Kalender
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#specification-in-the-index-page" class="md-nav__link">
+  <a href="#spezifikation-auf-der-index-seite" class="md-nav__link">
     <span class="md-ellipsis">
-      Specification in the Index Page
+      Spezifikation auf der Index-Seite
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#architektur" class="md-nav__link">
     <span class="md-ellipsis">
-      Architecture
+      Architektur
     </span>
   </a>
   
@@ -1029,21 +1035,21 @@
 <li><code>to=YYYY-MM-DD</code> - Das Ende des Zeitabschnitts, in dem Termine angezeigt werden sollen (nicht eingeschlossen)</li>
 </ul>
 <h2 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Fester Link">&para;</a></h2>
-<p>Alle Konfigurationsparameter sind ausreichend in der <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a> beschrieben. Das ist die Referenz. Z.B. wenn Du den Parameter <code>title</code> in der <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a> findest, dann hast du mehrere Optionen:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="query-parameter" name="__tabbed_1" type="radio" /><input id="yaml" name="__tabbed_1" type="radio" /><input id="json" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="query-parameter">Query Parameter</label><label for="yaml">YAML</label><label for="json">JSON</label></div>
+<p>Alle Konfigurationsparameter sind ausreichend in der <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a> beschrieben. Das ist die Referenz. Z.B. wenn Du den Parameter <code>title</code> in der <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a> findest, dann hast du mehrere Optionen:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="url-parameter_1" name="__tabbed_1" type="radio" /><input id="yaml" name="__tabbed_1" type="radio" /><input id="json" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="url-parameter_1">URL-Parameter</label><label for="yaml">YAML</label><label for="json">JSON</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Change the title in a query parameter:</p>
+<p>Ändere den Titel in den URL-Parametern:</p>
 <div class="highlight"><pre><span></span><code>/index.html?title<span class="o">=</span>calendar
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>Change the title in a YAML specification:</p>
+<p>Ändere den Titel in der YAML-Spezifikation:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">calendar</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>Change the title in a JSON specification:</p>
+<p>Ändere den Titel in der JSON-Spezifikation:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;calendar&quot;</span>
 <span class="p">}</span>
@@ -1053,7 +1059,7 @@
 </div>
 <h2 id="die-spezifikation-zusammenstellen">Die Spezifikation Zusammenstellen<a class="headerlink" href="#die-spezifikation-zusammenstellen" title="Fester Link">&para;</a></h2>
 <p>You can change the calendar behavior and looks with parameters. If the same parameter is specified in different places, the earlier place listed below has the highest precedence. These are the places to specify parameters:</p>
-<h3 id="query-parameters">Query parameters<a class="headerlink" href="#query-parameters" title="Fester Link">&para;</a></h3>
+<h3 id="url-parameter">URL-Parameter<a class="headerlink" href="#url-parameter" title="Fester Link">&para;</a></h3>
 <p>All parameters to the calendar url are put into the specification. The query parameters have the highest precedence.</p>
 <p>Examples:</p>
 <div class="highlight"><pre><span></span><code>index.html?language=de
@@ -1062,7 +1068,7 @@ calendar.html?title=CALENDAR
 <h3 id="specification_url">specification_url<a class="headerlink" href="#specification_url" title="Fester Link">&para;</a></h3>
 <p>If you specify this query parameter, the editor configuration is loaded from this url, too. Query parameters are still more important than what is written in this file. The source format can be YAML or JSON.</p>
 <p>Examples:</p>
-<div class="highlight"><pre><span></span><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml
+<div class="highlight"><pre><span></span><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/open_web_calendar/default_specification.yml
 </code></pre></div>
 <h3 id="open_web_calendarappdefault_specification">open_web_calendar.app.DEFAULT_SPECIFICATION<a class="headerlink" href="#open_web_calendarappdefault_specification" title="Fester Link">&para;</a></h3>
 <p>This is intended for developers and Python-internal.</p>
@@ -1071,22 +1077,22 @@ calendar.html?title=CALENDAR
 </code></pre></div>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Fester Link">&para;</a></h3>
 <p>This is an optional environment variable. Please read more about it in the <a href="../../host/configure#owc_specification">Server Configuration</a>.</p>
-<h3 id="default_specification"><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a><a class="headerlink" href="#default_specification" title="Fester Link">&para;</a></h3>
+<h3 id="default_specification"><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a><a class="headerlink" href="#default_specification" title="Fester Link">&para;</a></h3>
 <p>This file contains the default parameters. They must not be hard-coded in the source code. All parameters are listed and documented there so this file can be used for reference. Do not modify this file, instead use the <code>OWC_SPECIFICATION</code> environment variable.</p>
 <h2 id="parameter-hinzufugen">Parameter hinzufügen<a class="headerlink" href="#parameter-hinzufugen" title="Fester Link">&para;</a></h2>
 <p>If you add a new parameter as a developer:</p>
 <ul>
-<li>Füge den Parameter mit einem Standardwert zur <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//default_specification.yml">default_specification</a> hinzu</li>
+<li>Füge den Parameter mit einem Standardwert zur <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a> hinzu</li>
 <li>Add an implementation, depending on its use in the <code>app.py</code> or the templates of the JavaScript files. The specification is already available in all of them to use.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> to check that the calendar responds to the feature.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> to make sure that the parameter can be used when a calendar is edited.</li>
+<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> to check that the calendar responds to the feature.</li>
+<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> to make sure that the parameter can be used when a calendar is edited.</li>
 </ul>
-<h2 id="specification-in-the-calendar">Specification in the Calendar<a class="headerlink" href="#specification-in-the-calendar" title="Fester Link">&para;</a></h2>
+<h2 id="spezifikation-im-kalender">Spezifikation im Kalender<a class="headerlink" href="#spezifikation-im-kalender" title="Fester Link">&para;</a></h2>
 <p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compiles the specification from the given parameters in <code>get_specification()</code>. In the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> you can access the specification through the <code>specification</code> variable. The specification is available to JavaScript as the <code>specification</code> variable.</p>
-<h2 id="specification-in-the-index-page">Specification in the Index Page<a class="headerlink" href="#specification-in-the-index-page" title="Fester Link">&para;</a></h2>
+<h2 id="spezifikation-auf-der-index-seite">Spezifikation auf der Index-Seite<a class="headerlink" href="#spezifikation-auf-der-index-seite" title="Fester Link">&para;</a></h2>
 <p>The default specification is available before the calendar is built via JavaScript in the <code>configuration.default_specification</code> variable. There is a <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a> function which created the specification from the inputs. Generally, the <code>specification</code> variable should be used.</p>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Fester Link">&para;</a></h2>
-<p>Below, you can find a picture of the architecture.</p>
+<h2 id="architektur">Architektur<a class="headerlink" href="#architektur" title="Fester Link">&para;</a></h2>
+<p>Das Bild der Architektur ist hier unten.</p>
 <p><img alt="architecture" src="/assets/img/architecture.svg" /></p>
 <p>The base of a calendar is the specification, given in the various forms. This specification influences all the steps.</p>
 <p>After the specification is compiled, the calendar (ics) files are downloaded from the locations on the Internet.</p>
