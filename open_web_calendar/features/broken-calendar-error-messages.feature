@@ -25,7 +25,7 @@ Feature: If we add calendars that do not work, we would like to see an error mes
         When we look at 2019-03-04
         When we click the link "!"
         Then we cannot see the text "Hacked!"
-        Then we can see the text "<script>"
+        Then we can see the text "document.body.innerHTML = "
 
     Scenario: We cannot use file:// links.
        Given we add the calendar "file:///home/user/Documents/file.odt"
