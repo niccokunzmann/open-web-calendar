@@ -711,3 +711,26 @@ msgid ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
 msgstr ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
+
+msgid "v1.45"
+msgstr ""
+
+msgid ""
+"Fix several XSS vulnerabilities, see [Issue "
+"563](https://github.com/niccokunzmann/open-web-calendar/issues/563)."
+msgstr ""
+
+msgid "Improve German translation by Nicco Kunzmann, Croatian by Milo Ivir"
+msgstr ""
+
+msgid "Correct links in documentation"
+msgstr ""
+
+msgid "Add Tamil translation by தமிழ்நேரம்"
+msgstr ""
+
+msgid "Speed up web tests"
+msgstr ""
+
+msgid "Use more indirect links in the documentation"
+msgstr ""
