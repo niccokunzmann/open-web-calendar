@@ -285,13 +285,6 @@ msgstr ""
 "[templates]: https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//docs/assets/templates"
 
-msgid ""
-"<a href=\"https://open-web-"
-"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
-"calendar.quelltext.eu/assets/templates/christmas-day.json\" "
-"target=\"_blank\">Edit the calendar</a>"
-msgstr ""
-
 #~ msgid "<select id=\"timezoneOption\"></select>"
 #~ msgstr ""
 

@@ -253,13 +253,6 @@ msgstr ""
 "дозволити всім доступ до сервера (за замовчуванням): `ALLOWED_HOSTS=` або "
 "`ALLOWED_HOSTS=*`"
 
-msgid ""
-"This functionality is provided by [flask-allowed-"
-"hosts](https://pypi.org/project/flask-allowed-hosts/)."
-msgstr ""
-"Цю функцію надає [flask-allowed-hosts](https://pypi.org/project/flask-"
-"allowed-hosts/)."
-
 #, fuzzy
 msgid "[privacy-policy]: ../privacy-policy"
 msgstr "[privacy-policy]: ../privacy-policy"
@@ -345,6 +338,20 @@ msgstr ""
 #, fuzzy
 msgid "[default_specification]: /assets/default_specification.yml"
 msgstr "[default_specification]: /assets/default_specification.yml"
+
+msgid "This functionality is provided by [flask-allowed-hosts]."
+msgstr ""
+
+#, fuzzy
+msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+
+#~ msgid ""
+#~ "This functionality is provided by [flask-allowed-"
+#~ "hosts](https://pypi.org/project/flask-allowed-hosts/)."
+#~ msgstr ""
+#~ "Цю функцію надає [flask-allowed-hosts](https://pypi.org/project/flask-"
+#~ "allowed-hosts/)."
 
 #, fuzzy
 #~ msgid "[default_specification]: ../../assets/default_specification.yml"

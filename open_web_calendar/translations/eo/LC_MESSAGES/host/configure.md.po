@@ -240,11 +240,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"This functionality is provided by [flask-allowed-"
-"hosts](https://pypi.org/project/flask-allowed-hosts/)."
-msgstr ""
-
-msgid ""
 "The configuration of all calendars is rooted in the [default_specification]."
 " All those values can be changed through a copy of this file hosted on the "
 "web through the calendar parameter `specification_url`. Each parameter "
@@ -305,6 +300,18 @@ msgstr ""
 #, fuzzy
 msgid "[default_specification]: /assets/default_specification.yml"
 msgstr "[default_specification]: /assets/default_specification.yml"
+
+msgid "This functionality is provided by [flask-allowed-hosts]."
+msgstr ""
+
+#, fuzzy
+msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+
+#~ msgid ""
+#~ "This functionality is provided by [flask-allowed-"
+#~ "hosts](https://pypi.org/project/flask-allowed-hosts/)."
+#~ msgstr ""
 
 #, fuzzy
 #~ msgid "[default_specification]: ../../assets/default_specification.yml"
