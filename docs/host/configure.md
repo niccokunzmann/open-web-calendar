@@ -97,7 +97,9 @@ Examples:
 - permit several hosts: `ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com`
 - permit everyone to access the server (default): `ALLOWED_HOSTS=` or `ALLOWED_HOSTS=*`
 
-This functionality is provided by [flask-allowed-hosts](https://pypi.org/project/flask-allowed-hosts/).
+This functionality is provided by [flask-allowed-hosts].
+
+[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/
 
 ### PORT
 
