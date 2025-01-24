@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
+import contextlib
 import json
 import re
 import time
@@ -17,6 +18,13 @@ from selenium.webdriver.support.ui import Select, WebDriverWait
 
 # default wait time in seconds
 WAIT = 10
+
+@contextlib.contextmanager
+def no_time_to_wait_for_elements(context):
+    """Set the global wait to 0 and expect everythign to be there."""
+    context.browser.implicitly_wait(0)
+    yield
+    context.browser.implicitly_wait(WAIT)
 
 
 def specification_to_query(spec):
@@ -156,7 +164,8 @@ def get_body_text(context):
 
 @then('we cannot find an XPATH "{xpath}"')
 def step_impl(context, xpath):
-    elements = context.browser.find_elements(By.XPATH, xpath)
+    with no_time_to_wait_for_elements(context):
+        elements = context.browser.find_elements(By.XPATH, xpath)
     for element in elements:
         print(element)
     assert not elements
@@ -201,9 +210,10 @@ def step_impl(context, uid, css_class):
 
 @then("we cannot see a {cls}")
 def step_impl(context, cls):
-    assert not context.browser.find_elements(
-        By.CLASS_NAME, cls
-    ), f"Expected to not find elements of class {cls}"
+    with no_time_to_wait_for_elements(context):
+        assert not context.browser.find_elements(
+            By.CLASS_NAME, cls
+        ), f"Expected to not find elements of class {cls}"
 
 
 @when("we open the about page")

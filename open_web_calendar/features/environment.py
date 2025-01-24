@@ -56,8 +56,8 @@ def locate_command(command: str):
 
 def configure_browser(browser: WebDriver):
     """Make common configurations to the browser."""
-    browser.implicitly_wait(10)
-    browser.set_page_load_timeout(10)
+    browser.implicitly_wait(WAIT)
+    browser.set_page_load_timeout(WAIT)
 
 
 @fixture
