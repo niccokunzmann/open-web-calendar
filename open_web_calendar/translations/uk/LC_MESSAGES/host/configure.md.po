@@ -326,10 +326,6 @@ msgid "[OWC_SPECIFICATION in the API](../../dev/api#owc_specification)"
 msgstr ""
 
 #, fuzzy
-msgid "[default_specification]: ../../assets/default_specification.yml"
-msgstr "[default_specification]: ../../assets/default_specification.yml"
-
-#, fuzzy
 msgid "[OWC_SPECIFICATION]: #owc_specification"
 msgstr "[OWC_SPECIFICATION]: #owc_specification"
 
@@ -345,6 +341,14 @@ msgstr ""
 "Нові версії Open Web Calendar можуть додавати нові параметри конфігурації. "
 "Внесення змін до цієї змінної замість зміни файлу `default_specification` "
 "гарантує, що ви не порушите відкритий веб-календар у майбутній версії."
+
+#, fuzzy
+msgid "[default_specification]: /assets/default_specification.yml"
+msgstr "[default_specification]: /assets/default_specification.yml"
+
+#, fuzzy
+#~ msgid "[default_specification]: ../../assets/default_specification.yml"
+#~ msgstr "[default_specification]: ../../assets/default_specification.yml"
 
 #~ msgid ""
 #~ "If you modify the default specification, you modify **all calendars** that "

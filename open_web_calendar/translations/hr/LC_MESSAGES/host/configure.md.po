@@ -266,10 +266,6 @@ msgid "[OWC_SPECIFICATION in the API](../../dev/api#owc_specification)"
 msgstr ""
 
 #, fuzzy
-msgid "[default_specification]: ../../assets/default_specification.yml"
-msgstr "[default_specification]: ../../assets/default_specification.yml"
-
-#, fuzzy
 msgid "[OWC_SPECIFICATION]: #owc_specification"
 msgstr "[OWC_SPECIFICATION]: #owc_specification"
 
@@ -282,6 +278,14 @@ msgid ""
 "`default_specification` file will ensure that you do not break the Open Web "
 "Calendar in a future version."
 msgstr ""
+
+#, fuzzy
+msgid "[default_specification]: /assets/default_specification.yml"
+msgstr "[default_specification]: /assets/default_specification.yml"
+
+#, fuzzy
+#~ msgid "[default_specification]: ../../assets/default_specification.yml"
+#~ msgstr "[default_specification]: ../../assets/default_specification.yml"
 
 #~ msgid ""
 #~ "If you modify the default specification, you modify **all calendars** that "
