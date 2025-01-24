@@ -1,111 +1,121 @@
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 # Languages add-on <noreply-addon-languages@weblate.org>, 2025.
+# தமிழ்நேரம் <anishprabu.t@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-26 22:54+0200\n"
-"PO-Revision-Date: 2024-05-26 20:54+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-01-24 22:37+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-index/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 msgid "Customize Your Own Online Calendar Display"
-msgstr ""
+msgstr "உங்கள் சொந்த நிகழ்நிலை காலண்டர் காட்சியைத் தனிப்பயனாக்கவும்"
 
 msgid "See the features or try the Open Web Calendar yourself!"
 msgstr ""
+"அம்சங்களைப் பார்க்கவும் அல்லது திறந்த வலை காலெண்டரை நீங்களே முயற்சிக்கவும்!"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
 msgid "A highly flexible calendar display for your website."
-msgstr ""
+msgstr "உங்கள் வலைத்தளத்திற்கான மிகவும் நெகிழ்வான காலண்டர் காட்சி."
 
 msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
+msgstr "ஒரு காலெண்டருக்கு உங்கள் தனிப்பட்ட தொடுதலை சில நிமிடங்களில் கொடுங்கள்!"
 
+#, fuzzy
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
 msgstr ""
+"** [இப்போது முயற்சி செய்யுங்கள்!] (Https://open-web-calendar.hosted.quelltext.eu) "
+"**"
 
 msgid "Features"
-msgstr ""
+msgstr "நற்பொருத்தங்கள்"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "உடனடி நிகழ்வு ஒத்திசைவு"
 
 msgid "<center>✔</center>"
-msgstr ""
+msgstr "&lt;சென்டர்&gt; ✔ "
 
 msgid "Embed with an HTML snippet"
-msgstr ""
+msgstr "உஉகுமொ துணுக்குடன் உட்பொதிக்கப்பட்டுள்ளது"
 
 msgid "Desktop and Mobile"
-msgstr ""
+msgstr "டெச்க்டாப் மற்றும் மொபைல்"
 
 msgid "Multi-Language Support"
-msgstr ""
+msgstr "பல மொழி உதவி"
 
 msgid "Fixed and Automatic Timezone"
-msgstr ""
+msgstr "நிலையான மற்றும் தானியங்கி நேர மண்டலம்"
 
 msgid "Easy Editing"
-msgstr ""
+msgstr "எளிதான திருத்துதல்"
 
 msgid "Designs To Choose"
-msgstr ""
+msgstr "தேர்வு செய்ய வடிவமைப்புகள்"
 
 msgid "Multiple Calendar Sources"
-msgstr ""
+msgstr "பல காலண்டர் ஆதாரங்கள்"
 
 msgid "Style per Calendar, Category and more"
-msgstr ""
+msgstr "ஒரு காலெண்டருக்கு நடை, வகை மற்றும் பல"
 
 msgid "Custom CSS"
-msgstr ""
+msgstr "தனிப்பயன் சிஎச்எச்"
 
 msgid "Day, Week, Month, Agenda"
-msgstr ""
+msgstr "நாள், வாரம், மாதம், நிகழ்ச்சி நிரல்"
 
 msgid "Work Week"
-msgstr ""
+msgstr "வேலை வாரம்"
 
 msgid "Custom Date & Time Range"
-msgstr ""
+msgstr "தனிப்பயன் தேதி &amp; நேர வரம்பு"
 
 msgid "Custom Title & Icon"
-msgstr ""
+msgstr "தனிப்பயன் தலைப்பு &amp; படவுரு"
 
 msgid "Click on Event Location"
-msgstr ""
+msgstr "நிகழ்வு இருப்பிடத்தைக் சொடுக்கு செய்க"
 
 msgid "Styled Event Descriptions"
-msgstr ""
+msgstr "பாணியில் நிகழ்வு விளக்கங்கள்"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr ""
+msgstr "FOSS - விற்பனையாளர் பூட்டுதல் இல்லை"
 
 msgid "Subscribe Link"
-msgstr ""
+msgstr "இணைப்பை குழுசேரவும்"
 
 msgid "Community and Paid Support"
-msgstr ""
+msgstr "சமூகம் மற்றும் கட்டண உதவி"
 
+#, fuzzy
 msgid "[See Examples](templates)"
-msgstr ""
+msgstr "[எடுத்துக்காட்டுகளைக் காண்க] (வார்ப்புருக்கள்)"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self)"
 msgstr ""
+"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]("
+"host/self)"
 
+#, fuzzy
 msgid "[Developer API](dev/api)"
-msgstr ""
+msgstr "[டெவலப்பர் ஏபிஐ] (தேவ்/ஏபிஐ)"
 
 #~ msgid "Getting Started"
 #~ msgstr "Getting Started"
