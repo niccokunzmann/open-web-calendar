@@ -162,11 +162,22 @@ function showXHRError(xhr) {
 
 function showEventError(error) {
     // show an error created by app.py -> error_to_dhtmlx
-    var div = document.createElement("div");
-    div.innerHTML = "<h1>" + error.text + "</h1>" +
-        "<a href='" + error.url + "'>" + error.url + "</a>" +
-        "<p>" + error.description + "</p>" +
-        "<pre>" + error.traceback + "</pre>";
+    const div = document.createElement("div");
+    // HEADING
+    const heading = document.createElement("h1");
+    heading.innerText = error.text;
+    div.appendChild(heading);
+    // LINK
+    const link = makeLink(error.url, escapeHtml(error.url));
+    div.innerHTML += link;
+    // DESCRIPTION
+    const description = document.createElement("p");
+    description.innerText = error.description;
+    div.appendChild(description);
+    // TRACEBACK
+    const traceback = document.createElement("pre");
+    traceback.innerText = error.traceback;
+    div.appendChild(traceback);
     showError(div);
 }
 
