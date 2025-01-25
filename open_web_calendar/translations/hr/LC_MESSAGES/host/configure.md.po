@@ -5,14 +5,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 17:46+0200\n"
-"PO-Revision-Date: 2025-01-21 21:00+0000\n"
+"PO-Revision-Date: 2025-01-26 02:02+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/open-web-calendar/documentation-server-configuration/hr/>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-server-configuration/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.10-dev\n"
 
 msgid "Configure a hosted instance."
@@ -59,7 +61,7 @@ msgid "ALLOWED_HOSTS"
 msgstr ""
 
 msgid "default empty"
-msgstr ""
+msgstr "standardno je prazno"
 
 msgid ""
 "**Forbidden:** You don't have the permission to access the requested "
@@ -70,39 +72,41 @@ msgid "PORT"
 msgstr ""
 
 msgid "default `5000`, default `80` in the Docker container"
-msgstr ""
+msgstr "standardno je `5000`, standardno je `80` u Docker kontejneru"
 
 msgid "The port that the service is running on."
-msgstr ""
+msgstr "Priključak na kojem se usluga pokreće."
 
 msgid "Serve on HTTP port: `PORT=80`"
-msgstr ""
+msgstr "Koristi HTTP priključak: `PORT=80`"
 
 msgid "WORKERS"
 msgstr ""
 
 msgid "default `4`, only for the Docker container"
-msgstr ""
+msgstr "standardno je `4`, samo za Docker kontejnere"
 
 msgid "The number of parallel workers to handle requests."
-msgstr ""
+msgstr "Broj paralelnih izvršitelja (workers) za obradu zahtjeva."
 
 msgid "Only use one worker: `WORKERS=1`"
-msgstr ""
+msgstr "Koristi samo jednog izvršitelja: `WORKERS=1`"
 
 msgid "CACHE_REQUESTED_URLS_FOR_SECONDS"
 msgstr ""
 
 msgid "default `600`"
-msgstr ""
+msgstr "standardno je `600`"
 
 msgid ""
 "Seconds to cache the calendar files that get downloaded to reduce bandwidth "
 "and delay."
 msgstr ""
+"Broj sekundi za predmemoriranje datoteka kalendara koje se preuzimaju kako "
+"bi se smanjila propusnost i kašnjenje."
 
 msgid "Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
-msgstr ""
+msgstr "Brzo aktualiziranje: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
 
 msgid "APP_DEBUG"
 msgstr ""
@@ -111,9 +115,11 @@ msgid ""
 "default `true`, values `true` or `false`, always `false` in the Docker "
 "container"
 msgstr ""
+"standardno je `true`, vrijedonsti su `true` ili `false`, uvijek `false` u "
+"Docker kontejneru"
 
 msgid "Set the debug flag for the app."
-msgstr ""
+msgstr "Postavi oznaku za otklanjanje grešaka za aplikaciju."
 
 msgid ""
 "The Open Web Calendar uses libraries whose behavior can be further "
@@ -150,18 +156,20 @@ msgid ""
 msgstr ""
 
 msgid "You might want to change the following values."
-msgstr ""
+msgstr "Možda ćeš htjeti promijeniti sljedeće vrijednosti."
 
 msgid "The title of your website."
-msgstr ""
+msgstr "Naslov tvoje web stranice."
 
 msgid ""
 "This is the default language. You might want to change this to serve the "
 "configuration page better to a local audience."
 msgstr ""
+"Ovo je standardni jezik. Ovo možeš promijeniti kako bi lokalna publika bolje "
+"koristila stranicu konfiguracije."
 
 msgid "This is a link to the website icon."
-msgstr ""
+msgstr "Ovo je poveznica na ikonu web stranice."
 
 msgid "`source_code`"
 msgstr ""
@@ -170,12 +178,14 @@ msgid ""
 "If you made changes, you are legally required to disclose them to visitors. "
 "Please adjust the link or contribute them back to the main project."
 msgstr ""
+"Ako si napravio/la promjene, po zakonu moraš posjetitelje o tome "
+"obavijestiti. Prilagodi poveznicu ili ih vrati natrag u glavni projekt."
 
 msgid "`contributing`"
 msgstr ""
 
 msgid "If you want to redirect to contribute to your project."
-msgstr ""
+msgstr "Ako želiš preusmjeriti za doprinešenje tvom projektu."
 
 msgid "`privacy_policy`"
 msgstr ""
@@ -192,7 +202,7 @@ msgid ""
 msgstr ""
 
 msgid "More Values"
-msgstr ""
+msgstr "Više vrijednosti"
 
 #, fuzzy
 msgid "[privacy-policy]: ../privacy-policy"
