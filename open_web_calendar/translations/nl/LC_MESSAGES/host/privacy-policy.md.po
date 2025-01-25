@@ -1,24 +1,27 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Pander <pander@users.sourceforge.net>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-03 17:45+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-01-26 02:02+0000\n"
+"Last-Translator: Pander <pander@users.sourceforge.net>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-privacy-policy/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #
 msgid "Open Web Calendar Privacy Policy"
 msgstr ""
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Privacybeleid"
 
 msgid ""
 "The Open Web Calendar does not collect any personal information from "
@@ -32,7 +35,7 @@ msgid ""
 msgstr ""
 
 msgid "Documentation Website"
-msgstr ""
+msgstr "Documrntatiewebsite"
 
 msgid ""
 "This website contains the project documentation. It is hosted on GitHub "
