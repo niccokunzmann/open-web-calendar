@@ -726,11 +726,18 @@ msgstr ""
 msgid "Correct links in documentation"
 msgstr ""
 
-msgid "Add Tamil translation by தமிழ்நேரம்"
-msgstr ""
-
 msgid "Speed up web tests"
 msgstr ""
 
 msgid "Use more indirect links in the documentation"
 msgstr ""
+
+msgid "Add Tamil translation by [தமிழ்நேரம்]"
+msgstr ""
+
+#, fuzzy
+msgid "[தமிழ்நேரம்]: https://tamilneram.github.io/"
+msgstr "[தமிழ்நேரம்]: https://tamilneram.github.io/"
+
+#~ msgid "Add Tamil translation by தமிழ்நேரம்"
+#~ msgstr ""

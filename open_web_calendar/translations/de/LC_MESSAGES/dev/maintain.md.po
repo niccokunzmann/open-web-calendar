@@ -262,6 +262,12 @@ msgstr ""
 msgid "Restrict width and height to 2000px:       wzxhzdk:6"
 msgstr ""
 
+msgid "Translators"
+msgstr ""
+
+msgid "It is nice to know who translated and how often."
+msgstr ""
+
 #~ msgid "Language filter:       wzxhzdk:2"
 #~ msgstr ""
 
