@@ -19,6 +19,7 @@ from selenium.webdriver.support.ui import Select, WebDriverWait
 # default wait time in seconds
 WAIT = 10
 
+
 @contextlib.contextmanager
 def no_time_to_wait_for_elements(context):
     """Set the global wait to 0 and expect everythign to be there."""

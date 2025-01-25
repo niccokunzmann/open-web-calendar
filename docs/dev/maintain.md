@@ -170,3 +170,11 @@ The aim of this section is to have a consistent outcome.
 7. Clear any component alerts.
 8. Skip through all the strings. If some strings are not for translation,
     add the flag `read-only`.
+
+## Translators
+
+It is nice to know who translated and how often.
+
+```sh
+./scripts/who-translated.sh
+```

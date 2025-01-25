@@ -13,12 +13,15 @@ This is a history of changes in the stable version of the Open Web Calendar.
 These correspond to the [tags]({{link.tags}}).
 The latest version might not be released, yet.
 
+<!-- Contributors, if you like to be linked, please put your name down here with a link. -->
+[தமிழ்நேரம்]: https://tamilneram.github.io/
+
 ## v1.45
 
 - Fix several XSS vulnerabilities, see [Issue 563](https://github.com/niccokunzmann/open-web-calendar/issues/563).
 - Improve German translation by Nicco Kunzmann, Croatian by Milo Ivir
 - Correct links in documentation
-- Add Tamil translation by தமிழ்நேரம்
+- Add Tamil translation by [தமிழ்நேரம்]
 - Speed up web tests
 - Update dependencies
 - Use more indirect links in the documentation
