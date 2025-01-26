@@ -275,6 +275,16 @@ msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
 msgid "[OWC_SPECIFICATION]: #owc_specification"
 msgstr "[OWC_SPECIFICATION]: #owc_specification"
 
+msgid "Note"
+msgstr ""
+
+msgid ""
+"New versions of the Open Web Calendar can add new configuration parameters. "
+"Placing your changes in this variable instead of changing the "
+"`default_specification` file will ensure that you do not break the Open Web "
+"Calendar in a future version."
+msgstr ""
+
 #~ msgid "You might want to change these values:"
 #~ msgstr "Je wil misschien deze waarden aanpassen:"
 
@@ -357,14 +367,4 @@ msgstr "[OWC_SPECIFICATION]: #owc_specification"
 #~ msgstr ""
 
 #~ msgid "Configure"
-#~ msgstr ""
-
-#~ msgid "Note"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "New versions of the Open Web Calendar can add new configuration parameters. "
-#~ "Placing your changes in this variable instead of changing the "
-#~ "`default_specification` file will ensure that you do not break the Open Web "
-#~ "Calendar in a future version."
 #~ msgstr ""
