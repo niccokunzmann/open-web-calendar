@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_j__56676/uk/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_jzn6hx0a/uk/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_j__56676/uk/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_jzn6hx0a/uk/dev/api/index.png" >
       
     
     
@@ -1084,13 +1084,13 @@ calendar.html?title=CALENDAR
 <ul>
 <li>Додайте параметр із значенням за замовчуванням до <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a></li>
 <li>Додайте реалізацію залежно від її використання в <code>app.py</code> або шаблонах файлів JavaScript. Специфікація вже доступна для використання в усіх них.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> to check that the calendar responds to the feature.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> to make sure that the parameter can be used when a calendar is edited.</li>
+<li>Додайте тести в <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a>, щоб перевірити, чи календар відповідає функції.</li>
+<li>Додайте тести в <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a>, щоб переконатися, що параметр можна використовувати під час редагування календаря.</li>
 </ul>
 <h2 id="_6">Уточнення в Календарі<a class="headerlink" href="#_6" title="Постійне посилання">&para;</a></h2>
-<p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compiles the specification from the given parameters in <code>get_specification()</code>. In the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> you can access the specification through the <code>specification</code> variable. The specification is available to JavaScript as the <code>specification</code> variable.</p>
+<p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> компілює специфікацію з заданих параметрів у <code>get_specification()</code>. У <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> ви можете отримати доступ до специфікації через змінну <code>specification</code>. Специфікація доступна для JavaScript як змінна <code>specification</code>.</p>
 <h2 id="_7">Специфікація на сторінці покажчика<a class="headerlink" href="#_7" title="Постійне посилання">&para;</a></h2>
-<p>The default specification is available before the calendar is built via JavaScript in the <code>configuration.default_specification</code> variable. There is a <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a> function which created the specification from the inputs. Generally, the <code>specification</code> variable should be used.</p>
+<p>Специфікація за замовчуванням доступна до створення календаря за допомогою JavaScript у змінній <code>configuration.default_specification</code>. Існує функція <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a>, яка створює специфікацію з вхідних даних. Загалом слід використовувати змінну <code>specification</code>.</p>
 <h2 id="_8">Архітектура<a class="headerlink" href="#_8" title="Постійне посилання">&para;</a></h2>
 <p>Нижче ви можете знайти зображення архітектури.</p>
 <p><img alt="архітектура" src="/assets/img/architecture.svg" /></p>
