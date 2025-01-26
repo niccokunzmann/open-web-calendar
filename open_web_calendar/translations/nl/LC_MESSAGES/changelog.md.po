@@ -1,0 +1,740 @@
+#
+msgid ""
+msgstr ""
+
+msgid ""
+"This page lists the changes made to the Open Web Calendar in a reader "
+"friendly way."
+msgstr ""
+
+msgid "Versions and Changes"
+msgstr ""
+
+msgid ""
+"This is a history of changes in the stable version of the Open Web Calendar."
+" These correspond to the [tags](https://github.com/niccokunzmann/open-web-"
+"calendar/tags). The latest version might not be released, yet."
+msgstr ""
+
+msgid "v1.45"
+msgstr ""
+
+msgid ""
+"Fix several XSS vulnerabilities, see [Issue "
+"563](https://github.com/niccokunzmann/open-web-calendar/issues/563)."
+msgstr ""
+
+msgid "Improve German translation by Nicco Kunzmann, Croatian by Milo Ivir"
+msgstr ""
+
+msgid "Correct links in documentation"
+msgstr ""
+
+msgid "Add Tamil translation by [தமிழ்நேரம்]"
+msgstr ""
+
+msgid "Speed up web tests"
+msgstr ""
+
+msgid "Update dependencies"
+msgstr ""
+
+msgid "Use more indirect links in the documentation"
+msgstr ""
+
+msgid "v1.44"
+msgstr ""
+
+msgid ""
+"Fix bug introduced by v1.43: The calendar now changes the language again. "
+"(parameter `language`), see [Issue "
+"599](https://github.com/niccokunzmann/open-web-calendar/issues/599)."
+msgstr ""
+
+msgid ""
+"Improve Ukrainian translation by Максим Горпиніч, German by Nicco Kunzmann"
+msgstr ""
+
+msgid "Document how to create a docker network to mitigate SSRF attacks."
+msgstr ""
+
+msgid "v1.43"
+msgstr ""
+
+msgid ""
+"Improve Belarusian translation by Yauhen, Ukrainian by Максим Горпиніч, "
+"Esperanto by phlostically"
+msgstr ""
+
+msgid "Update Security Policy"
+msgstr ""
+
+msgid ""
+"Add a way to choose the map, see [Issue "
+"23](https://github.com/niccokunzmann/open-web-calendar/issues/23)"
+msgstr ""
+
+msgid "[Update DHTMLX Scheduler] to v7.2.1"
+msgstr ""
+
+msgid ""
+"Introduce, test and document the `OWC_SPECIFICATION` environment variable."
+msgstr ""
+
+msgid "v1.42"
+msgstr ""
+
+msgid "Improve gunicorn, PyPI and service documentation"
+msgstr ""
+
+msgid "Allow debugging UI tests with screenshots"
+msgstr ""
+
+msgid ""
+"Update Italian translation by albanobattistella, German by Nicco Kunzmann, "
+"Korean by Paimon (JeaHoon Cha), Ukrainian by Максим Горпиніч, Spanish by "
+"gallegonovato"
+msgstr ""
+
+msgid "Fix UI test failures due to race condition when clicking a link"
+msgstr ""
+
+msgid "Improve load times for static files"
+msgstr ""
+
+msgid "[Update DHTMLX Scheduler] to v7.1.3"
+msgstr ""
+
+msgid "v1.41"
+msgstr ""
+
+msgid "Use renovate to auto-update dependencies"
+msgstr ""
+
+msgid "Update Spanish by gallegonovato"
+msgstr ""
+
+msgid "Improve funding documentation"
+msgstr ""
+
+msgid "fix: use flask-allowed-hosts because flask-allowedhosts was deleted"
+msgstr ""
+
+msgid "v1.40"
+msgstr ""
+
+msgid "Support `webcal://` links"
+msgstr ""
+
+msgid "Provide docker releases with proper tag release information"
+msgstr ""
+
+msgid "Add choice: Choose the language of the viewer"
+msgstr ""
+
+msgid "[Update DHTMLX Scheduler] to v7.1.1"
+msgstr ""
+
+msgid "Update examples to work with DHTMLX Scheduler v7.1.1"
+msgstr ""
+
+msgid "Add script to automatically [Update DHTMLX Scheduler]"
+msgstr ""
+
+msgid "Deprecate Python 3.8"
+msgstr ""
+
+msgid "Add Chinese (Traditional Han script) and Korean"
+msgstr ""
+
+msgid ""
+"Update Hebrew by Ori, Chinese (Traditional Han script) by 張可揚, Spanish by "
+"gallegonovato, German by Nicco Kunzmann, Slovak by Milan Šalka and Nicco "
+"Kunzmann, Croatian by Milo Ivir and Welsh by Siaron James"
+msgstr ""
+
+msgid "Fix links to new location in the `open_web_calendar` subdirectory"
+msgstr ""
+
+msgid "Set `__all__` variable for package export"
+msgstr ""
+
+msgid "v1.39"
+msgstr ""
+
+msgid "Add version to footer"
+msgstr ""
+
+msgid ""
+"Allow specifying the version of the software through the `version` parameter"
+msgstr ""
+
+msgid "Fix: show broken calendars again"
+msgstr ""
+
+msgid "Fix: Remove CSS attack from broken calendar sources"
+msgstr ""
+
+msgid "v1.38"
+msgstr ""
+
+msgid ""
+"Create [PyPI package](https://pypi.org/project/open-web-calendar/) and "
+"deployment"
+msgstr ""
+
+msgid "v1.37"
+msgstr ""
+
+msgid ""
+"Improve German translation by Nicco Kunzmann and Mathieu Graf, Indonesian by"
+" Krisna A. Prayoga, Croatian by Milo Ivir, Turkish by Oğuz Ersen, Polish by "
+"Eryk Michalak, Spanish by gallegonovato"
+msgstr ""
+
+msgid ""
+"Add calendar example that has multiple source calendars with different "
+"styling"
+msgstr ""
+
+msgid "Fix translation mistakes in Thai and Italian"
+msgstr ""
+
+msgid "Fix styling for calendar colors in Week and Day view"
+msgstr ""
+
+msgid "Improve documented exapmple of choosing time zones"
+msgstr ""
+
+msgid "Add link to Mastodon in documentation"
+msgstr ""
+
+msgid "Use Ruff as code styler"
+msgstr ""
+
+msgid "v1.36"
+msgstr ""
+
+msgid ""
+"Make event title a link to the event if it has a URL set, see [Issue "
+"388](https://github.com/niccokunzmann/open-web-calendar/issues/388)"
+msgstr ""
+
+msgid "Improve Code Quality"
+msgstr ""
+
+msgid ""
+"Improve Thai translation by nissara pengpol, Ukrainian by mondstern and "
+"Italian by albanobattistella"
+msgstr ""
+
+msgid "v1.35"
+msgstr ""
+
+msgid "Add link to Privacy Policy."
+msgstr ""
+
+msgid ""
+"Improve Spanish by gallegonovato, German by Nicco Kunzmann, Sinhala by "
+"Dilitha Ransara, Norwegian Bokmål by Allan Nordhøy"
+msgstr ""
+
+msgid "Improve documentation, translate documentation to German and Spanish"
+msgstr ""
+
+msgid "Build documentation with Python 3.11"
+msgstr ""
+
+msgid "Update documentation languages automatically"
+msgstr ""
+
+msgid "Allow translating the documentation with Weblate"
+msgstr ""
+
+msgid "v1.34"
+msgstr ""
+
+msgid ""
+"Ensures every HTML document has a lang attribute (html) [Issue "
+"347](https://github.com/niccokunzmann/open-web-calendar/issues/347)"
+msgstr ""
+
+msgid ""
+"Allow hosters to close the Host Header Injection vulnerability, see [PR "
+"366](https://github.com/niccokunzmann/open-web-calendar/pull/366)"
+msgstr ""
+
+msgid "Improve documentation and Docker build"
+msgstr ""
+
+msgid "Add Esperanto by phlostically"
+msgstr ""
+
+msgid "Improve Slovak, Russian, Portuguese, Indonesian by phlostically"
+msgstr ""
+
+msgid "Update requirements"
+msgstr ""
+
+msgid "v1.33"
+msgstr ""
+
+msgid ""
+"Add alternate link to \"text/calendar\" content to ease subscribing for "
+"other calendars, see [Issue 308](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/308)"
+msgstr ""
+
+msgid ""
+"Use calendar feeds from alternate links to \"text/calendar\" content, see "
+"[Issue 309](https://github.com/niccokunzmann/open-web-calendar/issues/309)"
+msgstr ""
+
+msgid ""
+"Use HTML description from various sources, see [Issue "
+"300](https://github.com/niccokunzmann/open-web-calendar/issues/300)"
+msgstr ""
+
+msgid ""
+"Allow JavaScript customization of the calendar, see [Issue "
+"71](https://github.com/niccokunzmann/open-web-calendar/issues/71)"
+msgstr ""
+
+msgid "Improve Portuguese by qeepoo"
+msgstr ""
+
+msgid "Increase Python version for Docker to 3.11"
+msgstr ""
+
+msgid "v1.32"
+msgstr ""
+
+msgid "Update Italian translation by albanobattistella"
+msgstr ""
+
+msgid ""
+"Open links in event descriptions in new tab or as configured, see [Issue "
+"287](https://github.com/niccokunzmann/open-web-calendar/issues/287)"
+msgstr ""
+
+msgid "Add giscus to discuss the documentation"
+msgstr ""
+
+msgid "v1.31"
+msgstr ""
+
+msgid ""
+"Move documentation to [open-web-calendar.quelltext.eu](https://open-web-"
+"calendar.quelltext.eu)"
+msgstr ""
+
+msgid "Generate GitHub Releases to notify watchers"
+msgstr ""
+
+msgid ""
+"Update Russian translation by Nicco Kunzmann, Turkish by Oğuz Ersen, Spanish"
+" by gallegonovato and German by Nicco Kunzmann"
+msgstr ""
+
+msgid "v1.30"
+msgstr ""
+
+msgid ""
+"Improve Italian translation by albanobattistella and Russian translation by "
+"Ivan V"
+msgstr ""
+
+msgid ""
+"Remove CSS attacks from event sources through HTML injection, see [Issue "
+"165](https://github.com/niccokunzmann/open-web-calendar/issues/165)"
+msgstr ""
+
+msgid ""
+"Add CSS classes for events, see [Issue "
+"305](https://github.com/niccokunzmann/open-web-calendar/issues/305)"
+msgstr ""
+
+msgid ""
+"Add a way to give calendars a different color, see [Issue "
+"141](https://github.com/niccokunzmann/open-web-calendar/issues/141) and "
+"[Issue 52](https://github.com/niccokunzmann/open-web-calendar/issues/52)"
+msgstr ""
+
+msgid ""
+"Document CSS classes, see [Issue 202](https://github.com/niccokunzmann/open-"
+"web-calendar/issues/202)"
+msgstr ""
+
+msgid ""
+"Add checkboxes for the event status, see [PR "
+"306](https://github.com/niccokunzmann/open-web-calendar/pull/306)"
+msgstr ""
+
+msgid "v1.29"
+msgstr ""
+
+msgid ""
+"Improve Indonesian translation by Reza Almanda, Croatian by Milo Ivir, "
+"German by Nicco Kunzmann, Spanish by gallegonovato, Turkish by Oğuz Ersen"
+msgstr ""
+
+msgid "Update dependencies and documentation"
+msgstr ""
+
+msgid ""
+"Work week now skips Saturday and Sunday in Day View, see [Issue "
+"258](https://github.com/niccokunzmann/open-web-calendar/issues/258)"
+msgstr ""
+
+msgid "v1.28"
+msgstr ""
+
+msgid ""
+"Allow editing calendar copies, see [Issue "
+"180](https://github.com/niccokunzmann/open-web-calendar/issues/180)"
+msgstr ""
+
+msgid "Improve Finnish translation by Tomi Pöyskö and Croatian by Milo Ivir"
+msgstr ""
+
+msgid ""
+"Improve visibility on small screens, see [PR "
+"284](https://github.com/niccokunzmann/open-web-calendar/pull/284)"
+msgstr ""
+
+msgid ""
+"Fix: show event title in mobile agenda view, see [Issue "
+"277](https://github.com/niccokunzmann/open-web-calendar/issues/277)"
+msgstr ""
+
+msgid ""
+"Fix Chrome driver timeout in CI tests, see [PR "
+"279](https://github.com/niccokunzmann/open-web-calendar/pull/279)"
+msgstr ""
+
+msgid "v1.27"
+msgstr ""
+
+msgid ""
+"Browser tests run with Firefox and Chrome, see [PR "
+"272](https://github.com/niccokunzmann/open-web-calendar/pull/272)"
+msgstr ""
+
+msgid ""
+"Add responsive layout, see [PR 273](https://github.com/niccokunzmann/open-"
+"web-calendar/pull/273)"
+msgstr ""
+
+msgid "Remove tooltip on touch devices as it overlaps with the quick info"
+msgstr ""
+
+msgid ""
+"Expose `compact_layout_width` parameter so you can change when to compact "
+"the layout, default is 600px width"
+msgstr ""
+
+msgid "v1.26"
+msgstr ""
+
+msgid "Use HTML color chooser for custom CSS"
+msgstr ""
+
+msgid ""
+"Add a red bar at the current time in the week view and the day view, see [PR"
+" 265](https://github.com/niccokunzmann/open-web-calendar/pull/265)."
+msgstr ""
+
+msgid ""
+"Expose the `hour_format` parameter and add choices for the 12h format, see "
+"[PR 266](https://github.com/niccokunzmann/open-web-calendar/pull/266)."
+msgstr ""
+
+msgid "Update Turkish by oersen, Spanish by gallegonovato and German"
+msgstr ""
+
+msgid "Update GitHub Actions with Dependabot"
+msgstr ""
+
+msgid "v1.25"
+msgstr ""
+
+msgid ""
+"Implement work week view, see [Issue "
+"258](https://github.com/niccokunzmann/open-web-calendar/issues/258)"
+msgstr ""
+
+msgid "Update translations"
+msgstr ""
+
+msgid "v1.24"
+msgstr ""
+
+msgid "Test and support Python 3.12"
+msgstr ""
+
+msgid ""
+"Fix rendering error for unknown/malformed time zones (use DHTMLX's "
+"timeshift)"
+msgstr ""
+
+msgid "Improve Indonesian translation by Reza Almanda"
+msgstr ""
+
+msgid "v1.23"
+msgstr ""
+
+msgid ""
+"Add documentation and dependencies to use a Tor proxy to prevent SSRF "
+"attacks."
+msgstr ""
+
+msgid ""
+"Remove temporary cache directory vulnerability "
+"[GitHub](https://github.com/niccokunzmann/open-web-calendar/security/code-"
+"scanning/2) [CWE-377](https://cwe.mitre.org/data/definitions/377.html)"
+msgstr ""
+
+msgid "v1.22"
+msgstr ""
+
+msgid "v1.21"
+msgstr ""
+
+msgid "Update Chinese translation by dingc"
+msgstr ""
+
+msgid "Update French translation by Thomas Moerschell"
+msgstr ""
+
+msgid ""
+"Fix Content-Type header for .js files, see [Issue "
+"241](https://github.com/niccokunzmann/open-web-calendar/issues/241)"
+msgstr ""
+
+msgid ""
+"Add logo [Issue 205](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/205)"
+msgstr ""
+
+msgid "v1.20"
+msgstr ""
+
+msgid "Turkish translation by Oğuz Ersen"
+msgstr ""
+
+msgid "Spanish translation by gallegonovato"
+msgstr ""
+
+msgid "Indonesian translation by Reza Almanda"
+msgstr ""
+
+msgid "Correct links"
+msgstr ""
+
+msgid "v1.19"
+msgstr ""
+
+msgid "v1.18"
+msgstr ""
+
+msgid "Update Finnish by Teemu"
+msgstr ""
+
+msgid "Update Slovak by Milan Šalka"
+msgstr ""
+
+msgid "Update Polish by Piotr Strebski"
+msgstr ""
+
+msgid "Update Japanese by onokatio"
+msgstr ""
+
+msgid "v1.17"
+msgstr ""
+
+msgid ""
+"Add User-Agent header, see [Issue "
+"#225](https://github.com/niccokunzmann/open-web-calendar/issues/225)."
+msgstr ""
+
+msgid ""
+"Close security vulnerability, [Pull Request "
+"#223](https://github.com/niccokunzmann/open-web-calendar/pull/223)"
+msgstr ""
+
+msgid "Update German, Welsh, Croatian"
+msgstr ""
+
+msgid "v1.16"
+msgstr ""
+
+msgid ""
+"Add a dropdown to choose another time zone to view the calendar in the about"
+" screen, see [Issue #213](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/213)."
+msgstr ""
+
+msgid "v1.15"
+msgstr ""
+
+msgid "v1.14"
+msgstr ""
+
+msgid "Improve Spanish translation by zyloj"
+msgstr ""
+
+msgid "Improve Polish translation by Eryk Michalak"
+msgstr ""
+
+msgid "Do not test Python 3.7 any more"
+msgstr ""
+
+msgid "Test Python 3.11"
+msgstr ""
+
+msgid "v1.13"
+msgstr ""
+
+msgid "Improve French translation"
+msgstr ""
+
+msgid "v1.12"
+msgstr ""
+
+msgid "Add Croatian UI by Milo Ivir"
+msgstr ""
+
+msgid "v1.11"
+msgstr ""
+
+msgid "Add German UI"
+msgstr ""
+
+msgid "Improve calendar in Polish"
+msgstr ""
+
+msgid "Add Welsh calendar"
+msgstr ""
+
+msgid "v1.10"
+msgstr ""
+
+msgid "Add translations for nb_NO."
+msgstr ""
+
+msgid "Translate the user interface."
+msgstr ""
+
+msgid "Use weblate to translate files."
+msgstr ""
+
+msgid "v1.9"
+msgstr ""
+
+msgid ""
+"Speed up loading with start and stop date range. [Pull Request "
+"#177](https://github.com/niccokunzmann/open-web-calendar/pull/177)."
+msgstr ""
+
+msgid "v1.8"
+msgstr ""
+
+msgid ""
+"Add start of day, end of day and time step (hour be default) in [Pull "
+"Request #158](https://github.com/niccokunzmann/open-web-calendar/pull/158) "
+"thanks to [@TheoLeCalvar](https://github.com/TheoLeCalvar)."
+msgstr ""
+
+msgid "v1.7"
+msgstr ""
+
+msgid ""
+"Add timezone functionality. See [Issue "
+"#171](https://github.com/niccokunzmann/open-web-calendar/issues/171)."
+msgstr ""
+
+msgid "v1.6"
+msgstr ""
+
+msgid ""
+"Add choice of Sunday or Monday for the start of the week [Issue "
+"39](https://github.com/niccokunzmann/open-web-calendar/issues/39) - backed "
+"by [donation]!"
+msgstr ""
+
+msgid "v1.5"
+msgstr ""
+
+msgid "add link to [Contributing Section](../contributing) in about page"
+msgstr ""
+
+msgid "make event clickable even if there is a tool tip window"
+msgstr ""
+
+msgid ""
+"[@MrKoga](https://github.com/MrKoga) [donated][github-sponsors] to the "
+"project! Thanks!"
+msgstr ""
+
+msgid "v1.4"
+msgstr ""
+
+msgid ""
+"add event categories when you click an event, see [PR "
+"159](https://github.com/niccokunzmann/open-web-calendar/pull/159)."
+msgstr ""
+
+msgid "v1.3"
+msgstr ""
+
+msgid "update translation mistake"
+msgstr ""
+
+msgid "fix encoding problem for languages other than en/de"
+msgstr ""
+
+msgid "add ability to remove all controls"
+msgstr ""
+
+msgid "test with GitHub actions"
+msgstr ""
+
+msgid "test user interface"
+msgstr ""
+
+msgid "v1.2"
+msgstr ""
+
+msgid "Use Gunicorn in Docker image"
+msgstr ""
+
+msgid "change deployment to https://open-web-calendar.hosted.quelltext.eu/"
+msgstr ""
+
+msgid "v1.1"
+msgstr ""
+
+msgid "Add Coatian Language by Tomislav Gomerčić"
+msgstr ""
+
+msgid "v1.0"
+msgstr ""
+
+msgid "Create the changelog."
+msgstr ""
+
+msgid ""
+"Add support for colors from ICS calendars, see [Issue "
+"#52](https://github.com/niccokunzmann/open-web-calendar/issues/52) and [Pull"
+" Request 88](https://github.com/niccokunzmann/open-web-calendar/pull/88)."
+msgstr ""
+
+#, fuzzy
+msgid "[தமிழ்நேரம்]: https://tamilneram.github.io/"
+msgstr "[தமிழ்நேரம்]: https://tamilneram.github.io/"
+
+#, fuzzy
+msgid ""
+"[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
+msgstr ""
+"[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"

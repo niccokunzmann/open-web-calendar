@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -12,9 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.0\n"
 
-#
-
-msgid "Getting Started"
+msgid "Customize Your Own Online Calendar Display"
 msgstr ""
 
 msgid "See the features or try the Open Web Calendar yourself!"
@@ -30,9 +29,6 @@ msgid "Give a calendar your personal touch within minutes!"
 msgstr ""
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
-
-msgid "[See Examples](templates.md)"
 msgstr ""
 
 msgid "Features"
@@ -92,16 +88,33 @@ msgstr ""
 msgid "FOSS - No Vendor Lock-In"
 msgstr ""
 
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self.md)"
-msgstr ""
-
 msgid "Subscribe Link"
 msgstr ""
 
 msgid "Community and Paid Support"
 msgstr ""
 
-msgid "[Developer API](dev/api.md)"
+msgid "[See Examples](templates)"
 msgstr ""
+
+msgid ""
+"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+"Hosted](host/self)"
+msgstr ""
+
+msgid "[Developer API](dev/api)"
+msgstr ""
+
+#~ msgid "Getting Started"
+#~ msgstr ""
+
+#~ msgid "[See Examples](templates.md)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+#~ "Hosted](host/self.md)"
+#~ msgstr ""
+
+#~ msgid "[Developer API](dev/api.md)"
+#~ msgstr ""
