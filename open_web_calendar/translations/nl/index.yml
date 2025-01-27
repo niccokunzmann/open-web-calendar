@@ -4,3 +4,15 @@ time-increment-15: 15 minuten
 calendar-code-execution: Je kan de resulterende kalender hieronder bekijken.
 section-customization: Je kan extra aanpassien maken aan de kalender.
 time-increment-30: 30 minuten
+tabs-title: Kalendertabs
+timezone-browser: gebruik de tijdszone van de browser
+event-status-confirmed: bevestigd
+event-status-cancelled: geannuleerd
+loader-none: geen lader
+loading: aan het laden…
+timezone-title: Tijdszone
+configure-week-title: Dagen van de week
+configure-week-description: De week kan op maandag of zondag starten.
+event-status-tentative: voorlopig
+loader-default: ronde lader
+translate: Vertaal
