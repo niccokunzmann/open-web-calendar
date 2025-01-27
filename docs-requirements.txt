@@ -101,7 +101,7 @@ mkdocs-material-relative-language-selector==1.1.4
     # via -r docs-requirements.in
 mkdocs-mdpo-plugin @ git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1
     # via -r docs-requirements.in
-mkdocs-meta-descriptions-plugin==3.0.0
+mkdocs-meta-descriptions-plugin==4.0.0
     # via -r docs-requirements.in
 mkdocs-rss-plugin==1.17.1
     # via -r docs-requirements.in
