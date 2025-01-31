@@ -140,7 +140,7 @@ python-dateutil==2.9.0.post0
     # via
     #   ghp-import
     #   mkdocs-macros-plugin
-pytz==2024.2
+pytz==2025.1
     # via mkdocs-git-revision-date-localized-plugin
 pyyaml==6.0.2
     # via
