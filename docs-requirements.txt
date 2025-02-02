@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=docs-requirements.txt docs-requirements.in
 #
-babel==2.16.0
+babel==2.17.0
     # via
     #   mkdocs
     #   mkdocs-git-revision-date-localized-plugin
