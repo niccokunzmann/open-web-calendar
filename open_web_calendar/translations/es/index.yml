@@ -97,3 +97,13 @@ language-browser-false: 'El calendario siempre está en este idioma:'
 language-browser-true: 'El calendario está en el idioma del espectador. Si el idioma
   no está traducido, se muestra en:'
 skins-dark: Oscuro
+map-title: Enlaces y ubicación del mapa
+map-description: Las ubicaciones de los eventos pueden tener coordenadas o texto.
+  Configure aquí qué servicio de mapas utilizar al hacer clic en la ubicación de un
+  evento.
+map-custom-summary: Personalizar los enlaces del mapa
+map-custom: Mapa personalizado
+map-link-location-description: Escriba una URL aquí e inserte {location} donde estaría
+  el texto de la ubicación.
+map-link-geo-description: Ingrese una URL al mapa aquí. {lat} y {lon} están en lugar
+  de las coordenadas.
