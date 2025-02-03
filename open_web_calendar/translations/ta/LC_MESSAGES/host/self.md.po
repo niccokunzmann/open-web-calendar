@@ -6,9 +6,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-23 18:35+0200\n"
-"PO-Revision-Date: 2025-01-25 01:51+0000\n"
+"PO-Revision-Date: 2025-02-04 17:02+0000\n"
 "Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/open-web-calendar/documentation-self-hosting-and-deployment/ta/>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-self-hosting-and-deployment/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,10 +69,9 @@ msgstr ""
 msgid "Heroku"
 msgstr ""
 
-#, fuzzy
 msgid "You can deploy the app using [Heroku](https://heroku.com)."
 msgstr ""
-"[ஈரோகு] (https://heroku.com) ஐப் பயன்படுத்தி பயன்பாட்டை வரிசைப்படுத்தலாம்."
+"[ஈரோகு](https://heroku.com) ஐப் பயன்படுத்தி பயன்பாட்டை வரிசைப்படுத்தலாம்."
 
 msgid ""
 "[![Deploy to "
@@ -85,21 +85,21 @@ msgid ""
 "[Procfile](https://github.com/niccokunzmann/open-web-"
 "calendar/blob/master/Procfile)."
 msgstr ""
-"சேவையகத்தை இயக்க ஈரோகு [kunicorn] (https://gunicorn.org/) ஐப் "
-"பயன்படுத்துகிறார், [procfile] ஐப் பார்க்கவும் "
-"(https://github.com/niccokunzmann/open-web-calendar/blob/master/procbile)."
+"சேவையகத்தை இயக்க ஈரோகு [kunicorn](https://gunicorn.org/) ஐப் பயன்படுத்துகிறார், "
+"[procfile] ஐப் பார்க்கவும் (https://github.com/niccokunzmann/open-web-calendar/"
+"blob/master/procbile)."
 
 msgid "Cloudron"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "The Open Web Calendar has been integrated into "
 "[Cloudron](https://www.cloudron.io/)."
 msgstr ""
-"திறந்த வலை நாட்காட்டி [Cloudron] (https://www.cloudron.io/) இல் "
+"திறந்த வலை நாட்காட்டி [Cloudron](https://www.cloudron.io/) இல் "
 "ஒருங்கிணைக்கப்பட்டுள்ளது."
 
+#, fuzzy
 msgid ""
 "[Cloudron Documentation](https://docs.cloudron.io/apps/openwebcalendar/)"
 msgstr ""
@@ -113,12 +113,11 @@ msgstr ""
 msgid "YunoHost"
 msgstr ""
 
-#, fuzzy
 msgid ""
 "The Open Web Calendar is available as an app for "
 "[YunoHost](https://yunohost.org/)."
 msgstr ""
-"திறந்த வலை நாட்காட்டி [YUNOHOST] (https://yunohost.org/) க்கான பயன்பாடாக "
+"திறந்த வலை நாட்காட்டி [YUNOHOST](https://yunohost.org/) க்கான பயன்பாடாக "
 "கிடைக்கிறது."
 
 msgid ""
@@ -127,6 +126,7 @@ msgid ""
 "app.yunohost.org/?app=open-web-calendar)"
 msgstr ""
 
+#, fuzzy
 msgid "[App Description](https://apps.yunohost.org/app/open-web-calendar)"
 msgstr "[App Description](https://apps.yunohost.org/app/open-web-calendar)"
 
@@ -143,15 +143,14 @@ msgstr ""
 msgid "Update Notifications"
 msgstr "அறிவிப்புகளைப் புதுப்பிக்கவும்"
 
-#, fuzzy
 msgid ""
 "If you wish to receive notifications about new updates of the software, "
 "watch the [GitHub repository](https://github.com/niccokunzmann/open-web-"
 "calendar/)."
 msgstr ""
 "மென்பொருளின் புதிய புதுப்பிப்புகள் குறித்த அறிவிப்புகளைப் பெற விரும்பினால், "
-"[Github களஞ்சியத்தை] (https://github.com/niccokunzmann/open-web-calendar/) "
-"ஐப் பாருங்கள்."
+"[Github களஞ்சியத்தை](https://github.com/niccokunzmann/open-web-calendar/) ஐப் "
+"பாருங்கள்."
 
 #, fuzzy
 msgid ""
@@ -169,14 +168,13 @@ msgstr ""
 "[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
 "calendar.hosted.quelltext.eu"
 
-#, fuzzy
 msgid ""
 "If you run your own server, you can choose to run the Open Web Calender with"
 " Docker. Building, running and updating are [documented here](../docker)."
 msgstr ""
-"நீங்கள் உங்கள் சொந்த சேவையகத்தை இயக்கினால், திறந்த வலை காலெண்டரை டோக்கருடன் "
-"இயக்க தேர்வு செய்யலாம். கட்டியெழுப்புதல், இயங்கும் மற்றும் புதுப்பித்தல் "
-"[இங்கே ஆவணப்படுத்தப்பட்டுள்ளது] (../ டோக்கர்)."
+"நீங்கள் உங்கள் சொந்த சேவையகத்தை இயக்கினால், திறந்த வலை காலெண்டரை டோக்கருடன் இயக்க தேர்வு "
+"செய்யலாம். கட்டியெழுப்புதல், இயங்கும் மற்றும் புதுப்பித்தல் [இங்கே ஆவணப்படுத்தப்பட்டுள்ளது](../"
+"docker)."
 
 msgid ""
 "![Repository, Watch, Custom, Releases](/assets/img/subscribe-to-release.png)"
@@ -185,17 +183,15 @@ msgstr ""
 msgid "**Choose a hoster.** These are listed below."
 msgstr "** ஒரு ஓச்டரைத் தேர்வுசெய்க. ** இவை கீழே பட்டியலிடப்பட்டுள்ளன."
 
-#, fuzzy
 msgid "[**Read about Configuration**](../configure)."
-msgstr "[** உள்ளமைவு பற்றி படிக்கவும் **] (../ உள்ளமைக்கவும்)."
+msgstr "[** உள்ளமைவு பற்றி படிக்கவும் **](../configure)."
 
-#, fuzzy
 msgid ""
 "You can choose to run the Open Web Calendar installed as a Python package "
 "from PyPI. To do this, have a look at [the documentation](../pypi)."
 msgstr ""
-"PYPI இலிருந்து பைதான் தொகுப்பாக நிறுவப்பட்ட திறந்த வலை காலெண்டரை இயக்க "
-"நீங்கள் தேர்வு செய்யலாம். இதைச் செய்ய, [ஆவணங்கள்] (../ pypi) ஐப் பாருங்கள்."
+"PYPI இலிருந்து பைதான் தொகுப்பாக நிறுவப்பட்ட திறந்த வலை காலெண்டரை இயக்க நீங்கள் தேர்வு "
+"செய்யலாம். இதைச் செய்ய, [ஆவணங்கள்](../pypi) ஐப் பாருங்கள்."
 
 #~ msgid ""
 #~ "After you have set up your own server, you can [configure the behavior of "
