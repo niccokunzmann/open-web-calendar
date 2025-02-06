@@ -129,5 +129,6 @@ def merged(client, calendar_urls) -> Callable[[Optional[list[str]],Optional[dict
             query += f"{k}={v}&"
         response = client.get(f"/calendar.ics{query}")
         assert response.status_code == 200
+        print(response.data.decode("utf-8"))
         return icalendar.Calendar.from_ical(response.data)
     return _merged_calendars
