@@ -7,6 +7,7 @@ import datetime
 from flask import Response
 from icalendar import Calendar, Event, Timezone
 from icalendar.prop import vDDDTypes
+from mergecal import merge_calendars
 
 from .conversion_base import ConversionStrategy
 
@@ -27,17 +28,8 @@ class ConvertToICS(ConversionStrategy):
         return isinstance(component, Timezone)
 
     def collect_components_from(self, calendar_index, calendars):
-        for calendar in calendars:
-            for component in calendar.walk():
-                if self.is_event(component):
-                    with self.lock:
-                        self.components.append(component)
-                if self.is_timezone(component):
-                    tzid = component.get("TZID")
-                    if tzid and tzid not in self.timezones:
-                        with self.lock:
-                            self.components.append(component)
-                            self.timezones.add(tzid)
+        with self.lock:
+            self.components.extend(calendars)
 
     def convert_error(self, error, url, tb_s):
         """Create an error which can be used by the dhtmlx scheduler."""
@@ -48,20 +40,17 @@ class ConvertToICS(ConversionStrategy):
         event["UID"] = "error" + str(id(error))
         if url:
             event["URL"] = url
-        return event
-
-    def create_calendar(self):
         calendar = Calendar()
+        calendar.add_component(event)
+        return calendar
+
+    def merge(self):
+        calendar = merge_calendars(self.components + [Calendar()])
         calendar["VERSION"] = "2.0"
         calendar["PRODID"] = "open-web-calendar"
         calendar["CALSCALE"] = "GREGORIAN"
         calendar["METHOD"] = "PUBLISH"
         calendar["X-WR-CALNAME"] = self.title
+        calendar["NAME"] = self.title
         calendar["X-PROD-SOURCE"] = self.specification["source_code"]
-        return calendar
-
-    def merge(self):
-        calendar = self.create_calendar()
-        for event in self.components:
-            calendar.add_component(event)
         return Response(calendar.to_ical(), mimetype="text/calendar")

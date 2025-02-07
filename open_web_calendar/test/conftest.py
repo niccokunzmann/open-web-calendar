@@ -5,9 +5,10 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Callable, Optional
 from unittest.mock import Mock
 
+import icalendar
 import pytest
 import requests
 
@@ -112,3 +113,28 @@ def calendar_content():
         if file.suffix.lower() == ".ics":
             mapping[file.stem] = content
     return mapping
+
+
+@pytest.fixture
+def merged(
+    client, calendar_urls
+) -> Callable[[Optional[list[str]], Optional[dict[str, str]]], icalendar.Calendar]:
+    """Return a function to get a parsed calendar that is merged according to spec."""
+
+    def _merged_calendars(
+        urls: Optional[list[str]] = None, specification: Optional[dict[str, str]] = None
+    ) -> icalendar.Calendar:
+        """Return the merged ICS calendar."""
+        urls = urls or []
+        specification = specification or {}
+        query = "?"
+        for url in urls:
+            query += f"url={calendar_urls[url]}&"
+        for k, v in specification.items():
+            query += f"{k}={v}&"
+        response = client.get(f"/calendar.ics{query}")
+        assert response.status_code == 200
+        print(response.data.decode("utf-8"))
+        return icalendar.Calendar.from_ical(response.data)
+
+    return _merged_calendars
