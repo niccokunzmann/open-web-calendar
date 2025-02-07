@@ -19,6 +19,8 @@ if TYPE_CHECKING:
         ("CALSCALE", "GREGORIAN", {}),
         ("X-WR-CALNAME", "My Calendar", {"title": "My Calendar"}),
         ("X-WR-CALNAME", "Company Calendar", {"title": "Company Calendar"}),
+        ("NAME", "My Calendar", {"title": "My Calendar"}),
+        ("NAME", "Company Calendar", {"title": "Company Calendar"}),
         ("X-PROD-SOURCE", "http://my-code", {"source_code": "http://my-code"}),
         ("X-PROD-SOURCE", "XXX", {"source_code": "XXX"}),
     ]
@@ -51,3 +53,25 @@ def test_timezone_is_included(merged):
     cal : Calendar = merged(["one-event.ics"])
     assert len(cal.timezones) == 1
     assert cal.timezones[0].tz_name == "Europe/Berlin"
+
+
+def test_url_property(merged):
+    """Purpose:  This property may be used to convey a location where a more
+      dynamic rendition of the calendar information can be found.
+
+      https://www.rfc-editor.org/rfc/rfc7986.html#section-5.5
+      """
+    pytest.skip("TODO")
+
+
+def test_source_property(merged):
+    """Description:  This property identifies a location where a client can
+      retrieve updated data for the calendar.  Clients SHOULD honor any
+      specified "REFRESH-INTERVAL" value when periodically retrieving
+      data.  Note that this property differs from the "URL" property in
+      that "URL" is meant to provide an alternative representation of
+      the calendar data rather than the original location of the data.
+
+      https://www.rfc-editor.org/rfc/rfc7986.html#section-5.8
+    """
+    pytest.skip("TODO")
