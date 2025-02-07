@@ -82,5 +82,5 @@ urllib3==2.3.0
     # via requests
 werkzeug==3.1.3
     # via flask
-x-wr-timezone==2.0.0
+x-wr-timezone==2.0.1
     # via recurring-ical-events
