@@ -116,9 +116,14 @@ def calendar_content():
 
 
 @pytest.fixture
-def merged(client, calendar_urls) -> Callable[[Optional[list[str]],Optional[dict[str, str]]], icalendar.Calendar]:
+def merged(
+    client, calendar_urls
+) -> Callable[[Optional[list[str]], Optional[dict[str, str]]], icalendar.Calendar]:
     """Return a function to get a parsed calendar that is merged according to spec."""
-    def _merged_calendars(urls:Optional[list[str]]=None, specification:Optional[dict[str, str]]=None) -> icalendar.Calendar:
+
+    def _merged_calendars(
+        urls: Optional[list[str]] = None, specification: Optional[dict[str, str]] = None
+    ) -> icalendar.Calendar:
         """Return the merged ICS calendar."""
         urls = urls or []
         specification = specification or {}
@@ -131,4 +136,5 @@ def merged(client, calendar_urls) -> Callable[[Optional[list[str]],Optional[dict
         assert response.status_code == 200
         print(response.data.decode("utf-8"))
         return icalendar.Calendar.from_ical(response.data)
+
     return _merged_calendars
