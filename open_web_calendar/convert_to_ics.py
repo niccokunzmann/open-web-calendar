@@ -51,5 +51,6 @@ class ConvertToICS(ConversionStrategy):
         calendar["CALSCALE"] = "GREGORIAN"
         calendar["METHOD"] = "PUBLISH"
         calendar["X-WR-CALNAME"] = self.title
+        calendar["NAME"] = self.title
         calendar["X-PROD-SOURCE"] = self.specification["source_code"]
         return Response(calendar.to_ical(), mimetype="text/calendar")
