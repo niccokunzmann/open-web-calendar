@@ -35,20 +35,6 @@ def test_embed_js_link(client, query, tags):
 
 
 @pytest.mark.parametrize(
-    ("js", "html"),
-    [
-        ("console.log(specification);", "console.log(specification);"),
-        ("<html>&", "&lt;html&gt;&amp;"),
-    ],
-)
-def test_embed_js_directly(client, js, html):
-    """Check direct JS embedding."""
-    response = client.get(f"/calendar.html?javascript={quote(js)}")
-    print(response.text)
-    assert f'<script type="text/javascript">{html}</script>' in response.text
-
-
-@pytest.mark.parametrize(
     ("query", "urls"),
     [
         ("?css_url=https://tippi.js/embed.css", ["https://tippi.js/embed.css"]),

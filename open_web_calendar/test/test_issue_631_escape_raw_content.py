@@ -20,6 +20,7 @@ import pytest
         "alert('hello')",
         'alert("hello")',
         "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
+        "console.log(specification);",
     ],
 )
 @pytest.mark.parametrize("included", [False, True])
