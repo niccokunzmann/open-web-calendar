@@ -310,6 +310,9 @@ msgid ""
 "calendar/raw/master/open_web_calendar/default_specification.yml "
 msgstr ""
 
+msgid "[JavaScript Customization](../javascript)"
+msgstr ""
+
 #~ msgid "Additional parameters are required:"
 #~ msgstr ""
 
