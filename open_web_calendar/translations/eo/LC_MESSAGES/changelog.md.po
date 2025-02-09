@@ -739,6 +739,15 @@ msgstr ""
 msgid "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 msgstr "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 
+msgid "v1.46"
+msgstr ""
+
+msgid ""
+"Fix escaping [JavaScript](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/631) and [CSS](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/396)"
+msgstr ""
+
 #~ msgid "Add Tamil translation by தமிழ்நேரம்"
 #~ msgstr ""
 

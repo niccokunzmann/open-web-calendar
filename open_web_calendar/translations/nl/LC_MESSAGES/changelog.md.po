@@ -738,3 +738,12 @@ msgid ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
 msgstr ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
+
+msgid "v1.46"
+msgstr ""
+
+msgid ""
+"Fix escaping [JavaScript](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/631) and [CSS](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/396)"
+msgstr ""
