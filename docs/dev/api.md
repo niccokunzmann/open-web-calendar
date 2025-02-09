@@ -141,6 +141,10 @@ If you add a new parameter as a developer:
 In the [template][dhtmlx-23] you can access the specification through the `specification` variable.
 The specification is available to JavaScript as the `specification` variable.
 
+See also:
+
+- [JavaScript Customization](../javascript)
+
 
 [app.py-81]: https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81
 [dhtmlx-23]: https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23

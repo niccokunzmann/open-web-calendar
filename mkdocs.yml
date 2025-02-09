@@ -263,6 +263,7 @@ nav:
     - dev/translate.md
     - dev/index.md
     - dev/api.md
+    - dev/javascript.md
     - dev/maintain.md
     - dev/license.md
   - SECURITY.md

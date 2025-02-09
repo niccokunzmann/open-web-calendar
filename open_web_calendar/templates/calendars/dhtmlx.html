@@ -49,7 +49,11 @@ SPDX-License-Identifier: GPL-2.0-only
         {% for link in specification.javascript_url %}
         <script src="{{ link }}" charset="utf-8"></script>
         {% endfor %}
-        <script type="text/javascript">{{ specification.javascript | replace('</script', '</scr\\ipt') | safe }}</script>
+        <script type="text/javascript">
+            function onCalendarInitialized() {
+                {{ specification.javascript | replace('</script', '</scr\\ipt') | safe }}
+            };
+        </script>
     </head>
     <body>
         <div id="scheduler_here" class="dhx_cal_container"

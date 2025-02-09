@@ -399,6 +399,7 @@ function loadCalendar() {
 
     //requestJSON(schedulerUrl, loadEventsOnSuccess, loadEventsOnError);
     scheduler.setLoadMode("day");
+    onCalendarInitialized();
     scheduler.load(schedulerUrl, "json");
 
 
@@ -409,6 +410,8 @@ function loadCalendar() {
 
     setLoader();
 }
+
+var onCalendarInitialized = onCalendarInitialized || function() {};
 
 /* Agenda view
  *
