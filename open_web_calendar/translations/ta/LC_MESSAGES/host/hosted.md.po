@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-23 18:34+0200\n"
-"PO-Revision-Date: 2025-01-25 01:51+0000\n"
+"PO-Revision-Date: 2025-02-09 19:45+0000\n"
 "Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/open-web-calendar/documentation-hosted-version/ta/>\n"
 "Language: ta\n"
@@ -65,9 +65,8 @@ msgstr ""
 "செய்தால், நீங்கள் இதைச் செய்யலாம் மற்றும் [அனைத்து காலெண்டர்களையும் "
 "நகர்த்தலாம்](../migrate) நீங்கள் மற்ற சேவையகத்திற்கு பயன்படுத்தலாம்."
 
-#, fuzzy
 msgid "[Uptime service monitor for the hosted instances][kuma]"
-msgstr "[ஓச்ட் செய்யப்பட்ட நிகழ்வுகளுக்கான கூடுதல் பணி மானிட்டர்] [குமா]"
+msgstr "[ஓச்ட் செய்யப்பட்ட நிகழ்வுகளுக்கான கூடுதல் பணி மானிட்டர்][kuma]"
 
 #, fuzzy
 msgid "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
