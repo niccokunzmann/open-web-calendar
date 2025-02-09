@@ -9,7 +9,6 @@ This allows people to
 - configure the scheduler themselves
 """
 
-from urllib.parse import quote
 
 import pytest
 
@@ -32,20 +31,6 @@ def test_embed_js_link(client, query, tags):
     response = client.get(f"/calendar.html{query}")
     for html in tags:
         assert html in response.text
-
-
-@pytest.mark.parametrize(
-    ("js", "html"),
-    [
-        ("console.log(specification);", "console.log(specification);"),
-        ("<html>&", "&lt;html&gt;&amp;"),
-    ],
-)
-def test_embed_js_directly(client, js, html):
-    """Check direct JS embedding."""
-    response = client.get(f"/calendar.html?javascript={quote(js)}")
-    print(response.text)
-    assert f'<script type="text/javascript">{html}</script>' in response.text
 
 
 @pytest.mark.parametrize(

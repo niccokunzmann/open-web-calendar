@@ -44,12 +44,12 @@ SPDX-License-Identifier: GPL-2.0-only
             {% if specification['style-event-status-tentative'] %}.STATUS-TENTATIVE { font-style: italic; }{% endif %}
             {% if specification['style-event-status-confirmed'] %}.event { font-weight: normal; } .STATUS-CONFIRMED { font-weight: bold; }{% endif %}
             {% if specification['style-event-status-cancelled'] %}.STATUS-CANCELLED { text-decoration: line-through; }{% endif %}
-            {{ specification['css'] }}
+            {{ specification['css'] | safe }}
         </style>
         {% for link in specification.javascript_url %}
         <script src="{{ link }}" charset="utf-8"></script>
         {% endfor %}
-        <script type="text/javascript">{{ specification.javascript }}</script>
+        <script type="text/javascript">{{ specification.javascript | replace('</script', '</scr\\ipt') | safe }}</script>
     </head>
     <body>
         <div id="scheduler_here" class="dhx_cal_container"
