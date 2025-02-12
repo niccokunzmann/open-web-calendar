@@ -45,7 +45,7 @@ itsdangerous==2.2.0
     # via flask
 jinja2==3.1.5
     # via flask
-lxml==5.3.0
+lxml==5.3.1
     # via
     #   -r requirements.in
     #   lxml-html-clean
