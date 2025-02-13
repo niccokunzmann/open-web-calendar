@@ -38,29 +38,6 @@ tox -e ruff
 [ruff]: https://docs.astral.sh/ruff/
 [pre-commit]:  https://pre-commit.com/
 
-## Running the App
-
-1. Optional: Install virtualenv and Python3 and create a virtual environment.
-
-    ```sh
-    virtualenv -p python3 ENV
-    source ENV/bin/activate
-    ```
-
-2. Install the packages.
-
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-3. Start the app.
-
-    ```sh
-    python3 app.py
-    ```
-
-You can [configure the app](../../host/configure) through environment variables.
-
 ## Running Tests
 
 To run the tests, we use `tox`.
@@ -68,7 +45,7 @@ To run the tests, we use `tox`.
 be compatible to.
 
 ```sh
-pip install tox
+pip install -r requirements/dev.in
 ```
 
 Run all tests:
@@ -106,6 +83,14 @@ You can also change the layout of the window to test the responsive design:
 tox -e web -- -D window=375x812 # iPhone11 size
 ```
 
+### Debug Mode
+
+In case the browser tests fail, screenshots are recorded and a link is printed.
+
+```sh
+
+```
+
 ## Documentation
 
 You can build the documentation with `tox`, too.
@@ -118,5 +103,4 @@ tox -e docs -- serve
 
 We are using [mkdocs] with the [material theme](https://squidfunk.github.io/mkdocs-material/).
 
-[web]: https://open-web-calendar.hosted.quelltext.eu/
 [mkdocs]: https://www.mkdocs.org

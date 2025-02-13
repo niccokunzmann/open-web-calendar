@@ -47,9 +47,9 @@ def test_we_can_load_the_spec_from_a_file(tmp_path_factory, monkeypatch, k, v):
     monkeypatch.setitem(os.environ, "OWC_SPECIFICATION", f"{k}: '{v}{v}{v}'")
     assert get_default_specification()[k] == v + v + v, "The valus is loaded from YAML."
     monkeypatch.setitem(DEFAULT_SPECIFICATION, k, "other value")
-    assert (
-        get_default_specification()[k] == "other value"
-    ), "The value in the app dict are more important."
+    assert get_default_specification()[k] == "other value", (
+        "The value in the app dict are more important."
+    )
 
 
 def test_invalid_path_for_env_var(monkeypatch):

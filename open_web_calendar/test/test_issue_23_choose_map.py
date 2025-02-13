@@ -31,9 +31,9 @@ def test_event_in_berlin_with_altrep(client: FlaskClient, calendar_urls):
     print(event["location"])
     assert event["location"]["text"] == "Berlin"
     url: str = event["location"]["url"]
-    assert (
-        url == "https://www.openstreetmap.org/relation/62422"
-    ), "should be the same url as in altrep"
+    assert url == "https://www.openstreetmap.org/relation/62422", (
+        "should be the same url as in altrep"
+    )
 
 
 def test_event_in_berlin_text_only(client: FlaskClient, calendar_urls):

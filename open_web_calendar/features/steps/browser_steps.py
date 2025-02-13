@@ -111,9 +111,9 @@ def step_impl(context, count=1):
     events = context.browser.find_elements(
         By.XPATH, "//div[contains(@class, ' event ')]"
     )
-    assert (
-        len(events) == count
-    ), f"Expected {count} events but {len(events)} were found: {events!r}"
+    assert len(events) == count, (
+        f"Expected {count} events but {len(events)} were found: {events!r}"
+    )
 
 
 @then('we see that event "{uid}" has the text "{text}"')
@@ -121,9 +121,9 @@ def step_impl(context, uid, text):
     events = context.browser.find_elements(
         By.XPATH, f"//div[contains(@event_id, {uid!r})]"
     )
-    assert (
-        len(events) == 1
-    ), f"There should only be one event with UID {uid} but there are {len(events)}."
+    assert len(events) == 1, (
+        f"There should only be one event with UID {uid} but there are {len(events)}."
+    )
     event = events[0]
     inner_text = re.sub(r"\s+", " ", event.get_attribute("innerText"))
     assert inner_text == text, f"Expected {text!r} but got {inner_text!r}"
@@ -163,9 +163,9 @@ def step_impl(context, text):
 @when('we click the link "{text}"')
 def step_impl(context, text):
     links = context.browser.find_elements(By.XPATH, f"//a[text() = {text!r}]")
-    assert (
-        len(links) == 1
-    ), f"I should click on the link {text!r} but found {len(links)}."
+    assert len(links) == 1, (
+        f"I should click on the link {text!r} but found {len(links)}."
+    )
     links[0].click()
 
 
@@ -197,23 +197,23 @@ def step_impl(context, text):
     index = body.find(text)
     start = 0 if index < 10 else index - 10
     end = -1 if index > len(body) else index + 10
-    assert (
-        index == -1
-    ), f"{text!r} is visible but should not be visible: {body[start:end]!r}"
+    assert index == -1, (
+        f"{text!r} is visible but should not be visible: {body[start:end]!r}"
+    )
 
 
 @then('we can see the text "{text}"')
 def step_impl(context, text):
-    assert text in get_body_text(
-        context
-    ), f"{text!r} is invisible but should be visible"
+    assert text in get_body_text(context), (
+        f"{text!r} is invisible but should be visible"
+    )
 
 
 @then("we can see a {cls}")
 def step_impl(context, cls):
-    assert context.browser.find_elements(
-        By.CLASS_NAME, cls
-    ), f"Expected to find elements of class {cls}"
+    assert context.browser.find_elements(By.CLASS_NAME, cls), (
+        f"Expected to find elements of class {cls}"
+    )
 
 
 @then('we can see an event with UID "{uid}" with css class "{css_class}"')
@@ -231,9 +231,9 @@ def step_impl(context, uid, css_class):
 @then("we cannot see a {cls}")
 def step_impl(context, cls):
     with no_time_to_wait_for_elements(context):
-        assert not context.browser.find_elements(
-            By.CLASS_NAME, cls
-        ), f"Expected to not find elements of class {cls}"
+        assert not context.browser.find_elements(By.CLASS_NAME, cls), (
+            f"Expected to not find elements of class {cls}"
+        )
 
 
 @when("we open the about page")
@@ -305,9 +305,9 @@ def step_impl(context, text, field_id):
     """Check that a field has a value."""
     input_element = context.browser.find_element(By.ID, field_id)
     actual_text = input_element.get_attribute("value")
-    assert (
-        actual_text == text
-    ), f"Expected {text!r} in {field_id} but got {actual_text!r}."
+    assert actual_text == text, (
+        f"Expected {text!r} in {field_id} but got {actual_text!r}."
+    )
 
 
 @when('we write the date {day}/{month}/{year} into "{field_id}"')
@@ -365,9 +365,9 @@ def assert_specification_has_value(context, attribute, expected_value="no value"
     """Make sure the specification has a certain value."""
     specification = get_specification(context)
     actual_value = specification.get(attribute, "no value")
-    assert (
-        actual_value == expected_value
-    ), f"specification.{attribute}: expected {expected_value} but got {actual_value}."
+    assert actual_value == expected_value, (
+        f"specification.{attribute}: expected {expected_value} but got {actual_value}."
+    )
 
 
 @then('"{attribute}" is specified as {expected_value}')
@@ -453,9 +453,9 @@ def assert_tag_with_text_attribute_equals(
     elements = context.browser.find_elements(
         By.XPATH, f"//{tag}[text()[contains(., {text!r})]]"
     )
-    assert (
-        len(elements) >= 1
-    ), f"Expected at least one <{tag}> with text {text!r} but got {len(elements)}."
+    assert len(elements) >= 1, (
+        f"Expected at least one <{tag}> with text {text!r} but got {len(elements)}."
+    )
     actual_values = [element.get_attribute(attribute) for element in elements]
     assert expected_value in actual_values, (
         f"Expected a <{tag}> with the text {text!r} to have an attribute "

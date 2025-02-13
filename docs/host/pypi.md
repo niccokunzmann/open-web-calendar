@@ -11,26 +11,33 @@ description: "The Open Web Calendar can be installed as a Python package from Py
 ![](https://img.shields.io/pypi/v/open-web-calendar.svg) ![](https://img.shields.io/pypi/pyversions/open-web-calendar.svg)
 
 ## Installation
+
 The Open Web Calendar is available as a Python package on [PyPI]({{link.pypi}}).
 If you have [Python 3](https://www.python.org/) installed, run this to install the package:
 
 ```shell
-pip install open-web-calendar
+pip install open-web-calendar[production]
 ```
+
 At this point you might get the error message
+
 ```shell
 error: externally-managed-environment
 ```
 
 On your productive system, it is strongly recommended to follow the instructions to create a virtual environment using 
+
 ```shell
 python3 -m .venv
 source .venv/bin/activate
 ```
-followed by 
+
+followed by
+
 ```shell
-pip install open-web-calendar
+pip install open-web-calendar[production]
 ```
+
 This will install your open-web-calendar app in the project folder  
 /home/username/venv/lib/python3.12/site-packages/open_web_calendar
 
@@ -49,15 +56,19 @@ In this case you might want to start the open_web_calendar with the dedicated IP
 ```shell
 gunicorn -b 0.0.0.0 open_web_calendar:app
 ```
+
 You should now see the server running at [http://192.168.178.7:8000](http://192.168.178.7:8000) not only from your local machine.
 
 ## Automatic Startup
+
 In order to start this service automatically at startup, you are required to create a systemd service script.
 
 ```shell
 sudo nano /etc/systemd/system/open_web_calendar.service
 ```
+
 Copy the following text into that file and do not forget to change **username** and **usergroup** accordingly!
+
 ```shell
 [Unit]
 Description=Gunicorn instance for the open_web_calendar
@@ -78,20 +89,28 @@ PrivateTmp=true
 [Install]
 WantedBy=multi-user.target
 ```
+
 Finish the installation by  
 a) Reload and enable the systemd manager
+
 ```shell
 sudo systemctl daemon-reload
 ```
+
 b) Enable the service to start on boot
+
 ```shell
 sudo systemctl enable open_web_calendar
 ```
+
 c) Start the service:
+
 ```shell
 sudo systemctl start open_web_calendar
 ```
+
 d) Verify that the service is running without errors
+
 ```shell
 sudo systemctl status open_web_calendar
 ```
