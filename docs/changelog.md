@@ -22,6 +22,10 @@ The latest version might not be released, yet.
 - Allow installation with fixed depdencies using `pip install open-web-calendar[production]`
 - Update dependencies
 - Use `pip-compile-multi` and `hatch-requirements-txt` for dependencies, see [Issue 481](https://github.com/niccokunzmann/open-web-calendar/issues/481).
+- Update Ukrainian translation by Максим Горпиніч, Tamil by Nicco Kunzmann and [தமிழ்நேரம்], Croatian by Milo Ivir, Dutch by Pander
+- Add use `python-mergecal` to merge calendars, see [Issue 466](https://github.com/niccokunzmann/open-web-calendar/issues/466).
+- Include `VTIMEZONE` component in merged calendars
+- Speed up the Docker build
 
 ## v1.45
 
