@@ -61,6 +61,8 @@ dependencies = [
     "beautifulsoup4",
     "lxml_html_clean",
     "pytz",
+    "mergecal>=0.4.2",
+    "icalendar-compatibility>=0.1.3",
 ]
 
 [project.optional-dependencies]
