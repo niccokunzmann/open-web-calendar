@@ -228,6 +228,15 @@ msgstr ""
 msgid "To update the dependencies, run this command:"
 msgstr ""
 
+msgid "Language filter:       wzxhzdk:3"
+msgstr ""
+
+msgid "Add **Translation flags**:       wzxhzdk:4"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:       wzxhzdk:5"
+msgstr ""
+
 #~ msgid "Enter your virtual environment. E.g."
 #~ msgstr ""
 
@@ -372,12 +381,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#~ msgid "Language filter:       wzxhzdk:3"
-#~ msgstr ""
-
-#~ msgid "Add **Translation flags**:       wzxhzdk:4"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px:       wzxhzdk:5"
-#~ msgstr ""

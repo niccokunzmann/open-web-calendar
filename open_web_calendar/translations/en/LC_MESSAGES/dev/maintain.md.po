@@ -228,6 +228,15 @@ msgstr ""
 msgid "To update the dependencies, run this command:"
 msgstr ""
 
+msgid "Language filter:       wzxhzdk:3"
+msgstr ""
+
+msgid "Add **Translation flags**:       wzxhzdk:4"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:       wzxhzdk:5"
+msgstr ""
+
 #~ msgid "Enter your virtual environment. E.g."
 #~ msgstr ""
 
@@ -357,13 +366,4 @@ msgstr ""
 #~ "Set the **Repository browser** to the right URL, replace `index.md`: "
 #~ "`https://github.com/niccokunzmann/open-web-calendar/blob/{{ branch "
 #~ "}}/docs/index.md?plain=1#L{{ line }}`"
-#~ msgstr ""
-
-#~ msgid "Language filter:       wzxhzdk:3"
-#~ msgstr ""
-
-#~ msgid "Add **Translation flags**:       wzxhzdk:4"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px:       wzxhzdk:5"
 #~ msgstr ""

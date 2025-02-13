@@ -758,6 +758,22 @@ msgid ""
 "[Issue 481](https://github.com/niccokunzmann/open-web-calendar/issues/481)."
 msgstr ""
 
+msgid ""
+"Update Ukrainian translation by Максим Горпиніч, Tamil by Nicco Kunzmann and"
+" [தமிழ்நேரம்], Croatian by Milo Ivir, Dutch by Pander"
+msgstr ""
+
+msgid ""
+"Add use `python-mergecal` to merge calendars, see [Issue "
+"466](https://github.com/niccokunzmann/open-web-calendar/issues/466)."
+msgstr ""
+
+msgid "Include `VTIMEZONE` component in merged calendars"
+msgstr ""
+
+msgid "Speed up the Docker build"
+msgstr ""
+
 #~ msgid "Add Tamil translation by தமிழ்நேரம்"
 #~ msgstr ""
 
