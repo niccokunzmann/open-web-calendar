@@ -182,3 +182,8 @@ extend-safe-fixes = [
 "docs/hooks/set_canonical_url.py" = [
   "INP001"    # File `docs/hooks/set_canonical_url.py` is part of an implicit namespace package. Add an `__init__.py`.
 ]
+
+[tool.pip-tools.compile]
+# see https://pypi.org/project/pip-tools/
+upgrade = true
+strip-extras = true
