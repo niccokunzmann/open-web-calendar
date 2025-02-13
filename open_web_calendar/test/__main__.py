@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
 """Run the open web calendar in development mode and serve files.
 
-    python -m open_web_calendar.test
+python -m open_web_calendar.test
 
 """
 
@@ -21,9 +20,11 @@ CALENDAR_FOLDER = HERE.parent / "features" / "calendars"
 PORT = 8001
 HOST = "localhost"
 
+
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=CALENDAR_FOLDER, **kwargs)
+
 
 try:
     httpd = socketserver.TCPServer((HOST, PORT), Handler)
