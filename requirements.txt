@@ -75,7 +75,7 @@ pytz==2025.1
     # via -r requirements.in
 pyyaml==6.0.2
     # via -r requirements.in
-recurring-ical-events==3.5.1
+recurring-ical-events==3.5.2
     # via -r requirements.in
 requests[socks]==2.32.3
     # via -r requirements.in
