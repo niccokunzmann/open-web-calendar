@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from icalendar import Event
 
 
+MAXIMUM_EVENTS = 31 * 20  # 10 events per day
+
+
 def is_date(date):
     """Whether the date is a datetime.date and not a datetime.datetime"""
     return isinstance(date, datetime.date) and not isinstance(date, datetime.datetime)
@@ -167,12 +170,12 @@ class ConvertToDhtmlx(ConversionStrategy):
     def collect_components_from(self, calendar_index, calendars):
         # see https://stackoverflow.com/a/16115575/1320237
         for calendar in calendars:
-            events = recurring_ical_events.of(calendar).between(
-                self.from_date, self.to_date
+            events = recurring_ical_events.of(calendar).paginate(
+                MAXIMUM_EVENTS, self.from_date, self.to_date
             )
-            with self.lock:
-                for event in events:
-                    json_event = self.convert_ical_event(calendar_index, event)
+            for event in events:
+                json_event = self.convert_ical_event(calendar_index, event)
+                with self.lock:
                     self.components.append(json_event)
 
     def get_event_classes(self, event) -> list[str]:
