@@ -747,3 +747,13 @@ msgid ""
 "calendar/issues/631) and [CSS](https://github.com/niccokunzmann/open-web-"
 "calendar/issues/396)"
 msgstr ""
+
+msgid ""
+"Allow installation with fixed depdencies using `pip install open-web-"
+"calendar[production]`"
+msgstr ""
+
+msgid ""
+"Use `pip-compile-multi` and `hatch-requirements-txt` for dependencies, see "
+"[Issue 481](https://github.com/niccokunzmann/open-web-calendar/issues/481)."
+msgstr ""

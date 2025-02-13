@@ -29,24 +29,6 @@ msgid ""
 "To format the code before commit without the pre-commit hook, run this:"
 msgstr ""
 
-msgid "Running the App"
-msgstr ""
-
-msgid ""
-"Optional: Install virtualenv and Python3 and create a virtual environment."
-msgstr ""
-
-msgid "Install the packages."
-msgstr ""
-
-msgid "Start the app."
-msgstr ""
-
-msgid ""
-"You can [configure the app](../../host/configure) through environment "
-"variables."
-msgstr ""
-
 msgid "Running Tests"
 msgstr ""
 
@@ -98,20 +80,46 @@ msgid "[pre-commit]: https://pre-commit.com/"
 msgstr "[pre-commit]: https://pre-commit.com/"
 
 #, fuzzy
-msgid "[web]: https://open-web-calendar.hosted.quelltext.eu/"
-msgstr "[web]: https://open-web-calendar.hosted.quelltext.eu/"
-
-#, fuzzy
 msgid "[mkdocs]: https://www.mkdocs.org"
 msgstr "[mkdocs]: https://www.mkdocs.org"
 
+msgid "Debug Mode"
+msgstr ""
+
 msgid ""
-"Optional: Install virtualenv and Python3 and create a virtual environment."
-"    ```sh    virtualenv -p python3 ENV source ENV/bin/activate    ```"
+"In case the browser tests fail, screenshots are recorded and a link is "
+"printed."
 msgstr ""
 
-msgid "Install the packages.    wzxhzdk:3"
-msgstr ""
+#~ msgid "Running the App"
+#~ msgstr ""
 
-msgid "Start the app.    wzxhzdk:4"
-msgstr ""
+#~ msgid ""
+#~ "Optional: Install virtualenv and Python3 and create a virtual environment."
+#~ msgstr ""
+
+#~ msgid "Install the packages."
+#~ msgstr ""
+
+#~ msgid "Start the app."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can [configure the app](../../host/configure) through environment "
+#~ "variables."
+#~ msgstr ""
+
+#, fuzzy
+#~ msgid "[web]: https://open-web-calendar.hosted.quelltext.eu/"
+#~ msgstr "[web]: https://open-web-calendar.hosted.quelltext.eu/"
+
+#~ msgid ""
+#~ "Optional: Install virtualenv and Python3 and create a virtual environment."
+#~ "    ```sh    virtualenv -p python3 ENV source ENV/bin/activate    ```"
+#~ msgstr ""
+
+#~ msgid "Install the packages.    wzxhzdk:3"
+#~ msgstr ""
+
+#~ msgid "Start the app.    wzxhzdk:4"
+#~ msgstr ""

@@ -14,21 +14,6 @@ msgstr ""
 msgid "Update Dependencies"
 msgstr ""
 
-msgid "Enter your virtual environment. E.g."
-msgstr ""
-
-msgid "Install all dependencies:"
-msgstr ""
-
-msgid "Fix the dependencies:"
-msgstr ""
-
-msgid "Create a branch, commit:"
-msgstr ""
-
-msgid "Create a Pull Request and see if the tests run."
-msgstr ""
-
 msgid "Update DHTMLX Scheduler"
 msgstr ""
 
@@ -218,25 +203,6 @@ msgid ""
 "the flag `read-only`."
 msgstr ""
 
-msgid "Enter your virtual environment. E.g.    wzxhzdk:0"
-msgstr ""
-
-msgid "Install all dependencies:    wzxhzdk:1"
-msgstr ""
-
-msgid ""
-"Fix the dependencies:    ```sh    rm *requirements.txt pip-compile --output-"
-"file=requirements.txt requirements.in pip-compile --output-file=test-"
-"requirements.txt test-requirements.in pip-compile --output-file=docs-"
-"requirements.txt docs-requirements.in    ```"
-msgstr ""
-
-msgid ""
-"Create a branch, commit:    ```sh    git branch -d update git checkout -b "
-"update git add *requirements.txt git commit -m\"Update dependencies\" git "
-"push -u origin update    ```"
-msgstr ""
-
 msgid ""
 "Edit the `docs/changelog.md` file in the Changelog Section and add the "
 "changes.    ```sh    git checkout master git pull git add docs/changelog.md "
@@ -248,18 +214,9 @@ msgid ""
 "v1.30    ```"
 msgstr ""
 
-msgid "Language filter:       wzxhzdk:4"
-msgstr ""
-
 msgid ""
 "excludes `en`    - Source language: `English`    - Manage strings: **not** "
 "checked"
-msgstr ""
-
-msgid "Add **Translation flags**:       wzxhzdk:5"
-msgstr ""
-
-msgid "Restrict width and height to 2000px:       wzxhzdk:6"
 msgstr ""
 
 msgid "Translators"
@@ -267,3 +224,58 @@ msgstr ""
 
 msgid "It is nice to know who translated and how often."
 msgstr ""
+
+msgid "To update the dependencies, run this command:"
+msgstr ""
+
+#~ msgid "Enter your virtual environment. E.g."
+#~ msgstr ""
+
+#~ msgid "Install all dependencies:"
+#~ msgstr ""
+
+#~ msgid "Fix the dependencies:"
+#~ msgstr ""
+
+#~ msgid "Create a branch, commit:"
+#~ msgstr ""
+
+#~ msgid "Create a Pull Request and see if the tests run."
+#~ msgstr ""
+
+#~ msgid "Enter your virtual environment. E.g.    wzxhzdk:0"
+#~ msgstr ""
+
+#~ msgid "Install all dependencies:    wzxhzdk:1"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Fix the dependencies:    ```sh    rm *requirements.txt pip-compile --output-"
+#~ "file=requirements.txt requirements.in pip-compile --output-file=test-"
+#~ "requirements.txt test-requirements.in pip-compile --output-file=docs-"
+#~ "requirements.txt docs-requirements.in    ```"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a branch, commit:    ```sh    git branch -d update git checkout -b "
+#~ "update git add *requirements.txt git commit -m\"Update dependencies\" git "
+#~ "push -u origin update    ```"
+#~ msgstr ""
+
+#~ msgid "Language filter:       wzxhzdk:4"
+#~ msgstr ""
+
+#~ msgid "Add **Translation flags**:       wzxhzdk:5"
+#~ msgstr ""
+
+#~ msgid "Restrict width and height to 2000px:       wzxhzdk:6"
+#~ msgstr ""
+
+#~ msgid "Language filter:       wzxhzdk:3"
+#~ msgstr ""
+
+#~ msgid "Add **Translation flags**:       wzxhzdk:4"
+#~ msgstr ""
+
+#~ msgid "Restrict width and height to 2000px:       wzxhzdk:5"
+#~ msgstr ""
