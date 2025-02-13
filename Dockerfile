@@ -5,12 +5,12 @@
 FROM python:3.13-alpine
 
 # make pip also use piwheels
-ADD docker/pip.conf /etc/pip.conf
+COPY docker/pip.conf /etc/pip.conf
 
 # licenses
-ADD LICENSE .
-ADD LICENSES .
-ADD REUSE.toml .
+COPY LICENSE .
+COPY LICENSES .
+COPY REUSE.toml .
 
 # server environment variables
 EXPOSE 80
@@ -21,13 +21,14 @@ ENV WORKERS=4
 RUN mkdir /app
 WORKDIR /app
 ENV PYTHONUNBUFFERED=true
-ADD docker/start-service.sh .
+COPY docker/start-service.sh .
 
 # Install Packages
-ADD docker/constraints.txt .
+COPY docker/constraints.txt .
 ENV PIP_CONSTRAINT=constraints.txt
-ADD requirements.txt .
-RUN apk add libxslt libxml2 libxslt-dev libxml2-dev gcc libc-dev \
+COPY requirements/base.txt requirements.txt
+COPY pyproject.toml .
+RUN apk add --no-cache gcc libc-dev libxml2 libxml2-dev libxslt libxslt-dev \
  && pip install --upgrade --no-cache-dir pip \
  && pip install --upgrade --no-cache-dir -r requirements.txt \
  && apk del libxslt-dev libxml2-dev gcc libc-dev
@@ -36,4 +37,4 @@ RUN apk add libxslt libxml2 libxslt-dev libxml2-dev gcc libc-dev \
 ENTRYPOINT ["/bin/sh", "start-service.sh"]
 
 # Add the app
-ADD open_web_calendar open_web_calendar
+COPY open_web_calendar open_web_calendar
