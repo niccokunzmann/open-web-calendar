@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_71s0_l38/es/dev/maintain/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_w723wlbp/es/dev/maintain/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_71s0_l38/es/dev/maintain/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_w723wlbp/es/dev/maintain/index.png" >
       
     
     
@@ -1003,28 +1003,9 @@
 <h1 id="notes-for-maintainers">Notes for Maintainers<a class="headerlink" href="#notes-for-maintainers" title="Enlace permanente">&para;</a></h1>
 <p>This section clarifies how to maintain the project.</p>
 <h2 id="update-dependencies">Update Dependencies<a class="headerlink" href="#update-dependencies" title="Enlace permanente">&para;</a></h2>
-<ol>
-<li>Enter your virtual environment. E.g.
-   <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.tox/py311/bin/activate
-</code></pre></div></li>
-<li>Install all dependencies:
-   <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>requirements.in<span class="w"> </span>-r<span class="w"> </span>test-requirements.in<span class="w"> </span>-r<span class="w"> </span>docs-requirements.in<span class="w"> </span>pip-tools
-</code></pre></div></li>
-<li>Fix the dependencies:
-   <code>sh
-   rm *requirements.txt
-pip-compile --output-file=requirements.txt requirements.in
-pip-compile --output-file=test-requirements.txt test-requirements.in
-pip-compile --output-file=docs-requirements.txt docs-requirements.in</code></li>
-<li>Create a branch, commit:
-   <code>sh
-   git branch -d update
-git checkout -b update
-git add *requirements.txt
-git commit -m"Update dependencies"
-git push -u origin update</code></li>
-<li>Create a Pull Request and see if the tests run.</li>
-</ol>
+<p>To update the dependencies, run this command:</p>
+<div class="highlight"><pre><span></span><code>pip-compile-multi<span class="w"> </span>--upgrade
+</code></pre></div>
 <h2 id="update-dhtmlx-scheduler">Update DHTMLX Scheduler<a class="headerlink" href="#update-dhtmlx-scheduler" title="Enlace permanente">&para;</a></h2>
 <p>DHTMLX Scheduler can be updated from its <a href="https://github.com/DHTMLX/scheduler">GitHub repository</a>. There is a script which updates the scheduler. Still their changelog needs to be considered.</p>
 <div class="highlight"><pre><span></span><code>./scripts/update-scheduler.sh

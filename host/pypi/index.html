@@ -1052,19 +1052,19 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>The Open Web Calendar is available as a Python package on <a href="https://pypi.org/project/open-web-calendar/">PyPI</a>.
 If you have <a href="https://www.python.org/">Python 3</a> installed, run this to install the package:</p>
-<p><div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>open-web-calendar
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>open-web-calendar<span class="o">[</span>production<span class="o">]</span>
 </code></pre></div>
-At this point you might get the error message
+<p>At this point you might get the error message</p>
 <div class="highlight"><pre><span></span><code>error:<span class="w"> </span>externally-managed-environment
-</code></pre></div></p>
-<p>On your productive system, it is strongly recommended to follow the instructions to create a virtual environment using 
+</code></pre></div>
+<p>On your productive system, it is strongly recommended to follow the instructions to create a virtual environment using </p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>.venv
 <span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 </code></pre></div>
-followed by 
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>open-web-calendar
+<p>followed by</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>open-web-calendar<span class="o">[</span>production<span class="o">]</span>
 </code></pre></div>
-This will install your open-web-calendar app in the project folder<br />
+<p>This will install your open-web-calendar app in the project folder<br />
 /home/username/venv/lib/python3.12/site-packages/open_web_calendar</p>
 <h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
 <p>After installation, run the Open Web Calendar using <a href="https://docs.gunicorn.org/">Gunicorn</a>:</p>
@@ -1073,14 +1073,14 @@ This will install your open-web-calendar app in the project folder<br />
 <p>You should now see the server running at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.</p>
 <p>However, in case you have installed the WebPage you are going to use for the integration of your individual calendar on the same local machine, it must be accessible to other machines as well.<br />
 In this case you might want to start the open_web_calendar with the dedicated IP-address of the hosting machine.</p>
-<p><div class="highlight"><pre><span></span><code>gunicorn<span class="w"> </span>-b<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>open_web_calendar:app
+<div class="highlight"><pre><span></span><code>gunicorn<span class="w"> </span>-b<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-You should now see the server running at <a href="http://192.168.178.7:8000">http://192.168.178.7:8000</a> not only from your local machine.</p>
+<p>You should now see the server running at <a href="http://192.168.178.7:8000">http://192.168.178.7:8000</a> not only from your local machine.</p>
 <h2 id="automatic-startup">Automatic Startup<a class="headerlink" href="#automatic-startup" title="Permanent link">&para;</a></h2>
 <p>In order to start this service automatically at startup, you are required to create a systemd service script.</p>
-<p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/open_web_calendar.service
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/open_web_calendar.service
 </code></pre></div>
-Copy the following text into that file and do not forget to change <strong>username</strong> and <strong>usergroup</strong> accordingly!
+<p>Copy the following text into that file and do not forget to change <strong>username</strong> and <strong>usergroup</strong> accordingly!</p>
 <div class="highlight"><pre><span></span><code><span class="o">[</span>Unit<span class="o">]</span>
 <span class="nv">Description</span><span class="o">=</span>Gunicorn<span class="w"> </span>instance<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>open_web_calendar
 <span class="nv">After</span><span class="o">=</span>network.target
@@ -1100,19 +1100,19 @@ Copy the following text into that file and do not forget to change <strong>usern
 <span class="o">[</span>Install<span class="o">]</span>
 <span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
 </code></pre></div>
-Finish the installation by<br />
-a) Reload and enable the systemd manager
+<p>Finish the installation by<br />
+a) Reload and enable the systemd manager</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
 </code></pre></div>
-b) Enable the service to start on boot
+<p>b) Enable the service to start on boot</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>open_web_calendar
 </code></pre></div>
-c) Start the service:
+<p>c) Start the service:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>open_web_calendar
 </code></pre></div>
-d) Verify that the service is running without errors
+<p>d) Verify that the service is running without errors</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>open_web_calendar
-</code></pre></div></p>
+</code></pre></div>
 <p>For more configuration options, see here:</p>
 <ul>
 <li><a href="https://docs.gunicorn.org/en/stable/run.html#commonly-used-arguments">Gunicorn Command Line Arguments</a> and <code>gunicorn --help</code>.</li>

@@ -1104,38 +1104,9 @@
 <h1 id="notes-for-maintainers">Notes for Maintainers<a class="headerlink" href="#notes-for-maintainers" title="Permanent link">&para;</a></h1>
 <p>This section clarifies how to maintain the project.</p>
 <h2 id="update-dependencies">Update Dependencies<a class="headerlink" href="#update-dependencies" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Enter your virtual environment. E.g.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.tox/py311/bin/activate
+<p>To update the dependencies, run this command:</p>
+<div class="highlight"><pre><span></span><code>pip-compile-multi<span class="w"> </span>--upgrade
 </code></pre></div>
-</li>
-<li>
-<p>Install all dependencies:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>requirements.in<span class="w"> </span>-r<span class="w"> </span>test-requirements.in<span class="w"> </span>-r<span class="w"> </span>docs-requirements.in<span class="w"> </span>pip-tools
-</code></pre></div>
-</li>
-<li>
-<p>Fix the dependencies:</p>
-<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>*requirements.txt
-pip-compile<span class="w"> </span>--output-file<span class="o">=</span>requirements.txt<span class="w"> </span>requirements.in
-pip-compile<span class="w"> </span>--output-file<span class="o">=</span>test-requirements.txt<span class="w"> </span>test-requirements.in
-pip-compile<span class="w"> </span>--output-file<span class="o">=</span>docs-requirements.txt<span class="w"> </span>docs-requirements.in
-</code></pre></div>
-</li>
-<li>
-<p>Create a branch, commit:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>update
-git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>update
-git<span class="w"> </span>add<span class="w"> </span>*requirements.txt
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="s2">&quot;Update dependencies&quot;</span>
-git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>update
-</code></pre></div>
-</li>
-<li>
-<p>Create a Pull Request and see if the tests run.</p>
-</li>
-</ol>
 <h2 id="update-dhtmlx-scheduler">Update DHTMLX Scheduler<a class="headerlink" href="#update-dhtmlx-scheduler" title="Permanent link">&para;</a></h2>
 <p>DHTMLX Scheduler can be updated from its <a href="https://github.com/DHTMLX/scheduler">GitHub repository</a>.
 There is a script which updates the scheduler.

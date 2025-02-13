@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_71s0_l38/sk/dev/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_w723wlbp/sk/dev/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_71s0_l38/sk/dev/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_w723wlbp/sk/dev/index.png" >
       
     
     
@@ -941,15 +941,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the App
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#running-tests" class="md-nav__link">
     <span class="md-ellipsis">
       Running Tests
@@ -964,6 +955,21 @@
       Browser Testing
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Browser Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debug-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1013,23 +1019,9 @@
 <p>To format the code before commit without the pre-commit hook, run this:</p>
 <div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>ruff
 </code></pre></div>
-<h2 id="running-the-app">Running the App<a class="headerlink" href="#running-the-app" title="Permanentný odkaz">&para;</a></h2>
-<ol>
-<li>Optional: Install virtualenv and Python3 and create a virtual environment.
-   <code>sh
-   virtualenv -p python3 ENV
-source ENV/bin/activate</code></li>
-<li>Install the packages.
-   <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div></li>
-<li>Start the app.
-   <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>app.py
-</code></pre></div></li>
-</ol>
-<p>You can <a href="../../host/configure">configure the app</a> through environment variables.</p>
 <h2 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanentný odkaz">&para;</a></h2>
 <p>To run the tests, we use <code>tox</code>. <code>tox</code> tests all different Python versions which we want to be compatible to.</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>tox
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/dev.in
 </code></pre></div>
 <p>Run all tests:</p>
 <div class="highlight"><pre><span></span><code>tox
@@ -1047,6 +1039,10 @@ tox<span class="w"> </span>-e<span class="w"> </span>web<span class="w"> </span>
 </code></pre></div>
 <p>You can also change the layout of the window to test the responsive design:</p>
 <div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>web<span class="w"> </span>--<span class="w"> </span>-D<span class="w"> </span><span class="nv">window</span><span class="o">=</span>375x812<span class="w"> </span><span class="c1"># iPhone11 size</span>
+</code></pre></div>
+<h3 id="debug-mode">Debug Mode<a class="headerlink" href="#debug-mode" title="Permanentný odkaz">&para;</a></h3>
+<p>In case the browser tests fail, screenshots are recorded and a link is printed.</p>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanentný odkaz">&para;</a></h2>
 <p>You can build the documentation with <code>tox</code>, too. It is located in the <code>docs</code> directory.</p>
