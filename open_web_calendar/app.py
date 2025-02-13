@@ -17,6 +17,7 @@ from typing import Any, Optional
 import pytz
 import requests
 import yaml
+import markupsafe
 from flask import (
     Flask,
     Response,
@@ -219,7 +220,7 @@ def get_specification(query=None):
     for parameter in query:
         # get a list of arguments
         # see https://web.archive.org/web/20230325034825/https://werkzeug.palletsprojects.com/en/0.14.x/datastructures/
-        value = query.getlist(parameter)
+        value = markupsafe.escape(query.getlist(parameter))
         # convert values
         for i in range(len(value)):
             if value[i] in ("false", "False"):
