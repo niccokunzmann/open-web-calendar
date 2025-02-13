@@ -3,14 +3,14 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 [build-system]
-requires = ["hatchling", "hatch-vcs"]
+requires = ["hatchling", "hatch-vcs", "hatch-requirements-txt"]
 build-backend = "hatchling.build"
 
 [project]
 name = "open-web-calendar"
 license = {file = "LICENSE"}
 keywords = ["OpenWebCalendar", "calendar", "ics", "rfc5545", "website", "iframe", "embed", "HTML", "icalendar", "scheduling"]
-dynamic = ["urls", "version"]
+dynamic = ["urls", "version", "optional-dependencies", "dependencies"]
 authors = [
   { name="Nicco Kunzmann", email="niccokunzmann@rambler.ru" },
   { name="Open Web Calendar Contributors" },
@@ -47,43 +47,30 @@ classifiers = [
     "Topic :: Office/Business :: Scheduling",
 ]
 
-dependencies = [
-    "flask-caching",
-    "flask-allowed-hosts",
-    "flask",
-    "icalendar",
-    "requests",
-    "requests[socks]",
-    "pyyaml",
-    "recurring-ical-events",
-    "gunicorn",
-    "lxml",
-    "beautifulsoup4",
-    "lxml_html_clean",
-    "pytz",
+[tool.hatch.metadata.hooks.requirements_txt]
+# see https://pypi.org/project/hatch-requirements-txt/
+files = [
+  "requirements/base.in"
 ]
 
-[project.optional-dependencies]
+[tool.hatch.metadata.hooks.requirements_txt.optional-dependencies]
+# see https://pypi.org/project/hatch-requirements-txt/
+dev = [
+  "requirements/dev.in"
+]
 test = [
-    "pytest",
-    "behave",
-    "selenium",
+  "requirements/test.in"
+]
+production = [
+  "requirements/base.txt"
+]
+dev-fix = [
+  "requirements/dev.txt"
+]
+test-fix = [
+  "requirements/test.txt"
 ]
 
-#docs = [
-#    "mkdocs-material",
-#    "mkdocs-rss-plugin",
-#    "mkdocs-git-revision-date-localized-plugin",
-#    "mkdocs-material[imaging]",
-#    "mkdocs-markdownextradata-plugin",
-#    "mkdocs-macros-plugin",
-#    "mkdocs[i18n]",
-#    "mkdocs-meta-descriptions-plugin",
-##mkdocs-mdpo-plugin
-#    "mkdocs-mdpo-plugin @ git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1",
-#    "mkdocs-material-relative-language-selector",
-#    "mkdocs-exclude",
-#]
 
 [project.scripts]
 open-web-calendar = "open_web_calendar:main"
@@ -180,3 +167,7 @@ extend-safe-fixes = [
 "docs/hooks/set_canonical_url.py" = [
   "INP001"    # File `docs/hooks/set_canonical_url.py` is part of an implicit namespace package. Add an `__init__.py`.
 ]
+
+[tool.pip-tools.compile]
+# see https://pypi.org/project/pip-tools/
+strip-extras = false

@@ -19,6 +19,9 @@ The latest version might not be released, yet.
 ## v1.46
 
 - Fix escaping [JavaScript](https://github.com/niccokunzmann/open-web-calendar/issues/631) and [CSS](https://github.com/niccokunzmann/open-web-calendar/issues/396)
+- Allow installation with fixed depdencies using `pip install open-web-calendar[production]`
+- Update dependencies
+- Use `pip-compile-multi` and `hatch-requirements-txt` for dependencies, see [Issue 481](https://github.com/niccokunzmann/open-web-calendar/issues/481).
 
 ## v1.45
 

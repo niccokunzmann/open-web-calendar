@@ -26,7 +26,7 @@ SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors
 SPDX-License-Identifier = "GPL-2.0-only"
 
 [[annotations]]
-path = ["test-requirements.**", "requirements.**", "docs-requirements.**"]
+path = ["requirements/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>"
 SPDX-License-Identifier = "GPL-2.0-only"

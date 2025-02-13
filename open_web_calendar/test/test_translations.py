@@ -251,9 +251,9 @@ def test_language_falls_back_to_base(code):
     default_code = code.split("-")[0].split("_")[0]
     default = translate.string(default_code, "calendar", "language")
     expected = translate.string(code, "calendar", "language")
-    assert (
-        default == expected
-    ), "The default code should be the same if the language is not given."
+    assert default == expected, (
+        "The default code should be the same if the language is not given."
+    )
 
 
 @pytest.mark.parametrize(

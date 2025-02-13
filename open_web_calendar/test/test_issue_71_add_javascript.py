@@ -9,7 +9,6 @@ This allows people to
 - configure the scheduler themselves
 """
 
-
 import pytest
 
 

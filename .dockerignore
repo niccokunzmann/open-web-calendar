@@ -7,8 +7,9 @@
 !/open_web_calendar
 /open_web_calendar/test
 /open_web_calendar/features
-!/requirements.txt
+!/requirements
 !/docker
 !/LICENSE
 !/LICENSES
 !/REUSE.toml
+!/pyproject.toml

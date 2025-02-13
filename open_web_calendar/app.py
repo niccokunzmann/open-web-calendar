@@ -279,10 +279,10 @@ def get_calendar(ext):
     if ext == "html":
         template_name = specification["template"]
         all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
-        assert (
-            template_name in all_template_names
-        ), 'Template names must be file names like "{}", not "{}".'.format(
-            '", "'.join(all_template_names), template_name
+        assert template_name in all_template_names, (
+            'Template names must be file names like "{}", not "{}".'.format(
+                '", "'.join(all_template_names), template_name
+            )
         )
         template = CALENDARS_TEMPLATE_FOLDER_NAME + "/" + template_name
         return render_app_template(template, specification)

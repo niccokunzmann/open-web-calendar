@@ -19,6 +19,6 @@ def test_request_from_alternate_link(client, calendar_urls):
     html_text = client.get(
         f"/calendar.ics?url={calendar_urls['one-day-event.html']}"
     ).text
-    assert (
-        calendar_text == html_text
-    ), "Whether alternate link or direct, the content should be the same."
+    assert calendar_text == html_text, (
+        "Whether alternate link or direct, the content should be the same."
+    )
