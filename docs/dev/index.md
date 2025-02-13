@@ -86,9 +86,10 @@ tox -e web -- -D window=375x812 # iPhone11 size
 ### Debug Mode
 
 In case the browser tests fail, screenshots are recorded and a link is printed.
+Run this command to start the server in debug mode and visit the links:
 
 ```sh
-
+tox -e dev
 ```
 
 ## Documentation
