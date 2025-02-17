@@ -336,7 +336,7 @@ function downloadJSONSpecification() {
  */
 function downloadJSONAsFile(filename, text) {
     // from https://stackoverflow.com/a/18197341/1320237
-    var element = document.createElement('a');
+    let element = document.createElement('a');
     element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
 
