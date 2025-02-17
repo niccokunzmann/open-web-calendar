@@ -262,6 +262,12 @@ function resetConfig() {
     return true;
 }
 
+// If you add an action XXX here, also add icon_XXX to the calendar translations
+var actions = {
+    "subscribe": function(event) {
+        console.log("Save event.", event);
+    }
+}
 
 /* Disable/Enable features based on touch/mouse-over gestures
  * see https://stackoverflow.com/a/52855084/1320237
@@ -409,6 +415,17 @@ function loadCalendar() {
     //dp.init(scheduler);
 
     setLoader();
+
+    // set the actions we can use when clicking an event.
+    // see https://docs.dhtmlx.com/scheduler/customizing_edit_select_bars.html
+    scheduler.config.icons_select = [];
+    getOwnProperties(actions).forEach(function(action) {
+        scheduler.config.icons_select.push("icon_" + action);
+        scheduler._click.buttons[action] = function(id){
+            const event = scheduler.getEvent(id);
+            actions[action](event);
+         };
+    });
 }
 
 var onCalendarInitialized = onCalendarInitialized || function() {};
