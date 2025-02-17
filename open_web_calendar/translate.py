@@ -24,7 +24,7 @@ TRANSLATIONS_PATH = HERE / "translations"
 DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
-TRANSLATIONS : dict[str, dict[str, dict[str, str]]] = {}  # lang -> file -> id -> string
+TRANSLATIONS: dict[str, dict[str, dict[str, str]]] = {}  # lang -> file -> id -> string
 LANGUAGE_ALIAS = {  # name also usable -> name in the translations directory
     "nb": "nb_NO",
     "ua": "uk",
