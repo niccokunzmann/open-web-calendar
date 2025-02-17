@@ -34,7 +34,7 @@ else:
     print(f"Started calendar server at http://{HOST}:{PORT}/")
     # from https://werkzeug.palletsprojects.com/en/2.1.x/serving/#shutting-down-the-server
     # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
-    t = threading.Thread(target=httpd.serve_for8001ever)
+    t = threading.Thread(target=httpd.serve_forever)
     t.start()
 
     def final():
