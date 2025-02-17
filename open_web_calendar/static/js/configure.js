@@ -71,7 +71,7 @@ function downloadICS(event) {
     const element = document.createElement('a');
     // content type, see https://stackoverflow.com/a/2164313
     element.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(event.ical));
-    const filename = event.start_date_iso + "-" + event.text.replace(/[\/:]/g, "-") + ".ics";
+    const filename = event.start_date_iso + " " + event.text.replace(/[/:\\]/g, "-") + ".ics";
     element.setAttribute('download', filename);
 
     element.style.display = 'none';
