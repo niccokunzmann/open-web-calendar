@@ -62,6 +62,24 @@ function makeLink(url, html) {
     return link.outerHTML;
 }
 
+
+/*
+ * Download the vent ICS with a file name.
+ */
+function downloadICS(event) {
+    // from https://stackoverflow.com/a/18197341/1320237
+    const element = document.createElement('a');
+    // content type, see https://stackoverflow.com/a/2164313
+    element.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(event.ical));
+    const filename = event.start_date_iso + "-" + event.text.replace(/[\/:]/g, "-") + ".ics";
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
+
 /*
  * Check whether a Date is located at the start of a day.
  */
@@ -263,9 +281,11 @@ function resetConfig() {
 }
 
 // If you add an action XXX here, also add icon_XXX to the calendar translations
+// And also an icon to static/img/icons/XXX.svg
 var actions = {
     "subscribe": function(event) {
         console.log("Save event.", event);
+        downloadICS(event);
     }
 }
 
@@ -420,11 +440,27 @@ function loadCalendar() {
     // see https://docs.dhtmlx.com/scheduler/customizing_edit_select_bars.html
     scheduler.config.icons_select = [];
     getOwnProperties(actions).forEach(function(action) {
-        scheduler.config.icons_select.push("icon_" + action);
+        let actionId = "icon_" + action;
+        // Add this to the config.
+        scheduler.config.icons_select.push(actionId);
+        // Add an action.
         scheduler._click.buttons[action] = function(id){
             const event = scheduler.getEvent(id);
             actions[action](event);
          };
+         /* Add a CSS style.
+          * See https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images
+          * See https://css-tricks.com/change-color-of-svg-on-hover/ 
+          * See https://stackoverflow.com/a/707580
+          */
+        const styleSheet = document.createElement("style")
+        styleSheet.textContent = `.dhx_menu_icon.${actionId} {mask: url('/img/icons/${action}.svg');mask-size: 100%;}`;
+        // Add a default text in case none is translated.
+        document.head.appendChild(styleSheet);
+        if (!OWCLocale.labels[actionId]) {
+            OWCLocale.labels[actionId] = action;
+            scheduler.i18n.setLocale(OWCLocale);
+        }
     });
 }
 
