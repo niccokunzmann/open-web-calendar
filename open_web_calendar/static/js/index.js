@@ -285,10 +285,10 @@ function getLoadingAnimationUrl() {
 // see also https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 // An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can remove its sandboxing.
 var TARGET_TO_SANDBOX = {
-  "_blank": 'sandbox="allow-scripts allow-same-origin allow-popups"',
-  "_top": 'sandbox="allow-scripts allow-same-origin allow-top-navigation"',
-  "_parent": 'sandbox="allow-scripts allow-same-origin allow-top-navigation"', // https://stackoverflow.com/a/16929749/1320237
-  "_self": 'sandbox="allow-scripts allow-same-origin"' // https://stackoverflow.com/a/17802841/1320237
+  "_blank": 'sandbox="allow-scripts allow-same-origin allow-popups allow-downloads"',
+  "_top": 'sandbox="allow-scripts allow-same-origin allow-top-navigation allow-downloads"',
+  "_parent": 'sandbox="allow-scripts allow-same-origin allow-top-navigation allow-downloads"', // https://stackoverflow.com/a/16929749/1320237
+  "_self": 'sandbox="allow-scripts allow-same-origin allow-downloads"' // https://stackoverflow.com/a/17802841/1320237
 }
 
 function getCalendarSourceCode(url, specification) {

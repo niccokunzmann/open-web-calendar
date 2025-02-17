@@ -75,6 +75,7 @@ function downloadICS(event) {
     element.setAttribute('download', filename);
 
     element.style.display = 'none';
+    element.target = "_blank";
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
