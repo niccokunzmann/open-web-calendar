@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from icalendar import Event
 
 
-MAXIMUM_EVENTS = 31 * 20  # 10 events per day
+MAXIMUM_EVENTS = 1  # 10 events per day
 
 
 def is_date(date):
@@ -172,7 +172,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         for calendar in calendars:
             events = recurring_ical_events.of(calendar).paginate(
                 MAXIMUM_EVENTS, self.from_date, self.to_date
-            )
+            ).generate_next_page()
             for event in events:
                 json_event = self.convert_ical_event(calendar_index, event)
                 with self.lock:
