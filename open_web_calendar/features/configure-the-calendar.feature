@@ -124,7 +124,7 @@ Feature: The calendar has a configuration page that displays and changes the
          And the checkbox with id "prefer_browser_language_true" is checked
          And "prefer_browser_language" is specified as true
 
-    Scenario: By default we display the calendar in one language
+    Scenario: By default we display the calendar in the language of the viewer
        Given we are on the configuration page
         When we click on the span "The calendar is in the language of the viewer."
          And we click on the span "The calendar is always in this language:"
