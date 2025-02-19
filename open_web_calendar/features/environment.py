@@ -18,6 +18,7 @@ import sys
 import threading
 import time
 from pathlib import Path
+from shutil import rmtree
 from typing import TYPE_CHECKING
 
 import requests
@@ -45,6 +46,8 @@ SCREENSHOTS_FOLDER.mkdir(parents=True, exist_ok=True)
 # timeout in seconds
 WAIT = 10
 
+EXPECTED_DOWNLOADS = HERE / "downloads"
+ACTUAL_DOWNLOADS = HERE / "downloads_by_tests"
 
 def locate_command(command: str):
     """Locate a command on the command line or return ''."""
@@ -64,17 +67,36 @@ def configure_browser(browser: WebDriver):
 def browser_firefox(context):
     # run firefox in headless mode
     # see https://stackoverflow.com/a/47642457/1320237
-    opts = FirefoxOptions()
-    opts.add_argument("--headless")
+    options = FirefoxOptions()
+    options.add_argument("--headless")
+    # Set download directory
+    # see https://stackoverflow.com/a/36309735
+    options.set_preference("browser.download.folderList", 2)
+    options.set_preference("browser.download.dir", str(context.download_directory))
+    options.set_preference("browser.download.useDownloadDir", True)
+    options.set_preference("browser.download.viewableInternally.enabledTypes", "")
+    options.set_preference(
+        "browser.helperApps.neverAsk.saveToDisk",
+        ";".join(  # noqa: FLY002
+            [
+                "application/pdf",
+                "text/plain",
+                "text/calendar",
+                "application/text",
+                "text/xml",
+            ]
+        ))
+    options.set_preference("pdfjs.disabled", True)  # disable the built-in PDF viewer
+
     # specify firefox executible and gecko drivers
     # see https://stackoverflow.com/a/76852633
     # see https://stackoverflow.com/a/71766991/1320237
     # specify the path to your geckodriver
     geckodriver_path = Path("/snap/bin/geckodriver")
     # Set the language for the tests
-    opts.set_preference("intl.accept_languages", "en-US, en")
+    options.set_preference("intl.accept_languages", "en-US, en")
     # construct the arguments
-    kw = {"options": opts}
+    kw = {"options": options}
     if geckodriver_path.exists():
         kw["service"] = FirefoxService(executable_path=geckodriver_path)
     browser = Firefox(**kw)
@@ -110,6 +132,12 @@ def browser_chrome(context):
     options.add_argument(
         "--disable-gpu"
     )  # https://stackoverflow.com/questions/51959986/how-to-solve-selenium-chromedriver-timed-out-receiving-message-from-renderer-exc
+
+    # set the download directory
+    # from https://www.browserstack.com/guide/download-file-using-selenium-python
+    prefs = {"download.default_directory" : str(context.download_directory)}
+    #example: prefs = {"download.default_directory" : "C:\Tutorial\down"};
+    options.add_experimental_option("prefs", prefs)
 
     # executable_path from https://stackoverflow.com/a/76550727/1320237
     path = locate_command("chromium.chromedriver") or locate_command("chromedriver")
@@ -221,15 +249,26 @@ def calendars_server(context):
     t.start()
 
     def final():
-        httpd.server_close()
-        httpd.shutdown()
+        try:
+            httpd.server_close()
+            httpd.shutdown()
+        except PermissionError:
+            pass
 
     wait_for_http_server(context.calendars_url, on_error=final)
     yield
     final()
 
 
+def downloads(context):
+    """Create a download location."""
+    context.expected_download_directory = EXPECTED_DOWNLOADS
+    context.download_directory = ACTUAL_DOWNLOADS
+    rmtree(context.download_directory)
+    context.download_directory.mkdir(parents=True, exist_ok=True)
+
 def before_all(context):
+    use_fixture(downloads, context)
     browser = browsers[context.config.userdata["browser"]]
     use_fixture(browser, context)
     use_fixture(set_window_size, context)
@@ -269,3 +308,8 @@ def after_step(context, step: Step):
         file = SCREENSHOTS_FOLDER / f"{Path(step.filename).stem}@line-{step.line}.png"
         print(f"Test failed, capturing screenshot to {file}")
         element.screenshot(str(file))
+
+def before_step(context, step):
+    """Run before each step."""
+    # from https://stackoverflow.com/a/73913239
+    context.step_name = step.name

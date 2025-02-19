@@ -15,7 +15,7 @@ __pycache__/
 build/
 develop-eggs/
 dist/
-downloads/
+/downloads/
 eggs/
 .eggs/
 lib/
@@ -122,3 +122,5 @@ linkchecker-out.html
 /screenshots
 open_web_calendar/screenshots/
 NGI Core Open Web Calendar Stack penetration test report 2024 1.0.pdf
+
+/open_web_calendar/features/downloads_by_tests

@@ -153,6 +153,7 @@ extend-safe-fixes = [
 "open_web_calendar/features/*" = [
     "F811",   # Redefinition of unused `step_impl` from line 52
     "T201",   # `print` found
+    "FBT003", # bool argument
 ]
 
 "open_web_calendar/static/js/dhtmlx/locale/convert.py" = [

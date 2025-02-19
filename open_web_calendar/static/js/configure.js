@@ -70,7 +70,8 @@ function downloadICS(event) {
     // from https://stackoverflow.com/a/18197341/1320237
     const element = document.createElement('a');
     // content type, see https://stackoverflow.com/a/2164313
-    element.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(event.ical));
+    let ical = "BEGIN:VCALENDAR\n" + event.ical + "END:VCALENDAR";
+    element.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ical));
     const filename = event.start_date_iso + " " + event.text.replace(/[/:\\]/g, "-") + ".ics";
     element.setAttribute('download', filename);
 
