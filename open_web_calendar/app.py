@@ -146,6 +146,9 @@ def set_js_headers(response):
     )
     if "Content-Type" not in response.headers:
         response.headers["Content-Type"] = "text/calendar"
+    filename = request.args.get("filename")
+    if filename:
+        response.headers.add("Content-Disposition", "attachment", filename=filename)
     return response
 
 

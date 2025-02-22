@@ -49,6 +49,7 @@ WAIT = 10
 EXPECTED_DOWNLOADS = HERE / "downloads"
 ACTUAL_DOWNLOADS = HERE / "downloads_by_tests"
 
+
 def locate_command(command: str):
     """Locate a command on the command line or return ''."""
     code, output = subprocess.getstatusoutput(f"which {command}")  # noqa: S605
@@ -85,7 +86,8 @@ def browser_firefox(context):
                 "application/text",
                 "text/xml",
             ]
-        ))
+        ),
+    )
     options.set_preference("pdfjs.disabled", True)  # disable the built-in PDF viewer
 
     # specify firefox executible and gecko drivers
@@ -135,8 +137,8 @@ def browser_chrome(context):
 
     # set the download directory
     # from https://www.browserstack.com/guide/download-file-using-selenium-python
-    prefs = {"download.default_directory" : str(context.download_directory)}
-    #example: prefs = {"download.default_directory" : "C:\Tutorial\down"};
+    prefs = {"download.default_directory": str(context.download_directory)}
+    # example: prefs = {"download.default_directory" : "C:\Tutorial\down"};
     options.add_experimental_option("prefs", prefs)
 
     # executable_path from https://stackoverflow.com/a/76550727/1320237
@@ -267,6 +269,7 @@ def downloads(context):
     rmtree(context.download_directory)
     context.download_directory.mkdir(parents=True, exist_ok=True)
 
+
 def before_all(context):
     use_fixture(downloads, context)
     browser = browsers[context.config.userdata["browser"]]
@@ -308,6 +311,7 @@ def after_step(context, step: Step):
         file = SCREENSHOTS_FOLDER / f"{Path(step.filename).stem}@line-{step.line}.png"
         print(f"Test failed, capturing screenshot to {file}")
         element.screenshot(str(file))
+
 
 def before_step(context, step):
     """Run before each step."""

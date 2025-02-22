@@ -140,6 +140,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "location": None,
             "geo": None,
             "uid": "error",
+            "categories": [],
             "ical": "",
             "sequence": 0,
             "recurrence": None,

@@ -5,15 +5,11 @@
 import contextlib
 import difflib
 import json
-from pathlib import Path
 import re
-import subprocess
 import time
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
-from behave.model import Step
-from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -467,14 +463,17 @@ def assert_tag_with_text_attribute_equals(
 
 CHECK = ".checked"
 
-@then("we download the file \"{file_name}\"")
+
+@then('we download the file "{file_name}"')
 def step_impl(context, file_name: str):
     """Check that we downloaded the file."""
     file_check = context.download_directory / (file_name + CHECK)
     file_expected = context.expected_download_directory / file_name
     file_downloaded = context.download_directory / file_name
     previous_test = file_check.read_text() if file_check.exists() else ""
-    assert not previous_test, f"{file_name} was checked by {previous_test}. Choose another name!"
+    assert not previous_test, (
+        f"{file_name} was checked by {previous_test}. Choose another name!"
+    )
     # get the step name
     # see https://stackoverflow.com/a/73913239
     file_check.write_text(f"{context.feature}-{context.step_name}")
@@ -484,13 +483,16 @@ def step_impl(context, file_name: str):
         if file.endswith(CHECK):
             all_files.remove(file)
             with contextlib.suppress(ValueError):
-                all_files.remove(file[:-len(CHECK)])
+                all_files.remove(file[: -len(CHECK)])
 
-    assert file_downloaded.exists(), f"The file we downloaded should exist!: {file_name}. Instead we have {', '.join(all_files)}"
+    assert file_downloaded.exists(), (
+        f"The file we downloaded should exist!: {file_name}. "
+        f"Instead we have {', '.join(all_files)}"
+    )
     l1 = file_downloaded.read_text().splitlines()
     l2 = file_expected.read_text().splitlines()
-    for line in difflib.unified_diff(l1, l2, fromfile=str(file_downloaded), tofile=str(file_expected)):
+    for line in difflib.unified_diff(
+        l1, l2, fromfile=str(file_downloaded), tofile=str(file_expected)
+    ):
         print(line)
-    assert l1  == l2, (
-        f"The file {file_name} is not the same as the expected file."
-    )
+    assert l1 == l2, f"The file {file_name} is not the same as the expected file."

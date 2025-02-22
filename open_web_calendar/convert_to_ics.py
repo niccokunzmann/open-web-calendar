@@ -53,4 +53,10 @@ class ConvertToICS(ConversionStrategy):
         calendar["X-WR-CALNAME"] = self.title
         calendar["NAME"] = self.title
         calendar["X-PROD-SOURCE"] = self.specification["source_code"]
+        # Replace the event and only allow one event
+        only_event = self.specification.get("set_event")
+        if only_event:
+            for event in calendar.events:
+                calendar.subcomponents.remove(event)
+            calendar.add_component(Event.from_ical(only_event))
         return Response(calendar.to_ical(), mimetype="text/calendar")

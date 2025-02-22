@@ -69,10 +69,13 @@ function makeLink(url, html) {
 function downloadICS(event) {
     // from https://stackoverflow.com/a/18197341/1320237
     const element = document.createElement('a');
-    // content type, see https://stackoverflow.com/a/2164313
-    let ical = "BEGIN:VCALENDAR\n" + event.ical + "END:VCALENDAR";
-    element.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ical));
-    const filename = event.start_date_iso + " " + event.text.replace(/[/:\\]/g, "-") + ".ics";
+    const convert = scheduler.date.date_to_str("%Y-%m-%d %H%i", false);
+    const filename = convert(event.start_date).replace(" 0000", "") +
+    " " + event.text.replace(/[/:\\]/g, "-") + ".ics";
+    let url = document.location.href.replace("/calendar.html", "/calendar.ics") + 
+        "&filename=" + encodeURIComponent(filename) + 
+        "&set_event=" + encodeURIComponent(event.ical);
+    element.setAttribute('href', url);
     element.setAttribute('download', filename);
 
     element.style.display = 'none';
