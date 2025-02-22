@@ -266,7 +266,7 @@ def downloads(context):
     """Create a download location."""
     context.expected_download_directory = EXPECTED_DOWNLOADS
     context.download_directory = ACTUAL_DOWNLOADS
-    rmtree(context.download_directory)
+    rmtree(context.download_directory, ignore_errors=True)
     context.download_directory.mkdir(parents=True, exist_ok=True)
 
 
