@@ -477,7 +477,7 @@ def step_impl(context, file_name: str):
     # get the step name
     # see https://stackoverflow.com/a/73913239
     file_check.write_text(f"{context.feature}-{context.step_name}")
-    assert file_expected.exists(), "The file we expect should exist!: {file_expected}"
+    assert file_expected.exists(), f"The file we expect should exist!: {file_expected}"
     all_files = list(map(str, context.download_directory.iterdir()))
     for file in all_files[:]:
         if file.endswith(CHECK):

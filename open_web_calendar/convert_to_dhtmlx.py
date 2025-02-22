@@ -7,11 +7,10 @@ import datetime
 from html import escape
 from typing import TYPE_CHECKING, Optional
 
-
 try:
     import zoneinfo
 except ImportError:
-    import backports.zoneinfo as zoneinfo
+    from backports import zoneinfo
 import recurring_ical_events
 from dateutil.parser import parse as parse_date
 from flask import jsonify
