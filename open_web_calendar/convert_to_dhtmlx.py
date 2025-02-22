@@ -7,11 +7,8 @@ import datetime
 from html import escape
 from typing import TYPE_CHECKING, Optional
 
-try:
-    import zoneinfo
-except ImportError:
-    from backports import zoneinfo
 import recurring_ical_events
+import zoneinfo
 from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
