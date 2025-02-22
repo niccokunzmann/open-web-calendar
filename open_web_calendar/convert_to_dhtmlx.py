@@ -7,7 +7,11 @@ import datetime
 from html import escape
 from typing import TYPE_CHECKING, Optional
 
-import pytz
+
+try:
+    import zoneinfo
+except ImportError:
+    import backports.zoneinfo as zoneinfo
 import recurring_ical_events
 from dateutil.parser import parse as parse_date
 from flask import jsonify
@@ -35,21 +39,23 @@ class ConvertToDhtmlx(ConversionStrategy):
     def created(self):
         """Set attribtues when created."""
         try:
-            self.timezone = pytz.timezone(self.specification["timezone"])
-        except pytz.UnknownTimeZoneError:
-            self.timezone = pytz.FixedOffset(-int(self.specification["timeshift"]))
+            self.timezone = zoneinfo.ZoneInfo(self.specification["timezone"])
+        except zoneinfo.ZoneInfoNotFoundError:
+            # same as pytz.FixedOffset(-int(self.specification["timeshift"]))
+            td = datetime.timedelta(minutes=-self.specification["timeshift"])
+            self.timezone = datetime.timezone(td)
         self.today = today = (
-            parse_date(self.specification["date"])
+            parse_date(self.specification["date"]).replace(tzinfo=self.timezone)
             if self.specification.get("date")
             else datetime.datetime.now(self.timezone)
         )
         self.to_date = (
-            parse_date(self.specification["to"])
+            parse_date(self.specification["to"]).replace(tzinfo=self.timezone)
             if self.specification.get("to")
             else today.replace(year=today.year + 1)
         )
         self.from_date = (
-            parse_date(self.specification["from"])
+            parse_date(self.specification["from"]).replace(tzinfo=self.timezone)
             if self.specification.get("from")
             else today.replace(year=today.year - 1)
         )
