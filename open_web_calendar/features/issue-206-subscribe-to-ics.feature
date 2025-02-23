@@ -24,3 +24,18 @@ Feature: I would like to be able to subscribe to an event, a series of events or
         And we click on the event "London Event"
        When we click on the div "Add to My Calendar"
        Then we download the file "2025-02-20 1200 London Event.ics"
+
+    # Scenario Outline: When I click on an event with recurrences, then I would like to have the recurrence id included.
+    #   Given we add the calendar "issue-206-include-timezones"
+    #     And we set the "tab" parameter to "day"
+    #     And we set the "timezone" parameter to "Europe/London"
+    #    When we look at <day>
+    #     And we click on the event "Recurring Berlin Event"
+    #    When we click on the div "Add to My Calendar"
+    #    Then we download the file "<day> <time> Recurring Berlin Event.ics"
+
+    #   Examples:
+    #     | day        | time |
+    #     | 2025-02-21 | 0700 |
+    #     | 2025-02-22 | 0700 |
+    #     | 2025-02-23 | 1445 |
