@@ -20,6 +20,9 @@ from open_web_calendar.app import cache_url, get_text_from_url
 class MockRequestResult(NamedTuple):
     content: str
 
+    def raise_for_status(self):
+        pass
+
 
 def test_requests_are_automatically_cached(monkeypatch, mock):
     mock.return_value = MockRequestResult("trallala")

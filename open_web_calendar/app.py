@@ -172,9 +172,11 @@ def get_text_from_url(url):
     """
     if __URL_CACHE:
         return __URL_CACHE[url]
-    return requests.get(
+    response = requests.get(
         url, headers=DEFAULT_REQUEST_HEADERS, timeout=REQUESTS_TIMEOUT
-    ).content
+    )
+    response.raise_for_status()
+    return response.content
 
 
 # @functools.cache
