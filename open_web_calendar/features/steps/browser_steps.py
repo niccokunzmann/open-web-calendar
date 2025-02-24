@@ -3,13 +3,13 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 import contextlib
+import difflib
 import json
 import re
 import time
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
-from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -42,12 +42,7 @@ def get_url(context, url):
     print(
         f"Visiting {re.sub('^http://localhost:[0-9]+/', 'http://localhost:5000/', url)}"
     )
-    for _i in range(20):
-        try:
-            return context.browser.get(url)
-        except TimeoutException:  # noqa: PERF203
-            pass
-    raise  # noqa: PLE0704, RUF100
+    return context.browser.get(url)
 
 
 @given('we add the calendar "{calendar_name}"')
@@ -465,3 +460,39 @@ def assert_tag_with_text_attribute_equals(
 
 
 ## Other
+
+CHECK = ".checked"
+
+
+@then('we download the file "{file_name}"')
+def step_impl(context, file_name: str):
+    """Check that we downloaded the file."""
+    file_check = context.download_directory / (file_name + CHECK)
+    file_expected = context.expected_download_directory / file_name
+    file_downloaded = context.download_directory / file_name
+    previous_test = file_check.read_text() if file_check.exists() else ""
+    assert not previous_test, (
+        f"{file_name} was checked by {previous_test}. Choose another name!"
+    )
+    # get the step name
+    # see https://stackoverflow.com/a/73913239
+    file_check.write_text(f"{context.feature}-{context.step_name}")
+    assert file_expected.exists(), f"The file we expect should exist!: {file_expected}"
+    all_files = list(map(str, context.download_directory.iterdir()))
+    for file in all_files[:]:
+        if file.endswith(CHECK):
+            all_files.remove(file)
+            with contextlib.suppress(ValueError):
+                all_files.remove(file[: -len(CHECK)])
+
+    assert file_downloaded.exists(), (
+        f"The file we downloaded should exist!: {file_name}. "
+        f"Instead we have {', '.join(all_files)}"
+    )
+    l1 = file_downloaded.read_text().splitlines()
+    l2 = file_expected.read_text().splitlines()
+    for line in difflib.unified_diff(
+        l1, l2, fromfile=str(file_downloaded), tofile=str(file_expected)
+    ):
+        print(line)
+    assert l1 == l2, f"The file {file_name} is not the same as the expected file."

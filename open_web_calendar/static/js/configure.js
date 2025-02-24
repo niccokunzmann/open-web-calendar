@@ -62,6 +62,29 @@ function makeLink(url, html) {
     return link.outerHTML;
 }
 
+
+/*
+ * Download the vent ICS with a file name.
+ */
+function downloadICS(event) {
+    // from https://stackoverflow.com/a/18197341/1320237
+    const element = document.createElement('a');
+    const convert = scheduler.date.date_to_str("%Y-%m-%d %H%i", false);
+    const filename = convert(event.start_date).replace(" 0000", "") +
+    " " + event.text.replace(/[/:\\]/g, "-") + ".ics";
+    let url = document.location.href.replace("/calendar.html", "/calendar.ics") + 
+        "&filename=" + encodeURIComponent(filename) + 
+        "&set_event=" + encodeURIComponent(event.ical);
+    element.setAttribute('href', url);
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    element.target = "_blank";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
+
 /*
  * Check whether a Date is located at the start of a day.
  */
@@ -262,6 +285,14 @@ function resetConfig() {
     return true;
 }
 
+// If you add an action XXX here, also add icon_XXX to the calendar translations
+// And also an icon to static/img/icons/XXX.svg
+var actions = {
+    "subscribe": function(event) {
+        console.log("Save event.", event);
+        downloadICS(event);
+    }
+}
 
 /* Disable/Enable features based on touch/mouse-over gestures
  * see https://stackoverflow.com/a/52855084/1320237
@@ -409,6 +440,33 @@ function loadCalendar() {
     //dp.init(scheduler);
 
     setLoader();
+
+    // set the actions we can use when clicking an event.
+    // see https://docs.dhtmlx.com/scheduler/customizing_edit_select_bars.html
+    scheduler.config.icons_select = [];
+    getOwnProperties(actions).forEach(function(action) {
+        let actionId = "icon_" + action;
+        // Add this to the config.
+        scheduler.config.icons_select.push(actionId);
+        // Add an action.
+        scheduler._click.buttons[action] = function(id){
+            const event = scheduler.getEvent(id);
+            actions[action](event);
+         };
+         /* Add a CSS style.
+          * See https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images
+          * See https://css-tricks.com/change-color-of-svg-on-hover/ 
+          * See https://stackoverflow.com/a/707580
+          */
+        const styleSheet = document.createElement("style")
+        styleSheet.textContent = `.dhx_menu_icon.${actionId} {mask: url('/img/icons/${action}.svg');mask-size: 100%;}`;
+        // Add a default text in case none is translated.
+        document.head.appendChild(styleSheet);
+        if (!OWCLocale.labels[actionId]) {
+            OWCLocale.labels[actionId] = action;
+            scheduler.i18n.setLocale(OWCLocale);
+        }
+    });
 }
 
 var onCalendarInitialized = onCalendarInitialized || function() {};

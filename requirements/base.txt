@@ -72,8 +72,6 @@ python-dateutil==2.9.0.post0
     # via
     #   icalendar
     #   recurring-ical-events
-pytz==2025.1
-    # via -r requirements/base.in
 pyyaml==6.0.2
     # via -r requirements/base.in
 recurring-ical-events==3.5.2

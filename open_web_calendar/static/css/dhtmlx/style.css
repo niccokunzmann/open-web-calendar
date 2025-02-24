@@ -93,7 +93,7 @@
 
 .dhx_cal_qi_controls {
   /* hide the delete and details button */
-  display: none
+  /*display: none*/
 }
 
 div.dhx_agenda_line > span {
@@ -125,4 +125,15 @@ div.dhx_agenda_line > span {
 
 .dhx_event_resize.dhx_footer {
     display: none;
+}
+
+.dhx_menu_icon {
+    /* see https://www.w3schools.com/cssref/css3_pr_background-size.php */
+    /* background-image: url('/img/icons/event-subscribe.svg');  
+    background-repeat: no-repeat;
+    background-size: 100%; */
+    /* see https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images */
+    /*mask: url('/img/icons/subscribe.svg');*/
+    /* see https://css-tricks.com/change-color-of-svg-on-hover/ */
+    background-color: var(--dhx-scheduler-base-colors-icons);
 }

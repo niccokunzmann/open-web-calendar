@@ -24,7 +24,7 @@ TRANSLATIONS_PATH = HERE / "translations"
 DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
-TRANSLATIONS = {}  # lang -> file -> id -> string
+TRANSLATIONS: dict[str, dict[str, dict[str, str]]] = {}  # lang -> file -> id -> string
 LANGUAGE_ALIAS = {  # name also usable -> name in the translations directory
     "nb": "nb_NO",
     "ua": "uk",
@@ -239,8 +239,12 @@ def dhtmlx(language: str):
             ],
         },
     }
-    for label in CALENDAR_LABELS:
-        result["labels"][label] = cal("labels_" + label)
+    for icon_label in CALENDAR_LABELS:
+        result["labels"][icon_label] = cal("labels_" + icon_label)
+    # dynamically load icon labels
+    for icon_label in TRANSLATIONS[DEFAULT_LANGUAGE][CALENDAR_FILE]:
+        if icon_label.startswith("icon_"):
+            result["labels"][icon_label] = cal(icon_label)
     return result
 
 

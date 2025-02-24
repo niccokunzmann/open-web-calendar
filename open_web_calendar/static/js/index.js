@@ -284,11 +284,12 @@ function getLoadingAnimationUrl() {
 
 // see also https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 // An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can remove its sandboxing.
+// allow downloads of ICS files: https://stackoverflow.com/a/64382081
 var TARGET_TO_SANDBOX = {
-  "_blank": 'sandbox="allow-scripts allow-same-origin allow-popups"',
-  "_top": 'sandbox="allow-scripts allow-same-origin allow-top-navigation"',
-  "_parent": 'sandbox="allow-scripts allow-same-origin allow-top-navigation"', // https://stackoverflow.com/a/16929749/1320237
-  "_self": 'sandbox="allow-scripts allow-same-origin"' // https://stackoverflow.com/a/17802841/1320237
+  "_blank": 'sandbox="allow-scripts allow-same-origin allow-popups allow-downloads"',
+  "_top": 'sandbox="allow-scripts allow-same-origin allow-top-navigation allow-downloads"',
+  "_parent": 'sandbox="allow-scripts allow-same-origin allow-top-navigation allow-downloads"', // https://stackoverflow.com/a/16929749/1320237
+  "_self": 'sandbox="allow-scripts allow-same-origin allow-downloads"' // https://stackoverflow.com/a/17802841/1320237
 }
 
 function getCalendarSourceCode(url, specification) {
@@ -336,7 +337,7 @@ function downloadJSONSpecification() {
  */
 function downloadJSONAsFile(filename, text) {
     // from https://stackoverflow.com/a/18197341/1320237
-    var element = document.createElement('a');
+    let element = document.createElement('a');
     element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
 

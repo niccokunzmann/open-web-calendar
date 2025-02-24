@@ -7,8 +7,8 @@ import datetime
 from html import escape
 from typing import TYPE_CHECKING, Optional
 
-import pytz
 import recurring_ical_events
+import zoneinfo
 from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
@@ -35,21 +35,23 @@ class ConvertToDhtmlx(ConversionStrategy):
     def created(self):
         """Set attribtues when created."""
         try:
-            self.timezone = pytz.timezone(self.specification["timezone"])
-        except pytz.UnknownTimeZoneError:
-            self.timezone = pytz.FixedOffset(-int(self.specification["timeshift"]))
+            self.timezone = zoneinfo.ZoneInfo(self.specification["timezone"])
+        except (zoneinfo.ZoneInfoNotFoundError, ValueError):
+            # same as pytz.FixedOffset(-int(self.specification["timeshift"]))
+            td = datetime.timedelta(minutes=-int(self.specification["timeshift"]))
+            self.timezone = datetime.timezone(td)
         self.today = today = (
-            parse_date(self.specification["date"])
+            parse_date(self.specification["date"]).replace(tzinfo=self.timezone)
             if self.specification.get("date")
             else datetime.datetime.now(self.timezone)
         )
         self.to_date = (
-            parse_date(self.specification["to"])
+            parse_date(self.specification["to"]).replace(tzinfo=self.timezone)
             if self.specification.get("to")
             else today.replace(year=today.year + 1)
         )
         self.from_date = (
-            parse_date(self.specification["from"])
+            parse_date(self.specification["from"]).replace(tzinfo=self.timezone)
             if self.specification.get("from")
             else today.replace(year=today.year - 1)
         )
@@ -65,7 +67,7 @@ class ConvertToDhtmlx(ConversionStrategy):
                 date.year, date.month, date.day, tzinfo=self.timezone
             )
         elif date.tzinfo is None:
-            date = self.timezone.localize(date)
+            date = date.replace(tzinfo=self.timezone)
         # convert to other timezone, see https://stackoverflow.com/a/54376154
         viewed_date = date.astimezone(self.timezone)
         return viewed_date.strftime("%Y-%m-%d %H:%M")
@@ -140,6 +142,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             "location": None,
             "geo": None,
             "uid": "error",
+            "categories": [],
             "ical": "",
             "sequence": 0,
             "recurrence": None,
