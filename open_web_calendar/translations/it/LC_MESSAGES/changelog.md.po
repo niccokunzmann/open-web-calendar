@@ -774,6 +774,17 @@ msgstr ""
 msgid "Speed up the Docker build"
 msgstr ""
 
+msgid "v1.47"
+msgstr ""
+
+msgid ""
+"Add option to download events in ICS format, see [Issue "
+"206](https://github.com/niccokunzmann/open-web-calendar/issues/206)"
+msgstr ""
+
+msgid "Remove `pytz` as dependency, replace it by `zoneinfo`"
+msgstr ""
+
 #~ msgid "Add Tamil translation by தமிழ்நேரம்"
 #~ msgstr ""
 
