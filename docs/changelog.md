@@ -16,6 +16,12 @@ The latest version might not be released, yet.
 <!-- Contributors, if you like to be linked, please put your name down here with a link. -->
 [தமிழ்நேரம்]: https://tamilneram.github.io/
 
+## v1.47
+
+- Add option to download events in ICS format, see [Issue 206](https://github.com/niccokunzmann/open-web-calendar/issues/206)
+- Remove `pytz` as dependency, replace it by `zoneinfo`
+- Update dependencies
+
 ## v1.46
 
 - Fix escaping [JavaScript](https://github.com/niccokunzmann/open-web-calendar/issues/631) and [CSS](https://github.com/niccokunzmann/open-web-calendar/issues/396)
