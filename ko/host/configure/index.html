@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_0xz0dm3a/ko/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_gxojnkdj/ko/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_0xz0dm3a/ko/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_gxojnkdj/ko/host/configure/index.png" >
       
     
     
@@ -1064,7 +1064,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#further-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Further Configuration
@@ -1072,8 +1077,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#ssrf-protection-with-a-proxy-server" class="md-nav__link">
     <span class="md-ellipsis">
       SSRF Protection with a Proxy Server
@@ -1081,9 +1086,13 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Squid as a Proxy Server
+    </span>
+  </a>
   
 </li>
       
@@ -1199,13 +1208,20 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="퍼머넌트 링크">&para;</a></h3>
 <p>default <code>true</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
 <p>Set the debug flag for the app.</p>
-<h3 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="퍼머넌트 링크">&para;</a></h3>
+<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="퍼머넌트 링크">&para;</a></h2>
 <p>The Open Web Calendar uses libraries whose behavior can be further customized.</p>
 <ul>
 <li><strong>Flask</strong> has <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more environment variables</a></strong> available to configure how the application serves content.</li>
 <li><strong>Requests</strong> is used the get the <code>.ics</code> files. You can <a href="#ssrf-protection-with-a-proxy-server">configure a proxy</a>.</li>
 </ul>
-<h3 id="ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server<a class="headerlink" href="#ssrf-protection-with-a-proxy-server" title="퍼머넌트 링크">&para;</a></h3>
+<p>The Open Web Calendar relies on proxy servers for these features:</p>
+<ul>
+<li><strong>Access Control and Users</strong> To restrict who can use the Open Web Calendar, you can use <code>nginx</code> or <code>apache</code> as a reverse proxy in front of it. YuNoHost is another self-hosting option to restrict access.</li>
+<li><strong>HTTPS Encryption</strong> This can be done by <code>nginx</code>, <code>apache</code> or <code>caddy</code>.</li>
+<li><strong>More Advanced Caching</strong> Basic caching is handeled by the Open Web Calendar. For more advanced cache configuration, use a proxy server like <code>squid</code>. Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.</li>
+<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+</ul>
+<h2 id="ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server<a class="headerlink" href="#ssrf-protection-with-a-proxy-server" title="퍼머넌트 링크">&para;</a></h2>
 <p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calender, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
@@ -1215,6 +1231,58 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF using a Tor proxy</a></li>
 </ul>
+<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="퍼머넌트 링크">&para;</a></h2>
+<p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
+<div class="admonition note">
+<p class="admonition-title">Operating System</p>
+<p>Squid is avaiable for all major platforms.
+For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
+The commands might work on other systems, but that is not tested.</p>
+</div>
+<p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
+<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
+<span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
+<span class="c1">## should be allowed</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">0</span>.0.0.1-0.255.255.255<span class="w">  </span><span class="c1"># RFC 1122 &quot;this&quot; network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">10</span>.0.0.0/8<span class="w">             </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">100</span>.64.0.0/10<span class="w">          </span><span class="c1"># RFC 6598 shared address space (CGN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">169</span>.254.0.0/16<span class="w">         </span><span class="c1"># RFC 3927 link-local (directly plugged) machines</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">172</span>.16.0.0/12<span class="w">          </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">192</span>.168.0.0/16<span class="w">         </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span>fc00::/7<span class="w">               </span><span class="c1"># RFC 4193 local private network range</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span>fe80::/10<span class="w">              </span><span class="c1"># RFC 4291 link-local (directly plugged) machines</span>
+
+<span class="c1">## If the Open Web Calendar runs on another machine, not localhost (127.0.0.1),</span>
+<span class="c1">## fill in the network or IP of that machine here and allow access from it.</span>
+acl<span class="w"> </span>owc_host<span class="w"> </span>src<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w">           </span><span class="c1"># Allow Access to Squid from localhost (default)</span>
+<span class="c1"># acl owc_host src 172.16.0.0/12     # Uncomment if you run the Open Web Calendar as a docker service</span>
+
+<span class="c1">## Access from owc_host is allowed to all but forbidden networks</span>
+http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span class="w"> </span>!owc_forbidden
+
+<span class="c1">## Use IPv4 for DNS</span>
+<span class="c1">## See https://superuser.com/a/1443889</span>
+dns_v4_first<span class="w"> </span>on
+</code></pre></div>
+<p>The list above denies the Open Web Calendar access to all known local/internal networks. If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.</p>
+<p>On Linux, you can install the file with this command:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>/etc/squid/conf.d/open-web-calendar.conf<span class="w"> </span>https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
+</code></pre></div>
+<p>Then, restart the squid proxy.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>squid<span class="w"> </span>reload
+</code></pre></div>
+<p>Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on <code>localhost</code>. Setting this variable changes depending on how you run the Open Web Calendar.</p>
+<p>If you use the <a href="../pypi">Python Setup</a>, you can set the environment variables for the server like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
+gunicorn<span class="w"> </span>open_web_calendar:app
+</code></pre></div>
+<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<blockquote>
+<p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
+</blockquote>
 
 
 

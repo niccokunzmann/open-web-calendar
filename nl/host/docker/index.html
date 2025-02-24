@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_0xz0dm3a/nl/host/docker/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_gxojnkdj/nl/host/docker/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_0xz0dm3a/nl/host/docker/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_gxojnkdj/nl/host/docker/index.png" >
       
     
     
@@ -968,9 +968,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#preventing-ssrf-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing SSRF Attacks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preventing SSRF Attacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#preventing-ssrf-attacks-using-a-tor-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       Preventing SSRF attacks using a Tor proxy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preventing-ssrf-attacks-using-a-squid-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing SSRF attacks using a Squid Proxy
     </span>
   </a>
   
@@ -1075,6 +1099,11 @@
 <a href="https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47">log rotation</a>
 as it is very talkative.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">IPv6</p>
+<p>By default, docker only uses IPv4.
+You can <a href="https://docs.docker.com/engine/daemon/ipv6/">enable IPv6</a>.</p>
+</div>
 <h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="Permanent link">&para;</a></h2>
 <p>If you want to update your image with the latest version from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> run this:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull
@@ -1082,8 +1111,11 @@ as it is very talkative.</p>
 <p>Note: You need to restart the container after pulling in order for the update to apply:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
-<h2 id="preventing-ssrf-attacks-using-a-tor-proxy">Preventing SSRF attacks using a Tor proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-tor-proxy" title="Permanent link">&para;</a></h2>
-<p>The Open Web Calendar can be configured to use a proxy to request <code>.ics</code> and other files. The following example shows the usage of a Tor proxy. You can try it out at <a href="https://tor.open-web-calendar.hosted.quelltext.eu/">tor.open-web-calendar.hosted.quelltext.eu</a>.</p>
+<h2 id="preventing-ssrf-attacks">Preventing SSRF Attacks<a class="headerlink" href="#preventing-ssrf-attacks" title="Permanent link">&para;</a></h2>
+<p>The Open Web Calendar by default allows unrestricted access to the local network and Internet. Adding a proxy to filter the requests is important, especially if you host other services which should be not accessed by external requests. Such an attack is called <a href="https://en.wikipedia.org/wiki/Server-side_request_forgery">Server Side Request Forgery</a>.</p>
+<p>The Open Web Calendar can be configured to use a <strong>proxy</strong> to request <code>.ics</code> and other files. Filtering traffic is a complicated task and out of scope for this project. Proxies do that well better!</p>
+<h3 id="preventing-ssrf-attacks-using-a-tor-proxy">Preventing SSRF attacks using a Tor proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-tor-proxy" title="Permanent link">&para;</a></h3>
+<p>The following example shows the usage of a Tor proxy. You can try it out at <a href="https://tor.open-web-calendar.hosted.quelltext.eu/">tor.open-web-calendar.hosted.quelltext.eu</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">tor-open-web-calendar</span><span class="p">:</span>
@@ -1122,6 +1154,60 @@ as it is very talkative.</p>
 <ul>
 <li><a href="../configure#ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server</a></li>
 </ul>
+<h2 id="preventing-ssrf-attacks-using-a-squid-proxy">Preventing SSRF attacks using a Squid Proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-squid-proxy" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://www.squid-cache.org/">Squid</a> proxy is a flexible and highly configurable proxy server. The Open Web Calendar can be configured to use it to request <code>.ics</code> and other files.</p>
+<p>Use this as your <code>docker-compose.yml</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">open-web-calendar</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">niccokunzmann/open-web-calendar</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP_PROXY=http://squid-container:3128</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTPS_PROXY=http://squid-container:3128</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ALL_PROXY=http://squid-container:3128</span>
+
+<span class="w">  </span><span class="c1"># see https://hub.docker.com/r/ubuntu/squid</span>
+<span class="w">  </span><span class="nt">squid-container</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu/squid</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TZ=UTC</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./open-web-calendar.conf:/etc/squid/conf.d/00-open-web-calendar.conf</span>
+</code></pre></div>
+<p>And add the following <code>open-web-calendar.conf</code> file into the same directory.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
+<span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
+<span class="c1">## should be allowed</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">0</span>.0.0.1-0.255.255.255<span class="w">  </span><span class="c1"># RFC 1122 &quot;this&quot; network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">10</span>.0.0.0/8<span class="w">             </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">100</span>.64.0.0/10<span class="w">          </span><span class="c1"># RFC 6598 shared address space (CGN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">169</span>.254.0.0/16<span class="w">         </span><span class="c1"># RFC 3927 link-local (directly plugged) machines</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">172</span>.16.0.0/12<span class="w">          </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">192</span>.168.0.0/16<span class="w">         </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span>fc00::/7<span class="w">               </span><span class="c1"># RFC 4193 local private network range</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span>fe80::/10<span class="w">              </span><span class="c1"># RFC 4291 link-local (directly plugged) machines</span>
+
+<span class="c1">## If the Open Web Calendar runs on another machine, not localhost (127.0.0.1),</span>
+<span class="c1">## fill in the network or IP of that machine here and allow access from it.</span>
+<span class="c1"># acl owc_host src 127.0.0.1           # Allow Access to Squid from localhost (default)</span>
+acl<span class="w"> </span>owc_host<span class="w"> </span>src<span class="w"> </span><span class="m">172</span>.16.0.0/12<span class="w">     </span><span class="c1"># Uncomment if you run the Open Web Calendar as a docker service</span>
+
+<span class="c1">## Access from owc_host is allowed to all but forbidden networks</span>
+http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span class="w"> </span>!owc_forbidden
+http_access<span class="w"> </span>deny<span class="w"> </span>all
+
+<span class="c1">## Use IPv4 for DNS</span>
+<span class="c1">## See https://superuser.com/a/1443889</span>
+dns_v4_first<span class="w"> </span>on
+</code></pre></div>
+<p>Then, you can start the service with this command:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<blockquote>
+<p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
+</blockquote>
 <h2 id="automatic-updates">Automatic Updates<a class="headerlink" href="#automatic-updates" title="Permanent link">&para;</a></h2>
 <p>If you have not fixed your version but you use the <code>latest</code> or <code>master</code> tag, you can automatically update all the services required.</p>
 <p>Create an <code>update.sh</code> file next to your <code>docker-compose.yml</code> file and add this content:</p>
