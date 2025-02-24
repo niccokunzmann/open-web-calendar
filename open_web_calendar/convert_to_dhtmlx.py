@@ -36,9 +36,9 @@ class ConvertToDhtmlx(ConversionStrategy):
         """Set attribtues when created."""
         try:
             self.timezone = zoneinfo.ZoneInfo(self.specification["timezone"])
-        except zoneinfo.ZoneInfoNotFoundError:
+        except (zoneinfo.ZoneInfoNotFoundError, ValueError):
             # same as pytz.FixedOffset(-int(self.specification["timeshift"]))
-            td = datetime.timedelta(minutes=-self.specification["timeshift"])
+            td = datetime.timedelta(minutes=-int(self.specification["timeshift"]))
             self.timezone = datetime.timezone(td)
         self.today = today = (
             parse_date(self.specification["date"]).replace(tzinfo=self.timezone)
@@ -67,7 +67,7 @@ class ConvertToDhtmlx(ConversionStrategy):
                 date.year, date.month, date.day, tzinfo=self.timezone
             )
         elif date.tzinfo is None:
-            date = self.timezone.localize(date)
+            date = date.replace(tzinfo=self.timezone)
         # convert to other timezone, see https://stackoverflow.com/a/54376154
         viewed_date = date.astimezone(self.timezone)
         return viewed_date.strftime("%Y-%m-%d %H:%M")

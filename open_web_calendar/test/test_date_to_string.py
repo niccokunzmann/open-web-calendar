@@ -5,12 +5,13 @@
 import datetime
 
 import pytest
-from pytz import timezone, utc
+from zoneinfo import ZoneInfo
 
 from open_web_calendar.app import ConvertToDhtmlx
 
-berlin = timezone("Europe/Berlin")
-eastern = timezone("US/Eastern")
+berlin = ZoneInfo("Europe/Berlin")
+eastern = ZoneInfo("US/Eastern")
+utc = ZoneInfo("UTC")
 
 UTC = "UTC"
 BERLIN = "Europe/Berlin"
@@ -29,25 +30,25 @@ EASTERN = "US/Eastern"
         (datetime.datetime(2019, 4, 20, 10, 10), BERLIN, "2019-04-20 10:10"),
         (datetime.datetime(2019, 12, 1, 0, 13, 23), EASTERN, "2019-12-01 00:13"),
         # test datetime object with time zone
-        (berlin.localize(datetime.datetime(2019, 6, 2, 20)), UTC, "2019-06-02 18:00"),
+        (datetime.datetime(2019, 6, 2, 20, tzinfo=berlin), UTC, "2019-06-02 18:00"),
         (
-            berlin.localize(datetime.datetime(2019, 4, 20, 10, 10)),
+            datetime.datetime(2019, 4, 20, 10, 10, tzinfo=berlin),
             BERLIN,
             "2019-04-20 10:10",
         ),
         (
-            berlin.localize(datetime.datetime(2019, 12, 1, 0, 13, 23)),
+            datetime.datetime(2019, 12, 1, 0, 13, 23, tzinfo=berlin),
             EASTERN,
             "2019-11-30 18:13",
         ),
-        (utc.localize(datetime.datetime(2019, 6, 2, 20)), UTC, "2019-06-02 20:00"),
+        (datetime.datetime(2019, 6, 2, 20, tzinfo=utc), UTC, "2019-06-02 20:00"),
         (
-            utc.localize(datetime.datetime(2019, 4, 20, 10, 10)),
+            datetime.datetime(2019, 4, 20, 10, 10, tzinfo=utc),
             BERLIN,
             "2019-04-20 12:10",
         ),
         (
-            utc.localize(datetime.datetime(2019, 12, 1, 0, 13, 23)),
+            datetime.datetime(2019, 12, 1, 0, 13, 23, tzinfo=utc),
             EASTERN,
             "2019-11-30 19:13",
         ),

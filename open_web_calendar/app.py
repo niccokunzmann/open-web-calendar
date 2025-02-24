@@ -13,8 +13,8 @@ import tempfile
 import traceback
 from pathlib import Path
 from typing import Any, Optional
+import zoneinfo
 
-import pytz
 import requests
 import yaml
 from flask import (
@@ -59,6 +59,8 @@ DEFAULT_REQUEST_HEADERS = {
 
 # specification
 PARAM_SPECIFICATION_URL = "specification_url"
+TIMEZONES = list(zoneinfo.available_timezones())
+TIMEZONES.sort()
 
 # globals
 app = Flask(__name__, template_folder="templates")
@@ -131,7 +133,7 @@ def get_configuration():
         "default_specification": get_default_specification(),
         "version": version.version,
         "version-list": version.version_tuple,
-        "timezones": pytz.all_timezones,  # see https://stackoverflow.com/a/13867319
+        "timezones": TIMEZONES,
         "dhtmlx": {"languages": translate.dhtmlx_languages()},
         "index": {"languages": translate.languages_for_the_index_file()},
     }
