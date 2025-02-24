@@ -18,7 +18,7 @@ from open_web_calendar.app import main
 HERE = Path(__file__).parent.absolute()
 CALENDAR_FOLDER = HERE.parent / "features" / "calendars"
 PORT = 8001
-HOST = "localhost"
+HOST = "0.0.0.0"
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):

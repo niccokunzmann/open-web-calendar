@@ -1,0 +1,32 @@
+version: '3'
+services:
+  tor-open-web-calendar:
+    image: niccokunzmann/open-web-calendar:master
+    restart: unless-stopped
+    environment:
+    # use socks5h for *.onion
+    # see https://stackoverflow.com/a/42972942/1320237
+      - HTTP_PROXY=socks5h://tor-socks-proxy:9150
+      - HTTPS_PROXY=socks5h://tor-socks-proxy:9150
+      - ALL_PROXY=socks5h://tor-socks-proxy:9150
+      - ALLOWED_HOSTS=
+    # optional: create a private network so OWC cannot access the Internet directly
+    networks:
+      - no-internet-only-tor
+
+  # from https://hub.docker.com/r/peterdavehello/tor-socks-proxy/
+  tor-socks-proxy:
+    image: peterdavehello/tor-socks-proxy # use :test for arm64
+    restart: unless-stopped
+    # optional: allow access to OWC and the Internet
+    networks:
+      - default
+      - no-internet-only-tor
+
+networks:
+  default:
+    ipam:
+      driver: default
+  no-internet-only-tor: # see https://stackoverflow.com/a/51964169/1320237
+    driver: bridge
+    internal: true
