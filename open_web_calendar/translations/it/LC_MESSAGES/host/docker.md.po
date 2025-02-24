@@ -92,13 +92,6 @@ msgid "Preventing SSRF attacks using a Tor proxy"
 msgstr ""
 
 msgid ""
-"The Open Web Calendar can be configured to use a proxy to request `.ics` and"
-" other files. The following example shows the usage of a Tor proxy. You can "
-"try it out at [tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-"
-"web-calendar.hosted.quelltext.eu/)."
-msgstr ""
-
-msgid ""
 "The configuration above prevents access to the internal network as the "
 "requests are sent over the Tor network. A bonus feature is that calendars "
 "can be accessed and hosted as a Tor Hidden Service using an `.onion` "
@@ -158,6 +151,55 @@ msgid ""
 "important-how-to-rotate-docker-logs-840520e4c47) as it is very talkative."
 msgstr ""
 
+msgid "Preventing SSRF Attacks"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar by default allows unrestricted access to the local "
+"network and Internet. Adding a proxy to filter the requests is important, "
+"especially if you host other services which should be not accessed by "
+"external requests. Such an attack is called [Server Side Request "
+"Forgery](https://en.wikipedia.org/wiki/Server-side_request_forgery)."
+msgstr ""
+
+msgid ""
+"The Open Web Calendar can be configured to use a **proxy** to request `.ics`"
+" and other files. Filtering traffic is a complicated task and out of scope "
+"for this project. Proxies do that well better!"
+msgstr ""
+
+msgid ""
+"The following example shows the usage of a Tor proxy. You can try it out at "
+"[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-"
+"calendar.hosted.quelltext.eu/)."
+msgstr ""
+
+msgid "Preventing SSRF attacks using a Squid Proxy"
+msgstr ""
+
+msgid ""
+"The [Squid] proxy is a flexible and highly configurable proxy server. The "
+"Open Web Calendar can be configured to use it to request `.ics` and other "
+"files."
+msgstr ""
+
+msgid "Use this as your `docker-compose.yml` file:"
+msgstr ""
+
+msgid ""
+"And add the following `open-web-calendar.conf` file into the same directory."
+msgstr ""
+
+msgid "Then, you can start the service with this command:"
+msgstr ""
+
+#~ msgid ""
+#~ "The Open Web Calendar can be configured to use a proxy to request `.ics` and"
+#~ " other files. The following example shows the usage of a Tor proxy. You can "
+#~ "try it out at [tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-"
+#~ "web-calendar.hosted.quelltext.eu/)."
+#~ msgstr ""
+
 #~ msgid ""
 #~ "**Important Note:** If you use this service, consider setting up [log "
 #~ "rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-"
@@ -171,4 +213,12 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "docker compose up -d "
+#~ msgstr ""
+
+#~ msgid "IPv6"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, docker only uses IPv4. You can [enable "
+#~ "IPv6](https://docs.docker.com/engine/daemon/ipv6/)."
 #~ msgstr ""
