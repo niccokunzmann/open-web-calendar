@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8pqqc360/uk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_2f6d7x4v/uk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8pqqc360/uk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_2f6d7x4v/uk/host/configure/index.png" >
       
     
     
@@ -1088,9 +1088,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+  <a href="#squid-" class="md-nav__link">
     <span class="md-ellipsis">
-      Squid as a Proxy Server
+      Squid як проксі-сервер
     </span>
   </a>
   
@@ -1212,12 +1212,12 @@
 <li><strong>Flask</strong> має <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">більше змінних середовища</a></strong>, щоб налаштувати, як програма обслуговує вміст.</li>
 <li><strong>Запити</strong> використовуються для отримання файлів <code>.ics</code>. Ви можете <a href="#ssrf-protection-with-a-proxy-server">налаштувати проксі</a>.</li>
 </ul>
-<p>The Open Web Calendar relies on proxy servers for these features:</p>
+<p>Відкритий веб-календар покладається на проксі-сервери для таких функцій:</p>
 <ul>
-<li><strong>Access Control and Users</strong> To restrict who can use the Open Web Calendar, you can use <code>nginx</code> or <code>apache</code> as a reverse proxy in front of it. YuNoHost is another self-hosting option to restrict access.</li>
-<li><strong>HTTPS Encryption</strong> This can be done by <code>nginx</code>, <code>apache</code> or <code>caddy</code>.</li>
-<li><strong>More Advanced Caching</strong> Basic caching is handeled by the Open Web Calendar. For more advanced cache configuration, use a proxy server like <code>squid</code>. Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.</li>
-<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+<li><strong>Контроль доступу та користувачі</strong> Щоб обмежити, хто може використовувати відкритий веб-календар, ви можете використовувати <code>nginx</code> або <code>apache</code> як зворотний проксі перед ним. YuNoHost — ще один варіант самостійного розміщення для обмеження доступу.</li>
+<li><strong>Шифрування HTTPS</strong> Це можна зробити за допомогою <code>nginx</code>, <code>apache</code> або <code>caddy</code>.</li>
+<li><strong>Більш розширене кешування</strong> Базове кешування обробляється Open Web Calendar. Для більш розширеної конфігурації кешу використовуйте проксі-сервер, наприклад <code>squid</code>. Перегляньте наведену нижче документацію про те, як зробити відкритий веб-календар доступом до Інтернету лише через проксі.</li>
+<li><strong>Обмеження доступу до календарів</strong> За замовчуванням відкритий веб-календар не обмежує, які календарі показувати. Використовуйте проксі-сервер для фільтрації календарів. Якщо ви запускаєте Open Web Calendar за брандмауером разом з іншими веб-службами, для захисту від атак SSRF необхідно налаштувати проксі-сервер.</li>
 </ul>
 <h2 id="ssrf-">Захист SSRF за допомогою проксі-сервера<a class="headerlink" href="#ssrf-" title="Постійне посилання">&para;</a></h2>
 <p>Відкритий веб-календар можна використовувати для доступу до локальної мережі за брандмауером, див. <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Випуск 250</a>. Цей безкоштовний доступ призначений для показу календарів звідусіль. Оскільки <code>запити</code> використовуються Open Web Calender, він може використовувати проксі, як описано в <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies">документації щодо <code>запитів</code></a>. Після цього проксі-сервер зможе виконати фільтрацію.</p>
@@ -1229,16 +1229,16 @@
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Запобігання SSRF за допомогою проксі-сервера Tor</a></li>
 </ul>
-<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="Постійне посилання">&para;</a></h2>
-<p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
+<h2 id="squid-">Squid як проксі-сервер<a class="headerlink" href="#squid-" title="Постійне посилання">&para;</a></h2>
+<p>Проксі та кеш <a href="https://www.squid-cache.org/">Squid</a> є гнучкими та налаштовуються. Ви можете використовувати його перед відкритим веб-календарем, щоб налаштувати доступ і налаштувати кешування.</p>
 <div class="admonition note">
 <p class="admonition-title">Operating System</p>
 <p>Squid is avaiable for all major platforms.
 For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
 The commands might work on other systems, but that is not tested.</p>
 </div>
-<p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
-<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<p>Після встановлення проксі-сервера <a href="https://www.squid-cache.org/">Squid</a> додайте цей файл до каталогу <code>conf.d</code>. Тоді Squid автоматично завантажить його.</p>
+<p>У Linux створіть <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
 <span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
 <span class="c1">## should be allowed</span>
@@ -1263,23 +1263,23 @@ http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span cl
 <span class="c1">## See https://superuser.com/a/1443889</span>
 dns_v4_first<span class="w"> </span>on
 </code></pre></div>
-<p>The list above denies the Open Web Calendar access to all known local/internal networks. If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.</p>
-<p>On Linux, you can install the file with this command:</p>
+<p>Наведений вище список забороняє Open Web Calendar доступ до всіх відомих локальних/внутрішніх мереж. Якщо у вас є власна локальна мережа (IPv4 або IPv6), додайте її до списку вище, щоб переконатися.</p>
+<p>У Linux ви можете встановити файл за допомогою цієї команди:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>/etc/squid/conf.d/open-web-calendar.conf<span class="w"> </span>https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
 </code></pre></div>
-<p>Then, restart the squid proxy.</p>
+<p>Потім перезапустіть проксі squid.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>squid<span class="w"> </span>reload
 </code></pre></div>
-<p>Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on <code>localhost</code>. Setting this variable changes depending on how you run the Open Web Calendar.</p>
-<p>If you use the <a href="../pypi">Python Setup</a>, you can set the environment variables for the server like this:</p>
+<p>Встановіть змінні середовища, щоб вказати Open Web Calendar використовувати проксі-сервер Squid, встановлений на <code>localhost</code>. Налаштування цієї змінної змінюється залежно від того, як ви запускаєте Open Web Calendar.</p>
+<p>Якщо ви використовуєте <a href="../pypi">Python Setup</a>, ви можете встановити змінні середовища для сервера таким чином:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<p>Коли ви намагаєтеся отримати доступ до забороненого календаря за допомогою локального <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, ви побачите таке повідомлення про помилку:</p>
 <blockquote>
-<p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
+<p>403 Помилка клієнта: заборонено для url: http://172.16.0.1/calendar.ics</p>
 </blockquote>
 
 
