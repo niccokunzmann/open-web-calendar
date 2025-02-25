@@ -354,6 +354,15 @@ msgstr ""
 msgid "[1]: ../pypi"
 msgstr "[1]: ../pypi"
 
+msgid "Operating System"
+msgstr ""
+
+msgid ""
+"Squid is avaiable for all major platforms. For the commands and paths of "
+"this tutorial, we assume you run Squid on Debain/Ubuntu. The commands might "
+"work on other systems, but that is not tested."
+msgstr ""
+
 #~ msgid "You might want to change these values:"
 #~ msgstr "Je wil misschien deze waarden aanpassen:"
 
@@ -436,13 +445,4 @@ msgstr "[1]: ../pypi"
 #~ msgstr ""
 
 #~ msgid "Configure"
-#~ msgstr ""
-
-#~ msgid "Operating System"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Squid is avaiable for all major platforms. For the commands and paths of "
-#~ "this tutorial, we assume you run Squid on Debain/Ubuntu. The commands might "
-#~ "work on other systems, but that is not tested."
 #~ msgstr ""

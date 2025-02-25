@@ -396,6 +396,15 @@ msgstr ""
 msgid "[1]: ../pypi"
 msgstr "[1]: ../pypi"
 
+msgid "Operating System"
+msgstr ""
+
+msgid ""
+"Squid is avaiable for all major platforms. For the commands and paths of "
+"this tutorial, we assume you run Squid on Debain/Ubuntu. The commands might "
+"work on other systems, but that is not tested."
+msgstr ""
+
 #~ msgid ""
 #~ "This functionality is provided by [flask-allowed-"
 #~ "hosts](https://pypi.org/project/flask-allowed-hosts/)."
@@ -564,12 +573,3 @@ msgstr "[1]: ../pypi"
 
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
-
-#~ msgid "Operating System"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Squid is avaiable for all major platforms. For the commands and paths of "
-#~ "this tutorial, we assume you run Squid on Debain/Ubuntu. The commands might "
-#~ "work on other systems, but that is not tested."
-#~ msgstr ""

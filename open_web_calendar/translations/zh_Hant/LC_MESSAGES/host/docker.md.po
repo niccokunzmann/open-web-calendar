@@ -193,6 +193,14 @@ msgstr ""
 msgid "Then, you can start the service with this command:"
 msgstr ""
 
+msgid "IPv6"
+msgstr ""
+
+msgid ""
+"By default, docker only uses IPv4. You can [enable "
+"IPv6](https://docs.docker.com/engine/daemon/ipv6/)."
+msgstr ""
+
 #~ msgid ""
 #~ "The Open Web Calendar can be configured to use a proxy to request `.ics` and"
 #~ " other files. The following example shows the usage of a Tor proxy. You can "
@@ -204,12 +212,4 @@ msgstr ""
 #~ "**Important Note:** If you use this service, consider setting up [log "
 #~ "rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-"
 #~ "important-how-to-rotate-docker-logs-840520e4c47) as it is very talkative."
-#~ msgstr ""
-
-#~ msgid "IPv6"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "By default, docker only uses IPv4. You can [enable "
-#~ "IPv6](https://docs.docker.com/engine/daemon/ipv6/)."
 #~ msgstr ""
