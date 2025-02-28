@@ -785,16 +785,21 @@ msgstr ""
 msgid "Remove `pytz` as dependency, replace it by `zoneinfo`"
 msgstr ""
 
-msgid ""
-"Update Ukrainian translation by Максим Горпиніч, Hungarian by Vág Csaba, "
-"Finnish by Ricky Tigg,"
-msgstr ""
-
 msgid "Describe how to use the Squid proxy to protect from SSRF attacks."
 msgstr ""
 
 msgid "Create `tox -e dev` to run the Open Web Calendar in development mode."
 msgstr ""
+
+msgid ""
+"Update Ukrainian translation by Максим Горпиніч, Hungarian by Vág Csaba, "
+"Finnish by Ricky Tigg, German by Nicco Kunzmann"
+msgstr ""
+
+#~ msgid ""
+#~ "Update Ukrainian translation by Максим Горпиніч, Hungarian by Vág Csaba, "
+#~ "Finnish by Ricky Tigg,"
+#~ msgstr ""
 
 #~ msgid "Add Tamil translation by தமிழ்நேரம்"
 #~ msgstr ""
