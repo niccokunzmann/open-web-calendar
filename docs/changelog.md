@@ -21,7 +21,7 @@ The latest version might not be released, yet.
 - Add option to download events in ICS format, see [Issue 206](https://github.com/niccokunzmann/open-web-calendar/issues/206)
 - Remove `pytz` as dependency, replace it by `zoneinfo`
 - Update dependencies
-- Update Ukrainian translation by Максим Горпиніч, Hungarian by Vág Csaba, Finnish by Ricky Tigg, 
+- Update Ukrainian translation by Максим Горпиніч, Hungarian by Vág Csaba, Finnish by Ricky Tigg, German by Nicco Kunzmann
 - Describe how to use the Squid proxy to protect from SSRF attacks.
 - Create `tox -e dev` to run the Open Web Calendar in development mode.
 
