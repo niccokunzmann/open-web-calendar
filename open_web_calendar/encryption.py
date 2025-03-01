@@ -3,10 +3,11 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 """Encryption for endpoints and data."""
+
 from __future__ import annotations
 
 import json
-from typing import Any
+from typing import Any, Optional
 
 from cryptography.fernet import Fernet, MultiFernet
 
@@ -18,18 +19,23 @@ class InvalidKey(ValueError):
 class DecryptedData:
     """Data that has been decrypted."""
 
-    def __init__(self, data:dict):
+    def __init__(self, data: dict):
         """The data that is decrypted."""
         self._data = data
 
     def __getitem__(self, name: str) -> Any:
         return self._data[name]
 
+    @property
+    def url(self) -> Optional[str]:
+        return self._data.get("url")
+
+
 class FernetStore:
     """Allow encrypting and decrypting values."""
 
-    def __init__(self, keys:list[str]):
-        """Create a new """
+    def __init__(self, keys: list[str]):
+        """Create a new"""
         self._keys = keys[:]
         fernets = []
         for i, key in enumerate(keys):
@@ -52,7 +58,7 @@ class FernetStore:
         string = json.dumps(data)
         return self._fernet.encrypt(string.encode("UTF-8")).decode("UTF-8")
 
-    def decrypt(self, data:str) -> DecryptedData:
+    def decrypt(self, data: str) -> DecryptedData:
         """Decrypt the data."""
         string = self._fernet.decrypt(data.encode("UTF-8")).decode("UTF-8")
         data = json.loads(string)

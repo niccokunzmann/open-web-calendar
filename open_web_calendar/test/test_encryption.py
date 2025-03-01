@@ -3,19 +3,21 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 """Test encrypting and decrypting values."""
+
 import pytest
-from open_web_calendar.encryption import FernetStore, InvalidKey
+
+from open_web_calendar.encryption import DecryptedData, FernetStore, InvalidKey
 
 
 @pytest.mark.parametrize(
-    "data", 
+    "data",
     [
         {},
         {"test": 1, "url": "https://asd.asd"},
         {"nose": 1, "url": "https://asd.asd/2"},
-    ]
+    ],
 )
-def test_we_can_encrypt_json(data, store):
+def test_we_can_encrypt_json(data, store: FernetStore):
     """Test that we can encrypt and decrypt values."""
     encrypted = store.encrypt(data)
     assert isinstance(encrypted, str)
@@ -34,12 +36,13 @@ def test_generate_key():
 
 
 @pytest.mark.parametrize(
-    "keys", [
+    "keys",
+    [
         [],
         ["invalid key"],
         [FernetStore.generate_key(), "invalid key"],
         [FernetStore.generate_key() + "asd", "invalid key"],
-    ]
+    ],
 )
 def test_invalid_key(keys):
     """Test invalid keys."""
@@ -57,3 +60,15 @@ def test_encrypt_with_one_key_and_decrypt_with_more():
     decrypted = store.decrypt(encrypted)
     for key, value in data.items():
         assert decrypted[key] == value
+
+
+def test_url_attribute():
+    """Test the URL attribute."""
+    d = DecryptedData({"url": "https://asd.asd"})
+    assert d.url == "https://asd.asd"
+
+
+def test_url_attribute_absent():
+    """Test the URL attribute."""
+    d = DecryptedData({"urla": "https://asd.asd"})
+    assert d.url is None
