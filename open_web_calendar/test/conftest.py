@@ -24,6 +24,7 @@ CALENDAR_DIRECTORY = HERE / ".." / "features" / "calendars"
 sys.path.append(HERE.absolute() / ".." / "..")
 sys.path.append(HERE.absolute())
 from open_web_calendar.app import DEFAULT_SPECIFICATION, cache_url  # noqa: E402
+from open_web_calendar.encryption import FernetStore  # noqa: E402
 
 DEFAULT_SPECIFICATION["url"] = []
 
@@ -138,3 +139,9 @@ def merged(
         return icalendar.Calendar.from_ical(response.data)
 
     return _merged_calendars
+
+
+@pytest.fixture
+def store():
+    """A test crypt store for the open web calendar."""
+    return FernetStore(["n77iebivnjNTLDpmFcu6DuNFTHUnlEjCskx8oe0Xh8k="])
