@@ -72,3 +72,11 @@ def test_url_attribute_absent():
     """Test the URL attribute."""
     d = DecryptedData({"urla": "https://asd.asd"})
     assert d.url is None
+
+
+def test_encrypted_values_start_with_fernet(store: FernetStore):
+    """The data should be clearly distinguishable."""
+    data = {"test": 1, "url": "https://asd.asd"}
+    encrypted = store.encrypt(data)
+    assert encrypted.startswith("fernet://")
+    assert store.is_encrypted(encrypted)

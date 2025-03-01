@@ -12,6 +12,8 @@ from typing import Any, Optional
 from cryptography.fernet import Fernet, MultiFernet
 
 
+PREFIX = "fernet://"
+
 class InvalidKey(ValueError):
     """This key cannot be used for encryption."""
 
@@ -56,13 +58,20 @@ class FernetStore:
     def encrypt(self, data: dict) -> str:
         """Encrypt the data."""
         string = json.dumps(data)
-        return self._fernet.encrypt(string.encode("UTF-8")).decode("UTF-8")
+        return PREFIX + self._fernet.encrypt(string.encode("UTF-8")).decode("UTF-8")
 
     def decrypt(self, data: str) -> DecryptedData:
         """Decrypt the data."""
-        string = self._fernet.decrypt(data.encode("UTF-8")).decode("UTF-8")
+        if not self.is_encrypted(data):
+            raise ValueError("Data is not encrypted.")
+        string = self._fernet.decrypt(data[len(PREFIX):].encode("UTF-8")).decode("UTF-8")
         data = json.loads(string)
         return DecryptedData(data)
+
+    @staticmethod
+    def is_encrypted(data: str) -> bool:
+        """Wether this data is encrypted."""
+        return data.startswith(PREFIX)
 
     @staticmethod
     def generate_key() -> str:
