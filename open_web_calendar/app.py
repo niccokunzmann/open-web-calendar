@@ -32,6 +32,7 @@ from flask_caching import Cache
 from . import translate, version
 from .convert_to_dhtmlx import ConvertToDhtmlx
 from .convert_to_ics import ConvertToICS
+from .encryption import EmptyFernetStore, FernetStore
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -105,6 +106,10 @@ def cache_url(url, text):
         del __URL_CACHE[url]
 
 
+def encryption() -> FernetStore|EmptyFernetStore:
+    return FernetStore.from_environment()
+
+
 @app.after_request
 def add_header(r):
     """
@@ -129,6 +134,7 @@ def add_header(r):
 
 def get_configuration():
     """Return the configuration for the browser."""
+    store = encryption()
     return {
         "default_specification": get_default_specification(),
         "version": version.version,
@@ -136,6 +142,7 @@ def get_configuration():
         "timezones": TIMEZONES,
         "dhtmlx": {"languages": translate.dhtmlx_languages()},
         "index": {"languages": translate.languages_for_the_index_file()},
+        "encryption": store.can_encrypt(),
     }
 
 
@@ -383,6 +390,11 @@ def unhandled_exception(error):
         500,
     )  # return error code from https://stackoverflow.com/a/7824605
 
+
+@app.post("/encrypt")
+def encrypt():
+    store = FernetStore.from_environment()
+    return jsonify({"token": store.encrypt(request.json)})
 
 # make serializable for multiprocessing
 # app.__reduce__ = lambda: __name__ + ".app"

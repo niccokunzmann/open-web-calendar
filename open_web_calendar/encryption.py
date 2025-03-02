@@ -2,15 +2,18 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
-"""Encryption for endpoints and data."""
+"""Encryption for endpoints and data.
+
+See https://cryptography.io/en/latest/fernet/
+"""
 
 from __future__ import annotations
 
 import json
+import os
 from typing import Any, Optional
 
 from cryptography.fernet import Fernet, MultiFernet
-
 
 PREFIX = "fernet://"
 
@@ -33,11 +36,38 @@ class DecryptedData:
         return self._data.get("url")
 
 
+class EmptyFernetStore:
+
+    @staticmethod
+    def encrypt(*args, **kw) -> str:  # noqa: ARG004
+        raise InvalidKey("Cannot encrypt, no key provided.")
+
+    @staticmethod
+    def decrypt(*args, **kw) -> str:  # noqa: ARG004
+        raise InvalidKey("Cannot encrypt, no key provided.")
+
+    @staticmethod
+    def can_encrypt() -> bool:
+        return False
+
 class FernetStore:
     """Allow encrypting and decrypting values."""
 
+    @staticmethod
+    def can_encrypt() -> bool:
+        return True
+
+    @classmethod
+    def from_environment(cls) -> FernetStore|EmptyFernetStore:
+        """Create a new Fernet store from environment variables.
+
+        We load the keys from the OWC_ENCRYPTION_KEYS environment variable.
+        """
+        keys = os.environ.get("OWC_ENCRYPTION_KEYS", "").split(",")
+        return EmptyFernetStore() if keys == [""] else cls(keys)
+
     def __init__(self, keys: list[str]):
-        """Create a new"""
+        """Create a new Fernet store to encrypt and decrypt values."""
         self._keys = keys[:]
         fernets = []
         for i, key in enumerate(keys):
@@ -64,7 +94,8 @@ class FernetStore:
         """Decrypt the data."""
         if not self.is_encrypted(data):
             raise ValueError("Data is not encrypted.")
-        string = self._fernet.decrypt(data[len(PREFIX):].encode("UTF-8")).decode("UTF-8")
+        token = data[len(PREFIX):].encode("UTF-8")
+        string = self._fernet.decrypt(token).decode("UTF-8")
         data = json.loads(string)
         return DecryptedData(data)
 

@@ -8,12 +8,14 @@ import sys
 import traceback
 from concurrent.futures import ThreadPoolExecutor
 from threading import RLock
-from typing import Any
+from typing import Any, Optional
 from urllib.parse import urljoin
 
 import requests
 from icalendar import Calendar
 from lxml import etree
+
+from open_web_calendar.encryption import EmptyFernetStore, FernetStore
 
 
 def get_text_from_url(url):
@@ -28,9 +30,12 @@ class ConversionStrategy:
     MAXIMUM_THREADS = 100
 
     def __init__(
-        self, specification: dict[str, Any], get_text_from_url=get_text_from_url
+        self, specification: dict[str, Any],
+        get_text_from_url=get_text_from_url,
+        encryption: Optional[EmptyFernetStore|FernetStore] = None,
     ):
         self.specification = specification
+        self.encryption = EmptyFernetStore() if encryption is None else encryption
         self.lock = RLock()
         self.components = []
         self.get_text_from_url = get_text_from_url
@@ -59,6 +64,10 @@ class ConversionStrategy:
 
     def get_calendars_from_url(self, url: str):
         """Return a lis of calendars from a URL."""
+        if self.encryption.is_encrypted(url):
+            url = self.encryption.decrypt(url).url
+            if url is None:
+                return []
         if url.startswith("webcal://"):
             url = url.replace("webcal://", "http://", 1)
         calendar_text = self.get_text_from_url(url)

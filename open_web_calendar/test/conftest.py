@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable, Optional
+from typing import TYPE_CHECKING, Callable, Generator, Optional
 from unittest.mock import Mock
 
 import icalendar
@@ -51,13 +51,13 @@ def mock():
 
 
 @pytest.fixture
-def app() -> Flask:
+def app(store, monkeypatch) -> Flask:
     """Create the app.
 
     See https://flask.palletsprojects.com/en/2.2.x/testing/
     """
-    from open_web_calendar.app import app
-
+    from open_web_calendar import app
+    monkeypatch.setattr(FernetStore, "from_environment", lambda: store)
     app.config.update(
         {
             "TESTING": True,
@@ -67,8 +67,6 @@ def app() -> Flask:
     # other setup can go here
 
     return app
-
-    # clean up / reset resources here
 
 
 @pytest.fixture
