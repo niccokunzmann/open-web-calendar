@@ -9,6 +9,7 @@ import datetime
 import io
 import json
 import os
+import sys
 import tempfile
 import traceback
 from pathlib import Path
@@ -269,6 +270,9 @@ def render_app_template(template, specification):
         html=lambda tid, **template_replacements: translate.html(
             language, translation_file, tid, **template_replacements
         ),
+        string=lambda tid, **template_replacements: translate.string(
+            language, translation_file, tid, **template_replacements
+        ),
         language=language,
     )
 
@@ -393,8 +397,12 @@ def unhandled_exception(error):
 
 @app.post("/encrypt")
 def encrypt():
-    store = FernetStore.from_environment()
-    return jsonify({"token": store.encrypt(request.json)})
+    try:
+        store = FernetStore.from_environment()
+        return jsonify({"token": store.encrypt(request.json)})
+    except:
+        _, err, _ = sys.exc_info()
+        return jsonify({"error": str(err), "traceback": traceback.format_exc()}), 500
 
 
 # make serializable for multiprocessing

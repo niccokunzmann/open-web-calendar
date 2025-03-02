@@ -10,6 +10,25 @@ const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/o
 const USER_PREFERRED_LANGUAGE = navigator.language.split("-")[0]; // credits to https://stackoverflow.com/a/3335420/1320237
 const RAW_GITHUB_STATIC_URL = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static"; // content served by the open web calendar and statically on github
 
+/* Encrypt a JSON value and return the response.
+    {'token':'encrypt://...'}
+*/
+async function encryptJson(json) {
+    // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    const url = "/encrypt";
+    const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(json),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}: ${response.text()}`);
+    }
+    return await response.json();
+}
+
 
 function updateUrls() {
     updateCalendarInputs();
@@ -17,18 +36,18 @@ function updateUrls() {
 }
 
 function updateCalendarInputs() {
-    var urlInputs = document.getElementsByClassName("calendar-url-input");
-    var calendarUrls = document.getElementById("calendar-urls");
-    var hasEmptyInput = false;
-    var calendar_index;
+    const urlInputs = document.getElementsByClassName("calendar-url-input");
+    const calendarUrls = document.getElementById("calendar-urls");
+    let hasEmptyInput = false;
+    let calendar_index;
     for (calendar_index = 0; calendar_index < urlInputs.length; calendar_index+= 1) {
-        var urlInput = urlInputs[calendar_index];
+        const urlInput = urlInputs[calendar_index];
         hasEmptyInput |= urlInput.value == "";
     }
     if (!hasEmptyInput) {
-        var li = document.createElement("li");
+        const li = document.createElement("li");
         /* input for urls */
-        var input = document.createElement("input");
+        const input = document.createElement("input");
         input.type = "text";
         input.classList.add("calendar-url-input");
         input.addEventListener("change", updateUrls);
@@ -39,15 +58,35 @@ function updateCalendarInputs() {
         <input type="color" value="#fefefe"
                placeholder="black" class="color-input"
                cssTemplate=".dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: {color}; }">*/
-        var color = document.createElement("input");
+        const color = document.createElement("input");
         color.type = "color";
         color.classList.add("color-input");
         color.value = "#fefefe";
-        var cssTemplate = ".CALENDAR-INDEX-" + calendar_index + ", .CALENDAR-INDEX-" + calendar_index + " .dhx_body, .CALENDAR-INDEX-" + calendar_index + " .dhx_title  { background-color: {color}; } \n";
+        const cssTemplate = ".CALENDAR-INDEX-" + calendar_index + ", .CALENDAR-INDEX-" + calendar_index + " .dhx_body, .CALENDAR-INDEX-" + calendar_index + " .dhx_title  { background-color: {color}; } \n";
         color.setAttribute("cssTemplate", cssTemplate);
         color.addEventListener("change", updateUrls);
         color.addEventListener("keyup", updateUrls);
         li.appendChild(color);
+        /* Encrypt and decrypt urls */
+        const encryptButton = document.createElement("button");
+        encryptButton.innerText = translations["button-encrypt"];
+        encryptButton.classList.add("encrypt-button");
+        encryptButton.addEventListener("click", function() {
+            const url = input.value;
+            if (!url.startsWith("fernet://")) {
+                /* not encrypted */
+                encryptJson({
+                    "url": url
+                }).then(function(response) {
+                    input.value = response["token"];
+                    updateUrls();
+                    encryptButton.innerText = translations["button-encrypted"];
+                });
+            } else {
+                encryptButton.innerText = translations["button-encrypted"];
+            }
+        });
+        li.appendChild(encryptButton);
         calendarUrls.appendChild(li);
     }
 }

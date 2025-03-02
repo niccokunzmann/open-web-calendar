@@ -44,12 +44,16 @@ class EmptyFernetStore:
 
     @staticmethod
     def decrypt(*args, **kw) -> str:  # noqa: ARG004
-        raise InvalidKey("Cannot encrypt, no key provided.")
+        raise InvalidKey("Cannot decrypt, no key provided.")
 
     @staticmethod
     def can_encrypt() -> bool:
         return False
 
+    @staticmethod
+    def is_encrypted(data: str) -> bool:
+        """Wether this data is encrypted."""
+        return data.startswith(PREFIX)
 
 class FernetStore:
     """Allow encrypting and decrypting values."""
@@ -111,4 +115,4 @@ class FernetStore:
         return Fernet.generate_key().decode("utf-8")
 
 
-__all__ = ["DecryptedData", "FernetStore", "InvalidKey"]
+__all__ = ["DecryptedData", "EmptyFernetStore", "FernetStore", "InvalidKey"]

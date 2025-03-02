@@ -36,7 +36,7 @@ class ConversionStrategy:
         encryption: Optional[EmptyFernetStore | FernetStore] = None,
     ):
         self.specification = specification
-        self.encryption = EmptyFernetStore() if encryption is None else encryption
+        self.encryption = FernetStore.from_environment() if encryption is None else encryption
         self.lock = RLock()
         self.components = []
         self.get_text_from_url = get_text_from_url

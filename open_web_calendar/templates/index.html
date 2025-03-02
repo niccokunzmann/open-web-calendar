@@ -14,8 +14,7 @@ SPDX-License-Identifier: GPL-2.0-only
             const specification = {{ specification | tojson | safe }};
             const language = {{ language | tojson | safe }};
         </script>
-        <link href="css/index.css"
-            rel="stylesheet" type="text/css" charset="utf-8">
+        <link href="css/index.css" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
         <script src="js/index.js"></script>
         <script src="js/common.js"></script>
@@ -23,6 +22,13 @@ SPDX-License-Identifier: GPL-2.0-only
         {%- for name, code, percent in configuration["index"]["languages"]: %}
             <link rel="alternate" hreflang="{{code}}" href="/index.html?language={{code}}" />
         {%- endfor %}
+        <script type="text/javascript">
+            /* Translation for dynamic elements. */
+            const translations = {
+                "button-encrypt": {{ string("button-encrypt") | tojson }},
+                "button-encrypted": {{ string("button-encrypted") | tojson }},
+            };
+        </script>
     </head>
     <body>
         <header>

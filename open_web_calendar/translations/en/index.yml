@@ -11,6 +11,10 @@ about: 'The Open Web Calendar uses ICS/ICal calendars online and displays them i
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-urls
 calendar-urls: 'To merge several calendars, please input the URLs of the ICS calendars
   here:'
+# Button to encrypt the calendar content.
+button-encrypt: 'Encrypt URL'
+button-encrypted: '✅ Encrypted'
+
 # This describes the calendar code to embed.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code
 calendar-code: "To embed the calendar, use this code on your website:"
