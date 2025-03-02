@@ -30,9 +30,10 @@ class ConversionStrategy:
     MAXIMUM_THREADS = 100
 
     def __init__(
-        self, specification: dict[str, Any],
+        self,
+        specification: dict[str, Any],
         get_text_from_url=get_text_from_url,
-        encryption: Optional[EmptyFernetStore|FernetStore] = None,
+        encryption: Optional[EmptyFernetStore | FernetStore] = None,
     ):
         self.specification = specification
         self.encryption = EmptyFernetStore() if encryption is None else encryption

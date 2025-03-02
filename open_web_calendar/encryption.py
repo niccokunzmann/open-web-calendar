@@ -17,6 +17,7 @@ from cryptography.fernet import Fernet, MultiFernet
 
 PREFIX = "fernet://"
 
+
 class InvalidKey(ValueError):
     """This key cannot be used for encryption."""
 
@@ -37,7 +38,6 @@ class DecryptedData:
 
 
 class EmptyFernetStore:
-
     @staticmethod
     def encrypt(*args, **kw) -> str:  # noqa: ARG004
         raise InvalidKey("Cannot encrypt, no key provided.")
@@ -50,6 +50,7 @@ class EmptyFernetStore:
     def can_encrypt() -> bool:
         return False
 
+
 class FernetStore:
     """Allow encrypting and decrypting values."""
 
@@ -58,7 +59,7 @@ class FernetStore:
         return True
 
     @classmethod
-    def from_environment(cls) -> FernetStore|EmptyFernetStore:
+    def from_environment(cls) -> FernetStore | EmptyFernetStore:
         """Create a new Fernet store from environment variables.
 
         We load the keys from the OWC_ENCRYPTION_KEYS environment variable.
@@ -94,7 +95,7 @@ class FernetStore:
         """Decrypt the data."""
         if not self.is_encrypted(data):
             raise ValueError("Data is not encrypted.")
-        token = data[len(PREFIX):].encode("UTF-8")
+        token = data[len(PREFIX) :].encode("UTF-8")
         string = self._fernet.decrypt(token).decode("UTF-8")
         data = json.loads(string)
         return DecryptedData(data)

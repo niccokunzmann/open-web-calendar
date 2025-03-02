@@ -106,7 +106,7 @@ def cache_url(url, text):
         del __URL_CACHE[url]
 
 
-def encryption() -> FernetStore|EmptyFernetStore:
+def encryption() -> FernetStore | EmptyFernetStore:
     return FernetStore.from_environment()
 
 
@@ -395,6 +395,7 @@ def unhandled_exception(error):
 def encrypt():
     store = FernetStore.from_environment()
     return jsonify({"token": store.encrypt(request.json)})
+
 
 # make serializable for multiprocessing
 # app.__reduce__ = lambda: __name__ + ".app"

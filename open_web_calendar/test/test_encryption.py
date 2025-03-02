@@ -5,12 +5,18 @@
 """Test encrypting and decrypting values."""
 
 import os
+
 import pytest
 from flask.testing import FlaskClient
 
 from open_web_calendar.app import get_configuration
 from open_web_calendar.conversion_base import ConversionStrategy
-from open_web_calendar.encryption import DecryptedData, EmptyFernetStore, FernetStore, InvalidKey
+from open_web_calendar.encryption import (
+    DecryptedData,
+    EmptyFernetStore,
+    FernetStore,
+    InvalidKey,
+)
 
 
 @pytest.mark.parametrize(
@@ -87,7 +93,7 @@ def test_encrypted_values_start_with_fernet(store: FernetStore):
 
 
 @pytest.mark.parametrize("data", [{"test": 1, "url": "https://asd.asd"}, {}])
-def test_encrypt_values_with_a_url(client: FlaskClient, store: FernetStore, data:dict):
+def test_encrypt_values_with_a_url(client: FlaskClient, store: FernetStore, data: dict):
     """Check that we can encrypt and decrypt values.
 
     We should use POST, see https://stackoverflow.com/a/13021883/1320237
@@ -122,12 +128,14 @@ def test_cannot_load_encrytption_from_environment(monkeypatch):
 KEY1 = "AHDLqMWyyMLTw87kkcIG_-pD6Dl_4ZWw-GKdNIkVKFc="
 KEY2 = "S8UirFfeKg83-qtmt4mr3xYRvSC6osUAP4R8wQJ-72I="
 
+
 @pytest.mark.parametrize(
     "keys",
     [
         [KEY1, KEY2],
         [KEY1],
-    ])
+    ],
+)
 def test_load_encrytption_from_environment(monkeypatch, keys):
     """Check that there are keys."""
     monkeypatch.setitem(os.environ, "OWC_ENCRYPTION_KEYS", ",".join(keys))
