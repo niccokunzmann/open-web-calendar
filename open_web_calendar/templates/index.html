@@ -13,6 +13,11 @@ SPDX-License-Identifier: GPL-2.0-only
         <script type="text/javascript">
             const specification = {{ specification | tojson | safe }};
             const language = {{ language | tojson | safe }};
+            /* Translation for dynamic elements. */
+            const translations = {
+                "button-encrypt": {{ string("button-encrypt") | tojson }},
+                "button-encrypted": {{ string("button-encrypted") | tojson }},
+            };
         </script>
         <link href="css/index.css" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
@@ -22,13 +27,13 @@ SPDX-License-Identifier: GPL-2.0-only
         {%- for name, code, percent in configuration["index"]["languages"]: %}
             <link rel="alternate" hreflang="{{code}}" href="/index.html?language={{code}}" />
         {%- endfor %}
-        <script type="text/javascript">
-            /* Translation for dynamic elements. */
-            const translations = {
-                "button-encrypt": {{ string("button-encrypt") | tojson }},
-                "button-encrypted": {{ string("button-encrypted") | tojson }},
-            };
-        </script>
+        <style>
+            {%- if not configuration["encryption"] %}
+            .encryption-required {
+                display: none;
+            }
+            {%- endif %}
+        </style>
     </head>
     <body>
         <header>
@@ -60,8 +65,9 @@ SPDX-License-Identifier: GPL-2.0-only
                 </ul>
                 <p>
                     <a id="calendar-link"></a>
-                    <br/>
-                    {{ html("calendar-code") }}
+                    <p>
+                        {{ html("calendar-code") }}
+                    </p>
                     <pre id="calendar-code" class="code"></pre>
                     {{ html("calendar-code-execution") }}
                     <div id="calendar-code-execution"></div>

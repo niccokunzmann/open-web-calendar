@@ -287,11 +287,11 @@ def get_calendar(ext):
     if ext == "spec":
         return jsonify(specification)
     if ext == "events.json":
-        strategy = ConvertToDhtmlx(specification, get_text_from_url)
+        strategy = ConvertToDhtmlx(specification, get_text_from_url, encryption())
         strategy.retrieve_calendars()
         return set_js_headers(strategy.merge())
     if ext == "ics":
-        strategy = ConvertToICS(specification, get_text_from_url)
+        strategy = ConvertToICS(specification, get_text_from_url, encryption())
         strategy.retrieve_calendars()
         return set_js_headers(strategy.merge())
     if ext == "html":

@@ -5,6 +5,7 @@
 import contextlib
 import difflib
 import json
+import os
 import re
 import time
 from urllib.parse import urlencode, urljoin
@@ -199,9 +200,14 @@ def step_impl(context, text):
 
 @then('we can see the text "{text}"')
 def step_impl(context, text):
-    assert text in get_body_text(context), (
-        f"{text!r} is invisible but should be visible"
-    )
+    end = time.time() + WAIT
+    while time.time() < end:
+        if text in get_body_text(context):
+            return
+        time.sleep(0.01)
+    raise AssertionError(
+            f"{text!r} is invisible but should be visible"
+        )
 
 
 @then("we can see a {cls}")
@@ -394,6 +400,25 @@ def step_impl(context, tag, text):
     element.click()
 
 
+@when('we click on the first {tag:S} "{text}"')
+def step_impl(context, tag, text):
+    # select if inner text element equals the text
+    # see https://stackoverflow.com/a/3655588/1320237
+    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
+    if not elements:
+        elements = context.browser.find_elements(
+            By.XPATH, f"//{tag}[text()[contains(., {text!r})]]"
+        )
+    assert len(elements) >= 1, (
+        f"There should have at least one {tag} with the text "
+        f"{text!r} but there are {len(elements)}."
+    )
+    element = elements[0]
+    element.click()
+    # if tag == "button":
+    #     element.send_keys(Keys.RETURN)
+
+
 @then('the checkbox with id "{eid:S}" is checked')
 def step_impl(context, eid):
     """Check the checkbox status."""
@@ -496,3 +521,12 @@ def step_impl(context, file_name: str):
     ):
         print(line)
     assert l1 == l2, f"The file {file_name} is not the same as the expected file."
+
+
+@given("we enable encryption")
+def step_impl(context):
+    """Enable encryption.
+
+    This is disabled after each scenario.
+    """
+    context.index_page = context.pages["encrypted"]

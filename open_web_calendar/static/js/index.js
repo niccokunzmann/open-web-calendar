@@ -29,6 +29,10 @@ async function encryptJson(json) {
     return await response.json();
 }
 
+function canEncrypt(url) {
+    return !url.startsWith("fernet://") && !RegExp(/^\s*$/).exec(url)
+}
+
 
 function updateUrls() {
     updateCalendarInputs();
@@ -71,23 +75,28 @@ function updateCalendarInputs() {
         const encryptButton = document.createElement("button");
         encryptButton.innerText = translations["button-encrypt"];
         encryptButton.classList.add("encrypt-button");
+        encryptButton.classList.add("encryption-required");
+        encryptButton.urlInput = input;
         encryptButton.addEventListener("click", function() {
             const url = input.value;
-            if (!url.startsWith("fernet://")) {
+            if (canEncrypt(url)) {
                 /* not encrypted */
                 encryptJson({
                     "url": url
                 }).then(function(response) {
                     input.value = response["token"];
                     updateUrls();
-                    encryptButton.innerText = translations["button-encrypted"];
                 });
-            } else {
-                encryptButton.innerText = translations["button-encrypted"];
             }
         });
         li.appendChild(encryptButton);
         calendarUrls.appendChild(li);
+    }
+    const encryptButtons = document.getElementsByClassName("encrypt-button");
+    for (const encryptButton of encryptButtons) {
+        const url = encryptButton.urlInput.value;
+        encryptButton.innerText = translations[url.startsWith("fernet://") ? "button-encrypted" : "button-encrypt"];
+        encryptButton.disabled = !canEncrypt(url);
     }
 }
 

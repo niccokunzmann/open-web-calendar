@@ -24,7 +24,10 @@ def get_text_from_url(url):
 
 
 class ConversionStrategy:
-    """Base class for conversions."""
+    """Base class for conversions.
+
+    You can customize how calendars are retrived and if encryption is used.
+    """
 
     # TODO: add as parameters
     MAXIMUM_THREADS = 100
@@ -36,7 +39,7 @@ class ConversionStrategy:
         encryption: Optional[EmptyFernetStore | FernetStore] = None,
     ):
         self.specification = specification
-        self.encryption = FernetStore.from_environment() if encryption is None else encryption
+        self.encryption = EmptyFernetStore() if encryption is None else encryption
         self.lock = RLock()
         self.components = []
         self.get_text_from_url = get_text_from_url
