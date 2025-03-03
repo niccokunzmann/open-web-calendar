@@ -30,4 +30,9 @@ Feature: In order to protect credentials, I want to encrypt URls.
           And we set the "url" parameter to "fernet://gAAAAABnxNJ-uR0tW9UumJLvRB8UYNRxFstIdXu6Mwr2JiEsK98dq_1-oVv6AtRV3pfl67bDehGrrMimbGqHhYL74bZe_VP9Wxu8ouwa0Hhf2G6UJ6z3Sdvyl5xLMiZx7ItzST-yZU7e"
          When we look at 2019-03-04
          Then we can see the text "test1"
+        
+    Scenario: I want to be able to decrypt the URLs again.
+        Given we enable encryption
+          And we set the "url" parameter to "fernet://gAAAAABnxNJ-uR0tW9UumJLvRB8UYNRxFstIdXu6Mwr2JiEsK98dq_1-oVv6AtRV3pfl67bDehGrrMimbGqHhYL74bZe_VP9Wxu8ouwa0Hhf2G6UJ6z3Sdvyl5xLMiZx7ItzST-yZU7e"
+          And we are on the configuration page
          

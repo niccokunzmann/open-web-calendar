@@ -287,9 +287,12 @@ def get_calendar(ext):
     if ext == "spec":
         return jsonify(specification)
     if ext == "events.json":
-        strategy = ConvertToDhtmlx(specification, get_text_from_url, encryption())
-        strategy.retrieve_calendars()
-        return set_js_headers(strategy.merge())
+        try:
+            strategy = ConvertToDhtmlx(specification, get_text_from_url, encryption())
+            strategy.retrieve_calendars()
+            return set_js_headers(strategy.merge())
+        except:
+            return json_error()
     if ext == "ics":
         strategy = ConvertToICS(specification, get_text_from_url, encryption())
         strategy.retrieve_calendars()
@@ -391,18 +394,54 @@ def unhandled_exception(error):
         </body>
     </html>
     """,
-        500,
+        http_status_code_for_error(error),
     )  # return error code from https://stackoverflow.com/a/7824605
+
+
+def http_status_code_for_error(error: Exception) -> int:
+    """Return the status code from an exception or 500."""
+    return getattr(error, "http_status_code", 500)
+
+
+def json_error():
+    """Return the active exception as json."""
+    _, err, _ = sys.exc_info()
+    status_code = http_status_code_for_error(err)
+    return jsonify(
+        {
+            "message": str(err),
+            "traceback": traceback.format_exc(),
+            "error": type(err).__name__,
+            "code": status_code,
+        }
+    ), status_code
 
 
 @app.post("/encrypt")
 def encrypt():
+    """Return the JSON with the encrypted token."""
     try:
         store = FernetStore.from_environment()
         return jsonify({"token": store.encrypt(request.json)})
     except:
-        _, err, _ = sys.exc_info()
-        return jsonify({"error": str(err), "traceback": traceback.format_exc()}), 500
+        return json_error()
+
+
+@app.post("/decrypt")
+def decrypt():
+    """Return JSON with the decrypted token."""
+    try:
+        store = FernetStore.from_environment()
+        token = request.json["token"]  # string
+        passwords = request.json["passwords"]  # list of strings
+        return jsonify(
+            {
+                "data": store.expose(token, passwords),
+                "token": token,
+            }
+        )
+    except:
+        return json_error()
 
 
 # make serializable for multiprocessing

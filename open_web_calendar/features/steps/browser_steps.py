@@ -5,7 +5,6 @@
 import contextlib
 import difflib
 import json
-import os
 import re
 import time
 from urllib.parse import urlencode, urljoin
@@ -205,9 +204,7 @@ def step_impl(context, text):
         if text in get_body_text(context):
             return
         time.sleep(0.01)
-    raise AssertionError(
-            f"{text!r} is invisible but should be visible"
-        )
+    raise AssertionError(f"{text!r} is invisible but should be visible")
 
 
 @then("we can see a {cls}")

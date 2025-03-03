@@ -180,10 +180,12 @@ def get_free_port(start=10000, end=60000):
     return random.randint(start, end)  # noqa: S311
 
 
-def run_wsgi_server(port:int, encrypt: bool):  # noqa: FBT001
+def run_wsgi_server(port: int, encrypt: bool):  # noqa: FBT001
     """Run the WSGI server."""
     if encrypt:
-        os.environ["OWC_ENCRYPTION_KEYS"] = "cxXiQ8n7ZkgdiAZ-GX2lkANZKbZDaqqq1vdyS7eGsFw="
+        os.environ["OWC_ENCRYPTION_KEYS"] = (
+            "cxXiQ8n7ZkgdiAZ-GX2lkANZKbZDaqqq1vdyS7eGsFw="
+        )
     else:
         os.environ["OWC_ENCRYPTION_KEYS"] = ""
     run_simple("localhost", port, app)
@@ -193,9 +195,11 @@ def run_wsgi_server(port:int, encrypt: bool):  # noqa: FBT001
 def app_server_with_encryption(context):
     yield from app_server(context, "encrypted", True)
 
+
 @fixture
 def app_server_without_encryption(context):
     yield from app_server(context, "default", False)
+
 
 def app_server(context, name, encrypt):
     """Start the flask app in a server."""

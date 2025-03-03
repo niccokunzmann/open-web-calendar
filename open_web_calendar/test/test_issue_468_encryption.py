@@ -4,7 +4,7 @@
 
 """Test encrypting and decrypting values.
 
-
+See https://github.com/niccokunzmann/open-web-calendar/issues/468
 """
 
 import os
@@ -19,6 +19,7 @@ from open_web_calendar.encryption import (
     EmptyFernetStore,
     FernetStore,
     InvalidKey,
+    InvalidPassword,
 )
 
 
@@ -156,7 +157,7 @@ def test_collect_calendar_from_encrypted_url(store, client, mock):
     mock.assert_called_once_with("http://url.to/a/calendar.ics")
 
 
-def test_no_url_included(store, client, mock):
+def test_no_url_included(store: FernetStore, client, mock):
     """The encrypted data has no url, so we have no calendar."""
     cb = ConversionStrategy({}, mock, store)
     mock.return_value = ""
@@ -164,3 +165,54 @@ def test_no_url_included(store, client, mock):
     result = cb.get_calendars_from_url(url)
     assert result == []
     mock.assert_not_called()
+
+
+def test_expose_values(store: FernetStore):
+    """Check that we can expose values back to the user."""
+    data = {"url": "q23", "password": "test123"}
+    encrypted = store.encrypt(data)
+    exposed = store.expose(encrypted, ["test123"])
+    assert exposed["url"] == data["url"]
+    assert "url" in exposed
+    assert "password" not in exposed
+    assert "hashes" in exposed
+
+
+def test_expose_with_second_password(store: FernetStore):
+    """We can ask with several passwords."""
+    data = {"url": "url!", "password": "nana"}
+    encrypted = store.encrypt(data)
+    exposed = store.expose(encrypted, ["test123", "nana", "123"])
+    assert exposed["url"] == data["url"]
+
+
+def test_cannot_expose_value_without_correct_password(store: FernetStore):
+    data = {"data": {"check": "test"}, "password": "test"}
+    encrypted = store.encrypt(data)
+    with pytest.raises(InvalidPassword):
+        store.expose(encrypted, ["test123"])
+    with pytest.raises(InvalidPassword):
+        store.expose(encrypted, [])
+
+
+def test_decrypt_api_works(store: FernetStore, client: FlaskClient):
+    """We can decrypt data with the correct passswords."""
+    data = {"core": {"check": "test"}, "password": "test"}
+    encrypted = store.encrypt(data)
+    response = client.post("/decrypt", json={"token": encrypted, "passwords": ["test"]})
+    exposed = response.json["data"]
+    assert exposed["core"]["check"] == "test"
+    assert "password" not in exposed
+    assert "hashes" in exposed
+
+
+def test_invalid_password(store: FernetStore, client: FlaskClient):
+    """We provide the wrong password."""
+    data = {"data": {"check": "test"}, "password": "test"}
+    encrypted = store.encrypt(data)
+    response = client.post(
+        "/decrypt", json={"token": encrypted, "passwords": ["wrong password"]}
+    )
+    error = response.json
+    assert error["error"] == "InvalidPassword"
+    assert response.status_code == 403
