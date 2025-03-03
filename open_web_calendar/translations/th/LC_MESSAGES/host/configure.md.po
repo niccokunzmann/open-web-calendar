@@ -365,6 +365,42 @@ msgid ""
 "work on other systems, but that is not tested."
 msgstr ""
 
+msgid "OWC_ENCRYPTION_KEYS"
+msgstr ""
+
+msgid ""
+"This is a comma separated list of encryption keys. These can be used to hide"
+" sensitive information of URLs."
+msgstr ""
+
+msgid "Disable encryption (default): `OWC_ENCRYPTION_KEYS=`"
+msgstr ""
+
+msgid "Use one key: `OWC_ENCRYPTION_KEYS='Pj...48='`"
+msgstr ""
+
+msgid ""
+"Use multiple keys: `OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='` If you use "
+"multiple keys, only the first one encrypts the data. The others are only "
+"used to decrypt the data."
+msgstr ""
+
+msgid ""
+"You can generate a new key by visiting your instance of the Open Web "
+"Calendar on the page [/new-key] or by running this command:"
+msgstr ""
+
+msgid "[Fernet]"
+msgstr ""
+
+#, fuzzy
+msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
+msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
+
+#, fuzzy
+msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
 #~ msgid ""
 #~ "This functionality is provided by [flask-allowed-"
 #~ "hosts](https://pypi.org/project/flask-allowed-hosts/)."
