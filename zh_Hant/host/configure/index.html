@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_37o_nbxa/zh_Hant/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wuhoey3r/zh_Hant/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_37o_nbxa/zh_Hant/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wuhoey3r/zh_Hant/host/configure/index.png" >
       
     
     
@@ -1064,6 +1064,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#owc_encryption_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWC_ENCRYPTION_KEYS
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1208,6 +1217,22 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Permanent link">&para;</a></h3>
 <p>default <code>true</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
 <p>Set the debug flag for the app.</p>
+<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Permanent link">&para;</a></h3>
+<p>default empty</p>
+<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>Examples:</p>
+<ul>
+<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+</ul>
+<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
+</code></pre></div>
+<p>See also:</p>
+<ul>
+<li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
+</ul>
 <h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Permanent link">&para;</a></h2>
 <p>The Open Web Calendar uses libraries whose behavior can be further customized.</p>
 <ul>
