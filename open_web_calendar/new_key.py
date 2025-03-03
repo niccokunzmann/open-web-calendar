@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 """Generate a new key and offer encryption setup help."""
+
 from open_web_calendar.encryption import BaseStore
 
 store = BaseStore.from_environment()
