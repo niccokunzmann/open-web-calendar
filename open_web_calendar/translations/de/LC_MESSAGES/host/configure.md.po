@@ -112,13 +112,6 @@ msgstr "Schnelles Neuladen: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
 msgid "APP_DEBUG"
 msgstr ""
 
-msgid ""
-"default `true`, values `true` or `false`, always `false` in the Docker "
-"container"
-msgstr ""
-"Standartwert: `true`, Werte `true` oder `false`, immer `false` im Docker-"
-"Container"
-
 msgid "Set the debug flag for the app."
 msgstr "Setze das Debug-Flag für die App."
 
@@ -434,6 +427,18 @@ msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
 #, fuzzy
 msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+msgid ""
+"default `false`, values `true` or `false`, always `false` in the Docker "
+"container"
+msgstr ""
+
+#~ msgid ""
+#~ "default `true`, values `true` or `false`, always `false` in the Docker "
+#~ "container"
+#~ msgstr ""
+#~ "Standartwert: `true`, Werte `true` oder `false`, immer `false` im Docker-"
+#~ "Container"
 
 #~ msgid ""
 #~ "This functionality is provided by [flask-allowed-"

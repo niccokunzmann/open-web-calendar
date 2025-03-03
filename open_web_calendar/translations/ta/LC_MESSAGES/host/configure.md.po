@@ -114,13 +114,6 @@ msgstr "வேகமாக புதுப்பிக்கவும்: `cache
 msgid "APP_DEBUG"
 msgstr ""
 
-msgid ""
-"default `true`, values `true` or `false`, always `false` in the Docker "
-"container"
-msgstr ""
-"இயல்புநிலை `உண்மை`, மதிப்புகள்` உண்மை` அல்லது `பொய்`, எப்போதும் கப்பல்துறை "
-"கொள்கலனில்` தவறு`"
-
 msgid "Set the debug flag for the app."
 msgstr "பயன்பாட்டிற்கான பிழைத்திருத்த கொடியை அமைக்கவும்."
 
@@ -468,6 +461,18 @@ msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
 #, fuzzy
 msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+msgid ""
+"default `false`, values `true` or `false`, always `false` in the Docker "
+"container"
+msgstr ""
+
+#~ msgid ""
+#~ "default `true`, values `true` or `false`, always `false` in the Docker "
+#~ "container"
+#~ msgstr ""
+#~ "இயல்புநிலை `உண்மை`, மதிப்புகள்` உண்மை` அல்லது `பொய்`, எப்போதும் கப்பல்துறை "
+#~ "கொள்கலனில்` தவறு`"
 
 #, fuzzy
 #~ msgid ""

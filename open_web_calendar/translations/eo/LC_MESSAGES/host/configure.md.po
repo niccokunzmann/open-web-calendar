@@ -113,12 +113,6 @@ msgstr "Refreŝigi rapide: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
 msgid "APP_DEBUG"
 msgstr ""
 
-msgid ""
-"default `true`, values `true` or `false`, always `false` in the Docker "
-"container"
-msgstr ""
-"implicite `true`, validaj valoroj `true` aŭ `false`, ĉiam `false` en Docker"
-
 msgid "Set the debug flag for the app."
 msgstr "Uzi la sencimigan flagon por la programo."
 
@@ -421,6 +415,17 @@ msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
 #, fuzzy
 msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+msgid ""
+"default `false`, values `true` or `false`, always `false` in the Docker "
+"container"
+msgstr ""
+
+#~ msgid ""
+#~ "default `true`, values `true` or `false`, always `false` in the Docker "
+#~ "container"
+#~ msgstr ""
+#~ "implicite `true`, validaj valoroj `true` aŭ `false`, ĉiam `false` en Docker"
 
 #~ msgid ""
 #~ "This functionality is provided by [flask-allowed-"

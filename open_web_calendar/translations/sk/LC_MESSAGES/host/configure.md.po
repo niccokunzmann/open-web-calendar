@@ -113,13 +113,6 @@ msgstr "Obnoviť rýchlo: `CACHE_RESTED_URLS_FOR_SECONDS=10`"
 msgid "APP_DEBUG"
 msgstr ""
 
-msgid ""
-"default `true`, values `true` or `false`, always `false` in the Docker "
-"container"
-msgstr ""
-"predvolené `true`, hodnoty `true` alebo `false`, vždy `false` v kontajneri "
-"Docker"
-
 msgid "Set the debug flag for the app."
 msgstr "Nastaviť debug vlajku pre aplikáciu."
 
@@ -422,6 +415,18 @@ msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
 #, fuzzy
 msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+msgid ""
+"default `false`, values `true` or `false`, always `false` in the Docker "
+"container"
+msgstr ""
+
+#~ msgid ""
+#~ "default `true`, values `true` or `false`, always `false` in the Docker "
+#~ "container"
+#~ msgstr ""
+#~ "predvolené `true`, hodnoty `true` alebo `false`, vždy `false` v kontajneri "
+#~ "Docker"
 
 #~ msgid ""
 #~ "This functionality is provided by [flask-allowed-"

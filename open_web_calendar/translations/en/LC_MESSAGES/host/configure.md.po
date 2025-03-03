@@ -94,11 +94,6 @@ msgstr ""
 msgid "APP_DEBUG"
 msgstr ""
 
-msgid ""
-"default `true`, values `true` or `false`, always `false` in the Docker "
-"container"
-msgstr ""
-
 msgid "Set the debug flag for the app."
 msgstr ""
 
@@ -385,6 +380,16 @@ msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
 #, fuzzy
 msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+msgid ""
+"default `false`, values `true` or `false`, always `false` in the Docker "
+"container"
+msgstr ""
+
+#~ msgid ""
+#~ "default `true`, values `true` or `false`, always `false` in the Docker "
+#~ "container"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "This functionality is provided by [flask-allowed-"
