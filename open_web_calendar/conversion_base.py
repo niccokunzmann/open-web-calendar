@@ -37,12 +37,14 @@ class ConversionStrategy:
         specification: dict[str, Any],
         get_text_from_url=get_text_from_url,
         encryption: Optional[EmptyFernetStore | FernetStore] = None,
+        debug: bool = False,  # noqa: FBT001
     ):
         self.specification = specification
         self.encryption = EmptyFernetStore() if encryption is None else encryption
         self.lock = RLock()
         self.components = []
         self.get_text_from_url = get_text_from_url
+        self.debug = debug
         self.created()
 
     def created(self):
@@ -51,7 +53,15 @@ class ConversionStrategy:
     def error(self, ty, err, tb, url):
         tb_s = io.StringIO()
         traceback.print_exception(ty, err, tb, file=tb_s)
-        return self.convert_error(err, url, tb_s.getvalue())
+        return self.convert_error(
+            str(err) if self.debug else type(err).__name__,
+            url,
+            tb_s.getvalue() if self.debug else "",
+        )
+
+    def convert_error(self, error: str, url: str, tb_s: str):
+        """Tell the client more about the error."""
+        raise NotImplementedError("To be implemented in subclasses")
 
     def retrieve_calendars(self):
         """Retrieve the calendars from different sources."""

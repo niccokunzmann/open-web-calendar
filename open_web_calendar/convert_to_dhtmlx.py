@@ -123,7 +123,7 @@ class ConvertToDhtmlx(ConversionStrategy):
             + [f"CALENDAR-INDEX-{calendar_index}"],
         }
 
-    def convert_error(self, error, url, tb_s):
+    def convert_error(self, error: str, url: str, tb_s: str):
         """Create an error which can be used by the dhtmlx scheduler."""
         # always add the error within the requested time range
         now = self.from_date
@@ -136,8 +136,8 @@ class ConvertToDhtmlx(ConversionStrategy):
             "end_date_iso": now_iso,
             "start_date_iso_0": now_iso,
             "end_date_iso_0": now_iso,
-            "text": type(error).__name__,
-            "description": self.clean_html(escape(str(error))),
+            "text": escape(error.split(":")[0]),
+            "description": self.clean_html(escape(error)),
             "traceback": self.clean_html(escape(tb_s)),
             "location": None,
             "geo": None,

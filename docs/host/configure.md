@@ -160,7 +160,7 @@ Examples:
 
 ### APP_DEBUG
 
-default `true`, values `true` or `false`, always `false` in the Docker container
+default `false`, values `true` or `false`, always `false` in the Docker container
 
 Set the debug flag for the app.
 
