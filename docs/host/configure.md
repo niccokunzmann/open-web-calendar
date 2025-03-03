@@ -164,6 +164,33 @@ default `true`, values `true` or `false`, always `false` in the Docker container
 
 Set the debug flag for the app.
 
+### OWC_ENCRYPTION_KEYS
+
+default empty
+
+This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.
+
+Examples:
+
+- Disable encryption (default): `OWC_ENCRYPTION_KEYS=`
+- Use one key: `OWC_ENCRYPTION_KEYS='Pj...48='`
+- Use multiple keys: `OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='`  
+  If you use multiple keys, only the first one encrypts the data.
+  The others are only used to decrypt the data.
+
+You can generate a new key by visiting your instance of the Open Web Calendar on the page [/new-key] or by running this command:
+
+```sh
+python3 -m open_web_calendar.new_key
+```
+
+See also:
+
+- [Fernet]
+
+[Fernet]: https://cryptography.io/en/latest/fernet/
+[/new-key]: {{ link.web }}/new-key
+
 ## Further Configuration
 
 The Open Web Calendar uses libraries whose behavior can be further customized.

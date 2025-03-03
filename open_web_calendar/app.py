@@ -444,6 +444,13 @@ def decrypt():
         return json_error()
 
 
+@app.get("/new-key")
+def new_key():
+    """Generate a new key."""
+    store = FernetStore.from_environment()
+    return store.generate_key()
+
+
 # make serializable for multiprocessing
 # app.__reduce__ = lambda: __name__ + ".app"
 
@@ -455,7 +462,6 @@ please use this command:
 
     gunicorn open_web_calendar:app
     """)  # noqa: T201
-
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
 
 

@@ -9,10 +9,10 @@ See https://cryptography.io/en/latest/fernet/
 
 from __future__ import annotations
 
-from abc import ABC, abstractmethod
 import hashlib
 import json
 import os
+from abc import ABC, abstractmethod
 from typing import Any, Optional
 
 from cryptography.fernet import Fernet, MultiFernet
@@ -87,7 +87,7 @@ class BaseStore(ABC):
         We load the keys from the OWC_ENCRYPTION_KEYS environment variable.
         """
         keys = os.environ.get("OWC_ENCRYPTION_KEYS", "").split(",")
-        return EmptyFernetStore() if keys == [""] else cls(keys)
+        return EmptyFernetStore() if keys == [""] else FernetStore(keys)
 
     @staticmethod
     def is_encrypted(data: str) -> bool:
@@ -113,7 +113,6 @@ class BaseStore(ABC):
 
 
 class EmptyFernetStore(BaseStore):
-
     def encrypt(self, data: dict) -> str:
         """We cannot encrypt anything."""
         raise NoKeyProvided("No key was provided to do any cryptographic operation.")
@@ -121,6 +120,7 @@ class EmptyFernetStore(BaseStore):
     def decrypt(self, data: str) -> DecryptedData:
         """We cannot decrypt anything."""
         raise NoKeyProvided("No key was provided to do any cryptographic operation.")
+
 
 class FernetStore(BaseStore):
     """Allow encrypting and decrypting values."""
