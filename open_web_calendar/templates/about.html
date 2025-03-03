@@ -11,7 +11,7 @@ SPDX-License-Identifier: GPL-2.0-only
         <title>{{ specification["title"] | safe }}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
-        <link rel="alternate" type="text/calendar" href="/calendar.ics{{ get_query_string() }}" />
+        <link rel="alternate" type="text/calendar" href="calendar.ics{{ get_query_string() }}" />
         <link href="css/index.css"
             rel="stylesheet" type="text/css" charset="utf-8">
 
@@ -25,17 +25,17 @@ SPDX-License-Identifier: GPL-2.0-only
     </head>
     <body>
         <header>
-            <a href="/calendar.html{{ get_query_string() | safe }}"><h1>{{ specification["title"] | safe }}</h1></a>
+            <a href="calendar.html{{ get_query_string() | safe }}"><h1>{{ specification["title"] | safe }}</h1></a>
         </header>
         <main>
             <p class="description">
                 {{ specification["description"] or html("description") }}
             </p>
             <ul>
-                <li><a href="/calendar.html{{ get_query_string() | safe }}">{{ html("links-website") }}</a></li>
-                <li><a href="/calendar.ics{{ get_query_string() | safe }}">{{ html("links-ics") }}</a></li>
-                <li><a href="/calendar.spec{{ get_query_string() | safe }}">{{ html("links-spec") }}</a></li>
-                <li><a href="/index.html{{ get_query_string() | safe }}">{{ html("links-edit") }}</a></li>
+                <li><a href="calendar.html{{ get_query_string() | safe }}">{{ html("links-website") }}</a></li>
+                <li><a href="calendar.ics{{ get_query_string() | safe }}">{{ html("links-ics") }}</a></li>
+                <li><a href="calendar.spec{{ get_query_string() | safe }}">{{ html("links-spec") }}</a></li>
+                <li><a href="index.html{{ get_query_string() | safe }}">{{ html("links-edit") }}</a></li>
                 <li>
                     {{ html("timezone-choice") }}
                     <select id="select-timezone" onchange="loadCalendarInDifferentTimeZone()">
