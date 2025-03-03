@@ -9,6 +9,7 @@ See https://cryptography.io/en/latest/fernet/
 
 from __future__ import annotations
 
+from abc import ABC, abstractmethod
 import hashlib
 import json
 import os
@@ -21,6 +22,10 @@ PREFIX = "fernet://"
 
 class InvalidKey(ValueError):
     """This key cannot be used for encryption."""
+
+
+class NoKeyProvided(InvalidKey):
+    """No key was provided to do any cryptographic operation."""
 
 
 class InvalidPassword(ValueError):
@@ -67,35 +72,13 @@ class DecryptedData:
         raise InvalidPassword("None of the passwords provided allow sharing this data.")
 
 
-class EmptyFernetStore:
-    @staticmethod
-    def encrypt(*args, **kw) -> str:  # noqa: ARG004
-        raise InvalidKey("Cannot encrypt, no key provided.")
+class BaseStore(ABC):
+    """Sharing basic functionality."""
 
     @staticmethod
-    def decrypt(*args, **kw) -> str:  # noqa: ARG004
-        raise InvalidKey("Cannot decrypt, no key provided.")
-
-    @staticmethod
-    def expose(*args, **kw) -> str:  # noqa: ARG004
-        raise InvalidKey("Cannot decrypt, no key provided.")
-
-    @staticmethod
-    def can_encrypt() -> bool:
-        return False
-
-    @staticmethod
-    def is_encrypted(data: str) -> bool:
-        """Wether this data is encrypted."""
-        return data.startswith(PREFIX)
-
-
-class FernetStore:
-    """Allow encrypting and decrypting values."""
-
-    @staticmethod
-    def can_encrypt() -> bool:
-        return True
+    def generate_key() -> str:
+        """Generate a key to be used."""
+        return Fernet.generate_key().decode("utf-8")
 
     @classmethod
     def from_environment(cls) -> FernetStore | EmptyFernetStore:
@@ -105,6 +88,46 @@ class FernetStore:
         """
         keys = os.environ.get("OWC_ENCRYPTION_KEYS", "").split(",")
         return EmptyFernetStore() if keys == [""] else cls(keys)
+
+    @staticmethod
+    def is_encrypted(data: str) -> bool:
+        """Wether this data is encrypted."""
+        return data.startswith(PREFIX)
+
+    def expose(self, data: str, passwords: list[str]) -> dict:
+        """Expose the data to the user."""
+        decrypted = self.decrypt(data)
+        return decrypted.expose(passwords)
+
+    @staticmethod
+    def can_encrypt() -> bool:
+        return False
+
+    @abstractmethod
+    def encrypt(self, data: dict) -> str:
+        """Encrypt data."""
+
+    @abstractmethod
+    def decrypt(self, data: str) -> DecryptedData:
+        """Decrypt the data."""
+
+
+class EmptyFernetStore(BaseStore):
+
+    def encrypt(self, data: dict) -> str:
+        """We cannot encrypt anything."""
+        raise NoKeyProvided("No key was provided to do any cryptographic operation.")
+
+    def decrypt(self, data: str) -> DecryptedData:
+        """We cannot decrypt anything."""
+        raise NoKeyProvided("No key was provided to do any cryptographic operation.")
+
+class FernetStore(BaseStore):
+    """Allow encrypting and decrypting values."""
+
+    @staticmethod
+    def can_encrypt() -> bool:
+        return True
 
     def __init__(self, keys: list[str]):
         """Create a new Fernet store to encrypt and decrypt values."""
@@ -146,21 +169,6 @@ class FernetStore:
         string = self._fernet.decrypt(token).decode("UTF-8")
         data = json.loads(string)
         return DecryptedData(data)
-
-    @staticmethod
-    def is_encrypted(data: str) -> bool:
-        """Wether this data is encrypted."""
-        return data.startswith(PREFIX)
-
-    @staticmethod
-    def generate_key() -> str:
-        """Generate a key to be used."""
-        return Fernet.generate_key().decode("utf-8")
-
-    def expose(self, data: str, passwords: list[str]) -> dict:
-        """Expose the data to the user."""
-        decrypted = self.decrypt(data)
-        return decrypted.expose(passwords)
 
 
 __all__ = ["DecryptedData", "EmptyFernetStore", "FernetStore", "InvalidKey"]
