@@ -410,7 +410,7 @@ def json_error():
     return jsonify(
         {
             "message": str(err),
-            "traceback": traceback.format_exc() if DEBUG else "",
+            "traceback": traceback.format_exc(),
             "error": type(err).__name__,
             "code": status_code,
         }
