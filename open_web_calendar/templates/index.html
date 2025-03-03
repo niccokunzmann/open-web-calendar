@@ -63,6 +63,13 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <ul id="calendar-urls">
                 </ul>
+                <p class="encryption-required">
+                    {{ html("password-urls") }}
+                    🔑
+                    <input type="password" id="encryption-password" />
+                    <input type="button" onclick="toggleUrlPasswordVisibility()" value="👁" id="toggle-password-visibility"/>
+                    <input type="button" onclick="decryptURLs()" value="🔓 {{ string("decrypt-urls") }}" />
+                </p>
                 <p>
                     <a id="calendar-link"></a>
                     <p>

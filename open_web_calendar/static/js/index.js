@@ -95,7 +95,9 @@ function updateCalendarInputs() {
     const encryptButtons = document.getElementsByClassName("encrypt-button");
     for (const encryptButton of encryptButtons) {
         const url = encryptButton.urlInput.value;
-        encryptButton.innerText = translations[url.startsWith("fernet://") ? "button-encrypted" : "button-encrypt"];
+        encryptButton.innerText = url.startsWith("fernet://") ? 
+            "🔒 " + translations["button-encrypted"] :
+            "🔑 " + translations["button-encrypt"];
         encryptButton.disabled = !canEncrypt(url);
     }
 }
@@ -694,4 +696,13 @@ function arraysEqual(a, b) {
     if (!arraysEqual(a[i], b[i])) return false;
   }
   return true;
+}
+
+function toggleUrlPasswordVisibility() {
+    const password = document.getElementById("encryption-password");
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
 }

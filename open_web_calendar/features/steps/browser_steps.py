@@ -527,3 +527,15 @@ def step_impl(context):
     This is disabled after each scenario.
     """
     context.index_page = context.pages["encrypted"]
+
+@then("we can see the password")
+def step_impl(context):
+    """The password is a text input."""
+    element = context.browser.find_element(By.ID, "encryption-password")
+    assert element.get_attribute("type") == "text"
+
+@then("we cannot see the password")
+def step_impl(context):
+    """The password is a password input."""
+    element = context.browser.find_element(By.ID, "encryption-password")
+    assert element.get_attribute("type") == "password"

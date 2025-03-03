@@ -13,7 +13,9 @@ calendar-urls: 'To merge several calendars, please input the URLs of the ICS cal
   here:'
 # Button to encrypt the calendar content.
 button-encrypt: 'Encrypt URL'
-button-encrypted: '✅ Encrypted'
+button-encrypted: 'Encrypted'
+password-urls: 'This password is used to secure calendar URLs.'
+decrypt-urls: 'Decrypt URLs'
 
 # This describes the calendar code to embed.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code
