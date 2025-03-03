@@ -742,7 +742,6 @@ function decryptURLs() {
         const url = urlInput.value;
         if (url.startsWith(ENCRYPTION_PREFIX)) {
             decrypt(url, password).then(function(result) {
-                console.log(result);
                 urlInput.value = result.data.url;
                 updateUrls();
             });

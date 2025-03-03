@@ -13,3 +13,4 @@ lxml_html_clean
 mergecal>=0.4.2
 icalendar-compatibility>=0.1.3
 cryptography
+bcrypt

@@ -9,6 +9,8 @@ beautifulsoup4==4.13.3
     # via -r requirements/base.in
 blinker==1.9.0
     # via flask
+bcrypt==4.3.0
+    # via -r requirements/base.in
 cachelib==0.13.0
     # via flask-caching
 certifi==2025.1.31

@@ -372,9 +372,14 @@ def get_specification(context) -> dict:
 
 def assert_specification_has_value(context, attribute, expected_value="no value"):
     """Make sure the specification has a certain value."""
-    specification = get_specification(context)
-    actual_value = specification.get(attribute, "no value")
-    assert actual_value == expected_value, (
+    end = time.time() + WAIT
+    while time.time() < end:
+        specification = get_specification(context)
+        actual_value = specification.get(attribute, "no value")
+        if actual_value == expected_value:
+            return
+        time.sleep(0.01)
+    raise AssertionError(
         f"specification.{attribute}: expected {expected_value} but got {actual_value}."
     )
 

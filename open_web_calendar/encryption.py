@@ -9,7 +9,7 @@ See https://cryptography.io/en/latest/fernet/
 
 from __future__ import annotations
 
-import hashlib
+import bcrypt
 import json
 import os
 from abc import ABC, abstractmethod
@@ -34,17 +34,15 @@ class InvalidPassword(ValueError):
     http_status_code = 403
 
 
-def get_salt() -> str:
-    """Return a salt for hashing."""
-    return os.urandom(16).hex()
-
-
-def get_password_hash(password: str, salt: Optional[str] = None):
+def get_password_hash(password: str) -> str:
     """Return a hash with password and salt."""
-    if salt is None:
-        salt = get_salt()
-    return hashlib.sha3_512(password.encode() + salt.encode()).hexdigest(), salt
+    # https://stackoverflow.com/a/13001189/1320237
+    return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
 
+
+def check_password(password: str, pw_hash: str) -> bool:
+    """Check if the password matches the hash."""
+    return bcrypt.checkpw(password.encode(), pw_hash.encode())
 
 class DecryptedData:
     """Data that has been decrypted."""
@@ -66,8 +64,8 @@ class DecryptedData:
         Raises InvalidPassword if no password is correct.
         """
         for password in passwords:
-            for hash_, salt in self._data.get("hashes", []):
-                if hash_ == get_password_hash(password, salt)[0]:
+            for pw_hash in self._data.get("hashes", []):
+                if check_password(password, pw_hash):
                     return self._data
         raise InvalidPassword("None of the passwords provided allow sharing this data.")
 
