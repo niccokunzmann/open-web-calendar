@@ -37,12 +37,15 @@ if TYPE_CHECKING:
     from selenium.webdriver.remote.webelement import WebElement
 
 HERE = Path(__file__).parent.absolute()
-sys.path.append(HERE / "..")
+PROJECT_FOLDER = HERE.parent
+if PROJECT_FOLDER.name == "open_web_calendar":
+    PROJECT_FOLDER = PROJECT_FOLDER.parent
+sys.path.append(str(PROJECT_FOLDER))
 
 from open_web_calendar.app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
 CALENDAR_FOLDER = HERE / "calendars"
-SCREENSHOTS_FOLDER = HERE.parent.parent / "screenshots"
+SCREENSHOTS_FOLDER = PROJECT_FOLDER / "screenshots"
 SCREENSHOTS_FOLDER.mkdir(parents=True, exist_ok=True)
 # timeout in seconds
 WAIT = 10

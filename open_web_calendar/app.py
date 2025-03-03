@@ -6,14 +6,13 @@
 from __future__ import annotations
 
 import datetime
-import io
 import json
 import os
 import sys
 import tempfile
 import traceback
 from pathlib import Path
-from typing import Any, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 import requests
 import yaml
@@ -35,8 +34,11 @@ from .convert_to_dhtmlx import ConvertToDhtmlx
 from .convert_to_ics import ConvertToICS
 from .encryption import EmptyFernetStore, FernetStore
 
+if TYPE_CHECKING:
+    from open_web_calendar.conversion_base import ConversionStrategy
+
 # configuration
-DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
+DEBUG = os.environ.get("APP_DEBUG", "").lower() == "true"
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(
     os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
@@ -277,6 +279,13 @@ def render_app_template(template, specification):
     )
 
 
+def get_conversion(conversion: type[ConversionStrategy], specification: dict[str, Any]):
+    """Return a conversion from the strategy."""
+    strategy = conversion(specification, get_text_from_url, encryption(), DEBUG)
+    strategy.retrieve_calendars()
+    return set_js_headers(strategy.merge())
+
+
 @app.route("/calendar.<ext>", methods=["GET", "OPTIONS"])
 @allowed_hosts.limit()
 # use query string in cache, see https://stackoverflow.com/a/47181782/1320237
@@ -288,15 +297,11 @@ def get_calendar(ext):
         return jsonify(specification)
     if ext == "events.json":
         try:
-            strategy = ConvertToDhtmlx(specification, get_text_from_url, encryption())
-            strategy.retrieve_calendars()
-            return set_js_headers(strategy.merge())
+            return get_conversion(ConvertToDhtmlx, specification)
         except:
             return json_error()
     if ext == "ics":
-        strategy = ConvertToICS(specification, get_text_from_url, encryption())
-        strategy.retrieve_calendars()
-        return set_js_headers(strategy.merge())
+        return get_conversion(ConvertToICS, specification)
     if ext == "html":
         template_name = specification["template"]
         all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
@@ -373,8 +378,11 @@ def unhandled_exception(error):
 
     See https://stackoverflow.com/q/14993318
     """
-    file = io.StringIO()
-    traceback.print_exception(type(error), error, error.__traceback__, file=file)
+    trace = (
+        f"<pre>\r\n{traceback.format_exc()}</pre>"
+        if DEBUG
+        else "Trace only avalilable if DEBUG=true."
+    )
     return (
         f"""
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
@@ -389,8 +397,7 @@ def unhandled_exception(error):
                 complete your request.  Either the server is overloaded or
                 there is an error in the application.
             </p>
-            <pre>\r\n{file.getvalue()}
-            </pre>
+            {trace}
         </body>
     </html>
     """,
@@ -409,7 +416,7 @@ def json_error():
     status_code = http_status_code_for_error(err)
     return jsonify(
         {
-            "message": str(err),
+            "message": str(err) if DEBUG else None,
             "traceback": traceback.format_exc() if DEBUG else None,
             "error": type(err).__name__,
             "code": status_code,

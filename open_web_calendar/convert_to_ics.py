@@ -31,12 +31,13 @@ class ConvertToICS(ConversionStrategy):
         with self.lock:
             self.components.extend(calendars)
 
-    def convert_error(self, error, url, tb_s):
+    def convert_error(self, error: str, url: str, tb_s: str):
         """Create an error which can be used by the dhtmlx scheduler."""
         event = Event()
         event["DTSTART"] = event["DTEND"] = vDDDTypes(datetime.datetime.now())
-        event["SUMMARY"] = type(error).__name__
-        event["DESCRIPTION"] = str(error) + "\n\n" + tb_s
+        event["SUMMARY"] = error
+        event["DESCRIPTION"] = tb_s
+        event["URL"] = url
         event["UID"] = "error" + str(id(error))
         if url:
             event["URL"] = url
