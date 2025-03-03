@@ -9,12 +9,12 @@ See https://cryptography.io/en/latest/fernet/
 
 from __future__ import annotations
 
-import bcrypt
 import json
 import os
 from abc import ABC, abstractmethod
 from typing import Any, Optional
 
+import bcrypt
 from cryptography.fernet import Fernet, MultiFernet
 
 PREFIX = "fernet://"
@@ -43,6 +43,7 @@ def get_password_hash(password: str) -> str:
 def check_password(password: str, pw_hash: str) -> bool:
     """Check if the password matches the hash."""
     return bcrypt.checkpw(password.encode(), pw_hash.encode())
+
 
 class DecryptedData:
     """Data that has been decrypted."""
