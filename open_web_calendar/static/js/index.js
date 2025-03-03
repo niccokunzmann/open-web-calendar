@@ -712,19 +712,8 @@ function toggleUrlPasswordVisibility() {
 
 function fillPasswordField() {
     const password = document.getElementById("encryption-password");
-    function savePassword() {
-        localStorage.setItem("encryption-password", password.value);
-    }
-    password.addEventListener("change", savePassword);
-    password.addEventListener("keyup", savePassword);
-    const previousPassword = localStorage.getItem("encryption-password");
-    if (previousPassword) {
-        password.value = previousPassword;
-    } else {
-        // see https://stackoverflow.com/a/9719815/1320237
-        password.value = Math.random().toString(36).slice(-8);
-        savePassword();
-    }
+    // see https://stackoverflow.com/a/9719815/1320237
+    password.value = Math.random().toString(36).slice(-8);
 }
 
 async function decrypt(token) {

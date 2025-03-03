@@ -54,13 +54,13 @@ Feature: In order to protect credentials, I want to encrypt URls.
           And we are on the configuration page
          Then "" is not written in "encryption-password"
     
-    Scenario: When I reload the page, I do not want to loose my password.
+    Scenario: When I reload the page, I do not want to see my password.
         Given we enable encryption
           And we are on the configuration page
          When we write "myP4ssphraz3" into "encryption-password"
          Then "myP4ssphraz3" is written in "encryption-password"
          When we reload the page
-         Then "myP4ssphraz3" is written in "encryption-password"
+         Then "myP4ssphraz3" is not written in "encryption-password"
 
     Scenario: I want to use a password to decrypt the url.
         Given we enable encryption
