@@ -3,10 +3,13 @@
   "extends": [
     "config:recommended"
   ],
-  "dependencyDashboard": false,
+  "dependencyDashboard": true,
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
+  },
+  "pip_requirements": {
+    "fileMatch": ["(^|/)requirements/\\w*\\.txt$"]
   },
   "packageRules": [
     {
