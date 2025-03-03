@@ -199,9 +199,12 @@ def step_impl(context, text):
 
 @then('we can see the text "{text}"')
 def step_impl(context, text):
-    assert text in get_body_text(context), (
-        f"{text!r} is invisible but should be visible"
-    )
+    end = time.time() + WAIT
+    while time.time() < end:
+        if text in get_body_text(context):
+            return
+        time.sleep(0.01)
+    raise AssertionError(f"{text!r} is invisible but should be visible")
 
 
 @then("we can see a {cls}")
@@ -305,6 +308,17 @@ def step_impl(context, text, field_id):
     )
 
 
+@then('"{text}" is not written in "{field_id}"')
+@then('"" is not written in "{field_id}"')
+def step_impl(context, field_id, text=""):
+    """Check that a field has not a value."""
+    input_element = context.browser.find_element(By.ID, field_id)
+    actual_text = input_element.get_attribute("value")
+    assert actual_text != text, (
+        f"Expected a different text than {text!r} in {field_id}."
+    )
+
+
 @when('we write the date {day}/{month}/{year} into "{field_id}"')
 def step_impl(context, year, month, day, field_id):
     """Write text into text input."""
@@ -358,9 +372,14 @@ def get_specification(context) -> dict:
 
 def assert_specification_has_value(context, attribute, expected_value="no value"):
     """Make sure the specification has a certain value."""
-    specification = get_specification(context)
-    actual_value = specification.get(attribute, "no value")
-    assert actual_value == expected_value, (
+    end = time.time() + WAIT
+    while time.time() < end:
+        specification = get_specification(context)
+        actual_value = specification.get(attribute, "no value")
+        if actual_value == expected_value:
+            return
+        time.sleep(0.01)
+    raise AssertionError(
         f"specification.{attribute}: expected {expected_value} but got {actual_value}."
     )
 
@@ -375,6 +394,18 @@ def step_impl(context, attribute, expected_value):
 def step_impl(context, attribute):
     """Check the JSON value of an attribute."""
     assert_specification_has_value(context, attribute)
+
+
+@when('we click the button "{text}"')
+def step_impl(context, text):
+    """Click the only button with this label."""
+    buttons = context.browser.find_elements(
+        By.XPATH, f"//input[@type = 'button' and contains(@value, {text!r})]"
+    )
+    assert len(buttons) == 1, (
+        f"Expected one button with the text {text!r} but got {buttons}."
+    )
+    buttons[0].click()
 
 
 @when('we click on the {tag:S} "{text}"')
@@ -392,6 +423,25 @@ def step_impl(context, tag, text):
     )
     element = elements[0]
     element.click()
+
+
+@when('we click on the first {tag:S} "{text}"')
+def step_impl(context, tag, text):
+    # select if inner text element equals the text
+    # see https://stackoverflow.com/a/3655588/1320237
+    elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
+    if not elements:
+        elements = context.browser.find_elements(
+            By.XPATH, f"//{tag}[text()[contains(., {text!r})]]"
+        )
+    assert len(elements) >= 1, (
+        f"There should have at least one {tag} with the text "
+        f"{text!r} but there are {len(elements)}."
+    )
+    element = elements[0]
+    element.click()
+    # if tag == "button":
+    #     element.send_keys(Keys.RETURN)
 
 
 @then('the checkbox with id "{eid:S}" is checked')
@@ -496,3 +546,33 @@ def step_impl(context, file_name: str):
     ):
         print(line)
     assert l1 == l2, f"The file {file_name} is not the same as the expected file."
+
+
+@given("we enable encryption")
+def step_impl(context):
+    """Enable encryption.
+
+    This is disabled after each scenario.
+    """
+    context.index_page = context.pages["encrypted"]
+
+
+@then("we can see the password")
+def step_impl(context):
+    """The password is a text input."""
+    element = context.browser.find_element(By.ID, "encryption-password")
+    assert element.get_attribute("type") == "text"
+
+
+@then("we cannot see the password")
+def step_impl(context):
+    """The password is a password input."""
+    element = context.browser.find_element(By.ID, "encryption-password")
+    assert element.get_attribute("type") == "password"
+
+
+@when("we reload the page")
+def step_impl(context):
+    """Reload the page."""
+    # see https://stackoverflow.com/a/52546865/1320237
+    context.browser.refresh()

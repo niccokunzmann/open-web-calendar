@@ -9,6 +9,7 @@ import datetime
 import io
 import json
 import os
+import sys
 import tempfile
 import traceback
 from pathlib import Path
@@ -32,6 +33,7 @@ from flask_caching import Cache
 from . import translate, version
 from .convert_to_dhtmlx import ConvertToDhtmlx
 from .convert_to_ics import ConvertToICS
+from .encryption import EmptyFernetStore, FernetStore
 
 # configuration
 DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
@@ -105,6 +107,10 @@ def cache_url(url, text):
         del __URL_CACHE[url]
 
 
+def encryption() -> FernetStore | EmptyFernetStore:
+    return FernetStore.from_environment()
+
+
 @app.after_request
 def add_header(r):
     """
@@ -129,6 +135,7 @@ def add_header(r):
 
 def get_configuration():
     """Return the configuration for the browser."""
+    store = encryption()
     return {
         "default_specification": get_default_specification(),
         "version": version.version,
@@ -136,6 +143,7 @@ def get_configuration():
         "timezones": TIMEZONES,
         "dhtmlx": {"languages": translate.dhtmlx_languages()},
         "index": {"languages": translate.languages_for_the_index_file()},
+        "encryption": store.can_encrypt(),
     }
 
 
@@ -262,6 +270,9 @@ def render_app_template(template, specification):
         html=lambda tid, **template_replacements: translate.html(
             language, translation_file, tid, **template_replacements
         ),
+        string=lambda tid, **template_replacements: translate.string(
+            language, translation_file, tid, **template_replacements
+        ),
         language=language,
     )
 
@@ -276,11 +287,14 @@ def get_calendar(ext):
     if ext == "spec":
         return jsonify(specification)
     if ext == "events.json":
-        strategy = ConvertToDhtmlx(specification, get_text_from_url)
-        strategy.retrieve_calendars()
-        return set_js_headers(strategy.merge())
+        try:
+            strategy = ConvertToDhtmlx(specification, get_text_from_url, encryption())
+            strategy.retrieve_calendars()
+            return set_js_headers(strategy.merge())
+        except:
+            return json_error()
     if ext == "ics":
-        strategy = ConvertToICS(specification, get_text_from_url)
+        strategy = ConvertToICS(specification, get_text_from_url, encryption())
         strategy.retrieve_calendars()
         return set_js_headers(strategy.merge())
     if ext == "html":
@@ -380,8 +394,61 @@ def unhandled_exception(error):
         </body>
     </html>
     """,
-        500,
+        http_status_code_for_error(error),
     )  # return error code from https://stackoverflow.com/a/7824605
+
+
+def http_status_code_for_error(error: Exception) -> int:
+    """Return the status code from an exception or 500."""
+    return getattr(error, "http_status_code", 500)
+
+
+def json_error():
+    """Return the active exception as json."""
+    _, err, _ = sys.exc_info()
+    status_code = http_status_code_for_error(err)
+    return jsonify(
+        {
+            "message": str(err),
+            "traceback": traceback.format_exc() if DEBUG else None,
+            "error": type(err).__name__,
+            "code": status_code,
+        }
+    ), status_code
+
+
+@app.post("/encrypt")
+def encrypt():
+    """Return the JSON with the encrypted token."""
+    try:
+        store = FernetStore.from_environment()
+        return jsonify({"token": store.encrypt(request.json)})
+    except:
+        return json_error()
+
+
+@app.post("/decrypt")
+def decrypt():
+    """Return JSON with the decrypted token."""
+    try:
+        store = FernetStore.from_environment()
+        token = request.json["token"]  # string
+        passwords = request.json["passwords"]  # list of strings
+        return jsonify(
+            {
+                "data": store.expose(token, passwords),
+                "token": token,
+            }
+        )
+    except:
+        return json_error()
+
+
+@app.get("/new-key")
+def new_key():
+    """Generate a new key."""
+    store = FernetStore.from_environment()
+    return store.generate_key()
 
 
 # make serializable for multiprocessing
@@ -395,7 +462,6 @@ please use this command:
 
     gunicorn open_web_calendar:app
     """)  # noqa: T201
-
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
 
 

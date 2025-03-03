@@ -11,6 +11,7 @@ import contextlib
 import copy
 import http.server
 import multiprocessing
+import os
 import random
 import socketserver
 import subprocess
@@ -41,7 +42,7 @@ sys.path.append(HERE / "..")
 from open_web_calendar.app import DEFAULT_SPECIFICATION, app  # noqa: E402
 
 CALENDAR_FOLDER = HERE / "calendars"
-SCREENSHOTS_FOLDER = HERE.parent / "screenshots"
+SCREENSHOTS_FOLDER = HERE.parent.parent / "screenshots"
 SCREENSHOTS_FOLDER.mkdir(parents=True, exist_ok=True)
 # timeout in seconds
 WAIT = 10
@@ -179,21 +180,44 @@ def get_free_port(start=10000, end=60000):
     return random.randint(start, end)  # noqa: S311
 
 
+def run_wsgi_server(port: int, encrypt: bool):  # noqa: FBT001
+    """Run the WSGI server."""
+    if encrypt:
+        os.environ["OWC_ENCRYPTION_KEYS"] = (
+            "cxXiQ8n7ZkgdiAZ-GX2lkANZKbZDaqqq1vdyS7eGsFw="
+        )
+    else:
+        os.environ["OWC_ENCRYPTION_KEYS"] = ""
+    run_simple("localhost", port, app)
+
+
 @fixture
-def app_server(context):
+def app_server_with_encryption(context):
+    yield from app_server(context, "encrypted", True)
+
+
+@fixture
+def app_server_without_encryption(context):
+    yield from app_server(context, "default", False)
+
+
+def app_server(context, name, encrypt):
     """Start the flask app in a server."""
     app_port = get_free_port()
+
     # from https://werkzeug.palletsprojects.com/en/2.1.x/serving/#shutting-down-the-server
     # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
-    p = multiprocessing.Process(target=run_simple, args=("localhost", app_port, app))
+    p = multiprocessing.Process(target=run_wsgi_server, args=(app_port, encrypt))
     p.start()
-    context.index_page = f"http://localhost:{app_port}/"
+    if not hasattr(context, "pages"):
+        context.pages = {}
+    context.pages[name] = url = f"http://localhost:{app_port}/"
 
     def terminate():
         with contextlib.suppress(PermissionError):
             p.terminate()  # server is already down
 
-    wait_for_http_server(context.index_page, on_error=terminate)
+    wait_for_http_server(url, on_error=terminate)
     yield
     terminate()
 
@@ -275,13 +299,14 @@ def before_all(context):
     browser = browsers[context.config.userdata["browser"]]
     use_fixture(browser, context)
     use_fixture(set_window_size, context)
-    use_fixture(app_server, context)
+    use_fixture(app_server_with_encryption, context)
+    use_fixture(app_server_without_encryption, context)
     use_fixture(calendars_server, context)
 
 
 # Set the default timezone of the browser
 # If we would like to set another timezone in the tests, we can write:
-#    Given we set the "teimzone" parameter to "Asia/Singapore"
+#    Given we set the "timezone" parameter to "Asia/Singapore"
 DEFAULT_SPECIFICATION.update(
     {
         "url": [],
@@ -296,6 +321,7 @@ def before_scenario(context, scenario):
 
     Empty url and set the timezone and other parameters.
     """
+    context.index_page = context.pages["default"]
     context.specification = copy.deepcopy(DEFAULT_SPECIFICATION)
 
 

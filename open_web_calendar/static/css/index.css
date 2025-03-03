@@ -104,3 +104,15 @@ main {
   margin: 2px;
   width: 100%;
 }
+
+#calendar-link {
+  word-wrap: break-word;
+  padding: 1em;
+  background-color: #eee;
+  border-radius: 0.66em;
+  display: block;
+}
+
+#calendar-urls {
+  padding-bottom: 1em;
+}

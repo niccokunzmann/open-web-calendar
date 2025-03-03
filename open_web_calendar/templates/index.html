@@ -13,9 +13,13 @@ SPDX-License-Identifier: GPL-2.0-only
         <script type="text/javascript">
             const specification = {{ specification | tojson | safe }};
             const language = {{ language | tojson | safe }};
+            /* Translation for dynamic elements. */
+            const translations = {
+                "button-encrypt": {{ string("button-encrypt") | tojson }},
+                "button-encrypted": {{ string("button-encrypted") | tojson }},
+            };
         </script>
-        <link href="css/index.css"
-            rel="stylesheet" type="text/css" charset="utf-8">
+        <link href="css/index.css" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
         <script src="js/index.js"></script>
         <script src="js/common.js"></script>
@@ -23,6 +27,13 @@ SPDX-License-Identifier: GPL-2.0-only
         {%- for name, code, percent in configuration["index"]["languages"]: %}
             <link rel="alternate" hreflang="{{code}}" href="/index.html?language={{code}}" />
         {%- endfor %}
+        <style>
+            {%- if not configuration["encryption"] %}
+            .encryption-required {
+                display: none;
+            }
+            {%- endif %}
+        </style>
     </head>
     <body>
         <header>
@@ -52,10 +63,18 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <ul id="calendar-urls">
                 </ul>
+                <p class="encryption-required">
+                    {{ html("password-urls") }}
+                    🔑
+                    <input type="password" id="encryption-password" />
+                    <input type="button" onclick="toggleUrlPasswordVisibility()" value="👁" id="toggle-password-visibility"/>
+                    <input type="button" onclick="decryptURLs()" value="🔓 {{ string("decrypt-urls") }}" />
+                </p>
                 <p>
                     <a id="calendar-link"></a>
-                    <br/>
-                    {{ html("calendar-code") }}
+                    <p>
+                        {{ html("calendar-code") }}
+                    </p>
                     <pre id="calendar-code" class="code"></pre>
                     {{ html("calendar-code-execution") }}
                     <div id="calendar-code-execution"></div>

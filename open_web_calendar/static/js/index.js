@@ -9,6 +9,31 @@
 const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/open_web_calendar/default_specification.yml";
 const USER_PREFERRED_LANGUAGE = navigator.language.split("-")[0]; // credits to https://stackoverflow.com/a/3335420/1320237
 const RAW_GITHUB_STATIC_URL = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static"; // content served by the open web calendar and statically on github
+const ENCRYPTION_PREFIX = "fernet://";
+
+/* Encrypt a JSON value and return the response.
+    {'token':'encrypt://...'}
+*/
+async function encryptJson(json) {
+    // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    const url = "/encrypt";
+    json.password = document.getElementById("encryption-password").value;
+    const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(json),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}: ${response.text()}`);
+    }
+    return await response.json();
+}
+
+function canEncrypt(url) {
+    return !url.startsWith(ENCRYPTION_PREFIX) && !RegExp(/^\s*$/).exec(url)
+}
 
 
 function updateUrls() {
@@ -17,18 +42,18 @@ function updateUrls() {
 }
 
 function updateCalendarInputs() {
-    var urlInputs = document.getElementsByClassName("calendar-url-input");
-    var calendarUrls = document.getElementById("calendar-urls");
-    var hasEmptyInput = false;
-    var calendar_index;
+    const urlInputs = document.getElementsByClassName("calendar-url-input");
+    const calendarUrls = document.getElementById("calendar-urls");
+    let hasEmptyInput = false;
+    let calendar_index;
     for (calendar_index = 0; calendar_index < urlInputs.length; calendar_index+= 1) {
-        var urlInput = urlInputs[calendar_index];
+        const urlInput = urlInputs[calendar_index];
         hasEmptyInput |= urlInput.value == "";
     }
     if (!hasEmptyInput) {
-        var li = document.createElement("li");
+        const li = document.createElement("li");
         /* input for urls */
-        var input = document.createElement("input");
+        const input = document.createElement("input");
         input.type = "text";
         input.classList.add("calendar-url-input");
         input.addEventListener("change", updateUrls);
@@ -39,16 +64,43 @@ function updateCalendarInputs() {
         <input type="color" value="#fefefe"
                placeholder="black" class="color-input"
                cssTemplate=".dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: {color}; }">*/
-        var color = document.createElement("input");
+        const color = document.createElement("input");
         color.type = "color";
         color.classList.add("color-input");
         color.value = "#fefefe";
-        var cssTemplate = ".CALENDAR-INDEX-" + calendar_index + ", .CALENDAR-INDEX-" + calendar_index + " .dhx_body, .CALENDAR-INDEX-" + calendar_index + " .dhx_title  { background-color: {color}; } \n";
+        const cssTemplate = ".CALENDAR-INDEX-" + calendar_index + ", .CALENDAR-INDEX-" + calendar_index + " .dhx_body, .CALENDAR-INDEX-" + calendar_index + " .dhx_title  { background-color: {color}; } \n";
         color.setAttribute("cssTemplate", cssTemplate);
         color.addEventListener("change", updateUrls);
         color.addEventListener("keyup", updateUrls);
         li.appendChild(color);
+        /* Encrypt and decrypt urls */
+        const encryptButton = document.createElement("button");
+        encryptButton.innerText = translations["button-encrypt"];
+        encryptButton.classList.add("encrypt-button");
+        encryptButton.classList.add("encryption-required");
+        encryptButton.urlInput = input;
+        encryptButton.addEventListener("click", function() {
+            const url = input.value;
+            if (canEncrypt(url)) {
+                /* not encrypted */
+                encryptJson({
+                    "url": url
+                }).then(function(response) {
+                    input.value = response["token"];
+                    updateUrls();
+                });
+            }
+        });
+        li.appendChild(encryptButton);
         calendarUrls.appendChild(li);
+    }
+    const encryptButtons = document.getElementsByClassName("encrypt-button");
+    for (const encryptButton of encryptButtons) {
+        const url = encryptButton.urlInput.value;
+        encryptButton.innerText = url.startsWith(ENCRYPTION_PREFIX) ? 
+            "🔒 " + translations["button-encrypted"] :
+            "🔑 " + translations["button-encrypt"];
+        encryptButton.disabled = !canEncrypt(url);
     }
 }
 
@@ -614,6 +666,7 @@ window.addEventListener("load", function(){
     // updating what can be seen
     updateOutputs();
     fillDefaultSpecificationLink();
+    fillPasswordField();
 });
 
 String.prototype.formatUnicorn = String.prototype.formatUnicorn ||
@@ -646,4 +699,52 @@ function arraysEqual(a, b) {
     if (!arraysEqual(a[i], b[i])) return false;
   }
   return true;
+}
+
+function toggleUrlPasswordVisibility() {
+    const password = document.getElementById("encryption-password");
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
+}
+
+function fillPasswordField() {
+    const password = document.getElementById("encryption-password");
+    // see https://stackoverflow.com/a/9719815/1320237
+    password.value = Math.random().toString(36).slice(-8);
+}
+
+async function decrypt(token) {
+    const url = "/decrypt";
+    json = {
+        "passwords": [document.getElementById("encryption-password").value],
+        "token": token,
+    }
+    const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(json),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}: ${response.text()}`);
+    }
+    return await response.json();
+}
+
+function decryptURLs() {
+    const password = document.getElementById("encryption-password").value;
+    const urlInputs = document.getElementsByClassName("calendar-url-input");
+    for (let urlInput of urlInputs) {
+        const url = urlInput.value;
+        if (url.startsWith(ENCRYPTION_PREFIX)) {
+            decrypt(url, password).then(function(result) {
+                urlInput.value = result.data.url;
+                updateUrls();
+            });
+        }
+    }
 }
