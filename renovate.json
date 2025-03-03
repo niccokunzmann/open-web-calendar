@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended"
   ],
-  "dependencyDashboard": true,
+  "dependencyDashboard": false,
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
