@@ -9,6 +9,7 @@
 const EXAMPLE_SPECIFICATION = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/open_web_calendar/default_specification.yml";
 const USER_PREFERRED_LANGUAGE = navigator.language.split("-")[0]; // credits to https://stackoverflow.com/a/3335420/1320237
 const RAW_GITHUB_STATIC_URL = "https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static"; // content served by the open web calendar and statically on github
+const ENCRYPTION_PREFIX = "fernet://";
 
 /* Encrypt a JSON value and return the response.
     {'token':'encrypt://...'}
@@ -16,6 +17,7 @@ const RAW_GITHUB_STATIC_URL = "https://raw.githubusercontent.com/niccokunzmann/o
 async function encryptJson(json) {
     // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     const url = "/encrypt";
+    json.password = document.getElementById("encryption-password").value;
     const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(json),
@@ -30,7 +32,7 @@ async function encryptJson(json) {
 }
 
 function canEncrypt(url) {
-    return !url.startsWith("fernet://") && !RegExp(/^\s*$/).exec(url)
+    return !url.startsWith(ENCRYPTION_PREFIX) && !RegExp(/^\s*$/).exec(url)
 }
 
 
@@ -95,7 +97,7 @@ function updateCalendarInputs() {
     const encryptButtons = document.getElementsByClassName("encrypt-button");
     for (const encryptButton of encryptButtons) {
         const url = encryptButton.urlInput.value;
-        encryptButton.innerText = url.startsWith("fernet://") ? 
+        encryptButton.innerText = url.startsWith(ENCRYPTION_PREFIX) ? 
             "🔒 " + translations["button-encrypted"] :
             "🔑 " + translations["button-encrypt"];
         encryptButton.disabled = !canEncrypt(url);
@@ -664,6 +666,7 @@ window.addEventListener("load", function(){
     // updating what can be seen
     updateOutputs();
     fillDefaultSpecificationLink();
+    fillPasswordField();
 });
 
 String.prototype.formatUnicorn = String.prototype.formatUnicorn ||
@@ -704,5 +707,56 @@ function toggleUrlPasswordVisibility() {
         password.type = "text";
     } else {
         password.type = "password";
+    }
+}
+
+function fillPasswordField() {
+    const password = document.getElementById("encryption-password");
+    function savePassword() {
+        localStorage.setItem("encryption-password", password.value);
+    }
+    password.addEventListener("change", savePassword);
+    password.addEventListener("keyup", savePassword);
+    const previousPassword = localStorage.getItem("encryption-password");
+    if (previousPassword) {
+        password.value = previousPassword;
+    } else {
+        // see https://stackoverflow.com/a/9719815/1320237
+        password.value = Math.random().toString(36).slice(-8);
+        savePassword();
+    }
+}
+
+async function decrypt(token) {
+    const url = "/decrypt";
+    json = {
+        "passwords": [document.getElementById("encryption-password").value],
+        "token": token,
+    }
+    const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(json),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}: ${response.text()}`);
+    }
+    return await response.json();
+}
+
+function decryptURLs() {
+    const password = document.getElementById("encryption-password").value;
+    const urlInputs = document.getElementsByClassName("calendar-url-input");
+    for (let urlInput of urlInputs) {
+        const url = urlInput.value;
+        if (url.startsWith(ENCRYPTION_PREFIX)) {
+            decrypt(url, password).then(function(result) {
+                console.log(result);
+                urlInput.value = result.data.url;
+                updateUrls();
+            });
+        }
     }
 }

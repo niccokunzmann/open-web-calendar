@@ -307,6 +307,16 @@ def step_impl(context, text, field_id):
         f"Expected {text!r} in {field_id} but got {actual_text!r}."
     )
 
+@then('"{text}" is not written in "{field_id}"')
+@then('"" is not written in "{field_id}"')
+def step_impl(context, field_id, text=""):
+    """Check that a field has not a value."""
+    input_element = context.browser.find_element(By.ID, field_id)
+    actual_text = input_element.get_attribute("value")
+    assert actual_text != text, (
+        f"Expected a different text than {text!r} in {field_id}."
+    )
+
 
 @when('we write the date {day}/{month}/{year} into "{field_id}"')
 def step_impl(context, year, month, day, field_id):
@@ -378,6 +388,18 @@ def step_impl(context, attribute, expected_value):
 def step_impl(context, attribute):
     """Check the JSON value of an attribute."""
     assert_specification_has_value(context, attribute)
+
+
+@when('we click the button "{text}"')
+def step_impl(context, text):
+    """Click the only button with this label."""
+    buttons = context.browser.find_elements(
+        By.XPATH,
+        f"//input[@type = 'button' and contains(@value, {text!r})]"
+    )
+    assert len(buttons) == 1, \
+        f"Expected one button with the text {text!r} but got {buttons}."
+    buttons[0].click()
 
 
 @when('we click on the {tag:S} "{text}"')
@@ -539,3 +561,9 @@ def step_impl(context):
     """The password is a password input."""
     element = context.browser.find_element(By.ID, "encryption-password")
     assert element.get_attribute("type") == "password"
+
+@when("we reload the page")
+def step_impl(context):
+    """Reload the page."""
+    # see https://stackoverflow.com/a/52546865/1320237
+    context.browser.refresh()
