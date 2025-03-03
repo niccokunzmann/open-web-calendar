@@ -28,10 +28,12 @@ COPY docker/constraints.txt .
 ENV PIP_CONSTRAINT=constraints.txt
 COPY requirements/base.txt requirements.txt
 COPY pyproject.toml .
-RUN apk add --no-cache gcc libc-dev libxml2 libxml2-dev libxslt libxslt-dev \
+# see https://stackoverflow.com/a/64352966/1320237
+RUN apk add --no-cache cargo gcc libc-dev libffi libffi-dev libxml2 libxml2-dev libxslt \
+ && apk add --no-cache libxslt-dev openssl openssl-dev python3-dev rust \
  && pip install --upgrade --no-cache-dir pip \
  && pip install --upgrade --no-cache-dir -r requirements.txt \
- && apk del libxslt-dev libxml2-dev gcc libc-dev
+ && apk del libxslt-dev libxml2-dev gcc libc-dev python3-dev libffi-dev openssl-dev rust cargo
 
 # Start service
 ENTRYPOINT ["/bin/sh", "start-service.sh"]
