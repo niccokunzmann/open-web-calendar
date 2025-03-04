@@ -832,8 +832,13 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч"
+"Update Italian translation by albanobattistella, Ukranian by Максим "
+"Горпиніч, German by Nicco Kunzmann"
 msgstr ""
+
+#~ msgid ""
+#~ "Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Update Ukrainian translation by Максим Горпиніч, Hungarian by Vág Csaba, "
