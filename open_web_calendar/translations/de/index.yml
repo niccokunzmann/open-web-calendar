@@ -105,3 +105,9 @@ map-link-location-description: Schreibe eine URL hier rein und füge {location} 
   ein, wo der Text vom Ort stehen würde.
 map-link-geo-description: Gib eine URL zur Karte hier ein. {lat} und {lon} stehen
   an der Stelle der Koordinaten.
+button-encrypt: URL Verschlüsseln
+button-encrypted: Verschlüsselt
+password-urls: Wir empfehlen, URLs zu verschlüsseln, wenn sie vertrauliche Daten enthalten.
+  Speichere das folgende Passwort nur dann ab, wenn du vorhast diese irgendwann zu
+  entschlüsseln.
+decrypt-urls: URLs entschlüsseln
