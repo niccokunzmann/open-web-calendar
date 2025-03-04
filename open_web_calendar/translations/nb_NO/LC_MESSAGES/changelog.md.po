@@ -796,6 +796,45 @@ msgid ""
 "Finnish by Ricky Tigg, German by Nicco Kunzmann"
 msgstr ""
 
+msgid "v1.48"
+msgstr ""
+
+msgid "Fix automatic updates of dependencies by Renovate"
+msgstr ""
+
+msgid ""
+"Add encryption of URLs, see [Issue "
+"468](https://github.com/niccokunzmann/open-web-calendar/issues/468)"
+msgstr ""
+
+msgid "Add `cryptography` to encrypt and decrypt URLs with the Fernet cipher"
+msgstr ""
+
+msgid "Support `fernet://` links with encrypted JSON content"
+msgstr ""
+
+msgid ""
+"Use `bcrypt` to check if the password is correct and the decrypted value can"
+" be exposed to the user"
+msgstr ""
+
+msgid ""
+"Add documentation on how to setup encryption with the `OWC_ENCRYPTION_KEYS` "
+"environment variable"
+msgstr ""
+
+msgid "Add `/encrypt` and `/decrypt` JSON endpoints"
+msgstr ""
+
+msgid ""
+"Remove stack traces from production output as they might contain sensitive "
+"data"
+msgstr ""
+
+msgid ""
+"Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч"
+msgstr ""
+
 #~ msgid ""
 #~ "Update Ukrainian translation by Максим Горпиніч, Hungarian by Vág Csaba, "
 #~ "Finnish by Ricky Tigg,"
