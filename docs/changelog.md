@@ -16,6 +16,18 @@ The latest version might not be released, yet.
 <!-- Contributors, if you like to be linked, please put your name down here with a link. -->
 [தமிழ்நேரம்]: https://tamilneram.github.io/
 
+## v1.48
+
+- Fix automatic updates of dependencies by Renovate
+- Add encryption of URLs, see [Issue 468](https://github.com/niccokunzmann/open-web-calendar/issues/468)
+  - Add `cryptography` to encrypt and decrypt URLs with the Fernet cipher
+  - Support `fernet://` links with encrypted JSON content
+  - Use `bcrypt` to check if the password is correct and the decrypted value can be exposed to the user
+  - Add documentation on how to setup encryption with the `OWC_ENCRYPTION_KEYS` environment variable
+  - Add `/encrypt` and `/decrypt` JSON endpoints
+- Remove stack traces from production output as they might contain sensitive data
+- Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч
+
 ## v1.47
 
 - Add option to download events in ICS format, see [Issue 206](https://github.com/niccokunzmann/open-web-calendar/issues/206)
