@@ -26,7 +26,7 @@ The latest version might not be released, yet.
   - Add documentation on how to setup encryption with the `OWC_ENCRYPTION_KEYS` environment variable
   - Add `/encrypt` and `/decrypt` JSON endpoints
 - Remove stack traces from production output as they might contain sensitive data
-- Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч
+- Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч, German by Nicco Kunzmann
 
 ## v1.47
 
