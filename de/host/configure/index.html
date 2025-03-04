@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ed5tui38/de/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hn64iiyy/de/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ed5tui38/de/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hn64iiyy/de/host/configure/index.png" >
       
     
     
@@ -1097,9 +1097,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+  <a href="#squid-als-proxy-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Squid as a Proxy Server
+      Squid als Proxy-Server
     </span>
   </a>
   
@@ -1136,8 +1136,8 @@
 <li>Ändern, wie der Server funtioniert.</li>
 </ul>
 <h2 id="den-standard-kalender-anpassen">Den Standard-Kalender anpassen<a class="headerlink" href="#den-standard-kalender-anpassen" title="Fester Link">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="/assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="/assets/default_specification.yml">default_specification</a>.</p>
-<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
+<p>Die Grundeinstellungen aller Kalender befinden sich in der <a href="/assets/default_specification.yml">default_specification</a>. All diese Einstellungen können durch eine Kopie der Datei verändert werden, die irgendwo im Web zu finden ist. Ihre URL muss dann als <code>specification_url</code> Parameter angegeben werden. Jeder Parameter sollte in der <a href="/assets/default_specification.yml">default_specification</a> dokumentiert sein.</p>
+<p>Um <strong>alle Kalender</strong> einer Instanz zu verändern, benutze die Umgebungsvariable <a href="#owc_specification">OWC_SPECIFICATION</a>. Kalender überschreiben dann immer noch ihre Einstellungen. Die Einstellungen, die die Kalender nicht selbst vornehmen, werden durch diese Voreinstellungen bestimmt. Nicht alle Werte werden auf der Konfigurationsseite angeboten. Trotzdem können sie durch die <code>specification_url</code> und die URL-Parameter verändert werden.</p>
 <p>Wahrscheinlich willst Du die folgenden Werte ändern.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Fester Link">&para;</a></h3>
 <p>Der Titel der Webseite.</p>
@@ -1153,7 +1153,7 @@
 <p>Wenn Du diesen Dienst auf einem eigenen Server betreibst, dann kannst Du unsere <a href="../privacy-policy">Datenschutzerklärung</a> verwenden.</p>
 <p>Solltest Du DIch aus irgendeinem Grund entscheiden, personenbezogene Daten zu speichern, z.B. im HTTPS-Proxy die IP-Adressen, dann musst Du eine eigene Datenschutzerklärung erstellen. Du kannst darin die des Projektes verlinken.</p>
 <h3 id="mehr-werte">Mehr Werte<a class="headerlink" href="#mehr-werte" title="Fester Link">&para;</a></h3>
-<p>There are loads more values that can be changed. Please refer to the <a href="/assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
+<p>Es gibt viel mehr Werte, die verändert werden können. Siehe <a href="/assets/default_specification.yml">default_specification</a>. Diese Werte sind alle dokumentiert. Benutze die Umgebungsvariable <a href="#owc_specification">OWC_SPECIFICATION</a>, um sie zu ändern.</p>
 <p>Siehe auch:</p>
 <ul>
 <li><a href="../../dev/api">Entwickler-API</a></li>
@@ -1162,17 +1162,17 @@
 <p>Umgebungsvariablen beeinflussen nur das Verhalten des Servers. Diese Umgebungsvariablen können für den Server verwendet werden:</p>
 <h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="Fester Link">&para;</a></h3>
 <p>Standardwert: leer</p>
-<p>The clients divided by comma that are allowed to access the Open Web Calendar. You will see this text if you try to access the service and you are not allowed:</p>
+<p>Die Klienten durch Komma getrennt, die den Open Web Calendar benutzen dürfen. Du wirst diesen Text sehen, wenn du den Dienst benutzen willst aber nicht darfst:</p>
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
 <p>Examples:</p>
 <ul>
-<li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
-<li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
-<li>permit everyone to access the server (default): <code>ALLOWED_HOSTS=</code> or <code>ALLOWED_HOSTS=*</code></li>
+<li>Nur den eigenen Computer zulassen: <code>ALLOWED_HOSTS=localhost</code></li>
+<li>Mehrere Computer zulassen: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
+<li>Allen erlauben, den Server zu benutzen (Voreinstellung): <code>ALLOWED_HOSTS=</code> oder <code>ALLOWED_HOSTS=*</code></li>
 </ul>
-<p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
+<p>Diese Funktionalität wird durch <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a> bereitgestellt.</p>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Fester Link">&para;</a></h3>
 <p>Standardwert: <code>5000</code>, im Docker-Container: <code>80</code></p>
 <p>Der Netzwerk-Port auf dem der Dienst läuft.</p>
@@ -1181,19 +1181,17 @@
 <li>Den HTTP-Port nutzen: <code>PORT=80</code></li>
 </ul>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Fester Link">&para;</a></h3>
-<p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
+<p><code>OWC_SPECIFICATION</code> ist eine optionale Umgebungsvariable.</p>
 <ul>
-<li>It can be a <strong>path</strong> to a file containing valid YAML or JSON.</li>
-<li>It can be a <strong>string</strong> containing valid YAML or JSON.</li>
+<li>Das kann ein <strong>Pfad</strong> zu einer Datei mit YAML- oder JSON-Inhalt sein.</li>
+<li>Das kann eine YAML oder JSON <strong>Zeichenkette</strong> sein.</li>
 </ul>
-<p>Setting <code>OWC_SPECIFICATION</code> allows you to replace default values for all calendars.</p>
+<p>Durch Setzen der <code>OWC_SPECIFICATION</code>-Variable werden die Voreinstellungen aller Kalender geändert.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>New versions of the Open Web Calendar can add new configuration parameters.
-Placing your changes in this variable instead of changing the <code>default_specification</code> file
-will ensure that you do not break the Open Web Calendar in a future version.</p>
+<p class="admonition-title">Anmerkung</p>
+<p>Neue Versionen des Offenen Web-Kalenders können neue Einstellungen hinzufügen. Wenn Deine Voreinstellungen in dieser Variable sind, dann ist sicher gestellt, dass neue Versionen sofort funktionieren. Verändere besser nicht die <code>default_specification</code>.</p>
 </div>
-<p>In following example, the title for all calendars that do not set their own title will be changed.</p>
+<p>Im folgenden Beispiel werden die Titel aller Kalender gesetzt, die nicht ihren eigenen Titel setzen.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
 <p>Siehe auch:</p>
@@ -1215,18 +1213,18 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <li>Schnelles Neuladen: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
 </ul>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Fester Link">&para;</a></h3>
-<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>Voreinstellung <code>false</code>, Werte <code>true</code> oder <code>false</code>, immer <code>false</code> im Dockercontainer</p>
 <p>Setze das Debug-Flag für die App.</p>
 <h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Fester Link">&para;</a></h3>
 <p>Standardwert: leer</p>
-<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>Das ist eine Liste von Schlüsseln, die durch Komma getrennt sind. Diese Schlüssel werden genutzt, um vertrauliche Informationen zu verstecken.</p>
 <p>Examples:</p>
 <ul>
-<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+<li>Keine Verschlüsselung anbieten (Voreinstellung): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Einen Schlüssel benutzen: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Mehrere Schlüssel benutzen: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> Wenn Du mehrere Schlüssel angibst, wird der erste zum Verschlüsseln genutzt. Die anderen entschlüsseln nur.</li>
 </ul>
-<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<p>Du kannst einen neuen Schlüssel erzeugen, indem du deinen Offenen Web-Kalender auf der <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a>-Seite besuchst oder diesen Befehl ausführst:</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
 </code></pre></div>
 <p>Siehe auch:</p>
@@ -1239,12 +1237,12 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <li><strong>Flask</strong> hat <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">mehr Umgebungsvariablen</a></strong>, die verändern, wie der Server Inhalte liefert.</li>
 <li><strong>requests</strong> wird genutzt, um die <code>.ics</code>-Dateien herunterzuladen. Du kannst einen <a href="#ssrf-protection-with-a-proxy-server">Proxy bestimmen</a>.</li>
 </ul>
-<p>The Open Web Calendar relies on proxy servers for these features:</p>
+<p>Der Offene Web-Kalender braucht einen Proxy, um Folgendes zu erreichen:</p>
 <ul>
-<li><strong>Access Control and Users</strong> To restrict who can use the Open Web Calendar, you can use <code>nginx</code> or <code>apache</code> as a reverse proxy in front of it. YuNoHost is another self-hosting option to restrict access.</li>
-<li><strong>HTTPS Encryption</strong> This can be done by <code>nginx</code>, <code>apache</code> or <code>caddy</code>.</li>
-<li><strong>More Advanced Caching</strong> Basic caching is handeled by the Open Web Calendar. For more advanced cache configuration, use a proxy server like <code>squid</code>. Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.</li>
-<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+<li><strong>Zugriffsbeschränkung und Nutzerrechte</strong> Um zu bestimmen, wer den Offenen Web-Kalender benutzen kann, kannst du <code>nginx</code> oder <code>apache</code> als Reverse-Proxy davorschalten. YuNoHost ist eine andere Option, wie man Zugriff verwalten kann.</li>
+<li><strong>HTTPS Verschlüsselung</strong> Das kannst Du mit <code>nginx</code>, <code>apache</code> oder <code>caddy</code> erreichen.</li>
+<li><strong>Besseres Caching</strong> Rudimentäres Caching ist im Offenen Web-Kalender eingebaut. Um genauere Einstellungen zu treffen, benutze einen Proxy wie <code>squid</code>. Sie die Dokumentation darunter an, um so einen Proxy zu benutzen.</li>
+<li><strong>Zugriff auf Kalender</strong> Standardmäßig wird der Offene Web-Kalender nicht einschränken, welche Kalender angezeigt werden. Benutze einen Proxy, um die Kalender zu filtern. Wenn der Offene Web-Kalender hinter einer Firewall neben anderen Diensten läuft, ist es geraten, einen Proxy zu verwenden, um SSRF-Atacken vorzubeugen.</li>
 </ul>
 <h2 id="ssrf-schutz-druch-einen-proxy">SSRF-Schutz druch einen Proxy<a class="headerlink" href="#ssrf-schutz-druch-einen-proxy" title="Fester Link">&para;</a></h2>
 <p>Der offene Web-Kalender kann genutzt werden, um das lokale Netz hinter einer Firewall zu scannen, siehe <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. Dieser freie Zugang ist gewollt, um Kalender von überall anzuzeigen. Da <code>requests</code> genutzt wird, kann ein Proxy zwischengeschaltet werden. Das ist in der <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code>-Dokumentation</a> bechrieben. Der Proxy kann dann das Filtern übernehmen.</p>
@@ -1256,16 +1254,14 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">SSRF-Atacken durch einen Proxy abwehren</a></li>
 </ul>
-<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="Fester Link">&para;</a></h2>
-<p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
+<h2 id="squid-als-proxy-server">Squid als Proxy-Server<a class="headerlink" href="#squid-als-proxy-server" title="Fester Link">&para;</a></h2>
+<p><a href="https://www.squid-cache.org/">Squid</a> ist ein Proxy und Cache, flexibel ein einstellbar. Du kannst ihn vor den Offenen Web-Kalender schalten, um Zugriff und Caching einzustellen.</p>
 <div class="admonition note">
-<p class="admonition-title">Operating System</p>
-<p>Squid is avaiable for all major platforms.
-For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
-The commands might work on other systems, but that is not tested.</p>
+<p class="admonition-title">Betriebssystem</p>
+<p>Squid funktioniert auf allen gängigen Plattformen. Für die Kommandos und die Pfade in diesem Tutorial nehmen wir an, dass Squid auf einem Debian/Ubuntu läuft. Die Kommandos können auch auf anderen Systemen funktionieren. Das ist dann aber nicht gestestet.</p>
 </div>
-<p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
-<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<p>Nachdem Du den <a href="https://www.squid-cache.org/">Squid</a> Proxy installiert hast, füge diese Datei in das <code>conf.d</code>-Verzeichnis ein. Squid wird diese dann beim Start laden.</p>
+<p>In Linux, erstelle <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
 <span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
 <span class="c1">## should be allowed</span>
@@ -1290,21 +1286,21 @@ http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span cl
 <span class="c1">## See https://superuser.com/a/1443889</span>
 dns_v4_first<span class="w"> </span>on
 </code></pre></div>
-<p>The list above denies the Open Web Calendar access to all known local/internal networks. If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.</p>
-<p>On Linux, you can install the file with this command:</p>
+<p>Diese Liste verweigert dem Offenen Web-Kalender Zugriff auf lokale und interne Netzwerke. Wenn Du andere lokale Netzwerke hast (IPv4 oder IPv6), dann füge sie der Liste hinzu.</p>
+<p>Auf Linux kannst du diese Datei mit diesem Kommando installieren:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>/etc/squid/conf.d/open-web-calendar.conf<span class="w"> </span>https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
 </code></pre></div>
-<p>Then, restart the squid proxy.</p>
+<p>Dann starte den Squid Proxy neu.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>squid<span class="w"> </span>reload
 </code></pre></div>
-<p>Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on <code>localhost</code>. Setting this variable changes depending on how you run the Open Web Calendar.</p>
-<p>If you use the <a href="../pypi">Python Setup</a>, you can set the environment variables for the server like this:</p>
+<p>Setze die Umgebungsvariablen, um dem Offenen Web-Kalender mitzuteilen, dass er den Squid Proxy benutzen soll, der auf <code>localhost</code> läuft. Wie genau diese Variable gesetzt wird, unterscheidet sich je nach dem, wie der Offene Web-Kalender ausgeführt wird.</p>
+<p>Solltest du z.B. ihn mit <a href="../pypi">Python</a> installiert haben, dann kannst du die Umgebung so konfigurieren:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<p>Wenn Du versuchst, einen verbotenen Kalender mit dem lokalen <code>open-web-calendar</code> zu besuchen, z.B. <code>http://172.16.0.1/calendar.ics</code>, dann siehst du diese Nachricht:</p>
 <blockquote>
 <p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
 </blockquote>
