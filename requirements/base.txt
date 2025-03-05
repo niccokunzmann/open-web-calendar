@@ -6,9 +6,9 @@
 #    pip-compile-multi
 #
 bcrypt==4.3.0
-    # via -r requirements/base.in
+    # via -r base.in
 beautifulsoup4==4.13.3
-    # via -r requirements/base.in
+    # via -r base.in
 blinker==1.9.0
     # via flask
 cachelib==0.13.0
@@ -25,39 +25,39 @@ click==8.1.8
     #   typer
     #   x-wr-timezone
 cryptography==44.0.2
-    # via -r requirements/base.in
+    # via -r base.in
 flask==3.1.0
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   flask-allowed-hosts
     #   flask-caching
 flask-allowed-hosts==1.2.0
-    # via -r requirements/base.in
+    # via -r base.in
 flask-caching==2.3.1
-    # via -r requirements/base.in
+    # via -r base.in
 gunicorn==23.0.0
-    # via -r requirements/base.in
+    # via -r base.in
 icalendar==6.1.1
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   icalendar-compatibility
     #   mergecal
     #   recurring-ical-events
     #   x-wr-timezone
 icalendar-compatibility==0.1.4
-    # via -r requirements/base.in
+    # via -r base.in
 idna==3.10
     # via requests
 itsdangerous==2.2.0
     # via flask
-jinja2==3.1.5
+jinja2==3.1.6
     # via flask
 lxml==5.3.1
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   lxml-html-clean
 lxml-html-clean==0.4.1
-    # via -r requirements/base.in
+    # via -r base.in
 markdown-it-py==3.0.0
     # via rich
 markupsafe==3.0.2
@@ -67,7 +67,7 @@ markupsafe==3.0.2
 mdurl==0.1.2
     # via markdown-it-py
 mergecal==0.5.0
-    # via -r requirements/base.in
+    # via -r base.in
 packaging==24.2
     # via gunicorn
 pycparser==2.22
@@ -81,11 +81,11 @@ python-dateutil==2.9.0.post0
     #   icalendar
     #   recurring-ical-events
 pyyaml==6.0.2
-    # via -r requirements/base.in
+    # via -r base.in
 recurring-ical-events==3.5.2
-    # via -r requirements/base.in
+    # via -r base.in
 requests[socks]==2.32.3
-    # via -r requirements/base.in
+    # via -r base.in
 rich==13.9.4
     # via
     #   mergecal

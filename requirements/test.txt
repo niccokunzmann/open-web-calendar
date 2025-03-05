@@ -11,7 +11,7 @@ attrs==25.1.0
     #   reuse
     #   trio
 behave==1.2.6
-    # via -r requirements/test.in
+    # via -r test.in
 binaryornot==0.4.4
     # via reuse
 boolean-py==4.0
@@ -32,7 +32,7 @@ idna==3.10
     # via trio
 iniconfig==2.0.0
     # via pytest
-jinja2==3.1.5
+jinja2==3.1.6
     # via reuse
 license-expression==30.4.1
     # via reuse
@@ -55,15 +55,15 @@ pluggy==1.5.0
 pysocks==1.7.1
     # via urllib3
 pytest==8.3.5
-    # via -r requirements/test.in
+    # via -r test.in
 python-debian==0.1.49
     # via reuse
 reuse==5.0.2
-    # via -r requirements/test.in
+    # via -r test.in
 ruff==0.9.9
-    # via -r requirements/test.in
+    # via -r test.in
 selenium==4.29.0
-    # via -r requirements/test.in
+    # via -r test.in
 six==1.17.0
     # via
     #   behave
