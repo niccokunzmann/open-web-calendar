@@ -9,7 +9,7 @@ from icalendar import Calendar, Event, Timezone
 from icalendar.prop import vDDDTypes
 from mergecal import merge_calendars
 
-from open_web_calendar.calendars import Calendars
+from open_web_calendar.calendars.base import Calendars
 
 from .conversion_base import ConversionStrategy
 

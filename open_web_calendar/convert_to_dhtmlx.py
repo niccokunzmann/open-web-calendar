@@ -18,7 +18,7 @@ from .conversion_base import ConversionStrategy
 if TYPE_CHECKING:
     from icalendar import Event
 
-    from open_web_calendar.calendars import Calendars
+    from open_web_calendar.calendars.base import Calendars
 
 
 def is_date(date):
@@ -81,10 +81,8 @@ class ConvertToDhtmlx(ConversionStrategy):
         )
 
     def convert_ical_event(self, calendar_index, calendar_event: Event):
-        start = calendar_event["DTSTART"].dt
-        end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
-        if is_date(start) and is_date(end) and end == start:
-            end = datetime.timedelta(days=1) + start
+        start = calendar_event.start
+        end = calendar_event.end
         location = Location(calendar_event, self.location_spec)
         name = calendar_event.get("SUMMARY", "")
         sequence = str(calendar_event.get("SEQUENCE", 0))
