@@ -15,6 +15,8 @@ from pathlib import Path
 
 from open_web_calendar.app import main
 
+from .api_mocking import Recorder
+
 HERE = Path(__file__).parent.absolute()
 CALENDAR_FOLDER = HERE.parent / "features" / "calendars"
 PORT = 8001
@@ -42,5 +44,7 @@ else:
         httpd.shutdown()
 
     atexit.register(final)
+
+Recorder.development()
 
 main()

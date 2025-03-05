@@ -6,12 +6,10 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
-from urllib.parse import ParseResult, urlparse
 
 import caldav
 
 from open_web_calendar.calendars.base import Calendars
-from open_web_calendar.util import unset_url_username_password
 
 if TYPE_CHECKING:
     from datetime import datetime
@@ -32,11 +30,9 @@ class CalDAVCalendars(Calendars):
 
             "https://username:password@nexcloud.mydomain.com/remote.php/dav/calendars/test/test_shared_by_other/"
         """
-        with caldav.DAVClient(
-            url=calendar_url
-        ) as client:
-            calendar = caldav.Calendar(client, url=calendar_url)
-            return cls(calendar)
+        client = caldav.DAVClient(url=url)
+        calendar = caldav.Calendar(client, url=url)
+        return cls(calendar)
 
     def __init__(self, calendar: caldav.Calendar):
         """Create a new CalDAV interface for one calendar."""
@@ -46,7 +42,7 @@ class CalDAVCalendars(Calendars):
         self, start: datetime, end: datetime
     ) -> list[icalendar.Event]:
         """Return a list of events that occur between start and end."""
-        events : list[caldav.Event] = self._calendar.search(
+        events: list[caldav.Event] = self._calendar.search(
             expand=True, comp_class=caldav.Event, start=start, end=end
         )
         result = []
@@ -56,7 +52,8 @@ class CalDAVCalendars(Calendars):
 
     def get_icalendars(self) -> list[icalendar.Calendar]:
         """Return a list of ICS calendars."""
-        events : list[caldav.Event] = self._calendar.events()
+        events: list[caldav.Event] = self._calendar.events()
         return [event.icalendar_instance for event in events]
+
 
 __all__ = ["CalDAVCalendars"]
