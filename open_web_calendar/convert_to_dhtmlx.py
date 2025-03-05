@@ -83,6 +83,8 @@ class ConvertToDhtmlx(ConversionStrategy):
     def convert_ical_event(self, calendar_index, calendar_event: Event):
         start = calendar_event.start
         end = calendar_event.end
+        if is_date(start) and is_date(end) and start == end:
+            end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
         name = calendar_event.get("SUMMARY", "")
         sequence = str(calendar_event.get("SEQUENCE", 0))
