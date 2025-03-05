@@ -54,7 +54,7 @@ idna==3.10
     # via requests
 importlib-metadata-argparse-version==2.0.1
     # via mdpo
-jinja2==3.1.5
+jinja2==3.1.6
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
