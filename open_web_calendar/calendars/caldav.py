@@ -32,10 +32,8 @@ class CalDAVCalendars(Calendars):
 
             "https://username:password@nexcloud.mydomain.com/remote.php/dav/calendars/test/test_shared_by_other/"
         """
-        parsed: ParseResult = urlparse(url)
-        calendar_url = unset_url_username_password(url)
         with caldav.DAVClient(
-            url=calendar_url, username=parsed.username, password=parsed.password
+            url=calendar_url
         ) as client:
             calendar = caldav.Calendar(client, url=calendar_url)
             return cls(calendar)
