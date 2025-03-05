@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+from __future__ import annotations
 
 import contextlib
 import difflib
@@ -124,14 +125,26 @@ def step_impl(context, uid, text):
     assert inner_text == text, f"Expected {text!r} but got {inner_text!r}"
 
 
-@when('we click on the event "{text}"')
-def step_impl(context, text):
+def get_events_with_text(context, text: str) -> list:
+    """Return events with the text."""
     events = context.browser.find_elements(
         By.XPATH, "//div[contains(@class, ' event ')]"
     )
-    chosen_events = [
-        event for event in events if text in event.get_attribute("innerText")
-    ]
+    return [event for event in events if text in event.get_attribute("innerText")]
+
+
+@then('we can see the event "{text}"')
+def step_impl(context, text):
+    chosen_events = get_events_with_text(context, text)
+    assert len(chosen_events) >= 1, (
+        f"There should be one event with the text {text} "
+        f"but there are none: {chosen_events}"
+    )
+
+
+@when('we click on the event "{text}"')
+def step_impl(context, text):
+    chosen_events = get_events_with_text(context, text)
     assert len(chosen_events) == 1, (
         f"There should only be one event with the text {text} "
         f"but there are {len(chosen_events)}: {chosen_events}"
@@ -554,7 +567,8 @@ def step_impl(context):
 
     This is disabled after each scenario.
     """
-    context.index_page = context.pages["encrypted"]
+    context.server.enable_encryption()
+    context.after_scenario.append(context.server.disable_encryption)
 
 
 @then("we can see the password")
@@ -576,3 +590,10 @@ def step_impl(context):
     """Reload the page."""
     # see https://stackoverflow.com/a/52546865/1320237
     context.browser.refresh()
+
+
+@given('we load the api recording "{recording}"')
+def step_impl(context, recording: str):
+    """Load a recording."""
+    context.server.start_recorded_api(recording)
+    context.after_scenario.append(context.server.stop_recorded_api)

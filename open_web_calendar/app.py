@@ -42,7 +42,9 @@ if TYPE_CHECKING:
     from open_web_calendar.conversion_base import ConversionStrategy
 
 # configuration
-DEBUG = os.environ.get("APP_DEBUG", "").lower() == "true"
+def DEBUG() -> bool:
+    """Wether we are in debug mode."""
+    return os.environ.get("APP_DEBUG", "").lower() == "true"
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(
     os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
@@ -285,7 +287,7 @@ def render_app_template(template, specification):
 
 def get_conversion(conversion: type[ConversionStrategy], specification: dict[str, Any]):
     """Return a conversion from the strategy."""
-    strategy = conversion(specification, get_text_from_url, encryption(), DEBUG)
+    strategy = conversion(specification, get_text_from_url, encryption(), DEBUG())
     strategy.retrieve_calendars()
     return set_js_headers(strategy.merge())
 
@@ -384,7 +386,7 @@ def unhandled_exception(error):
     """
     trace = (
         f"<pre>\r\n{traceback.format_exc()}</pre>"
-        if DEBUG
+        if DEBUG()
         else "Trace only avalilable if DEBUG=true."
     )
     return (
@@ -420,8 +422,8 @@ def json_error():
     status_code = http_status_code_for_error(err)
     return jsonify(
         {
-            "message": str(err) if DEBUG else None,
-            "traceback": traceback.format_exc() if DEBUG else None,
+            "message": str(err) if DEBUG() else None,
+            "traceback": traceback.format_exc() if DEBUG() else None,
             "error": type(err).__name__,
             "code": status_code,
         }
@@ -502,7 +504,7 @@ please use this command:
 
     gunicorn open_web_calendar:app
     """)  # noqa: T201
-    app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
+    app.run(debug=DEBUG(), host="0.0.0.0", port=PORT)
 
 
 __all__ = [

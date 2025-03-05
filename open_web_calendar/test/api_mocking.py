@@ -10,8 +10,9 @@ from threading import Timer
 
 from responses import (
     RequestsMock,
-    _recorder,  # requires open-web-calendar[test] extra
+    _recorder,
 )
+from responses.registries import OrderedRegistry
 
 HERE = Path(__file__).parent
 RESPONSES = HERE / "responses"
@@ -44,9 +45,7 @@ class Recorder:
         if registered == self._last_saved_registered:
             return
         file_name = RESPONSES / f"{self._name}.yml"
-        self._recorder.dump_to_file(
-            file_path=file_name, registered=registered
-        )
+        self._recorder.dump_to_file(file_path=file_name, registered=registered)
         file_name.write_text(
             file_name.read_text().replace("content-encoding: gzip", "")
         )
@@ -71,19 +70,24 @@ class Recorder:
 
 
 class Recording:
-    """Replay previous recordings."""
+    """Replay a priviously recorded API."""
 
     def __init__(self):
-        """Load a bunch of recordings."""
-        self.rsps = RequestsMock()
+        """Allow loading recorded API requests."""
+        self.rsps = RequestsMock(registry=OrderedRegistry)
 
     def load(self, name: str):
         """Load a recording and start serving it."""
-        self.rsps.start()
+        self.stop()
         path = RESPONSES / f"{name}.yml"
         # see https://github.com/getsentry/responses?tab=readme-ov-file#replay-responses-populate-registry-from-files
         self.rsps._add_from_file(file_path=path)
+        self.rsps.start()
 
     def stop(self):
         """Stop using the test API."""
         self.rsps.stop(allow_assert=False)
+        self.rsps.reset()
+
+
+__all__ = ["Recorder", "Recording"]
