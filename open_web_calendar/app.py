@@ -13,7 +13,9 @@ import tempfile
 import traceback
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Optional
+from urllib.parse import ParseResult, urlparse
 
+import caldav
 import requests
 import yaml
 import zoneinfo
@@ -28,6 +30,8 @@ from flask import (
 )
 from flask_allowed_hosts import AllowedHosts
 from flask_caching import Cache
+
+from open_web_calendar.util import set_url_username_password
 
 from . import translate, version
 from .convert_to_dhtmlx import ConvertToDhtmlx
@@ -456,6 +460,35 @@ def new_key():
     """Generate a new key."""
     store = FernetStore.from_environment()
     return store.generate_key()
+
+
+@app.post("/caldav/list-calendars")
+def list_caldav_calendars():
+    """Return a list of caldav calendars."""
+    try:
+        url = request.json["url"]
+        parsed: ParseResult = urlparse(url)
+        username = request.json.get("username", parsed.username)
+        password = request.json.get("password", parsed.password)
+        with caldav.DAVClient(url=url, username=username, password=password) as client:
+            # todo: sanitize Nextcloud by adding /remote.php/dav/
+            principal = client.principal()
+            calendars = principal.calendars()
+            return jsonify(
+                {
+                    "calendars": [
+                        {
+                            "name": calendar.name,
+                            "url": set_url_username_password(
+                                calendar.url, username, password
+                            ),
+                        }
+                        for calendar in calendars
+                    ]
+                }
+            )
+    except:
+        return json_error()
 
 
 # make serializable for multiprocessing

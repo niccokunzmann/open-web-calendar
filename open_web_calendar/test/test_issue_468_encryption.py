@@ -163,7 +163,7 @@ def test_no_url_included(store: FernetStore, client, mock):
     mock.return_value = ""
     url = store.encrypt({})
     result = cb.get_calendars_from_url(url)
-    assert result == []
+    assert not result
     mock.assert_not_called()
 
 
