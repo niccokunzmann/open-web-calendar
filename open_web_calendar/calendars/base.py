@@ -8,8 +8,6 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING
 
-from open_web_calendar.calendars.ics import ICSCalendars
-
 if TYPE_CHECKING:
     from datetime import datetime
 
@@ -25,6 +23,8 @@ class Calendars(ABC):
     @classmethod
     def empty(cls) -> Calendars:
         """There are no calendars."""
+        from open_web_calendar.calendars.ics import ICSCalendars
+
         return ICSCalendars()
 
     @abstractmethod
