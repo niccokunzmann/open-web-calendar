@@ -41,6 +41,8 @@
 #errorWindow {
     background-color: rgba(255, 208, 208, 0.9);
     z-index: 50;
+    overflow-y: auto;
+    height: 100%;
 }
 
 .fullsize {
