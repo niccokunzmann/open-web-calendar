@@ -28,7 +28,7 @@ packaging==24.2
     #   build
     #   pyproject-api
     #   tox
-pip-compile-multi==2.7.1
+pip-compile-multi==2.8.0
     # via -r requirements/dev.in
 pip-tools==7.4.1
     # via pip-compile-multi
