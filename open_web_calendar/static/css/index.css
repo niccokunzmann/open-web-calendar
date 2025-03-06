@@ -72,9 +72,12 @@ footer a {
 
 main, .navcontent {
     padding: 1em;
-    max-width: 50em;
     margin-right: auto;
     margin-left: auto;
+}
+
+section {
+  max-width: 50em;
 }
 
 .code {
@@ -232,6 +235,7 @@ nav ul {
   color: var(--secondary-color);
   text-decoration: none;
   cursor: pointer;
+  background-color: var(--background-color);
 }
 
 .button:hover {
@@ -282,6 +286,10 @@ nav ul {
   display: block;
 }
 
+#width-slider {
+  display: none;
+}
+
 /* media query goes last */
 
 @media only screen and (min-width: 70em) {
@@ -323,4 +331,13 @@ nav ul {
     position: absolute;
     bottom: 0em;
   } 
+  #width-slider {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: var(--main-width);
+    translate: -50% -50%;
+    cursor: pointer;
+    user-select: none;
+  }
 }

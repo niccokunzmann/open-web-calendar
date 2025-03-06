@@ -27,6 +27,8 @@ function initializeNavigation() {
     setTimeout(scrollToCurrentSection, 100);
     const heightSlider = document.getElementById("height-slider");
     heightSlider.onmousedown = startHeightAdjustment;
+    const widthSlider = document.getElementById("width-slider");
+    widthSlider.onmousedown = startWidthAdjustment;
   };
 
 function scrollToCurrentSection() {
@@ -98,16 +100,28 @@ function getTotalDocumentHeight() {
                         html.clientHeight, html.scrollHeight, html.offsetHeight );
 }
 
+function updateWidthOfSlider(event) {
+    document.body.style.setProperty('--main-width', event.pageX + "px");
+}
+
 function startHeightAdjustment() {
+    startSliding(updateHeightOfSlider)
+}
+
+function startWidthAdjustment() {
+    startSliding(updateWidthOfSlider)
+}
+
+function startSliding(callback) {
     // see https://stackoverflow.com/a/50238821/1320237
     const overlay = document.getElementById("overlay");
     overlay.style.height = getTotalDocumentHeight() + "px";
     document.body.classList.add("sliding");
     overlay.onmousemove = function(event) {
-        updateHeightOfSlider(event);
+        callback(event);
     }
     overlay.onmouseup = overlay.onmouseleave = function(event) {
-        updateHeightOfSlider(event);
+        callback(event);
         document.body.classList.remove("sliding");
         updateOutputs();
     };
