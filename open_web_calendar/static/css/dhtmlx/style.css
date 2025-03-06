@@ -137,3 +137,12 @@ div.dhx_agenda_line > span {
     /* see https://css-tricks.com/change-color-of-svg-on-hover/ */
     background-color: var(--dhx-scheduler-base-colors-icons);
 }
+
+:root[data-scheduler-theme="material"] .dhx_cal_scale_placeholder {
+    /* Remove the box shadow because it does not always work
+       See https://github.com/niccokunzmann/open-web-calendar/issues/449
+       We might be able to remove this once this is fixed:
+       https://github.com/DHTMLX/scheduler/issues/75
+    */
+    box-shadow: none;
+}
