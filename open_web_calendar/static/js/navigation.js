@@ -25,6 +25,8 @@ function initializeNavigation() {
         lastSection = section;
     }
     setTimeout(scrollToCurrentSection, 100);
+    const heightSlider = document.getElementById("height-slider");
+    heightSlider.onmousedown = startHeightAdjustment;
   };
 
 function scrollToCurrentSection() {
@@ -77,3 +79,36 @@ function scrollToCurrentSection() {
 
 window.addEventListener("load", initializeNavigation);
 window.addEventListener("hashchange", scrollToCurrentSection);
+
+function updateHeightOfSlider(event) {
+    // see https://www.w3schools.com/css/css3_variables_javascript.asp
+    const height = getTotalDocumentHeight() - event.pageY + 20;
+    console.log(event.pageY, getTotalDocumentHeight(), event.clientY);
+    document.body.style.setProperty('--bottom-slider-height', height + "px");
+    const display = document.getElementById("calendar-height");
+    const scheduler = document.getElementById("open-web-calendar");
+    display.innerText = scheduler.offsetHeight + "px";
+}
+
+function getTotalDocumentHeight() {
+    // see https://stackoverflow.com/a/1147768/1320237
+    const body = document.body;
+    const html = document.documentElement;
+    return Math.max( body.scrollHeight, body.offsetHeight, 
+                        html.clientHeight, html.scrollHeight, html.offsetHeight );
+}
+
+function startHeightAdjustment() {
+    // see https://stackoverflow.com/a/50238821/1320237
+    const overlay = document.getElementById("overlay");
+    overlay.style.height = getTotalDocumentHeight() + "px";
+    document.body.classList.add("sliding");
+    overlay.onmousemove = function(event) {
+        updateHeightOfSlider(event);
+    }
+    overlay.onmouseup = overlay.onmouseleave = function(event) {
+        updateHeightOfSlider(event);
+        document.body.classList.remove("sliding");
+        updateOutputs();
+    };
+}

@@ -9,6 +9,8 @@
   --secondary-color: #4f4f0e;
   --background-color: #ffffff;
   --accent-color: #fa9801;
+  --bottom-slider-height: 600px;
+  --maximum-height-of-calendar: 1200px;
 }
 
 .dark {
@@ -90,7 +92,7 @@ main, .navcontent {
 
 #open-web-calendar {
     width: 100%;
-    height: 600px;
+    height: calc(var(--maximum-height-of-calendar) - var(--bottom-slider-height));
 }
 
 #css-input {
@@ -211,40 +213,7 @@ nav ul {
   vertical-align: middle;
 } 
 
-@media only screen and (min-width: 70em) {
-  :root {
-    --main-width: 35em;
-    --nav-height: 7em;
-  }
-  aside, main {
-    display: inline-block;
-    height: calc(100% - var(--nav-height));
-    margin: 0em;
-    padding: 0em;
 
-  }
-  main {
-    float: left;
-    width: var(--main-width);
-  }
-  aside {
-    width: calc(100% - var(--main-width));
-  }
-
-  #open-web-calendar, #calendar-code-execution {
-    height: 100% !important;
-  }
-  nav {
-    display: block;
-    position: initial;
-    /* height: var(--nav-height); */
-  }
-  .bottom-navigation {
-    position: absolute;
-    bottom: 0em;
-    width: var(--main-width);
-  }
-} 
 
 #bottom-done-link:before {
   content: "✓ ";
@@ -284,4 +253,74 @@ nav ul {
 
 .belongs-together {
   display: inline-block;
+}
+
+#height-slider {
+  height: calc(var(--bottom-slider-height));
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  user-select: none;
+  color: var(--background-color);
+  background: var(--secondary-color);
+  overflow: hidden;
+}
+
+#overlay {
+  background-color: rgba(255, 255, 255, 0.01);
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0em;
+  left: 0em;
+  right: 0em;
+  bottom: 0em;
+}
+
+.sliding #overlay {
+  display: block;
+}
+
+/* media query goes last */
+
+@media only screen and (min-width: 70em) {
+  :root {
+    --main-width: 35em;
+    --nav-height: 7em;
+    --bottom-slider-height: 1.5em;
+    --maximum-height-of-calendar: 100%;
+  }
+  aside, main {
+    display: inline-block;
+    height: calc(100% - var(--nav-height));
+    margin: 0em;
+    padding: 0em;
+
+  }
+  main {
+    float: left;
+    width: var(--main-width);
+  }
+  aside, #height-slider  {
+    width: calc(100% - var(--main-width));
+  }
+
+  #calendar-code-execution {
+    height: 100%;
+  }
+  nav {
+    display: block;
+    position: initial;
+    /* height: var(--nav-height); */
+  }
+  .bottom-navigation {
+    position: absolute;
+    bottom: 0em;
+    width: var(--main-width);
+  }
+  #height-slider {
+    position: absolute;
+    bottom: 0em;
+  } 
 }
