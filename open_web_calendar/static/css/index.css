@@ -236,6 +236,11 @@ nav ul {
     position: initial;
     /* height: var(--nav-height); */
   }
+  .bottom-navigation {
+    position: absolute;
+    bottom: 0em;
+    width: var(--main-width);
+  }
 } 
 
 #bottom-done-link:before {
