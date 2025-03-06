@@ -16,6 +16,10 @@ from responses.registries import OrderedRegistry
 
 HERE = Path(__file__).parent
 RESPONSES = HERE / "responses"
+HEADER = """# SPDX-FileCopyrightText: 2025 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+"""
 
 
 class Recorder:
@@ -47,7 +51,7 @@ class Recorder:
         file_name = RESPONSES / f"{self._name}.yml"
         self._recorder.dump_to_file(file_path=file_name, registered=registered)
         file_name.write_text(
-            file_name.read_text().replace("content-encoding: gzip", "")
+            HEADER + file_name.read_text().replace("content-encoding: gzip", "")
         )
         self._last_saved_registered = registered
 

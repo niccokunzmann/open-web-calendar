@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
 """If the Open Web Calendar is started in tests in a different process.
 
 This allows communication and configuration.
