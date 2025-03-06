@@ -7,7 +7,7 @@ SPDX-License-Identifier: GPL-2.0-only
 <!DOCTYPE html>
 <html lang="{{ language }}">
     <head>
-        <title>{{ html("project-name") }}</title>
+        <title>{{ string("project-name") }}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="alternate" type="text/calendar" href="/calendar.ics{{ get_query_string() }}" />
         <script type="text/javascript">
@@ -22,6 +22,7 @@ SPDX-License-Identifier: GPL-2.0-only
         <link href="css/index.css" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="{{ specification["favicon"] }}">
         <script src="js/index.js"></script>
+        <script src="js/navigation.js"></script>
         <script src="js/common.js"></script>
         <script src="configuration.js"></script>
         {%- for name, code, percent in configuration["index"]["languages"]: %}
@@ -36,28 +37,24 @@ SPDX-License-Identifier: GPL-2.0-only
         </style>
     </head>
     <body>
-        <header>
-            <h1>{{ html("project-name") }}</h1>
-        </header>
+        <nav id="navigation" class="dark">
+            <div class="navcontent">
+                <h2><a id="navigate-previous"></a></h2>
+                <h2><a id="currect-section" ></a></h2>
+                <ul id="sections-dropdown">
+                </ul>
+                <h2><a id="navigate-next"></a></h2>
+            </div>
+        </nav>
         <main>
-            <div class="section">
+            <section id="configure-intro">  
+                <h2>{{ html("project-name") }}</h2>
                 <p>
                     {{ html("about") }}
                 </p>
-            </div>
-            <div class="section languages">
                 <p>
-                    {%- for name, code, percent in configuration["index"]["languages"]: %}
-                        <a class="{{ ('current' if code == specification['language'] else '') }}" href="/index.html?language={{code}}">{{ name }}
-                        {%- if percent != 100 -%}
-                            ({{percent}}%)
-                        {% endif -%}
-                        </a>
-                    {%- endfor %}
-                    <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
+                    {{ html("section-customization") }}
                 </p>
-            </div>
-            <div class="section">
                 <p>
                     {{ html("calendar-urls") }}
                 </p>
@@ -70,30 +67,52 @@ SPDX-License-Identifier: GPL-2.0-only
                     <input type="button" onclick="toggleUrlPasswordVisibility()" value="👁" id="toggle-password-visibility"/>
                     <input type="button" onclick="decryptURLs()" value="🔓 {{ string("decrypt-urls") }}" />
                 </p>
+            </section>
+            <section class="languages" id="configure-languages">
+                <h2>{{ html("language-title") }}</h2>
                 <p>
-                    <a id="calendar-link"></a>
-                    <p>
-                        {{ html("calendar-code") }}
-                    </p>
-                    <pre id="calendar-code" class="code"></pre>
-                    {{ html("calendar-code-execution") }}
-                    <div id="calendar-code-execution"></div>
+                    {%- for name, code, percent in configuration["index"]["languages"]: %}
+                        <a class="{{ ('current' if code == specification['language'] else '') }}" href="/index.html?language={{code}}#configure-languages">{{ name }}
+                        {%- if percent != 100 -%}
+                            ({{percent}}%)
+                        {% endif -%}
+                        </a>
+                    {%- endfor %}
+                    <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
                 </p>
-            </div>
-            <div class="section">
                 <p>
-                    {{ html("section-customization") }}
+                    <fieldset>
+                        <legend>{{ html("language-description") }}</legend>
+                        <div id="section_prefer_browser_language_false">
+                            <input type="radio" name="browser-language" id="prefer_browser_language_false" value="false"  />
+                            <label for="prefer_browser_language_false">{{ html("language-browser-false") }}</label>
+                            <select id="select-language"></select>
+                        </div>
+                        <div id="section_prefer_browser_language_true">
+                            <input type="radio" name="browser-language" id="prefer_browser_language_true" value="true" />
+                            <label for="prefer_browser_language_true">{{ html("language-browser-true") }}</label>
+                            <span id="language-chosen"></span>
+                        </div>
+                    </fieldset>
+                    <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
                 </p>
-                <h3>{{ html("title-title") }}</h3>
+            </section>
+            <section id="configure-title">
+                <h2>{{ html("title-title") }}</h2>
                 <p>
                     {{ html("title-description") }}<br/>
                     <input type="text" id="calendar-title" />
                 </p>
-                <h3>{{ html("starting-date-title") }}</h3>
+            </section>
+            <section id="configure-starting-date">
+                <h2>{{ html("starting-date-title") }}</h2>
                 <p>
                     {{ html("starting-date-description") }}<br/>
                     <input type="date" id="starting-date" required pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD"/>
                 </p>
+            </section>
+            <section id="configure-time-and-hour">
+                <h2>Time and Hours</h2>
                 <h3>{{ html("first-hour-title") }}</h3>
                 <p>
                     {{ html("first-hour-description") }}<br/>
@@ -114,7 +133,9 @@ SPDX-License-Identifier: GPL-2.0-only
                         <input class="time-increment-input" type="radio" id="time-1" name="time-select" value="1" /><label for="time-1">{{ html("time-increment-60") }}</label>
                     </form>
                 </p>
-                <h3>{{ html("hour-format-title") }}</h3>
+            </section>
+            <section id="configure-hour-format">
+                <h2>{{ html("hour-format-title") }}</h2>
                 <p>
                     {{ html("hour-format-description") }} <a href="https://docs.dhtmlx.com/scheduler/settings_format.html">{{ html("hour-format-specification-link") }}</a><br/>
                     <select id="select-hour-format">
@@ -126,24 +147,9 @@ SPDX-License-Identifier: GPL-2.0-only
                         <option value="%h:%i %A">AM/PM - 01:15 AM, 01:45 PM</option>
                     </select>
                 </p>
-                <h3>{{ html("language-title") }}</h3>
-                <p>
-                    <fieldset>
-                        <legend>{{ html("language-description") }}</legend>
-                        <div id="section_prefer_browser_language_false">
-                            <input type="radio" name="browser-language" id="prefer_browser_language_false" value="false"  />
-                            <label for="prefer_browser_language_false">{{ html("language-browser-false") }}</label>
-                            <select id="select-language"></select>
-                        </div>
-                        <div id="section_prefer_browser_language_true">
-                            <input type="radio" name="browser-language" id="prefer_browser_language_true" value="true" />
-                            <label for="prefer_browser_language_true">{{ html("language-browser-true") }}</label>
-                            <span id="language-chosen"></span>
-                        </div>
-                    </fieldset>
-                    <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
-                </p>
-                <h3>{{ html("skins-title") }}</h3>
+            </section>
+            <section id="configure-skins">
+                <h2>{{ html("skins-title") }}</h2>
                 <p>
                     {{ html("skins-description") }}<br/>
                     <!-- see the skins at the static/css/dhtmlx folder -->
@@ -156,7 +162,9 @@ SPDX-License-Identifier: GPL-2.0-only
                         <option value="contrast-white">{{ html("skins-contrast-white") }}</option>
                     </select>
                 </p>
-                <h3>{{ html("links-title") }}</h3>
+            </section>
+            <section id="configure-links">
+                <h2>{{ html("links-title") }}</h2>
                 <p>
                     {{ html("links-description") }}<br/>
                     <select id="select-target">
@@ -166,7 +174,9 @@ SPDX-License-Identifier: GPL-2.0-only
                         <option value="_top">{{ html("links-top") }}</option>
                     </select>
                 </p>
-                <h3>{{ html("map-title") }}</h3>
+            </section>
+            <section id="configure-map">
+                <h2>{{ html("map-title") }}</h2>
                 <p>
                     {{ html("map-description") }}<br/>
                     <select id="select-map">
@@ -181,7 +191,9 @@ SPDX-License-Identifier: GPL-2.0-only
                         <input type="text" id="map-link-geo" /><br/>
                     </details>
                 </p>
-                <h3>{{ html("configure-week-title") }}</h3>
+            </section>
+            <section id="configure-week">
+                <h2>{{ html("configure-week-title") }}</h2>
                 <p>
                     <select id="select-start-of-week">
                         <option value="mo">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_sun") }}</option>
@@ -190,7 +202,9 @@ SPDX-License-Identifier: GPL-2.0-only
                         <option value="work">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_fri") }}</option>
                     </select>
                 </p>
-                <h3>{{ html("style-title") }}</h3>
+            </section>
+            <section id="configure-style">
+                <h2>{{ html("style-title") }}</h2>
                 <p>
                     {{ html("style-description") }}<br/>
                 </p>
@@ -246,7 +260,9 @@ SPDX-License-Identifier: GPL-2.0-only
                     <code class="css-class-example">.error {}</code>
                     <textarea id="css-input"></textarea>
                 </p>
-                <h3>{{ html("event-status-title") }}</h3>
+            </section>
+            <section id="configure-event-status">
+                <h2>{{ html("event-status-title") }}</h2>
                 <p>
                   {{ html("event-status-description") }}<br/>
                   <form id="event-status-form">
@@ -256,7 +272,9 @@ SPDX-License-Identifier: GPL-2.0-only
                     <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-cancelled" /><label for="style-event-status-cancelled" class="STATUS-CANCELLED">{{ html("event-status-cancelled") }}</label>
                   </form>
                 </p>
-                <h3>{{ html("loader-title") }}</h3>
+            </section>
+            <section id="configure-loader">
+                <h2>{{ html("loader-title") }}</h2>
                 <p>
                   {{ html("loader-description") }}<br/>
                   <select id="select-loader">
@@ -264,7 +282,9 @@ SPDX-License-Identifier: GPL-2.0-only
                       <option value="">{{ html("loader-none") }}</option>
                   </select>
                 </p>
-                <h3>{{ html("tabs-title") }}</h3>
+            </section>
+            <section id="configure-tabs">
+                <h2>{{ html("tabs-title") }}</h2>
                 <p>
                   {{ html("tabs-description") }}<br/>
                   <select id="select-tab">
@@ -287,7 +307,9 @@ SPDX-License-Identifier: GPL-2.0-only
                     <input type="checkbox" class="controls" value="date"     id="check-controls-date"    /><label for="check-controls-date"    >{{ html("calendar.labels_date") }}</label>
                   </form>
                 </p>
-                <h3>{{ html("timezone-title") }}</h3>
+            </section>
+            <section id="configure-timezone">
+                <h2>{{ html("timezone-title") }}</h2>
                 <p>
                   {{ html("timezone-description") }}
                   <span class="timezone-of-browser">{{ html("loading") }}</span><br/>
@@ -295,7 +317,20 @@ SPDX-License-Identifier: GPL-2.0-only
                       <option value="">{{ html("timezone-browser") }}</option>
                   </select>
                 </p>
-                <h3>{{ html("spec-title") }}</h3>
+            </section>
+            <section id="configure-embed">
+                <h2>Embed &amp; Use</h2>
+                <p>
+                    {{ html("calendar-code-execution") }}
+                </p>
+                <a id="calendar-link"></a>
+                <p>
+                    {{ html("calendar-code") }}
+                </p>
+                <pre id="calendar-code" class="code"></pre>
+            </section>
+            <section id="configure-spec">
+                <h2>{{ html("spec-title") }}</h2>
                 <p>
                     {{ html("spec-description") }}
                     <pre class="code" id="json-specification"></pre>
@@ -303,21 +338,25 @@ SPDX-License-Identifier: GPL-2.0-only
                     {{ html("spec-link") }}
                     <a id="example-specification-link" target="_blank"></a>
                 </p>
-            </div>
-        </main>
-        <footer>
-            {{ html("project-description") }}
-            <ul>
-                <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>
-                <li>
-                    <a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a>
-                    {{ html("version").format(version=
+            </section>
+            <section id="configure-footer">
+                <h2>About</h2>
+                {{ html("project-description") }}
+                <ul>
+                    <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>
+                    <li>
+                        <a href="{{ specification["source_code"] | safe }}">{{ html("source-code") }}</a>
+                        {{ html("version").format(version=
                         specification["version"] if specification["version"] else configuration["version"]
                         )
-                    }}
-                </li>
-                <li><a href="{{ specification["privacy_policy"] | safe }}">{{ html("privacy-policy") }}</a></li>
-            </ul>
-        </footer>
+                        }}
+                    </li>
+                    <li><a href="{{ specification["privacy_policy"] | safe }}">{{ html("privacy-policy") }}</a></li>
+                </ul>
+            </section>
+        </main>
+        <aside>
+            <div id="calendar-code-execution"></div>
+        </aside>
     </body>
 </html>
