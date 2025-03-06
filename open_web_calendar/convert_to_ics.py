@@ -9,6 +9,8 @@ from icalendar import Calendar, Event, Timezone
 from icalendar.prop import vDDDTypes
 from mergecal import merge_calendars
 
+from open_web_calendar.calendars.base import Calendars
+
 from .conversion_base import ConversionStrategy
 
 
@@ -27,9 +29,9 @@ class ConvertToICS(ConversionStrategy):
         """Whether a component is an event."""
         return isinstance(component, Timezone)
 
-    def collect_components_from(self, calendar_index, calendars):
+    def collect_components_from(self, calendar_index: int, calendars: Calendars):
         with self.lock:
-            self.components.extend(calendars)
+            self.components.extend(calendars.get_icalendars())
 
     def convert_error(self, error: str, url: str, tb_s: str):
         """Create an error which can be used by the dhtmlx scheduler."""

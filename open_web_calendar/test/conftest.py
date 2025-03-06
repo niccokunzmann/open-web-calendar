@@ -82,8 +82,9 @@ def runner(app):
 
 calendar_files = {}
 for file in CALENDAR_DIRECTORY.iterdir():
-    with file.open() as f:
-        calendar_files[file] = f.read()
+    if file.is_file():
+        with file.open() as f:
+            calendar_files[file] = f.read()
 
 
 @pytest.fixture

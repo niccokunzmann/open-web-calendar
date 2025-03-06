@@ -13,7 +13,9 @@ import tempfile
 import traceback
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Optional
+from urllib.parse import ParseResult, urlparse
 
+import caldav
 import requests
 import yaml
 import zoneinfo
@@ -29,6 +31,8 @@ from flask import (
 from flask_allowed_hosts import AllowedHosts
 from flask_caching import Cache
 
+from open_web_calendar.util import set_url_username_password
+
 from . import translate, version
 from .convert_to_dhtmlx import ConvertToDhtmlx
 from .convert_to_ics import ConvertToICS
@@ -37,8 +41,13 @@ from .encryption import EmptyFernetStore, FernetStore
 if TYPE_CHECKING:
     from open_web_calendar.conversion_base import ConversionStrategy
 
+
 # configuration
-DEBUG = os.environ.get("APP_DEBUG", "").lower() == "true"
+def DEBUG() -> bool:  # noqa: N802
+    """Wether we are in debug mode."""
+    return os.environ.get("APP_DEBUG", "").lower() == "true"
+
+
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(
     os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
@@ -281,7 +290,7 @@ def render_app_template(template, specification):
 
 def get_conversion(conversion: type[ConversionStrategy], specification: dict[str, Any]):
     """Return a conversion from the strategy."""
-    strategy = conversion(specification, get_text_from_url, encryption(), DEBUG)
+    strategy = conversion(specification, get_text_from_url, encryption(), DEBUG())
     strategy.retrieve_calendars()
     return set_js_headers(strategy.merge())
 
@@ -380,7 +389,7 @@ def unhandled_exception(error):
     """
     trace = (
         f"<pre>\r\n{traceback.format_exc()}</pre>"
-        if DEBUG
+        if DEBUG()
         else "Trace only avalilable if DEBUG=true."
     )
     return (
@@ -416,8 +425,8 @@ def json_error():
     status_code = http_status_code_for_error(err)
     return jsonify(
         {
-            "message": str(err) if DEBUG else None,
-            "traceback": traceback.format_exc() if DEBUG else None,
+            "message": str(err) if DEBUG() else None,
+            "traceback": traceback.format_exc() if DEBUG() else None,
             "error": type(err).__name__,
             "code": status_code,
         }
@@ -458,6 +467,35 @@ def new_key():
     return store.generate_key()
 
 
+@app.post("/caldav/list-calendars")
+def list_caldav_calendars():
+    """Return a list of caldav calendars."""
+    try:
+        url = request.json["url"]
+        parsed: ParseResult = urlparse(url)
+        username = request.json.get("username", parsed.username)
+        password = request.json.get("password", parsed.password)
+        with caldav.DAVClient(url=url, username=username, password=password) as client:
+            # todo: sanitize Nextcloud by adding /remote.php/dav/
+            principal = client.principal()
+            calendars = principal.calendars()
+            return jsonify(
+                {
+                    "calendars": [
+                        {
+                            "name": calendar.name,
+                            "url": set_url_username_password(
+                                calendar.url, username, password
+                            ),
+                        }
+                        for calendar in calendars
+                    ]
+                }
+            )
+    except:
+        return json_error()
+
+
 # make serializable for multiprocessing
 # app.__reduce__ = lambda: __name__ + ".app"
 
@@ -469,7 +507,7 @@ please use this command:
 
     gunicorn open_web_calendar:app
     """)  # noqa: T201
-    app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
+    app.run(debug=DEBUG(), host="0.0.0.0", port=PORT)
 
 
 __all__ = [

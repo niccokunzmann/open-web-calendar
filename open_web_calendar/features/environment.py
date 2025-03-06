@@ -29,9 +29,12 @@ from selenium import webdriver
 from selenium.webdriver import Firefox, FirefoxOptions
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.service import Service
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.remote.webdriver import WebDriver
 from werkzeug import run_simple
+
+from open_web_calendar.test.rpc import RPCPipe
 
 if TYPE_CHECKING:
     from selenium.webdriver.remote.webelement import WebElement
@@ -183,38 +186,26 @@ def get_free_port(start=10000, end=60000):
     return random.randint(start, end)  # noqa: S311
 
 
-def run_wsgi_server(port: int, encrypt: bool):  # noqa: FBT001
+def run_wsgi_server(port: int, pipe: RPCPipe.ProcessingPipe):
     """Run the WSGI server."""
-    if encrypt:
-        os.environ["OWC_ENCRYPTION_KEYS"] = (
-            "cxXiQ8n7ZkgdiAZ-GX2lkANZKbZDaqqq1vdyS7eGsFw="
-        )
-    else:
-        os.environ["OWC_ENCRYPTION_KEYS"] = ""
-    run_simple("localhost", port, app)
+    pipe.start()
+    os.environ["APP_DEBUG"] = "true"
+    run_simple("localhost", port, app, use_debugger=True)
 
 
-@fixture
-def app_server_with_encryption(context):
-    yield from app_server(context, "encrypted", True)
-
-
-@fixture
-def app_server_without_encryption(context):
-    yield from app_server(context, "default", False)
-
-
-def app_server(context, name, encrypt):
+def app_server(context):
     """Start the flask app in a server."""
     app_port = get_free_port()
 
     # from https://werkzeug.palletsprojects.com/en/2.1.x/serving/#shutting-down-the-server
     # see also https://stackoverflow.com/questions/72824420/how-to-shutdown-flask-server
-    p = multiprocessing.Process(target=run_wsgi_server, args=(app_port, encrypt))
+    pipe = RPCPipe()
+    context.server = pipe
+    p = multiprocessing.Process(
+        target=run_wsgi_server, args=(app_port, pipe.for_other_process)
+    )
     p.start()
-    if not hasattr(context, "pages"):
-        context.pages = {}
-    context.pages[name] = url = f"http://localhost:{app_port}/"
+    context.index_page = url = f"http://localhost:{app_port}/"
 
     def terminate():
         with contextlib.suppress(PermissionError):
@@ -298,12 +289,12 @@ def downloads(context):
 
 
 def before_all(context):
+    context.after_scenario = []
     use_fixture(downloads, context)
     browser = browsers[context.config.userdata["browser"]]
     use_fixture(browser, context)
     use_fixture(set_window_size, context)
-    use_fixture(app_server_with_encryption, context)
-    use_fixture(app_server_without_encryption, context)
+    use_fixture(app_server, context)
     use_fixture(calendars_server, context)
 
 
@@ -324,7 +315,7 @@ def before_scenario(context, scenario):
 
     Empty url and set the timezone and other parameters.
     """
-    context.index_page = context.pages["default"]
+    context.server.capture_stdout()
     context.specification = copy.deepcopy(DEFAULT_SPECIFICATION)
 
 
@@ -340,9 +331,38 @@ def after_step(context, step: Step):
         file = SCREENSHOTS_FOLDER / f"{Path(step.filename).stem}@line-{step.line}.png"
         print(f"Test failed, capturing screenshot to {file}")
         element.screenshot(str(file))
+        print(context.server.get_output())
 
 
 def before_step(context, step):
     """Run before each step."""
     # from https://stackoverflow.com/a/73913239
     context.step_name = step.name
+
+
+def after_scenario(context, _):
+    """Run after each scenario."""
+    while context.after_scenario:
+        context.after_scenario.pop()()
+
+
+# remove this error above
+# Error terminating service process.
+# Traceback (most recent call last):
+#   File "selenium/webdriver/common/service.py", line 181, in _terminate_process
+#     self.process.terminate()
+#   File "lib/python3.11/subprocess.py", line 2204, in terminate
+#     self.send_signal(signal.SIGTERM)
+#   File ".11.6/lib/python3.11/subprocess.py", line 2196, in send_signal
+#     os.kill(self.pid, sig)
+# PermissionError: [Errno 13] Permission denied
+
+_terminate_process = Service._terminate_process  # noqa: SLF001
+
+
+def _patch(*args, **kw):
+    with contextlib.suppress(PermissionError):
+        return _terminate_process(*args, **kw)
+
+
+Service._terminate_process = _patch  # noqa: SLF001
