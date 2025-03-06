@@ -41,10 +41,13 @@ from .encryption import EmptyFernetStore, FernetStore
 if TYPE_CHECKING:
     from open_web_calendar.conversion_base import ConversionStrategy
 
+
 # configuration
-def DEBUG() -> bool:
+def DEBUG() -> bool:  # noqa: N802
     """Wether we are in debug mode."""
     return os.environ.get("APP_DEBUG", "").lower() == "true"
+
+
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(
     os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)

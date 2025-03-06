@@ -334,7 +334,6 @@ def after_step(context, step: Step):
         print(context.server.get_output())
 
 
-
 def before_step(context, step):
     """Run before each step."""
     # from https://stackoverflow.com/a/73913239
@@ -346,19 +345,24 @@ def after_scenario(context, _):
     while context.after_scenario:
         context.after_scenario.pop()()
 
+
 # remove this error above
 # Error terminating service process.
 # Traceback (most recent call last):
-#   File "/home/nicco/open-web-calendar/.tox/web/lib/python3.11/site-packages/selenium/webdriver/common/service.py", line 181, in _terminate_process
+#   File "selenium/webdriver/common/service.py", line 181, in _terminate_process
 #     self.process.terminate()
-#   File "/home/nicco/.pyenv/versions/3.11.6/lib/python3.11/subprocess.py", line 2204, in terminate
+#   File "lib/python3.11/subprocess.py", line 2204, in terminate
 #     self.send_signal(signal.SIGTERM)
-#   File "/home/nicco/.pyenv/versions/3.11.6/lib/python3.11/subprocess.py", line 2196, in send_signal
+#   File ".11.6/lib/python3.11/subprocess.py", line 2196, in send_signal
 #     os.kill(self.pid, sig)
 # PermissionError: [Errno 13] Permission denied
 
 _terminate_process = Service._terminate_process  # noqa: SLF001
+
+
 def _patch(*args, **kw):
     with contextlib.suppress(PermissionError):
         return _terminate_process(*args, **kw)
+
+
 Service._terminate_process = _patch  # noqa: SLF001

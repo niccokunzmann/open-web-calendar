@@ -2,15 +2,16 @@
 
 This allows communication and configuration.
 """
+
 from __future__ import annotations
 
-from io import StringIO
 import multiprocessing
 import multiprocessing.connection
 import os
 import sys
 import threading
 from functools import wraps
+from io import StringIO
 from typing import Optional
 
 from open_web_calendar.test.api_mocking import Recording
@@ -39,6 +40,8 @@ def remote_call(func):
 
 
 OUTPUT = StringIO()
+
+
 class RPCPipe:
     """Send calls to the other process."""
 
@@ -95,7 +98,7 @@ class RPCPipe:
     def capture_stdout():
         global OUTPUT  # noqa: PLW0603
         sys.stderr = sys.stdout = OUTPUT = StringIO()
-    
+
     @remote_call
     def get_output() -> str:
         return OUTPUT.getvalue()
