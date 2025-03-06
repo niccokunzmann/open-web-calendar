@@ -84,7 +84,7 @@ main, .navcontent {
 }
 
 
-.calendar-url-input {
+.calendar-url-input, #calendar-title {
     width: 100%;
 }
 
@@ -128,14 +128,17 @@ main, .navcontent {
   display: block;
 }
 
-#calendar-urls {
+.no-style-listing {
   padding-bottom: 1em;
   list-style-type: none;
   padding-left: 0px;
 }
 
-#calendar-urls li {
+.no-style-listing li {
   padding-bottom: 0.5em;
+}
+
+#calendar-urls li {
   text-align: center;
 }
 #calendar-urls li input, #calendar-urls li button {
@@ -269,4 +272,16 @@ nav ul {
 
 .no-previous-section .needs-previous-section, .no-next-section .needs-next-section {
   visibility: hidden;
+}
+
+#event-status-form {
+  text-align: center;
+}
+
+.action-paragraph {
+  text-align: center;
+}
+
+.belongs-together {
+  display: inline-block;
 }
