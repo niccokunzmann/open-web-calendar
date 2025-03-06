@@ -39,11 +39,11 @@ SPDX-License-Identifier: GPL-2.0-only
     <body>
         <nav id="navigation" class="dark">
             <div class="navcontent">
-                <h2><a id="navigate-previous"></a></h2>
+                <h2><a id="navigate-previous" class="needs-previous-section"></a></h2>
                 <h2><a id="currect-section" ></a></h2>
                 <ul id="sections-dropdown">
                 </ul>
-                <h2><a id="navigate-next"></a></h2>
+                <h2><a id="navigate-next" class="needs-next-section"></a></h2>
             </div>
         </nav>
         <main>
@@ -319,7 +319,7 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
             </section>
             <section id="configure-embed">
-                <h2>Embed &amp; Use</h2>
+                <h2>{{ html("calendar-embed-title") }}</h2>
                 <p>
                     {{ html("calendar-code-execution") }}
                 </p>
@@ -354,6 +354,11 @@ SPDX-License-Identifier: GPL-2.0-only
                     <li><a href="{{ specification["privacy_policy"] | safe }}">{{ html("privacy-policy") }}</a></li>
                 </ul>
             </section>
+            <div class="bottom-navigation">
+                <a id="bottom-previous-link" class="button needs-previous-section">⬅</a>
+                <a id="bottom-done-link" href="#configure-embed" class="button">{{ html("calendar-embed-title") }}</a>
+                <a id="bottom-next-link" class="button needs-next-section">➡</a>
+            </div>
         </main>
         <aside>
             <div id="calendar-code-execution"></div>

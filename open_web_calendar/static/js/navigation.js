@@ -55,21 +55,23 @@ function scrollToCurrentSection() {
     currentSectionLink.href = "#" + currentSection.id;
     currentSectionLink.innerText = currentSection.owcHeading;
     // Set navigation for next and previous section
+    const bottomNextLink = document.getElementById("bottom-next-link");
     const nextSectionLink = document.getElementById("navigate-next");
     if (currentSection.owcNextSection) {
-        nextSectionLink.href = "#" + currentSection.owcNextSection.id;
+        nextSectionLink.href = bottomNextLink.href = "#" + currentSection.owcNextSection.id;
         nextSectionLink.innerText = currentSection.owcNextSection.owcHeading;
-        nextSectionLink.classList.add("active");
+        document.body.classList.remove("no-next-section");
     } else {
-        nextSectionLink.classList.remove("active");
+        document.body.classList.add("no-next-section");
     }
+    const bottomPreviousLink = document.getElementById("bottom-previous-link");
     const previousSectionLink = document.getElementById("navigate-previous");
     if (currentSection.owcPreviousSection) {
-        previousSectionLink.href = "#" + currentSection.owcPreviousSection.id;
+        previousSectionLink.href = bottomPreviousLink.href = "#" + currentSection.owcPreviousSection.id;
         previousSectionLink.innerText = currentSection.owcPreviousSection.owcHeading;
-        previousSectionLink.classList.add("active");
+        document.body.classList.remove("no-previous-section");
     } else {
-        previousSectionLink.classList.remove("active");
+        document.body.classList.add("no-previous-section");
     }
 };
 
