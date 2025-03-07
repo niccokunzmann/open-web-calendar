@@ -11,7 +11,12 @@ import time
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
-from selenium.common.exceptions import StaleElementReferenceException
+from selenium.common.exceptions import (
+    InvalidSessionIdException,
+    JavascriptException,
+    StaleElementReferenceException,
+    WebDriverException,
+)
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -44,7 +49,36 @@ def get_url(context, url):
     print(
         f"Visiting {re.sub('^http://localhost:[0-9]+/', 'http://localhost:5000/', url)}"
     )
-    return context.browser.get(url)
+    with contextlib.suppress(InvalidSessionIdException):
+        context.browser.delete_all_cookies()
+        context.browser.execute_script('SELENIUM_IS_LOADING_A_NEW_PAGE_NOW="set value"')
+    context.browser.get(url)
+    end = time.time() + WAIT
+    while time.time() < end:
+        try:
+            while (
+                context.browser.execute_script(
+                    'return SELENIUM_IS_LOADING_A_NEW_PAGE_NOW=="set value"'
+                )
+                and time.time() < end
+            ):
+                time.sleep(0.01)
+        except JavascriptException:
+            pass
+        # see https://stackoverflow.com/a/36590395/1320237
+        while (
+            context.browser.execute_script("return document.readyState") != "complete"
+            and time.time() < end
+        ):
+            time.sleep(0.01)
+        if context.browser.current_url == url:
+            break
+        # if time.time() > end:
+        #     raise TimeoutException("timed out!")
+        assert context.browser.current_url == url, (
+            f"Expecting to visit {url} but I am stuck on {context.browser.current_url}"
+        )
+    print("DEBUG: current url", context.browser.current_url)
 
 
 @given('we add the calendar "{calendar_name}"')
@@ -67,7 +101,6 @@ def step_impl(context, parameter_name, parameter_value):
 @when("we look at {date}")
 def step_impl(context, date):
     context.specification["date"] = date
-    context.browser.delete_all_cookies()
     url = (
         context.index_page
         + "calendar.html?"
@@ -304,19 +337,27 @@ def click_button(context, selector_type, selector):
 
 # Browser steps for configuring the calendar.
 
+CALLS = 0
+
 
 @given("we configure the {_id}")
 def step_impl(context, _id):
     """Visit the configuration page and wait for it to load."""
+    global CALLS  # noqa: PLW0603
+    CALLS += 1
+    context.browser.execute_script("SELENIUM_IS_LOADING_A_NEW_PAGE_NOW=true")
+    if _id == "urls":
+        assert context.current_recording != "", (
+            "If you want to configure urls, load an api recording first. "
+            "Otherwise we might get timeouts."
+        )
     context.browser.delete_all_cookies()
-    url = (
-        context.index_page
-        + "?"
-        + specification_to_query(context.specification)
-        + "#configure-"
-        + _id
-    )
-    get_url(context, context.index_page + "?reload=true")
+    spec = context.specification.copy()
+    spec["__test_calls"] = CALLS
+    url = context.index_page + "?" + specification_to_query(spec) + "#configure-" + _id
+    # with contextlib.suppress(TimeoutException):
+    #     # the reload seems to be needed
+    #     get_url(context, context.index_page + "?reload=true")
     get_url(context, url)
     if _id != "is-not-possible":
         # see https://stackoverflow.com/a/59130336/1320237
@@ -328,17 +369,41 @@ def step_impl(context, _id):
 @when('we write "{text}" into "{field_id}"')
 def step_impl(context, text, field_id):
     """Write text into text input."""
-    input_element = context.browser.find_element(By.ID, field_id)
-    input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
-    input_element.send_keys(text)
-    print(f"Expecting {field_id}.value == {input_element.get_attribute('value')}")
+    end = time.time() + WAIT
+    while time.time() < end:
+        with contextlib.suppress(StaleElementReferenceException):
+            input_element = context.browser.find_element(By.ID, field_id)
+            with contextlib.suppress(StaleElementReferenceException):
+                input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
+            try:
+                ActionChains(context.browser).scroll_to_element(
+                    input_element
+                ).send_keys_to_element(input_element, text).send_keys_to_element(
+                    input_element, Keys.SHIFT
+                ).perform()
+            except (WebDriverException, StaleElementReferenceException) as e:
+                print("Error", e)
+                input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
+                input_element.send_keys(text)
+                # input_element.key_up(Keys.SHIFT)
+            print(
+                f"Expecting {field_id}.value == {input_element.get_attribute('value')}"
+            )
+            return
+        time.sleep(0.01)
 
 
 @then('"{text}" is written in "{field_id}"')
-def step_impl(context, text, field_id):
+@then('"" is written in "{field_id}"')
+def step_impl(context, field_id, text=""):
     """Check that a field has a value."""
     input_element = context.browser.find_element(By.ID, field_id)
-    actual_text = input_element.get_attribute("value")
+    end = time.time() + WAIT
+    while time.time() < end:
+        actual_text = input_element.get_attribute("value")
+        if actual_text != "":
+            break
+        time.sleep(0.01)
     assert actual_text == text, (
         f"Expected {text!r} in {field_id} but got {actual_text!r}."
     )
@@ -385,14 +450,40 @@ def step_impl(context, year, month, day, field_id):
 @when('we choose "{choice}" in "{select_id}"')
 def step_impl(context, choice, select_id):
     """Write text into text input."""
-    element = context.browser.find_element(By.ID, select_id)
     # see https://stackoverflow.com/a/28613320/1320237
-    select = Select(element)
-    select.select_by_visible_text(choice)
-    print(
-        f"{select_id} selected {element.get_attribute('value')!r} "
-        f"though text {choice!r}"
-    )
+    end = time.time() + WAIT
+    selected = None
+    selected_text = None
+    with contextlib.suppress(StaleElementReferenceException):
+        element = context.browser.find_element(By.ID, select_id)
+        select = Select(element)
+        select.select_by_visible_text(choice)
+    while not selected and time.time() < end:
+        with contextlib.suppress(StaleElementReferenceException):
+            element = context.browser.find_element(By.ID, select_id)
+            select = Select(element)
+            for i, option in enumerate(select.options):
+                text = option.text
+                if choice in text:
+                    select.select_by_index(i)
+                    selected = option
+                    selected_text = text
+                    # break
+            time.sleep(0.01)
+    # while True:
+    #     select.select_by_visible_text(choice)
+    #     if not time.time() < end or not element.get_attribute('value') == "":
+    #         break
+    #     time.sleep(0.01)
+    try:
+        print(
+            f"{select_id} selected {element.get_attribute('value')!r} "
+            f"though text {choice!r}, showing "
+            f"{select.first_selected_option.text!r} {selected_text!r}"
+        )
+    except Exception as e:  # noqa: BLE001
+        print(e)
+        print(f"Error: {select_id}: {selected_text}")
 
 
 def get_specification(context) -> dict:
@@ -427,19 +518,31 @@ def step_impl(context, attribute):
 
 
 @when('we click the button "{text}"')
-def step_impl(context, text):
+def click_the_button(context, text):
     """Click the only button with this label."""
-    buttons = context.browser.find_elements(
-        By.XPATH, f"//input[@type = 'button' and contains(@value, {text!r})]"
+    selector = (
+        By.XPATH,
+        f"//input[@type = 'button' and contains(@value, {text!r})]"
+        " | "
+        f"//button[contains(., {text!r})]",
     )
+    print("selector", selector)
+    WebDriverWait(context.browser, WAIT).until(
+        EC.visibility_of_element_located(selector)
+    )
+    buttons = context.browser.find_elements(*selector)
     assert len(buttons) == 1, (
         f"Expected one button with the text {text!r} but got {buttons}."
     )
-    buttons[0].click()
+    # buttons[0].focus()
+    buttons[0].send_keys(Keys.RETURN)
 
 
 @when('we click on the {tag:S} "{text}"')
 def step_impl(context, tag, text):
+    if tag == "button":
+        click_the_button(context, text)
+        return
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
     elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
@@ -627,3 +730,4 @@ def step_impl(context, recording: str):
     """Load a recording."""
     context.server.start_recorded_api(recording)
     context.after_scenario.append(context.server.stop_recorded_api)
+    context.current_recording = recording

@@ -2,14 +2,19 @@ Feature: The calendar has a configuration page that displays and changes the
          calendar along with its specification.
 
     Scenario: The default specification is almost empty.
-       Given we configure the urls
-        When we write "https://localhost:12345/example.ics" into "calendar-url-input-0"
+       Given we load the api recording "with-no-content"
+         And we configure the urls
+        When we write "https://localhost:12345/example.ics" into "add-url-url"
+         And we click the button "Add"
         Then "url" is specified as "https://localhost:12345/example.ics"
 
     Scenario: We can specify two URLs.
-       Given we configure the urls
-        When we write "https://localhost:12345/example.ics" into "calendar-url-input-0"
-         And we write "https://localhost/example.ics" into "calendar-url-input-1"
+       Given we load the api recording "with-no-content"
+         And we configure the urls
+        When we write "https://localhost:12345/example.ics" into "add-url-url"
+         And we click the button "Add"
+         And we write "https://localhost/example.ics" into "add-url-url"
+         And we click the button "Add"
         Then "url" is specified as ["https://localhost:12345/example.ics","https://localhost/example.ics"]
 
     Scenario: We choose a title for our calendar.

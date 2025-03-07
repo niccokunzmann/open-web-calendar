@@ -15,6 +15,7 @@
   --maximum-height-of-calendar: 1200px;
   --minimum-height-of-calendar: 200px;
   --total-document-height: 100%;
+  --border-radius: .66em
 }
 
 .dark {
@@ -91,18 +92,22 @@ main, .navcontent {
 
 section {
   max-width: 50em;
+  overflow-y: auto;
+  height: 100%;
+  flex: 1 1 auto;
 }
+
 
 .code {
     padding: 1em;
     background: var(--secondary-color);
     color: var(--background-color);
-    border-radius: 0.66em;
+    border-radius: var(--border-radius);
     overflow: hidden;
 }
 
 
-.calendar-url-input, #calendar-title {
+.calendar-url-input, #calendar-title{
     width: 100%;
 }
 
@@ -144,7 +149,7 @@ section {
   padding: 1em;
   background: var(--secondary-color);
   color: var(--background-color);
-  border-radius: 0.66em;
+  border-radius: var(--border-radius);
   display: block;
 }
 
@@ -156,14 +161,6 @@ section {
 
 .no-style-listing li {
   padding-bottom: 0.5em;
-}
-
-#calendar-urls li {
-  text-align: center;
-}
-#calendar-urls li input, #calendar-urls li button {
-  height: 2em;
-  vertical-align: middle;
 }
 
 nav {
@@ -240,7 +237,7 @@ nav h1 {
   color: var(--primary-color);
   vertical-align: middle;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0.2em;
+  border-radius: var(--border-radius);
 } 
 
 
@@ -257,7 +254,7 @@ nav h1 {
 .button {
   display: inline-block;
   padding: 0.5em;
-  border-radius: 0.5em;
+  border-radius: var(--border-radius);
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
   text-decoration: none;
@@ -344,6 +341,68 @@ aside {
   width: 100%;
 }
 
+/* Adding URLS */
+
+/* see https://stackoverflow.com/a/76079959/1320237 */
+#add-url-calendars:not(:has(option)) {
+  display: none;
+}
+
+#add-url-paragraph {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-url-url {
+  width: 100%;
+}
+
+#credentials {
+  display: flex;
+  flex-direction: row;
+}
+
+#add-url-username, #add-url-password, #add-url-credentials-label {
+  flex: 1 1 auto;
+  width: 33%;
+}
+
+.default-hidden {
+  display: none;
+}
+
+.toggle-default-visibility .default-visible {
+  display: none;
+}
+
+.toggle-default-visibility .default-hidden {
+  display: unset;
+}
+
+#calendar-urls a {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+#calendar-urls li {
+  text-align: center;
+  border-radius: var(--border-radius);
+  border-width: 1px;
+  border-color: var(--secondary-color);
+  border-style: solid;
+  padding: 1em;
+}
+
+#calendar-urls li input, #calendar-urls li button {
+  height: 2em;
+  vertical-align: middle;
+}
+
+#select-sections   {
+  text-align: center;
+}
 
 /* media query goes last */
 
@@ -367,6 +426,10 @@ aside {
   main {
     width: var(--main-width);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
   }
   aside, #height-slider  {
     width: calc(100% - var(--main-width));
@@ -377,9 +440,8 @@ aside {
     /* height: var(--nav-height); */
   }
   .bottom-navigation {
-    position: absolute;
-    bottom: 0em;
     width: var(--main-width);
+    flex: 1 1 auto;
   }
   #height-slider {
     /* position: fixed;

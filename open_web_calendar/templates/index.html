@@ -17,6 +17,8 @@ SPDX-License-Identifier: GPL-2.0-only
             const translations = {
                 "button-encrypt": {{ string("button-encrypt") | tojson }},
                 "button-encrypted": {{ string("button-encrypted") | tojson }},
+                "button-edit": {{ string("button-edit") | tojson }},
+                "button-remove": {{ string("button-remove") | tojson }},
             };
         </script>
         <link href="css/index.css" rel="stylesheet" type="text/css">
@@ -40,7 +42,7 @@ SPDX-License-Identifier: GPL-2.0-only
         <nav id="navigation" class="dark">
             <div class="navcontent">
                 <a id="navigate-previous" class="needs-previous-section"></a>
-                <h1><a id="currect-section" ></a></h2>
+                <h1><a id="currect-section" ></a></h1>
                 <ul id="sections-dropdown">
                 </ul>
                 <a id="navigate-next" class="needs-next-section"></a>
@@ -52,12 +54,27 @@ SPDX-License-Identifier: GPL-2.0-only
                 <h2>{{ html("project-name") }}</h2>
                 <p>
                     {{ html("about") }}
-                </p>
-                <p>
-                    {{ html("section-customization") }}
+                    {{ html("supported-standards") }}
                 </p>
                 <p>
                     {{ html("calendar-urls") }}
+                </p>
+                <div id="add-url-paragraph">
+                    <input type="text" id="add-url-url" placeholder="{{ string("add-url-placeholder-url") }}" />
+                    <div id="credentials">
+                        <input type="checkbox" id="add-url-credentials-checkbox" checked onchange="toggleUrlCredentials()" />
+                        <label for="add-url-credentials-checkbox" id="add-url-credentials-label" class="default-visible">
+                            {{ string("add-url-calendar-public") }}
+                        </label>
+                        <input class="default-hidden" type="text" id="add-url-username" placeholder="{{ string("add-url-placeholder-username") }}" />
+                        <input class="default-hidden" type="password" id="add-url-password" placeholder="{{ string("add-url-placeholder-password") }}" />
+                        <button class="default-hidden" onclick="togglePasswordVisibility('add-url-password')" id="toggle-url-password-visibility"/>👁</button>
+                        <select id="add-url-calendars"></select>
+                        <button id="add-url-button" onclick="addURLFromInput()">{{ html("add-url-button") }}</button>
+                    </div>
+                </div>
+                <p>
+                    {{ html("section-customization") }}
                 </p>
                 <ul id="calendar-urls" class="no-style-listing">
                 </ul>
@@ -67,8 +84,8 @@ SPDX-License-Identifier: GPL-2.0-only
                 <p class="encryption-required action-paragraph">
                     🔑
                     <input type="password" id="encryption-password" />
-                    <input type="button" onclick="toggleUrlPasswordVisibility()" value="👁" id="toggle-password-visibility"/>
-                    <input type="button" onclick="decryptURLs()" value="🔓 {{ string("decrypt-urls") }}" />
+                    <button onclick="togglePasswordVisibility('encryption-password')" id="toggle-password-visibility">👁</button>
+                    <button onclick="decryptURLs()">🔓 {{ html("decrypt-urls") }}</button>
                 </p>
             </section>
             <section class="languages" id="configure-languages">
@@ -83,7 +100,7 @@ SPDX-License-Identifier: GPL-2.0-only
                     {%- endfor %}
                     <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
                 </p>
-                <p>
+                <div>
                     <fieldset>
                         <legend>{{ html("language-description") }}</legend>
                         <div id="section_prefer_browser_language_false">
@@ -98,7 +115,7 @@ SPDX-License-Identifier: GPL-2.0-only
                         </div>
                     </fieldset>
                     <a href="{{ specification['translate'] }}">{{ html("translate") }}</a>
-                </p>
+                </div>
             </section>
             <section id="configure-title">
                 <h2>{{ html("title-title") }}</h2>
@@ -129,7 +146,7 @@ SPDX-License-Identifier: GPL-2.0-only
                     <input type="number" min="1" max="24" id="ending-hour" />
                 </p>
                 <h3>{{ html("time-increment-title") }}</h3>
-                <p>
+                <div>
                     {{ html("time-increment-description") }}
                     <form id="time-increment">
                         <input class="time-increment-input" type="radio" id="time-6" name="time-select" value="6" /><label for="time-6">{{ html("time-increment-10") }}</label>
@@ -137,7 +154,7 @@ SPDX-License-Identifier: GPL-2.0-only
                         <input class="time-increment-input" type="radio" id="time-2" name="time-select" value="2" /><label for="time-2">{{ html("time-increment-30") }}</label>
                         <input class="time-increment-input" type="radio" id="time-1" name="time-select" value="1" /><label for="time-1">{{ html("time-increment-60") }}</label>
                     </form>
-                </p>
+                </div>
             </section>
             <section id="configure-hour-format">
                 <h2>{{ html("hour-format-title") }}</h2>
@@ -163,12 +180,12 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <p class="action-paragraph">
                     <select id="select-skin">
-                        <option value="terrace">{{ html("skins-terrace") }}</option>
-                        <option value="dark">{{ html("skins-dark") }}</option>
-                        <option value="material">{{ html("skins-material") }}</option>
-                        <option value="flat">{{ html("skins-flat") }}</option>
-                        <option value="contrast-black">{{ html("skins-contrast-black") }}</option>
-                        <option value="contrast-white">{{ html("skins-contrast-white") }}</option>
+                        <option value="terrace">{{ string("skins-terrace") }}</option>
+                        <option value="dark">{{ string("skins-dark") }}</option>
+                        <option value="material">{{ string("skins-material") }}</option>
+                        <option value="flat">{{ string("skins-flat") }}</option>
+                        <option value="contrast-black">{{ string("skins-contrast-black") }}</option>
+                        <option value="contrast-white">{{ string("skins-contrast-white") }}</option>
                     </select>
                 </p>
             </section>
@@ -179,10 +196,10 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <p class="action-paragraph">
                     <select id="select-target">
-                        <option value="_self">{{ html("links-self") }}</option>
-                        <option value="_parent">{{ html("links-parent") }}</option>
-                        <option value="_blank">{{ html("links-blank") }}</option>
-                        <option value="_top">{{ html("links-top") }}</option>
+                        <option value="_self">{{ string("links-self") }}</option>
+                        <option value="_parent">{{ string("links-parent") }}</option>
+                        <option value="_blank">{{ string("links-blank") }}</option>
+                        <option value="_top">{{ string("links-top") }}</option>
                     </select>
                 </p>
             </section>
@@ -194,10 +211,10 @@ SPDX-License-Identifier: GPL-2.0-only
                 <p class="action-paragraph">
                     <select id="select-map">
                         <option value="default" id="map-option-default"></option>
-                        <option value="" id="map-option-custom">{{ html("map-custom") }}</option>
+                        <option value="" id="map-option-custom">{{ string("map-custom") }}</option>
                     </select>
                 </p>
-                <p>
+                <div>
                     <details id="map-details">
                         <summary>{{ html("map-custom-summary") }}</summary>
                         {{ html("map-link-location-description") }}<br/>
@@ -205,16 +222,18 @@ SPDX-License-Identifier: GPL-2.0-only
                         {{ html("map-link-geo-description") }}<br/>
                         <input type="text" id="map-link-geo" /><br/>
                     </details>
-                </p>
+                </div>
             </section>
             <section id="configure-week">
                 <h2>{{ html("configure-week-title") }}</h2>
+                <p>
+                {{ html("configure-week-description") }}
+                </p>
                 <p class="action-paragraph">
                     <select id="select-start-of-week">
-                        <option value="mo">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_sun") }}</option>
-                        {{ html("configure-week-description") }}<br/>
-                        <option value="su">{{ html("calendar.date_day_full_sun") }} - {{ html("calendar.date_day_full_sat") }}</option>
-                        <option value="work">{{ html("calendar.date_day_full_mon") }} - {{ html("calendar.date_day_full_fri") }}</option>
+                        <option value="mo">{{ string("calendar.date_day_full_mon") }} - {{ string("calendar.date_day_full_sun") }}</option>
+                        <option value="su">{{ string("calendar.date_day_full_sun") }} - {{ string("calendar.date_day_full_sat") }}</option>
+                        <option value="work">{{ string("calendar.date_day_full_mon") }} - {{ string("calendar.date_day_full_fri") }}</option>
                     </select>
                 </p>
             </section>
@@ -279,14 +298,16 @@ SPDX-License-Identifier: GPL-2.0-only
             <section id="configure-event-status">
                 <h2>{{ html("event-status-title") }}</h2>
                 <p>
-                  {{ html("event-status-description") }}<br/>
+                  {{ html("event-status-description") }}
+                </p>
+                <div class="action-paragraph">
                   <form id="event-status-form">
                     <!-- We have three event status, see https://icalendar.org/iCalendar-RFC-5545/3-8-1-11-status.html -->
                     <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-tentative" /><label for="style-event-status-tentative" class="STATUS-TENTATIVE">{{ html("event-status-tentative") }}</label>
                     <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-confirmed" /><label for="style-event-status-confirmed" class="STATUS-CONFIRMED">{{ html("event-status-confirmed") }}</label>
                     <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-cancelled" /><label for="style-event-status-cancelled" class="STATUS-CANCELLED">{{ html("event-status-cancelled") }}</label>
                   </form>
-                </p>
+                </div>
             </section>
             <section id="configure-loader">
                 <h2>{{ html("loader-title") }}</h2>
@@ -295,8 +316,8 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <p class="action-paragraph">
                   <select id="select-loader">
-                      <option value="" id="default-loader">{{ html("loader-default") }}</option>
-                      <option value="">{{ html("loader-none") }}</option>
+                      <option value="" id="default-loader">{{ string("loader-default") }}</option>
+                      <option value="">{{ string("loader-none") }}</option>
                   </select>
                 </p>
             </section>
@@ -307,16 +328,16 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <p class="action-paragraph">
                   <select id="select-tab">
-                      <option value="month">{{ html("calendar.labels_month_tab") }}</option>
-                      <option value="week">{{ html("calendar.labels_week_tab") }}</option>
-                      <option value="day">{{ html("calendar.labels_day_tab") }}</option>
-                      <option value="agenda">{{ html("calendar.labels_agenda_tab") }}</option>
+                      <option value="month">{{ string("calendar.labels_month_tab") }}</option>
+                      <option value="week">{{ string("calendar.labels_week_tab") }}</option>
+                      <option value="day">{{ string("calendar.labels_day_tab") }}</option>
+                      <option value="agenda">{{ string("calendar.labels_agenda_tab") }}</option>
                   </select>
                 </p>
                 <p>
                   {{ html("controls-description") }}
                 </p>
-                <p class="action-paragraph">
+                <div class="action-paragraph">
                   <form id="check-controls">
                     <label for="check-controls-month"   ><div class="belongs-together button"><input type="checkbox" class="tabs"     value="month"    id="check-controls-month"   />{{ html("calendar.labels_month_tab")            }}</div></label>
                     <label for="check-controls-week"    ><div class="belongs-together button"><input type="checkbox" class="tabs"     value="week"     id="check-controls-week"    />{{ html("calendar.labels_week_tab")             }}</div></label>
@@ -327,17 +348,17 @@ SPDX-License-Identifier: GPL-2.0-only
                     <label for="check-controls-today"   ><div class="belongs-together button"><input type="checkbox" class="controls" value="today"    id="check-controls-today"   />{{ html("calendar.labels_dhx_cal_today_button") }}</div></label>
                     <label for="check-controls-date"    ><div class="belongs-together button"><input type="checkbox" class="controls" value="date"     id="check-controls-date"    />{{ html("calendar.labels_date")                 }}</div></label>
                   </form>
-                </p>
+                </div>
             </section>
             <section id="configure-timezone">
                 <h2>{{ html("timezone-title") }}</h2>
                 <p>
                   {{ html("timezone-description") }}
-                  <span class="timezone-of-browser">{{ html("loading") }}</span>
+                  <span class="timezone-of-browser">{{ string("loading") }}</span>
                 </p>
                 <p class="action-paragraph">
                   <select id="select-timezone">
-                      <option value="">{{ html("timezone-browser") }}</option>
+                      <option value="">{{ string("timezone-browser") }}</option>
                   </select>
                 </p>
             </section>
@@ -352,17 +373,15 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <pre id="calendar-code" class="code"></pre>
             </section>
-            <section id="configure-spec">
+            <section id="configure-spec" class="not-for-config">
                 <h2>{{ html("spec-title") }}</h2>
-                <p>
-                    {{ html("spec-description") }}
-                    <pre class="code" id="json-specification"></pre>
-                    {{ html("spec-host-html") }}
-                    {{ html("spec-link") }}
-                    <a id="example-specification-link" target="_blank"></a>
-                </p>
+                {{ html("spec-description") }}
+                <pre class="code" id="json-specification"></pre>
+                {{ html("spec-host-html") }}
+                {{ html("spec-link") }}
+                <a id="example-specification-link" target="_blank"></a>
             </section>
-            <section id="configure-about">
+            <section id="configure-about" class="not-for-config"    >
                 <h2>{{ html("about-title") }}</h2>
                 {{ html("project-description") }}
                 <ul>
@@ -379,6 +398,7 @@ SPDX-License-Identifier: GPL-2.0-only
             </section>
             <div class="bottom-navigation">
                 <a id="bottom-previous-link" class="button needs-previous-section">⬅</a>
+                <select id="select-sections" onchange="selectSection()"></select>
                 <a id="bottom-done-link" href="#configure-embed" class="button">{{ html("calendar-embed-title") }}</a>
                 <a id="bottom-next-link" class="button needs-next-section">➡</a>
             </div>

@@ -3,7 +3,8 @@ Feature: The calendar about page has a link to edit an existing calendar.
          values are filled into the fields.
 
     Scenario Outline: I can see URLs filled into the configuration page.
-      Given we set the "<parameter>" parameter to <value>
+      Given we load the api recording "with-no-content"
+        And we set the "<parameter>" parameter to <value>
         And we configure the urls
        Then "<parameter>" is specified as <value>
 
@@ -41,9 +42,9 @@ Feature: The calendar about page has a link to edit an existing calendar.
         | css                     | ".test{/*css*/}"                    |
         | prefer_browser_language | true                                |
           
-  Scenario: When I visit the configuration page, the configuration is
-            almost empty.
-    Given we configure the urls
+  Scenario: When I visit the configuration page, the configuration is almost empty.
+    Given we load the api recording "with-no-content"
+      And we configure the urls
      Then "hour_division" is not specified
      Then "date" is not specified
      Then "tab" is not specified

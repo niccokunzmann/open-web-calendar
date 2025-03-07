@@ -69,6 +69,7 @@ def configure_browser(browser: WebDriver):
     """Make common configurations to the browser."""
     browser.implicitly_wait(WAIT)
     browser.set_page_load_timeout(WAIT)
+    browser.switch_to.new_window("tab")
 
 
 @fixture
@@ -317,6 +318,8 @@ def before_scenario(context, scenario):
     """
     context.server.capture_stdout()
     context.specification = copy.deepcopy(DEFAULT_SPECIFICATION)
+    context.browser.switch_to.new_window("tab")
+    context.current_recording = ""
 
 
 def after_step(context, step: Step):
@@ -342,6 +345,8 @@ def before_step(context, step):
 
 def after_scenario(context, _):
     """Run after each scenario."""
+    context.browser.close()
+    context.browser.switch_to.window(context.browser.window_handles[0])
     while context.after_scenario:
         context.after_scenario.pop()()
 

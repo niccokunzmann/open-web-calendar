@@ -14,8 +14,16 @@ calendar-urls: 'To merge several calendars, please input the URLs of the ICS cal
 # Button to encrypt the calendar content.
 button-encrypt: 'Encrypt URL'
 button-encrypted: 'Encrypted'
+button-edit: 'Edit'
+button-remove: 'Remove'
 password-urls: 'We recommend encrypting URLs if they contain sensitive data. Save the following password only if you intend to decrypt them later.'
 decrypt-urls: 'Decrypt URLs'
+add-url-placeholder-url: 'https://link.to/a-calendar.ics'
+add-url-placeholder-username: 'optional username'
+add-url-placeholder-password: 'optional password'
+add-url-button: Add
+add-url-calendar-public: This is a public url
+supported-standards: 'We support the following standards: ICAL, CalDAV, webcal.'
 
 # Section title
 about-title: "About"
