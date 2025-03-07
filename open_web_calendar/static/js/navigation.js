@@ -50,14 +50,12 @@ function initializeSliders() {
     window.ontouchmove = function(event) {
         if (!slidingCallback) return;
         const touch = {x:event.changedTouches[0].pageX, y:event.changedTouches[0].pageY};
-        console.log("touching", touch);
         slidingCallback(touch);
         event.preventDefault();
     }
     window.ontouchend = window.ontouchcancel = function(event) {
         if (!slidingCallback) return;
         const touch = {x:event.changedTouches[0].pageX, y:event.changedTouches[0].pageY};
-        console.log("touched", touch);
         slidingCallback(touch);
         end();
     };
@@ -69,10 +67,8 @@ function scrollToCurrentSection() {
     if (sectionId.startsWith("#")) {
         sectionId = sectionId.slice(1);
     }
-    console.log("Clicked section", sectionId);
     let sections = document.getElementsByTagName("section");
     let currentSection = sectionId ? document.getElementById(sectionId) : sections[0];
-    console.log("Scrolling to section", currentSection);
     if (currentSection == null) {
         currentSection = sections[0];
     }
@@ -121,7 +117,6 @@ function updateHeightOfSlider(event) {
     const display = document.getElementById("calendar-height");
     const scheduler = document.getElementById("open-web-calendar");
     const maxHeight = getTotalDocumentHeight() - scheduler.offsetHeight - textHeight;
-    console.log("height", height);
     height = Math.max(textHeight, Math.min(maxHeight, height));
     document.body.style.setProperty('--bottom-slider-height', height + "px");
     display.innerText = scheduler.offsetHeight + "px";
