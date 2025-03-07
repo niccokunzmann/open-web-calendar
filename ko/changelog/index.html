@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_qhmy5er9/ko/changelog/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_f5uyacft/ko/changelog/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_qhmy5er9/ko/changelog/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_f5uyacft/ko/changelog/index.png" >
       
     
     
@@ -1394,14 +1394,51 @@
 <h2 id="v148">v1.48<a class="headerlink" href="#v148" title="퍼머넌트 링크">&para;</a></h2>
 <ul>
 <li>Fix automatic updates of dependencies by Renovate</li>
-<li>Add encryption of URLs, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/468">Issue 468</a></li>
-<li>Add <code>cryptography</code> to encrypt and decrypt URLs with the Fernet cipher</li>
+<li>
+<p>Add encryption of URLs, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/468">Issue 468</a></p>
+</li>
+<li>
+<p>Add <code>cryptography</code> to encrypt and decrypt URLs with the Fernet cipher</p>
+</li>
 <li>Support <code>fernet://</code> links with encrypted JSON content</li>
 <li>Use <code>bcrypt</code> to check if the password is correct and the decrypted value can be exposed to the user</li>
 <li>Add documentation on how to setup encryption with the <code>OWC_ENCRYPTION_KEYS</code> environment variable</li>
 <li>Add <code>/encrypt</code> and <code>/decrypt</code> JSON endpoints</li>
+<li>Fix Docker build as linux/i386 requires build dependencies</li>
 <li>Remove stack traces from production output as they might contain sensitive data</li>
-<li>Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч, German by Nicco Kunzmann</li>
+<li>Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч, German by Nicco Kunzmann, Spanish by Camilo M</li>
+<li>
+<p>Add support for CalDAV URLs, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/189">Issue 189</a></p>
+</li>
+<li>
+<p>Allow choosing from calendars</p>
+</li>
+<li>Allow entering a CalDAV URL with username and password</li>
+<li>Add <code>caldav</code> dependency</li>
+<li>Allow recording of APIs requests in development mode to use in tests</li>
+<li>
+<p>Allow editing of URLs with more comfort</p>
+</li>
+<li>
+<p>Edit encrypted URLs if the right password is given</p>
+</li>
+<li>Add username and password field</li>
+<li>Leave public urls unencrypted</li>
+<li>Encrypt sensitive URLs with credentials by default</li>
+<li>
+<p>New UI for editing the calendar</p>
+</li>
+<li>
+<p>Separate page for each of the features</p>
+</li>
+<li>Overview at the bottom of the page</li>
+<li>Resizing of calendar</li>
+<li>Wide screen shows calendar on the side</li>
+<li>Long screen shows calendar on the bottom</li>
+<li>Translate the project name in the title of the page</li>
+<li>Remove box shadow for default skin, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/449">Issue 449</a></li>
+<li>Add delete and edit buttons for URLs</li>
+<li>Add a few new translation strings</li>
 </ul>
 <h2 id="v147">v1.47<a class="headerlink" href="#v147" title="퍼머넌트 링크">&para;</a></h2>
 <ul>
