@@ -345,14 +345,16 @@ var TARGET_TO_SANDBOX = {
 }
 
 function getCalendarSourceCode(url, specification) {
-    var code =
+    const calendar = document.getElementById("open-web-calendar");
+    const height = calendar ? calendar.offsetHeight : 600;
+    const code =
         '<iframe id="open-web-calendar" ' +
         (shouldShowAnimationForLoading() ?
         '\n    style="background:url(\'' + getLoadingAnimationUrl().replace(/'/g, "%27") + '\') center center no-repeat;"': "") +
         '\n    src="' + escapeHtml(url) + '"' +
         '\n    ' + TARGET_TO_SANDBOX[specification.target || configuration.default_specification.target] +
         '\n    allowTransparency="true" scrolling="no" ' +
-        '\n    frameborder="0" height="600px" width="100%"></iframe>';
+        '\n    frameborder="0" height="' + height + 'px" width="100%"></iframe>';
     return code;
 }
 
