@@ -4,7 +4,7 @@ Feature: The calendar about page has a link to edit an existing calendar.
 
     Scenario Outline: I can see URLs filled into the configuration page.
       Given we set the "<parameter>" parameter to <value>
-        And we are on the configuration page
+        And we configure the urls
        Then "<parameter>" is specified as <value>
 
       Examples:
@@ -43,20 +43,20 @@ Feature: The calendar about page has a link to edit an existing calendar.
           
   Scenario: When I visit the configuration page, the configuration is
             almost empty.
-    Given we are on the configuration page
+    Given we configure the urls
      Then "hour_division" is not specified
      Then "date" is not specified
      Then "tab" is not specified
 
   Scenario: We want to edit the CSS properties
       Given we set the "css" parameter to ".test"
-        And we are on the configuration page
+        And we configure the style
        Then ".test" is written in "css-input"
        When we write "other-css" into "css-input"
        Then "css" is specified as "other-css"
 
   Scenario Outline: Checkboxes are not checked by default
-      Given we are on the configuration page
+      Given we configure the style
        Then the checkbox with id "<id>" is not checked
 
     Examples:
@@ -67,7 +67,7 @@ Feature: The calendar about page has a link to edit an existing calendar.
 
   Scenario Outline: Checkboxes get checked when the parameter is set
       Given we set the "<id>" parameter to true
-        And we are on the configuration page
+        And we configure the event-status
        Then the checkbox with id "<id>" is checked
        When we click on the input with id "<id>"
        Then "<id>" is not specified
@@ -79,6 +79,9 @@ Feature: The calendar about page has a link to edit an existing calendar.
 
   Scenario: Skin values are translated from scheduler v6 to scheduler v7
     Given we set the "skin" parameter to "dhtmlxscheduler_contrast_black.css"
-      And we are on the configuration page
+      And we configure the skins
       Then "skin" is specified as "contrast-black"
 
+  Scenario: If we edit something that does not exist, we see the URLs.
+    Given we configure the is-not-possible
+      Then we can see the text "merge several calendars"

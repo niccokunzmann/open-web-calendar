@@ -48,7 +48,7 @@ SPDX-License-Identifier: GPL-2.0-only
         </nav>
         <div class="flexcontainer">
         <main>
-            <section id="configure-intro">  
+            <section id="configure-urls">  
                 <h2>{{ html("project-name") }}</h2>
                 <p>
                     {{ html("about") }}
@@ -362,8 +362,8 @@ SPDX-License-Identifier: GPL-2.0-only
                     <a id="example-specification-link" target="_blank"></a>
                 </p>
             </section>
-            <section id="configure-footer">
-                <h2>About</h2>
+            <section id="configure-about">
+                <h2>{{ html("about-title") }}</h2>
                 {{ html("project-description") }}
                 <ul>
                     <li><a href="{{ specification["contributing"] | safe }}">{{ html("improve") }}</a></li>

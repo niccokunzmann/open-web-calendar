@@ -24,7 +24,8 @@ function initializeNavigation() {
         section.owcNextSection = null;
         lastSection = section;
     }
-    setTimeout(scrollToCurrentSection, 100);
+    // setTimeout(scrollToCurrentSection, 0);
+    scrollToCurrentSection();
     initializeSliders();
 }
 
@@ -73,7 +74,7 @@ function scrollToCurrentSection() {
     let currentSection = sectionId ? document.getElementById(sectionId) : sections[0];
     console.log("Scrolling to section", currentSection);
     if (currentSection == null) {
-        return;
+        currentSection = sections[0];
     }
     for (const section of sections) {
         section.classList.remove("active");

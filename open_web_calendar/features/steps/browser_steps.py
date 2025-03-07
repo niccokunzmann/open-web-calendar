@@ -11,6 +11,7 @@ import time
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
+from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -186,8 +187,14 @@ def step_impl(context, text):
 
 
 def get_body_text(context):
-    body = context.browser.find_elements(By.XPATH, "//body")[0]
-    return body.get_attribute("innerText")
+    end = time.time() + WAIT
+    while end > time.time():
+        try:
+            body = context.browser.find_elements(By.XPATH, "//body")[0]
+            return body.get_attribute("innerText")
+        except StaleElementReferenceException:  # noqa: PERF203
+            time.sleep(0.01)
+    raise AssertionError("Could not get body text")
 
 
 @then('we cannot find an XPATH "{xpath}"')
@@ -294,12 +301,25 @@ def click_button(context, selector_type, selector):
 # Browser steps for configuring the calendar.
 
 
-@given("we are on the configuration page")
-def step_impl(context):
+@given("we configure the {_id}")
+def step_impl(context, _id):
     """Visit the configuration page and wait for it to load."""
     context.browser.delete_all_cookies()
-    url = context.index_page + "?" + specification_to_query(context.specification)
+    url = (
+        context.index_page
+        + "?"
+        + specification_to_query(context.specification)
+        + "#configure-"
+        + _id
+    )
+    if context.browser.current_url == url:
+        refresh(context)
     get_url(context, url)
+    if _id != "is-not-possible":
+        # see https://stackoverflow.com/a/59130336/1320237
+        WebDriverWait(context.browser, WAIT).until(
+            EC.visibility_of_element_located((By.ID, "configure-" + _id))
+        )
 
 
 @when('we write "{text}" into "{field_id}"')
@@ -374,13 +394,17 @@ def step_impl(context, choice, select_id):
 
 def get_specification(context) -> dict:
     """Return the specification from the configuration page."""
-    spec_element = context.browser.find_element(By.ID, "json-specification")
-    json_string = spec_element.get_attribute("innerText")
-    try:
-        return json.loads(json_string)
-    except:
-        print(repr(json_string))
-        raise
+    end = time.time() + WAIT
+    json_string = ""
+    while time.time() < end:
+        try:
+            spec_element = context.browser.find_element(By.ID, "json-specification")
+            json_string = spec_element.get_attribute("innerText")
+            return json.loads(json_string)
+        except:
+            print(repr(json_string))
+        time.sleep(0.01)
+    raise  # noqa: PLE0704
 
 
 def assert_specification_has_value(context, attribute, expected_value="no value"):
@@ -460,7 +484,12 @@ def step_impl(context, tag, text):
 @then('the checkbox with id "{eid:S}" is checked')
 def step_impl(context, eid):
     """Check the checkbox status."""
-    element = context.browser.find_element(By.ID, eid)
+    end = time.time() + WAIT
+    while time.time() < end:
+        element = context.browser.find_element(By.ID, eid)
+        if element.get_attribute("checked"):
+            break
+        time.sleep(0.01)
     assert element.get_attribute("checked")
 
 
@@ -468,6 +497,11 @@ def step_impl(context, eid):
 def step_impl(context, eid):
     """Check the checkbox status."""
     element = context.browser.find_element(By.ID, eid)
+    end = time.time() + WAIT
+    while time.time() < end:
+        if not element.get_attribute("checked"):
+            break
+        time.sleep(0.01)
     assert not element.get_attribute("checked")
 
 
@@ -586,10 +620,13 @@ def step_impl(context):
 
 
 @when("we reload the page")
-def step_impl(context):
+def refresh(context):
     """Reload the page."""
     # see https://stackoverflow.com/a/52546865/1320237
     context.browser.refresh()
+    WebDriverWait(context.browser, WAIT).until(
+        EC.presence_of_element_located((By.XPATH, "//body"))
+    )
 
 
 @given('we load the api recording "{recording}"')

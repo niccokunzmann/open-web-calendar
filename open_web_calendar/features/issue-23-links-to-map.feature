@@ -1,13 +1,13 @@
 Feature: I want to customize the links to the location of an event.
 
     Scenario: Open Street Map is the default choice.
-        Given we are on the configuration page
+        Given we configure the map
          When we choose "OpenStreetMap" in "select-map"
          Then "event_url_location" is not specified
          Then "event_url_geo" is not specified
 
     Scenario Outline: I choose which map to use.
-        Given we are on the configuration page
+        Given we configure the map
          When we choose "<name>" in "select-map"
          Then "event_url_location" is specified as "<search>"
          Then "event_url_geo" is specified as "<geo>"

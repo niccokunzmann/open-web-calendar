@@ -17,7 +17,8 @@ button-encrypted: 'Encrypted'
 password-urls: 'We recommend encrypting URLs if they contain sensitive data. Save the following password only if you intend to decrypt them later.'
 decrypt-urls: 'Decrypt URLs'
 
-
+# Section title
+about-title: "About"
 # Section title
 calendar-embed-title: "Use & Embed"
 # This describes the calendar code to embed.
