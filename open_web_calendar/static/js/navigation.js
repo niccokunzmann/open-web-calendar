@@ -25,11 +25,42 @@ function initializeNavigation() {
         lastSection = section;
     }
     setTimeout(scrollToCurrentSection, 100);
+    initializeSliders();
+}
+
+function initializeSliders() {
     const heightSlider = document.getElementById("height-slider");
-    heightSlider.onmousedown = startHeightAdjustment;
+    heightSlider.onmousedown = heightSlider.ontouchstart = startHeightAdjustment;
     const widthSlider = document.getElementById("width-slider");
-    widthSlider.onmousedown = startWidthAdjustment;
-  };
+    widthSlider.onmousedown = widthSlider.ontouchstart = startWidthAdjustment;
+    function end() {
+        document.body.classList.remove("sliding");
+        updateOutputs();
+    }
+    overlay.onmousemove = function(event) {
+        if (!slidingCallback) return;
+        slidingCallback({x:event.pageX, y:event.pageY});
+    }
+    overlay.onmouseup = overlay.onmouseleave = function(event) {
+        if (!slidingCallback) return;
+        slidingCallback({x:event.pageX, y:event.pageY});
+        end();
+    };
+    window.ontouchmove = function(event) {
+        if (!slidingCallback) return;
+        const touch = {x:event.changedTouches[0].pageX, y:event.changedTouches[0].pageY};
+        console.log("touching", touch);
+        slidingCallback(touch);
+        event.preventDefault();
+    }
+    window.ontouchend = window.ontouchcancel = function(event) {
+        if (!slidingCallback) return;
+        const touch = {x:event.changedTouches[0].pageX, y:event.changedTouches[0].pageY};
+        console.log("touched", touch);
+        slidingCallback(touch);
+        end();
+    };
+};
 
 function scrollToCurrentSection() {
     const navigation = document.getElementById("navigation");
@@ -56,7 +87,7 @@ function scrollToCurrentSection() {
         behavior: "smooth",
       });
     const currentSectionLink = document.getElementById("currect-section");
-    currentSectionLink.href = "#" + currentSection.id;
+    // currentSectionLink.href = "#" + currentSection.id;
     currentSectionLink.innerText = currentSection.owcHeading;
     // Set navigation for next and previous section
     const bottomNextLink = document.getElementById("bottom-next-link");
@@ -84,11 +115,14 @@ window.addEventListener("hashchange", scrollToCurrentSection);
 
 function updateHeightOfSlider(event) {
     // see https://www.w3schools.com/css/css3_variables_javascript.asp
-    const height = getTotalDocumentHeight() - event.pageY + 20;
-    console.log(event.pageY, getTotalDocumentHeight(), event.clientY);
-    document.body.style.setProperty('--bottom-slider-height', height + "px");
+    const textHeight = 21;
+    let height = getTotalDocumentHeight() - event.y + textHeight;
     const display = document.getElementById("calendar-height");
     const scheduler = document.getElementById("open-web-calendar");
+    const maxHeight = getTotalDocumentHeight() - scheduler.offsetHeight - textHeight;
+    console.log("height", height);
+    height = Math.max(textHeight, Math.min(maxHeight, height));
+    document.body.style.setProperty('--bottom-slider-height', height + "px");
     display.innerText = scheduler.offsetHeight + "px";
 }
 
@@ -101,28 +135,24 @@ function getTotalDocumentHeight() {
 }
 
 function updateWidthOfSlider(event) {
-    document.body.style.setProperty('--main-width', event.pageX + "px");
+    document.body.style.setProperty('--main-width', event.x + "px");
 }
 
-function startHeightAdjustment() {
-    startSliding(updateHeightOfSlider)
+function startHeightAdjustment(event) {
+    startSliding(updateHeightOfSlider);
+    event.preventDefault();
 }
 
 function startWidthAdjustment() {
     startSliding(updateWidthOfSlider)
 }
 
+let slidingCallback = null;
+
 function startSliding(callback) {
     // see https://stackoverflow.com/a/50238821/1320237
     const overlay = document.getElementById("overlay");
-    overlay.style.height = getTotalDocumentHeight() + "px";
+    document.body.style.setProperty('--total-document-height', getTotalDocumentHeight() + "px");
     document.body.classList.add("sliding");
-    overlay.onmousemove = function(event) {
-        callback(event);
-    }
-    overlay.onmouseup = overlay.onmouseleave = function(event) {
-        callback(event);
-        document.body.classList.remove("sliding");
-        updateOutputs();
-    };
+    slidingCallback = callback;
 }

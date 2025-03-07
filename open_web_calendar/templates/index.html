@@ -39,13 +39,14 @@ SPDX-License-Identifier: GPL-2.0-only
     <body>
         <nav id="navigation" class="dark">
             <div class="navcontent">
-                <h2><a id="navigate-previous" class="needs-previous-section"></a></h2>
-                <h2><a id="currect-section" ></a></h2>
+                <a id="navigate-previous" class="needs-previous-section"></a>
+                <h1><a id="currect-section" ></a></h2>
                 <ul id="sections-dropdown">
                 </ul>
-                <h2><a id="navigate-next" class="needs-next-section"></a></h2>
+                <a id="navigate-next" class="needs-next-section"></a>
             </div>
         </nav>
+        <div class="flexcontainer">
         <main>
             <section id="configure-intro">  
                 <h2>{{ html("project-name") }}</h2>
@@ -386,6 +387,7 @@ SPDX-License-Identifier: GPL-2.0-only
             <div id="calendar-code-execution"></div>
             <div id="height-slider">↕ <span id="calendar-height"></span> ↕</div>
         </aside>
+        </div>
         <div id="overlay"></div>
         <div class="button" id="width-slider">↔</div>
     </body>
