@@ -316,8 +316,7 @@ def step_impl(context, _id):
         + "#configure-"
         + _id
     )
-    if context.browser.current_url == url:
-        refresh(context)
+    get_url(context, context.index_page + "?reload=true")
     get_url(context, url)
     if _id != "is-not-possible":
         # see https://stackoverflow.com/a/59130336/1320237
