@@ -12,6 +12,7 @@ from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
 from selenium.common.exceptions import (
+    InvalidSessionIdException,
     JavascriptException,
     StaleElementReferenceException,
     WebDriverException,
@@ -48,7 +49,9 @@ def get_url(context, url):
     print(
         f"Visiting {re.sub('^http://localhost:[0-9]+/', 'http://localhost:5000/', url)}"
     )
-    context.browser.execute_script('SELENIUM_IS_LOADING_A_NEW_PAGE_NOW="set value"')
+    with contextlib.suppress(InvalidSessionIdException):
+        context.browser.delete_all_cookies()
+        context.browser.execute_script('SELENIUM_IS_LOADING_A_NEW_PAGE_NOW="set value"')
     context.browser.get(url)
     end = time.time() + WAIT
     while time.time() < end:
@@ -72,10 +75,10 @@ def get_url(context, url):
             break
         # if time.time() > end:
         #     raise TimeoutException("timed out!")
-    assert context.browser.current_url == url, (
-        f"Expecting to visit {url} but I am stuck on {context.browser.current_url}"
-    )
-    print("DEBUG: curreent url", context.browser.current_url)
+        assert context.browser.current_url == url, (
+            f"Expecting to visit {url} but I am stuck on {context.browser.current_url}"
+        )
+    print("DEBUG: current url", context.browser.current_url)
 
 
 @given('we add the calendar "{calendar_name}"')
@@ -98,7 +101,6 @@ def step_impl(context, parameter_name, parameter_value):
 @when("we look at {date}")
 def step_impl(context, date):
     context.specification["date"] = date
-    context.browser.delete_all_cookies()
     url = (
         context.index_page
         + "calendar.html?"
@@ -344,7 +346,11 @@ def step_impl(context, _id):
     global CALLS  # noqa: PLW0603
     CALLS += 1
     context.browser.execute_script("SELENIUM_IS_LOADING_A_NEW_PAGE_NOW=true")
-
+    if _id == "urls":
+        assert context.current_recording != "", (
+            "If you want to configure urls, load an api recording first. "
+            "Otherwise we might get timeouts."
+        )
     context.browser.delete_all_cookies()
     spec = context.specification.copy()
     spec["__test_calls"] = CALLS
@@ -724,3 +730,4 @@ def step_impl(context, recording: str):
     """Load a recording."""
     context.server.start_recorded_api(recording)
     context.after_scenario.append(context.server.stop_recorded_api)
+    context.current_recording = recording
