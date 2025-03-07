@@ -435,7 +435,7 @@ def step_impl(context, choice, select_id):
             f"though text {choice!r}, showing "
             f"{select.first_selected_option.text!r} {selected_text!r}"
         )
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(e)
         print(f"Error: {select_id}: {selected_text}")
 
@@ -495,7 +495,8 @@ def click_the_button(context, text):
 @when('we click on the {tag:S} "{text}"')
 def step_impl(context, tag, text):
     if tag == "button":
-        return click_the_button(context, text)
+        click_the_button(context, text)
+        return
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
     elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
