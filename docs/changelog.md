@@ -21,39 +21,40 @@ The latest version might not be released, yet.
 - Fix automatic updates of dependencies by Renovate
 - Add encryption of URLs, see [Issue 468](https://github.com/niccokunzmann/open-web-calendar/issues/468)
 
-  - Add `cryptography` to encrypt and decrypt URLs with the Fernet cipher
-  - Support `fernet://` links with encrypted JSON content
-  - Use `bcrypt` to check if the password is correct and the decrypted value can be exposed to the user
-  - Add documentation on how to setup encryption with the `OWC_ENCRYPTION_KEYS` environment variable
-  - Add `/encrypt` and `/decrypt` JSON endpoints
-  - Fix Docker build as linux/i386 requires build dependencies
+    - Add `cryptography` to encrypt and decrypt URLs with the Fernet cipher
+    - Support `fernet://` links with encrypted JSON content
+    - Use `bcrypt` to check if the password is correct and the decrypted value can be exposed to the user
+    - Add documentation on how to setup encryption with the `OWC_ENCRYPTION_KEYS` environment variable
+    - Add `/encrypt` and `/decrypt` JSON endpoints
+    - Fix Docker build as linux/i386 requires build dependencies
 
 - Remove stack traces from production output as they might contain sensitive data
 - Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч, German by Nicco Kunzmann, Spanish by Camilo M
 - Add support for CalDAV URLs, see [Issue 189](https://github.com/niccokunzmann/open-web-calendar/issues/189)
 
-  - Allow choosing from calendars
-  - Allow entering a CalDAV URL with username and password
-  - Add `caldav` dependency
+    - Allow choosing from calendars
+    - Allow entering a CalDAV URL with username and password
+    - Add `caldav` dependency
 
 - Allow recording of APIs requests in development mode to use in tests
 - Allow editing of URLs with more comfort
 
-  - Edit encrypted URLs if the right password is given
-  - Add username and password field
-  - Leave public urls unencrypted
-  - Encrypt sensitive URLs with credentials by default
+    - Edit encrypted URLs if the right password is given
+    - Add username and password field
+    - Leave public urls unencrypted
+    - Encrypt sensitive URLs with credentials by default
 
 - New UI for editing the calendar
 
-  - Separate page for each of the features
-  - Overview at the bottom of the page
-  - Resizing of calendar
-  - Wide screen shows calendar on the side
-  - Long screen shows calendar on the bottom
-  - Translate the project name in the title of the page
-  - Remove box shadow for default skin, see [Issue 449](https://github.com/niccokunzmann/open-web-calendar/issues/449)
-  - Add delete and edit buttons for URLs
+    - Separate page for each of the features
+    - Overview at the bottom of the page
+    - Resizing of calendar
+    - Wide screen shows calendar on the side
+    - Long screen shows calendar on the bottom
+    - Translate the project name in the title of the page
+    - Remove box shadow for default skin, see [Issue 449](https://github.com/niccokunzmann/open-web-calendar/issues/449)
+    - Add delete and edit buttons for URLs
+    - Add a few new translation strings
 
 ## v1.47
 
