@@ -20,12 +20,13 @@ Feature: In order to protect credentials, I want to encrypt URls.
          When we click on the first button "Encrypt URL"
          Then we can see the text "Encrypted"
 
-    Scenario: I cannot encrypt an empty URL.
+    Scenario: I cannot encrypt an encrypted URL.
         Given we enable encryption
           And we configure the urls
          Then we cannot see the text "Encrypted"
-         When we click on the button "Encrypt URL"
-         Then we cannot see the text "Encrypted"
+         When we write "fernet://gAAAAABnxNJ-uR0tW9UumJLvRB8UYNRxFstIdXu6Mwr2JiEsK98dq_1-oVv6AtRV3pfl67bDehGrrMimbGqHhYL74bZe_VP9Wxu8ouwa0Hhf2G6UJ6z3Sdvyl5xLMiZx7ItzST-yZU7e" into "add-url-url"
+         When we click the button "Add"
+         Then we can see the text "Encrypted"
 
     Scenario: I can view the encrypted URL's content.
         Given we enable encryption
@@ -33,11 +34,6 @@ Feature: In order to protect credentials, I want to encrypt URls.
          When we look at 2019-03-04
          Then we can see the text "test1"
         
-    Scenario: I want to be able to decrypt the URLs again.
-        # Given we enable encryption
-        #   And we set the "url" parameter to "fernet://gAAAAABnxNJ-uR0tW9UumJLvRB8UYNRxFstIdXu6Mwr2JiEsK98dq_1-oVv6AtRV3pfl67bDehGrrMimbGqHhYL74bZe_VP9Wxu8ouwa0Hhf2G6UJ6z3Sdvyl5xLMiZx7ItzST-yZU7e"
-        #   And we configure the urls
-
     Scenario: I want to be able to see the password
         Given we enable encryption
         Given we configure the urls

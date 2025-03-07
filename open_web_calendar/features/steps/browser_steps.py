@@ -11,7 +11,11 @@ import time
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
-from selenium.common.exceptions import StaleElementReferenceException, TimeoutException
+from selenium.common.exceptions import (
+    StaleElementReferenceException,
+    TimeoutException,
+    WebDriverException,
+)
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -304,19 +308,20 @@ def click_button(context, selector_type, selector):
 
 # Browser steps for configuring the calendar.
 
+CALLS = 0
+
 
 @given("we configure the {_id}")
 def step_impl(context, _id):
     """Visit the configuration page and wait for it to load."""
+    global CALLS  # noqa: PLW0603
+    CALLS += 1
     context.browser.delete_all_cookies()
-    url = (
-        context.index_page
-        + "?"
-        + specification_to_query(context.specification)
-        + "#configure-"
-        + _id
-    )
+    spec = context.specification.copy()
+    spec["__test_calls"] = CALLS
+    url = context.index_page + "?" + specification_to_query(spec) + "#configure-" + _id
     with contextlib.suppress(TimeoutException):
+        # the reload seems to be needed
         get_url(context, context.index_page + "?reload=true")
     get_url(context, url)
     if _id != "is-not-possible":
@@ -331,22 +336,23 @@ def step_impl(context, text, field_id):
     """Write text into text input."""
     input_element = context.browser.find_element(By.ID, field_id)
     input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
-    # input_element.send_keys(text)
-    # print(dir(input_element))
-    # input_element.key_up(Keys.SHIFT)
-    ActionChains(context.browser)\
-        .send_keys_to_element(input_element, text)\
-        .send_keys_to_element(input_element, Keys.SHIFT)\
-        .perform()
+    try:
+        ActionChains(context.browser).send_keys_to_element(
+            input_element, text
+        ).send_keys_to_element(input_element, Keys.SHIFT).perform()
+    except WebDriverException as e:
+        print("Error", e)
+        input_element.send_keys(text)
+        # input_element.key_up(Keys.SHIFT)
     print(f"Expecting {field_id}.value == {input_element.get_attribute('value')}")
 
 
 @then('"{text}" is written in "{field_id}"')
 @then('"" is written in "{field_id}"')
-def step_impl(context, field_id, text = ""):
+def step_impl(context, field_id, text=""):
     """Check that a field has a value."""
     input_element = context.browser.find_element(By.ID, field_id)
-    end  = time.time() + WAIT
+    end = time.time() + WAIT
     while time.time() < end:
         actual_text = input_element.get_attribute("value")
         if actual_text != "":
@@ -402,9 +408,10 @@ def step_impl(context, choice, select_id):
     end = time.time() + WAIT
     selected = None
     selected_text = None
-    element = context.browser.find_element(By.ID, select_id)
-    select = Select(element)
-    select.select_by_visible_text(choice)
+    with contextlib.suppress(StaleElementReferenceException):
+        element = context.browser.find_element(By.ID, select_id)
+        select = Select(element)
+        select.select_by_visible_text(choice)
     while not selected and time.time() < end:
         with contextlib.suppress(StaleElementReferenceException):
             element = context.browser.find_element(By.ID, select_id)
@@ -422,10 +429,15 @@ def step_impl(context, choice, select_id):
     #     if not time.time() < end or not element.get_attribute('value') == "":
     #         break
     #     time.sleep(0.01)
-    print(
-        f"{select_id} selected {element.get_attribute('value')!r} "
-        f"though text {choice!r}, showing {select.first_selected_option.text!r} {selected_text!r}"
-    )
+    try:
+        print(
+            f"{select_id} selected {element.get_attribute('value')!r} "
+            f"though text {choice!r}, showing "
+            f"{select.first_selected_option.text!r} {selected_text!r}"
+        )
+    except Exception as e:
+        print(e)
+        print(f"Error: {select_id}: {selected_text}")
 
 
 def get_specification(context) -> dict:
@@ -460,12 +472,13 @@ def step_impl(context, attribute):
 
 
 @when('we click the button "{text}"')
-def step_impl(context, text):
+def click_the_button(context, text):
     """Click the only button with this label."""
     selector = (
         By.XPATH,
-        f"//input[@type = 'button' and contains(@value, {text!r})]" + " | " +
-        f"//button[contains(., {text!r})]"
+        f"//input[@type = 'button' and contains(@value, {text!r})]"
+        " | "
+        f"//button[contains(., {text!r})]",
     )
     print("selector", selector)
     WebDriverWait(context.browser, WAIT).until(
@@ -481,6 +494,8 @@ def step_impl(context, text):
 
 @when('we click on the {tag:S} "{text}"')
 def step_impl(context, tag, text):
+    if tag == "button":
+        return click_the_button(context, text)
     # select if inner text element equals the text
     # see https://stackoverflow.com/a/3655588/1320237
     elements = context.browser.find_elements(By.XPATH, f"//{tag}[text()[. = {text!r}]]")
