@@ -12,6 +12,7 @@ from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
 from selenium.common.exceptions import (
+    JavascriptException,
     StaleElementReferenceException,
     TimeoutException,
     WebDriverException,
@@ -48,7 +49,20 @@ def get_url(context, url):
     print(
         f"Visiting {re.sub('^http://localhost:[0-9]+/', 'http://localhost:5000/', url)}"
     )
-    return context.browser.get(url)
+    context.browser.execute_script('SELENIUM_IS_LOADING_A_NEW_PAGE_NOW="set value"')
+    context.browser.get(url)
+    end = time.time() + WAIT
+    try:
+        while context.browser.execute_script('return SELENIUM_IS_LOADING_A_NEW_PAGE_NOW=="set value"') and time.time() < end:
+            time.sleep(0.01)
+    except JavascriptException:
+        pass
+    # see https://stackoverflow.com/a/36590395/1320237
+    while context.browser.execute_script("return document.readyState") != "complete" and time.time() < end:
+        time.sleep(0.01)
+    if time.time() > end:
+        raise TimeoutException("timed out!")
+    print("DEBUG: curreent url", context.browser.current_url)
 
 
 @given('we add the calendar "{calendar_name}"')
@@ -316,13 +330,17 @@ def step_impl(context, _id):
     """Visit the configuration page and wait for it to load."""
     global CALLS  # noqa: PLW0603
     CALLS += 1
+    context.browser.execute_script(
+            'SELENIUM_IS_LOADING_A_NEW_PAGE_NOW=true'
+        )
+
     context.browser.delete_all_cookies()
     spec = context.specification.copy()
     spec["__test_calls"] = CALLS
     url = context.index_page + "?" + specification_to_query(spec) + "#configure-" + _id
-    with contextlib.suppress(TimeoutException):
-        # the reload seems to be needed
-        get_url(context, context.index_page + "?reload=true")
+    # with contextlib.suppress(TimeoutException):
+    #     # the reload seems to be needed
+    #     get_url(context, context.index_page + "?reload=true")
     get_url(context, url)
     if _id != "is-not-possible":
         # see https://stackoverflow.com/a/59130336/1320237
@@ -334,17 +352,25 @@ def step_impl(context, _id):
 @when('we write "{text}" into "{field_id}"')
 def step_impl(context, text, field_id):
     """Write text into text input."""
-    input_element = context.browser.find_element(By.ID, field_id)
-    input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
-    try:
-        ActionChains(context.browser).send_keys_to_element(
-            input_element, text
-        ).send_keys_to_element(input_element, Keys.SHIFT).perform()
-    except WebDriverException as e:
-        print("Error", e)
-        input_element.send_keys(text)
-        # input_element.key_up(Keys.SHIFT)
-    print(f"Expecting {field_id}.value == {input_element.get_attribute('value')}")
+    end = time.time() + WAIT
+    while time.time() < end:
+        with contextlib.suppress(StaleElementReferenceException):
+            input_element = context.browser.find_element(By.ID, field_id)
+            with contextlib.suppress(StaleElementReferenceException):
+                input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
+            try:
+                ActionChains(context.browser).scroll_to_element(input_element).send_keys_to_element(
+                    input_element, text
+                ).send_keys_to_element(input_element, Keys.SHIFT)\
+                .perform()
+            except (WebDriverException, StaleElementReferenceException) as e:
+                print("Error", e)
+                input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
+                input_element.send_keys(text)
+                # input_element.key_up(Keys.SHIFT)
+            print(f"Expecting {field_id}.value == {input_element.get_attribute('value')}")
+            return
+        time.sleep(0.01)
 
 
 @then('"{text}" is written in "{field_id}"')
