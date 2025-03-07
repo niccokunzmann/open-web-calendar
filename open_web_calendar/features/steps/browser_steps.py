@@ -192,11 +192,12 @@ def get_body_text(context):
         try:
             body = context.browser.find_elements(By.XPATH, "//body")[0]
             text = body.get_attribute("innerText")
+        except StaleElementReferenceException:  # noqa: PERF203
+            time.sleep(0.01)
+        else:
             if text is None:
                 continue
             return text
-        except StaleElementReferenceException:  # noqa: PERF203
-            time.sleep(0.01)
     raise AssertionError("Could not get body text")
 
 
