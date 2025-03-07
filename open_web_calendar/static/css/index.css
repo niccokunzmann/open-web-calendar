@@ -92,7 +92,11 @@ main, .navcontent {
 
 section {
   max-width: 50em;
+  overflow-y: auto;
+  height: 100%;
+  flex: 1 1 auto;
 }
+
 
 .code {
     padding: 1em;
@@ -422,6 +426,10 @@ aside {
   main {
     width: var(--main-width);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
   }
   aside, #height-slider  {
     width: calc(100% - var(--main-width));
@@ -432,9 +440,8 @@ aside {
     /* height: var(--nav-height); */
   }
   .bottom-navigation {
-    position: absolute;
-    bottom: 0em;
     width: var(--main-width);
+    flex: 1 1 auto;
   }
   #height-slider {
     /* position: fixed;

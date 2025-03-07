@@ -68,9 +68,9 @@ SPDX-License-Identifier: GPL-2.0-only
                         </label>
                         <input class="default-hidden" type="text" id="add-url-username" placeholder="{{ string("add-url-placeholder-username") }}" />
                         <input class="default-hidden" type="password" id="add-url-password" placeholder="{{ string("add-url-placeholder-password") }}" />
-                        <input type="button" class="default-hidden" onclick="togglePasswordVisibility('add-url-password')" value="👁" id="toggle-password-visibility"/>
+                        <button class="default-hidden" onclick="togglePasswordVisibility('add-url-password')" id="toggle-password-visibility"/>👁</button>
                         <select id="add-url-calendars"></select>
-                        <input type="button" id="add-url-button" value="{{ string("add-url-button") }}" onclick="addURLFromInput()"/>
+                        <button id="add-url-button" onclick="addURLFromInput()">{{ html("add-url-button") }}</button>
                     </div>
                 </div>
                 <p>
@@ -84,8 +84,8 @@ SPDX-License-Identifier: GPL-2.0-only
                 <p class="encryption-required action-paragraph">
                     🔑
                     <input type="password" id="encryption-password" />
-                    <input type="button" onclick="togglePasswordVisibility('encryption-password')" value="👁" id="toggle-password-visibility"/>
-                    <input type="button" onclick="decryptURLs()" value="🔓 {{ string("decrypt-urls") }}" />
+                    <button onclick="togglePasswordVisibility('encryption-password')" id="toggle-password-visibility">👁</button>
+                    <button onclick="decryptURLs()">🔓 {{ html("decrypt-urls") }}</button>
                 </p>
             </section>
             <section class="languages" id="configure-languages">

@@ -67,10 +67,12 @@ Feature: I want to be able to edit URLs when they are added.
           And the checkbox with id "add-url-credentials-checkbox" is checked
 
     Scenario: I edit an encrypted URL that has credentials and I can see them
-        Given we enable encyption
-          And we set the "url" parameter to "fernet://gAAAAABnyxiJp_fC6MWkuR4dY5O-V45NgHHouWfmNVbi5WSXE0Y_v7VOEmhYIPflbH3zTCPyki5SIRwSqLRGIsihrkp2kratbF1Zug2I89t4u70OViXHGc8oAwBEmEL-Yvj7InLI37w4CiM3SC3dihbjjzJWxJZlOS79dasTcbyDCRdf6x7-6Vb0rPlQECQRZ2WZRS1ob6BnsYV7L6M4JTAq2Tk6opgJkF8ZUbfviQMT9wzlLekxgpQ="
+        Given we enable encryption
+          And we set the "url" parameter to "fernet://gAAAAABnyyRRy02cWJM9TFmQSy-z1PiVDZHE9KANQfM1Fx4UglhhIFFtVZSi3y1LQDVv_L7oZwAkBWFxLmfREUHJ5JMcnPxPzh9_HfuJubB65tFdTPUJZQHwAZ8TZzWpH8YIiGn7C487CZWRNVOv-h4dKYtAVv-nFHULa3QCOWoI7xPp7uHwj43Beah_JZ-TPnNKxg3ywLm8VInURQEaJqAD0O8z2jILqg_IxCcJeVrzSRCluJEIrQg="
           And we configure the urls
-          And we click the button "Edit"
-         Then "userme" is written in "add-url-username"
-          And "passme" is written in "add-url-password"
-          And "https://test.asd/cal" is written in "add-url-url"
+         When we write "ux0tzc64" into "encryption-password"
+          And we click on the button "Edit"
+         Then "https://test.asd/cal" is written in "add-url-url"
+          And "userme" is written in "add-url-username"
+          And "passsme" is written in "add-url-password"
+

@@ -52,7 +52,7 @@ function updateCalendarInputs() {
     }
     const encryptButtons = document.getElementsByClassName("encrypt-button");
     for (const encryptButton of encryptButtons) {
-        const url = encryptButton.link.href;
+        const url = encryptButton.link.owcGetUrl();
         encryptButton.innerText = urlIsEncrypted(url) ? 
             "🔒 " + translations["button-encrypted"] :
             "🔑 " + translations["button-encrypt"];
@@ -65,7 +65,7 @@ function getUrls() {
     let urlInputs = document.getElementsByClassName("calendar-url-input");
     for (var i = 0; i < urlInputs.length; i+= 1) {
         let urlInput = urlInputs[i];
-        let url = urlInput.href;
+        let url = urlInput.owcGetUrl();
         if (url) {
             urls.push(url);
         }
@@ -697,10 +697,10 @@ function decryptURLs() {
     const password = document.getElementById("encryption-password").value;
     const urlInputs = document.getElementsByClassName("calendar-url-input");
     for (let urlLink of urlInputs) {
-        const url = urlLink.href;
+        const url = urlLink.owcGetUrl();
         if (urlIsEncrypted(url)) {
             decrypt(url, password).then(function(result) {
-                urlLink.href = urlLink.innerText= result.data.url;
+                urlLink.owcSetUrl(result.data.url);
                 updateUrls();
             });
         }
@@ -822,8 +822,16 @@ function addURLToList(url, isDefault) {
     /* input for urls */
     const link = document.createElement("a");
     link.classList.add("calendar-url-input");
-    link.innerText = url;
-    link.href = url;
+    let currentUrl = url;
+    link.owcSetUrl = function(url){
+        currentUrl = url;
+        link.innerText = url;
+        link.href = url;
+        updateUrls();
+    }
+    link.owcGetUrl = function() {
+        return currentUrl;
+    }
     link.target = "_blank";
     link.owcIsDefault = isDefault || false;
     li.appendChild(link);
@@ -845,21 +853,21 @@ function addURLToList(url, isDefault) {
     encryptButton.classList.add("encryption-required");
     encryptButton.link = link;
     encryptButton.addEventListener("click", function() {
-        const url = link.href;
+        const url = link.owcGetUrl();
         if (canEncrypt(url)) {
             /* not encrypted */
             encryptJson({
                 "url": url
             }).then(function(response) {
-                link.href = link.innerText = response["token"];
-                updateUrls();
+                link.owcSetUrl(response["token"]);
             });
-        }    });
+        }
+    });
     li.appendChild(encryptButton);
     const editButton = document.createElement("button");
     editButton.innerText = "✏️ " + translations["button-edit"];
     editButton.onclick = function() {
-        editUrl(link.href);
+        editUrl(link.owcGetUrl());
     }
     li.appendChild(editButton);
     const removeButton = document.createElement("button");
@@ -870,7 +878,8 @@ function addURLToList(url, isDefault) {
     }
     const calendarUrls = document.getElementById("calendar-urls");
     calendarUrls.appendChild(li);
-    updateUrls();
+    // last before return 
+    link.owcSetUrl(url);
     return link;
 }
 

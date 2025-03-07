@@ -2,13 +2,15 @@ Feature: In order to protect credentials, I want to encrypt URls.
 
     Scenario: If encryption is not enabled, I do not want to see related features.
         Given we configure the urls
-         Then we cannot see the text "Encrypted"
-         Then we cannot see the text "Encrypt URL"
+         Then we cannot see the text "Decrypt URLs"
+          And we cannot see the text "We recommend encrypting"
 
     Scenario: If encryption is enabled, I want to be able to encrypt URLs.
         Given we enable encryption
           And we configure the urls
-         Then we can see the text "Encrypt URL"
+         Then we can see the text "We recommend encrypting"
+          And we can see the text "Decrypt URLs"
+         
 
     Scenario: When I encrypt a URL, I get visual feedback.
         Given we add the calendar "gancio.antroposofiachile.net.ics"
@@ -40,7 +42,7 @@ Feature: In order to protect credentials, I want to encrypt URls.
         Given we enable encryption
         Given we configure the urls
          When we write "myP4ssphraz3" into "encryption-password"
-          And we click on the input with id "toggle-password-visibility"
+          And we click on the button with id "toggle-password-visibility"
          Then we can see the password
 
     Scenario: I cannot see the password by default.

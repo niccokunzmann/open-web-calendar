@@ -11,7 +11,7 @@ import time
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
-from selenium.common.exceptions import StaleElementReferenceException
+from selenium.common.exceptions import StaleElementReferenceException, TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -316,7 +316,8 @@ def step_impl(context, _id):
         + "#configure-"
         + _id
     )
-    get_url(context, context.index_page + "?reload=true")
+    with contextlib.suppress(TimeoutException):
+        get_url(context, context.index_page + "?reload=true")
     get_url(context, url)
     if _id != "is-not-possible":
         # see https://stackoverflow.com/a/59130336/1320237
@@ -330,7 +331,13 @@ def step_impl(context, text, field_id):
     """Write text into text input."""
     input_element = context.browser.find_element(By.ID, field_id)
     input_element.clear()  # see https://stackoverflow.com/a/7809907/1320237
-    input_element.send_keys(text)
+    # input_element.send_keys(text)
+    # print(dir(input_element))
+    # input_element.key_up(Keys.SHIFT)
+    ActionChains(context.browser)\
+        .send_keys_to_element(input_element, text)\
+        .send_keys_to_element(input_element, Keys.SHIFT)\
+        .perform()
     print(f"Expecting {field_id}.value == {input_element.get_attribute('value')}")
 
 
@@ -339,7 +346,12 @@ def step_impl(context, text, field_id):
 def step_impl(context, field_id, text = ""):
     """Check that a field has a value."""
     input_element = context.browser.find_element(By.ID, field_id)
-    actual_text = input_element.get_attribute("value")
+    end  = time.time() + WAIT
+    while time.time() < end:
+        actual_text = input_element.get_attribute("value")
+        if actual_text != "":
+            break
+        time.sleep(0.01)
     assert actual_text == text, (
         f"Expected {text!r} in {field_id} but got {actual_text!r}."
     )
@@ -386,16 +398,33 @@ def step_impl(context, year, month, day, field_id):
 @when('we choose "{choice}" in "{select_id}"')
 def step_impl(context, choice, select_id):
     """Write text into text input."""
-    element = context.browser.find_element(By.ID, select_id)
     # see https://stackoverflow.com/a/28613320/1320237
     end = time.time() + WAIT
+    selected = None
+    selected_text = None
+    element = context.browser.find_element(By.ID, select_id)
     select = Select(element)
-    while time.time() < end and element.get_attribute('value') == "":
-        select.select_by_visible_text(choice)
-        time.sleep(0.01)
+    select.select_by_visible_text(choice)
+    while not selected and time.time() < end:
+        with contextlib.suppress(StaleElementReferenceException):
+            element = context.browser.find_element(By.ID, select_id)
+            select = Select(element)
+            for i, option in enumerate(select.options):
+                text = option.text
+                if choice in text:
+                    select.select_by_index(i)
+                    selected = option
+                    selected_text = text
+                    # break
+            time.sleep(0.01)
+    # while True:
+    #     select.select_by_visible_text(choice)
+    #     if not time.time() < end or not element.get_attribute('value') == "":
+    #         break
+    #     time.sleep(0.01)
     print(
         f"{select_id} selected {element.get_attribute('value')!r} "
-        f"though text {choice!r}"
+        f"though text {choice!r}, showing {select.first_selected_option.text!r} {selected_text!r}"
     )
 
 
@@ -436,17 +465,18 @@ def step_impl(context, text):
     selector = (
         By.XPATH,
         f"//input[@type = 'button' and contains(@value, {text!r})]" + " | " +
-        f"//button[contains(text(), {text!r})]"
+        f"//button[contains(., {text!r})]"
     )
     print("selector", selector)
     WebDriverWait(context.browser, WAIT).until(
-        EC.presence_of_element_located(selector)
+        EC.visibility_of_element_located(selector)
     )
     buttons = context.browser.find_elements(*selector)
     assert len(buttons) == 1, (
         f"Expected one button with the text {text!r} but got {buttons}."
     )
-    buttons[0].click()
+    # buttons[0].focus()
+    buttons[0].send_keys(Keys.RETURN)
 
 
 @when('we click on the {tag:S} "{text}"')
