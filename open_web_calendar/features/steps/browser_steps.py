@@ -14,7 +14,6 @@ from behave import given, then, when
 from selenium.common.exceptions import (
     JavascriptException,
     StaleElementReferenceException,
-    TimeoutException,
     WebDriverException,
 )
 from selenium.webdriver.common.action_chains import ActionChains
@@ -73,7 +72,9 @@ def get_url(context, url):
             break
         # if time.time() > end:
         #     raise TimeoutException("timed out!")
-    assert context.browser.current_url == url, f"Expecting to visit {url} but I am stuck on {context.browser.current_url}"
+    assert context.browser.current_url == url, (
+        f"Expecting to visit {url} but I am stuck on {context.browser.current_url}"
+    )
     print("DEBUG: curreent url", context.browser.current_url)
 
 
