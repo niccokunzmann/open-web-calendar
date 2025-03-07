@@ -335,7 +335,8 @@ def step_impl(context, text, field_id):
 
 
 @then('"{text}" is written in "{field_id}"')
-def step_impl(context, text, field_id):
+@then('"" is written in "{field_id}"')
+def step_impl(context, field_id, text = ""):
     """Check that a field has a value."""
     input_element = context.browser.find_element(By.ID, field_id)
     actual_text = input_element.get_attribute("value")
@@ -387,8 +388,11 @@ def step_impl(context, choice, select_id):
     """Write text into text input."""
     element = context.browser.find_element(By.ID, select_id)
     # see https://stackoverflow.com/a/28613320/1320237
+    end = time.time() + WAIT
     select = Select(element)
-    select.select_by_visible_text(choice)
+    while time.time() < end and element.get_attribute('value') == "":
+        select.select_by_visible_text(choice)
+        time.sleep(0.01)
     print(
         f"{select_id} selected {element.get_attribute('value')!r} "
         f"though text {choice!r}"
@@ -429,9 +433,16 @@ def step_impl(context, attribute):
 @when('we click the button "{text}"')
 def step_impl(context, text):
     """Click the only button with this label."""
-    buttons = context.browser.find_elements(
-        By.XPATH, f"//input[@type = 'button' and contains(@value, {text!r})]"
+    selector = (
+        By.XPATH,
+        f"//input[@type = 'button' and contains(@value, {text!r})]" + " | " +
+        f"//button[contains(text(), {text!r})]"
     )
+    print("selector", selector)
+    WebDriverWait(context.browser, WAIT).until(
+        EC.presence_of_element_located(selector)
+    )
+    buttons = context.browser.find_elements(*selector)
     assert len(buttons) == 1, (
         f"Expected one button with the text {text!r} but got {buttons}."
     )

@@ -857,13 +857,13 @@ function addURLToList(url, isDefault) {
         }    });
     li.appendChild(encryptButton);
     const editButton = document.createElement("button");
-    editButton.innerText = "✎";
+    editButton.innerText = "✏️ " + translations["button-edit"];
     editButton.onclick = function() {
         editUrl(link.href);
     }
     li.appendChild(editButton);
     const removeButton = document.createElement("button");
-    removeButton.innerText = "❌";
+    removeButton.innerText = "❌ " + translations["button-remove"];
     removeButton.onclick = link.owcRemove;
     if (!isDefault) {
         li.appendChild(removeButton);
