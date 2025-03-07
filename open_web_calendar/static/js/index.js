@@ -750,3 +750,8 @@ function decryptURLs() {
         }
     }
 }
+
+function toggleUrlCredentials(){
+    const addUrls = document.getElementById("add-url-paragraph");
+    addUrls.classList.toggle("toggle-default-visibility")
+}

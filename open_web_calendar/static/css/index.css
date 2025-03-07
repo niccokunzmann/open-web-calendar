@@ -102,7 +102,7 @@ section {
 }
 
 
-.calendar-url-input, #calendar-title {
+.calendar-url-input, #calendar-title{
     width: 100%;
 }
 
@@ -344,6 +344,42 @@ aside {
   width: 100%;
 }
 
+/* Adding URLS */
+
+/* see https://stackoverflow.com/a/76079959/1320237 */
+#add-url-calendars:not(:has(option)) {
+  display: none;
+}
+
+#add-url-paragraph {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-url-url {
+  width: 100%;
+}
+
+#credentials {
+  display: flex;
+  flex-direction: row;
+}
+
+#add-url-username, #add-url-password, #add-url-credentials-label {
+  flex: 1 1 auto;
+}
+
+.default-hidden {
+  display: none;
+}
+
+.toggle-default-visibility .default-visible {
+  display: none;
+}
+
+.toggle-default-visibility .default-hidden {
+  display: unset;
+}
 
 /* media query goes last */
 

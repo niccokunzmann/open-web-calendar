@@ -16,6 +16,12 @@ button-encrypt: 'Encrypt URL'
 button-encrypted: 'Encrypted'
 password-urls: 'We recommend encrypting URLs if they contain sensitive data. Save the following password only if you intend to decrypt them later.'
 decrypt-urls: 'Decrypt URLs'
+add-url-placeholder-url: 'https://link.to/a-calendar.ics'
+add-url-placeholder-username: 'optional username'
+add-url-placeholder-password: 'optional password'
+add-url-button: Add URL
+add-url-calendar-public: This is a public calendar
+supported-standards: 'We support the following standards: ICAL, CalDAV, webcal.'
 
 # Section title
 about-title: "About"
