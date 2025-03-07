@@ -111,3 +111,13 @@ password-urls: Wir empfehlen, URLs zu verschlüsseln, wenn sie vertrauliche Date
   Speichere das folgende Passwort nur dann ab, wenn du vorhast diese irgendwann zu
   entschlüsseln.
 decrypt-urls: URLs entschlüsseln
+about-title: Mehr Infos
+button-edit: Bearbeiten
+add-url-placeholder-username: Möglicher Nutzername
+add-url-placeholder-url: https://ein.link/zum-Kalender.ics
+add-url-button: Hinzufügen
+add-url-calendar-public: Die URL ist öffentlich einsehbar
+supported-standards: 'Wir unterstützen die folgenden Standards: ICAL, CalDAV, webcal.'
+add-url-placeholder-password: Mögliches Passwort
+button-remove: Löschen
+calendar-embed-title: Fertig! Jetzt Nutzen
