@@ -52,24 +52,28 @@ def get_url(context, url):
     context.browser.execute_script('SELENIUM_IS_LOADING_A_NEW_PAGE_NOW="set value"')
     context.browser.get(url)
     end = time.time() + WAIT
-    try:
+    while time.time() < end:
+        try:
+            while (
+                context.browser.execute_script(
+                    'return SELENIUM_IS_LOADING_A_NEW_PAGE_NOW=="set value"'
+                )
+                and time.time() < end
+            ):
+                time.sleep(0.01)
+        except JavascriptException:
+            pass
+        # see https://stackoverflow.com/a/36590395/1320237
         while (
-            context.browser.execute_script(
-                'return SELENIUM_IS_LOADING_A_NEW_PAGE_NOW=="set value"'
-            )
+            context.browser.execute_script("return document.readyState") != "complete"
             and time.time() < end
         ):
             time.sleep(0.01)
-    except JavascriptException:
-        pass
-    # see https://stackoverflow.com/a/36590395/1320237
-    while (
-        context.browser.execute_script("return document.readyState") != "complete"
-        and time.time() < end
-    ):
-        time.sleep(0.01)
-    if time.time() > end:
-        raise TimeoutException("timed out!")
+        if context.browser.current_url == url:
+            break
+        # if time.time() > end:
+        #     raise TimeoutException("timed out!")
+    assert context.browser.current_url == url, f"Expecting to visit {url} but I am stuck on {context.browser.current_url}"
     print("DEBUG: curreent url", context.browser.current_url)
 
 
