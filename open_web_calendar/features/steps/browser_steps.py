@@ -398,17 +398,7 @@ def step_impl(context, choice, select_id):
 
 def get_specification(context) -> dict:
     """Return the specification from the configuration page."""
-    end = time.time() + WAIT
-    json_string = ""
-    while time.time() < end:
-        try:
-            spec_element = context.browser.find_element(By.ID, "json-specification")
-            json_string = spec_element.get_attribute("innerText")
-            return json.loads(json_string)
-        except:
-            print(repr(json_string))
-        time.sleep(0.01)
-    raise  # noqa: PLE0704
+    return context.browser.execute_script("return getSpecification()")
 
 
 def assert_specification_has_value(context, attribute, expected_value="no value"):
