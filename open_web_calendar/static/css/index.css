@@ -15,6 +15,7 @@
   --maximum-height-of-calendar: 1200px;
   --minimum-height-of-calendar: 200px;
   --total-document-height: 100%;
+  --border-radius: .66em
 }
 
 .dark {
@@ -97,7 +98,7 @@ section {
     padding: 1em;
     background: var(--secondary-color);
     color: var(--background-color);
-    border-radius: 0.66em;
+    border-radius: var(--border-radius);
     overflow: hidden;
 }
 
@@ -144,7 +145,7 @@ section {
   padding: 1em;
   background: var(--secondary-color);
   color: var(--background-color);
-  border-radius: 0.66em;
+  border-radius: var(--border-radius);
   display: block;
 }
 
@@ -156,14 +157,6 @@ section {
 
 .no-style-listing li {
   padding-bottom: 0.5em;
-}
-
-#calendar-urls li {
-  text-align: center;
-}
-#calendar-urls li input, #calendar-urls li button {
-  height: 2em;
-  vertical-align: middle;
 }
 
 nav {
@@ -240,7 +233,7 @@ nav h1 {
   color: var(--primary-color);
   vertical-align: middle;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0.2em;
+  border-radius: var(--border-radius);
 } 
 
 
@@ -257,7 +250,7 @@ nav h1 {
 .button {
   display: inline-block;
   padding: 0.5em;
-  border-radius: 0.5em;
+  border-radius: var(--border-radius);
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
   text-decoration: none;
@@ -367,6 +360,7 @@ aside {
 
 #add-url-username, #add-url-password, #add-url-credentials-label {
   flex: 1 1 auto;
+  width: 33%;
 }
 
 .default-hidden {
@@ -379,6 +373,31 @@ aside {
 
 .toggle-default-visibility .default-hidden {
   display: unset;
+}
+
+#calendar-urls a {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+#calendar-urls li {
+  text-align: center;
+  border-radius: var(--border-radius);
+  border-width: 1px;
+  border-color: var(--secondary-color);
+  border-style: solid;
+  padding: 1em;
+}
+
+#calendar-urls li input, #calendar-urls li button {
+  height: 2em;
+  vertical-align: middle;
+}
+
+#select-sections   {
+  text-align: center;
 }
 
 /* media query goes last */

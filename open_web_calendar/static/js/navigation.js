@@ -3,20 +3,36 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /* This is used by the configuration page for navigation. */
 
+function isSectionForConfig(section) {
+    return !section.classList.contains("not-for-config");
+}
+
 function initializeNavigation() {
-    const navigation = document.getElementById("navigation");
-    const sectionsDropdown = document.getElementById("sections-dropdown");
+    const sectionsDropdown = document.getElementById("select-sections");
     const sections = document.getElementsByTagName("section");
     let lastSection = null;
+    let uiIndexMax = 0;
     for (const section of sections) {
+        if (isSectionForConfig(section)) {
+            uiIndexMax += 1;
+        }
+    }
+    let uiIndex = 0;
+    for (const section of sections) {
+        if (isSectionForConfig(section)) {
+            uiIndex += 1;
+        }
         const heading = section.getElementsByTagName("h2")[0];
+        // link
         const link = document.createElement("a");
         link.href = "#" + section.id;
         link.innerText = section.owcHeading = heading.innerText;
-        const li = document.createElement("li");
-        section.owcLi = li;
-        li.appendChild(link);
-        sectionsDropdown.appendChild(li);
+        // add to dropdown to chooose
+        const option = document.createElement("option");
+        option.value = section.id;
+        option.innerText = isSectionForConfig(section) ? `${uiIndex}/${uiIndexMax} - ${section.owcHeading}` : section.owcHeading;
+        sectionsDropdown.appendChild(option);
+        // linking sections to each other
         if (lastSection) {
             lastSection.owcNextSection = section;
         }
@@ -62,7 +78,6 @@ function initializeSliders() {
 };
 
 function scrollToCurrentSection() {
-    const navigation = document.getElementById("navigation");
     let sectionId = document.location.hash;
     if (sectionId.startsWith("#")) {
         sectionId = sectionId.slice(1);
@@ -74,10 +89,8 @@ function scrollToCurrentSection() {
     }
     for (const section of sections) {
         section.classList.remove("active");
-        section.owcLi.classList.remove("active");
     }
     currentSection.classList.add("active");
-    currentSection.owcLi.classList.add("active");
     window.scrollTo({
         top: 0,
         left: window.innerWidth/2,
@@ -105,6 +118,8 @@ function scrollToCurrentSection() {
     } else {
         document.body.classList.add("no-previous-section");
     }
+    const sectionsDropdown = document.getElementById("select-sections");
+    sectionsDropdown.value = currentSection.id;
 };
 
 window.addEventListener("load", initializeNavigation);
@@ -151,4 +166,10 @@ function startSliding(callback) {
     document.body.style.setProperty('--total-document-height', getTotalDocumentHeight() + "px");
     document.body.classList.add("sliding");
     slidingCallback = callback;
+}
+
+function selectSection() {
+    const select = document.getElementById("select-sections");
+    const sectionId = select.options[select.selectedIndex].value;
+    document.location.hash = sectionId;
 }

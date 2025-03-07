@@ -57,7 +57,7 @@ SPDX-License-Identifier: GPL-2.0-only
                 <p>
                     {{ html("calendar-urls") }}
                 </p>
-                <div class="action-paragraph" id="add-url-paragraph">
+                <div id="add-url-paragraph">
                     <input type="text" id="add-url-url" placeholder="{{ string("add-url-placeholder-url") }}" />
                     <div id="credentials">
                         <input type="checkbox" id="add-url-credentials-checkbox" checked onchange="toggleUrlCredentials()" />
@@ -66,8 +66,9 @@ SPDX-License-Identifier: GPL-2.0-only
                         </label>
                         <input class="default-hidden" type="text" id="add-url-username" placeholder="{{ string("add-url-placeholder-username") }}" />
                         <input class="default-hidden" type="password" id="add-url-password" placeholder="{{ string("add-url-placeholder-password") }}" />
+                        <input type="button" class="default-hidden" onclick="togglePasswordVisibility('add-url-password')" value="👁" id="toggle-password-visibility"/>
                         <select id="add-url-calendars"></select>
-                        <input type="button" id="add-url-button" value="{{ string("add-url-button") }}" />
+                        <input type="button" id="add-url-button" value="{{ string("add-url-button") }}" onclick="addURLFromInput()"/>
                     </div>
                 </div>
                 <p>
@@ -81,7 +82,7 @@ SPDX-License-Identifier: GPL-2.0-only
                 <p class="encryption-required action-paragraph">
                     🔑
                     <input type="password" id="encryption-password" />
-                    <input type="button" onclick="toggleUrlPasswordVisibility()" value="👁" id="toggle-password-visibility"/>
+                    <input type="button" onclick="togglePasswordVisibility('encryption-password')" value="👁" id="toggle-password-visibility"/>
                     <input type="button" onclick="decryptURLs()" value="🔓 {{ string("decrypt-urls") }}" />
                 </p>
             </section>
@@ -370,7 +371,7 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <pre id="calendar-code" class="code"></pre>
             </section>
-            <section id="configure-spec">
+            <section id="configure-spec" class="not-for-config">
                 <h2>{{ html("spec-title") }}</h2>
                 {{ html("spec-description") }}
                 <pre class="code" id="json-specification"></pre>
@@ -378,7 +379,7 @@ SPDX-License-Identifier: GPL-2.0-only
                 {{ html("spec-link") }}
                 <a id="example-specification-link" target="_blank"></a>
             </section>
-            <section id="configure-about">
+            <section id="configure-about" class="not-for-config"    >
                 <h2>{{ html("about-title") }}</h2>
                 {{ html("project-description") }}
                 <ul>
@@ -395,6 +396,7 @@ SPDX-License-Identifier: GPL-2.0-only
             </section>
             <div class="bottom-navigation">
                 <a id="bottom-previous-link" class="button needs-previous-section">⬅</a>
+                <select id="select-sections" onchange="selectSection()"></select>
                 <a id="bottom-done-link" href="#configure-embed" class="button">{{ html("calendar-embed-title") }}</a>
                 <a id="bottom-next-link" class="button needs-next-section">➡</a>
             </div>

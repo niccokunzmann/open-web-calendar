@@ -19,8 +19,8 @@ decrypt-urls: 'Decrypt URLs'
 add-url-placeholder-url: 'https://link.to/a-calendar.ics'
 add-url-placeholder-username: 'optional username'
 add-url-placeholder-password: 'optional password'
-add-url-button: Add URL
-add-url-calendar-public: This is a public calendar
+add-url-button: Add
+add-url-calendar-public: This is a public url
 supported-standards: 'We support the following standards: ICAL, CalDAV, webcal.'
 
 # Section title

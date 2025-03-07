@@ -32,7 +32,7 @@ async function encryptJson(json) {
 }
 
 function canEncrypt(url) {
-    return !url.startsWith(ENCRYPTION_PREFIX) && !RegExp(/^\s*$/).exec(url)
+    return !urlIsEncrypted(url) && !RegExp(/^\s*$/).exec(url)
 }
 
 
@@ -43,61 +43,17 @@ function updateUrls() {
 
 function updateCalendarInputs() {
     const urlInputs = document.getElementsByClassName("calendar-url-input");
-    const calendarUrls = document.getElementById("calendar-urls");
-    let hasEmptyInput = false;
     let calendar_index;
     for (calendar_index = 0; calendar_index < urlInputs.length; calendar_index+= 1) {
         const urlInput = urlInputs[calendar_index];
-        hasEmptyInput |= urlInput.value == "";
-    }
-    if (!hasEmptyInput) {
-        const li = document.createElement("li");
-        /* input for urls */
-        const input = document.createElement("input");
-        input.type = "text";
-        input.classList.add("calendar-url-input");
-        input.addEventListener("change", updateUrls);
-        input.addEventListener("keyup", updateUrls);
-        input.id = "calendar-url-input-" + urlInputs.length;
-        li.appendChild(input);
-        /* input for calendar color
-        <input type="color" value="#fefefe"
-               placeholder="black" class="color-input"
-               cssTemplate=".dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: {color}; }">*/
-        const color = document.createElement("input");
-        color.type = "color";
-        color.classList.add("color-input");
-        color.value = "#fefefe";
         const cssTemplate = ".CALENDAR-INDEX-" + calendar_index + ", .CALENDAR-INDEX-" + calendar_index + " .dhx_body, .CALENDAR-INDEX-" + calendar_index + " .dhx_title  { background-color: {color}; } \n";
-        color.setAttribute("cssTemplate", cssTemplate);
-        color.addEventListener("change", updateUrls);
-        color.addEventListener("keyup", updateUrls);
-        li.appendChild(color);
-        /* Encrypt and decrypt urls */
-        const encryptButton = document.createElement("button");
-        encryptButton.innerText = translations["button-encrypt"];
-        encryptButton.classList.add("encrypt-button");
-        encryptButton.classList.add("encryption-required");
-        encryptButton.urlInput = input;
-        encryptButton.addEventListener("click", function() {
-            const url = input.value;
-            if (canEncrypt(url)) {
-                /* not encrypted */
-                encryptJson({
-                    "url": url
-                }).then(function(response) {
-                    input.value = response["token"];
-                    updateUrls();
-                });
-            }
-        });
-        li.appendChild(encryptButton);
-        calendarUrls.appendChild(li);
+        urlInput.owcColor.setAttribute("cssTemplate", cssTemplate);
+        
     }
     const encryptButtons = document.getElementsByClassName("encrypt-button");
     for (const encryptButton of encryptButtons) {
-        const url = encryptButton.urlInput.value;
-        encryptButton.innerText = url.startsWith(ENCRYPTION_PREFIX) ? 
+        const url = encryptButton.link.href;
+        encryptButton.innerText = urlIsEncrypted(url) ? 
             "🔒 " + translations["button-encrypted"] :
             "🔑 " + translations["button-encrypt"];
         encryptButton.disabled = !canEncrypt(url);
@@ -105,11 +61,11 @@ function updateCalendarInputs() {
 }
 
 function getUrls() {
-    var urls = [];
-    var urlInputs = document.getElementsByClassName("calendar-url-input");
+    let urls = [];
+    let urlInputs = document.getElementsByClassName("calendar-url-input");
     for (var i = 0; i < urlInputs.length; i+= 1) {
-        var urlInput = urlInputs[i];
-        var url = urlInput.value;
+        let urlInput = urlInputs[i];
+        let url = urlInput.href;
         if (url) {
             urls.push(url);
         }
@@ -210,7 +166,7 @@ function getSpecification() {
     var urls = getUrls();
     if (urls.length == 1) {
         spec.url = urls[0];
-    } else if (urls.length > 1) {
+    } else {
         spec.url = urls;
     }
     /* title */
@@ -404,10 +360,9 @@ function downloadJSONAsFile(filename, text) {
 }
 
 function fillFirstInputWithData() {
+    let defaultUrls = configuration.default_specification.url;
     for (let url of ((typeof specification.url) == "string" ? [specification.url] : specification.url)) {
-      updateCalendarInputs();
-      var urlInputs = document.getElementsByClassName("calendar-url-input");
-      urlInputs[urlInputs.length - 1].value = url;
+        const link = addURLToList(url, arraysEqual(defaultUrls, specification.url));
     }
 }
 
@@ -669,6 +624,7 @@ window.addEventListener("load", function(){
     updateOutputs();
     fillDefaultSpecificationLink();
     fillPasswordField();
+    listenForCalDavCalendars();
 });
 
 String.prototype.formatUnicorn = String.prototype.formatUnicorn ||
@@ -703,8 +659,8 @@ function arraysEqual(a, b) {
   return true;
 }
 
-function toggleUrlPasswordVisibility() {
-    const password = document.getElementById("encryption-password");
+function togglePasswordVisibility(id) {
+    const password = document.getElementById(id);
     if (password.type === "password") {
         password.type = "text";
     } else {
@@ -740,11 +696,11 @@ async function decrypt(token) {
 function decryptURLs() {
     const password = document.getElementById("encryption-password").value;
     const urlInputs = document.getElementsByClassName("calendar-url-input");
-    for (let urlInput of urlInputs) {
-        const url = urlInput.value;
-        if (url.startsWith(ENCRYPTION_PREFIX)) {
+    for (let urlLink of urlInputs) {
+        const url = urlLink.href;
+        if (urlIsEncrypted(url)) {
             decrypt(url, password).then(function(result) {
-                urlInput.value = result.data.url;
+                urlLink.href = urlLink.innerText= result.data.url;
                 updateUrls();
             });
         }
@@ -752,6 +708,239 @@ function decryptURLs() {
 }
 
 function toggleUrlCredentials(){
+    const data = getURLFromInput();
+    fillInUrlEditFields(data.url, !data.isPublic || urlIsEncrypted(data.url));
+    return false;
+}
+
+function fillInUrlEditFields(url, isPublic) {
     const addUrls = document.getElementById("add-url-paragraph");
-    addUrls.classList.toggle("toggle-default-visibility")
+    const credentialsCheckbox = document.getElementById("add-url-credentials-checkbox");
+    credentialsCheckbox.checked = isPublic;
+    if (isPublic) {
+        addUrls.classList.remove("toggle-default-visibility");
+    } else {
+        addUrls.classList.add("toggle-default-visibility");
+    }
+    const urlInput = document.getElementById("add-url-url");
+    const passwordInput = document.getElementById("add-url-password");
+    const usernameInput = document.getElementById("add-url-username");
+    let urlObject;
+    try {
+        urlObject = new URL(url);
+    } catch (error) {
+        urlInput.value  = url;
+        return;
+    }
+    if (isPublic) {
+        urlInput.value = urlObject.href;
+        passwordInput.value = "";
+        usernameInput.value = "";
+    } else {
+        passwordInput.value = urlObject.password;
+        usernameInput.value = urlObject.username;
+        urlObject.password = urlObject.username = "";
+        urlInput.value = urlObject.href;
+    }
+    updateCalDavCoice();
+}
+
+function getURLFromInput() {
+    const userUrl = document.getElementById("add-url-url").value;
+    const isPublic = isPublicUrlInUI() || urlIsEncrypted(userUrl);
+    let url = userUrl;
+    let urlObject
+    try {
+        urlObject = new URL(userUrl);
+    } catch (error) {
+        url = "https://" + userUrl;
+        try {
+            urlObject = new URL(url);
+        } catch (error) {
+            return {
+                url: userUrl,
+                isPublic: isPublic,
+                "username": "",
+                "password": "",
+                "withoutCredentials": userUrl
+            }
+        }
+    }
+    username = document.getElementById("add-url-username").value || urlObject.username;
+    password = document.getElementById("add-url-password").value || urlObject.password;
+    urlObject.username = username;
+    urlObject.password = password;
+    url = urlObject.href;
+    const withoutCredentials = new URL(url);
+    withoutCredentials.username = withoutCredentials.password = "";
+    return {
+        "url": url,
+        "isPublic": isPublic,
+        "username": username,
+        "password": password,
+        "withoutCredentials": withoutCredentials.href,
+    }
+}
+
+function getUrlFromCalDAVSelection() {
+    const calendarSelect = document.getElementById("add-url-calendars");
+    const url = calendarSelect.value;
+    if (url) {
+        return {
+            "url": url,
+            "isPublic": isPublicUrlInUI()
+        }
+    }
+    return null;
+}
+
+function isPublicUrlInUI() {
+    const addUrls = document.getElementById("add-url-paragraph");
+    return !addUrls.classList.contains("toggle-default-visibility");
+}
+
+function addURLFromInput() {
+    const url = getUrlFromCalDAVSelection() || getURLFromInput();
+    if (!url.isPublic) {
+        encryptJson({
+            "url": url.url,
+        }).then(function(result) {
+            console.log(result);
+            addURLToList(result.token);
+        }).catch(function(error) {
+            console.error(error);
+            addURLToList(url.url);
+        })
+    } else {
+            addURLToList(url.url);
+    }
+}
+
+function addURLToList(url, isDefault) {
+    removeDefaultCalendars();
+    const li = document.createElement("li");
+    /* input for urls */
+    const link = document.createElement("a");
+    link.classList.add("calendar-url-input");
+    link.innerText = url;
+    link.href = url;
+    link.target = "_blank";
+    link.owcIsDefault = isDefault || false;
+    li.appendChild(link);
+    link.owcRemove = function() {
+        calendarUrls.removeChild(li);
+        updateUrls();
+    }
+    const color = link.owcColor = document.createElement("input");
+    color.type = "color";
+    color.classList.add("color-input");
+    color.value = "#fefefe";
+    color.addEventListener("change", updateUrls);
+    color.addEventListener("keyup", updateUrls);
+    li.appendChild(color);
+    /* Encrypt and decrypt urls */
+    const encryptButton = document.createElement("button");
+    encryptButton.innerText = translations["button-encrypt"];
+    encryptButton.classList.add("encrypt-button");
+    encryptButton.classList.add("encryption-required");
+    encryptButton.link = link;
+    encryptButton.addEventListener("click", function() {
+        const url = link.href;
+        if (canEncrypt(url)) {
+            /* not encrypted */
+            encryptJson({
+                "url": url
+            }).then(function(response) {
+                link.href = link.innerText = response["token"];
+                updateUrls();
+            });
+        }    });
+    li.appendChild(encryptButton);
+    const editButton = document.createElement("button");
+    editButton.innerText = "✎";
+    editButton.onclick = function() {
+        editUrl(link.href);
+    }
+    li.appendChild(editButton);
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "❌";
+    removeButton.onclick = link.owcRemove;
+    if (!isDefault) {
+        li.appendChild(removeButton);
+    }
+    const calendarUrls = document.getElementById("calendar-urls");
+    calendarUrls.appendChild(li);
+    updateUrls();
+    return link;
+}
+
+function removeDefaultCalendars() {
+    const calendarUrls = document.getElementById("calendar-urls");
+    calendarUrls.querySelectorAll(".calendar-url-input").forEach(function(urlLink) {
+        if (urlLink.owcIsDefault) {
+            urlLink.owcRemove()
+        }
+    });
+}
+
+function listenForCalDavCalendars() {
+    [
+        document.getElementById("add-url-url"),
+        document.getElementById("add-url-username"),
+        document.getElementById("add-url-password"),
+    ].forEach(function(input) {
+        input.addEventListener("change", updateCalDavCoice);
+        input.addEventListener("keyup", updateCalDavCoice);
+        });
+}
+
+async function getCalDavCalendars() {
+    const json = getURLFromInput();
+    // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    const url = "/caldav/list-calendars";
+    const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(json),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}: ${response.text()}`);
+    }
+    return await response.json();
+}
+
+function updateCalDavCoice() {
+    const calendarSelect = document.getElementById("add-url-calendars");
+    getCalDavCalendars().then(function(calendars) {
+        calendarSelect.innerHTML = "";
+        calendars.calendars.forEach(function(calendar) {
+            const option = document.createElement("option");
+            option.value = calendar.url;
+            option.innerText = calendar.name;
+            calendarSelect.appendChild(option);
+        });
+    }, function(error) {
+        calendarSelect.innerHTML = "";
+        console.error(error);
+    });
+}
+
+function editUrl(url) {
+    const password = document.getElementById("encryption-password").value;
+    if (urlIsEncrypted(url)) {
+        decrypt(url, password).then(function(result) {
+            fillInUrlEditFields(result.data.url, false);
+        }).catch(function(error) {
+            console.error(error);
+            fillInUrlEditFields(url, true);
+        });
+    } else {
+        fillInUrlEditFields(url, true);
+    }
+}
+
+function urlIsEncrypted(url) {
+    return url.startsWith(ENCRYPTION_PREFIX);
 }
