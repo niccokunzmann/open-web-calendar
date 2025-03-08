@@ -101,7 +101,7 @@ jobs:
         # see https://github.com/Azure/functions-action/issues/216#issuecomment-2012210949
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ env.WEBAPP_NAME }}
+          # app-name: ${{ env.WEBAPP_NAME }}
           # see https://stackoverflow.com/questions/50147803/getting-the-azure-app-service-slot-name-on-startup
           # see https://github.com/Azure/webapps-deploy/issues/25
           slot-name: "production"
