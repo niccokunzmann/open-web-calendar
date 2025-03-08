@@ -84,7 +84,8 @@ jobs:
       - name: Configure deployment and runtime settings on the webapp
         # see https://azure.github.io/AppService/2020/12/11/cicd-for-python-apps.html
         run: |
-          az configure --defaults ${{ env.RESOURCE_GROUP }}
+          # see 
+          az configure --defaults group=${{ env.RESOURCE_GROUP }}
           az webapp config appsettings --name ${{ env.WEBAPP_NAME }} --settings \
               SCM_DO_BUILD_DURING_DEPLOYMENT=true \
               FLASK_ENV=production
