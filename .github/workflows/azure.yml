@@ -17,6 +17,8 @@ on:
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
   PYTHON_VERSION: '3.12' # set this to the python version to use (supports 3.6, 3.7, 3.8)
+  WEBAPP_NAME: open-web-calendar
+  RESOURCE_GROUP: resource-2
 
 jobs:
   build:
@@ -37,10 +39,12 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
+      
+      - name: Prepare environment
+        run: cp requirements/base.txt requirements.txt
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       # Optional: Add step to run tests here
 
       - name: Zip artifact for deployment
@@ -77,11 +81,22 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5E679394E42A471FB66542DF196CDC3E }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_37B47FC90407499495A176226BF49314 }}
 
+      - name: Configure deployment and runtime settings on the webapp
+        # see https://azure.github.io/AppService/2020/12/11/cicd-for-python-apps.html
+        run: |
+          # az configure --defaults ${{ env.RESOURCE_GROUP }}
+          az webapp config appsettings --name ${{ env.WEBAPP_NAME }} --settings \
+              SCM_DO_BUILD_DURING_DEPLOYMENT=true \
+              FLASK_ENV=production
+      
+          az webapp config set --name ${{ env.WEBAPP_NAME }} \
+              --startup-file "gunicorn --bind=0.0.0.0 --timeout 600 app:app"
+
       - name: 'Deploy to Azure Functions'
         uses: Azure/functions-action@v1
         id: deploy-to-function
         with:
-          app-name: 'open-web-calendar'
+          app-name: ${{ env.WEBAPP_NAME }}
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           
