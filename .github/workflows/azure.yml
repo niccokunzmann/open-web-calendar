@@ -81,17 +81,17 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5E679394E42A471FB66542DF196CDC3E }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_37B47FC90407499495A176226BF49314 }}
 
-      - name: Configure deployment and runtime settings on the webapp
-        # see https://azure.github.io/AppService/2020/12/11/cicd-for-python-apps.html
-        run: |
-          # see 
-          az configure --defaults group=${{ env.RESOURCE_GROUP }}
-          az webapp config appsettings --name ${{ env.WEBAPP_NAME }} --settings \
-              SCM_DO_BUILD_DURING_DEPLOYMENT=true \
-              FLASK_ENV=production
-      
-          az webapp config set --name ${{ env.WEBAPP_NAME }} \
-              --startup-file "gunicorn --bind=0.0.0.0 --timeout 600 app:app"
+      # Configure deployment and runtime settings on the webapp
+      # see https://azure.github.io/AppService/2020/12/11/cicd-for-python-apps.html
+      - name: configure defaults
+        # see https://learn.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest#az-configure-examples
+        run: az configure --defaults group=${{ env.RESOURCE_GROUP }} web=${{ env.WEBAPP_NAME }}
+      - name: configure webapp environment
+        # see https://learn.microsoft.com/en-us/cli/azure/webapp/config/appsettings?view=azure-cli-latest#az-webapp-config-appsettings-set
+        run: az webapp config appsettings set --name ${{ env.WEBAPP_NAME }} --settings SCM_DO_BUILD_DURING_DEPLOYMENT=true FLASK_ENV=production
+      - name: configure webapp startup
+        # see https://learn.microsoft.com/en-us/cli/azure/webapp/config?view=azure-cli-latest#az-webapp-config-set
+        run: az webapp config set --name ${{ env.WEBAPP_NAME }} --startup-file "gunicorn --bind=0.0.0.0 --timeout 600 app:app"
 
       - name: 'Deploy to Azure Functions'
         uses: Azure/functions-action@v1
