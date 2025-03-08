@@ -107,3 +107,11 @@ password-urls: Ми рекомендуємо шифрувати URL-адреси
   дані. Збережіть наступний пароль, лише якщо ви збираєтеся розшифрувати його пізніше.
 about-title: Про
 calendar-embed-title: Використовуйте та вставляйте
+button-edit: Редагувати
+add-url-button: Додати
+add-url-calendar-public: Це публічна URL-адреса
+supported-standards: 'Ми підтримуємо такі стандарти: ICAL, CalDAV, webcal.'
+add-url-placeholder-url: https://link.to/a-calendar.ics
+add-url-placeholder-username: необов'язкове ім'я користувача
+button-remove: Вилучити
+add-url-placeholder-password: необ'язковий пароль
