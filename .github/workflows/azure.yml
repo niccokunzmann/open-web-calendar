@@ -97,19 +97,21 @@ jobs:
         # see https://learn.microsoft.com/en-us/cli/azure/webapp/config?view=azure-cli-latest#az-webapp-config-set
         run: az webapp config set --name ${{ env.WEBAPP_NAME }} --startup-file "gunicorn --bind=0.0.0.0 --timeout 600 app:app"
 
-      # - name: 'Run Azure webapp deploy action using publish profile credentials'
-      #   # see https://github.com/Azure/functions-action/issues/216#issuecomment-2012210949
-      #   uses: azure/webapps-deploy@v2
-      #   with:
-      #     app-name: ${{ env.WEBAPP_NAME }}
-      #     publish-profile: ${{ secrets.azureWebAppPublishProfile }}
-  
-      - name: 'Deploy to Azure Functions'
-        uses: Azure/functions-action@v1
-        id: deploy-to-function
+      - name: 'Run Azure webapp deploy action using publish profile credentials'
+        # see https://github.com/Azure/functions-action/issues/216#issuecomment-2012210949
+        uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.WEBAPP_NAME }}
-          slot-name: 'Production'
           publish-profile: ${{ secrets.azureWebAppPublishProfile }}
-          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+  
+      # - name: 'Deploy to Azure Functions'
+      #   # 
+      #   # https://stackoverflow.com/a/69524775/1320237
+      #   uses: Azure/functions-action@v1
+      #   id: deploy-to-function
+      #   with:
+      #     app-name: ${{ env.WEBAPP_NAME }}
+      #     slot-name: 'Production'
+      #     publish-profile: ${{ secrets.azureWebAppPublishProfile }}
+      #     package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           
