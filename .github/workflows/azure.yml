@@ -102,7 +102,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.WEBAPP_NAME }}
-          slot-name: 'Production'
+          slot-name: ""  # https://stackoverflow.com/questions/50147803/getting-the-azure-app-service-slot-name-on-startup
           publish-profile: ${{ secrets.azureWebAppPublishProfile }}
   
       # - name: 'Deploy to Azure Functions'
