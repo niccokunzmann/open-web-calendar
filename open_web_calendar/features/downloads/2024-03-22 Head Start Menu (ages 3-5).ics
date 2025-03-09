@@ -12,6 +12,7 @@ DTSTART;VALUE=DATE:20240322
 DTEND;VALUE=DATE:20240323
 DTSTAMP:20240407T111927Z
 UID:2935
+RECURRENCE-ID;VALUE=DATE:20240322
 DESCRIPTION:Breakfast\n\nHoneydew\n\nCinnamon Bread\n\n1% Milk\n\nLunch\n\
  nGround Beef Stroganoff\n\nSteamed Cauliflower\n\nApricots\n\n1% Milk\n\nS
  nack\n\nBroccoli\n\nBread Sticks\n\nCottage Cheese\n\n1% Milk
