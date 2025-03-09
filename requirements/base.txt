@@ -89,7 +89,7 @@ pytz==2025.1
     # via vobject
 pyyaml==6.0.2
     # via -r requirements/base.in
-recurring-ical-events==3.5.2
+recurring-ical-events==3.6.0
     # via
     #   -r requirements/base.in
     #   caldav
