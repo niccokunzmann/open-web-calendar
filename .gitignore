@@ -127,3 +127,4 @@ NGI Core Open Web Calendar Stack penetration test report 2024 1.0.pdf
 
 # ignore generated translation content of pages that are not translated
 open_web_calendar/translations/*/LC_MESSAGES/changelog.md.po
+presentations/
