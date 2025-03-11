@@ -62,7 +62,7 @@ pysocks==1.7.1
     # via urllib3
 pytest==8.3.5
     # via -r requirements/test.in
-python-debian==0.1.49
+python-debian==1.0.1
     # via reuse
 pyyaml==6.0.2
     # via responses
