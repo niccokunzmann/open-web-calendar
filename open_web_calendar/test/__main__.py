@@ -34,6 +34,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 class ReusableTCPServer(socketserver.TCPServer):
     allow_reuse_address = True
 
+
 try:
     httpd = ReusableTCPServer((HOST, PORT), Handler)
 except OSError as e:

@@ -135,3 +135,23 @@ Feature: The calendar has a configuration page that displays and changes the
          And we click on the span "The calendar is always in this language:"
         Then "prefer_browser_language" is not specified
 
+    Scenario: By default, we do not see participants.
+       Given we configure the participants
+        Then "show_organizers" is not specified
+        Then "show_attendees" is not specified
+        Then "show_participant_status" is not specified
+        Then "show_participant_type" is not specified
+        Then "show_participant_role" is not specified
+
+     Scenario Outline: We change the visibility
+       Given we configure the participants
+        When we click on the span "<label>"
+        Then "<spec>" is specified as true
+      
+      Examples:
+        | label                  | spec                    |
+        | who organizes          | show_organizers         |
+        | who attends            | show_attendees          |
+        | status of participants | show_participant_status |
+        | individual             | show_participant_type   |
+        | role                   | show_participant_role   |

@@ -35,3 +35,15 @@ Feature: I want to be able to see who is attending the event.
          When we click on the summary "Participants"
          Then the link "Test User" opens "mailto:niccokunzmann+test.quelltext.ocloud.de@gmail.com"
           And the link "Yemaya" opens "mailto:yemaya@posteo.net"
+
+    Scenario Outline: If the event has no praticipants, I do not wat to be teased by an empty section.
+        Given we add the calendar "one-event"
+          And we set the "<parameter>" parameter to "true"
+         When we look at 2019-03-04
+          And we click on the event "test1"
+         Then we cannot see the text "Participants"
+
+      Examples:
+        | parameter |
+        | show_attendees |
+        | show_organizers |

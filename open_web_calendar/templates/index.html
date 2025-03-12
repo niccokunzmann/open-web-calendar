@@ -363,6 +363,19 @@ SPDX-License-Identifier: GPL-2.0-only
                   </select>
                 </p>
             </section>
+            <section id="configure-participants">
+                <h2>{{ html("participants-title") }}</h2>
+                <p>
+                  {{ html("participants-description") }}
+                </p>
+                <p class="participants">
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_organizers" /><label for="show_organizers">{{ html("participants-organizers") }}</label><br/>
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_attendees" /><label for="show_attendees">{{ html("participants-attendees") }}</label><br/>
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_participant_status" /><label for="show_participant_status">{{ html("participants-status") }}</label><br/>
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_participant_type" /><label for="show_participant_type">{{ html("participants-type") }}</label><br/>
+                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_participant_role" /><label for="show_participant_role">{{ html("participants-role") }}</label>
+                </p>
+            </section>
             <section id="configure-embed">
                 <h2>{{ html("calendar-embed-title") }}</h2>
                 <p>

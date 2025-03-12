@@ -5,12 +5,13 @@
 
 See https://github.com/niccokunzmann/open-web-calendar/issues/680
 """
+
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from icalendar import vCalAddress
 import pytest
+from icalendar import vCalAddress
 
 from open_web_calendar.convert_to_dhtmlx import ConvertToDhtmlx
 
@@ -46,7 +47,12 @@ def test_organizer_is_present(participants):
     assert organizer["email"] == "niccokunzmann+test.quelltext.ocloud.de@gmail.com"
     assert organizer["role"] == "ORGANIZER"
     assert organizer["index"] == 0, "the organizer should be the first always"
-    assert organizer["css"] == ["PARTICIPANT", "PARTICIPANT-INDIVIDUAL", "PARTICIPANT-ORGANIZER", "PARTICIPANT-NEEDS-ACTION"]
+    assert organizer["css"] == [
+        "PARTICIPANT",
+        "PARTICIPANT-INDIVIDUAL",
+        "PARTICIPANT-ORGANIZER",
+        "PARTICIPANT-NEEDS-ACTION",
+    ]
 
 
 def test_attendee_nicco(participants):
@@ -77,9 +83,13 @@ def test_empty_params():
     assert attendee["type"] == "INDIVIDUAL", "RFC 5545:  Default is INDIVIDUAL"
     assert attendee["email"] == "asd@asdf.com"
     assert attendee["role"] == "REQ-PARTICIPANT", "RFC5545: Default is REQ-PARTICIPANT"
-    assert attendee["css"] == ["PARTICIPANT", "PARTICIPANT-INDIVIDUAL", "PARTICIPANT-REQ-PARTICIPANT", "PARTICIPANT-NEEDS-ACTION"]
+    assert attendee["css"] == [
+        "PARTICIPANT",
+        "PARTICIPANT-INDIVIDUAL",
+        "PARTICIPANT-REQ-PARTICIPANT",
+        "PARTICIPANT-NEEDS-ACTION",
+    ]
 
 
 def test_participants_are_added_with_sent_by(todo):
     """When adding the participants, the principal's email is used."""
-

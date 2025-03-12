@@ -184,11 +184,18 @@ event_url_name: "OpenStreetMap"
 
 ## Do you want the organizer to be shown below the event?
 ## See also https://www.rfc-editor.org/rfc/rfc5545.html#page-113
-show_organizers: False
+show_organizers: false
 ## Do you want the attendees to be shown below the event?
 ## See also https://www.rfc-editor.org/rfc/rfc5545.html#page-108
-show_attendees: False
-
+show_attendees: false
+## If show_organizers or show_attendees is true, these customization options
+## might be interesting.
+## Show the status (e.g. accepted/declined)
+show_participant_status: false
+## Show the status (e.g. individual/group)
+show_participant_type: false
+## Show the status (e.g. organizer/required/optional)
+show_participant_role: false
 
 ###################### Clean HTML ######################
 ##

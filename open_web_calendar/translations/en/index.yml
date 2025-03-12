@@ -296,3 +296,13 @@ spec-host-html: 'You can <a href="javascript:downloadJSONSpecification()">downlo
 # https://open-web-calendar.hosted.quelltext.eu/#translate-spec-link
 spec-link: "Once you have placed the specification somewhere online, you can create\
   \ a link like this one:"
+
+
+# Participants
+participants-title: "Participants and Organization"
+participants-description: "You can invite others to events and people can sign up. You can enable these options to view the names and email addresses below the event description."
+participants-organizers: "Show who organizes the event?"
+participants-attendees: "Show who attends the event?"
+participants-status: "Show the status of participants? (i.e. accepted/declined)"
+participants-type: "Show which kind of participant this is? (i.e. individual or group)"
+participants-role: "Show the role of the participant? (i.e. organizer, required person or optional)"

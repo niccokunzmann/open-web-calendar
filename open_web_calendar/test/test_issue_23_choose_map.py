@@ -9,7 +9,7 @@ from flask.testing import FlaskClient
 def test_event_in_mountain_view(client: FlaskClient, calendar_urls):
     """The event has a location with geo."""
     events = client.get(
-        f"/calendar.events.json?url={calendar_urls['issue-680-nextcloud']}&from=2025-01-15&to=2025-01-17"
+        f"/calendar.events.json?url={calendar_urls['issue-23-location-berlin']}&from=2025-01-15&to=2025-01-17"
     ).json
     event = events[0]
     assert (

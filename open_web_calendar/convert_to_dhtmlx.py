@@ -6,19 +6,18 @@ from __future__ import annotations
 import datetime
 from html import escape
 from typing import TYPE_CHECKING, Any, Optional
-
 from urllib.parse import unquote
+
 import zoneinfo
 from dateutil.parser import parse as parse_date
 from flask import jsonify
-from icalendar import vCalAddress
 from icalendar_compatibility import Description, Location, LocationSpec
 
 from .clean_html import clean_html
 from .conversion_base import ConversionStrategy
 
 if TYPE_CHECKING:
-    from icalendar import Event
+    from icalendar import Event, vCalAddress
 
     from open_web_calendar.calendars.base import Calendars
 
@@ -81,34 +80,49 @@ class ConvertToDhtmlx(ConversionStrategy):
             geo_url=self.specification.get("event_url_geo", ""),
             text_url=self.specification.get("event_url_location", ""),
         )
-    
+
     @classmethod
     def get_participants(cls, event: Event) -> dict[str, Any]:
         """Return the participants of the event."""
         participants = []
         organizer = event.get("ORGANIZER")
         if organizer is not None:
-            participants.append(cls.create_participant_from(organizer, role="ORGANIZER", is_oragnizer=True))
-        attendees = event.get("ATTENDEE")
+            participants.append(
+                cls.create_participant_from(
+                    organizer, role="ORGANIZER", is_oragnizer=True
+                )
+            )
+        attendees = event.get("ATTENDEE", [])
         if not isinstance(attendees, list):
             attendees = [attendees]
         for attendee in attendees:
             participants.append(cls.create_participant_from(attendee))
         return participants
-    
+
     @classmethod
-    def create_participant_from(cls, address:vCalAddress, role:str="REQ-PARTICIPANT", is_oragnizer:bool=False) -> dict[str, Any]:
+    def create_participant_from(
+        cls,
+        address: vCalAddress,
+        role: str = "REQ-PARTICIPANT",
+        is_oragnizer: bool = False,  # noqa: FBT001
+    ) -> dict[str, Any]:
         """Create a participant with default values."""
         participant = {}
         participant["type"] = pt = address.params.get("CUTYPE", "INDIVIDUAL")
-        participant["email"] = email = unquote(address[7:] if address.lower().startswith("mailto:") else str(address))
+        participant["email"] = email = unquote(
+            address[7:] if address.lower().startswith("mailto:") else str(address)
+        )
         participant["name"] = address.params.get("CN", email)
         participant["status"] = status = address.params.get("PARTSTAT", "NEEDS-ACTION")
         participant["role"] = pr = address.params.get("ROLE", role)
-        participant["css"] = ["PARTICIPANT", f"PARTICIPANT-{pt}", f"PARTICIPANT-{pr}", f"PARTICIPANT-{status}"]
+        participant["css"] = [
+            "PARTICIPANT",
+            f"PARTICIPANT-{pt}",
+            f"PARTICIPANT-{pr}",
+            f"PARTICIPANT-{status}",
+        ]
         participant["is_oragnizer"] = is_oragnizer
         return participant
-
 
     def convert_ical_event(self, calendar_index, calendar_event: Event):
         start = calendar_event.start
