@@ -78,7 +78,7 @@ def get_url(context, url):
         assert context.browser.current_url == url, (
             f"Expecting to visit {url} but I am stuck on {context.browser.current_url}"
         )
-    print("DEBUG: current url", context.browser.current_url)
+    # print("DEBUG: current url", context.browser.current_url)
 
 
 @given('we add the calendar "{calendar_name}"')

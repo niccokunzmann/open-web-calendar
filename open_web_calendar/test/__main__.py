@@ -31,8 +31,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         super().__init__(*args, directory=CALENDAR_FOLDER, **kwargs)
 
 
+class ReusableTCPServer(socketserver.TCPServer):
+    allow_reuse_address = True
+
+
 try:
-    httpd = socketserver.TCPServer((HOST, PORT), Handler)
+    httpd = ReusableTCPServer((HOST, PORT), Handler)
 except OSError as e:
     print(f"Could not start the HTTP server. Assuming it is runnning... {e}")
 else:

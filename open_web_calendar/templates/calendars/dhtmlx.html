@@ -41,9 +41,14 @@ SPDX-License-Identifier: GPL-2.0-only
                 height:100%;
                 overflow:hidden;
             }
+            /* Event Status */
             {% if specification['style-event-status-tentative'] %}.STATUS-TENTATIVE { font-style: italic; }{% endif %}
             {% if specification['style-event-status-confirmed'] %}.event { font-weight: normal; } .STATUS-CONFIRMED { font-weight: bold; }{% endif %}
             {% if specification['style-event-status-cancelled'] %}.STATUS-CANCELLED { text-decoration: line-through; }{% endif %}
+            /* participants */
+            {% if not specification['show_participant_status'] %}.PARTICIPANT .status { display: none; }{% endif %}
+            {% if not specification['show_participant_type'] %}.PARTICIPANT .type { display: none; }{% endif %}
+            {% if not specification['show_participant_role'] %}.PARTICIPANT .role { display: none; }{% endif %}
             {{ specification['css'] | safe }}
         </style>
         {% for link in specification.javascript_url %}

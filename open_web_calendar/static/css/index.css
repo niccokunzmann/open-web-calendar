@@ -337,6 +337,7 @@ aside {
   text-align: center;
 }
 
+
 /* media query goes last */
 
 @media only screen and (min-width: 70em) {
