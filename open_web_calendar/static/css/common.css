@@ -1,0 +1,79 @@
+/*
+ * SPDX-FileCopyrightText: 2024-2025 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+ *
+ * SPDX-License-Identifier: GPL-2.0-only
+ */
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #4f4f0e;
+    --background-color: #ffffff;
+    --accent-color: #fa9801;
+    --bottom-slider-height: calc(100% - 600px);
+    --minimum-bottom-slider-height: 1.5em;
+    --nav-height: 7em;
+    --maximum-height-of-calendar: 1200px;
+    --minimum-height-of-calendar: 200px;
+    --total-document-height: 100%;
+    --border-radius: .66em
+}
+  
+.dark {
+    --primary-color: #fbfd31;
+    --secondary-color: #cfea29;
+    --background-color: #000000;
+    --accent-color: #fa9801;
+    color: var(--primary-color);
+    background: var(--background-color);
+}
+  
+body, html {
+    color: var(--primary-color);
+    background: var(--background-color);
+    height: 100%;  
+    margin: 0px;
+    padding:0px;
+}
+
+a {
+    color: var(--secondary-color);
+}
+  
+footer {
+    border-color: var(--primary-color);
+    border-width: 0px;
+    border-top-width: 1px;
+    border-style: solid;
+    margin-top: 0.3em;
+    padding-top: 0.3em;
+    color: var(--secondary-color);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+  
+footer a {
+    color: var(--primary-color);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--background-color);
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+main, .navcontent {
+    padding: 1em;
+    margin-right: auto;
+    margin-left: auto;
+}
