@@ -166,7 +166,7 @@ var template = {
         return scheduler.templates.event_date(start) + " - " + scheduler.templates.event_date(end)
     },
     "participants" : function (participants) {
-        if (!specification.show_organizers && !specification.show_attendees) {
+        if (!specification.show_organizers && !specification.show_attendees || participants.length == 0) {
             return "";
         }
         const details = document.createElement("details");
