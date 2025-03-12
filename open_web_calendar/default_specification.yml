@@ -182,6 +182,14 @@ event_url_geo: "https://www.openstreetmap.org/#map=16/{lat}/{lon}"
 ## The name of this URL in the user interface
 event_url_name: "OpenStreetMap"
 
+## Do you want the organizer to be shown below the event?
+## See also https://www.rfc-editor.org/rfc/rfc5545.html#page-113
+show_organizer: False
+## Do you want the attendees to be shown below the event?
+## See also https://www.rfc-editor.org/rfc/rfc5545.html#page-108
+show_attendees: False
+
+
 ###################### Clean HTML ######################
 ##
 ## Clean HTML removes possibilities of hacking your site.

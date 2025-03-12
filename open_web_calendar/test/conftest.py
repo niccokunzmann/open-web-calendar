@@ -145,3 +145,9 @@ def merged(
 def store():
     """A test crypt store for the open web calendar."""
     return FernetStore(["n77iebivnjNTLDpmFcu6DuNFTHUnlEjCskx8oe0Xh8k="])
+
+
+@pytest.fixture
+def todo():
+    """This test should be implement later."""
+    pytest.skip("This test needs implementing.")
