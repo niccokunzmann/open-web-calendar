@@ -150,5 +150,95 @@ div.dhx_agenda_line > span {
 }
 
 
+.participants {
+    overflow-y: auto;
+    --dhx-scheduler-base-colors-icons: var(--dhx-scheduler-base-colors-primary);
+}
+/* Styling of all participants */
+/* .PARTICIPANT {} */
 
-/* TODO: style the participants as overflowing y */
+.participants .icon {
+    mask: url('/img/icons/type/unknown.svg');
+}
+
+/* RFC CUTYPE */
+.PARTICIPANT-INDIVIDUAL .icon.type {
+    mask: url('/img/icons/type/individual.svg');
+}
+.PARTICIPANT-GROUP .icon.type {
+    mask: url('/img/icons/type/group.svg');
+}
+.PARTICIPANT-RESOURCE .icon.type {
+    mask: url('/img/icons/type/resource.svg');
+}
+.PARTICIPANT-ROOM .icon.type {
+    mask: url('/img/icons/type/room.svg');
+}
+.PARTICIPANT-UNKNOWN .icon.type {
+    mask: url('/img/icons/type/unknown.svg');
+}
+
+/* RFC 5545 ROLE */
+.PARTICIPANT-CHAIR .icon.role {
+    mask: url('/img/icons/role/chair.svg');
+}
+.PARTICIPANT-REQ-PARTICIPANT .icon.role {
+    mask: url('/img/icons/role/req-participant.svg');
+}
+.PARTICIPANT-OPT-PARTICIPANT .icon.role {
+    mask: url('/img/icons/role/opt-participant.svg');
+}
+.PARTICIPANT-NON-PARTICIPANT .icon.role {
+    mask: url('/img/icons/role/non-participant.svg');
+}
+/* special organizer role */
+.PARTICIPANT-ORGANIZER .icon.role {
+    mask: url('/img/icons/role/organizer.svg');
+}
+
+/* RFC 5545 STATUS */
+.PARTICIPANT-ACCEPTED .icon.status {
+    mask: url('/img/icons/status/accepted.svg');
+}
+.PARTICIPANT-DECLINED .icon.status {
+    mask: url('/img/icons/status/declined.svg');
+}
+.PARTICIPANT-DELEGATED .icon.status {
+    mask: url('/img/icons/status/delegated.svg');
+}
+.PARTICIPANT-NEEDS-ACTION .icon.status {
+    mask: url('/img/icons/status/needs-action.svg');
+}
+/* special organizer role */
+.PARTICIPANT-TENTATIVE .icon.status {
+    mask: url('/img/icons/status/tentative.svg');
+}
+
+
+/* icons */
+.participants .icon {
+    display: inline-block;
+    mask-size: 100% !important;
+    user-select: none;
+    background-color: var(--dhx-scheduler-base-colors-icons);
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+}
+
+.participants li a {
+    width: 100%;
+    color: var(--dhx-scheduler-base-colors-icons);
+    text-decoration: none;
+    
+}
+
+.participants li::marker {
+    content: "";
+}
+
+.participants ol {
+    padding-left: 0em;
+}

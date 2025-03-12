@@ -42,11 +42,11 @@ def test_organizer_is_present(participants):
     """Check the details of the organizer."""
     organizer = participants["Test User"]
     assert organizer["name"] == "Test User"
-    assert organizer["type"] == "CHAIR"
+    assert organizer["type"] == "INDIVIDUAL"
     assert organizer["email"] == "niccokunzmann+test.quelltext.ocloud.de@gmail.com"
     assert organizer["role"] == "ORGANIZER"
     assert organizer["index"] == 0, "the organizer should be the first always"
-    assert organizer["css"] == ["PARTICIPANT", "PARTICIPANT-CHAIR", "PARTICIPANT-ORGANIZER"]
+    assert organizer["css"] == ["PARTICIPANT", "PARTICIPANT-INDIVIDUAL", "PARTICIPANT-ORGANIZER", "PARTICIPANT-NEEDS-ACTION"]
 
 
 def test_attendee_nicco(participants):
@@ -63,9 +63,9 @@ def test_attendee_yemaya(participants):
     """Check that yemaya also has the right participant details."""
     attendee = participants["Yemaya"]
     assert attendee["name"] == "Yemaya"
-    assert attendee["type"] == "INDIVIDUAL"
+    assert attendee["type"] == "GROUP"
     assert attendee["email"] == "yemaya@posteo.net"
-    assert attendee["role"] == "REQ-PARTICIPANT"
+    assert attendee["role"] == "CHAIR"
     assert attendee["index"] != 0, "the organizer should be the first always"
 
 
@@ -77,7 +77,7 @@ def test_empty_params():
     assert attendee["type"] == "INDIVIDUAL", "RFC 5545:  Default is INDIVIDUAL"
     assert attendee["email"] == "asd@asdf.com"
     assert attendee["role"] == "REQ-PARTICIPANT", "RFC5545: Default is REQ-PARTICIPANT"
-    assert attendee["css"] == ["PARTICIPANT", "PARTICIPANT-INDIVIDUAL", "PARTICIPANT-REQ-PARTICIPANT"]
+    assert attendee["css"] == ["PARTICIPANT", "PARTICIPANT-INDIVIDUAL", "PARTICIPANT-REQ-PARTICIPANT", "PARTICIPANT-NEEDS-ACTION"]
 
 
 def test_participants_are_added_with_sent_by(todo):

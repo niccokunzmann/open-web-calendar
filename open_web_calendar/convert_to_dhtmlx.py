@@ -103,8 +103,9 @@ class ConvertToDhtmlx(ConversionStrategy):
         participant["type"] = pt = address.params.get("CUTYPE", "INDIVIDUAL")
         participant["email"] = email = unquote(address[7:] if address.lower().startswith("mailto:") else str(address))
         participant["name"] = address.params.get("CN", email)
+        participant["status"] = status = address.params.get("PARTSTAT", "NEEDS-ACTION")
         participant["role"] = pr = address.params.get("ROLE", role)
-        participant["css"] = ["PARTICIPANT", f"PARTICIPANT-{pt}", f"PARTICIPANT-{pr}"]
+        participant["css"] = ["PARTICIPANT", f"PARTICIPANT-{pt}", f"PARTICIPANT-{pr}", f"PARTICIPANT-{status}"]
         participant["is_oragnizer"] = is_oragnizer
         return participant
 

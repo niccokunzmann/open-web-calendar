@@ -170,7 +170,7 @@ var template = {
             return "";
         }
         const details = document.createElement("details");
-        details.classList.add("attendees");
+        details.classList.add("participants");
         const summary = document.createElement("summary");
         summary.innerText = OWCLocale.labels.participants;
         details.appendChild(summary);
@@ -183,7 +183,9 @@ var template = {
             }
             const li = document.createElement("li");
             const link = makeLink("mailto:" + participant.email, escapeHtml(participant.name));
-            li.innerHTML = link;
+            li.innerHTML = 
+                '<div class="icon status"></div><div class="icon type"></div><div class="icon role"></div>' + 
+                link;
             participant.css.forEach((e) => li.classList.add(e));
             ol.appendChild(li);
         }
