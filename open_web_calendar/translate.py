@@ -239,12 +239,14 @@ def dhtmlx(language: str):
             ],
         },
     }
-    for icon_label in CALENDAR_LABELS:
-        result["labels"][icon_label] = cal("labels_" + icon_label)
+    for label in CALENDAR_LABELS:
+        result["labels"][label] = cal("labels_" + label)
     # dynamically load icon labels
-    for icon_label in TRANSLATIONS[DEFAULT_LANGUAGE][CALENDAR_FILE]:
-        if icon_label.startswith("icon_"):
-            result["labels"][icon_label] = cal(icon_label)
+    for label in TRANSLATIONS[DEFAULT_LANGUAGE][CALENDAR_FILE]:
+        if label.startswith("icon_"):
+            result["labels"][label] = cal(label)
+        elif label.startswith("label_"):
+            result["labels"][label[6:]] = cal(label)
     return result
 
 

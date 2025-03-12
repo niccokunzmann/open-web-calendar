@@ -58,7 +58,7 @@ function makeLink(url, html) {
     const link = document.createElement("a");
     link.target = specification.target;
     link.href = isSafeUrl(url) ? url : "#";
-    link.innerHTML = html;
+    link.innerHTML = html ? html : "";
     return link.outerHTML;
 }
 
@@ -164,6 +164,31 @@ var template = {
           return "";
         }
         return scheduler.templates.event_date(start) + " - " + scheduler.templates.event_date(end)
+    },
+    "participants" : function (participants) {
+        if (!specification.show_organizers && !specification.show_attendees) {
+            return "";
+        }
+        const details = document.createElement("details");
+        details.classList.add("attendees");
+        const summary = document.createElement("summary");
+        summary.innerText = OWCLocale.labels.participants;
+        details.appendChild(summary);
+        const ol = document.createElement("ol");
+        for (const participant of participants) {
+            if ((participant.is_oragnizer && !specification.show_organizers) ||
+                (!participant.is_oragnizer && !specification.show_attendees)
+            ) {
+                continue;
+            }
+            const li = document.createElement("li");
+            const link = makeLink("mailto:" + participant.email, escapeHtml(participant.name));
+            li.innerHTML = link;
+            participant.css.forEach((e) => li.classList.add(e));
+            ol.appendChild(li);
+        }
+        details.appendChild(ol);
+        return details.outerHTML;
     }
 }
 
@@ -392,6 +417,7 @@ function loadCalendar() {
     scheduler.templates.quick_info_content = function(start, end, event){
         return template.details(event) +
             template.location(event) +
+            template.participants(event.participants) +
             template.debug(event);
     }
     // see https://docs.dhtmlx.com/scheduler/api__scheduler_quick_info_date_template.html

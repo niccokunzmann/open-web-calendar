@@ -184,7 +184,7 @@ event_url_name: "OpenStreetMap"
 
 ## Do you want the organizer to be shown below the event?
 ## See also https://www.rfc-editor.org/rfc/rfc5545.html#page-113
-show_organizer: False
+show_organizers: False
 ## Do you want the attendees to be shown below the event?
 ## See also https://www.rfc-editor.org/rfc/rfc5545.html#page-108
 show_attendees: False

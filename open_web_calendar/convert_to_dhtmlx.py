@@ -88,7 +88,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         participants = []
         organizer = event.get("ORGANIZER")
         if organizer is not None:
-            participants.append(cls.create_participant_from(organizer, role="ORGANIZER"))
+            participants.append(cls.create_participant_from(organizer, role="ORGANIZER", is_oragnizer=True))
         attendees = event.get("ATTENDEE")
         if not isinstance(attendees, list):
             attendees = [attendees]
@@ -97,7 +97,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         return participants
     
     @classmethod
-    def create_participant_from(cls, address:vCalAddress, role:str="REQ-PARTICIPANT") -> dict[str, Any]:
+    def create_participant_from(cls, address:vCalAddress, role:str="REQ-PARTICIPANT", is_oragnizer:bool=False) -> dict[str, Any]:
         """Create a participant with default values."""
         participant = {}
         participant["type"] = pt = address.params.get("CUTYPE", "INDIVIDUAL")
@@ -105,6 +105,7 @@ class ConvertToDhtmlx(ConversionStrategy):
         participant["name"] = address.params.get("CN", email)
         participant["role"] = pr = address.params.get("ROLE", role)
         participant["css"] = ["PARTICIPANT", f"PARTICIPANT-{pt}", f"PARTICIPANT-{pr}"]
+        participant["is_oragnizer"] = is_oragnizer
         return participant
 
 
