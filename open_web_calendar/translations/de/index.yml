@@ -121,3 +121,13 @@ supported-standards: 'Wir unterstützen die folgenden Standards: ICAL, CalDAV, w
 add-url-placeholder-password: Mögliches Passwort
 button-remove: Löschen
 calendar-embed-title: Fertig! Jetzt Nutzen
+participants-title: Teilnehmer und Organisation
+participants-organizers: Organisator anzeigen?
+participants-attendees: Teilnehmer anzeigen?
+participants-status: Den Teilnahmestatus anzeigen? (z.B. angenommen/abgelehnt)
+participants-type: Teilnehmertyp anzeigen? (z.B. Person oder Gruppe)
+participants-role: Rolle des Teilnehmers anzeigen? (z.B. Organisator, benötigter oder
+  optionaler Teilnehmer)
+participants-description: Du kannst andere einladen und sie können teilnehmen. Du
+  kannst hier bestimmen, ob Namen mit E-Mail-Adressen von Teilnehmern unter der Beschreibung
+  angezeigt werden.
