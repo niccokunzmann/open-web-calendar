@@ -182,7 +182,7 @@ var template = {
                 continue;
             }
             const li = document.createElement("li");
-            const link = makeLink("mailto:" + participant.email, escapeHtml(participant.name));
+            const link = makeLink("mailto:" + participant.email, escapeHtml(participant.name ? participant.name : participant.email));
             li.innerHTML = 
                 '<div class="icon status"></div><div class="icon type"></div><div class="icon role"></div>' + 
                 link;
@@ -203,10 +203,15 @@ function showError(element) {
 }
 
 function toggleErrorWindow() {
-    var scheduler_tag = document.getElementById("scheduler_here");
-    var errors = document.getElementById("errorWindow");
-    scheduler_tag.classList.toggle("hidden");
+    // var scheduler_tag = document.getElementById("scheduler_here");
+    const errors = document.getElementById("errorWindow");
+    // scheduler_tag.classList.toggle("hidden");
     errors.classList.toggle("hidden");
+}
+
+function showErrorWindows() {
+    const errors = document.getElementById("errorWindow");
+    errors.classList.remove("hidden");
 }
 
 function showXHRError(xhr) {
@@ -237,15 +242,20 @@ function showEventError(error) {
     showError(div);
 }
 
+function showLoader() {
+    let loader = document.getElementById("loader");
+    loader.classList.remove("hidden");
+}
+
 function disableLoader() {
-    var loader = document.getElementById("loader");
+    let loader = document.getElementById("loader");
     loader.classList.add("hidden");
 }
 
 function setLoader() {
     if (specification.loader) {
-        var loader = document.getElementById("loader");
-        var url = specification.loader.replace(/'/g, "%27");
+        let loader = document.getElementById("loader");
+        let url = specification.loader.replace(/'/g, "%27");
         loader.style.cssText += "background:url('" + url + "') center center no-repeat;"
     } else {
         disableLoader();
@@ -314,10 +324,14 @@ function resetConfig() {
 
 // If you add an action XXX here, also add icon_XXX to the calendar translations
 // And also an icon to static/img/icons/XXX.svg
-var actions = {
+const actions = {
     "subscribe": function(event) {
         console.log("Save event.", event);
         downloadICS(event);
+    },
+    "signup": (event) => {
+        console.log("Sign up to event:", event);
+        openSignUp(event);
     }
 }
 
@@ -438,13 +452,6 @@ function loadCalendar() {
     // set agenda date
     scheduler.templates.agenda_date = scheduler.templates.month_date;
 
-    schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") +
-        document.location.search;
-    // add the time zone if not specified
-    if (specification.timezone == "") {
-        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
-    }
-
     /* load the events */
     scheduler.attachEvent("onLoadError", function(xhr) {
         disableLoader();
@@ -459,9 +466,7 @@ function loadCalendar() {
     //requestJSON(schedulerUrl, loadEventsOnSuccess, loadEventsOnError);
     scheduler.setLoadMode("day");
     onCalendarInitialized();
-    scheduler.load(schedulerUrl, "json");
-
-
+    loadScheduler();
     //var dp = new dataProcessor(schedulerUrl);
     // use RESTful API on the backend
     //dp.setTransactionMode("REST");
@@ -495,6 +500,18 @@ function loadCalendar() {
             scheduler.i18n.setLocale(OWCLocale);
         }
     });
+}
+
+function loadScheduler() {
+    scheduler.clearAll();
+    let schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + document.location.search;
+    // add the time zone if not specified
+    if (specification.timezone == "") {
+        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
+    }
+
+    scheduler.load(schedulerUrl, "json");
+    showLoader();
 }
 
 var onCalendarInitialized = onCalendarInitialized || function() {};

@@ -338,6 +338,21 @@ aside {
   text-align: center;
 }
 
+#caldav-options {
+  display: none;
+}
+
+#caldav-options.visible {
+  display: flex;
+  flex-direction: column;
+}
+
+#caldav-options line {
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+}
+
 
 /* media query goes last */
 

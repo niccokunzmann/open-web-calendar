@@ -167,6 +167,8 @@ class ConvertToDhtmlx(ConversionStrategy):
             + self.get_event_classes(calendar_event)
             + [f"CALENDAR-INDEX-{calendar_index}"],
             "participants": self.get_participants(calendar_event),
+            "owc" : {attr:value for attr, value in calendar_event.items() if attr.lower().startswith("x-owc")},
+            "calendar-index": calendar_index,
         }
 
     def convert_error(self, error: str, url: str, tb_s: str):

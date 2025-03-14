@@ -1,0 +1,630 @@
+# SPDX-FileCopyrightText: 2025 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+responses:
+- response:
+    auto_calculate_content_length: false
+    body: This is the WebDAV interface. It can only be accessed by WebDAV clients
+      such as the Nextcloud desktop sync client.
+    content_type: text/plain
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=50%2F97XADeaNRxHXlI7u4KRoE2tjRrBvwYMjdzPp67T8mthpz5BX%2FLGKks0LepJpBnuRDPsjUbJBKq%2BAGTfmMfrCrA2O2TY%2FBnEBsVpcfPUSohFZ69DB%2F%2FaJGcX4g01PT;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=kss8ndieeic1m5fh31kq56o47e;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Vary: Accept-Encoding
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: U6e154JaDrGhrsdGl7Gs
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: U6e154JaDrGhrsdGl7Gs
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: GET
+    status: 200
+    url: https://test:oGbWK-tdbSB-bsRoC-jTjAB-3k6Bi@quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<d:error xmlns:d=\"DAV:\" xmlns:s=\"\
+      http://sabredav.org/ns\">\n  <s:exception>Sabre\\DAV\\Exception\\NotAuthenticated</s:exception>\n\
+      \  <s:message>No public access to this resource., No 'Authorization: Basic'\
+      \ header found. Either the client didn't send one, or the server is misconfigured,\
+      \ No 'Authorization: Bearer' header found. Either the client didn't send one,\
+      \ or the server is mis-configured, No 'Authorization: Basic' header found. Either\
+      \ the client didn't send one, or the server is misconfigured</s:message>\n</d:error>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=eJREIYGfShvD3uaqyO3ugSMH7S5LocSvq697GhRN7pBbKhJypokjXE27l786xI%2Fu96UECkzCabHAUZqhiPVj0Geq7x52XeO%2B665mEE6dP9noDVzHEpxPfvF4aAS4BuOO;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=5l1d0ice9qdnkl50oeh7hqt0cc;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      WWW-Authenticate: Basic realm="Nextcloud", charset="UTF-8"
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 401
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\"?>\n<d:multistatus xmlns:d=\"DAV:\" xmlns:s=\"http://sabredav.org/ns\"\
+      \ xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\"\
+      \ xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:response><d:href>/remote.php/dav/calendars/test/public/7FB1A27C-0933-4050-BA41-74E69FB5B0F8.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;\n\
+      VERSION:2.0&#13;\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;\nCALSCALE:GREGORIAN&#13;\n\
+      BEGIN:VEVENT&#13;\nCREATED:20250314T133701Z&#13;\nDTSTAMP:20250314T133730Z&#13;\n\
+      LAST-MODIFIED:20250314T133730Z&#13;\nSEQUENCE:2&#13;\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;\n\
+      DTSTART:20250317T090000Z&#13;\nDTEND:20250317T100000Z&#13;\nSTATUS:TENTATIVE&#13;\n\
+      SUMMARY:test event for sign up&#13;\nRECURRENCE-ID:20250317T090000Z&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nCREATED:20250314T133701Z&#13;\nDTSTAMP:20250314T133730Z&#13;\n\
+      LAST-MODIFIED:20250314T133730Z&#13;\nSEQUENCE:2&#13;\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;\n\
+      DTSTART:20250318T090000Z&#13;\nDTEND:20250318T100000Z&#13;\nSTATUS:TENTATIVE&#13;\n\
+      SUMMARY:test event for sign up&#13;\nRECURRENCE-ID:20250318T090000Z&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nCREATED:20250314T133701Z&#13;\nDTSTAMP:20250314T133730Z&#13;\n\
+      LAST-MODIFIED:20250314T133730Z&#13;\nSEQUENCE:2&#13;\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;\n\
+      DTSTART:20250319T090000Z&#13;\nDTEND:20250319T100000Z&#13;\nSTATUS:TENTATIVE&#13;\n\
+      SUMMARY:test event for sign up&#13;\nRECURRENCE-ID:20250319T090000Z&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nCREATED:20250314T133701Z&#13;\nDTSTAMP:20250314T133730Z&#13;\n\
+      LAST-MODIFIED:20250314T133730Z&#13;\nSEQUENCE:2&#13;\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;\n\
+      DTSTART:20250320T090000Z&#13;\nDTEND:20250320T100000Z&#13;\nSTATUS:TENTATIVE&#13;\n\
+      SUMMARY:test event for sign up&#13;\nRECURRENCE-ID:20250320T090000Z&#13;\nEND:VEVENT&#13;\n\
+      END:VCALENDAR&#13;\n</cal:calendar-data></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/public/B55CA4DB-8FA0-4D0A-9095-0EC7EF6DDE84.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;\n\
+      VERSION:2.0&#13;\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;\nCALSCALE:GREGORIAN&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:another weekly event during day time&#13;\nDTSTART:20250326T090000Z&#13;\n\
+      DTEND:20250326T100000Z&#13;\nDTSTAMP:20250305T111438Z&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      RECURRENCE-ID:20250326T090000Z&#13;\nSEQUENCE:7&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann+2@gmail.com&#13;\nCREATED:20250305T111408Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nSUMMARY:another weekly event during day\
+      \ time&#13;\nDTSTART:20250326T090000Z&#13;\nDTEND:20250326T100000Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      UID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\nRECURRENCE-ID:20250326T090000Z&#13;\n\
+      SEQUENCE:6&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann+1@gmail.com&#13;\nCREATED:20250305T111408Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nSUMMARY:another weekly event during day\
+      \ time&#13;\nDTSTART:20250326T090000Z&#13;\nDTEND:20250326T100000Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      UID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\nRECURRENCE-ID:20250326T090000Z&#13;\n\
+      SEQUENCE:5&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nATTENDEE;CN=Nicco;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIP&#13;\n\
+      \ ANT;RSVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gma&#13;\n\
+      \ il.com&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nCREATED:20250305T111408Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nSUMMARY:another weekly event during day\
+      \ time&#13;\nDTSTART:20250326T090000Z&#13;\nDTEND:20250326T100000Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      UID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\nRECURRENCE-ID:20250326T090000Z&#13;\n\
+      SEQUENCE:4&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nCREATED:20250305T111408Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nEND:VCALENDAR&#13;\n</cal:calendar-data></d:prop><d:status>HTTP/1.1\
+      \ 200 OK</d:status></d:propstat></d:response></d:multistatus>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=9
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: ocomm1do933a=gigak3u0bhkoebptbfktsfrq08; path=/; secure; HttpOnly;
+        SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: DRzZqutBDYgLlfCEUmve
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: DRzZqutBDYgLlfCEUmve
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<d:error xmlns:d=\"DAV:\" xmlns:s=\"\
+      http://sabredav.org/ns\">\n  <s:exception>Sabre\\DAV\\Exception\\NotAuthenticated</s:exception>\n\
+      \  <s:message>No public access to this resource., No 'Authorization: Basic'\
+      \ header found. Either the client didn't send one, or the server is misconfigured,\
+      \ No 'Authorization: Bearer' header found. Either the client didn't send one,\
+      \ or the server is mis-configured, No 'Authorization: Basic' header found. Either\
+      \ the client didn't send one, or the server is misconfigured</s:message>\n</d:error>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=TxmlhmOH%2FGj2PPen0xeIzwX2D3huIvmyZSBbjLLe4tuou7SeTRm9qY553rHCK6Z2dt8C%2FZR211k1USs%2FgbuMz33EnRqN5IcpCHNw1iBE2a858iOi5n%2BFYu0qZ4ZLRdEs;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=c8ju1uk3mic0rho77qjghs2n90;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      WWW-Authenticate: Basic realm="Nextcloud", charset="UTF-8"
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 401
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/calendars/test/public/7FB1A27C-0933-4050-BA41-74E69FB5B0F8.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;
+
+      VERSION:2.0&#13;
+
+      PRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;
+
+      CALSCALE:GREGORIAN&#13;
+
+      BEGIN:VEVENT&#13;
+
+      CREATED:20250314T133701Z&#13;
+
+      DTSTAMP:20250314T133730Z&#13;
+
+      LAST-MODIFIED:20250314T133730Z&#13;
+
+      SEQUENCE:2&#13;
+
+      UID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;
+
+      DTSTART:20250318T090000Z&#13;
+
+      DTEND:20250318T100000Z&#13;
+
+      STATUS:TENTATIVE&#13;
+
+      SUMMARY:test event for sign up&#13;
+
+      RECURRENCE-ID:20250318T090000Z&#13;
+
+      END:VEVENT&#13;
+
+      END:VCALENDAR&#13;
+
+      </cal:calendar-data></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=9
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: ocomm1do933a=n9qmr9fefcqvvapbt02gs0o3tl; path=/; secure; HttpOnly;
+        SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: 6dOU7obd3kqTZr64969L
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: 6dOU7obd3kqTZr64969L
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\"?>\n<d:multistatus xmlns:d=\"DAV:\" xmlns:s=\"http://sabredav.org/ns\"\
+      \ xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\"\
+      \ xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:response><d:href>/remote.php/dav/calendars/test/public/7FB1A27C-0933-4050-BA41-74E69FB5B0F8.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR\n\
+      PRODID:-//IDN nextcloud.com//Calendar app 4.7.15//EN\nCALSCALE:GREGORIAN\nVERSION:2.0\n\
+      BEGIN:VEVENT\nCREATED:20250314T133701Z\nDTSTAMP:20250314T133730Z\nLAST-MODIFIED:20250314T133730Z\n\
+      SEQUENCE:2\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f\nDTSTART;TZID=Europe/Zurich:20250317T100000\n\
+      DTEND;TZID=Europe/Zurich:20250317T110000\nSTATUS:TENTATIVE\nSUMMARY:test event\
+      \ for sign up\nRRULE:FREQ=DAILY;COUNT=4\nEND:VEVENT\nBEGIN:VTIMEZONE\nTZID:Europe/Zurich\n\
+      BEGIN:DAYLIGHT\nTZOFFSETFROM:+0100\nTZOFFSETTO:+0200\nTZNAME:CEST\nDTSTART:19700329T020000\n\
+      RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU\nEND:DAYLIGHT\nBEGIN:STANDARD\nTZOFFSETFROM:+0200\n\
+      TZOFFSETTO:+0100\nTZNAME:CET\nDTSTART:19701025T030000\nRRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU\n\
+      END:STANDARD\nEND:VTIMEZONE\nEND:VCALENDAR</cal:calendar-data></d:prop><d:status>HTTP/1.1\
+      \ 200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/public/B55CA4DB-8FA0-4D0A-9095-0EC7EF6DDE84.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR\n\
+      VERSION:2.0\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN\nCALSCALE:GREGORIAN\n\
+      BEGIN:VEVENT\nSUMMARY:another weekly event during day time\nDTSTART:20250326T090000Z\n\
+      DTEND:20250326T100000Z\nDTSTAMP:20250305T111438Z\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa\n\
+      RECURRENCE-ID:20250326T090000Z\nSEQUENCE:7\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU\n\
+      \ E;SCHEDULE-STATUS=1.1:mailto:niccokunzmann@posteo.net\nCREATED:20250305T111408Z\n\
+      LAST-MODIFIED:20250305T111438Z\nSTATUS:CONFIRMED\nEND:VEVENT\nBEGIN:VEVENT\n\
+      SUMMARY:another weekly event during day time\nDTSTART:20250326T090000Z\nDTEND:20250326T100000Z\n\
+      DTSTAMP:20250305T111438Z\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa\nRECURRENCE-ID:20250326T090000Z\n\
+      SEQUENCE:4\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU\n\
+      \ E:mailto:niccokunzmann@posteo.net\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de\nCREATED:20250305T111408Z\nLAST-MODIFIED:20250305T111438Z\n\
+      ORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt\n\
+      \ ext.ocloud.de@gmail.com\nSTATUS:CONFIRMED\nX-OWC-CAN-ADD-ATTENDEE:true\nEND:VEVENT\n\
+      BEGIN:VEVENT\nSUMMARY:another weekly event during day time\nDTSTART:20250326T090000Z\n\
+      DTEND:20250326T100000Z\nDTSTAMP:20250305T111438Z\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa\n\
+      RECURRENCE-ID:20250326T090000Z\nSEQUENCE:5\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU\n\
+      \ E:mailto:niccokunzmann@posteo.net\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de\nATTENDEE;CN=Nicco;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIP\n\
+      \ ANT;RSVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gma\n\
+      \ il.com&quot;:MAILTO:niccokunzmann@gmx.de\nCREATED:20250305T111408Z\nLAST-MODIFIED:20250305T111438Z\n\
+      ORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt\n\
+      \ ext.ocloud.de@gmail.com\nSTATUS:CONFIRMED\nX-OWC-CAN-ADD-ATTENDEE:true\nEND:VEVENT\n\
+      BEGIN:VEVENT\nSUMMARY:another weekly event during day time\nDTSTART:20250326T090000Z\n\
+      DTEND:20250326T100000Z\nDTSTAMP:20250305T111438Z\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa\n\
+      RECURRENCE-ID:20250326T090000Z\nSEQUENCE:6\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU\n\
+      \ E:mailto:niccokunzmann@posteo.net\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co\n\
+      \ m&quot;:MAILTO:niccokunzmann+1@gmail.com\nCREATED:20250305T111408Z\nLAST-MODIFIED:20250305T111438Z\n\
+      ORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt\n\
+      \ ext.ocloud.de@gmail.com\nSTATUS:CONFIRMED\nX-OWC-CAN-ADD-ATTENDEE:true\nEND:VEVENT\n\
+      BEGIN:VEVENT\nSUMMARY:another weekly event during day time\nDTSTART:20250326T090000Z\n\
+      DTEND:20250326T100000Z\nDTSTAMP:20250305T111438Z\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa\n\
+      RECURRENCE-ID:20250326T090000Z\nSEQUENCE:7\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU\n\
+      \ E:mailto:niccokunzmann@posteo.net\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co\n\
+      \ m&quot;:MAILTO:niccokunzmann+2@gmail.com\nCREATED:20250305T111408Z\nLAST-MODIFIED:20250305T111438Z\n\
+      ORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt\n\
+      \ ext.ocloud.de@gmail.com\nSTATUS:CONFIRMED\nX-OWC-CAN-ADD-ATTENDEE:true\nEND:VEVENT\n\
+      END:VCALENDAR\n</cal:calendar-data></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=8
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: CqIgOw8GN53MxKVBqzT0
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: CqIgOw8GN53MxKVBqzT0
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/calendars/test/public/</d:href><d:propstat><d:prop><d:current-user-principal><d:href>/remote.php/dav/principals/users/test/</d:href></d:current-user-principal></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, nextcloud-checksum-update,
+        nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=7
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: jhiO4DjqNges0fxB9Wmi
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: jhiO4DjqNges0fxB9Wmi
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"
+      xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/principals/users/test/</d:href><d:propstat><d:prop><d:displayname>Test
+      User</d:displayname></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, addressbook,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=6
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: 1H33hqyiK9ddziyfNfER
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: 1H33hqyiK9ddziyfNfER
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/principals/users/test/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"
+      xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/principals/users/test/</d:href><d:propstat><d:prop><cal:calendar-user-address-set><d:href>mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.com</d:href><d:href>/remote.php/dav/principals/users/test/</d:href></cal:calendar-user-address-set></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, addressbook,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=5
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: riTSAEOAFds5jLh7UBSY
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: riTSAEOAFds5jLh7UBSY
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/principals/users/test/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"
+      xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/principals/users/test/</d:href><d:propstat><d:prop><cal:calendar-user-type>INDIVIDUAL</cal:calendar-user-type></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, addressbook,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=4
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: MpqRoiwvldolTU0ZzLTq
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: MpqRoiwvldolTU0ZzLTq
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/principals/users/test/
+- response:
+    auto_calculate_content_length: false
+    body: ''
+    content_type: text/plain
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=3
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: jJ4NHw1KdFFFH4SaMgKA
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: jJ4NHw1KdFFFH4SaMgKA
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PUT
+    status: 204
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/7FB1A27C-0933-4050-BA41-74E69FB5B0F8.ics
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<d:error xmlns:d=\"DAV:\" xmlns:s=\"\
+      http://sabredav.org/ns\">\n  <s:exception>Sabre\\DAV\\Exception\\NotAuthenticated</s:exception>\n\
+      \  <s:message>No public access to this resource., No 'Authorization: Basic'\
+      \ header found. Either the client didn't send one, or the server is misconfigured,\
+      \ No 'Authorization: Bearer' header found. Either the client didn't send one,\
+      \ or the server is mis-configured, No 'Authorization: Basic' header found. Either\
+      \ the client didn't send one, or the server is misconfigured</s:message>\n</d:error>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=4HFU%2BzyHaBhMUF01L8aKgXZSv3U1BB%2FnODXPVQjc2utNlDk%2FrAO7YsRUmDDbkBg%2BlmADIddYCm053qxt%2FugTdomGBCECTeaOZMrH4CPh8ChM2DS0tffOZvY7yhRd1cYk;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=qihsm4jmqfn30rbem5rko6tjrd;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      WWW-Authenticate: Basic realm="Nextcloud", charset="UTF-8"
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 401
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\"?>\n<d:multistatus xmlns:d=\"DAV:\" xmlns:s=\"http://sabredav.org/ns\"\
+      \ xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\"\
+      \ xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:response><d:href>/remote.php/dav/calendars/test/public/7FB1A27C-0933-4050-BA41-74E69FB5B0F8.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;\n\
+      VERSION:2.0&#13;\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;\nCALSCALE:GREGORIAN&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:test event for sign up&#13;\nDTSTART:20250317T090000Z&#13;\n\
+      DTEND:20250317T100000Z&#13;\nDTSTAMP:20250314T133730Z&#13;\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;\n\
+      SEQUENCE:3&#13;\nCREATED:20250314T133701Z&#13;\nLAST-MODIFIED:20250314T133730Z&#13;\n\
+      STATUS:TENTATIVE&#13;\nRECURRENCE-ID:20250317T090000Z&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:test event for sign up&#13;\nDTSTART:20250318T090000Z&#13;\n\
+      DTEND:20250318T100000Z&#13;\nDTSTAMP:20250314T133730Z&#13;\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;\n\
+      RECURRENCE-ID:20250318T090000Z&#13;\nSEQUENCE:3&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann+test-signup@gmail.com&#13;\nCREATED:20250314T133701Z&#13;\n\
+      LAST-MODIFIED:20250314T133730Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nSUMMARY:test event for sign up&#13;\nDTSTART:20250319T090000Z&#13;\n\
+      DTEND:20250319T100000Z&#13;\nDTSTAMP:20250314T133730Z&#13;\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;\n\
+      SEQUENCE:3&#13;\nCREATED:20250314T133701Z&#13;\nLAST-MODIFIED:20250314T133730Z&#13;\n\
+      STATUS:TENTATIVE&#13;\nRECURRENCE-ID:20250319T090000Z&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:test event for sign up&#13;\nDTSTART:20250320T090000Z&#13;\n\
+      DTEND:20250320T100000Z&#13;\nDTSTAMP:20250314T133730Z&#13;\nUID:e640f623-c09c-4ab6-befc-1af0b7eec51f&#13;\n\
+      SEQUENCE:3&#13;\nCREATED:20250314T133701Z&#13;\nLAST-MODIFIED:20250314T133730Z&#13;\n\
+      STATUS:TENTATIVE&#13;\nRECURRENCE-ID:20250320T090000Z&#13;\nEND:VEVENT&#13;\n\
+      END:VCALENDAR&#13;\n</cal:calendar-data></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/public/B55CA4DB-8FA0-4D0A-9095-0EC7EF6DDE84.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;\n\
+      VERSION:2.0&#13;\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;\nCALSCALE:GREGORIAN&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:another weekly event during day time&#13;\nDTSTART:20250326T090000Z&#13;\n\
+      DTEND:20250326T100000Z&#13;\nDTSTAMP:20250305T111438Z&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      RECURRENCE-ID:20250326T090000Z&#13;\nSEQUENCE:7&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann+2@gmail.com&#13;\nCREATED:20250305T111408Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nSUMMARY:another weekly event during day\
+      \ time&#13;\nDTSTART:20250326T090000Z&#13;\nDTEND:20250326T100000Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      UID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\nRECURRENCE-ID:20250326T090000Z&#13;\n\
+      SEQUENCE:6&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann+1@gmail.com&#13;\nCREATED:20250305T111408Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nSUMMARY:another weekly event during day\
+      \ time&#13;\nDTSTART:20250326T090000Z&#13;\nDTEND:20250326T100000Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      UID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\nRECURRENCE-ID:20250326T090000Z&#13;\n\
+      SEQUENCE:5&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nATTENDEE;CN=Nicco;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIP&#13;\n\
+      \ ANT;RSVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gma&#13;\n\
+      \ il.com&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nCREATED:20250305T111408Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nSUMMARY:another weekly event during day\
+      \ time&#13;\nDTSTART:20250326T090000Z&#13;\nDTEND:20250326T100000Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      UID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\nRECURRENCE-ID:20250326T090000Z&#13;\n\
+      SEQUENCE:4&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nATTENDEE;CN=;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;R&#13;\n\
+      \ SVP=TRUE;SENT-BY=&quot;mailto:niccokunzmann%2btest.quelltext.ocloud.de@gmail.co&#13;\n\
+      \ m&quot;:MAILTO:niccokunzmann@gmx.de&#13;\nCREATED:20250305T111408Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nORGANIZER;CN=Test User;CUTYPE=INDIVIDUAL:mailto:niccokunzmann%2btest.quellt&#13;\n\
+      \ ext.ocloud.de@gmail.com&#13;\nSTATUS:CONFIRMED&#13;\nX-OWC-CAN-ADD-ATTENDEE:true&#13;\n\
+      END:VEVENT&#13;\nEND:VCALENDAR&#13;\n</cal:calendar-data></d:prop><d:status>HTTP/1.1\
+      \ 200 OK</d:status></d:propstat></d:response></d:multistatus>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=9
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: ocomm1do933a=1kmp4lhl535q56b3a4791sr0am; path=/; secure; HttpOnly;
+        SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: IGHGD2DHacnNjEKX62St
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: IGHGD2DHacnNjEKX62St
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/#can_add_email_attendee=true

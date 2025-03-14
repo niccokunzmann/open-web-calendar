@@ -70,8 +70,16 @@ SPDX-License-Identifier: GPL-2.0-only
                         <input class="default-hidden" type="text" id="add-url-username" placeholder="{{ string("add-url-placeholder-username") }}" />
                         <input class="default-hidden" type="password" id="add-url-password" placeholder="{{ string("add-url-placeholder-password") }}" />
                         <button class="default-hidden" onclick="togglePasswordVisibility('add-url-password')" id="toggle-url-password-visibility"/>👁</button>
-                        <select id="add-url-calendars"></select>
                         <button id="add-url-button" onclick="addURLFromInput()">{{ html("add-url-button") }}</button>
+                    </div>
+                    <div id="caldav-options" class="">
+                        <div class="line">
+                            {{ html("caldav-choose-calendar") }}
+                            <select id="add-url-calendars"></select>
+                        </line>
+                        <div class="line">
+                            <label for="caldav-enable-sign-up">{{ html("caldav-allow-sign-up") }}<input type="checkbox" id="caldav-enable-sign-up" /></label>
+                        </div>
                     </div>
                 </div>
                 <p>
