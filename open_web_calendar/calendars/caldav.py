@@ -5,13 +5,12 @@
 
 from __future__ import annotations
 
-from datetime import timedelta
 import re
+from datetime import timedelta
 from typing import TYPE_CHECKING, Optional
 
 import caldav
 from icalendar import vCalAddress
-from caldav.lib.error import PutError
 
 from open_web_calendar.calendars.base import Calendars
 from open_web_calendar.url import URLCapability
@@ -90,7 +89,9 @@ class CalDAVCalendars(Calendars):
             raise ValueError(f"Invalid email address {email}")
         if len(name) > 100:
             raise ValueError("Name too long.")
-        events = self.get_events_between(event.start.date(), event.start.date() + timedelta(days=1))
+        events = self.get_events_between(
+            event.start.date(), event.start.date() + timedelta(days=1)
+        )
         if event not in events:
             raise ValueError(
                 f"The event was not found among {len(events)} "
@@ -122,16 +123,14 @@ class CalDAVCalendars(Calendars):
             event["STATUS"] = "CONFIRMED"
         # event["SUMMARY"] += "✓"  # debug
         event["SEQUENCE"] = sequence + 1  # set as latest event
-        print("max SEQUENCE", sequence)
-        print("----------------- before ----------------- ")
-        print(caldav_event.icalendar_instance.to_ical().decode())
-        if "RECURRENCE-ID" not in event and len(caldav_event.icalendar_instance.events) == 1:
+        if (
+            "RECURRENCE-ID" not in event
+            and len(caldav_event.icalendar_instance.events) == 1
+        ):
             # we have to replace the event as it is not recurring
             for older_event in caldav_event.icalendar_instance.events:
                 caldav_event.icalendar_instance.subcomponents.remove(older_event)
         caldav_event.icalendar_instance.add_component(event)
-        print("----------------- after ----------------- ")
-        print(caldav_event.icalendar_instance.to_ical().decode())
         caldav_event.save()
 
 

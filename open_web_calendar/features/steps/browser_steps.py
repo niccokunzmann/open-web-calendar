@@ -563,6 +563,7 @@ def step_impl(context):
     """Wait for the loader to disappaer."""
     wait_for_calendar_to_load(context)
 
+
 @when('we click on the first {tag:S} "{text}"')
 def step_impl(context, tag, text):
     # select if inner text element equals the text

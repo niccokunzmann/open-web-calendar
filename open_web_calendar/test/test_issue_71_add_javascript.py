@@ -47,6 +47,6 @@ def test_embed_css_link(client, query, urls):
     response = client.get(f"/calendar.html{query}")
     for url in urls:
         assert (
-            f'<link href="{url}" rel="stylesheet" type="text/css" charset="utf-8">'
+            f'<link href="{url}" rel="stylesheet" type="text/css">'
             in response.text
         )

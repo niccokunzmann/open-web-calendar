@@ -526,11 +526,13 @@ def sign_up_for_event():
         calendar = CalDAVCalendars.from_url(calendar_url)
         if not calendar.can_add_attendees():
             # check if we are allowed to perform this action
-            raise PermissionError(f"{HTTPStatus.UNAUTHORIZED.phrase}: { HTTPStatus.UNAUTHORIZED.description}: Cannot sign up as this is not allowed.")
+            raise PermissionError(
+                f"{HTTPStatus.UNAUTHORIZED.phrase}: "
+                f"{HTTPStatus.UNAUTHORIZED.description}: "
+                f"Cannot sign up as this is not allowed."
+            )
         calendar.add_attendee_to_event(event, name=name, email=email)
-        return jsonify({
-            "status": "ok"
-        })
+        return jsonify({"status": "ok"})
     except:
         return json_error()
 
