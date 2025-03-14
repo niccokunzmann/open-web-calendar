@@ -784,7 +784,9 @@ function getURLFromInput() {
 
 function getUrlFromCalDAVSelection() {
     const calendarSelect = document.getElementById("add-url-calendars");
-    const url = calendarSelect.value;
+    const enableSignUp = document.getElementById("caldav-enable-sign-up").checked;
+    const urlOptions = enableSignUp ? "#can_add_email_attendee=true" : "";
+    const url = calendarSelect.value + urlOptions;
     if (url) {
         return {
             "url": url,
@@ -921,16 +923,29 @@ async function getCalDavCalendars() {
 }
 
 function updateCalDavCoice() {
+    const caldavOptions = document.getElementById("caldav-options");
     const calendarSelect = document.getElementById("add-url-calendars");
+    const currentUrl = getURLFromInput();
     getCalDavCalendars().then(function(calendars) {
         calendarSelect.innerHTML = "";
+        console.log("calendars", calendars);
         calendars.calendars.forEach(function(calendar) {
             const option = document.createElement("option");
             option.value = calendar.url;
+            const calendarName = calendar.url.match(RegExp("/[^/]+/?$"));
             option.innerText = calendar.name;
             calendarSelect.appendChild(option);
+            if (calendarName && currentUrl.url.includes(calendarName[0])) {
+                calendarSelect.value = calendar.url;
+            }
         });
+        if (calendars.length == 0) {
+            caldavOptions.classList.remove("visible");
+        } else {
+            caldavOptions.classList.add("visible");
+        }
     }, function(error) {
+        caldavOptions.classList.remove("visible");
         calendarSelect.innerHTML = "";
         console.error(error);
     });

@@ -46,7 +46,4 @@ def test_embed_css_link(client, query, urls):
     """Check that the CSS links are used."""
     response = client.get(f"/calendar.html{query}")
     for url in urls:
-        assert (
-            f'<link href="{url}" rel="stylesheet" type="text/css" charset="utf-8">'
-            in response.text
-        )
+        assert f'<link href="{url}" rel="stylesheet" type="text/css">' in response.text

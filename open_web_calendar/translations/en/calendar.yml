@@ -56,7 +56,12 @@ labels_minute: "Minute"
 
 # Everything starting with label_ or icon_ will be added automatically 
 icon_subscribe: "Add to My Calendar"
+icon_signup: "Sign Up"
 label_participants: "Participants" # added without label_
+
+signup-email: "email"
+signup-name: "name"
+
 
 # Translate this as the language you are working on.
 # This appears for the users to choose the language.

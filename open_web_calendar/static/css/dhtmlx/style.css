@@ -43,6 +43,7 @@
     z-index: 50;
     overflow-y: auto;
     height: 100%;
+    position: absolute;
 }
 
 .fullsize {
@@ -96,6 +97,17 @@
 .dhx_cal_qi_controls {
   /* hide the delete and details button */
   /*display: none*/
+  flex-direction: column;
+  align-items: start;
+  padding-top: 0em;
+  gap: 0em;
+}
+
+.dhx_qi_big_icon {
+    /* justify-content: start; */
+    white-space: nowrap;
+    margin-left: -10px !important;
+    padding: 0em;
 }
 
 div.dhx_agenda_line > span {
@@ -239,6 +251,51 @@ div.dhx_agenda_line > span {
     content: "";
 }
 
+.participants li {
+    white-space: nowrap;
+}
+
 .participants ol {
     padding-left: 0em;
+}
+
+#email-signup {
+    position: absolute;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255,255,255,0.7);
+}
+
+#email-signup.hidden {
+    display: none;
+}
+
+.sign-up-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 1em;
+    background: var(--dhx-scheduler-base-colors-background);
+    border-radius: var(--dhx-scheduler-border-radius);
+    border-color: var(--dhx-scheduler-base-colors-border);
+    border-style: solid;
+}
+
+.sign-up-content .item {
+    max-width: 30em;
+    padding: 0.1em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cannot-sign-up .icon_signup {
+    display: none;
 }

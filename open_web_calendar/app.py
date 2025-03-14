@@ -11,11 +11,13 @@ import os
 import sys
 import tempfile
 import traceback
+from http import HTTPStatus
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Optional
 from urllib.parse import ParseResult, urlparse
 
 import caldav
+import icalendar
 import requests
 import yaml
 import zoneinfo
@@ -31,6 +33,7 @@ from flask import (
 from flask_allowed_hosts import AllowedHosts
 from flask_caching import Cache
 
+from open_web_calendar.calendars.caldav import CalDAVCalendars
 from open_web_calendar.util import set_url_username_password
 
 from . import translate, version
@@ -50,7 +53,7 @@ def DEBUG() -> bool:  # noqa: N802
 
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(
-    os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
+    os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", "600")
 )
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 if ALLOWED_HOSTS == [""]:  # noqa: SIM300, RUF100
@@ -313,7 +316,7 @@ def get_calendar(ext):
         return get_conversion(ConvertToICS, specification)
     if ext == "html":
         template_name = specification["template"]
-        all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
+        all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)  # noqa: PTH208, RUF100
         assert template_name in all_template_names, (
             'Template names must be file names like "{}", not "{}".'.format(
                 '", "'.join(all_template_names), template_name
@@ -423,11 +426,18 @@ def json_error():
     """Return the active exception as json."""
     _, err, _ = sys.exc_info()
     status_code = http_status_code_for_error(err)
+    if DEBUG():
+        traceback.print_exc()
+    message = str(err) if DEBUG() else None
+    error = type(err).__name__
     return jsonify(
         {
-            "message": str(err) if DEBUG() else None,
+            "message": message,
+            "description": message,
+            "url": request.url,
             "traceback": traceback.format_exc() if DEBUG() else None,
-            "error": type(err).__name__,
+            "error": error,
+            "text": error,
             "code": status_code,
         }
     ), status_code
@@ -492,6 +502,37 @@ def list_caldav_calendars():
                     ]
                 }
             )
+    except:
+        return json_error()
+
+
+@app.post("/caldav/sign-up")
+def sign_up_for_event():
+    """Have a user sign up for an event."""
+    try:
+        # get parameters
+        calendar_url = request.json["calendar"]
+        name = request.json["name"]
+        email = request.json["email"]
+        event_ical = request.json["event"]
+        # decrypt if needed
+
+        enc = encryption()
+        if enc.is_encrypted(calendar_url):
+            data = enc.decrypt(calendar_url)
+            calendar_url = data["url"]
+        event: icalendar.Event = icalendar.Event.from_ical(event_ical)
+        # check if the event is present
+        calendar = CalDAVCalendars.from_url(calendar_url)
+        if not calendar.can_add_attendees():
+            # check if we are allowed to perform this action
+            raise PermissionError(
+                f"{HTTPStatus.UNAUTHORIZED.phrase}: "
+                f"{HTTPStatus.UNAUTHORIZED.description}: "
+                f"Cannot sign up as this is not allowed."
+            )
+        calendar.add_attendee_to_event(event, name=name, email=email)
+        return jsonify({"status": "ok"})
     except:
         return json_error()
 

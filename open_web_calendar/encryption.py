@@ -98,9 +98,14 @@ class BaseStore(ABC):
         decrypted = self.decrypt(data)
         return decrypted.expose(passwords)
 
-    @staticmethod
-    def can_encrypt() -> bool:
+    @classmethod
+    def can_encrypt(cls) -> bool:
         return False
+
+    @classmethod
+    def can_decrypt(cls) -> bool:
+        """Wether we can decrypt data."""
+        return cls.can_encrypt()
 
     @abstractmethod
     def encrypt(self, data: dict) -> str:

@@ -306,3 +306,8 @@ participants-attendees: "Show who attends the event?"
 participants-status: "Show the status of participants? (i.e. accepted/declined)"
 participants-type: "Show which kind of participant this is? (i.e. individual or group)"
 participants-role: "Show the role of the participant? (i.e. organizer, required person or optional)"
+
+
+# CalDAV Options
+caldav-choose-calendar: "Choose a calendar from your account:"
+caldav-allow-sign-up: "Enable email sign-up for events in this calendar:"
