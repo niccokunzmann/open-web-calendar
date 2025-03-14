@@ -295,3 +295,7 @@ div.dhx_agenda_line > span {
     flex-direction: row;
     justify-content: space-between;
 }
+
+.cannot-sign-up .icon_signup {
+    display: none;
+}

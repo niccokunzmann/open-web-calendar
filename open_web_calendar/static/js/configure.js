@@ -441,6 +441,17 @@ function loadCalendar() {
         return joinHtmlLines([template.date(start, end), template.categories(event)]);
     }
 
+    // hide the button to sign up
+    // see https://docs.dhtmlx.com/scheduler/api__scheduler_onquickinfo_event.html
+    scheduler.attachEvent("onQuickInfo",function(eventId){
+        const event = scheduler.getEvent(eventId);
+        if (event.owc["X-OWC-CAN-ADD-ATTENDEE"] == "true") {
+            document.body.classList.remove("cannot-sign-up");
+        } else {
+            document.body.classList.add("cannot-sign-up");
+        }
+    });
+
     // general style
     scheduler.templates.event_class=function(start,end,event){
         if (event.type == "error") {
