@@ -73,7 +73,6 @@ logging.getLogger().setLevel(logging.DEBUG)
 requests_log = logging.getLogger()
 requests_log.setLevel(logging.DEBUG)
 requests_log.propagate = True
-logging.debug("check")
 logging.getLogger("caldav").setLevel(logging.DEBUG)
 
 main()

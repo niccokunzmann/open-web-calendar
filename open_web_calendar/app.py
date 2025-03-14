@@ -53,7 +53,7 @@ def DEBUG() -> bool:  # noqa: N802
 
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(
-    os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
+    os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", "600")
 )
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 if ALLOWED_HOSTS == [""]:  # noqa: SIM300, RUF100
@@ -316,7 +316,7 @@ def get_calendar(ext):
         return get_conversion(ConvertToICS, specification)
     if ext == "html":
         template_name = specification["template"]
-        all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
+        all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)  # noqa: PTH208, RUF100
         assert template_name in all_template_names, (
             'Template names must be file names like "{}", not "{}".'.format(
                 '", "'.join(all_template_names), template_name
