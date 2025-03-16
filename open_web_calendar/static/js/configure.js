@@ -182,7 +182,7 @@ var template = {
                 continue;
             }
             const li = document.createElement("li");
-            const link = makeLink("mailto:" + participant.email, escapeHtml(participant.name));
+            const link = makeLink("mailto:" + participant.email, escapeHtml(participant.name ? participant.name : participant.email));
             li.innerHTML = 
                 '<div class="icon status"></div><div class="icon type"></div><div class="icon role"></div>' + 
                 link;
@@ -203,10 +203,15 @@ function showError(element) {
 }
 
 function toggleErrorWindow() {
-    var scheduler_tag = document.getElementById("scheduler_here");
-    var errors = document.getElementById("errorWindow");
-    scheduler_tag.classList.toggle("hidden");
+    // var scheduler_tag = document.getElementById("scheduler_here");
+    const errors = document.getElementById("errorWindow");
+    // scheduler_tag.classList.toggle("hidden");
     errors.classList.toggle("hidden");
+}
+
+function showErrorWindows() {
+    const errors = document.getElementById("errorWindow");
+    errors.classList.remove("hidden");
 }
 
 function showXHRError(xhr) {
@@ -237,15 +242,20 @@ function showEventError(error) {
     showError(div);
 }
 
+function showLoader() {
+    let loader = document.getElementById("loader");
+    loader.classList.remove("hidden");
+}
+
 function disableLoader() {
-    var loader = document.getElementById("loader");
+    let loader = document.getElementById("loader");
     loader.classList.add("hidden");
 }
 
 function setLoader() {
     if (specification.loader) {
-        var loader = document.getElementById("loader");
-        var url = specification.loader.replace(/'/g, "%27");
+        let loader = document.getElementById("loader");
+        let url = specification.loader.replace(/'/g, "%27");
         loader.style.cssText += "background:url('" + url + "') center center no-repeat;"
     } else {
         disableLoader();
@@ -314,18 +324,22 @@ function resetConfig() {
 
 // If you add an action XXX here, also add icon_XXX to the calendar translations
 // And also an icon to static/img/icons/XXX.svg
-var actions = {
+const actions = {
     "subscribe": function(event) {
         console.log("Save event.", event);
         downloadICS(event);
+    },
+    "signup": (event) => {
+        console.log("Sign up to event:", event);
+        openSignUp(event);
     }
 }
 
 /* Disable/Enable features based on touch/mouse-over gestures
  * see https://stackoverflow.com/a/52855084/1320237
  */
-var IS_TOUCH_SCREEN = window.matchMedia("(pointer: coarse)").matches;
-var HAS_TOOLTIP = !IS_TOUCH_SCREEN;
+const IS_TOUCH_SCREEN = window.matchMedia("(pointer: coarse)").matches;
+const CAN_HAVE_TOOLTIP = !IS_TOUCH_SCREEN;
 
 function loadCalendar() {
     /* Format the time of the hour.
@@ -343,9 +357,9 @@ function loadCalendar() {
     scheduler.plugins({
         agenda_view: true,
         multisource: true,
-        quick_info: true,
+        quick_info: specification.plugin_event_details,
         recurring: false,
-        tooltip: HAS_TOOLTIP,
+        tooltip: CAN_HAVE_TOOLTIP && specification.plugin_event_tooltip,
         readonly: true,
         limit: true,
         serialize: true,
@@ -404,7 +418,7 @@ function loadCalendar() {
 
     // tooltip
     // see https://docs.dhtmlx.com/scheduler/tooltips.html
-    if (HAS_TOOLTIP) {
+    if (CAN_HAVE_TOOLTIP) {
         scheduler.templates.tooltip_text = function(start, end, event) {
             return template.formatted_summary(event) + template.details(event) + template.location(event);
         };
@@ -427,6 +441,17 @@ function loadCalendar() {
         return joinHtmlLines([template.date(start, end), template.categories(event)]);
     }
 
+    // hide the button to sign up
+    // see https://docs.dhtmlx.com/scheduler/api__scheduler_onquickinfo_event.html
+    scheduler.attachEvent("onQuickInfo",function(eventId){
+        const event = scheduler.getEvent(eventId);
+        if (event.owc["X-OWC-CAN-ADD-ATTENDEE"] == "true") {
+            document.body.classList.remove("cannot-sign-up");
+        } else {
+            document.body.classList.add("cannot-sign-up");
+        }
+    });
+
     // general style
     scheduler.templates.event_class=function(start,end,event){
         if (event.type == "error") {
@@ -437,13 +462,6 @@ function loadCalendar() {
 
     // set agenda date
     scheduler.templates.agenda_date = scheduler.templates.month_date;
-
-    schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") +
-        document.location.search;
-    // add the time zone if not specified
-    if (specification.timezone == "") {
-        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
-    }
 
     /* load the events */
     scheduler.attachEvent("onLoadError", function(xhr) {
@@ -459,9 +477,7 @@ function loadCalendar() {
     //requestJSON(schedulerUrl, loadEventsOnSuccess, loadEventsOnError);
     scheduler.setLoadMode("day");
     onCalendarInitialized();
-    scheduler.load(schedulerUrl, "json");
-
-
+    loadScheduler();
     //var dp = new dataProcessor(schedulerUrl);
     // use RESTful API on the backend
     //dp.setTransactionMode("REST");
@@ -495,6 +511,18 @@ function loadCalendar() {
             scheduler.i18n.setLocale(OWCLocale);
         }
     });
+}
+
+function loadScheduler() {
+    scheduler.clearAll();
+    let schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + document.location.search;
+    // add the time zone if not specified
+    if (specification.timezone == "") {
+        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
+    }
+
+    scheduler.load(schedulerUrl, "json");
+    showLoader();
 }
 
 var onCalendarInitialized = onCalendarInitialized || function() {};

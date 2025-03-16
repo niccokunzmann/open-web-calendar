@@ -37,7 +37,7 @@ UNUSED = "-unused"
 
 # Parse the directory structure.
 # translations/<lang>/<file>.yml
-for language in os.listdir(TRANSLATIONS_PATH):
+for language in os.listdir(TRANSLATIONS_PATH):  # noqa: PTH208, RUF100
     TRANSLATIONS[language] = file_translations = defaultdict(dict)
     language_path = TRANSLATIONS_PATH / language
     for file in language_path.iterdir():
@@ -86,7 +86,8 @@ def html(language: str, file: str, tid: str, **template_replacements) -> str:
     if not tid.endswith("-html"):
         inner_text = escape(inner_text)
     tid = escape(tid)
-    return Markup(f'<span id="translate-{tid}" class="translation">{inner_text}</span>')
+    markup = f'<span id="translate-{tid}" class="translation">{inner_text}</span>'
+    return Markup(markup)  # noqa: RUF100, S704
 
 
 CALENDAR_LABELS = [
