@@ -148,6 +148,7 @@ Modifications:
 
 - Activate CalDAV Sign Up
 - URL-Encryption
+- Participants
 
 ## Contribute Examples!
 
