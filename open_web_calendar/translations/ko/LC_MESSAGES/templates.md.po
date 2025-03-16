@@ -253,11 +253,6 @@ msgid "CalDAV Sign Up"
 msgstr ""
 
 msgid ""
-"The Open Web Calendar support CalDAV for instant event synchronization. You "
-"can use it e.g. with Nextcloud."
-msgstr ""
-
-msgid ""
 "<a href=\"https://open-web-"
 "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
 "calendar.quelltext.eu/assets/templates/caldav-signup.json\" "
@@ -287,18 +282,18 @@ msgid ""
 "email show up in the calendar."
 msgstr ""
 
-#, mdpo-site_description
 msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr "ICal 소스 링크를 사용하여 고도로 사용자 정의 가능한 웹 캘린더를 웹사이트에 임베드하세요"
+"The Open Web Calendar supports CalDAV for instant event synchronization. You"
+" can use it e.g. with Nextcloud."
+msgstr ""
 
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "오픈 웹 캘린더"
+msgid "Participants"
+msgstr ""
 
-msgid "Permanent link"
-msgstr "퍼머넌트 링크"
+#~ msgid ""
+#~ "The Open Web Calendar support CalDAV for instant event synchronization. You "
+#~ "can use it e.g. with Nextcloud."
+#~ msgstr ""
 
 #~ msgid "URL-Encryoption"
 #~ msgstr ""
