@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_b80um4cg/en/templates/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_h7dadjn9/en/templates/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_b80um4cg/en/templates/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_h7dadjn9/en/templates/index.png" >
       
     
     
@@ -977,6 +977,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#caldav-sign-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      CalDAV Sign Up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#contribute-examples" class="md-nav__link">
     <span class="md-ellipsis">
       Contribute Examples!
@@ -1316,6 +1325,54 @@ frameborder="0" height="600px" width="100%"></iframe></p>
 <p>Modifications:</p>
 <ul>
 <li>CSS</li>
+</ul>
+<h2 id="caldav-sign-up">CalDAV Sign Up<a class="headerlink" href="#caldav-sign-up" title="Permanent link">&para;</a></h2>
+<p>The Open Web Calendar support CalDAV for instant event synchronization. You can use it e.g. with Nextcloud.</p>
+<p>In the example below, we used CalDAV to create event that you can sign up to. Once you sign up, you receive an email invitation and your name and email show up in the calendar.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="calendar_5" name="__tabbed_6" type="radio" /><input id="specification_5" name="__tabbed_6" type="radio" /><input id="html_5" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="calendar_5">Calendar</label><label for="specification_5">Specification</label><label for="html_5">HTML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><iframe class="open-web-calendar" id=""
+style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/caldav-signup.json&"
+sandbox="allow-scripts allow-same-origin allow-top-navigation"
+allowTransparency="true" scrolling="no"
+frameborder="0" height="600px" width="100%"></iframe></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;show_attendees&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;show_organizers&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;show_participant_role&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;show_participant_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;skin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;flat&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;style-event-status-confirmed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;style-event-status-tentative&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;tabs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;month&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;week&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CalDAV sign up template&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fernet://gAAAAABn1uYHjkiJcey7cas_TRHyXBr0xDEP-R_IsM0jLw0PkMeGHlIgb-rZVHL7_RawixUpafG3JYgeIWpxM3GxvEgSITcXSGwTPZozB61mjwsKNYqdab-gWshwnDJp1iMFDjv8wPyCsWZwB5xpxBaotQ8WZvoZRyi0QUDt8le7G-2sBqvMt59WIL_HFbnIvR3QeZHjyBLWgxj0X0kgiiQ2pHnwIujDraJ2taX2_6VVGu8eXsOCo57XkkGUydR0rqJRVhj4Uow53lu2pfmGhIzOeU9jpqwYWYgWT_Y1ZeuCs6gvXfVBSrVzB3T_3ooZJAQzQIzLxDyV07NHh_d9xzxqoIrET05ApRLc6_cG_zAC-W0SA8Rex1JCyLJOBaD-aohWngeiaNrmMlWHnEdcVje_jNehgy7aDL8yfmR04vfwll_C878rgSU=&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;open-web-calendar&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;&quot;</span>
+<span class="na">style</span><span class="o">=</span><span class="s">&quot;background:url(&#39;/assets/img/circular-loader.gif&#39;) center center no-repeat; border-radius: 10px;&quot;</span>
+<span class="na">src</span><span class="o">=</span><span class="s">&quot;https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/caldav-signup.json&amp;&quot;</span>
+<span class="na">sandbox</span><span class="o">=</span><span class="s">&quot;allow-scripts allow-same-origin allow-top-navigation&quot;</span>
+<span class="na">allowTransparency</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span>
+<span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600px&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><a href="https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/caldav-signup.json" target="_blank">Edit the calendar</a></p>
+<p>Modifications:</p>
+<ul>
+<li>Activate CalDAV Sign Up</li>
+<li>URL-Encryption</li>
 </ul>
 <h2 id="contribute-examples">Contribute Examples!<a class="headerlink" href="#contribute-examples" title="Permanent link">&para;</a></h2>
 <p>If you want to add another example or showcase your calendar, this is the place. You can <strong>contact us</strong> with the link of the calendar e.g. in an <a href="https://github.com/niccokunzmann/open-web-calendar/issues">issue</a>.</p>
