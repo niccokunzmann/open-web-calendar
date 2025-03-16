@@ -107,6 +107,59 @@ msgstr "Вам потрібні доповнення або інтеграції
 msgid "Support plans and maintenance contracts are available."
 msgstr "Доступні плани підтримки та контракти на технічне обслуговування."
 
+#, mdpo-site_description
+msgid ""
+"Embed a highly customizable web calendar into your website using ICal source"
+" links"
+msgstr ""
+"Вставте веб-календар із широкими можливостями налаштування на свій веб-сайт "
+"за допомогою посилань на джерело ICal"
+
+#, mdpo-site_name
+msgid "Open Web Calendar"
+msgstr "Відкрийте веб-календар"
+
+msgid "Permanent link"
+msgstr "Постійне посилання"
+
+msgid "See also:"
+msgstr "Дивіться також:"
+
+msgid "Further Configuration"
+msgstr "Подальша конфігурація"
+
+msgid "Python Package"
+msgstr "Пакет Python"
+
+msgid ""
+"After you have set up your own server, you can [configure the "
+"behavior](../configure)."
+msgstr ""
+"Після налаштування власного сервера ви можете [налаштувати "
+"поведінку](../configure)."
+
+msgid "Examples:"
+msgstr "Приклади:"
+
+msgid "OWC_SPECIFICATION"
+msgstr "OWC_SPECIFICATION"
+
+msgid ""
+"When you try to access a forbidden calendar with the local `open-web-"
+"calendar`, e.q. `http://172.16.0.1/calendar.ics`, you will see this error "
+"message:"
+msgstr ""
+"Коли ви намагаєтеся отримати доступ до забороненого календаря за допомогою "
+"локального `open-web-calendar`, e.q. `http://172.16.0.1/calendar.ics`, ви "
+"побачите таке повідомлення про помилку:"
+
+msgid "403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics"
+msgstr ""
+"403 Помилка клієнта: заборонено для url: http://172.16.0.1/calendar.ics"
+
+msgid "[Squid]: https://www.squid-cache.org/"
+msgstr "[Squid]: https://www.squid-cache.org/"
+
 #~ msgid ""
 #~ "[Donate using Open Collective](https://opencollective.com/open-web-"
 #~ "calendar/)"
@@ -156,3 +209,40 @@ msgstr "Доступні плани підтримки та контракти �
 #, fuzzy
 #~ msgid "[translate]: #translate"
 #~ msgstr "[translate]: #translate"
+
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
+
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json \" "
+#~ "target=\"_blank\">Редагувати календар</a>"

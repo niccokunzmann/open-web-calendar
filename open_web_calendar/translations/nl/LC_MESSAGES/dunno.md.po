@@ -126,3 +126,26 @@ msgid ""
 "[python-recurring-ical-events](https://github.com/niccokunzmann/python-"
 "recurring-ical-events)"
 msgstr ""
+
+#, mdpo-site_name
+msgid "Open Web Calendar"
+msgstr "Open Web Calendar"
+
+#, fuzzy
+msgid "[Squid]: https://www.squid-cache.org/"
+msgstr "[Squid]: https://www.squid-cache.org/"
+
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
+
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."

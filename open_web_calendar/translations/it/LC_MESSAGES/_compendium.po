@@ -16,6 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.7-dev\n"
 
+#, mdpo-site_description
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
@@ -23,6 +24,7 @@ msgstr ""
 "Incorpora un calendario web altamente personalizzabile nel tuo sito web "
 "utilizzando i collegamenti sorgente ICal"
 
+#, mdpo-site_name
 msgid "Open Web Calendar"
 msgstr "Apri Calendario Web"
 

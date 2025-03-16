@@ -15,11 +15,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.10-dev\n"
 
+#, mdpo-site_description
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
 
+#, mdpo-site_name
 msgid "Open Web Calendar"
 msgstr "Open Web Calendar"
 

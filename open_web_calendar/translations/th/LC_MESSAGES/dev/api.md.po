@@ -318,6 +318,52 @@ msgstr ""
 msgid "[JavaScript Customization](../javascript)"
 msgstr ""
 
+msgid "Examples:"
+msgstr ""
+
+msgid "OWC_SPECIFICATION"
+msgstr ""
+
+msgid "See also:"
+msgstr ""
+
+#, mdpo-site_description
+msgid ""
+"Embed a highly customizable web calendar into your website using ICal source"
+" links"
+msgstr ""
+"ฝังปฏิทินเว็บที่ปรับแต่งได้สูงลงในหน้าเว็บไซต์ของคุณโดยใช้ลิงก์แหล่งที่มาของ"
+" ICal"
+
+#, mdpo-site_name
+msgid "Open Web Calendar"
+msgstr "Open Web Calendar"
+
+msgid "Permanent link"
+msgstr "ลิงค์ถาวร"
+
+#, fuzzy
+msgid ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/default_specification.yml"
+msgstr ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/default_specification.yml"
+
+msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
+msgstr "[ตั้งค่าพร็อกซี่]: #ssrf-protection-with-a-proxy-server"
+
+msgid ""
+"After you have set up your own server, you can [configure the "
+"behavior](../configure)."
+msgstr ""
+"หลังจากที่คุณตั้งค่าเซิร์ฟเวอร์ของคุณเองแล้ว คุณสามารถ "
+"[กำหนดค่าลักษณะการทำงาน](../configure) ได้"
+
+#, fuzzy
+msgid "[Squid]: https://www.squid-cache.org/"
+msgstr "[Squid]: https://www.squid-cache.org/"
+
 #~ msgid ""
 #~ "Add tests in [features/configure-the-"
 #~ "calendar.feature](https://github.com/niccokunzmann/open-web-"
@@ -496,3 +542,47 @@ msgstr ""
 #~ "specification. The query parameters have the highest precedence. Examples:"
 #~ "         index.html?language=de      calendar.html?title=CALENDAR"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
+
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+
+#~ msgid ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+#~ msgstr ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."

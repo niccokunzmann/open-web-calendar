@@ -129,10 +129,25 @@ events are either orange or red.
 
 {{calendar_example("free-and-busy.json")}}
 
-
 Modifications:
 
 - CSS
+
+## CalDAV Sign Up
+
+The Open Web Calendar support CalDAV for instant event synchronization.
+You can use it e.g. with Nextcloud.
+
+In the example below, we used CalDAV to create event that you can sign up to.
+Once you sign up, you receive an email invitation and your name and email show
+up in the calendar.
+
+{{calendar_example("caldav-signup.json")}}
+
+Modifications:
+
+- Activate CalDAV Sign Up
+- URL-Encryption
 
 ## Contribute Examples!
 
