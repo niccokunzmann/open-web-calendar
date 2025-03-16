@@ -341,40 +341,6 @@ msgstr ""
 msgid "[JavaScript Customization](../javascript)"
 msgstr ""
 
-msgid "Examples:"
-msgstr ""
-
-msgid "OWC_SPECIFICATION"
-msgstr ""
-
-msgid "See also:"
-msgstr ""
-
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"Metu tre adapteblan retan kalendaron en vian retpaĝon per hiperligoj al "
-"iCal-fontoj"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Malfermita Reta Kalendaro"
-
-msgid "Permanent link"
-msgstr "Daŭra hiperligo"
-
-msgid "Further Configuration"
-msgstr "Pliaj agordoj"
-
-msgid "Python Package"
-msgstr "Python-pako"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid ""
 #~ "Add tests in [features/configure-the-"
 #~ "calendar.feature](https://github.com/niccokunzmann/open-web-"

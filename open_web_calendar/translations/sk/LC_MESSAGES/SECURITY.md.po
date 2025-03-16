@@ -43,25 +43,6 @@ msgid ""
 " out to [@niccokunzmann](https://github.com/niccokunzmann/)."
 msgstr ""
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"Vložte vysoko prispôsobiteľný web kalendár do vašich webových stránok "
-"pomocou ICal zdrojových odkazov"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Otvoriť Web kalendár"
-
-msgid "Permanent link"
-msgstr "Permanentný odkaz"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid ""
 #~ "If you find a security vulnerability, please report it to the developer "
 #~ "[@niccokunzmann](https://github.com/niccokunzmann/) or open an issue if you "

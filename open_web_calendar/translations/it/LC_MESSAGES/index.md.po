@@ -105,38 +105,6 @@ msgstr ""
 msgid "[Developer API](dev/api)"
 msgstr ""
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"Incorpora un calendario web altamente personalizzabile nel tuo sito web "
-"utilizzando i collegamenti sorgente ICal"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Apri Calendario Web"
-
-msgid "Permanent link"
-msgstr "Link permanente"
-
-msgid "See also:"
-msgstr "Vedi anche:"
-
-msgid "Further Configuration"
-msgstr "Ulteriore configurazione"
-
-msgid ""
-"After you have set up your own server, you can [configure the "
-"behavior](../configure)."
-msgstr ""
-"Dopo aver configurato il tuo server, puoi [configurarne il "
-"comportamento](../configure)."
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid "Getting Started"
 #~ msgstr ""
 

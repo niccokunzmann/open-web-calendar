@@ -16,7 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.7-dev\n"
 
-#, mdpo-site_description
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
@@ -24,7 +23,6 @@ msgstr ""
 "Incorpora un calendario web altamente personalizzabile nel tuo sito web "
 "utilizzando i collegamenti sorgente ICal"
 
-#, mdpo-site_name
 msgid "Open Web Calendar"
 msgstr "Apri Calendario Web"
 
@@ -65,6 +63,14 @@ msgstr ""
 #, fuzzy
 msgid "[Squid]: https://www.squid-cache.org/"
 msgstr "[Squid]: https://www.squid-cache.org/"
+
+#, fuzzy
+msgid ""
+"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/default_specification.yml"
+msgstr ""
+"[calendars]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//docs/assets/calendars"
 
 #~ msgid "Translate"
 #~ msgstr ""

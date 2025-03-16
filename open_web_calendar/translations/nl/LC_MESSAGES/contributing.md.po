@@ -89,14 +89,6 @@ msgstr ""
 msgid "Support plans and maintenance contracts are available."
 msgstr ""
 
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Open Web Calendar"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid ""
 #~ "[Donate using Open Collective](https://opencollective.com/open-web-"
 #~ "calendar/)"

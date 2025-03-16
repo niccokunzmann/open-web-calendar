@@ -93,46 +93,6 @@ msgstr ""
 msgid "Support plans and maintenance contracts are available."
 msgstr ""
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"ฝังปฏิทินเว็บที่ปรับแต่งได้สูงลงในหน้าเว็บไซต์ของคุณโดยใช้ลิงก์แหล่งที่มาของ"
-" ICal"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Open Web Calendar"
-
-msgid "Permanent link"
-msgstr "ลิงค์ถาวร"
-
-msgid "See also:"
-msgstr "ดูเพิ่มเติม:"
-
-#, fuzzy
-msgid ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-
-msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[ตั้งค่าพร็อกซี่]: #ssrf-protection-with-a-proxy-server"
-
-msgid ""
-"After you have set up your own server, you can [configure the "
-"behavior](../configure)."
-msgstr ""
-"หลังจากที่คุณตั้งค่าเซิร์ฟเวอร์ของคุณเองแล้ว คุณสามารถ "
-"[กำหนดค่าลักษณะการทำงาน](../configure) ได้"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid ""
 #~ "[Donate using Open Collective](https://opencollective.com/open-web-"
 #~ "calendar/)"

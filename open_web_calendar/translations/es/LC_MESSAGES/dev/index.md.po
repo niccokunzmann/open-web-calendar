@@ -91,48 +91,6 @@ msgid ""
 "printed."
 msgstr ""
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"Agregue un calendario web altamente personalizable a tu página web basado en"
-" enlaces ICal"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Calendario web abierto"
-
-msgid "Permanent link"
-msgstr "Enlace permanente"
-
-msgid "See also:"
-msgstr "Ver también:"
-
-msgid ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-
-msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configurar un proxy]: #ssrf-protection-with-a-proxy-server"
-
-msgid ""
-"After you have set up your own server, you can [configure the "
-"behavior](../configure)."
-msgstr ""
-"Después de haber configurado tu propio servidor, puedes [configurar el "
-"comportamiento](../configure)."
-
-msgid "Python Package"
-msgstr "Paquete Python"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid "Running the App"
 #~ msgstr ""
 

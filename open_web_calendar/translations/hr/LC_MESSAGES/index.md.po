@@ -109,47 +109,6 @@ msgstr ""
 msgid "[Developer API](dev/api)"
 msgstr "[API za programere](dev/api)"
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"Ugradi prilagodljiv web kalendar u svoju web stranicu koristeći izvorne ICal"
-" poveznice"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Otvoreni web kalendar"
-
-msgid "Permanent link"
-msgstr "Stalna poveznica"
-
-msgid "See also:"
-msgstr "Također pogledaj:"
-
-msgid "Further Configuration"
-msgstr "Daljnja konfiguracija"
-
-msgid "Python Package"
-msgstr "Python paket"
-
-msgid ""
-"After you have set up your own server, you can [configure the "
-"behavior](../configure)."
-msgstr ""
-"Nakon postavljanja vlastitog servera možeš [konfigurirati "
-"ponašanje](../configure)."
-
-msgid "Examples:"
-msgstr "Primjeri:"
-
-msgid "OWC_SPECIFICATION"
-msgstr "OWC_SPECIFICATION"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid "Getting Started"
 #~ msgstr "Početak"
 

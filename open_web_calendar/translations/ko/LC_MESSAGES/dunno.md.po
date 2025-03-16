@@ -127,45 +127,6 @@ msgid ""
 "recurring-ical-events)"
 msgstr ""
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr "ICal 소스 링크를 사용하여 고도로 사용자 정의 가능한 웹 캘린더를 웹사이트에 임베드하세요"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "오픈 웹 캘린더"
-
-msgid "Permanent link"
-msgstr "퍼머넌트 링크"
-
-msgid "See also:"
-msgstr "참조하세요:"
-
-#, fuzzy
-msgid ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-
-msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-
-msgid ""
-"After you have set up your own server, you can [configure the "
-"behavior](../configure)."
-msgstr "자체 서버를 설정한 후에는 [동작 구성](../configure)을 할 수 있습니다."
-
-msgid "Python Package"
-msgstr "파이껀 패키지"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"

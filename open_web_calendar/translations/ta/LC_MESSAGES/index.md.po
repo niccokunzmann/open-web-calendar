@@ -117,58 +117,6 @@ msgstr "[டெவலப்பர் ஏபிஐ](dev/api)"
 msgid "&lt;சென்டர்&gt; ✔"
 msgstr ""
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"ICAL மூல இணைப்புகளைப் பயன்படுத்தி உங்கள் வலைத்தளத்தில் மிகவும் "
-"தனிப்பயனாக்கக்கூடிய வலை காலிகையை உட்பொதிக்கவும்"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "வலை காலிகையை திற"
-
-msgid "Permanent link"
-msgstr "நிரந்தர இணைப்பு"
-
-msgid "See also:"
-msgstr "மேலும் காண்க:"
-
-#, fuzzy
-msgid ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-msgstr ""
-"[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/master/default_specification.yml"
-
-msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
-msgstr "[ஒரு பதிலியை உள்ளமைக்கவும்]: #ssrf-protection-with-a-proxy-server"
-
-msgid ""
-"After you have set up your own server, you can [configure the "
-"behavior](../configure)."
-msgstr ""
-"உங்கள் சொந்த சேவையகத்தை அமைத்தபிறகு, நீங்கள் [நடத்தை "
-"உள்ளமைக்கலாம்](../configure)."
-
-msgid "Python Package"
-msgstr "பைதான் தொகுப்பு"
-
-msgid "OWC_SPECIFICATION"
-msgstr "ஒடபுள்யுசி_விவரக்குறிப்பு"
-
-msgid "Examples:"
-msgstr "எடுத்துக்காட்டுகள்:"
-
-msgid "Further Configuration"
-msgstr "மேலும் உள்ளமைவு"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid "Getting Started"
 #~ msgstr "Getting Started"
 

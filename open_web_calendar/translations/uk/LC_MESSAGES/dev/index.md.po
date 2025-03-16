@@ -91,59 +91,6 @@ msgid ""
 "printed."
 msgstr ""
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"Вставте веб-календар із широкими можливостями налаштування на свій веб-сайт "
-"за допомогою посилань на джерело ICal"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Відкрийте веб-календар"
-
-msgid "Permanent link"
-msgstr "Постійне посилання"
-
-msgid "See also:"
-msgstr "Дивіться також:"
-
-msgid "Further Configuration"
-msgstr "Подальша конфігурація"
-
-msgid "Python Package"
-msgstr "Пакет Python"
-
-msgid ""
-"After you have set up your own server, you can [configure the "
-"behavior](../configure)."
-msgstr ""
-"Після налаштування власного сервера ви можете [налаштувати "
-"поведінку](../configure)."
-
-msgid "Examples:"
-msgstr "Приклади:"
-
-msgid "OWC_SPECIFICATION"
-msgstr "OWC_SPECIFICATION"
-
-msgid ""
-"When you try to access a forbidden calendar with the local `open-web-"
-"calendar`, e.q. `http://172.16.0.1/calendar.ics`, you will see this error "
-"message:"
-msgstr ""
-"Коли ви намагаєтеся отримати доступ до забороненого календаря за допомогою "
-"локального `open-web-calendar`, e.q. `http://172.16.0.1/calendar.ics`, ви "
-"побачите таке повідомлення про помилку:"
-
-msgid "403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics"
-msgstr ""
-"403 Помилка клієнта: заборонено для url: http://172.16.0.1/calendar.ics"
-
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid "Running the App"
 #~ msgstr ""
 

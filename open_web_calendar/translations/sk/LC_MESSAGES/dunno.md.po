@@ -127,25 +127,6 @@ msgid ""
 "recurring-ical-events)"
 msgstr ""
 
-#, mdpo-site_description
-msgid ""
-"Embed a highly customizable web calendar into your website using ICal source"
-" links"
-msgstr ""
-"Vložte vysoko prispôsobiteľný web kalendár do vašich webových stránok "
-"pomocou ICal zdrojových odkazov"
-
-#, mdpo-site_name
-msgid "Open Web Calendar"
-msgstr "Otvoriť Web kalendár"
-
-msgid "Permanent link"
-msgstr "Permanentný odkaz"
-
-#, fuzzy
-msgid "[Squid]: https://www.squid-cache.org/"
-msgstr "[Squid]: https://www.squid-cache.org/"
-
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
 
