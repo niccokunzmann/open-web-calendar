@@ -135,7 +135,7 @@ Modifications:
 
 ## CalDAV Sign Up
 
-The Open Web Calendar support CalDAV for instant event synchronization.
+The Open Web Calendar supports CalDAV for instant event synchronization.
 You can use it e.g. with Nextcloud.
 
 In the example below, we used CalDAV to create event that you can sign up to.
