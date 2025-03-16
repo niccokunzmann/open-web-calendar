@@ -426,8 +426,7 @@ def json_error():
     """Return the active exception as json."""
     _, err, _ = sys.exc_info()
     status_code = http_status_code_for_error(err)
-    if DEBUG():
-        traceback.print_exc()
+    traceback.print_exc()
     message = str(err) if DEBUG() else None
     error = type(err).__name__
     return jsonify(
