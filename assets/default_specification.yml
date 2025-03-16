@@ -77,6 +77,7 @@ hour_division: "1"
 ## Swedish: "sv"
 ## Turkish: "tr"
 ## Ukrainian: "ua"
+## Welsh: "cy"
 ## You can find all languages in the "translations" directory.
 language: "en"
 
@@ -196,6 +197,14 @@ show_participant_status: false
 show_participant_type: false
 ## Show the status (e.g. organizer/required/optional)
 show_participant_role: false
+
+## Activate and deactivate plugins
+## The event details are shown when you click on the event.
+plugin_event_details: true
+## When the mouse moves over an event, this tooltip is shown
+## Note: This is only available on non-touch devices
+##       Even if the values is true.
+plugin_event_tooltip: true
 
 ###################### Clean HTML ######################
 ##
