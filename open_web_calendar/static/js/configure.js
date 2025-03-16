@@ -338,8 +338,8 @@ const actions = {
 /* Disable/Enable features based on touch/mouse-over gestures
  * see https://stackoverflow.com/a/52855084/1320237
  */
-var IS_TOUCH_SCREEN = window.matchMedia("(pointer: coarse)").matches;
-var HAS_TOOLTIP = !IS_TOUCH_SCREEN;
+const IS_TOUCH_SCREEN = window.matchMedia("(pointer: coarse)").matches;
+const CAN_HAVE_TOOLTIP = !IS_TOUCH_SCREEN;
 
 function loadCalendar() {
     /* Format the time of the hour.
@@ -357,9 +357,9 @@ function loadCalendar() {
     scheduler.plugins({
         agenda_view: true,
         multisource: true,
-        quick_info: true,
+        quick_info: specification.plugin_event_details,
         recurring: false,
-        tooltip: HAS_TOOLTIP,
+        tooltip: CAN_HAVE_TOOLTIP && specification.plugin_event_tooltip,
         readonly: true,
         limit: true,
         serialize: true,
@@ -418,7 +418,7 @@ function loadCalendar() {
 
     // tooltip
     // see https://docs.dhtmlx.com/scheduler/tooltips.html
-    if (HAS_TOOLTIP) {
+    if (CAN_HAVE_TOOLTIP) {
         scheduler.templates.tooltip_text = function(start, end, event) {
             return template.formatted_summary(event) + template.details(event) + template.location(event);
         };

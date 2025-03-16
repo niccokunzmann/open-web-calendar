@@ -299,16 +299,7 @@ def before_all(context):
     use_fixture(calendars_server, context)
 
 
-# Set the default timezone of the browser
-# If we would like to set another timezone in the tests, we can write:
-#    Given we set the "timezone" parameter to "Asia/Singapore"
-DEFAULT_SPECIFICATION.update(
-    {
-        "url": [],
-        "timezone": "Europe/Moscow",
-        "date": "1605-11-05",
-    }
-)
+os.environ["OWC_SPECIFICATION"] = str(HERE / "environment_specification.yml")
 
 
 def before_scenario(context, scenario):
@@ -318,6 +309,7 @@ def before_scenario(context, scenario):
     """
     context.server.capture_stdout()
     context.specification = copy.deepcopy(DEFAULT_SPECIFICATION)
+    context.specification["url"] = []
     context.browser.switch_to.new_window("tab")
     context.current_recording = ""
 
