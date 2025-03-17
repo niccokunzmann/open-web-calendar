@@ -327,6 +327,13 @@ msgstr ""
 msgid "Participants"
 msgstr ""
 
+msgid "See also:"
+msgstr ""
+
+msgid ""
+"[CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)"
+msgstr ""
+
 #~ msgid ""
 #~ "In the example below, we used CalDAV to create event that you can sign up "
 #~ "to."
@@ -608,9 +615,6 @@ msgstr ""
 #~ msgstr ""
 #~ "[parameteri proksi servera](../host/configure#ssrf-protection-with-a-proxy-"
 #~ "server)"
-
-#~ msgid "See also:"
-#~ msgstr "Također pogledaj:"
 
 #~ msgid "Further Configuration"
 #~ msgstr "Daljnja konfiguracija"

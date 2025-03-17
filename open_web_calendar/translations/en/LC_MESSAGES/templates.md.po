@@ -312,6 +312,10 @@ msgstr ""
 msgid "Participants"
 msgstr ""
 
+msgid ""
+"[CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)"
+msgstr ""
+
 #~ msgid ""
 #~ "The Open Web Calendar support CalDAV for instant event synchronization. You "
 #~ "can use it e.g. with Nextcloud."

@@ -291,6 +291,13 @@ msgstr ""
 msgid "Participants"
 msgstr ""
 
+msgid "See also:"
+msgstr ""
+
+msgid ""
+"[CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)"
+msgstr ""
+
 #~ msgid ""
 #~ "In the example below, we used CalDAV to create event that you can sign up "
 #~ "to."
@@ -510,9 +517,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Below, you can see the source code that you need to add to your website. You"
 #~ " might need to adjust the timezone selection and the id of the iframe."
-
-#~ msgid "See also:"
-#~ msgstr "ดูเพิ่มเติม:"
 
 #~ msgid ""
 #~ "After you have set up your own server, you can [configure the "
