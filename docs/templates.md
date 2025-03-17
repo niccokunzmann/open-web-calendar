@@ -152,7 +152,8 @@ Modifications:
 
 See also:
 
-- [CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)
+- [Tutorial: Event Sign Up with Nextcloud](https://youtu.be/RnMz23p7UP0)
+- [Blog: CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)
 
 ## Contribute Examples!
 
