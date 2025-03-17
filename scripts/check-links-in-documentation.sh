@@ -24,7 +24,7 @@ echo "checking links ..."
 linkchecker \
   -o text \
   -F html \
-  --ignore-url='^https://www.cloudron.io/$|.canonical$|http://localhost:5000|http://192.168.178.7:8000|http://127.0.0.1:8000|//[^/]*\.onion/|/security/code-scanning/|//(www\.)?ngi\.eu|/translations/.*\.md\.po$' \
+  --ignore-url='^https://www.squid-cache.org/$|^https://www.cloudron.io/$|.canonical$|http://localhost:5000|http://192.168.178.7:8000|http://127.0.0.1:8000|//[^/]*\.onion/|/security/code-scanning/|//(www\.)?ngi\.eu|/translations/.*\.md\.po$' \
   --check-extern \
   --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0' \
   --threads 50 \
