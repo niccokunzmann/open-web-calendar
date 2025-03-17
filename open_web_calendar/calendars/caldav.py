@@ -6,7 +6,7 @@
 from __future__ import annotations
 
 import re
-from datetime import timedelta
+from datetime import date, timedelta
 from typing import TYPE_CHECKING, Optional
 
 import caldav
@@ -19,6 +19,11 @@ if TYPE_CHECKING:
     from datetime import datetime
 
     import icalendar
+
+
+def convert_to_date(dt: date) -> date:
+    """Converts a date or datetime to a date"""
+    return date(dt.year, dt.month, dt.day)
 
 
 def validate_email(email):
@@ -89,9 +94,9 @@ class CalDAVCalendars(Calendars):
             raise ValueError(f"Invalid email address {email}")
         if len(name) > 100:
             raise ValueError("Name too long.")
-        events = self.get_events_between(
-            event.start.date(), event.start.date() + timedelta(days=1)
-        )
+        query_start = convert_to_date(event.start)
+        query_end = query_start + timedelta(days=1)
+        events = self.get_events_between(query_start, query_end)
         if event not in events:
             raise ValueError(
                 f"The event was not found among {len(events)} "

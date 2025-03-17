@@ -7,7 +7,9 @@
 #    https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#running-tests-with-tox
 name: "Build, Test & Publish"
 
-on: [push, pull_request]
+on: 
+- push
+# - pull_request  # this needs enableing for external PRs
 
 # cancel builds in progress if a new push has been made to the same ref
 # see https://stackoverflow.com/a/70972844/1320237
