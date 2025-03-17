@@ -121,7 +121,7 @@ pathspec==0.12.1
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
-pillow==10.4.0
+pillow==11.1.0
     # via
     #   cairosvg
     #   mkdocs-material
