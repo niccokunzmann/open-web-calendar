@@ -150,6 +150,10 @@ Modifications:
 - URL-Encryption
 - Participants
 
+See also:
+
+- [CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)
+
 ## Contribute Examples!
 
 If you want to add another example or showcase your calendar, this is the place.
