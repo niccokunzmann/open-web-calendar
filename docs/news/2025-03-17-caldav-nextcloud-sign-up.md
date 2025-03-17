@@ -121,4 +121,4 @@ We hope to see this feature used and users to come back with ideas of how to mak
 [Radically Open Security]: https://radicallyopensecurity.com/
 [Nextcloud]: https://nextcloud.com/
 [templates]: ../../templates#caldav-sign-up
-[grant]: ./2024-04-10-website.md
+[grant]: /news/2024-04-10-website
