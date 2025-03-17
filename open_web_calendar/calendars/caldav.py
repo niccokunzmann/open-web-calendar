@@ -6,7 +6,7 @@
 from __future__ import annotations
 
 import re
-from datetime import timedelta, date
+from datetime import date, timedelta
 from typing import TYPE_CHECKING, Optional
 
 import caldav
@@ -14,7 +14,6 @@ from icalendar import vCalAddress
 
 from open_web_calendar.calendars.base import Calendars
 from open_web_calendar.url import URLCapability
-
 
 if TYPE_CHECKING:
     from datetime import datetime
