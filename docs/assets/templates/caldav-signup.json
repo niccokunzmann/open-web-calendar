@@ -1,4 +1,5 @@
 {
+    "css": ".STATUS-TENTATIVE {--dhx-scheduler-event-background: #aaa;}",
     "show_attendees": true,
     "show_organizers": true,
     "show_participant_role": true,
