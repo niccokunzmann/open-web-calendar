@@ -150,7 +150,7 @@ var template = {
     },
     "categories": function (event) {
       if (event.categories.length) {
-          return '<b>| ' + event.categories.map(escapeHtml).join(" | ") + ' |</b> ';
+          return '<b class="categories">| ' + event.categories.map(escapeHtml).join(" | ") + ' |</b> ';
       }
       return "";
     },

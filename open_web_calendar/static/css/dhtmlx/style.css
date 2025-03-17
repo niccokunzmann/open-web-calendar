@@ -299,3 +299,8 @@ div.dhx_agenda_line > span {
 .cannot-sign-up .icon_signup {
     display: none;
 }
+
+.dhx_title .categories {
+    /* deactivate the tags in the week view */
+    display: none;
+}
