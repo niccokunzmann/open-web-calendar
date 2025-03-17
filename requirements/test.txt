@@ -72,7 +72,7 @@ responses==0.25.7
     # via -r requirements/test.in
 reuse==5.0.2
     # via -r requirements/test.in
-ruff==0.9.10
+ruff==0.11.0
     # via -r requirements/test.in
 selenium==4.29.0
     # via -r requirements/test.in
