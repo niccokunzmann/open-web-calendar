@@ -16,6 +16,20 @@ The latest version might not be released, yet.
 <!-- Contributors, if you like to be linked, please put your name down here with a link. -->
 [தமிழ்நேரம்]: https://tamilneram.github.io/
 
+## v1.49
+
+- Allow CalDAV sign-up, see [Issue 679](https://github.com/niccokunzmann/open-web-calendar/issues/679)
+- Document CalDAV sign up with an example
+- Update Ukrainian translation by Максим Горпиніч, German by Nicco Kunzmann
+- Correct the style of the Free/Busy example
+- Update dependencies
+- Open the link to resulting calendar in another tab, see [Issue 683](https://github.com/niccokunzmann/open-web-calendar/issues/683)
+- Add options to show attendees and organizer as participants, including status, role and type, see [Issue 680](https://github.com/niccokunzmann/open-web-calendar/issues/680)
+- Add Youtube playlist to documentation.
+- Add recurrence ID to downloaded events to identify them across calendars, see [Issue 651](https://github.com/niccokunzmann/open-web-calendar/issues/651)
+- Remove categories from week and day view, see [Pull Request 704](https://github.com/niccokunzmann/open-web-calendar/pull/704)
+- Attempt Azure auto-deploy and add GitHub Actions for this.
+
 ## v1.48
 
 - Fix automatic updates of dependencies by Renovate
