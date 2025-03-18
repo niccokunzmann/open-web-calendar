@@ -163,13 +163,6 @@ msgstr ""
 "calendar.hosted.quelltext.eu"
 
 msgid ""
-"If you run your own server, you can choose to run the Open Web Calender with"
-" Docker. Building, running and updating are [documented here](../docker)."
-msgstr ""
-"Якщо ви використовуєте власний сервер, ви можете запустити Open Web Calender"
-" із Docker. Збірка, запуск і оновлення [задокументовані тут](../docker)."
-
-msgid ""
 "![Repository, Watch, Custom, Releases](/assets/img/subscribe-to-release.png)"
 msgstr ""
 
@@ -185,6 +178,18 @@ msgid ""
 msgstr ""
 "Ви можете запустити Open Web Calendar, встановлений як пакет Python із PyPI."
 " Для цього перегляньте [документацію](../pypi)."
+
+msgid ""
+"If you run your own server, you can choose to run the Open Web Calendar with"
+" Docker. Building, running and updating are [documented here](../docker)."
+msgstr ""
+
+#~ msgid ""
+#~ "If you run your own server, you can choose to run the Open Web Calender with"
+#~ " Docker. Building, running and updating are [documented here](../docker)."
+#~ msgstr ""
+#~ "Якщо ви використовуєте власний сервер, ви можете запустити Open Web Calender"
+#~ " із Docker. Збірка, запуск і оновлення [задокументовані тут](../docker)."
 
 #~ msgid ""
 #~ "After you have set up your own server, you can [configure the behavior of "
