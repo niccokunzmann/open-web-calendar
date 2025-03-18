@@ -1,29 +1,34 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Tomáš Chlubna <xchlub00@vutbr.cz>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-03-18 09:53+0000\n"
+"Last-Translator: Tomáš Chlubna <xchlub00@vutbr.cz>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-common-translations/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
+"Vložte vysoce konfigurovatelný webový kalendář do Vašeho webu pomocí ICal "
+"zdrojových odkazů"
 
 msgid "Open Web Calendar"
-msgstr ""
+msgstr "Open Web Calendar"
 
 msgid "Permanent link"
-msgstr ""
+msgstr "Trvalý odkaz"
 
 #~ msgid "Translate"
 #~ msgstr ""
