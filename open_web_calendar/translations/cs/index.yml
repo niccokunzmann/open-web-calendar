@@ -111,3 +111,17 @@ spec-description: 'Kalendář může být generován nejen pomocí adresy URL, a
 spec-host-html: Můžete <a href="javascript:downloadJSONSpecification()">stáhnout tuto
   specifikaci</a> a umístit ji na web. Takto máte stále kontrolu nad nastavením kalendáře
   po sdílení odkazu, např, na GitHub <a href="https://gist.github.com/">Gist</a>.
+participants-title: Účastníci a organizace
+participants-status: Zobrazit stav účastníků? (např. přijal(a)/odmítl(a))
+participants-attendees: Zobrazit, kdo se účastní události?
+participants-description: Můžete pozvat ostatní na události a lidi se mohou zaregistrovat.
+  Můžete povolit tyto možnosti pro zobrazení jmen a e-mailových adres pod popisem
+  události.
+participants-organizers: Zobrazit, kdo organizuje událost?
+participants-type: Zobrazit druh účastníka? (např. jednotlivec nebo skupina)
+participants-role: Zobrazit roli účastníka? (např. pořadatel, potřebná osoba nebo
+  volitelná)
+caldav-choose-calendar: 'Vyberte si kalendář ze svého účtu:'
+spec-link: 'Jakmile jste umístili specifikaci někde on-line, můžete vytvořit odkaz
+  jako tento:'
+caldav-allow-sign-up: 'Povolit e-mailovou registraci pro události v tomto kalendáři:'
