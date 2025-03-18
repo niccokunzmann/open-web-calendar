@@ -108,3 +108,6 @@ loading: načítání…
 spec-title: Hostování specifikace
 spec-description: 'Kalendář může být generován nejen pomocí adresy URL, ale také prostřednictvím
   specifikace JSON nebo YAML ze souboru. Nastavení výše generuje tuto specifikaci:'
+spec-host-html: Můžete <a href="javascript:downloadJSONSpecification()">stáhnout tuto
+  specifikaci</a> a umístit ji na web. Takto máte stále kontrolu nad nastavením kalendáře
+  po sdílení odkazu, např, na GitHub <a href="https://gist.github.com/">Gist</a>.
