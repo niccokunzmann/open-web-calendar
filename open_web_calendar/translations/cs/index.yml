@@ -105,3 +105,6 @@ timezone-description: 'Časové pásmo je převzato z prohlížeče uživatele. 
   aby váš kalendář byl nastaven na jedno určité pásmo, máte možnost níže. Váš prohlížeč
   používá toto časové pásmo:'
 loading: načítání…
+spec-title: Hostování specifikace
+spec-description: 'Kalendář může být generován nejen pomocí adresy URL, ale také prostřednictvím
+  specifikace JSON nebo YAML ze souboru. Nastavení výše generuje tuto specifikaci:'
