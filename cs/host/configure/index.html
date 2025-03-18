@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_776_8amt/cs/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_o3xq5nbj/cs/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_776_8amt/cs/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_o3xq5nbj/cs/host/configure/index.png" >
       
     
     
@@ -1125,9 +1125,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+  <a href="#squid-jako-proxy-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Squid as a Proxy Server
+      Squid jako proxy server
     </span>
   </a>
   
@@ -1216,10 +1216,8 @@
 </ul>
 <p>Nastavení <code>OWC_SPECIFICATION</code> umožňuje nahradit výchozí hodnoty pro všechny kalendáře.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>New versions of the Open Web Calendar can add new configuration parameters.
-Placing your changes in this variable instead of changing the <code>default_specification</code> file
-will ensure that you do not break the Open Web Calendar in a future version.</p>
+<p class="admonition-title">Poznámka</p>
+<p>Nové verze Open Web Calendar mohou přidávat nové konfigurační parametry. Uvedení změn v této proměnné namísto změny souboru <code>default_specification</code> zajistí, že v budoucí verzi bude Open Web Calendar funkční.</p>
 </div>
 <p>V následujícím příkladu se změní název pro všechny kalendáře, které nemají svůj vlastní titul.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
@@ -1272,10 +1270,10 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <li>** Řízení přístupu a uživatelé** Chcete-li omezit, kdo může použít Open Web Calendar, můžete použít <code>nginx</code> nebo <code>apache</code> jako reverzní proxy. YuNoHost je další volba vlastního hostingu pro omezení přístupu.</li>
 <li>** HTTPS Šifrování** To lze zavést pomocí <code>nginx</code>, <code>apache</code> nebo <code>caddy</code>.</li>
 <li><strong>Pokročilý caching</strong> Základní caching je spravován v rámci Open Web Calendar. Pro pokročilou konfiguraci cache použijte proxy server jako <code>squid</code>. Podívejte se na dokumentaci níže, jak vytvořit Open Web Calendar s přístupem na web pouze prostřednictvím proxy.</li>
-<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+<li><strong>Omezení přístupu k kalendářům</strong> Ve výchozím nastavení Open Web Calendar neomezuje, které kalendáře jsou zobrazeny. Použijte proxy server pro filtrování kalendářů. Pokud spustíte Open Web Calendar přes firewall s jinými webovými službami, nastavení proxy je nutné pro chranu před útoky SSRF.</li>
 </ul>
 <h2 id="ochrana-ssrf-s-proxy-serverem">Ochrana SSRF s proxy serverem<a class="headerlink" href="#ochrana-ssrf-s-proxy-serverem" title="Trvalý odkaz">&para;</a></h2>
-<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calendar, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
+<p>Open Web Calendar lze použít pro přístup k místní síti za firewallem, viz <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. Tento volný přístup je určen pro zobrazení kalendáře odevšad. Vzhledem k tomu, že je použit <code>requests</code> v Open Web Calendar, může být proxy použita, jak je popsáno v <a href="https://requests.readthedocs.io/cs/latest/user/advanced/#proxies"><code>requests</code> dokumentaci</a>. Proxy může potom provést filtrování.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
@@ -1284,16 +1282,14 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevence SSRF pomocí Tor proxy</a></li>
 </ul>
-<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="Trvalý odkaz">&para;</a></h2>
-<p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
+<h2 id="squid-jako-proxy-server">Squid jako proxy server<a class="headerlink" href="#squid-jako-proxy-server" title="Trvalý odkaz">&para;</a></h2>
+<p><a href="https://www.squid-cache.org/">Squid</a> Proxy a cache je flexibilní a konfigurovatelný. Můžete jej použít s Open Web Calendar pro konfiguraci přístupu a přizpůsobení cachingu.</p>
 <div class="admonition note">
-<p class="admonition-title">Operating System</p>
-<p>Squid is avaiable for all major platforms.
-For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
-The commands might work on other systems, but that is not tested.</p>
+<p class="admonition-title">Operační systém</p>
+<p>Squid je dostupný pro všechny hlavní platformy. Pro příkazy a cesty tohoto návodu předpokládáme, že Squid běží na Debain/Ubuntu. Příkazy mohou pracovat na jiných systémech, ale to není testováno.</p>
 </div>
-<p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
-<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<p>Poté, co jste nainstalovali <a href="https://www.squid-cache.org/">Squid</a> proxy, přidejte tento soubor do adresáře <code>conf.d</code>. Squid jej automaticky načte.</p>
+<p>V Linuxu vytvořte <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
 <span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
 <span class="c1">## should be allowed</span>
@@ -1318,15 +1314,15 @@ http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span cl
 <span class="c1">## See https://superuser.com/a/1443889</span>
 dns_v4_first<span class="w"> </span>on
 </code></pre></div>
-<p>The list above denies the Open Web Calendar access to all known local/internal networks. If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.</p>
-<p>On Linux, you can install the file with this command:</p>
+<p>Seznam výše odpírá Open Web Calendar přístup ke všem známým lokálním/interním sítím. Pokud máte vlastní lokální síť (IPv4 nebo IPv6), přidejte jej do seznamu výše.</p>
+<p>Na Linuxu můžete nainstalovat soubor tímto příkazem:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>/etc/squid/conf.d/open-web-calendar.conf<span class="w"> </span>https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
 </code></pre></div>
-<p>Then, restart the squid proxy.</p>
+<p>Poté restartujte squid proxy.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>squid<span class="w"> </span>reload
 </code></pre></div>
-<p>Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on <code>localhost</code>. Setting this variable changes depending on how you run the Open Web Calendar.</p>
-<p>If you use the <a href="../pypi">Python Setup</a>, you can set the environment variables for the server like this:</p>
+<p>Nastavte proměnné prostředí, které donutí Open Web Calendar použít Squid proxy nainstalováno na <code>localhost</code>. Nastavení této proměnné se mění v závislosti na tom, jak provozujete Open Web Calendar.</p>
+<p>Pokud používáte <a href="../pypi">Python nastavení</a>, můžete nastavit proměnné prostředí pro server následně:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
