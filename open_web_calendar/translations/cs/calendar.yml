@@ -55,3 +55,8 @@ labels_month: Měsíc
 language: Čeština
 labels_minute: Minuta
 labels_prev: Předchozí
+label_participants: Účastníci
+icon_signup: Zaregistrovat
+icon_subscribe: Přidat do mého kalendáře
+signup-email: email
+signup-name: jméno
