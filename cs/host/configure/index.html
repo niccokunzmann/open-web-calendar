@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_zr_0r47s/cs/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_4tmpbhh0/cs/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_zr_0r47s/cs/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_4tmpbhh0/cs/host/configure/index.png" >
       
     
     
@@ -1015,9 +1015,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-values" class="md-nav__link">
+  <a href="#vice-hodnot" class="md-nav__link">
     <span class="md-ellipsis">
-      More Values
+      Více hodnot
     </span>
   </a>
   
@@ -1107,9 +1107,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-configuration" class="md-nav__link">
+  <a href="#dalsi-konfigurace" class="md-nav__link">
     <span class="md-ellipsis">
-      Further Configuration
+      Další konfigurace
     </span>
   </a>
   
@@ -1164,25 +1164,25 @@
 <li>Změnit nastavení serveru.</li>
 </ul>
 <h2 id="nastaveni-zakladniho-kalendare">Nastavení základního kalendáře<a class="headerlink" href="#nastaveni-zakladniho-kalendare" title="Trvalý odkaz">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="/assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="/assets/default_specification.yml">default_specification</a>.</p>
-<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
-<p>You might want to change the following values.</p>
+<p>Konfigurace všech kalendářů vychází z [default_specification.yml]. Všechny tyto hodnoty mohou být změněny skrze kopii tohoto souboru na hostovaném webu skrze parametr kalendáře <code>specification_url</code>. Každý parametr by měl být zdokumentován v [default_specification.yml].</p>
+<p>Chcete-li upravit <strong>všechny kalendáře</strong> hostované na vaší instanci, použijte proměnnou prostředí <a href="#owc_specification">OWC_SPECIFICATION</a>. Kalendáře stále přepíšou některé hodnoty pro jejich konfiguraci. Ty, které nejsou přepsány jsou ovlivněny výchozí specifikací. Ne všechny hodnoty jsou dostupné na stránce konfigurace. Tyto hodnoty lze změnit v <code>specification_url</code> a pomocí parametrů požadavků.</p>
+<p>Můžete změnit následující hodnoty.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Trvalý odkaz">&para;</a></h3>
-<p>The title of your website.</p>
+<p>Název Vašeho webu.</p>
 <h3 id="language"><code>language</code><a class="headerlink" href="#language" title="Trvalý odkaz">&para;</a></h3>
-<p>This is the default language. You might want to change this to serve the configuration page better to a local audience.</p>
+<p>Toto je výchozí jazyk. Pro lepší zpřístupnění konfigurační stránky místním uživatelům lze změnit.</p>
 <h3 id="favicon"><code>favicon</code><a class="headerlink" href="#favicon" title="Trvalý odkaz">&para;</a></h3>
-<p>This is a link to the website icon.</p>
+<p>Zde je odkaz na ikonu webu.</p>
 <h3 id="source_code"><code>source_code</code><a class="headerlink" href="#source_code" title="Trvalý odkaz">&para;</a></h3>
-<p>If you made changes, you are legally required to disclose them to visitors. Please adjust the link or contribute them back to the main project.</p>
+<p>Pokud jste provedli změny, jste ze zákona povinni je sdělit návštěvníkům. Prosím, upravte odkaz, nebo je přispějte zpět do hlavního projektu.</p>
 <h3 id="contributing"><code>contributing</code><a class="headerlink" href="#contributing" title="Trvalý odkaz">&para;</a></h3>
-<p>If you want to redirect to contribute to your project.</p>
+<p>Pokud chcete přesměrovat na příspěvek pro Váš projekt.</p>
 <h3 id="privacy_policy"><code>privacy_policy</code><a class="headerlink" href="#privacy_policy" title="Trvalý odkaz">&para;</a></h3>
-<p>If you host this service yourself, you can use the default <a href="../privacy-policy">privacy policy</a>.</p>
-<p>If for some reason you decide to collect data i.e. in the HTTPS proxy or log IP-addresses, then you need to create your own privacy policy. You can link to the one of this project.</p>
-<h3 id="more-values">More Values<a class="headerlink" href="#more-values" title="Trvalý odkaz">&para;</a></h3>
-<p>There are loads more values that can be changed. Please refer to the <a href="/assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
-<p>See also:</p>
+<p>Pokud službu hostujete sami, můžete použít výchozí <a href="../privacy-policy">zásady ochrany osobních údajů</a>.</p>
+<p>Pokud z nějakého důvodu se rozhodnete shromažďovat data, tj. v HTTPS proxy nebo uchovávat IP adresy, musíte vytvořit vlastní zásady ochrany osobních údajů. Můžete odkazovat na jeden z těchto projektů.</p>
+<h3 id="vice-hodnot">Více hodnot<a class="headerlink" href="#vice-hodnot" title="Trvalý odkaz">&para;</a></h3>
+<p>Je plno velké množství které lze změnit. Postupujte podle <a href="/assets/default_specification.yml">default_specification</a>. Tyto hodnoty jsou všechny zdokumentovány. Používejte proměnnou prostředí <a href="#owc_specification">OWC_SPECIFICATION</a> pro jejich změnu.</p>
+<p>Viz také:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
 </ul>
@@ -1194,7 +1194,7 @@
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
-<p>Examples:</p>
+<p>Příklady:</p>
 <ul>
 <li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
 <li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
@@ -1204,7 +1204,7 @@
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Trvalý odkaz">&para;</a></h3>
 <p>default <code>5000</code>, default <code>80</code> v Docker kontejneru</p>
 <p>Port, na kterém služba běží.</p>
-<p>Examples:</p>
+<p>Příklady:</p>
 <ul>
 <li>Poskytovat na HTTP portu: <code>PORT=80</code></li>
 </ul>
@@ -1224,21 +1224,21 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <p>In following example, the title for all calendars that do not set their own title will be changed.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-<p>See also:</p>
+<p>Viz také:</p>
 <ul>
 <li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Trvalý odkaz">&para;</a></h3>
 <p>default <code>4</code>, pouze pro Docker kontejner</p>
 <p>Počet paralelních procesů pro zpracování požadavků.</p>
-<p>Examples:</p>
+<p>Příklady:</p>
 <ul>
 <li>Použít pouze jeden proces: <code>WORKERS=1</code></li>
 </ul>
 <h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Trvalý odkaz">&para;</a></h3>
 <p>default <code>600</code></p>
 <p>Kolik sekund jsou v cache kalendáře stažené soubory, pro snížení šířky pásma a zpoždění.</p>
-<p>Examples:</p>
+<p>Příklady:</p>
 <ul>
 <li>Rychle obnovit: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
 </ul>
@@ -1248,7 +1248,7 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Trvalý odkaz">&para;</a></h3>
 <p>default empty</p>
 <p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
-<p>Examples:</p>
+<p>Příklady:</p>
 <ul>
 <li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
 <li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
@@ -1257,15 +1257,15 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
 </code></pre></div>
-<p>See also:</p>
+<p>Viz také:</p>
 <ul>
 <li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
-<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Trvalý odkaz">&para;</a></h2>
+<h2 id="dalsi-konfigurace">Další konfigurace<a class="headerlink" href="#dalsi-konfigurace" title="Trvalý odkaz">&para;</a></h2>
 <p>Open Web Calendar využívá knihovny, jejichž chování lze hlouběji přizpůsobit.</p>
 <ul>
 <li><strong>Flask</strong> má **<a href="https://flask.palletsprojects.com/cs/3.0.x/config/">více proměnných prostředí</a> ** k dispozici pro konfiguraci, jak aplikace poskytuje obsah.</li>
-<li><strong>Requests</strong> se používá pro získání <code>.ics</code> souborů. Můžete <a href="#srf-protection-with-a-proxy-server">konfigurovat proxy</a>.</li>
+<li><strong>Requests</strong> se používá pro získání <code>.ics</code> souborů. Můžete <a href="#ssrf-protection-with-a-proxy-server">konfigurovat proxy</a>.</li>
 </ul>
 <p>The Open Web Calendar relies on proxy servers for these features:</p>
 <ul>
@@ -1280,7 +1280,7 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
 </code></pre></div>
-<p>See also:</p>
+<p>Viz také:</p>
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevence SSRF pomocí Tor proxy</a></li>
 </ul>
@@ -1332,7 +1332,7 @@ dns_v4_first<span class="w"> </span>on
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<p>Když se pokusíte přistupovat k zakázanému kalendáře s lokálním <code>open-web-calendar</code>, např., <code>http://172.16.0.1/calendar.ics</code>, uvidíte tuto chybovou zprávu:</p>
 <blockquote>
 <p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
 </blockquote>

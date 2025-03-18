@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_zr_0r47s/cs/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_4tmpbhh0/cs/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_zr_0r47s/cs/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_4tmpbhh0/cs/dev/api/index.png" >
       
     
     
@@ -979,9 +979,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#query-parameters" class="md-nav__link">
+  <a href="#parametry-pozadavku" class="md-nav__link">
     <span class="md-ellipsis">
-      Query parameters
+      Parametry požadavků
     </span>
   </a>
   
@@ -1108,7 +1108,7 @@
 <li><code>/calendar.ics</code> - přihlášení k odběru ics souboru</li>
 <li><code>/calendar.events.json</code> - FLEXIBINÍ - získá události jako JSON. Pozor! Toto LZE použít, nicméně neni zajištěno že schéma JSON zůstane stejné. V případě použití přidejte testy.</li>
 </ul>
-<p>Additional parameters are required for <code>/calendar.events.json</code>:</p>
+<p>Další parametry jsou požadovány pro <code>/calendar.events.json</code>:</p>
 <ul>
 <li><code>timezone=UTC</code> - časové pásme ve kterém je potřeba zobrazit události</li>
 <li><code>from=YYYY-MM-DD</code> - začátek období daných událostí (včetně)</li>
@@ -1138,16 +1138,16 @@
 </div>
 </div>
 <h2 id="kompilace-specifikace">Kompilace specifikace<a class="headerlink" href="#kompilace-specifikace" title="Trvalý odkaz">&para;</a></h2>
-<p>You can change the calendar behavior and looks with parameters. If the same parameter is specified in different places, the earlier place listed below has the highest precedence. These are the places to specify parameters:</p>
-<h3 id="query-parameters">Query parameters<a class="headerlink" href="#query-parameters" title="Trvalý odkaz">&para;</a></h3>
-<p>All parameters to the calendar url are put into the specification. The query parameters have the highest precedence.</p>
-<p>Examples:</p>
+<p>Pomocí parametrů můžete změnit chování a vzhled kalendáře. Pokud je stejný parametr specifikován v různých místech, předchozí místo uvedené níže má nejvyšší přednost. Zde jsou místa pro zadání parametrů:</p>
+<h3 id="parametry-pozadavku">Parametry požadavků<a class="headerlink" href="#parametry-pozadavku" title="Trvalý odkaz">&para;</a></h3>
+<p>Všechny parametry do URL kalendáře jsou ve specifikaci. Parametry požadavku mají nejvyšší přednost.</p>
+<p>Příklady:</p>
 <div class="highlight"><pre><span></span><code>index.html?language=de
 calendar.html?title=CALENDAR
 </code></pre></div>
 <h3 id="specification_url">specification_url<a class="headerlink" href="#specification_url" title="Trvalý odkaz">&para;</a></h3>
-<p>If you specify this query parameter, the editor configuration is loaded from this url, too. Query parameters are still more important than what is written in this file. The source format can be YAML or JSON.</p>
-<p>Examples:</p>
+<p>Pokud zadáte tento parametr dotazu, konfigurace editoru je načtena z této adresy URL. Parametry dotazu jsou stále důležitější než to, co je napsáno v tomto souboru. Zdrojový formát může být YAML nebo JSON.</p>
+<p>Příklady:</p>
 <div class="highlight"><pre><span></span><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/open_web_calendar/default_specification.yml
 </code></pre></div>
 <h3 id="open_web_calendarappdefault_specification">open_web_calendar.app.DEFAULT_SPECIFICATION<a class="headerlink" href="#open_web_calendarappdefault_specification" title="Trvalý odkaz">&para;</a></h3>
@@ -1169,7 +1169,7 @@ calendar.html?title=CALENDAR
 </ul>
 <h2 id="specifikace-v-kalendari">Specifikace v kalendáři<a class="headerlink" href="#specifikace-v-kalendari" title="Trvalý odkaz">&para;</a></h2>
 <p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compiles the specification from the given parameters in <code>get_specification()</code>. In the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> you can access the specification through the <code>specification</code> variable. The specification is available to JavaScript as the <code>specification</code> variable.</p>
-<p>See also:</p>
+<p>Viz také:</p>
 <ul>
 <li><a href="../javascript">JavaScript Customization</a></li>
 </ul>
