@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_4tmpbhh0/uk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_d1tlf7f2/uk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_4tmpbhh0/uk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_d1tlf7f2/uk/host/configure/index.png" >
       
     
     
@@ -1273,7 +1273,7 @@
 <li><strong>Обмеження доступу до календарів</strong> За замовчуванням відкритий веб-календар не обмежує, які календарі показувати. Використовуйте проксі-сервер для фільтрації календарів. Якщо ви запускаєте Open Web Calendar за брандмауером разом з іншими веб-службами, для захисту від атак SSRF необхідно налаштувати проксі-сервер.</li>
 </ul>
 <h2 id="ssrf-">Захист SSRF за допомогою проксі-сервера<a class="headerlink" href="#ssrf-" title="Постійне посилання">&para;</a></h2>
-<p>Відкритий веб-календар можна використовувати для доступу до локальної мережі за брандмауером, див. <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Випуск 250</a>. Цей безкоштовний доступ призначений для показу календарів звідусіль. Оскільки <code>запити</code> використовуються Open Web Calender, він може використовувати проксі, як описано в <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies">документації щодо <code>запитів</code></a>. Після цього проксі-сервер зможе виконати фільтрацію.</p>
+<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calendar, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
