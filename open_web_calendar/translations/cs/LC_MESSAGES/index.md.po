@@ -1,107 +1,111 @@
+# Tomáš Chlubna <xchlub00@vutbr.cz>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 07:31+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-03-18 09:53+0000\n"
+"Last-Translator: Tomáš Chlubna <xchlub00@vutbr.cz>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-index/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #
-
 msgid "Getting Started"
-msgstr ""
+msgstr "Začínáme"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
+msgstr "Prohlédněte si funkce nebo si sami vyzkoušejte Open Web Calendar!"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
 msgid "A highly flexible calendar display for your website."
-msgstr ""
+msgstr "Vysoce flexibilní zobrazení kalendáře pro Váš web."
 
 msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
+msgstr "Dejte kalendáři osobitý vzhled během několika minut!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
+msgstr "**[Vyzkoušejte nyní!](https://open-web-calendar.hosted.quelltext.eu)**"
 
 msgid "[See Examples](templates.md)"
-msgstr ""
+msgstr "[Viz příklady](templates.md)"
 
 msgid "Features"
-msgstr ""
+msgstr "Vlastnosti"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "Instantní synchronizace událostí"
 
 msgid "<center>✔</center>"
 msgstr ""
 
 msgid "Embed with an HTML snippet"
-msgstr ""
+msgstr "Vložení pomocí HTML kódu"
 
 msgid "Desktop and Mobile"
-msgstr ""
+msgstr "Počítač a mobil"
 
 msgid "Multi-Language Support"
-msgstr ""
+msgstr "Podpora více jazyků"
 
 msgid "Fixed and Automatic Timezone"
-msgstr ""
+msgstr "Pevné a automatické časové pásmo"
 
 msgid "Easy Editing"
-msgstr ""
+msgstr "Snadné úpravy"
 
 msgid "Designs To Choose"
-msgstr ""
+msgstr "Designy"
 
 msgid "Multiple Calendar Sources"
-msgstr ""
+msgstr "Více zdrojů kalendáře"
 
 msgid "Style per Calendar, Category and more"
-msgstr ""
+msgstr "Styl pro kalendář, kategorie a další"
 
 msgid "Custom CSS"
-msgstr ""
+msgstr "Vlastní CSS"
 
 msgid "Day, Week, Month, Agenda"
-msgstr ""
+msgstr "Den, týden, měsíc, rozvrh"
 
 msgid "Work Week"
-msgstr ""
+msgstr "Pracovní týden"
 
 msgid "Custom Date & Time Range"
-msgstr ""
+msgstr "Vlastní datum a časový rozsah"
 
 msgid "Custom Title & Icon"
-msgstr ""
+msgstr "Vlastní název a ikona"
 
 msgid "Click on Event Location"
-msgstr ""
+msgstr "Kliknutí na místo konání akce"
 
 msgid "Styled Event Descriptions"
-msgstr ""
+msgstr "Stylované popisy akcí"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr ""
+msgstr "FOSS - Žádné proprietární uzamčení"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self.md)"
 msgstr ""
+"[Hostováno](https://open-web-calendar.hosted.quelltext.eu) a "
+"[Vlastní-hosting](host/self.md)"
 
 msgid "Subscribe Link"
-msgstr ""
+msgstr "Odkaz pro odběr"
 
 msgid "Community and Paid Support"
-msgstr ""
+msgstr "Komunita a placená podpora"
 
 msgid "[Developer API](dev/api.md)"
-msgstr ""
+msgstr "[Vývojářské API](dev/api.md)"
