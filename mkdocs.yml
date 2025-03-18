@@ -133,6 +133,7 @@ plugins:
         - uk
         - ta
         - nl
+        - cs
 # add mdpo.languages above
       translate:
         - site_name
@@ -239,6 +240,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Nederlands
       link: nl
       lang: nl
+    - name: Čeština
+      link: cs
+      lang: cs
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/

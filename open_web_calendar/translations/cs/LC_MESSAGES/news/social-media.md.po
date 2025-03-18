@@ -1,0 +1,26 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Social Media News"
+msgstr ""
+
+msgid ""
+"We have several channels over which you can get to know the Open Web "
+"Calendar."
+msgstr ""
+
+msgid "Youtube"
+msgstr ""
+
+msgid "This is our playlist on youtube about the Open Web Calendar (English):"
+msgstr ""
+
+msgid "Mastodon"
+msgstr ""
+
+msgid ""
+"Latest updates about "
+"[#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar) on Mastodon are "
+"below:"
+msgstr ""
