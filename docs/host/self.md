@@ -53,7 +53,7 @@ The Open Web Calendar is available as an app for [YunoHost](https://yunohost.org
 
 ## Docker
 
-If you run your own server, you can choose to run the Open Web Calender with Docker.
+If you run your own server, you can choose to run the Open Web Calendar with Docker.
 Building, running and updating are [documented here](../docker).
 
 ## Python Package

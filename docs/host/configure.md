@@ -219,7 +219,7 @@ The Open Web Calendar relies on proxy servers for these features:
 The Open Web Calendar can be used to access the local network behind a firewall,
 see [Issue 250](https://github.com/niccokunzmann/open-web-calendar/issues/250).
 This free access is intended to show calendars from everywhere.
-Since `requests` is used by the Open Web Calender,
+Since `requests` is used by the Open Web Calendar,
 it can use a proxy as described in the
 [`requests` documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies).
 The proxy can then handle the filtering.
