@@ -131,3 +131,5 @@ participants-role: Rolle des Teilnehmers anzeigen? (z.B. Organisator, benötigte
 participants-description: Du kannst andere einladen und sie können teilnehmen. Du
   kannst hier bestimmen, ob Namen mit E-Mail-Adressen von Teilnehmern unter der Beschreibung
   angezeigt werden.
+caldav-allow-sign-up: 'Anmeldung mit E-Mail für diesen Kalender einschalten:'
+caldav-choose-calendar: 'Wähle einen Deiner Kalender:'
