@@ -36,7 +36,7 @@ idna==3.10
     # via
     #   requests
     #   trio
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
 jinja2==3.1.6
     # via reuse
