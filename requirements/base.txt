@@ -115,7 +115,7 @@ typing-extensions==4.12.2
     # via
     #   beautifulsoup4
     #   typer
-tzdata==2025.1
+tzdata==2025.2
     # via
     #   icalendar
     #   recurring-ical-events
