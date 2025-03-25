@@ -29,6 +29,8 @@ The latest version might not be released, yet.
 - Add recurrence ID to downloaded events to identify them across calendars, see [Issue 651](https://github.com/niccokunzmann/open-web-calendar/issues/651)
 - Remove categories from week and day view, see [Pull Request 704](https://github.com/niccokunzmann/open-web-calendar/pull/704)
 - Attempt Azure auto-deploy and add GitHub Actions for this.
+- Allow configuring the pop-up behavior, introducing the `plugin_event_details` and `plugin_event_tooltip` specification parameters, see [Issue 447](https://github.com/niccokunzmann/open-web-calendar/issues/447).
+
 
 ## v1.48
 
