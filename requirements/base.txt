@@ -85,7 +85,7 @@ python-dateutil==2.9.0.post0
     #   icalendar
     #   recurring-ical-events
     #   vobject
-pytz==2025.1
+pytz==2025.2
     # via vobject
 pyyaml==6.0.2
     # via -r requirements/base.in
