@@ -51,7 +51,9 @@ We have prepared a variety of different styles so you can edit them to your need
 For each style, you can edit the calendar and shape it as you need it.
 If you are inspired, you can also just head over and [start from scratch]({{link.web}}).
 
-> Are you proud of your calendar? Share it here!
+> Are you proud of your calendar? Share it in the [Showcase Section]!
+
+[Showcase Section]: ../showcase
 
 ## Multiple Calendars
 
