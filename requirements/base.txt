@@ -97,7 +97,7 @@ requests[socks]==2.32.3
     # via
     #   -r requirements/base.in
     #   caldav
-rich==13.9.4
+rich==14.0.0
     # via
     #   mergecal
     #   typer
