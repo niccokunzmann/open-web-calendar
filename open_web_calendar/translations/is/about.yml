@@ -1,1 +1,11 @@
-{}
+license: Notkunarleyfi
+project-title: Um Open Web Calendar verkefnið
+description: Hér eru frekari upplýsingar um dagatalið. Skoðaðu tenglana hér að neðan
+  um hvernig hægt er að nota þetta dagatal á mismunandi vegu.
+links-website: Fara til baka í að skoða dagatalið.
+links-ics: Notaðu þennan tengil til að gerast áskrifandi að dagatalinu eða til að
+  bæta atburðum á þitt eigið dagatal.
+links-spec: Skoða eða sækja skilgreiningar dagatalsins.
+links-edit: Breyta afriti af dagatalinu.
+timezone-choice: 'Þú getur valið að breyta tímabelti dagatalsins hér:'
+timezone-browser: 'Þetta er tímabeltið á tækinu þínu:'
