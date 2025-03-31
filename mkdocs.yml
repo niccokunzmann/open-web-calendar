@@ -244,6 +244,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Čeština
       link: cs
       lang: cs
+    - name: Íslenska
+      link: is
+      lang: is
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/
