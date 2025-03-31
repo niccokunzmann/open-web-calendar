@@ -1,0 +1,94 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Translate the Open Web Calender"
+msgstr ""
+
+msgid "Translate"
+msgstr ""
+
+msgid ""
+"You can help us by [translating the "
+"project](https://hosted.weblate.org/engage/open-web-calendar/) to your "
+"language. If your language is not listed, please request to add it!"
+msgstr ""
+
+msgid ""
+"[Translate on Weblate](https://hosted.weblate.org/engage/open-web-calendar/)"
+msgstr ""
+
+msgid "Here, you can see the current translation status:"
+msgstr ""
+
+msgid ""
+"[![Translation status](https://hosted.weblate.org/widgets/open-web-"
+"calendar/-/multi-auto.svg)](https://hosted.weblate.org/engage/open-web-"
+"calendar/)"
+msgstr ""
+
+msgid "Translator Guide"
+msgstr ""
+
+msgid ""
+"Translations are contributed by volunteers and [logged](../../changelog). "
+"After 48 hours they are usually life at the [hosted instance](https://open-"
+"web-calendar.hosted.quelltext.eu)."
+msgstr ""
+
+msgid "The most important file is probably the **calendar file**."
+msgstr ""
+
+msgid ""
+"The **About Page** and **Common Translations** is also very important as "
+"users see it when they click the `?` at the bottom right."
+msgstr ""
+
+msgid ""
+"If you would like to have the **Configuration Page** available for people in"
+" your language."
+msgstr ""
+
+msgid "You are very welcome to also translate the documentation:"
+msgstr ""
+
+msgid "The **Documentation - Getting Started** motivates usage."
+msgstr ""
+
+msgid "The **Documentation - Examples** showcase how to use the calendar."
+msgstr ""
+
+msgid ""
+"Generally, feel free to translate the title and translate the sense of the "
+"content more than the literal words. I am not a native speaker, so my "
+"English is a bit clunky and your translation could be better!"
+msgstr ""
+
+msgid "**Note:**"
+msgstr ""
+
+msgid ""
+"If you add a **new language**, you should also translate the calendar to it,"
+" especially the `language` and `language-en` strings so people can choose "
+"the language for the calendar from the drop down menu."
+msgstr ""
+
+msgid ""
+"If you want your language to be featured at the top of the front page so "
+"people can click on it, you need at least 50% of the About Page and "
+"Configuration Page page."
+msgstr ""
+
+msgid ""
+"Have **fun** translating and thank you so much! If you have any questions, "
+"get in contact with me, @niccokunzmann."
+msgstr ""
+
+msgid "Feel free to add a section for your language below:"
+msgstr ""
+
+msgid "German (de)"
+msgstr ""
+
+msgid "We use \"Du\" and \"Dein\", not \"Sie\" or \"Ihr\"."
+msgstr ""

@@ -134,6 +134,7 @@ plugins:
         - ta
         - nl
         - cs
+        - is
 # add mdpo.languages above
       translate:
         - site_name

@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.15.1\n"
 
-#
 msgid "You can improve the project yourself. Get started here."
 msgstr ""
 
