@@ -15,7 +15,7 @@ When a screen is vertical however, they will be all trucated.
 Using **CSS** and **JavaScript** modifications, the Open Web Calendar can be modified to display all events on a vertical screen.
 They can be made higher.
 
-![]({{img}}/showcase/events-high-screen.png)
+![]({{link.img}}/showcase/events-large-screen.png)
 
 [@dml105]: https://github.com/dml105
 [Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625
