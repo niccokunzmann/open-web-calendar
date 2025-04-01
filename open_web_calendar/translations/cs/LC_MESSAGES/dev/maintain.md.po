@@ -1,0 +1,238 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Code and guide to maintain the Open Web Calendar project."
+msgstr ""
+
+msgid "Notes for Maintainers"
+msgstr ""
+
+msgid "This section clarifies how to maintain the project."
+msgstr ""
+
+msgid "Update Dependencies"
+msgstr ""
+
+msgid "To update the dependencies, run this command:"
+msgstr ""
+
+msgid "Update DHTMLX Scheduler"
+msgstr ""
+
+msgid ""
+"DHTMLX Scheduler can be updated from its [GitHub "
+"repository](https://github.com/DHTMLX/scheduler). There is a script which "
+"updates the scheduler. Still their changelog needs to be considered."
+msgstr ""
+
+msgid "If you update the scheduler, also add this to the changelog."
+msgstr ""
+
+msgid "Release a new Version"
+msgstr ""
+
+msgid "To release a new version:"
+msgstr ""
+
+msgid ""
+"Edit the `docs/changelog.md` file in the Changelog Section and add the "
+"changes."
+msgstr ""
+
+msgid "Create a tag for the version."
+msgstr ""
+
+msgid "Package"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar is a package on PyPI. You can build the package "
+"locally."
+msgstr ""
+
+msgid ""
+"New versions are automatically uploaded. This process follows [the official "
+"tutorial](https://packaging.python.org/en/latest/tutorials/packaging-"
+"projects/)."
+msgstr ""
+
+msgid "Translate Documentation Files"
+msgstr ""
+
+msgid ""
+"We might add more Markdown documentation files to the [Weblate "
+"translation](https://hosted.weblate.org/engage/open-web-calendar/). The aim "
+"of this section is to have a consistent outcome."
+msgstr ""
+
+msgid "Create a component **From existing component**, the `index.html`."
+msgstr ""
+
+msgid ""
+"Use the page title as **title** like `Documentation - 00 - Getting Started`"
+msgstr ""
+
+msgid "Use file name as **slug** like `documentation-index`"
+msgstr ""
+
+msgid "Choose the right File settings:"
+msgstr ""
+
+msgid "File format: `gettext PO file` - **bi**lingual"
+msgstr ""
+
+msgid ""
+"Repository browser: `https://github.com/niccokunzmann/open-web-"
+"calendar/blob/{{ branch }}/docs/<file>?plain=1#L{{ line }}` - replace "
+"`<file>`"
+msgstr ""
+
+msgid ""
+"File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`"
+msgstr ""
+
+msgid "Monolingual base language file: empty"
+msgstr ""
+
+msgid "Edit base file: **not** checked"
+msgstr ""
+
+msgid "Intermediate language file: empty"
+msgstr ""
+
+msgid "Adding new translation: `Create new language file`"
+msgstr ""
+
+msgid ""
+"Template for new translations: `translations/en/LC_MESSAGES/<file>.md.po` - "
+"replace `<file>`"
+msgstr ""
+
+msgid ""
+"Translation license: `Create Commons Attribution Share Alike 4.0 "
+"International`"
+msgstr ""
+
+msgid "Language code style: `Default based on the file format`"
+msgstr ""
+
+msgid "Language filter:"
+msgstr ""
+
+msgid "excludes `en`"
+msgstr ""
+
+msgid "Source language: `English`"
+msgstr ""
+
+msgid "Manage strings: **not** checked"
+msgstr ""
+
+msgid "**Save**"
+msgstr ""
+
+msgid "In the **Settings** 🠚 **Translation**:"
+msgstr ""
+
+msgid "**Un**check **Suggestion voting**"
+msgstr ""
+
+msgid "Set **Automatically accept suggestions** to `0`"
+msgstr ""
+
+msgid "Check **Allow translation propagation**"
+msgstr ""
+
+msgid "**Un**check **Manage strings**"
+msgstr ""
+
+msgid "Add **Translation flags**:"
+msgstr ""
+
+msgid "choose **Enforced checks**:"
+msgstr ""
+
+msgid "Markdown links"
+msgstr ""
+
+msgid "Markdown references"
+msgstr ""
+
+msgid "Markdown syntax"
+msgstr ""
+
+msgid "Unsafe HTML"
+msgstr ""
+
+msgid "XML markup"
+msgstr ""
+
+msgid "XML syntax"
+msgstr ""
+
+msgid "Upload a **screenshot** of the page"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:"
+msgstr ""
+
+msgid "Click on the empty **Search** button"
+msgstr ""
+
+msgid "Add all strings to it"
+msgstr ""
+
+msgid "Go to the **Manage** 🠚 **Add-ons** and add:"
+msgstr ""
+
+msgid "Add missing languages (enabled in project, will activate after 24h)"
+msgstr ""
+
+msgid "Cleanup translation files (enabled in project)"
+msgstr ""
+
+msgid "Contributors in comment (enabled in project)"
+msgstr ""
+
+msgid "These component Add-Ons are installed project-wide."
+msgstr ""
+
+msgid "Clear any component alerts."
+msgstr ""
+
+msgid ""
+"Skip through all the strings. If some strings are not for translation, add "
+"the flag `read-only`."
+msgstr ""
+
+msgid "Translators"
+msgstr ""
+
+msgid "It is nice to know who translated and how often."
+msgstr ""
+
+msgid ""
+"Edit the `docs/changelog.md` file in the Changelog Section and add the "
+"changes.    ```sh    git checkout master git pull git add docs/changelog.md "
+"git commit -m\"log changes\" git push    ```"
+msgstr ""
+
+msgid ""
+"Create a tag for the version.    ```sh    git tag v1.30 git push origin "
+"v1.30    ```"
+msgstr ""
+
+msgid "Language filter:       wzxhzdk:3"
+msgstr ""
+
+msgid ""
+"excludes `en`    - Source language: `English`    - Manage strings: **not** "
+"checked"
+msgstr ""
+
+msgid "Add **Translation flags**:       wzxhzdk:4"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:       wzxhzdk:5"
+msgstr ""

@@ -1,0 +1,166 @@
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+responses:
+- response:
+    auto_calculate_content_length: false
+    body: This is the WebDAV interface. It can only be accessed by WebDAV clients
+      such as the Nextcloud desktop sync client.
+    content_type: text/plain
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=J35jHISVbc9UcUTQ3drRXKmsHMU%2BReLxc%2B7uALRvV5K0iQB%2F5KFgCqXqcNA4HjowDF2xu1PHNjLmUXOtN0qzMyj0gGgokelML04FljV3ftB1SgxZMxuZgBklnXSDkTNP;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=vbci9rcah2u16g1hju6q9fotb7;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Vary: Accept-Encoding
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: YgH4X4WscZw9c3rGzVFA
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: YgH4X4WscZw9c3rGzVFA
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: GET
+    status: 200
+    url: https://test:oGbWK-tdbSB-bsRoC-jTjAB-3k6Bi@quelltext.ocloud.de/remote.php/dav/calendars/test/public/
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<d:error xmlns:d=\"DAV:\" xmlns:s=\"\
+      http://sabredav.org/ns\">\n  <s:exception>Sabre\\DAV\\Exception\\NotAuthenticated</s:exception>\n\
+      \  <s:message>No public access to this resource., No 'Authorization: Basic'\
+      \ header found. Either the client didn't send one, or the server is misconfigured,\
+      \ No 'Authorization: Bearer' header found. Either the client didn't send one,\
+      \ or the server is mis-configured, No 'Authorization: Basic' header found. Either\
+      \ the client didn't send one, or the server is misconfigured</s:message>\n</d:error>\n"
+    content_type: text/plain
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=GANpHqg8x6WYVbJGVRbsBW4xtFf8lyFb7PBbi1vLlh2PX19hALkCiEUp8P0qI%2FObjFVMy9VKbDaQ1sYgbkdQXE8NpufKY6VPfAPFAGY4MjzyDmWuXGeT%2FIB5CmgupIFC;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=2uvtqbnabgvj25a8ef9dq1t1st;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      WWW-Authenticate: Basic realm="Nextcloud", charset="UTF-8"
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 401
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\"?>\n<d:multistatus xmlns:d=\"DAV:\" xmlns:s=\"http://sabredav.org/ns\"\
+      \ xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\"\
+      \ xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:response><d:href>/remote.php/dav/calendars/test/public/636A44FD-C5E6-4E8F-8F36-2C853A210E10.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;\n\
+      VERSION:2.0&#13;\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;\nCALSCALE:GREGORIAN&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250303&#13;\n\
+      DTEND;VALUE=DATE:20250304&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250303&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250310&#13;\n\
+      DTEND;VALUE=DATE:20250311&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250310&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250317&#13;\n\
+      DTEND;VALUE=DATE:20250318&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250317&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250324&#13;\n\
+      DTEND;VALUE=DATE:20250325&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250324&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250331&#13;\n\
+      DTEND;VALUE=DATE:20250401&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250331&#13;\nEND:VEVENT&#13;\n\
+      END:VCALENDAR&#13;\n</cal:calendar-data></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/public/B55CA4DB-8FA0-4D0A-9095-0EC7EF6DDE84.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;\n\
+      VERSION:2.0&#13;\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;\nCALSCALE:GREGORIAN&#13;\n\
+      BEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250304T090000Z&#13;\nDTEND:20250304T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250304T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250305T090000Z&#13;\nDTEND:20250305T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250305T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250311T090000Z&#13;\nDTEND:20250311T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250311T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250312T090000Z&#13;\nDTEND:20250312T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250312T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250318T090000Z&#13;\nDTEND:20250318T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250318T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250319T090000Z&#13;\nDTEND:20250319T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250319T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250325T090000Z&#13;\nDTEND:20250325T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250325T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250326T090000Z&#13;\nDTEND:20250326T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250326T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250401T080000Z&#13;\nDTEND:20250401T090000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250401T080000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250402T080000Z&#13;\nDTEND:20250402T090000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250402T080000Z&#13;\n\
+      END:VEVENT&#13;\nEND:VCALENDAR&#13;\n</cal:calendar-data></d:prop><d:status>HTTP/1.1\
+      \ 200 OK</d:status></d:propstat></d:response></d:multistatus>\n"
+    content_type: application/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=9
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: ocomm1do933a=9tap1jtk3prbabqerbhe8qj2gs; path=/; secure; HttpOnly;
+        SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: 2nZXIacxhljneWhXmq1I
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: 2nZXIacxhljneWhXmq1I
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/

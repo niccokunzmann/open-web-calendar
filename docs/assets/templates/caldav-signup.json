@@ -1,0 +1,16 @@
+{
+    "css": ".STATUS-TENTATIVE {--dhx-scheduler-event-background: #aaa;}",
+    "show_attendees": true,
+    "show_organizers": true,
+    "show_participant_role": true,
+    "show_participant_status": true,
+    "skin": "flat",
+    "style-event-status-confirmed": true,
+    "style-event-status-tentative": true,
+    "tabs": [
+      "month",
+      "week"
+    ],
+    "title": "CalDAV sign up template",
+    "url": "fernet://gAAAAABn1uYHjkiJcey7cas_TRHyXBr0xDEP-R_IsM0jLw0PkMeGHlIgb-rZVHL7_RawixUpafG3JYgeIWpxM3GxvEgSITcXSGwTPZozB61mjwsKNYqdab-gWshwnDJp1iMFDjv8wPyCsWZwB5xpxBaotQ8WZvoZRyi0QUDt8le7G-2sBqvMt59WIL_HFbnIvR3QeZHjyBLWgxj0X0kgiiQ2pHnwIujDraJ2taX2_6VVGu8eXsOCo57XkkGUydR0rqJRVhj4Uow53lu2pfmGhIzOeU9jpqwYWYgWT_Y1ZeuCs6gvXfVBSrVzB3T_3ooZJAQzQIzLxDyV07NHh_d9xzxqoIrET05ApRLc6_cG_zAC-W0SA8Rex1JCyLJOBaD-aohWngeiaNrmMlWHnEdcVje_jNehgy7aDL8yfmR04vfwll_C878rgSU="
+}

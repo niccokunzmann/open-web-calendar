@@ -14,7 +14,7 @@ SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
 [[annotations]]
-path = "open_web_calendar/features/calendars/**.ics"
+path = ["open_web_calendar/features/calendars/**.ics", "open_web_calendar/features/downloads/**.ics"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>"
 SPDX-License-Identifier = "CC-BY-SA-4.0"

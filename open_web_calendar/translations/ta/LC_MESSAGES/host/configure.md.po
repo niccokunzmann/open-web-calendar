@@ -114,13 +114,6 @@ msgstr "வேகமாக புதுப்பிக்கவும்: `cache
 msgid "APP_DEBUG"
 msgstr ""
 
-msgid ""
-"default `true`, values `true` or `false`, always `false` in the Docker "
-"container"
-msgstr ""
-"இயல்புநிலை `உண்மை`, மதிப்புகள்` உண்மை` அல்லது `பொய்`, எப்போதும் கப்பல்துறை "
-"கொள்கலனில்` தவறு`"
-
 msgid "Set the debug flag for the app."
 msgstr "பயன்பாட்டிற்கான பிழைத்திருத்த கொடியை அமைக்கவும்."
 
@@ -142,24 +135,6 @@ msgstr ""
 
 msgid "SSRF Protection with a Proxy Server"
 msgstr "பதிலாள் சேவையகத்துடன் எச்.எச்.ஆர்.எஃப் பாதுகாப்பு"
-
-msgid ""
-"The Open Web Calendar can be used to access the local network behind a "
-"firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-"
-"calendar/issues/250). This free access is intended to show calendars from "
-"everywhere. Since `requests` is used by the Open Web Calender, it can use a "
-"proxy as described in the [`requests` "
-"documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
-" The proxy can then handle the filtering."
-msgstr ""
-"ஃபயர்வாலுக்கு பின்னால் உள்ளக நெட்வொர்க்கை அணுக திறந்த வலை காலெண்டரைப் "
-"பயன்படுத்தலாம், [வெளியீடு 250](https://github.com/niccokunzmann/open-web-"
-"calendar/issues/250) ஐப் பார்க்கவும். இந்த இலவச அணுகல் எல்லா "
-"இடங்களிலிருந்தும் காலெண்டர்களைக் காண்பிக்கும் நோக்கம் கொண்டது. `கோரிக்கைகள்`"
-" திறந்த வலை காலெண்டரால் பயன்படுத்தப்படுவதால், [` கோரிக்கைகள்` "
-"ஆவணங்கள்](https://requests.readthedocs.io/en/latest/user/advanced/#proxies) "
-"இல் விவரிக்கப்பட்டுள்ளபடி இது ஒரு ப்ராக்சியைப் பயன்படுத்தலாம். பதிலாள் "
-"பின்னர் வடிகட்டலைக் கையாள முடியும்."
 
 msgid ""
 "[Prevent SSRF using a Tor proxy](../docker#preventing-ssrf-attacks-using-a-"
@@ -354,6 +329,160 @@ msgstr ""
 #, fuzzy
 msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
 msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+
+msgid "The Open Web Calendar relies on proxy servers for these features:"
+msgstr ""
+
+msgid ""
+"**Access Control and Users** To restrict who can use the Open Web Calendar, "
+"you can use `nginx` or `apache` as a reverse proxy in front of it. YuNoHost "
+"is another self-hosting option to restrict access."
+msgstr ""
+
+msgid "**HTTPS Encryption** This can be done by `nginx`, `apache` or `caddy`."
+msgstr ""
+
+msgid ""
+"**More Advanced Caching** Basic caching is handeled by the Open Web "
+"Calendar. For more advanced cache configuration, use a proxy server like "
+"`squid`. Have a look in the documentation below on how to make the Open Web "
+"Calendar access the web only through a proxy."
+msgstr ""
+
+msgid ""
+"**Restricting Access to Calendars** By default, the Open Web Calendar does "
+"not restrict which calendars to show. Use the proxy server to filter the "
+"calendars. If you run the Open Web Calendar behind a firewall with other web"
+" services, setting up a proxy is necessary to protect from SSRF attacks."
+msgstr ""
+
+msgid "Squid as a Proxy Server"
+msgstr ""
+
+msgid ""
+"The [Squid] Proxy and Cache is flexible and configurable. You can use it in "
+"front of the Open Web Calendar to configure access and customize caching."
+msgstr ""
+
+msgid ""
+"After you have installed the [Squid] Proxy, add this file into the `conf.d` "
+"directory. Squid will load it automatically then."
+msgstr ""
+
+msgid "In Linux, create `/etc/squid/conf.d/open-web-calendar.conf`:"
+msgstr ""
+
+msgid ""
+"The list above denies the Open Web Calendar access to all known "
+"local/internal networks. If you have your own local network (IPv4 or IPv6), "
+"add it to the list above to be sure."
+msgstr ""
+
+msgid "On Linux, you can install the file with this command:"
+msgstr ""
+
+msgid "Then, restart the squid proxy."
+msgstr ""
+
+msgid ""
+"Set the environment variables to tell the Open Web Calendar to use the Squid"
+" proxy installed on `localhost`. Setting this variable changes depending on "
+"how you run the Open Web Calendar."
+msgstr ""
+
+msgid ""
+"If you use the [Python Setup][1], you can set the environment variables for "
+"the server like this:"
+msgstr ""
+
+#, fuzzy
+msgid "[1]: ../pypi"
+msgstr "[1]: ../pypi"
+
+msgid "Operating System"
+msgstr ""
+
+msgid ""
+"Squid is avaiable for all major platforms. For the commands and paths of "
+"this tutorial, we assume you run Squid on Debain/Ubuntu. The commands might "
+"work on other systems, but that is not tested."
+msgstr ""
+
+msgid "OWC_ENCRYPTION_KEYS"
+msgstr ""
+
+msgid ""
+"This is a comma separated list of encryption keys. These can be used to hide"
+" sensitive information of URLs."
+msgstr ""
+
+msgid "Disable encryption (default): `OWC_ENCRYPTION_KEYS=`"
+msgstr ""
+
+msgid "Use one key: `OWC_ENCRYPTION_KEYS='Pj...48='`"
+msgstr ""
+
+msgid ""
+"Use multiple keys: `OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='` If you use "
+"multiple keys, only the first one encrypts the data. The others are only "
+"used to decrypt the data."
+msgstr ""
+
+msgid ""
+"You can generate a new key by visiting your instance of the Open Web "
+"Calendar on the page [/new-key] or by running this command:"
+msgstr ""
+
+msgid "[Fernet]"
+msgstr ""
+
+#, fuzzy
+msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
+msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
+
+#, fuzzy
+msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+msgid ""
+"default `false`, values `true` or `false`, always `false` in the Docker "
+"container"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar can be used to access the local network behind a "
+"firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/250). This free access is intended to show calendars from "
+"everywhere. Since `requests` is used by the Open Web Calendar, it can use a "
+"proxy as described in the [`requests` "
+"documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
+" The proxy can then handle the filtering."
+msgstr ""
+
+#~ msgid ""
+#~ "The Open Web Calendar can be used to access the local network behind a "
+#~ "firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/issues/250). This free access is intended to show calendars from "
+#~ "everywhere. Since `requests` is used by the Open Web Calender, it can use a "
+#~ "proxy as described in the [`requests` "
+#~ "documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
+#~ " The proxy can then handle the filtering."
+#~ msgstr ""
+#~ "ஃபயர்வாலுக்கு பின்னால் உள்ளக நெட்வொர்க்கை அணுக திறந்த வலை காலெண்டரைப் "
+#~ "பயன்படுத்தலாம், [வெளியீடு 250](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/issues/250) ஐப் பார்க்கவும். இந்த இலவச அணுகல் எல்லா "
+#~ "இடங்களிலிருந்தும் காலெண்டர்களைக் காண்பிக்கும் நோக்கம் கொண்டது. `கோரிக்கைகள்`"
+#~ " திறந்த வலை காலெண்டரால் பயன்படுத்தப்படுவதால், [` கோரிக்கைகள்` "
+#~ "ஆவணங்கள்](https://requests.readthedocs.io/en/latest/user/advanced/#proxies) "
+#~ "இல் விவரிக்கப்பட்டுள்ளபடி இது ஒரு ப்ராக்சியைப் பயன்படுத்தலாம். பதிலாள் "
+#~ "பின்னர் வடிகட்டலைக் கையாள முடியும்."
+
+#~ msgid ""
+#~ "default `true`, values `true` or `false`, always `false` in the Docker "
+#~ "container"
+#~ msgstr ""
+#~ "இயல்புநிலை `உண்மை`, மதிப்புகள்` உண்மை` அல்லது `பொய்`, எப்போதும் கப்பல்துறை "
+#~ "கொள்கலனில்` தவறு`"
 
 #, fuzzy
 #~ msgid ""

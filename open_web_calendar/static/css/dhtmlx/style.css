@@ -41,6 +41,9 @@
 #errorWindow {
     background-color: rgba(255, 208, 208, 0.9);
     z-index: 50;
+    overflow-y: auto;
+    height: 100%;
+    position: absolute;
 }
 
 .fullsize {
@@ -93,7 +96,18 @@
 
 .dhx_cal_qi_controls {
   /* hide the delete and details button */
-  display: none
+  /*display: none*/
+  flex-direction: column;
+  align-items: start;
+  padding-top: 0em;
+  gap: 0em;
+}
+
+.dhx_qi_big_icon {
+    /* justify-content: start; */
+    white-space: nowrap;
+    margin-left: -10px !important;
+    padding: 0em;
 }
 
 div.dhx_agenda_line > span {
@@ -124,5 +138,169 @@ div.dhx_agenda_line > span {
 /* Scheduler added a resize bar at the bottom. We do not allow edits so we remove it. */
 
 .dhx_event_resize.dhx_footer {
+    display: none;
+}
+
+.dhx_menu_icon {
+    /* see https://www.w3schools.com/cssref/css3_pr_background-size.php */
+    /* background-image: url('/img/icons/event-subscribe.svg');  
+    background-repeat: no-repeat;
+    background-size: 100%; */
+    /* see https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images */
+    /*mask: url('/img/icons/subscribe.svg');*/
+    /* see https://css-tricks.com/change-color-of-svg-on-hover/ */
+    background-color: var(--dhx-scheduler-base-colors-icons);
+}
+
+:root[data-scheduler-theme="material"] .dhx_cal_scale_placeholder {
+    /* Remove the box shadow because it does not always work
+       See https://github.com/niccokunzmann/open-web-calendar/issues/449
+       We might be able to remove this once this is fixed:
+       https://github.com/DHTMLX/scheduler/issues/75
+    */
+    box-shadow: none;
+}
+
+
+.participants {
+    overflow-y: auto;
+    --dhx-scheduler-base-colors-icons: var(--dhx-scheduler-base-colors-primary);
+}
+/* Styling of all participants */
+/* .PARTICIPANT {} */
+
+.participants .icon {
+    mask: url('/img/icons/type/unknown.svg');
+}
+
+/* RFC CUTYPE */
+.PARTICIPANT-INDIVIDUAL .icon.type {
+    mask: url('/img/icons/type/individual.svg');
+}
+.PARTICIPANT-GROUP .icon.type {
+    mask: url('/img/icons/type/group.svg');
+}
+.PARTICIPANT-RESOURCE .icon.type {
+    mask: url('/img/icons/type/resource.svg');
+}
+.PARTICIPANT-ROOM .icon.type {
+    mask: url('/img/icons/type/room.svg');
+}
+.PARTICIPANT-UNKNOWN .icon.type {
+    mask: url('/img/icons/type/unknown.svg');
+}
+
+/* RFC 5545 ROLE */
+.PARTICIPANT-CHAIR .icon.role {
+    mask: url('/img/icons/role/chair.svg');
+}
+.PARTICIPANT-REQ-PARTICIPANT .icon.role {
+    mask: url('/img/icons/role/req-participant.svg');
+}
+.PARTICIPANT-OPT-PARTICIPANT .icon.role {
+    mask: url('/img/icons/role/opt-participant.svg');
+}
+.PARTICIPANT-NON-PARTICIPANT .icon.role {
+    mask: url('/img/icons/role/non-participant.svg');
+}
+/* special organizer role */
+.PARTICIPANT-ORGANIZER .icon.role {
+    mask: url('/img/icons/role/organizer.svg');
+}
+
+/* RFC 5545 STATUS */
+.PARTICIPANT-ACCEPTED .icon.status {
+    mask: url('/img/icons/status/accepted.svg');
+}
+.PARTICIPANT-DECLINED .icon.status {
+    mask: url('/img/icons/status/declined.svg');
+}
+.PARTICIPANT-DELEGATED .icon.status {
+    mask: url('/img/icons/status/delegated.svg');
+}
+.PARTICIPANT-NEEDS-ACTION .icon.status {
+    mask: url('/img/icons/status/needs-action.svg');
+}
+/* special organizer role */
+.PARTICIPANT-TENTATIVE .icon.status {
+    mask: url('/img/icons/status/tentative.svg');
+}
+
+
+/* icons */
+.participants .icon {
+    display: inline-block;
+    mask-size: 100% !important;
+    user-select: none;
+    background-color: var(--dhx-scheduler-base-colors-icons);
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+}
+
+.participants li a {
+    width: 100%;
+    color: var(--dhx-scheduler-base-colors-icons);
+    text-decoration: none;
+    
+}
+
+.participants li::marker {
+    content: "";
+}
+
+.participants li {
+    white-space: nowrap;
+}
+
+.participants ol {
+    padding-left: 0em;
+}
+
+#email-signup {
+    position: absolute;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255,255,255,0.7);
+}
+
+#email-signup.hidden {
+    display: none;
+}
+
+.sign-up-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 1em;
+    background: var(--dhx-scheduler-base-colors-background);
+    border-radius: var(--dhx-scheduler-border-radius);
+    border-color: var(--dhx-scheduler-base-colors-border);
+    border-style: solid;
+}
+
+.sign-up-content .item {
+    max-width: 30em;
+    padding: 0.1em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cannot-sign-up .icon_signup {
+    display: none;
+}
+
+.dhx_title .categories {
+    /* deactivate the tags in the week view */
     display: none;
 }

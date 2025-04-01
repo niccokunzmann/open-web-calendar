@@ -5,10 +5,10 @@ from __future__ import annotations
 
 import datetime
 from html import escape
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Any, Optional
+from urllib.parse import unquote
 
-import pytz
-import recurring_ical_events
+import zoneinfo
 from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
@@ -17,7 +17,9 @@ from .clean_html import clean_html
 from .conversion_base import ConversionStrategy
 
 if TYPE_CHECKING:
-    from icalendar import Event
+    from icalendar import Event, vCalAddress
+
+    from open_web_calendar.calendars.base import Calendars
 
 
 def is_date(date):
@@ -35,21 +37,23 @@ class ConvertToDhtmlx(ConversionStrategy):
     def created(self):
         """Set attribtues when created."""
         try:
-            self.timezone = pytz.timezone(self.specification["timezone"])
-        except pytz.UnknownTimeZoneError:
-            self.timezone = pytz.FixedOffset(-int(self.specification["timeshift"]))
+            self.timezone = zoneinfo.ZoneInfo(self.specification["timezone"])
+        except (zoneinfo.ZoneInfoNotFoundError, ValueError):
+            # same as pytz.FixedOffset(-int(self.specification["timeshift"]))
+            td = datetime.timedelta(minutes=-int(self.specification["timeshift"]))
+            self.timezone = datetime.timezone(td)
         self.today = today = (
-            parse_date(self.specification["date"])
+            parse_date(self.specification["date"]).replace(tzinfo=self.timezone)
             if self.specification.get("date")
             else datetime.datetime.now(self.timezone)
         )
         self.to_date = (
-            parse_date(self.specification["to"])
+            parse_date(self.specification["to"]).replace(tzinfo=self.timezone)
             if self.specification.get("to")
             else today.replace(year=today.year + 1)
         )
         self.from_date = (
-            parse_date(self.specification["from"])
+            parse_date(self.specification["from"]).replace(tzinfo=self.timezone)
             if self.specification.get("from")
             else today.replace(year=today.year - 1)
         )
@@ -65,7 +69,7 @@ class ConvertToDhtmlx(ConversionStrategy):
                 date.year, date.month, date.day, tzinfo=self.timezone
             )
         elif date.tzinfo is None:
-            date = self.timezone.localize(date)
+            date = date.replace(tzinfo=self.timezone)
         # convert to other timezone, see https://stackoverflow.com/a/54376154
         viewed_date = date.astimezone(self.timezone)
         return viewed_date.strftime("%Y-%m-%d %H:%M")
@@ -77,11 +81,54 @@ class ConvertToDhtmlx(ConversionStrategy):
             text_url=self.specification.get("event_url_location", ""),
         )
 
+    @classmethod
+    def get_participants(cls, event: Event) -> dict[str, Any]:
+        """Return the participants of the event."""
+        participants = []
+        organizer = event.get("ORGANIZER")
+        if organizer is not None:
+            participants.append(
+                cls.create_participant_from(
+                    organizer, role="ORGANIZER", is_oragnizer=True
+                )
+            )
+        attendees = event.get("ATTENDEE", [])
+        if not isinstance(attendees, list):
+            attendees = [attendees]
+        for attendee in attendees:
+            participants.append(cls.create_participant_from(attendee))
+        return participants
+
+    @classmethod
+    def create_participant_from(
+        cls,
+        address: vCalAddress,
+        role: str = "REQ-PARTICIPANT",
+        is_oragnizer: bool = False,  # noqa: FBT001
+    ) -> dict[str, Any]:
+        """Create a participant with default values."""
+        participant = {}
+        participant["type"] = pt = address.params.get("CUTYPE", "INDIVIDUAL")
+        participant["email"] = email = unquote(
+            address[7:] if address.lower().startswith("mailto:") else str(address)
+        )
+        participant["name"] = address.params.get("CN", email)
+        participant["status"] = status = address.params.get("PARTSTAT", "NEEDS-ACTION")
+        participant["role"] = pr = address.params.get("ROLE", role)
+        participant["css"] = [
+            "PARTICIPANT",
+            f"PARTICIPANT-{pt}",
+            f"PARTICIPANT-{pr}",
+            f"PARTICIPANT-{status}",
+        ]
+        participant["is_oragnizer"] = is_oragnizer
+        return participant
+
     def convert_ical_event(self, calendar_index, calendar_event: Event):
-        start = calendar_event["DTSTART"].dt
-        end = calendar_event.get("DTEND", calendar_event["DTSTART"]).dt
-        if is_date(start) and is_date(end) and end == start:
-            end = datetime.timedelta(days=1) + start
+        start = calendar_event.start
+        end = calendar_event.end
+        if is_date(start) and is_date(end) and start == end:
+            end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
         name = calendar_event.get("SUMMARY", "")
         sequence = str(calendar_event.get("SEQUENCE", 0))
@@ -119,9 +166,16 @@ class ConvertToDhtmlx(ConversionStrategy):
             "css-classes": ["event"]
             + self.get_event_classes(calendar_event)
             + [f"CALENDAR-INDEX-{calendar_index}"],
+            "participants": self.get_participants(calendar_event),
+            "owc": {
+                attr: value
+                for attr, value in calendar_event.items()
+                if attr.lower().startswith("x-owc")
+            },
+            "calendar-index": calendar_index,
         }
 
-    def convert_error(self, error, url, tb_s):
+    def convert_error(self, error: str, url: str, tb_s: str):
         """Create an error which can be used by the dhtmlx scheduler."""
         # always add the error within the requested time range
         now = self.from_date
@@ -134,12 +188,13 @@ class ConvertToDhtmlx(ConversionStrategy):
             "end_date_iso": now_iso,
             "start_date_iso_0": now_iso,
             "end_date_iso_0": now_iso,
-            "text": type(error).__name__,
-            "description": self.clean_html(escape(str(error))),
+            "text": escape(error.split(":")[0]),
+            "description": self.clean_html(escape(error)),
             "traceback": self.clean_html(escape(tb_s)),
             "location": None,
             "geo": None,
             "uid": "error",
+            "categories": [],
             "ical": "",
             "sequence": 0,
             "recurrence": None,
@@ -164,16 +219,13 @@ class ConvertToDhtmlx(ConversionStrategy):
     def merge(self):
         return jsonify(self.components)
 
-    def collect_components_from(self, calendar_index, calendars):
+    def collect_components_from(self, calendar_index: int, calendars: Calendars):
         # see https://stackoverflow.com/a/16115575/1320237
-        for calendar in calendars:
-            events = recurring_ical_events.of(calendar).between(
-                self.from_date, self.to_date
-            )
-            with self.lock:
-                for event in events:
-                    json_event = self.convert_ical_event(calendar_index, event)
-                    self.components.append(json_event)
+        events = calendars.get_events_between(self.from_date, self.to_date)
+        with self.lock:
+            for event in events:
+                json_event = self.convert_ical_event(calendar_index, event)
+                self.components.append(json_event)
 
     def get_event_classes(self, event) -> list[str]:
         """Return the CSS classes that should be used for the event styles."""

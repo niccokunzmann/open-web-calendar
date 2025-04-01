@@ -16,6 +16,71 @@ The latest version might not be released, yet.
 <!-- Contributors, if you like to be linked, please put your name down here with a link. -->
 [தமிழ்நேரம்]: https://tamilneram.github.io/
 
+## v1.49
+
+- Allow CalDAV sign-up, see [Issue 679](https://github.com/niccokunzmann/open-web-calendar/issues/679)
+- Document CalDAV sign up with an example
+- Update Ukrainian translation by Максим Горпиніч, German by Nicco Kunzmann
+- Correct the style of the Free/Busy example
+- Update dependencies
+- Open the link to resulting calendar in another tab, see [Issue 683](https://github.com/niccokunzmann/open-web-calendar/issues/683)
+- Add options to show attendees and organizer as participants, including status, role and type, see [Issue 680](https://github.com/niccokunzmann/open-web-calendar/issues/680)
+- Add Youtube playlist to documentation.
+- Add recurrence ID to downloaded events to identify them across calendars, see [Issue 651](https://github.com/niccokunzmann/open-web-calendar/issues/651)
+- Remove categories from week and day view, see [Pull Request 704](https://github.com/niccokunzmann/open-web-calendar/pull/704)
+- Attempt Azure auto-deploy and add GitHub Actions for this.
+- Allow configuring the pop-up behavior, introducing the `plugin_event_details` and `plugin_event_tooltip` specification parameters, see [Issue 447](https://github.com/niccokunzmann/open-web-calendar/issues/447).
+
+
+## v1.48
+
+- Fix automatic updates of dependencies by Renovate
+- Add encryption of URLs, see [Issue 468](https://github.com/niccokunzmann/open-web-calendar/issues/468)
+
+    - Add `cryptography` to encrypt and decrypt URLs with the Fernet cipher
+    - Support `fernet://` links with encrypted JSON content
+    - Use `bcrypt` to check if the password is correct and the decrypted value can be exposed to the user
+    - Add documentation on how to setup encryption with the `OWC_ENCRYPTION_KEYS` environment variable
+    - Add `/encrypt` and `/decrypt` JSON endpoints
+    - Fix Docker build as linux/i386 requires build dependencies
+
+- Remove stack traces from production output as they might contain sensitive data
+- Update Italian translation by albanobattistella, Ukranian by Максим Горпиніч, German by Nicco Kunzmann, Spanish by Camilo M
+- Add support for CalDAV URLs, see [Issue 189](https://github.com/niccokunzmann/open-web-calendar/issues/189)
+
+    - Allow choosing from calendars
+    - Allow entering a CalDAV URL with username and password
+    - Add `caldav` dependency
+
+- Allow recording of APIs requests in development mode to use in tests
+- Allow editing of URLs with more comfort
+
+    - Edit encrypted URLs if the right password is given
+    - Add username and password field
+    - Leave public urls unencrypted
+    - Encrypt sensitive URLs with credentials by default
+
+- New UI for editing the calendar
+
+    - Separate page for each of the features
+    - Overview at the bottom of the page
+    - Resizing of calendar
+    - Wide screen shows calendar on the side
+    - Long screen shows calendar on the bottom
+    - Translate the project name in the title of the page
+    - Remove box shadow for default skin, see [Issue 449](https://github.com/niccokunzmann/open-web-calendar/issues/449)
+    - Add delete and edit buttons for URLs
+    - Add a few new translation strings
+
+## v1.47
+
+- Add option to download events in ICS format, see [Issue 206](https://github.com/niccokunzmann/open-web-calendar/issues/206)
+- Remove `pytz` as dependency, replace it by `zoneinfo`
+- Update dependencies
+- Update Ukrainian translation by Максим Горпиніч, Hungarian by Vág Csaba, Finnish by Ricky Tigg, German by Nicco Kunzmann
+- Describe how to use the Squid proxy to protect from SSRF attacks.
+- Create `tox -e dev` to run the Open Web Calendar in development mode.
+
 ## v1.46
 
 - Fix escaping [JavaScript](https://github.com/niccokunzmann/open-web-calendar/issues/631) and [CSS](https://github.com/niccokunzmann/open-web-calendar/issues/396)

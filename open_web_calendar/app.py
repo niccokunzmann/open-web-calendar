@@ -6,17 +6,21 @@
 from __future__ import annotations
 
 import datetime
-import io
 import json
 import os
+import sys
 import tempfile
 import traceback
+from http import HTTPStatus
 from pathlib import Path
-from typing import Any, Optional
+from typing import TYPE_CHECKING, Any, Optional
+from urllib.parse import ParseResult, urlparse
 
-import pytz
+import caldav
+import icalendar
 import requests
 import yaml
+import zoneinfo
 from flask import (
     Flask,
     Response,
@@ -29,15 +33,27 @@ from flask import (
 from flask_allowed_hosts import AllowedHosts
 from flask_caching import Cache
 
+from open_web_calendar.calendars.caldav import CalDAVCalendars
+from open_web_calendar.util import set_url_username_password
+
 from . import translate, version
 from .convert_to_dhtmlx import ConvertToDhtmlx
 from .convert_to_ics import ConvertToICS
+from .encryption import EmptyFernetStore, FernetStore
+
+if TYPE_CHECKING:
+    from open_web_calendar.conversion_base import ConversionStrategy
+
 
 # configuration
-DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
+def DEBUG() -> bool:  # noqa: N802
+    """Wether we are in debug mode."""
+    return os.environ.get("APP_DEBUG", "").lower() == "true"
+
+
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(
-    os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600)
+    os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", "600")
 )
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 if ALLOWED_HOSTS == [""]:  # noqa: SIM300, RUF100
@@ -59,6 +75,8 @@ DEFAULT_REQUEST_HEADERS = {
 
 # specification
 PARAM_SPECIFICATION_URL = "specification_url"
+TIMEZONES = list(zoneinfo.available_timezones())
+TIMEZONES.sort()
 
 # globals
 app = Flask(__name__, template_folder="templates")
@@ -103,6 +121,10 @@ def cache_url(url, text):
         del __URL_CACHE[url]
 
 
+def encryption() -> FernetStore | EmptyFernetStore:
+    return FernetStore.from_environment()
+
+
 @app.after_request
 def add_header(r):
     """
@@ -127,13 +149,15 @@ def add_header(r):
 
 def get_configuration():
     """Return the configuration for the browser."""
+    store = encryption()
     return {
         "default_specification": get_default_specification(),
         "version": version.version,
         "version-list": version.version_tuple,
-        "timezones": pytz.all_timezones,  # see https://stackoverflow.com/a/13867319
+        "timezones": TIMEZONES,
         "dhtmlx": {"languages": translate.dhtmlx_languages()},
         "index": {"languages": translate.languages_for_the_index_file()},
+        "encryption": store.can_encrypt(),
     }
 
 
@@ -146,6 +170,9 @@ def set_js_headers(response):
     )
     if "Content-Type" not in response.headers:
         response.headers["Content-Type"] = "text/calendar"
+    filename = request.args.get("filename")
+    if filename:
+        response.headers.add("Content-Disposition", "attachment", filename=filename)
     return response
 
 
@@ -167,9 +194,11 @@ def get_text_from_url(url):
     """
     if __URL_CACHE:
         return __URL_CACHE[url]
-    return requests.get(
+    response = requests.get(
         url, headers=DEFAULT_REQUEST_HEADERS, timeout=REQUESTS_TIMEOUT
-    ).content
+    )
+    response.raise_for_status()
+    return response.content
 
 
 # @functools.cache
@@ -255,8 +284,18 @@ def render_app_template(template, specification):
         html=lambda tid, **template_replacements: translate.html(
             language, translation_file, tid, **template_replacements
         ),
+        string=lambda tid, **template_replacements: translate.string(
+            language, translation_file, tid, **template_replacements
+        ),
         language=language,
     )
+
+
+def get_conversion(conversion: type[ConversionStrategy], specification: dict[str, Any]):
+    """Return a conversion from the strategy."""
+    strategy = conversion(specification, get_text_from_url, encryption(), DEBUG())
+    strategy.retrieve_calendars()
+    return set_js_headers(strategy.merge())
 
 
 @app.route("/calendar.<ext>", methods=["GET", "OPTIONS"])
@@ -269,16 +308,15 @@ def get_calendar(ext):
     if ext == "spec":
         return jsonify(specification)
     if ext == "events.json":
-        strategy = ConvertToDhtmlx(specification, get_text_from_url)
-        strategy.retrieve_calendars()
-        return set_js_headers(strategy.merge())
+        try:
+            return get_conversion(ConvertToDhtmlx, specification)
+        except:
+            return json_error()
     if ext == "ics":
-        strategy = ConvertToICS(specification, get_text_from_url)
-        strategy.retrieve_calendars()
-        return set_js_headers(strategy.merge())
+        return get_conversion(ConvertToICS, specification)
     if ext == "html":
         template_name = specification["template"]
-        all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)
+        all_template_names = os.listdir(CALENDAR_TEMPLATE_FOLDER)  # noqa: PTH208, RUF100
         assert template_name in all_template_names, (
             'Template names must be file names like "{}", not "{}".'.format(
                 '", "'.join(all_template_names), template_name
@@ -352,8 +390,11 @@ def unhandled_exception(error):
 
     See https://stackoverflow.com/q/14993318
     """
-    file = io.StringIO()
-    traceback.print_exception(type(error), error, error.__traceback__, file=file)
+    trace = (
+        f"<pre>\r\n{traceback.format_exc()}</pre>"
+        if DEBUG()
+        else "Trace only avalilable if DEBUG=true."
+    )
     return (
         f"""
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
@@ -368,13 +409,131 @@ def unhandled_exception(error):
                 complete your request.  Either the server is overloaded or
                 there is an error in the application.
             </p>
-            <pre>\r\n{file.getvalue()}
-            </pre>
+            {trace}
         </body>
     </html>
     """,
-        500,
+        http_status_code_for_error(error),
     )  # return error code from https://stackoverflow.com/a/7824605
+
+
+def http_status_code_for_error(error: Exception) -> int:
+    """Return the status code from an exception or 500."""
+    return getattr(error, "http_status_code", 500)
+
+
+def json_error():
+    """Return the active exception as json."""
+    _, err, _ = sys.exc_info()
+    status_code = http_status_code_for_error(err)
+    traceback.print_exc()
+    message = str(err) if DEBUG() else None
+    error = type(err).__name__
+    return jsonify(
+        {
+            "message": message,
+            "description": message,
+            "url": request.url,
+            "traceback": traceback.format_exc() if DEBUG() else None,
+            "error": error,
+            "text": error,
+            "code": status_code,
+        }
+    ), status_code
+
+
+@app.post("/encrypt")
+def encrypt():
+    """Return the JSON with the encrypted token."""
+    try:
+        store = FernetStore.from_environment()
+        return jsonify({"token": store.encrypt(request.json)})
+    except:
+        return json_error()
+
+
+@app.post("/decrypt")
+def decrypt():
+    """Return JSON with the decrypted token."""
+    try:
+        store = FernetStore.from_environment()
+        token = request.json["token"]  # string
+        passwords = request.json["passwords"]  # list of strings
+        return jsonify(
+            {
+                "data": store.expose(token, passwords),
+                "token": token,
+            }
+        )
+    except:
+        return json_error()
+
+
+@app.get("/new-key")
+def new_key():
+    """Generate a new key."""
+    store = FernetStore.from_environment()
+    return store.generate_key()
+
+
+@app.post("/caldav/list-calendars")
+def list_caldav_calendars():
+    """Return a list of caldav calendars."""
+    try:
+        url = request.json["url"]
+        parsed: ParseResult = urlparse(url)
+        username = request.json.get("username", parsed.username)
+        password = request.json.get("password", parsed.password)
+        with caldav.DAVClient(url=url, username=username, password=password) as client:
+            # todo: sanitize Nextcloud by adding /remote.php/dav/
+            principal = client.principal()
+            calendars = principal.calendars()
+            return jsonify(
+                {
+                    "calendars": [
+                        {
+                            "name": calendar.name,
+                            "url": set_url_username_password(
+                                calendar.url, username, password
+                            ),
+                        }
+                        for calendar in calendars
+                    ]
+                }
+            )
+    except:
+        return json_error()
+
+
+@app.post("/caldav/sign-up")
+def sign_up_for_event():
+    """Have a user sign up for an event."""
+    try:
+        # get parameters
+        calendar_url = request.json["calendar"]
+        name = request.json["name"]
+        email = request.json["email"]
+        event_ical = request.json["event"]
+        # decrypt if needed
+
+        enc = encryption()
+        if enc.is_encrypted(calendar_url):
+            data = enc.decrypt(calendar_url)
+            calendar_url = data["url"]
+        event: icalendar.Event = icalendar.Event.from_ical(event_ical)
+        # check if the event is present
+        calendar = CalDAVCalendars.from_url(calendar_url)
+        if not calendar.can_add_attendees():
+            # check if we are allowed to perform this action
+            raise PermissionError(
+                f"{HTTPStatus.UNAUTHORIZED.phrase}: "
+                f"{HTTPStatus.UNAUTHORIZED.description}: "
+                f"Cannot sign up as this is not allowed."
+            )
+        calendar.add_attendee_to_event(event, name=name, email=email)
+        return jsonify({"status": "ok"})
+    except:
+        return json_error()
 
 
 # make serializable for multiprocessing
@@ -388,8 +547,7 @@ please use this command:
 
     gunicorn open_web_calendar:app
     """)  # noqa: T201
-
-    app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
+    app.run(debug=DEBUG(), host="0.0.0.0", port=PORT)
 
 
 __all__ = [

@@ -10,7 +10,17 @@ comments: false
 
 # Social Media News
 
-News from Mastodon [#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar).
+We have  several channels over which you can get to know the Open Web Calendar.
+
+## Youtube
+
+This is our playlist on youtube about the Open Web Calendar (English):
+
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=8UCs_ZK8VqghsadD&amp;controls=0&amp;list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q" title="Open Web Calendar Videos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Mastodon
+
+Latest updates about [#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar) on Mastodon are below:
 
 <div id="mt-container" class="mt-container">
   <div class="mt-body" role="feed">

@@ -160,23 +160,66 @@ Examples:
 
 ### APP_DEBUG
 
-default `true`, values `true` or `false`, always `false` in the Docker container
+default `false`, values `true` or `false`, always `false` in the Docker container
 
 Set the debug flag for the app.
 
-### Further Configuration
+### OWC_ENCRYPTION_KEYS
+
+default empty
+
+This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.
+
+Examples:
+
+- Disable encryption (default): `OWC_ENCRYPTION_KEYS=`
+- Use one key: `OWC_ENCRYPTION_KEYS='Pj...48='`
+- Use multiple keys: `OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='`  
+  If you use multiple keys, only the first one encrypts the data.
+  The others are only used to decrypt the data.
+
+You can generate a new key by visiting your instance of the Open Web Calendar on the page [/new-key] or by running this command:
+
+```sh
+python3 -m open_web_calendar.new_key
+```
+
+See also:
+
+- [Fernet]
+
+[Fernet]: https://cryptography.io/en/latest/fernet/
+[/new-key]: {{ link.web }}/new-key
+
+## Further Configuration
 
 The Open Web Calendar uses libraries whose behavior can be further customized.
 
 - **Flask** has **[more environment variables](https://flask.palletsprojects.com/en/3.0.x/config/)** available to configure how the application serves content.
 - **Requests** is used the get the `.ics` files. You can [configure a proxy](#ssrf-protection-with-a-proxy-server).
 
-### SSRF Protection with a Proxy Server
+The Open Web Calendar relies on proxy servers for these features:
+
+- **Access Control and Users**
+  To restrict who can use the Open Web Calendar, you can use `nginx` or `apache` as a reverse proxy in front of it.
+  YuNoHost is another self-hosting option to restrict access.
+- **HTTPS Encryption**  
+  This can be done by `nginx`, `apache` or `caddy`.
+- **More Advanced Caching**  
+  Basic caching is handeled by the Open Web Calendar.
+  For more advanced cache configuration, use a proxy server like `squid`.
+  Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.
+- **Restricting Access to Calendars**
+  By default, the Open Web Calendar does not restrict which calendars to show.
+  Use the proxy server to filter the calendars.
+  If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.
+
+## SSRF Protection with a Proxy Server
 
 The Open Web Calendar can be used to access the local network behind a firewall,
 see [Issue 250](https://github.com/niccokunzmann/open-web-calendar/issues/250).
 This free access is intended to show calendars from everywhere.
-Since `requests` is used by the Open Web Calender,
+Since `requests` is used by the Open Web Calendar,
 it can use a proxy as described in the
 [`requests` documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies).
 The proxy can then handle the filtering.
@@ -190,3 +233,58 @@ export ALL_PROXY="socks5://10.10.1.10:3434"
 See also:
 
 - [Prevent SSRF using a Tor proxy](../docker#preventing-ssrf-attacks-using-a-tor-proxy)
+
+## Squid as a Proxy Server
+
+The [Squid] Proxy and Cache is flexible and configurable.
+You can use it in front of the Open Web Calendar to configure access and customize caching.
+
+!!! note "Operating System"
+
+    Squid is avaiable for all major platforms.
+    For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
+    The commands might work on other systems, but that is not tested.
+
+After you have installed the [Squid] Proxy, add this file into the  `conf.d` directory.
+Squid will load it automatically then.
+
+In Linux, create `/etc/squid/conf.d/open-web-calendar.conf`:
+
+```sh
+--8<-- "squid/open-web-calendar.conf"
+```
+
+The list above denies the Open Web Calendar access to all known local/internal networks.
+If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.
+
+On Linux, you can install the file with this command:
+
+```sh
+sudo wget -O /etc/squid/conf.d/open-web-calendar.conf https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
+```
+
+Then, restart the squid proxy.
+
+```sh
+sudo service squid reload
+```
+
+Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on `localhost`.
+Setting this variable changes depending on how you run the Open Web Calendar.
+
+If you use the [Python Setup](../pypi), you can set the environment variables for the server like this:
+
+```sh
+export HTTP_PROXY="http://localhost:3128"
+export HTTPS_PROXY="http://localhost:3128"
+export ALL_PROXY="http://localhost:3128"
+gunicorn open_web_calendar:app
+```
+
+When you try to access a forbidden calendar with the local `open-web-calendar`,
+e.q. `http://172.16.0.1/calendar.ics`, you will see this error message:
+
+> 403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics
+
+[1]: ../pypi
+[Squid]: https://www.squid-cache.org/

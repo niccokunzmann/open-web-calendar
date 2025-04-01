@@ -1,0 +1,17 @@
+version: '3'
+services:
+  open-web-calendar:
+    image: niccokunzmann/open-web-calendar
+    restart: unless-stopped
+    environment:
+      - HTTP_PROXY=http://squid-container:3128
+      - HTTPS_PROXY=http://squid-container:3128
+      - ALL_PROXY=http://squid-container:3128
+
+  # see https://hub.docker.com/r/ubuntu/squid
+  squid-container:
+    image: ubuntu/squid
+    environment:
+      - TZ=UTC
+    volumes:
+      - ./open-web-calendar.conf:/etc/squid/conf.d/00-open-web-calendar.conf

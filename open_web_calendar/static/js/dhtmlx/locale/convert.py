@@ -13,8 +13,8 @@ month_full = "month_full:"
 
 en = {}
 
-M = "jan feb mar apr may jun jul aug sep oct nov dec".split()
-D = "sun mon tue wed thu fri sat".split()
+M = "jan feb mar apr may jun jul aug sep oct nov dec".split()  # noqa: RUF100, SIM905
+D = "sun mon tue wed thu fri sat".split()  # noqa: RUF100, SIM905
 
 
 def used(s):
@@ -24,7 +24,7 @@ def used(s):
             s.startswith("labels_")
             and not any(
                 x in s
-                for x in "repeat drag message button icon new confirm section "
+                for x in "repeat drag message button icon new confirm section "  # noqa: RUF100, SIM905
                 "select recurring labels_year_tab labels_grid_tab"
                 "labels_full_day".split()
             )
@@ -57,7 +57,7 @@ def add(l, v):  # noqa: E741
     yaml += f"{k}: {v}\n"
 
 
-for file in ["locale_en.js"] + os.listdir("."):
+for file in ["locale_en.js"] + os.listdir("."):  # noqa: PTH208, RUF100
     if not file.endswith(".js"):
         continue
     lang = file[file.index("_") + 1 : file.index(".")]

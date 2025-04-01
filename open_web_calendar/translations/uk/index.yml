@@ -100,3 +100,30 @@ map-link-geo-description: Введіть тут URL-адресу карти та
 map-description: Місця подій можуть мати координати або текст. Налаштуйте тут, який
   картографічний сервіс використовувати під час натискання місця події.
 map-custom-summary: Налаштуйте посилання на мапі
+button-encrypt: Зашифрувати URL
+decrypt-urls: Розшифруйте URL-адреси
+button-encrypted: Зашифровано
+password-urls: Ми рекомендуємо шифрувати URL-адреси, якщо вони містять конфіденційні
+  дані. Збережіть наступний пароль, лише якщо ви збираєтеся розшифрувати його пізніше.
+about-title: Про
+calendar-embed-title: Використовуйте та вставляйте
+button-edit: Редагувати
+add-url-button: Додати
+add-url-calendar-public: Це публічна URL-адреса
+supported-standards: 'Ми підтримуємо такі стандарти: ICAL, CalDAV, webcal.'
+add-url-placeholder-url: https://link.to/a-calendar.ics
+add-url-placeholder-username: необов'язкове ім'я користувача
+button-remove: Вилучити
+add-url-placeholder-password: необ'язковий пароль
+participants-title: Учасники та організація
+participants-type: Покажіть, що це за учасник? (тобто індивідуальний чи груповий)
+participants-role: Покажіть роль учасника? (тобто організатор, необхідна особа або
+  необов’язково)
+participants-attendees: Показати, хто відвідує захід?
+participants-status: Показати статус учасників? (тобто прийнято/відхилено)
+participants-description: Ви можете запрошувати інших на події, і люди можуть реєструватися.
+  Ви можете ввімкнути ці параметри, щоб переглянути імена та адреси електронної пошти
+  під описом події.
+participants-organizers: Покажіть, хто організовує захід?
+caldav-allow-sign-up: 'Увімкнути реєстрацію електронною поштою для подій у цьому календарі:'
+caldav-choose-calendar: 'Виберіть календар зі свого облікового запису:'

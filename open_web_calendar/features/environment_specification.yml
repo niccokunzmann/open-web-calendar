@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2025 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+# We have no calendars loaded by default
+url: []
+
+# Set the default timezone of the browser
+# If we would like to set another timezone in the tests, we can write:
+#    Given we set the "timezone" parameter to "Asia/Singapore"
+timezone: "Europe/Moscow"
+date: "1605-11-05"
+
+# Deactivate tooltip in tests as it can cover the visible elements.
+# See https://github.com/niccokunzmann/open-web-calendar/pull/699#issuecomment-2724960590
+plugin_event_tooltip: false

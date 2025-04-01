@@ -1,0 +1,792 @@
+# SPDX-FileCopyrightText: 2025 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+responses:
+- response:
+    auto_calculate_content_length: false
+    body: "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Calendar Labs//Calendar 1.0//EN\r\
+      \nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nX-WR-CALNAME:Germany Holidays\r\n\
+      X-WR-TIMEZONE:Etc/GMT\r\nBEGIN:VEVENT\r\nSUMMARY:New Year's Day\r\nDTSTART;VALUE=DATE:20240101\r\
+      \nDTEND;VALUE=DATE:20240101\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/new-years-day.php\
+      \ to know more about New Year's Day. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a1109e851729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Epiphany (BW\\, BY\\, ST)\r\nDTSTART;VALUE=DATE:20240106\r\nDTEND;VALUE=DATE:20240106\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/spain/epiphany.php\
+      \ to know more about Epiphany (BW\\, BY\\, ST). \\n\\n Like us on Facebook:\
+      \ http://fb.com/calendarlabs to get updates\r\nUID:67164a1109f1f1729514001@calendarlabs.com\r\
+      \nDTSTAMP:20241021T123321Z\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\
+      \nEND:VEVENT\r\nBEGIN:VEVENT\r\nSUMMARY:Good Friday\r\nDTSTART;VALUE=DATE:20240329\r\
+      \nDTEND;VALUE=DATE:20240329\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/good-friday.php\
+      \ to know more about Good Friday. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a1109fab1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Easter Sunday (BB)\r\nDTSTART;VALUE=DATE:20240331\r\nDTEND;VALUE=DATE:20240331\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/easter.php\
+      \ to know more about Easter Sunday (BB). \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a0361729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Easter Monday\r\nDTSTART;VALUE=DATE:20240401\r\nDTEND;VALUE=DATE:20240401\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/christian/easter-monday.php\
+      \ to know more about Easter Monday. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a0c41729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Labor Day\r\nDTSTART;VALUE=DATE:20240501\r\nDTEND;VALUE=DATE:20240501\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/uk/may-day.php\
+      \ to know more about Labor Day. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a1541729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Ascension Day\r\nDTSTART;VALUE=DATE:20240509\r\nDTEND;VALUE=DATE:20240509\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/romania/ascension-day.php\
+      \ to know more about Ascension Day. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a1e01729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Whit Monday\r\nDTSTART;VALUE=DATE:20240520\r\nDTEND;VALUE=DATE:20240520\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/germany/pentecost-monday.php\
+      \ to know more about Whit Monday. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a26a1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Corpus Christi (BW\\, BY\\, HE\\, NW\\, RP\\, SL\\, SN\\, TH)\r\n\
+      DTSTART;VALUE=DATE:20240530\r\nDTEND;VALUE=DATE:20240530\r\nLOCATION:Germany\r\
+      \nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/corpus-christi.php\
+      \ to know more about Corpus Christi (BW\\, BY\\, HE\\, NW\\, RP\\, SL\\, SN\\\
+      , TH). \\n\\n Like us on Facebook: http://fb.com/calendarlabs to get updates\r\
+      \nUID:67164a110a2fe1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Assumption Day (BY\\, SL)\r\nDTSTART;VALUE=DATE:20240815\r\nDTEND;VALUE=DATE:20240815\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/the-assumption-of-mary.php\
+      \ to know more about Assumption Day (BY\\, SL). \\n\\n Like us on Facebook:\
+      \ http://fb.com/calendarlabs to get updates\r\nUID:67164a110a3b61729514001@calendarlabs.com\r\
+      \nDTSTAMP:20241021T123321Z\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\
+      \nEND:VEVENT\r\nBEGIN:VEVENT\r\nSUMMARY:Unity Day (National)\r\nDTSTART;VALUE=DATE:20241003\r\
+      \nDTEND;VALUE=DATE:20241003\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/germany/unity-day.php\
+      \ to know more about Unity Day (National). \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a4441729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Reformation Day (BB\\, HH\\, MV\\, NI\\, SH\\, SN\\, ST\\, TH)\r\n\
+      DTSTART;VALUE=DATE:20241031\r\nDTEND;VALUE=DATE:20241031\r\nLOCATION:Germany\r\
+      \nDESCRIPTION:Visit https://calendarlabs.com/holidays/germany/reformation-day.php\
+      \ to know more about Reformation Day (BB\\, HH\\, MV\\, NI\\, SH\\, SN\\, ST\\\
+      , TH). \\n\\n Like us on Facebook: http://fb.com/calendarlabs to get updates\r\
+      \nUID:67164a110a4bd1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:All Saints Day (BW\\, BY\\, NW\\, RP\\, SL)\r\nDTSTART;VALUE=DATE:20241101\r\
+      \nDTEND;VALUE=DATE:20241101\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/philippines/all-saints-day.php\
+      \ to know more about All Saints Day (BW\\, BY\\, NW\\, RP\\, SL). \\n\\n Like\
+      \ us on Facebook: http://fb.com/calendarlabs to get updates\r\nUID:67164a110a5341729514001@calendarlabs.com\r\
+      \nDTSTAMP:20241021T123321Z\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\
+      \nEND:VEVENT\r\nBEGIN:VEVENT\r\nSUMMARY:Christmas Day\r\nDTSTART;VALUE=DATE:20241225\r\
+      \nDTEND;VALUE=DATE:20241225\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php\
+      \ to know more about Christmas Day. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a5a01729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Christmas Holiday\r\nDTSTART;VALUE=DATE:20241226\r\nDTEND;VALUE=DATE:20241226\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php\
+      \ to know more about Christmas Holiday. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a60b1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:New Year's Day\r\nDTSTART;VALUE=DATE:20250101\r\nDTEND;VALUE=DATE:20250101\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/new-years-day.php\
+      \ to know more about New Year's Day. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a6791729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Epiphany (BW\\, BY\\, ST)\r\nDTSTART;VALUE=DATE:20250106\r\nDTEND;VALUE=DATE:20250106\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/spain/epiphany.php\
+      \ to know more about Epiphany (BW\\, BY\\, ST). \\n\\n Like us on Facebook:\
+      \ http://fb.com/calendarlabs to get updates\r\nUID:67164a110a6e71729514001@calendarlabs.com\r\
+      \nDTSTAMP:20241021T123321Z\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\
+      \nEND:VEVENT\r\nBEGIN:VEVENT\r\nSUMMARY:Good Friday\r\nDTSTART;VALUE=DATE:20250418\r\
+      \nDTEND;VALUE=DATE:20250418\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/good-friday.php\
+      \ to know more about Good Friday. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a7531729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Easter Sunday (BB)\r\nDTSTART;VALUE=DATE:20250420\r\nDTEND;VALUE=DATE:20250420\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/easter.php\
+      \ to know more about Easter Sunday (BB). \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a7c01729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Easter Monday\r\nDTSTART;VALUE=DATE:20250421\r\nDTEND;VALUE=DATE:20250421\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/christian/easter-monday.php\
+      \ to know more about Easter Monday. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a82d1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Labor Day\r\nDTSTART;VALUE=DATE:20250501\r\nDTEND;VALUE=DATE:20250501\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/uk/may-day.php\
+      \ to know more about Labor Day. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a8981729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Ascension Day\r\nDTSTART;VALUE=DATE:20250529\r\nDTEND;VALUE=DATE:20250529\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/romania/ascension-day.php\
+      \ to know more about Ascension Day. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a90d1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Whit Monday\r\nDTSTART;VALUE=DATE:20250609\r\nDTEND;VALUE=DATE:20250609\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/germany/pentecost-monday.php\
+      \ to know more about Whit Monday. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110a9ac1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Corpus Christi (BW\\, BY\\, HE\\, NW\\, RP\\, SL\\, SN\\, TH)\r\n\
+      DTSTART;VALUE=DATE:20250619\r\nDTEND;VALUE=DATE:20250619\r\nLOCATION:Germany\r\
+      \nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/corpus-christi.php\
+      \ to know more about Corpus Christi (BW\\, BY\\, HE\\, NW\\, RP\\, SL\\, SN\\\
+      , TH). \\n\\n Like us on Facebook: http://fb.com/calendarlabs to get updates\r\
+      \nUID:67164a110aa241729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Assumption Day (BY\\, SL)\r\nDTSTART;VALUE=DATE:20250815\r\nDTEND;VALUE=DATE:20250815\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/the-assumption-of-mary.php\
+      \ to know more about Assumption Day (BY\\, SL). \\n\\n Like us on Facebook:\
+      \ http://fb.com/calendarlabs to get updates\r\nUID:67164a110aa961729514001@calendarlabs.com\r\
+      \nDTSTAMP:20241021T123321Z\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\
+      \nEND:VEVENT\r\nBEGIN:VEVENT\r\nSUMMARY:Unity Day (National)\r\nDTSTART;VALUE=DATE:20251003\r\
+      \nDTEND;VALUE=DATE:20251003\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/germany/unity-day.php\
+      \ to know more about Unity Day (National). \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110ab071729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Reformation Day (BB\\, HH\\, MV\\, NI\\, SH\\, SN\\, ST\\, TH)\r\n\
+      DTSTART;VALUE=DATE:20251031\r\nDTEND;VALUE=DATE:20251031\r\nLOCATION:Germany\r\
+      \nDESCRIPTION:Visit https://calendarlabs.com/holidays/germany/reformation-day.php\
+      \ to know more about Reformation Day (BB\\, HH\\, MV\\, NI\\, SH\\, SN\\, ST\\\
+      , TH). \\n\\n Like us on Facebook: http://fb.com/calendarlabs to get updates\r\
+      \nUID:67164a110ab7b1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:All Saints Day (BW\\, BY\\, NW\\, RP\\, SL)\r\nDTSTART;VALUE=DATE:20251101\r\
+      \nDTEND;VALUE=DATE:20251101\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/philippines/all-saints-day.php\
+      \ to know more about All Saints Day (BW\\, BY\\, NW\\, RP\\, SL). \\n\\n Like\
+      \ us on Facebook: http://fb.com/calendarlabs to get updates\r\nUID:67164a110abef1729514001@calendarlabs.com\r\
+      \nDTSTAMP:20241021T123321Z\r\nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\
+      \nEND:VEVENT\r\nBEGIN:VEVENT\r\nSUMMARY:Christmas Day\r\nDTSTART;VALUE=DATE:20251225\r\
+      \nDTEND;VALUE=DATE:20251225\r\nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php\
+      \ to know more about Christmas Day. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110ac5f1729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\
+      \nSUMMARY:Christmas Holiday\r\nDTSTART;VALUE=DATE:20251226\r\nDTEND;VALUE=DATE:20251226\r\
+      \nLOCATION:Germany\r\nDESCRIPTION:Visit https://calendarlabs.com/holidays/us/christmas.php\
+      \ to know more about Christmas Holiday. \\n\\n Like us on Facebook: http://fb.com/calendarlabs\
+      \ to get updates\r\nUID:67164a110aca11729514001@calendarlabs.com\r\nDTSTAMP:20241021T123321Z\r\
+      \nSTATUS:CONFIRMED\r\nTRANSP:TRANSPARENT\r\nSEQUENCE:0\r\nEND:VEVENT\r\nEND:VCALENDAR"
+    content_type: text/calendar
+    headers:
+      Accept-Ranges: bytes
+      Cache-Control: max-age=7200
+      Expires: Fri, 07 Mar 2025 18:23:22 GMT
+      Last-Modified: Mon, 21 Oct 2024 12:33:21 GMT
+      Vary: Accept-Encoding,User-Agent
+      X-Frame-Options: SAMEORIGIN
+    method: GET
+    status: 200
+    url: https://www.calendarlabs.com/ical-calendar/ics/46/Germany_Holidays.ics
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<d:error xmlns:d=\"DAV:\" xmlns:s=\"\
+      http://sabredav.org/ns\">\n  <s:exception>Sabre\\DAV\\Exception\\NotAuthenticated</s:exception>\n\
+      \  <s:message>No public access to this resource., No 'Authorization: Basic'\
+      \ header found. Either the client didn't send one, or the server is misconfigured,\
+      \ No 'Authorization: Bearer' header found. Either the client didn't send one,\
+      \ or the server is mis-configured, No 'Authorization: Basic' header found. Either\
+      \ the client didn't send one, or the server is misconfigured</s:message>\n</d:error>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=1mABx7Mf1bZLYKI%2FLRoF4MXwQ9nSHJCNSeqWisnnBdmmmSUrQJfR8YFr9J8ymZLpf4mmqLj%2BCYeNo8%2F%2F3Xn3EztJFt%2BRnz%2BjVVXY5i9G2QdZygZ3lQS93vkyaXOWtm%2BF;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=btjdq3jbse6e6e3blq76nf20e0;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      WWW-Authenticate: Basic realm="Nextcloud", charset="UTF-8"
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 401
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<d:error xmlns:d=\"DAV:\" xmlns:s=\"\
+      http://sabredav.org/ns\">\n  <s:exception>Sabre\\DAV\\Exception\\NotAuthenticated</s:exception>\n\
+      \  <s:message>No public access to this resource., No 'Authorization: Basic'\
+      \ header found. Either the client didn't send one, or the server is misconfigured,\
+      \ No 'Authorization: Bearer' header found. Either the client didn't send one,\
+      \ or the server is mis-configured, No 'Authorization: Basic' header found. Either\
+      \ the client didn't send one, or the server is misconfigured</s:message>\n</d:error>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=AOzgnpTfRZ6XLHOLPYuTYNA4zv6BO9uHur4wh4HyWQ7zHsjg7t%2BAdY%2FZlI%2FnnGO5yjnYOHBydJd8byub10RG%2FfBY9t3lJTdcqR52KGh2Ig5zDyfpwPDqMU%2ByD3iisAYQ;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=aso8ot0brrkgaggoupvie87ah8;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      WWW-Authenticate: Basic realm="Nextcloud", charset="UTF-8"
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 401
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:oc="http://owncloud.org/ns"
+      xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/calendars/</d:href><d:propstat><d:prop><d:current-user-principal><d:href>/remote.php/dav/principals/users/test/</d:href></d:current-user-principal></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=9
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: ocomm1do933a=68gsg1u4m58ij21f7fntdtkq2g; path=/; secure; HttpOnly;
+        SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: 62TKjT7ORlMIST1HKkxu
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: 62TKjT7ORlMIST1HKkxu
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:oc="http://owncloud.org/ns"
+      xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/calendars/</d:href><d:propstat><d:prop><d:current-user-principal><d:href>/remote.php/dav/principals/users/test/</d:href></d:current-user-principal></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=9
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: ocomm1do933a=2g5srhepsfe6cbtibdjuvcvb1f; path=/; secure; HttpOnly;
+        SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: 33UPibHm61hrDphOfXfT
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: 33UPibHm61hrDphOfXfT
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"
+      xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/principals/users/test/</d:href><d:propstat><d:prop><cal:calendar-home-set><d:href>/remote.php/dav/calendars/test/</d:href></cal:calendar-home-set></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, addressbook,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=8
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: DIW6mMFt2riR0V40SFYJ
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: DIW6mMFt2riR0V40SFYJ
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/principals/users/test/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"
+      xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/principals/users/test/</d:href><d:propstat><d:prop><cal:calendar-home-set><d:href>/remote.php/dav/calendars/test/</d:href></cal:calendar-home-set></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, addressbook,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=8
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: Mt8WRVwKHeyF4SLm5aGD
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: Mt8WRVwKHeyF4SLm5aGD
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/principals/users/test/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/calendars/test/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/personal/</d:href><d:propstat><d:prop><d:displayname>Personal</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/public/</d:href><d:propstat><d:prop><d:displayname>public</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/test_shared_by_quelltext/</d:href><d:propstat><d:prop><d:displayname>test
+      (Nicco Kunzmann)</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/inbox/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><cal:schedule-inbox/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/outbox/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><cal:schedule-outbox/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/trashbin/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><x1:trash-bin
+      xmlns:x1="http://nextcloud.com/ns"/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, nextcloud-checksum-update,
+        nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=7
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: QuXzxPs6fJO7cHSlt772
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: QuXzxPs6fJO7cHSlt772
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/calendars/test/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/personal/</d:href><d:propstat><d:prop><d:displayname>Personal</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/public/</d:href><d:propstat><d:prop><d:displayname>public</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/test_shared_by_quelltext/</d:href><d:propstat><d:prop><d:displayname>test
+      (Nicco Kunzmann)</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/inbox/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><cal:schedule-inbox/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/outbox/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><cal:schedule-outbox/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/trashbin/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><x1:trash-bin
+      xmlns:x1="http://nextcloud.com/ns"/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, nextcloud-checksum-update,
+        nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=7
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: CGQKgVT97TeycEOkTQno
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: CGQKgVT97TeycEOkTQno
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<d:error xmlns:d=\"DAV:\" xmlns:s=\"\
+      http://sabredav.org/ns\">\n  <s:exception>Sabre\\DAV\\Exception\\NotAuthenticated</s:exception>\n\
+      \  <s:message>No public access to this resource., No 'Authorization: Basic'\
+      \ header found. Either the client didn't send one, or the server is misconfigured,\
+      \ No 'Authorization: Bearer' header found. Either the client didn't send one,\
+      \ or the server is mis-configured, No 'Authorization: Basic' header found. Either\
+      \ the client didn't send one, or the server is misconfigured</s:message>\n</d:error>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=7luSNXK9aFO3rd80CUzEsutBX15P%2FVqpwdiMlPyEhkc%2BTB1ibYZcPmukwu8hld9xMjh6%2FRKbVFyVeln1ystfCRUBCf7mhs%2FcCaOBU2JCFkxzFQMkvOYGRbA1hcCwm6cP;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=ajp75r88eah76k7ddgn0f6h1h2;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      WWW-Authenticate: Basic realm="Nextcloud", charset="UTF-8"
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 401
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:oc="http://owncloud.org/ns"
+      xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/calendars/</d:href><d:propstat><d:prop><d:current-user-principal><d:href>/remote.php/dav/principals/users/test/</d:href></d:current-user-principal></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=9
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: ocomm1do933a=jvnmj4qi6ebbe9cu7olbk17ii5; path=/; secure; HttpOnly;
+        SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: XH4NT5CNqs9gdf4kiB7b
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: XH4NT5CNqs9gdf4kiB7b
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"
+      xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/principals/users/test/</d:href><d:propstat><d:prop><cal:calendar-home-set><d:href>/remote.php/dav/calendars/test/</d:href></cal:calendar-home-set></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, addressbook,
+        nextcloud-checksum-update, nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=8
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: WW1P2fco93HsvNJOVgRJ
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: WW1P2fco93HsvNJOVgRJ
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/principals/users/test/
+- response:
+    auto_calculate_content_length: false
+    body: '<?xml version="1.0"?>
+
+      <d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav"
+      xmlns:cs="http://calendarserver.org/ns/" xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns"><d:response><d:href>/remote.php/dav/calendars/test/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/personal/</d:href><d:propstat><d:prop><d:displayname>Personal</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/public/</d:href><d:propstat><d:prop><d:displayname>public</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/test_shared_by_quelltext/</d:href><d:propstat><d:prop><d:displayname>test
+      (Nicco Kunzmann)</d:displayname><d:resourcetype><d:collection/><cal:calendar/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/inbox/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><cal:schedule-inbox/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/outbox/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><cal:schedule-outbox/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/trashbin/</d:href><d:propstat><d:prop><d:resourcetype><d:collection/><x1:trash-bin
+      xmlns:x1="http://nextcloud.com/ns"/></d:resourcetype></d:prop><d:status>HTTP/1.1
+      200 OK</d:status></d:propstat><d:propstat><d:prop><d:displayname/></d:prop><d:status>HTTP/1.1
+      404 Not Found</d:status></d:propstat></d:response></d:multistatus>
+
+      '
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      DAV: 1, 3, extended-mkcol, access-control, calendarserver-principal-property-search,
+        calendar-access, calendar-proxy, calendar-auto-schedule, calendar-availability,
+        nc-calendar-trashbin, nc-calendar-webcal-cache, calendarserver-subscribed,
+        oc-resource-sharing, oc-calendar-publishing, calendarserver-sharing, nextcloud-checksum-update,
+        nc-calendar-search, nc-enable-birthday-calendar
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=7
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: 0LWk7OpvcXPuxVa3A2cq
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: 0LWk7OpvcXPuxVa3A2cq
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: PROPFIND
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/
+- response:
+    auto_calculate_content_length: false
+    body: This is the WebDAV interface. It can only be accessed by WebDAV clients
+      such as the Nextcloud desktop sync client.
+    content_type: text/plain
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=72NJtGOwwsTDRBOh%2Fo7ZGQoALbVF%2B1tBGbTlmnqgvXaFAH4s%2BG12uVbtd1UXl9LtlWdgE%2Bmr3d5F5du0vZvem%2BFeUVN1wBzaM24wIGQpzobg3Gl62ZBPg90TaDmtqxcl;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=8l258oap61fnakiden23ubdpb9;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Vary: Accept-Encoding
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: KYxjjEdrLyt4teMbxqKO
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: KYxjjEdrLyt4teMbxqKO
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: GET
+    status: 200
+    url: https://test:oGbWK-tdbSB-bsRoC-jTjAB-3k6Bi@quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<d:error xmlns:d=\"DAV:\" xmlns:s=\"\
+      http://sabredav.org/ns\">\n  <s:exception>Sabre\\DAV\\Exception\\NotAuthenticated</s:exception>\n\
+      \  <s:message>No public access to this resource., No 'Authorization: Basic'\
+      \ header found. Either the client didn't send one, or the server is misconfigured,\
+      \ No 'Authorization: Bearer' header found. Either the client didn't send one,\
+      \ or the server is mis-configured, No 'Authorization: Basic' header found. Either\
+      \ the client didn't send one, or the server is misconfigured</s:message>\n</d:error>\n"
+    content_type: text/xml
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=10
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: oc_sessionPassphrase=06YFURTGQKOVryYX3T7E3qHWK7k3zaig4NPMQf%2BZ4D2l5IenmveFdFoCkz7pb8u9S%2FjjY1XL%2Fgm9Q7csY8fDw5Flb6c6p8UycyUiDpPIisnjM5TGGNucnHPi%2F0e4fs%2FV;
+        path=/; secure; HttpOnly; SameSite=Lax, __Host-nc_sameSiteCookielax=true;
+        path=/; httponly;secure; expires=Fri, 31-Dec-2100 23:59:59 GMT; SameSite=lax,
+        __Host-nc_sameSiteCookiestrict=true; path=/; httponly;secure; expires=Fri,
+        31-Dec-2100 23:59:59 GMT; SameSite=strict, ocomm1do933a=5033p3r8ua55n2krq1e22glnqo;
+        path=/; secure; HttpOnly; SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      WWW-Authenticate: Basic realm="Nextcloud", charset="UTF-8"
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 401
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/
+- response:
+    auto_calculate_content_length: false
+    body: "<?xml version=\"1.0\"?>\n<d:multistatus xmlns:d=\"DAV:\" xmlns:s=\"http://sabredav.org/ns\"\
+      \ xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\"\
+      \ xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:response><d:href>/remote.php/dav/calendars/test/public/636A44FD-C5E6-4E8F-8F36-2C853A210E10.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;\n\
+      VERSION:2.0&#13;\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;\nCALSCALE:GREGORIAN&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250303&#13;\n\
+      DTEND;VALUE=DATE:20250304&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250303&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250310&#13;\n\
+      DTEND;VALUE=DATE:20250311&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250310&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250317&#13;\n\
+      DTEND;VALUE=DATE:20250318&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250317&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250324&#13;\n\
+      DTEND;VALUE=DATE:20250325&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250324&#13;\nEND:VEVENT&#13;\n\
+      BEGIN:VEVENT&#13;\nSUMMARY:Weekly Event&#13;\nDTSTART;VALUE=DATE:20250331&#13;\n\
+      DTEND;VALUE=DATE:20250401&#13;\nDTSTAMP:20250303T231120Z&#13;\nUID:87390d50-0b92-4aad-a728-f801f49644e7&#13;\n\
+      SEQUENCE:3&#13;\nATTENDEE;CUTYPE=UNKNOWN;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP=TRU&#13;\n\
+      \ E:mailto:niccokunzmann@posteo.net&#13;\nCREATED:20250303T231101Z&#13;\nLAST-MODIFIED:20250303T231120Z&#13;\n\
+      STATUS:CONFIRMED&#13;\nRECURRENCE-ID;VALUE=DATE:20250331&#13;\nEND:VEVENT&#13;\n\
+      END:VCALENDAR&#13;\n</cal:calendar-data></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/remote.php/dav/calendars/test/public/B55CA4DB-8FA0-4D0A-9095-0EC7EF6DDE84.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR&#13;\n\
+      VERSION:2.0&#13;\nPRODID:-//Sabre//Sabre VObject 4.4.2//EN&#13;\nCALSCALE:GREGORIAN&#13;\n\
+      BEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250304T090000Z&#13;\nDTEND:20250304T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250304T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250305T090000Z&#13;\nDTEND:20250305T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250305T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250311T090000Z&#13;\nDTEND:20250311T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250311T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250312T090000Z&#13;\nDTEND:20250312T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250312T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250318T090000Z&#13;\nDTEND:20250318T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250318T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250319T090000Z&#13;\nDTEND:20250319T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250319T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250325T090000Z&#13;\nDTEND:20250325T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250325T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250326T090000Z&#13;\nDTEND:20250326T100000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250326T090000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250401T080000Z&#13;\nDTEND:20250401T090000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250401T080000Z&#13;\n\
+      END:VEVENT&#13;\nBEGIN:VEVENT&#13;\nCREATED:20250305T111408Z&#13;\nDTSTAMP:20250305T111438Z&#13;\n\
+      LAST-MODIFIED:20250305T111438Z&#13;\nSEQUENCE:2&#13;\nUID:9fe8115d-2c01-4b3b-b241-22dc5bad2aaa&#13;\n\
+      DTSTART:20250402T080000Z&#13;\nDTEND:20250402T090000Z&#13;\nSTATUS:CONFIRMED&#13;\n\
+      SUMMARY:another weekly event during day time&#13;\nRECURRENCE-ID:20250402T080000Z&#13;\n\
+      END:VEVENT&#13;\nEND:VCALENDAR&#13;\n</cal:calendar-data></d:prop><d:status>HTTP/1.1\
+      \ 200 OK</d:status></d:propstat></d:response></d:multistatus>\n"
+    content_type: text/calendar
+    headers:
+      Cache-Control: no-store, no-cache, must-revalidate
+      Content-Security-Policy: default-src 'none';
+      Expires: Thu, 19 Nov 1981 08:52:00 GMT
+      Keep-Alive: timeout=2, max=9
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Set-Cookie: ocomm1do933a=o3t3euiou4jo1oa8nitu51lgln; path=/; secure; HttpOnly;
+        SameSite=Lax
+      Strict-Transport-Security: max-age=15768000
+      Transfer-Encoding: chunked
+      Vary: Brief,Prefer
+      X-Content-Type-Options: nosniff
+      X-Debug-Token: a1Ov4pbdkM5OLDkBgL1v
+      X-Frame-Options: SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies: none
+      X-Request-Id: a1Ov4pbdkM5OLDkBgL1v
+      X-Robots-Tag: noindex, nofollow
+      X-XSS-Protection: 1; mode=block
+    method: REPORT
+    status: 207
+    url: https://quelltext.ocloud.de:443/remote.php/dav/calendars/test/public/

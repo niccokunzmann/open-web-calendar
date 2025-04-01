@@ -1,0 +1,120 @@
+# SPDX-FileCopyrightText: 2024 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+# Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+# More info on Python, GitHub Actions, and Azure Functions: https://aka.ms/python-webapps-actions
+
+name: Build and deploy Python project to Azure Function App - open-web-calendar
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+env:
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
+  PYTHON_VERSION: '3.12' # set this to the python version to use (supports 3.6, 3.7, 3.8)
+  WEBAPP_NAME: open-web-calendar
+  RESOURCE_GROUP: resource-2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read #This is required for actions/checkout
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python version
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Create and start virtual environment
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+      
+      - name: Prepare environment
+        run: cp requirements/base.txt requirements.txt
+
+      - name: Install dependencies
+        # see https://github.com/Azure/actions-workflow-samples/blob/master/FunctionApp/linux-python-functionapp-on-azure.yml
+        run: pip install -r requirements.txt --target=".python_packages/lib/site-packages"
+      # Optional: Add step to run tests here
+
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-app
+          path: |
+            release.zip
+            !venv/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      id-token: write #This is required for requesting the JWT
+      contents: read #This is required for actions/checkout
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: python-app
+
+      - name: Unzip artifact for deployment
+        run: unzip release.zip     
+        
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E1B1B15BA2FF4BAD84C9AD0D40587291 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5E679394E42A471FB66542DF196CDC3E }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_37B47FC90407499495A176226BF49314 }}
+
+      # Configure deployment and runtime settings on the webapp
+      # see https://azure.github.io/AppService/2020/12/11/cicd-for-python-apps.html
+      - name: configure defaults
+        # see https://learn.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest#az-configure-examples
+        run: az configure --defaults group=${{ env.RESOURCE_GROUP }} web=${{ env.WEBAPP_NAME }} AzureWebJobsStorage__accountName=openwebcalendarstorage
+        # For AzureWebJobsStorage__accountName see these:
+        # > Warning: Neither AzureWebJobsStorage nor AzureWebJobsStorage__accountName exist in app settings (from Azure Resource Manager with RBAC credential). Please ensure one of them is configured as it is critical for function runtime. For more information, please visit the function app settings reference page: https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings#azurewebjobsstorage
+        # https://learn.microsoft.com/en-us/azure/azure-functions/functions-app-settings#azurewebjobsstorage__accountname
+      - name: configure webapp environment
+        # see https://learn.microsoft.com/en-us/cli/azure/webapp/config/appsettings?view=azure-cli-latest#az-webapp-config-appsettings-set
+        run: az webapp config appsettings set --name ${{ env.WEBAPP_NAME }} --settings SCM_DO_BUILD_DURING_DEPLOYMENT=true FLASK_ENV=production AzureWebJobsStorage__accountName=openwebcalendarstorage
+      - name: configure webapp startup
+        # see https://learn.microsoft.com/en-us/cli/azure/webapp/config?view=azure-cli-latest#az-webapp-config-set
+        run: az webapp config set --name ${{ env.WEBAPP_NAME }} --startup-file "gunicorn --bind=0.0.0.0 --timeout 600 app:app"
+
+      # - name: 'Run Azure webapp deploy action using publish profile credentials'
+      #   # see https://github.com/Azure/functions-action/issues/216#issuecomment-2012210949
+      #   uses: azure/webapps-deploy@v3
+      #   with:
+      #     app-name: ${{ env.WEBAPP_NAME }}
+      #     # see https://stackoverflow.com/questions/50147803/getting-the-azure-app-service-slot-name-on-startup
+      #     # see https://github.com/Azure/webapps-deploy/issues/25
+      #     slot-name: "production"
+      #     publish-profile: ${{ secrets.azureWebAppPublishProfile }}
+  
+      - name: 'Deploy to Azure Functions'
+        # 
+        # https://stackoverflow.com/a/69524775/1320237
+        uses: Azure/functions-action@v1
+        id: deploy-to-function
+        with:
+          app-name: ${{ env.WEBAPP_NAME }}
+          slot-name: 'production'
+          publish-profile: ${{ secrets.azureWebAppPublishProfile }}
+          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          

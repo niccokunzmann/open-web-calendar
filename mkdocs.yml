@@ -133,6 +133,7 @@ plugins:
         - uk
         - ta
         - nl
+        - cs
 # add mdpo.languages above
       translate:
         - site_name
@@ -240,6 +241,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Nederlands
       link: nl
       lang: nl
+    - name: Čeština
+      link: cs
+      lang: cs
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/
@@ -257,6 +261,7 @@ nav:
   - contributing.md
   - News:
     - news/social-media.md
+    - news/2025-03-17-caldav-nextcloud-sign-up.md
     - news/2024-04-10-website.md
   - Hosting:
     - host/hosted.md
@@ -313,7 +318,7 @@ markdown_extensions:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
-  - pymdownx.superfences
+  # - pymdownx.superfences
   - admonition  # see https://squidfunk.github.io/mkdocs-material/reference/admonitions/
 hooks:
   - docs/hooks/set_canonical_url.py

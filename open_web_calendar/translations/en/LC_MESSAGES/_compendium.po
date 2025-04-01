@@ -39,6 +39,19 @@ msgstr ""
 msgid "OWC_SPECIFICATION"
 msgstr ""
 
+msgid ""
+"When you try to access a forbidden calendar with the local `open-web-"
+"calendar`, e.q. `http://172.16.0.1/calendar.ics`, you will see this error "
+"message:"
+msgstr ""
+
+msgid "403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics"
+msgstr ""
+
+#, fuzzy
+msgid "[Squid]: https://www.squid-cache.org/"
+msgstr "[Squid]: https://www.squid-cache.org/"
+
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
 #~ " you CAN use this but you cannot be sure that the JSON schema remains the "

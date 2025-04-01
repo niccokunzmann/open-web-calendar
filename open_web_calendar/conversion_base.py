@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+"""The base interface to convert calendars to different outputs."""
+
 from __future__ import annotations
 
 import io
@@ -8,12 +10,19 @@ import sys
 import traceback
 from concurrent.futures import ThreadPoolExecutor
 from threading import RLock
-from typing import Any
+from typing import Any, Optional
 from urllib.parse import urljoin
 
 import requests
-from icalendar import Calendar
 from lxml import etree
+
+from open_web_calendar.calendars.base import Calendars
+from open_web_calendar.calendars.caldav import (
+    CalDAVCalendars,
+)
+from open_web_calendar.calendars.errors import InvalidCalendars
+from open_web_calendar.calendars.ics import ICSCalendars
+from open_web_calendar.encryption import EmptyFernetStore, FernetStore
 
 
 def get_text_from_url(url):
@@ -22,18 +31,27 @@ def get_text_from_url(url):
 
 
 class ConversionStrategy:
-    """Base class for conversions."""
+    """Base class for conversions.
+
+    You can customize how calendars are retrived and if encryption is used.
+    """
 
     # TODO: add as parameters
     MAXIMUM_THREADS = 100
 
     def __init__(
-        self, specification: dict[str, Any], get_text_from_url=get_text_from_url
+        self,
+        specification: dict[str, Any],
+        get_text_from_url=get_text_from_url,
+        encryption: Optional[EmptyFernetStore | FernetStore] = None,
+        debug: bool = False,  # noqa: FBT001
     ):
         self.specification = specification
+        self.encryption = EmptyFernetStore() if encryption is None else encryption
         self.lock = RLock()
         self.components = []
         self.get_text_from_url = get_text_from_url
+        self.debug = debug
         self.created()
 
     def created(self):
@@ -42,7 +60,15 @@ class ConversionStrategy:
     def error(self, ty, err, tb, url):
         tb_s = io.StringIO()
         traceback.print_exception(ty, err, tb, file=tb_s)
-        return self.convert_error(err, url, tb_s.getvalue())
+        return self.convert_error(
+            str(err) if self.debug else type(err).__name__,
+            url,
+            tb_s.getvalue() if self.debug else "",
+        )
+
+    def convert_error(self, error: str, url: str, tb_s: str):
+        """Tell the client more about the error."""
+        raise NotImplementedError("To be implemented in subclasses")
 
     def retrieve_calendars(self):
         """Retrieve the calendars from different sources."""
@@ -57,32 +83,39 @@ class ConversionStrategy:
             for _e in e.map(self.retrieve_calendar, enumerate(urls)):
                 pass  # no error should pass silently; import this
 
-    def get_calendars_from_url(self, url: str):
+    def get_calendars_from_url(self, url: str) -> Calendars:
         """Return a lis of calendars from a URL."""
+        if self.encryption.is_encrypted(url):
+            url = self.encryption.decrypt(url).url
+            if url is None:
+                return Calendars.empty()
         if url.startswith("webcal://"):
             url = url.replace("webcal://", "http://", 1)
         calendar_text = self.get_text_from_url(url)
         try:
-            return Calendar.from_ical(calendar_text, multiple=True)
-        except ValueError:
+            return ICSCalendars.from_text(calendar_text)
+        except InvalidCalendars:
             # ValueError: Content line could not be parsed into parts:
             # find the alt link
             # see https://stackoverflow.com/a/11466033/1320237
             htmlparser = etree.HTMLParser()
             tree = etree.XML(calendar_text, htmlparser)
             links = tree.xpath('//link[@rel = "alternate" and @type = "text/calendar"]')
-            result = []
-            for link in links:
+            result = ICSCalendars()
+            for link in links:  # we expect one link
                 href = link.get("href")
                 new_url = urljoin(url, href)
                 calendar_text = self.get_text_from_url(new_url)
-                result += Calendar.from_ical(calendar_text, multiple=True)
-            if result == []:
+                result.add_from_text(calendar_text)
+            if not result:
                 # We did not find any link to any calendar from this source.
-                raise
+                # We could have a CalDAV calendar.
+                result = CalDAVCalendars.from_url(url)
+                if not result:
+                    raise
             return result
 
-    def retrieve_calendar(self, index_url):
+    def retrieve_calendar(self, index_url: tuple[int, str]):
         """Retrieve a calendar from a url"""
         try:
             index, url = index_url

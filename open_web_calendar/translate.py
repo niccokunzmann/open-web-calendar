@@ -24,7 +24,7 @@ TRANSLATIONS_PATH = HERE / "translations"
 DEFAULT_LANGUAGE = "en"
 DEFAULT_FILE = "common"
 CALENDAR_FILE = "calendar"
-TRANSLATIONS = {}  # lang -> file -> id -> string
+TRANSLATIONS: dict[str, dict[str, dict[str, str]]] = {}  # lang -> file -> id -> string
 LANGUAGE_ALIAS = {  # name also usable -> name in the translations directory
     "nb": "nb_NO",
     "ua": "uk",
@@ -37,7 +37,7 @@ UNUSED = "-unused"
 
 # Parse the directory structure.
 # translations/<lang>/<file>.yml
-for language in os.listdir(TRANSLATIONS_PATH):
+for language in os.listdir(TRANSLATIONS_PATH):  # noqa: PTH208, RUF100
     TRANSLATIONS[language] = file_translations = defaultdict(dict)
     language_path = TRANSLATIONS_PATH / language
     for file in language_path.iterdir():
@@ -86,7 +86,8 @@ def html(language: str, file: str, tid: str, **template_replacements) -> str:
     if not tid.endswith("-html"):
         inner_text = escape(inner_text)
     tid = escape(tid)
-    return Markup(f'<span id="translate-{tid}" class="translation">{inner_text}</span>')
+    markup = f'<span id="translate-{tid}" class="translation">{inner_text}</span>'
+    return Markup(markup)  # noqa: RUF100, S704
 
 
 CALENDAR_LABELS = [
@@ -241,6 +242,12 @@ def dhtmlx(language: str):
     }
     for label in CALENDAR_LABELS:
         result["labels"][label] = cal("labels_" + label)
+    # dynamically load icon labels
+    for label in TRANSLATIONS[DEFAULT_LANGUAGE][CALENDAR_FILE]:
+        if label.startswith("icon_"):
+            result["labels"][label] = cal(label)
+        elif label.startswith("label_"):
+            result["labels"][label[6:]] = cal(label)
     return result
 
 

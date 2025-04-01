@@ -1,11 +1,11 @@
 # Prefill add-on <noreply-addon-prefill@weblate.org>, 2024.
-# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-28 10:41+0200\n"
-"PO-Revision-Date: 2024-05-28 10:16+0000\n"
+"PO-Revision-Date: 2025-03-05 09:02+0000\n"
 "Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/documentation-hosted-version/de/>\n"
 "Language: de\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 msgid "You can use the hosted version of the Open Web Calendar yourself."
 msgstr ""
@@ -59,9 +59,11 @@ msgid ""
 "If you decide later to [setup your own server](../self), you can do this and"
 " [migrate all calendars](../migrate) you use to the other server."
 msgstr ""
+"Solltest Du später [einen eigenen Server aufsetzen](../self), dann kannst du"
+" danach [alle Kalender migrieren](../migrate)."
 
 msgid "[Uptime service monitor for the hosted instances][kuma]"
-msgstr ""
+msgstr "[Monitor für die bereitgestellten Dienste][kuma]"
 
 #, fuzzy
 msgid "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"

@@ -11,6 +11,24 @@ about: 'The Open Web Calendar uses ICS/ICal calendars online and displays them i
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-urls
 calendar-urls: 'To merge several calendars, please input the URLs of the ICS calendars
   here:'
+# Button to encrypt the calendar content.
+button-encrypt: 'Encrypt URL'
+button-encrypted: 'Encrypted'
+button-edit: 'Edit'
+button-remove: 'Remove'
+password-urls: 'We recommend encrypting URLs if they contain sensitive data. Save the following password only if you intend to decrypt them later.'
+decrypt-urls: 'Decrypt URLs'
+add-url-placeholder-url: 'https://link.to/a-calendar.ics'
+add-url-placeholder-username: 'optional username'
+add-url-placeholder-password: 'optional password'
+add-url-button: Add
+add-url-calendar-public: This is a public url
+supported-standards: 'We support the following standards: ICAL, CalDAV, webcal.'
+
+# Section title
+about-title: "About"
+# Section title
+calendar-embed-title: "Use & Embed"
 # This describes the calendar code to embed.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code
 calendar-code: "To embed the calendar, use this code on your website:"
@@ -278,3 +296,18 @@ spec-host-html: 'You can <a href="javascript:downloadJSONSpecification()">downlo
 # https://open-web-calendar.hosted.quelltext.eu/#translate-spec-link
 spec-link: "Once you have placed the specification somewhere online, you can create\
   \ a link like this one:"
+
+
+# Participants
+participants-title: "Participants and Organization"
+participants-description: "You can invite others to events and people can sign up. You can enable these options to view the names and email addresses below the event description."
+participants-organizers: "Show who organizes the event?"
+participants-attendees: "Show who attends the event?"
+participants-status: "Show the status of participants? (i.e. accepted/declined)"
+participants-type: "Show which kind of participant this is? (i.e. individual or group)"
+participants-role: "Show the role of the participant? (i.e. organizer, required person or optional)"
+
+
+# CalDAV Options
+caldav-choose-calendar: "Choose a calendar from your account:"
+caldav-allow-sign-up: "Enable email sign-up for events in this calendar:"

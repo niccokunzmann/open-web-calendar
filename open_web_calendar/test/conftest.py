@@ -24,6 +24,7 @@ CALENDAR_DIRECTORY = HERE / ".." / "features" / "calendars"
 sys.path.append(HERE.absolute() / ".." / "..")
 sys.path.append(HERE.absolute())
 from open_web_calendar.app import DEFAULT_SPECIFICATION, cache_url  # noqa: E402
+from open_web_calendar.encryption import FernetStore  # noqa: E402
 
 DEFAULT_SPECIFICATION["url"] = []
 
@@ -50,13 +51,14 @@ def mock():
 
 
 @pytest.fixture
-def app() -> Flask:
+def app(store, monkeypatch) -> Flask:
     """Create the app.
 
     See https://flask.palletsprojects.com/en/2.2.x/testing/
     """
-    from open_web_calendar.app import app
+    from open_web_calendar import app
 
+    monkeypatch.setattr(FernetStore, "from_environment", lambda: store)
     app.config.update(
         {
             "TESTING": True,
@@ -66,8 +68,6 @@ def app() -> Flask:
     # other setup can go here
 
     return app
-
-    # clean up / reset resources here
 
 
 @pytest.fixture
@@ -82,8 +82,9 @@ def runner(app):
 
 calendar_files = {}
 for file in CALENDAR_DIRECTORY.iterdir():
-    with file.open() as f:
-        calendar_files[file] = f.read()
+    if file.is_file():
+        with file.open() as f:
+            calendar_files[file] = f.read()
 
 
 @pytest.fixture
@@ -138,3 +139,15 @@ def merged(
         return icalendar.Calendar.from_ical(response.data)
 
     return _merged_calendars
+
+
+@pytest.fixture
+def store():
+    """A test crypt store for the open web calendar."""
+    return FernetStore(["n77iebivnjNTLDpmFcu6DuNFTHUnlEjCskx8oe0Xh8k="])
+
+
+@pytest.fixture
+def todo():
+    """This test should be implement later."""
+    pytest.skip("This test needs implementing.")

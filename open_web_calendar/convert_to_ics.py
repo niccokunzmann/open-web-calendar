@@ -9,6 +9,8 @@ from icalendar import Calendar, Event, Timezone
 from icalendar.prop import vDDDTypes
 from mergecal import merge_calendars
 
+from open_web_calendar.calendars.base import Calendars
+
 from .conversion_base import ConversionStrategy
 
 
@@ -27,16 +29,17 @@ class ConvertToICS(ConversionStrategy):
         """Whether a component is an event."""
         return isinstance(component, Timezone)
 
-    def collect_components_from(self, calendar_index, calendars):
+    def collect_components_from(self, calendar_index: int, calendars: Calendars):
         with self.lock:
-            self.components.extend(calendars)
+            self.components.extend(calendars.get_icalendars())
 
-    def convert_error(self, error, url, tb_s):
+    def convert_error(self, error: str, url: str, tb_s: str):
         """Create an error which can be used by the dhtmlx scheduler."""
         event = Event()
         event["DTSTART"] = event["DTEND"] = vDDDTypes(datetime.datetime.now())
-        event["SUMMARY"] = type(error).__name__
-        event["DESCRIPTION"] = str(error) + "\n\n" + tb_s
+        event["SUMMARY"] = error
+        event["DESCRIPTION"] = tb_s
+        event["URL"] = url
         event["UID"] = "error" + str(id(error))
         if url:
             event["URL"] = url
@@ -53,4 +56,10 @@ class ConvertToICS(ConversionStrategy):
         calendar["X-WR-CALNAME"] = self.title
         calendar["NAME"] = self.title
         calendar["X-PROD-SOURCE"] = self.specification["source_code"]
+        # Replace the event and only allow one event
+        only_event = self.specification.get("set_event")
+        if only_event:
+            for event in calendar.events:
+                calendar.subcomponents.remove(event)
+            calendar.add_component(Event.from_ical(only_event))
         return Response(calendar.to_ical(), mimetype="text/calendar")

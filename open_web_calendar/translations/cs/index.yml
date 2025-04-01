@@ -1,1 +1,127 @@
 controls-date: Datum
+skins-dark: Tmavý
+links-title: Odkazy
+style-title: Vlastní styl s CSS
+skins-title: Vzhledy
+skins-material: Materiál
+links-parent: Otevřít odkazovaný dokument v rodičovském okně.
+add-url-calendar-public: Toto je veřejná URL
+map-custom-summary: Přizpůsobit odkazy do map
+password-urls: Doporučujeme šifrování URL pokud obsahují citlivé informace. V případě
+  že plánujete jejich dešifrování, uložte si následující heslo.
+links-self: Otevřít odkazovaný dokument ve stejném okně, jak kliknutí na odkaz.
+section-customization: Můžete provádět další úpravy kalendáře.
+links-description: Události mohou mít místa a URL. Pokud vložíte kalendář do webové
+  stránky, můžete si vybrat, kde kliknutý odkaz otevře stránku.
+configure-week-title: Dny v týdnu
+calendar-urls: 'Pro sloučení více kalendářů, vložte prosím ICS URL zde:'
+title-title: Název
+title-description: 'Chcete-li změnit název, zadejte název kalendáře zde:'
+starting-date-title: Počáteční datum
+time-increment-10: 10 minut
+time-increment-15: 15 minut
+time-increment-30: 30 minut
+time-increment-60: 1 hodina
+language-title: Jazyk
+language-description: Můžete nastavit jazyk kalendáře.
+skins-terrace: Terrace
+skins-flat: Plochý
+skins-contrast-black: Kontrastní černá
+skins-contrast-white: Kontrastní bílá
+links-blank: Otevřít odkazovaný dokument v novém okně nebo záložce.
+style-css: Můžete zadat vlastní vlastnosti CSS.
+loader-none: bez načítání
+tabs-title: Záložky kalendáře
+tabs-description: 'Zobrazení měsíce je výchozí. Je však možné nastavit jiné počáteční
+  zobrazení z následujících:'
+controls-description: 'V případě že nechcete zobrazit všechny ovládací prvky, vyberte
+  zde které chcete zobrazit:'
+language-browser-false: 'Kalendář je vždy v tomto jazyce:'
+event-status-cancelled: zrušeno
+event-status-confirmed: potvrzeno
+event-status-tentative: předběžné
+button-encrypted: Šifrované
+button-remove: Odstranit
+add-url-placeholder-url: https://odkaz.na/nějaký-kalendář.ics
+style-days-outside: Některé dny kalendáře mají jinou barvu, pokud nejsou zahrnuty
+  v rámci měsíce.
+timezone-title: Časové pásmo
+loader-title: Nahrávání animace
+style-click: Můžete změnit barvu prvků, na které lze kliknout.
+calendar-code-execution: Můžete zobrazit výsledný kalendář níže.
+hour-format-description: Můžete si vybrat mezi 24 hodinovým a 12 hodinovým formátem.
+  Je možno více možností.
+loader-default: kruhové načítání
+starting-date-description: 'Pro změnu počátečního data kalendáře:'
+first-hour-title: První hodina
+first-hour-description: 'Pro změnu první hodiny zobrazení kalendáře:'
+last-hour-title: Poslední hodina
+last-hour-description: 'Pro změnu první hodiny zobrazení kalendáře:'
+time-increment-title: Časový skok
+style-css-classes: 'Zde jsou příklady tříd CSS pro stylování událostí:'
+timezone-browser: použít časové pásmo prohlížeče
+about-title: O projektu
+calendar-embed-title: Použití a vložení
+configure-week-description: Týden může začít v pondělí nebo neděli.
+style-background: Můžete změnit barvu pozadí kalendáře.
+style-date: Můžete změnit barvu pozadí aktuálního data.
+style-days: Pokud chcete mít jinou barvu pro dny, můžete ji specifikovat.
+decrypt-urls: Dešifrovat URL
+about: Open Web Calendar používá ICS/ICal kalendáře online a zobrazuje je v jednom
+  kalendáři. Můžete jej použít s kalendářními systémy jako je Nextcloud, Outlook,
+  Google kalendář, Meetup a jinými, používajícími standard ICS.
+button-edit: Upravit
+button-encrypt: Šifrovat URL
+supported-standards: Podporujeme standardy ICAL, CalDAV a webcal.
+add-url-placeholder-username: volitelné uživatelské jméno
+add-url-placeholder-password: volitelné heslo
+language-browser-true: 'Kalendář je v jazyce prohlížeče. Pokud není jazyk přeložen,
+  ukazuje se v:'
+map-title: Odkazy map a umístění
+add-url-button: Přidat
+calendar-code: 'Chcete-li vložit kalendář, použijte tento kód na svých webových stránkách:'
+time-increment-description: 'Změnit míru posunutí času v denním a týdenním zobrazení:'
+hour-format-title: Konvence hodin
+hour-format-specification-link: Zobrazit specifikaci.
+skins-description: Můžete vybrat různé vzhledy pro kalendář.
+links-top: Otevřít odkazovaný dokument v plném těle okna.
+map-description: Místa událostí mohou být souřadnice nebo text. Nakonfigurujte zde,
+  která mapová služba bude použita při kliknutí na místo události.
+translate: Přeložit
+map-custom: Vlastní mapa
+map-link-location-description: Zde zadejte URL odkaz na mapu a vložte {location},
+  kde proběhne vyhledávací požadavek.
+map-link-geo-description: Zadejte adresu URL mapy a vložte {lat} a {lon} pro zeměpisnou
+  výšku a šířku.
+event-status-title: Stav události
+style-description: Můžete změnit barvu Vašeho kalendáře a mnoho dalších vlastností
+  pomocí CSS. Vaše přizpůsobení má prioritu před vybraným vzhledem. Níže si můžete
+  vybrat z několika úprav, které jsme pro vás připravili.
+event-status-description: 'Změnit vzhled popisu události v závislosti na stavu:'
+loader-description: V některých případech serveru trvá poměrně hodně času načíst kalendář.
+  V případě, že server používá bezplatný plán na Heroku, server musí být nejdříve
+  spuštěn.
+timezone-description: 'Časové pásmo je převzato z prohlížeče uživatele. Pokud chcete,
+  aby váš kalendář byl nastaven na jedno určité pásmo, máte možnost níže. Váš prohlížeč
+  používá toto časové pásmo:'
+loading: načítání…
+spec-title: Hostování specifikace
+spec-description: 'Kalendář může být generován nejen pomocí adresy URL, ale také prostřednictvím
+  specifikace JSON nebo YAML ze souboru. Nastavení výše generuje tuto specifikaci:'
+spec-host-html: Můžete <a href="javascript:downloadJSONSpecification()">stáhnout tuto
+  specifikaci</a> a umístit ji na web. Takto máte stále kontrolu nad nastavením kalendáře
+  po sdílení odkazu, např, na GitHub <a href="https://gist.github.com/">Gist</a>.
+participants-title: Účastníci a organizace
+participants-status: Zobrazit stav účastníků? (např. přijal(a)/odmítl(a))
+participants-attendees: Zobrazit, kdo se účastní události?
+participants-description: Můžete pozvat ostatní na události a lidi se mohou zaregistrovat.
+  Můžete povolit tyto možnosti pro zobrazení jmen a e-mailových adres pod popisem
+  události.
+participants-organizers: Zobrazit, kdo organizuje událost?
+participants-type: Zobrazit druh účastníka? (např. jednotlivec nebo skupina)
+participants-role: Zobrazit roli účastníka? (např. pořadatel, potřebná osoba nebo
+  volitelná)
+caldav-choose-calendar: 'Vyberte si kalendář ze svého účtu:'
+spec-link: 'Jakmile jste umístili specifikaci někde on-line, můžete vytvořit odkaz
+  jako tento:'
+caldav-allow-sign-up: 'Povolit e-mailovou registraci pro události v tomto kalendáři:'

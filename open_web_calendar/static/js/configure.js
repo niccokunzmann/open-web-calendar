@@ -58,8 +58,31 @@ function makeLink(url, html) {
     const link = document.createElement("a");
     link.target = specification.target;
     link.href = isSafeUrl(url) ? url : "#";
-    link.innerHTML = html;
+    link.innerHTML = html ? html : "";
     return link.outerHTML;
+}
+
+
+/*
+ * Download the vent ICS with a file name.
+ */
+function downloadICS(event) {
+    // from https://stackoverflow.com/a/18197341/1320237
+    const element = document.createElement('a');
+    const convert = scheduler.date.date_to_str("%Y-%m-%d %H%i", false);
+    const filename = convert(event.start_date).replace(" 0000", "") +
+    " " + event.text.replace(/[/:\\]/g, "-") + ".ics";
+    let url = document.location.href.replace("/calendar.html", "/calendar.ics") + 
+        "&filename=" + encodeURIComponent(filename) + 
+        "&set_event=" + encodeURIComponent(event.ical);
+    element.setAttribute('href', url);
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    element.target = "_blank";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
 }
 
 /*
@@ -127,7 +150,7 @@ var template = {
     },
     "categories": function (event) {
       if (event.categories.length) {
-          return '<b>| ' + event.categories.map(escapeHtml).join(" | ") + ' |</b> ';
+          return '<b class="categories">| ' + event.categories.map(escapeHtml).join(" | ") + ' |</b> ';
       }
       return "";
     },
@@ -141,6 +164,33 @@ var template = {
           return "";
         }
         return scheduler.templates.event_date(start) + " - " + scheduler.templates.event_date(end)
+    },
+    "participants" : function (participants) {
+        if (!specification.show_organizers && !specification.show_attendees || participants.length == 0) {
+            return "";
+        }
+        const details = document.createElement("details");
+        details.classList.add("participants");
+        const summary = document.createElement("summary");
+        summary.innerText = OWCLocale.labels.participants;
+        details.appendChild(summary);
+        const ol = document.createElement("ol");
+        for (const participant of participants) {
+            if ((participant.is_oragnizer && !specification.show_organizers) ||
+                (!participant.is_oragnizer && !specification.show_attendees)
+            ) {
+                continue;
+            }
+            const li = document.createElement("li");
+            const link = makeLink("mailto:" + participant.email, escapeHtml(participant.name ? participant.name : participant.email));
+            li.innerHTML = 
+                '<div class="icon status"></div><div class="icon type"></div><div class="icon role"></div>' + 
+                link;
+            participant.css.forEach((e) => li.classList.add(e));
+            ol.appendChild(li);
+        }
+        details.appendChild(ol);
+        return details.outerHTML;
     }
 }
 
@@ -153,10 +203,15 @@ function showError(element) {
 }
 
 function toggleErrorWindow() {
-    var scheduler_tag = document.getElementById("scheduler_here");
-    var errors = document.getElementById("errorWindow");
-    scheduler_tag.classList.toggle("hidden");
+    // var scheduler_tag = document.getElementById("scheduler_here");
+    const errors = document.getElementById("errorWindow");
+    // scheduler_tag.classList.toggle("hidden");
     errors.classList.toggle("hidden");
+}
+
+function showErrorWindows() {
+    const errors = document.getElementById("errorWindow");
+    errors.classList.remove("hidden");
 }
 
 function showXHRError(xhr) {
@@ -187,15 +242,20 @@ function showEventError(error) {
     showError(div);
 }
 
+function showLoader() {
+    let loader = document.getElementById("loader");
+    loader.classList.remove("hidden");
+}
+
 function disableLoader() {
-    var loader = document.getElementById("loader");
+    let loader = document.getElementById("loader");
     loader.classList.add("hidden");
 }
 
 function setLoader() {
     if (specification.loader) {
-        var loader = document.getElementById("loader");
-        var url = specification.loader.replace(/'/g, "%27");
+        let loader = document.getElementById("loader");
+        let url = specification.loader.replace(/'/g, "%27");
         loader.style.cssText += "background:url('" + url + "') center center no-repeat;"
     } else {
         disableLoader();
@@ -262,12 +322,24 @@ function resetConfig() {
     return true;
 }
 
+// If you add an action XXX here, also add icon_XXX to the calendar translations
+// And also an icon to static/img/icons/XXX.svg
+const actions = {
+    "subscribe": function(event) {
+        console.log("Save event.", event);
+        downloadICS(event);
+    },
+    "signup": (event) => {
+        console.log("Sign up to event:", event);
+        openSignUp(event);
+    }
+}
 
 /* Disable/Enable features based on touch/mouse-over gestures
  * see https://stackoverflow.com/a/52855084/1320237
  */
-var IS_TOUCH_SCREEN = window.matchMedia("(pointer: coarse)").matches;
-var HAS_TOOLTIP = !IS_TOUCH_SCREEN;
+const IS_TOUCH_SCREEN = window.matchMedia("(pointer: coarse)").matches;
+const CAN_HAVE_TOOLTIP = !IS_TOUCH_SCREEN;
 
 function loadCalendar() {
     /* Format the time of the hour.
@@ -285,9 +357,9 @@ function loadCalendar() {
     scheduler.plugins({
         agenda_view: true,
         multisource: true,
-        quick_info: true,
+        quick_info: specification.plugin_event_details,
         recurring: false,
-        tooltip: HAS_TOOLTIP,
+        tooltip: CAN_HAVE_TOOLTIP && specification.plugin_event_tooltip,
         readonly: true,
         limit: true,
         serialize: true,
@@ -346,7 +418,7 @@ function loadCalendar() {
 
     // tooltip
     // see https://docs.dhtmlx.com/scheduler/tooltips.html
-    if (HAS_TOOLTIP) {
+    if (CAN_HAVE_TOOLTIP) {
         scheduler.templates.tooltip_text = function(start, end, event) {
             return template.formatted_summary(event) + template.details(event) + template.location(event);
         };
@@ -361,12 +433,24 @@ function loadCalendar() {
     scheduler.templates.quick_info_content = function(start, end, event){
         return template.details(event) +
             template.location(event) +
+            template.participants(event.participants) +
             template.debug(event);
     }
     // see https://docs.dhtmlx.com/scheduler/api__scheduler_quick_info_date_template.html
     scheduler.templates.quick_info_date = function(start, end, event){
         return joinHtmlLines([template.date(start, end), template.categories(event)]);
     }
+
+    // hide the button to sign up
+    // see https://docs.dhtmlx.com/scheduler/api__scheduler_onquickinfo_event.html
+    scheduler.attachEvent("onQuickInfo",function(eventId){
+        const event = scheduler.getEvent(eventId);
+        if (event.owc["X-OWC-CAN-ADD-ATTENDEE"] == "true") {
+            document.body.classList.remove("cannot-sign-up");
+        } else {
+            document.body.classList.add("cannot-sign-up");
+        }
+    });
 
     // general style
     scheduler.templates.event_class=function(start,end,event){
@@ -378,13 +462,6 @@ function loadCalendar() {
 
     // set agenda date
     scheduler.templates.agenda_date = scheduler.templates.month_date;
-
-    schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") +
-        document.location.search;
-    // add the time zone if not specified
-    if (specification.timezone == "") {
-        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
-    }
 
     /* load the events */
     scheduler.attachEvent("onLoadError", function(xhr) {
@@ -400,15 +477,52 @@ function loadCalendar() {
     //requestJSON(schedulerUrl, loadEventsOnSuccess, loadEventsOnError);
     scheduler.setLoadMode("day");
     onCalendarInitialized();
-    scheduler.load(schedulerUrl, "json");
-
-
+    loadScheduler();
     //var dp = new dataProcessor(schedulerUrl);
     // use RESTful API on the backend
     //dp.setTransactionMode("REST");
     //dp.init(scheduler);
 
     setLoader();
+
+    // set the actions we can use when clicking an event.
+    // see https://docs.dhtmlx.com/scheduler/customizing_edit_select_bars.html
+    scheduler.config.icons_select = [];
+    getOwnProperties(actions).forEach(function(action) {
+        let actionId = "icon_" + action;
+        // Add this to the config.
+        scheduler.config.icons_select.push(actionId);
+        // Add an action.
+        scheduler._click.buttons[action] = function(id){
+            const event = scheduler.getEvent(id);
+            actions[action](event);
+         };
+         /* Add a CSS style.
+          * See https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images
+          * See https://css-tricks.com/change-color-of-svg-on-hover/ 
+          * See https://stackoverflow.com/a/707580
+          */
+        const styleSheet = document.createElement("style")
+        styleSheet.textContent = `.dhx_menu_icon.${actionId} {mask: url('/img/icons/${action}.svg');mask-size: 100%;}`;
+        // Add a default text in case none is translated.
+        document.head.appendChild(styleSheet);
+        if (!OWCLocale.labels[actionId]) {
+            OWCLocale.labels[actionId] = action;
+            scheduler.i18n.setLocale(OWCLocale);
+        }
+    });
+}
+
+function loadScheduler() {
+    scheduler.clearAll();
+    let schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + document.location.search;
+    // add the time zone if not specified
+    if (specification.timezone == "") {
+        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
+    }
+
+    scheduler.load(schedulerUrl, "json");
+    showLoader();
 }
 
 var onCalendarInitialized = onCalendarInitialized || function() {};

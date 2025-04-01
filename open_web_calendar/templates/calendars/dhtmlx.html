@@ -16,23 +16,21 @@ SPDX-License-Identifier: GPL-2.0-only
         </script>
         <!-- scheduler -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="js/dhtmlx/dhtmlxscheduler.js"
-            charset="utf-8"></script>
-        <script src="js/configure.js"
-            charset="utf-8"></script>
-        <script src="js/common.js"
-            charset="utf-8"></script>
-            <link href="css/dhtmlx/dhtmlxscheduler_material/fonts.googleapis.com/family-Roboto-400-500-600.css"
-            rel="stylesheet" type="text/css" charset="utf-8">
+        <script src="js/dhtmlx/dhtmlxscheduler.js"></script>
+        <script src="js/configure.js"></script>
+        <script src="js/signup.js"></script>
+        <script src="js/common.js"></script>
+        <link href="css/dhtmlx/dhtmlxscheduler_material/fonts.googleapis.com/family-Roboto-400-500-600.css"
+            rel="stylesheet" type="text/css">
         <link href="css/dhtmlx/dhtmlxscheduler.css"
-            rel="stylesheet" type="text/css" charset="utf-8">
+            rel="stylesheet" type="text/css">
         <link href="css/dhtmlx/style.css"
-            rel="stylesheet" type="text/css" charset="utf-8">
+            rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="{{ specification.favicon }}">
         <!-- see https://docs.dhtmlx.com/scheduler/localization.html -->
         <script src="locale_{{ language }}.js" charset="utf-8"></script>
         {% for link in specification.css_url %}
-        <link href="{{ link }}" rel="stylesheet" type="text/css" charset="utf-8">
+        <link href="{{ link }}" rel="stylesheet" type="text/css">
         {% endfor %}
         <style>
             html, body{
@@ -41,9 +39,14 @@ SPDX-License-Identifier: GPL-2.0-only
                 height:100%;
                 overflow:hidden;
             }
+            /* Event Status */
             {% if specification['style-event-status-tentative'] %}.STATUS-TENTATIVE { font-style: italic; }{% endif %}
             {% if specification['style-event-status-confirmed'] %}.event { font-weight: normal; } .STATUS-CONFIRMED { font-weight: bold; }{% endif %}
             {% if specification['style-event-status-cancelled'] %}.STATUS-CANCELLED { text-decoration: line-through; }{% endif %}
+            /* participants */
+            {% if not specification['show_participant_status'] %}.PARTICIPANT .status { display: none; }{% endif %}
+            {% if not specification['show_participant_type'] %}.PARTICIPANT .type { display: none; }{% endif %}
+            {% if not specification['show_participant_role'] %}.PARTICIPANT .role { display: none; }{% endif %}
             {{ specification['css'] | safe }}
         </style>
         {% for link in specification.javascript_url %}
@@ -65,6 +68,16 @@ SPDX-License-Identifier: GPL-2.0-only
         <div id="loader" class="fullsize"></div>
         <div id="errorWindow" class="hidden fullsize">
             <a class="closeButton" href="javascript:toggleErrorWindow();">X</a>
+        </div>
+        <div id="email-signup" class="fullsize hidden">
+            <div class="sign-up-content">
+                <input type="text" placeholder="{{ string("calendar.signup-name") }}" id="signup-name" class="item"/>
+                <input type="text" placeholder="{{ string("calendar.signup-email") }}" id="signup-email" class="item"/>
+                <div class="row">
+                    <button class="item" id="sign-up-button">{{ string("calendar.icon_signup") }}</button>
+                    <button class="item" onclick="cancelSignUp()">❌</button>
+                </div>
+            </div>
         </div>
         <div class="status-window">
             <a class="item" id="errorStatusIcon" href="javascript:toggleErrorWindow();">!</a>

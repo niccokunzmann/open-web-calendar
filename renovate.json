@@ -8,6 +8,9 @@
     "enabled": true,
     "automerge": true
   },
+  "pip_requirements": {
+    "fileMatch": ["(^|/)requirements/\\w*\\.txt$"]
+  },
   "packageRules": [
     {
       "matchUpdateTypes": ["major", "minor", "patch"],

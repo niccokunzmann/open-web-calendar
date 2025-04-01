@@ -1,45 +1,25 @@
 /*
- * SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+ * SPDX-FileCopyrightText: 2025 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
  *
  * SPDX-License-Identifier: GPL-2.0-only
  */
 
-header, header a {
-    text-align: center;
-    color: white;
-    background-color: black;
-    padding: 0.66em;
-    text-decoration: none;
+body, .flexcontainer {
+  display: flex;
+  flex-direction: column;
 }
 
-body {
-    margin: 0px;
-    padding:0px;
+.flexcontainer {
+  flex: 1 1 auto;
 }
 
-footer {
-  border-color: black;
-  border-width: 0px;
-  border-top-width: 1px;
-  border-style: solid;
-  margin-top: 0.3em;
-  padding-top: 0.3em;
-  color: gray;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
-}
-
-footer a {
-  color: gray;
-}
 
 .languages {
   text-align: center;
 }
 
 .languages a {
-  color: gray;
+  color: var(--secondary-color);
   text-decoration: none;
   margin: 0.2em;
   display: inline-block;
@@ -50,33 +30,42 @@ footer a {
 }
 
 .languages a.current {
-  color: black;
+  color: var(--primary-color);
 }
 
-main {
+main, .navcontent {
     padding: 1em;
-    max-width: 60em;
     margin-right: auto;
     margin-left: auto;
 }
 
+section {
+  max-width: 50em;
+  overflow-y: auto;
+  height: 100%;
+  flex: 1 1 auto;
+}
+
+
 .code {
     padding: 1em;
-    background-color: #eee;
-    border-radius: 0.66em;
-    overflow: hidden;
+    background: var(--secondary-color);
+    color: var(--background-color);
+    border-radius: var(--border-radius);
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
-#open-web-calendar {
-}
 
-.calendar-url-input {
-    width: 80%;
+.calendar-url-input, #calendar-title{
+    width: 100%;
 }
 
 #open-web-calendar {
     width: 100%;
-    height: 600px;
+    height: 100%;
+    min-height: var(--minimum-height-of-calendar);
+    flex: 1 1 auto;
 }
 
 #css-input {
@@ -103,4 +92,320 @@ main {
   /* credits to https://css-tricks.com/styling-texty-inputs-only/ */
   margin: 2px;
   width: 100%;
+}
+
+#calendar-link {
+  word-wrap: break-word;
+  padding: 1em;
+  background: var(--secondary-color);
+  color: var(--background-color);
+  border-radius: var(--border-radius);
+  display: block;
+}
+
+.no-style-listing {
+  padding-bottom: 1em;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.no-style-listing li {
+  padding-bottom: 0.5em;
+}
+
+nav {
+  overflow: visible;
+  /* position: sticky; */
+  /* top: 0; */
+  width: 100%;
+  height: var(--nav-height);
+}
+
+nav h2 {
+  user-select: none;
+}
+
+.navcontent {
+  display: flex;
+  justify-content: space-between;
+}
+
+section h2 {
+  display: none;
+}
+
+section {
+  padding: 1em;
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+nav li {
+}
+
+nav ul {
+  display: none;
+}
+
+nav h1 {
+  font-size: 1.5em;
+}
+
+#currect-section {
+  color: var(--primary-color);
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: inline-block;
+}
+
+#navigate-next, #navigate-previous {
+  color: var(--secondary-color);
+  vertical-align: middle;
+  display: block;
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+#navigate-previous:before {
+  content: "⬅ ";
+}
+
+#navigate-next:after {
+  content: " ➡";
+}
+
+
+#navigate-next:hover, #navigate-previous:hover {
+  color: var(--primary-color);
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+} 
+
+
+
+#bottom-done-link:before {
+  content: "✓ ";
+}
+
+.bottom-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-previous-section .needs-previous-section, .no-next-section .needs-next-section {
+  visibility: hidden;
+}
+
+#event-status-form {
+  text-align: center;
+}
+
+.action-paragraph {
+  text-align: center;
+}
+
+.belongs-together {
+  display: inline-block;
+}
+
+#height-slider {
+  height: var(--bottom-slider-height);
+  min-height: var(--minimum-bottom-slider-height);
+  /* display: block; */
+  /* align-self: stretch; */
+  /* position: fixed;
+  bottom: 0em; */
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  user-select: none;
+  color: var(--background-color);
+  background: var(--secondary-color);
+  overflow: hidden;
+  /* see https://stackoverflow.com/a/43275544/1320237 */
+  /* touch-action: none; */
+  max-height: calc(var(--maximum-height-of-calendar) - var(--minimum-height-of-calendar));
+}
+
+#overlay {
+  /* block mouse events over calendar and other elements */
+  background-color: rgba(255, 255, 255, 0.01);
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0em;
+  left: 0em;
+  right: 0em;
+  bottom: 0em;
+  height: var(--total-document-height);
+  /* see https://stackoverflow.com/a/43275544/1320237 */
+  /* touch-action: none; */
+}
+
+.sliding #overlay {
+  display: block;
+}
+
+#width-slider {
+  display: none;
+  /* see https://stackoverflow.com/a/43275544/1320237 */
+  /* touch-action: none; */
+}
+
+aside {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: var(--maximum-height-of-calendar);
+}
+
+#calendar-code-execution {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+/* Adding URLS */
+
+/* see https://stackoverflow.com/a/76079959/1320237 */
+#add-url-calendars:not(:has(option)) {
+  display: none;
+}
+
+#add-url-paragraph {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-url-url {
+  width: 100%;
+}
+
+#credentials {
+  display: flex;
+  flex-direction: row;
+}
+
+#add-url-username, #add-url-password, #add-url-credentials-label {
+  flex: 1 1 auto;
+  width: 33%;
+}
+
+.default-hidden {
+  display: none;
+}
+
+.toggle-default-visibility .default-visible {
+  display: none;
+}
+
+.toggle-default-visibility .default-hidden {
+  display: unset;
+}
+
+#calendar-urls a {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+#calendar-urls li {
+  text-align: center;
+  border-radius: var(--border-radius);
+  border-width: 1px;
+  border-color: var(--secondary-color);
+  border-style: solid;
+  padding: 1em;
+}
+
+#calendar-urls li input, #calendar-urls li button {
+  height: 2em;
+  vertical-align: middle;
+}
+
+#select-sections   {
+  text-align: center;
+}
+
+#caldav-options {
+  display: none;
+}
+
+#caldav-options.visible {
+  display: flex;
+  flex-direction: column;
+}
+
+#caldav-options line {
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+}
+
+
+/* media query goes last */
+
+@media only screen and (min-width: 70em) {
+  :root {
+    --main-width: 35em;
+    --nav-height: 7em;
+    --bottom-slider-height: 1.5em;
+    --maximum-height-of-calendar: calc(100vh - var(--nav-height));
+  }
+  aside, main {
+    /* display: inline-block; */
+    height: var(--maximum-height-of-calendar);
+    margin: 0em;
+    padding: 0em;
+
+  }
+  .flexcontainer {
+    flex-direction: row;
+  }
+  main {
+    width: var(--main-width);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  aside, #height-slider  {
+    width: calc(100% - var(--main-width));
+  }
+  nav {
+    display: block;
+    position: initial;
+    /* height: var(--nav-height); */
+  }
+  .bottom-navigation {
+    width: var(--main-width);
+    flex: 1 1 auto;
+  }
+  #height-slider {
+    /* position: fixed;
+    bottom: 0em; */
+    max-height: calc(100% - var(--minimum-height-of-calendar));
+    width: 100%;
+  }   
+  #width-slider {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: var(--main-width);
+    translate: -50% -50%;
+    cursor: pointer;
+    user-select: none;
+  }
 }

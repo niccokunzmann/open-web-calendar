@@ -1,1 +1,11 @@
-{}
+timezone-browser: 'Toto je časová zóna Vašeho zařízení:'
+description: Zde je více informací o kalendáři. Odkazy níže popisují různé způsoby
+  použití.
+license: Licence
+links-website: Zpět na zobrazení kalendáře.
+links-spec: Zobrazit nebo stáhnout specifikaci kalendáře.
+links-edit: Upravit kopii kalendáře.
+timezone-choice: 'Zde můžete změnit časové pásmo kalendáře:'
+project-title: O projektu Open Web Calendar
+links-ics: Použijte tento odkaz pro přihlášení se ke sledování kalendáře nebo pro
+  přidání událostí do vlastního kalendáře.

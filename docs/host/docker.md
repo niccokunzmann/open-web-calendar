@@ -96,6 +96,11 @@ To deploy the Open Web Calendar with `docker compose`, follow these steps:
     [log rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-important-how-to-rotate-docker-logs-840520e4c47)
     as it is very talkative.
 
+!!! note "IPv6"
+
+    By default, docker only uses IPv4.
+    You can [enable IPv6](https://docs.docker.com/engine/daemon/ipv6/).
+
 ## Update pre-build image with Docker Compose
 
 If you want to update your image with the latest version from [Dockerhub] run this:
@@ -110,47 +115,24 @@ Note: You need to restart the container after pulling in order for the update to
 docker compose up -d
 ```
 
-## Preventing SSRF attacks using a Tor proxy
+## Preventing SSRF Attacks
 
-The Open Web Calendar can be configured to use a proxy to request `.ics`
-and other files. The following example shows the usage of a Tor proxy.
+The Open Web Calendar by default allows unrestricted access to the local network and Internet.
+Adding a proxy to filter the requests is important, especially if you host other services which
+should be not accessed by external requests.
+Such an attack is called [Server Side Request Forgery](https://en.wikipedia.org/wiki/Server-side_request_forgery).
+
+The Open Web Calendar can be configured to use a **proxy** to request `.ics` and other files.
+Filtering traffic is a complicated task and out of scope for this project. Proxies do that well better!
+
+### Preventing SSRF attacks using a Tor proxy
+
+The following example shows the usage of a Tor proxy.
 You can try it out at
 [tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted.quelltext.eu/).
 
-``` YAML
-version: '3'
-services:
-  tor-open-web-calendar:
-    image: niccokunzmann/open-web-calendar:master
-    restart: unless-stopped
-    environment:
-    # use socks5h for *.onion
-    # see https://stackoverflow.com/a/42972942/1320237
-      - HTTP_PROXY=socks5h://tor-socks-proxy:9150
-      - HTTPS_PROXY=socks5h://tor-socks-proxy:9150
-      - ALL_PROXY=socks5h://tor-socks-proxy:9150
-      - ALLOWED_HOSTS=
-    # optional: create a private network so OWC cannot access the Internet directly
-    networks:
-      - no-internet-only-tor
-
-  # from https://hub.docker.com/r/peterdavehello/tor-socks-proxy/
-  tor-socks-proxy:
-    image: peterdavehello/tor-socks-proxy # use :test for arm64
-    restart: unless-stopped
-    # optional: allow access to OWC and the Internet
-    networks:
-      - default
-      - no-internet-only-tor
-
-networks:
-  default:
-    ipam:
-      driver: default
-  no-internet-only-tor: # see https://stackoverflow.com/a/51964169/1320237
-    driver: bridge
-    internal: true
-
+```yaml
+--8<-- "tor/docker-compose.yml"
 ```
 
 The configuration above prevents access to the internal network as the
@@ -164,6 +146,34 @@ This [example calendar](https://tor.open-web-calendar.hosted.quelltext.eu/calend
 See also:
 
 - [SSRF Protection with a Proxy Server](../configure#ssrf-protection-with-a-proxy-server)
+
+## Preventing SSRF attacks using a Squid Proxy
+
+The [Squid] proxy is a flexible and highly configurable proxy server.
+The Open Web Calendar can be configured to use it to request `.ics` and other files.
+
+Use this as your `docker-compose.yml` file:
+
+```yaml
+--8<-- "docker/docker-compose.yml"
+```
+
+And add the following `open-web-calendar.conf` file into the same directory.
+
+```sh
+--8<-- "docker/open-web-calendar.conf"
+```
+
+Then, you can start the service with this command:
+
+```sh
+docker compose up -d
+```
+
+When you try to access a forbidden calendar with the local `open-web-calendar`,
+e.q. `http://172.16.0.1/calendar.ics`, you will see this error message:
+
+> 403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics
 
 ## Automatic Updates
 
@@ -218,3 +228,4 @@ you can [configure the behavior](../configure).
 
 
 [Dockerhub]: {{link.dockerhub}}
+[Squid]: https://www.squid-cache.org/

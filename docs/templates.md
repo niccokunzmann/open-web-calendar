@@ -48,7 +48,7 @@ description: "Play with a variety of Calendars for your own project."
 
 
 We have prepared a variety of different styles so you can edit them to your needs.
-For each style, you can edit the calendar and shape is as you need it.
+For each style, you can edit the calendar and shape it as you need it.
 If you are inspired, you can also just head over and [start from scratch]({{link.web}}).
 
 > Are you proud of your calendar? Share it in the [Showcase Section]!
@@ -131,10 +131,31 @@ events are either orange or red.
 
 {{calendar_example("free-and-busy.json")}}
 
-
 Modifications:
 
 - CSS
+
+## CalDAV Sign Up
+
+The Open Web Calendar supports CalDAV for instant event synchronization.
+You can use it e.g. with Nextcloud.
+
+In the example below, we used CalDAV to create event that you can sign up to.
+Once you sign up, you receive an email invitation and your name and email show
+up in the calendar.
+
+{{calendar_example("caldav-signup.json")}}
+
+Modifications:
+
+- Activate CalDAV Sign Up
+- URL-Encryption
+- Participants
+
+See also:
+
+- [Tutorial: Event Sign Up with Nextcloud](https://youtu.be/RnMz23p7UP0)
+- [Blog: CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)
 
 ## Contribute Examples!
 
