@@ -197,6 +197,7 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
       open_collective: https://opencollective.com/open-web-calendar/
       github_sponsors: https://github.com/sponsors/niccokunzmann
     templates: https://open-web-calendar.quelltext.eu/assets/templates
+    img: /assets/img
 
   # From https://pypi.org/project/mkdocs-mdpo-plugin/
   # note that longer language codes might need a mapping in
@@ -256,6 +257,11 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
 nav:
   - index.md
   - templates.md
+  - Showcase:
+    - showcase/index.md
+    - showcase/events-high-screen.md
+    - showcase/agenda-info-screen.md
+    - showcase/self-host-gancio.md
   - contributing.md
   - News:
     - news/social-media.md
