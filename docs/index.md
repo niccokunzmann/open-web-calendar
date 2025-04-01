@@ -8,7 +8,7 @@ title: Customize Your Own Online Calendar Display
 description: "See the features or try the Open Web Calendar yourself!"
 ---
 
-![]({{img}}/logo/github-social-preview.svg)
+![]({{link.img}}/logo/github-social-preview.svg)
 
 A highly flexible calendar display for your website.
 
