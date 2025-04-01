@@ -20,9 +20,6 @@ msgstr "Probiere eine Auswahl an Kalendern für Dein eigenes Projekt."
 msgid "Examples"
 msgstr "Beispiele"
 
-msgid "Are you proud of your calendar? Share it here!"
-msgstr "Bist du stolz auf Deinen Kalender? Teile ihn hier!"
-
 msgid "Mobile One Day Calendar Feed"
 msgstr "Mobile Tagesanzeige"
 
@@ -320,6 +317,16 @@ msgstr ""
 "Belieben anpassen kannst. Jeden diese Kalender kannst du ausprobieren und "
 "verändern. Solltest Du inspiriert sein, kannst du auch einfach [sofort "
 "loslegen](https://open-web-calendar.hosted.quelltext.eu/?language=de)."
+
+msgid "Are you proud of your calendar? Share it in the [Showcase Section]!"
+msgstr ""
+
+#, fuzzy
+msgid "[Showcase Section]: ../showcase"
+msgstr "[Showcase Section]: ../showcase"
+
+#~ msgid "Are you proud of your calendar? Share it here!"
+#~ msgstr "Bist du stolz auf Deinen Kalender? Teile ihn hier!"
 
 #~ msgid ""
 #~ "[CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)"

@@ -52,6 +52,9 @@ msgstr ""
 msgid "[Squid]: https://www.squid-cache.org/"
 msgstr "[Squid]: https://www.squid-cache.org/"
 
+#~ msgid "Showcase"
+#~ msgstr ""
+
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
 #~ " you CAN use this but you cannot be sure that the JSON schema remains the "

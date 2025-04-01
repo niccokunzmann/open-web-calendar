@@ -22,9 +22,6 @@ msgstr "Play with a variety of Calendars for your own project."
 msgid "Examples"
 msgstr "Examples"
 
-msgid "Are you proud of your calendar? Share it here!"
-msgstr "Are you proud of your calendar? Share it here!"
-
 msgid "Mobile One Day Calendar Feed"
 msgstr "Mobile One Day Calendar Feed"
 
@@ -351,6 +348,16 @@ msgstr ""
 "до своїх потреб. Для кожного стилю ви можете редагувати календар і надавати "
 "йому потрібну вам форму. Якщо ви надихнулися, ви також можете просто перейти"
 " і [почати з нуля](https://open-web-calendar.hosted.quelltext.eu)."
+
+msgid "Are you proud of your calendar? Share it in the [Showcase Section]!"
+msgstr ""
+
+#, fuzzy
+msgid "[Showcase Section]: ../showcase"
+msgstr "[Showcase Section]: ../showcase"
+
+#~ msgid "Are you proud of your calendar? Share it here!"
+#~ msgstr "Are you proud of your calendar? Share it here!"
 
 #~ msgid "<select id=\"timezoneOption\"></select>"
 #~ msgstr ""

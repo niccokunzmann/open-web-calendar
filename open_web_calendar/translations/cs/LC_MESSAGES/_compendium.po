@@ -79,6 +79,9 @@ msgstr ""
 "dokumentaci](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
 " Proxy může potom provést filtraci."
 
+#~ msgid "Showcase"
+#~ msgstr ""
+
 #~ msgid "Translate"
 #~ msgstr ""
 

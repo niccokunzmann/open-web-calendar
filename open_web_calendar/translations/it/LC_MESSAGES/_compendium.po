@@ -72,6 +72,9 @@ msgstr ""
 "[calendars]: https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//docs/assets/calendars"
 
+#~ msgid "Showcase"
+#~ msgstr ""
+
 #~ msgid "Translate"
 #~ msgstr ""
 

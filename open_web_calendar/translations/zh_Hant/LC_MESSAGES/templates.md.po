@@ -21,9 +21,6 @@ msgstr ""
 msgid "Examples"
 msgstr ""
 
-msgid "Are you proud of your calendar? Share it here!"
-msgstr ""
-
 msgid "Mobile One Day Calendar Feed"
 msgstr ""
 
@@ -297,6 +294,16 @@ msgid ""
 "it. If you are inspired, you can also just head over and [start from "
 "scratch](https://open-web-calendar.hosted.quelltext.eu)."
 msgstr ""
+
+msgid "Are you proud of your calendar? Share it in the [Showcase Section]!"
+msgstr ""
+
+#, fuzzy
+msgid "[Showcase Section]: ../showcase"
+msgstr "[Showcase Section]: ../showcase"
+
+#~ msgid "Are you proud of your calendar? Share it here!"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "[CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)"

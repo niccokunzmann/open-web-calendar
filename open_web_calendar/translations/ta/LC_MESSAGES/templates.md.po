@@ -22,10 +22,6 @@ msgstr "உங்கள் சொந்த திட்டத்திற்க�
 msgid "Examples"
 msgstr "எடுத்துக்காட்டுகள்"
 
-msgid "Are you proud of your calendar? Share it here!"
-msgstr ""
-"உங்கள் காலெண்டரைப் பற்றி நீங்கள் பெருமைப்படுகிறீர்களா? அதை இங்கே பகிரவும்!"
-
 msgid "Mobile One Day Calendar Feed"
 msgstr "மொபைல் ஒரு நாள் காலண்டர் ஊட்டம்"
 
@@ -332,6 +328,17 @@ msgid ""
 "it. If you are inspired, you can also just head over and [start from "
 "scratch](https://open-web-calendar.hosted.quelltext.eu)."
 msgstr ""
+
+msgid "Are you proud of your calendar? Share it in the [Showcase Section]!"
+msgstr ""
+
+#, fuzzy
+msgid "[Showcase Section]: ../showcase"
+msgstr "[Showcase Section]: ../showcase"
+
+#~ msgid "Are you proud of your calendar? Share it here!"
+#~ msgstr ""
+#~ "உங்கள் காலெண்டரைப் பற்றி நீங்கள் பெருமைப்படுகிறீர்களா? அதை இங்கே பகிரவும்!"
 
 #~ msgid ""
 #~ "[CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)"

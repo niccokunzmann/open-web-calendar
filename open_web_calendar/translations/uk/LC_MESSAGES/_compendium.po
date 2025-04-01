@@ -67,6 +67,9 @@ msgstr ""
 msgid "[Squid]: https://www.squid-cache.org/"
 msgstr "[Squid]: https://www.squid-cache.org/"
 
+#~ msgid "Showcase"
+#~ msgstr ""
+
 #~ msgid "Translate"
 #~ msgstr ""
 

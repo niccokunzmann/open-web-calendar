@@ -21,9 +21,6 @@ msgstr "Play with a variety of Calendars for your own project."
 msgid "Examples"
 msgstr "Examples"
 
-msgid "Are you proud of your calendar? Share it here!"
-msgstr "Are you proud of your calendar? Share it here!"
-
 msgid "Mobile One Day Calendar Feed"
 msgstr "Mobile One Day Calendar Feed"
 
@@ -383,6 +380,16 @@ msgid ""
 "[templates](https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master/docs/assets/templates) directory."
 msgstr ""
+
+msgid "Are you proud of your calendar? Share it in the [Showcase Section]!"
+msgstr ""
+
+#, fuzzy
+msgid "[Showcase Section]: ../showcase"
+msgstr "[Showcase Section]: ../showcase"
+
+#~ msgid "Are you proud of your calendar? Share it here!"
+#~ msgstr "Are you proud of your calendar? Share it here!"
 
 #~ msgid ""
 #~ "[CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)"
