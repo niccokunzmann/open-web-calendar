@@ -1,2 +1,134 @@
 button-edit: Breyta
 button-remove: Fjarlægja
+button-encrypt: Dulrita slóð
+button-encrypted: Dulritað
+decrypt-urls: Afkóða slóðir
+add-url-placeholder-url: https://slóð.á/dagatal.ics
+add-url-placeholder-username: valfrjálst notandanafn
+add-url-placeholder-password: valfrjálst lykilorð
+add-url-button: Bæta við
+title-title: Titill
+language-title: Tungumál
+skins-title: Skinn
+links-title: Tenglar
+event-status-confirmed: staðfest
+event-status-cancelled: hætt við
+tabs-title: Dagatalsflipar
+timezone-title: Tímabelti
+about: Opna vefdagatalið Open Web Calendar notar ICS/ICal dagatöl af netinu og birtir
+  þau saman í einu dagatali. Þú getur notað þetta í Nextcloud, Outlook, Google Calendar,
+  Meetup og fleiri dagatalakerfum sem styðjast við ICS-staðalinn.
+password-urls: Við mælum með því að vefslóðir séu dulritaðar ef dagatal inniheldur
+  viðkvæmar upplýsingar. Vistaðu eftirfarandi lykilorð aðeins ef ætlunin er að afkóða
+  slóðina síðar.
+add-url-calendar-public: Þetta er opinber vefslóð
+supported-standards: 'Við styðjum eftirfarandi staðla: ICAL, CalDAV, webcal.'
+about-title: Um hugbúnaðinn
+calendar-embed-title: Nota og ívefja
+title-description: 'Til að breyta titlinum skaltu setja nafn dagatalsins inn hér:'
+first-hour-title: Fyrsta klukkustund
+first-hour-description: 'Til að breyta fyrstu klukkustundinni sem dagatalið sýnir:'
+last-hour-title: Síðustu klukkustund
+last-hour-description: 'Til að breyta síðustu klukkustundinni sem dagatalið sýnir:'
+time-increment-title: Þrepun tíma
+time-increment-description: 'Breyttu þrepun tíma í dags- og vikusýn:'
+time-increment-10: 10 mínútur
+time-increment-15: 15 mínútur
+time-increment-30: 30 mínútur
+time-increment-60: 1 klukkustund
+hour-format-title: Skilgreining klukku
+hour-format-description: Þú getur valið á milli 24 stunda klukku og 12 stunda. Fleiri
+  valkostir eru mögulegir.
+language-description: Þú getur stillt tungumál dagatalsins.
+language-browser-false: 'Dagatalið er alltaf á þessu tungumáli:'
+language-browser-true: 'Dagatalið er á tungumáli þess sem skoðar. Ef tungumálið er
+  ekki fullþýtt, mun það birtast á:'
+skins-description: Þú getur stillt mismunandi skinn á dagatalið.
+skins-terrace: Terrace
+skins-dark: Dökkt
+skins-material: Material
+skins-flat: Flatt
+skins-contrast-black: Svört birtuskil
+skins-contrast-white: Hvít birtuskil
+map-title: Tenglar á landakort og staðsetningu
+map-custom: Sérsniðið landakort
+map-custom-summary: Sérsníða kortatenglana
+style-title: Sérsniðinn stíll með CSS
+configure-week-description: Vikan getur byrjað á mánudegi eða sunnudegi.
+links-description: Atburðir geta verið tengdir staðsetningum og haft vefslóðir. Ef
+  þú ívefur dagatalið í vefsvæði, þá geturðu valið hvert sé farið sé smellt á tengil.
+links-parent: Opna tengt skjal í yfirramma.
+links-top: Opna tengt skjal í öllum glugganum.
+map-description: Atburðir geta verið tengdir hnitum eða texta. Stilltu hér hvaða kortaþjónustu
+  eigi að nota sé smellt á staðsetningu atburðar.
+style-days: Ef þú vilt hafa mismunandi liti á dögunum, er líka hægt að skilgreina
+  það.
+style-days-outside: Sumir dagar dagatalsins eru með öðrum lit ef þeir falla ekki innan
+  mánaðarins.
+tabs-description: 'Mánaðarsýnin er sjálfgefin. Þú getur hinsvegar valið aðra sýn í
+  byrjun. Veldu eina:'
+timezone-description: 'Tímabeltið er tekið úr stillingum vafrans. Ef þú vilt festa
+  dagatalið við tiltekið tímabelti, þá hefurðu þann möguleika hér fyrir neðan. Vafrinn
+  þinn notar þetta tímabelti:'
+participants-title: Þátttakendur og skipulag
+participants-role: Sýna hlutverk þátttakanda? (t.d. skipuleggjandi, nauðsynlegur einstaklingur
+  eða valfrjáls)
+caldav-choose-calendar: 'Veldu dagatal frá notandaaðgangnum þínum:'
+caldav-allow-sign-up: 'Virkja skráningu með tölvupósti fyrir atburði í þessu dagatali:'
+map-link-geo-description: Settu hér inn URL-slóð á kortið og settu inn {lat} og {lon}
+  sem hnit.
+map-link-location-description: Settu hér inn URL-slóð á kortið og settu inn {location}
+  þar sem leitarstrengurinn er.
+style-description: Þú getur breytt litnum á dagatalinu þínu auk þess að breyta fleiri
+  eiginleikum með því að nota CSS. Það sem þú sérsníður er með forgang fram yfir það
+  sem er í skinninu sem þú velur. Hér fyrir neðan geturðu valið úr nokkrum sérsníðingum
+  sem við höfum útbúið fyrir þig.
+style-background: Þú getur breytt bakgrunnslit dagatalsins.
+style-click: Þú getur breytt bakgrunnslit atriða sem hægt er að smella á.
+style-date: Þú getur breytt bakgrunnslit núverandi dags.
+event-status-description: 'Breyttu útliti lýsinga á atburðum miðað við stöðu þeirra:'
+loader-description: Í sumum tilfellum þarf netþjónninn talsverðan tíma til að hlaða
+  inn dagatalinu. Ef netþjónninn notar ókeypis áskrift á Heroku, þá þarf netþjónninn
+  að ræsast fyrst.
+loader-none: engin hleðsla
+controls-description: 'Það getur verið að þú viljir ekki að notendurnir sjái allar
+  stýringarnar. Veldu hér hvaða stýringar ættu að birtast:'
+spec-description: 'Dagatalið er hægt að útbúa ekki bara út frá vefslóðinni, heldur
+  einnig með JSON eða YAML skilgreiningu úr skrá. Sérsníðingin hér fyrir ofan útbýr
+  þessa skilgreiningu:'
+spec-host-html: Þú getur <a href="javascript:downloadJSONSpecification()">sótt þessa
+  skilgreiningu</a> og gert hana aðgengilega einhversstaðar á netinu. Með þessari
+  aðferð ertu áfram við stjórnvölinn hvað varðar að gera breytingar á dagatalinu eftir
+  að þú hefur deilt tenglinum, eins og t.d. á GitHub í <a href="https://gist.github.com/">Gist</a>.
+spec-link: 'Þegar þú hefur sett skilgreininguna aðgengilega einhversstaðar á netinu,
+  geturðu útbúið tengil eins og þennan:'
+calendar-urls: 'Til að sameina mörg dagatöl, skaltu setja vefslóðir ICS-dagatalanna
+  hér:'
+calendar-code: 'Til að ívefja dagatalið í vefsíðu skaltu nota þennan kóða á vefsvæðinu
+  þínu:'
+calendar-code-execution: Þú getur skoðað útkomu dagatalsins hér fyrir neðan.
+section-customization: Þú getur gert aðrar sérsníðingar á dagatalinu.
+starting-date-title: Upphafsdagur
+starting-date-description: 'Til að breyta upphafsdegi sem dagatalsins:'
+hour-format-specification-link: Skoða skilgreiningarnar.
+links-self: Opna tengt skjal í sama ramma og var smellt.
+links-blank: Opna tengt skjal í nýjum glugga eða flipa.
+configure-week-title: Virkir dagar
+style-css: Þú getur skilgreint þín eigin CSS-eigindi ef þér sýnist svo.
+event-status-title: Staða atburðar
+event-status-tentative: með fyrirvara
+style-css-classes: 'Þetta eru dæmi um CSS-klasa til að stýra stíl atburða:'
+loader-title: Hleð inn myndlífgun
+loader-default: hringtengd hleðsla
+controls-date: Dagsetning
+loading: hleð inn…
+translate: Þýða
+timezone-browser: nota tímabelti vafrans
+spec-title: Hýsa skilgreiningarnar
+participants-organizers: Sýna hver skipuleggur atburðinn?
+participants-attendees: Sýna hverjir mæta á atburðinn?
+participants-status: Sýna stöðu þátttakendanna? (t.d. samþykkti/hafnaði)
+participants-description: Þú getur boðið öðrum á atburði og fólk getur skráð sig.
+  Þú getur virkjað þessa valkosti til að sjá nöfnin og tölvupóstföng neðan við lýsinguna
+  á viðkomandi atburði.
+participants-type: Sýna hvaða gerð þátttakanda þetta er? (t.d. einstaklingur eða hópur)
