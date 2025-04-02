@@ -20,7 +20,7 @@ The latest version might not be released, yet.
 
 - Allow CalDAV sign-up, see [Issue 679](https://github.com/niccokunzmann/open-web-calendar/issues/679)
 - Document CalDAV sign up with an example
-- Update Ukrainian translation by Максим Горпиніч, German by Nicco Kunzmann, Czech by Tomáš Chlubna
+- Update Ukrainian translation by Максим Горпиніч, German by Nicco Kunzmann, Czech by Tomáš Chlubna, Indonesian by Fajar Shiddiq
 - Correct spelling mistakes in the English translation base
 - Add Icelandic translation by Sveinn í Felli
 - Correct the style of the Free/Busy example
