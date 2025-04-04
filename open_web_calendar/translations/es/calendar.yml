@@ -56,3 +56,7 @@ labels_day: Día
 date_month_short_nov: Nov
 language: Español
 icon_subscribe: Añadir a Mi Calendario
+icon_signup: Regístrate
+label_participants: Participantes
+signup-email: correo electrónico
+signup-name: nombre
