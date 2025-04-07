@@ -135,6 +135,7 @@ plugins:
         - nl
         - cs
         - is
+        - fi
 # add mdpo.languages above
       translate:
         - site_name
@@ -248,6 +249,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Íslenska
       link: is
       lang: is
+    - name: Suomi
+      link: fi
+      lang: fi
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/

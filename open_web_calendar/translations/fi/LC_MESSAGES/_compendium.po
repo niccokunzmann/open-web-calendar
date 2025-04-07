@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.0\n"
 
-#
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
@@ -24,6 +23,38 @@ msgstr ""
 
 msgid "Permanent link"
 msgstr ""
+
+msgid "See also:"
+msgstr ""
+
+msgid "Examples:"
+msgstr ""
+
+msgid "OWC_SPECIFICATION"
+msgstr ""
+
+msgid ""
+"When you try to access a forbidden calendar with the local `open-web-"
+"calendar`, e.q. `http://172.16.0.1/calendar.ics`, you will see this error "
+"message:"
+msgstr ""
+
+msgid "403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics"
+msgstr ""
+
+msgid "Further Configuration"
+msgstr ""
+
+msgid "Python Package"
+msgstr ""
+
+msgid ""
+"After you have set up your own server, you can [configure the "
+"behavior](../configure)."
+msgstr ""
+
+#~ msgid "Showcase"
+#~ msgstr ""
 
 #~ msgid "Translate"
 #~ msgstr ""
@@ -70,3 +101,34 @@ msgstr ""
 #~ " 48 hours they are usually life at the [hosted instance](https://open-web-"
 #~ "calendar.hosted.quelltext.eu)."
 #~ msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
+
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
