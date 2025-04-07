@@ -1,107 +1,111 @@
+# Ricky Tigg <ricky.tigg@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 07:31+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-04-07 10:01+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-index/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #
-
 msgid "Getting Started"
-msgstr ""
+msgstr "Aloittaminen"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
+msgstr "Katso ominaisuudet tai kokeile Open Web Calendaria itse!"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
 msgid "A highly flexible calendar display for your website."
-msgstr ""
+msgstr "Erittäin joustava kalenterinäyttö verkkosivustollesi."
 
 msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
+msgstr "Anna kalenterille persoonallinen kosketus muutamassa minuutissa!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
+msgstr "**[Kokeile heti!](https://open-web-calendar.hosted.quelltext.eu)**"
 
 msgid "[See Examples](templates.md)"
-msgstr ""
+msgstr "[Katso esimerkit](templates.md)"
 
 msgid "Features"
-msgstr ""
+msgstr "Ominaisuudet"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "Välitön tapahtumien synkronointi"
 
 msgid "<center>✔</center>"
 msgstr ""
 
 msgid "Embed with an HTML snippet"
-msgstr ""
+msgstr "Upota HTML-koodinpätkällä"
 
 msgid "Desktop and Mobile"
-msgstr ""
+msgstr "Työpöytä ja mobiili"
 
 msgid "Multi-Language Support"
-msgstr ""
+msgstr "Monikielinen tuki"
 
 msgid "Fixed and Automatic Timezone"
-msgstr ""
+msgstr "Kiinteä ja automaattinen aikavyöhyke"
 
 msgid "Easy Editing"
-msgstr ""
+msgstr "Helppo muokkaaminen"
 
 msgid "Designs To Choose"
-msgstr ""
+msgstr "Suunnittelut valittavissa"
 
 msgid "Multiple Calendar Sources"
-msgstr ""
+msgstr "Useita kalenterilähteitä"
 
 msgid "Style per Calendar, Category and more"
-msgstr ""
+msgstr "Tyyli kalenterin, luokan mukaan ja enemmän"
 
 msgid "Custom CSS"
-msgstr ""
+msgstr "Mukautettu CSS"
 
 msgid "Day, Week, Month, Agenda"
-msgstr ""
+msgstr "Päivä, viikko, kuukausi, esityslista"
 
 msgid "Work Week"
-msgstr ""
+msgstr "Työviikko"
 
 msgid "Custom Date & Time Range"
-msgstr ""
+msgstr "Mukautettu päivämäärä- ja aikaväli"
 
 msgid "Custom Title & Icon"
-msgstr ""
+msgstr "Muokattu otsikko ja kuvake"
 
 msgid "Click on Event Location"
-msgstr ""
+msgstr "Napsauta Tapahtuman sijainti"
 
 msgid "Styled Event Descriptions"
-msgstr ""
+msgstr "Tyylilliset tapahtumakuvaukset"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr ""
+msgstr "FOSS – Ei toimittajan lukitusta"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self.md)"
 msgstr ""
+"[Isännöity](https://open-web-calendar.hosted.quelltext.eu) ja "
+"[Itse isännöity](host/self.md)"
 
 msgid "Subscribe Link"
-msgstr ""
+msgstr "Tilaa-linkki"
 
 msgid "Community and Paid Support"
-msgstr ""
+msgstr "Yhteisöllinen ja maksettu tuki"
 
 msgid "[Developer API](dev/api.md)"
-msgstr ""
+msgstr "[Kehittäjien sovellusliittymä](dev/api.md)"
