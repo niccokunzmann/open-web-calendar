@@ -1,1 +1,10 @@
-{}
+project-description: Tämä on kalenteri, joka tarjoaa verkkosivuston useille eri kalentereille.
+  Voit myös tilata ICS-linkin kautta. Kalenterit ovat erittäin muokattavissa mm. on
+  useita lähteitä ja mahtuu upotussivustoon. Jos pidät tästä projektista, harkitse
+  aikasi tai rahasi lahjoittamista projektille, jotta se pysyy maksuttomana ja kaikkien
+  saatavilla.
+source-code: Tarkastele lähdekoodia.
+improve: Auta parantamaan projektia ja opi osallistumaan.
+project-name: Open Web Calendar
+privacy-policy: Tietosuojakäytäntö
+version: 'Versio: {version}'
