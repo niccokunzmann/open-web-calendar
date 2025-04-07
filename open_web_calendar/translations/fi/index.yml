@@ -21,3 +21,109 @@ hour-format-description: Voit valita 24 tunnin tai 12 tunnin kellon välillä. M
   vaihtoehtoja on.
 time-increment-60: 1 tunti
 controls-date: Päivämäärä
+language-browser-false: 'Kalenteri on aina tällä kielellä:'
+style-date: Voit muuttaa nykyisen päivämäärän taustaväriä.
+spec-title: Eritelmän isännöinti
+participants-status: Näytä osallistujien tila? (eli hyväksytty/hylätty)
+add-url-placeholder-url: https://linkki/kalenteriin.ics
+event-status-cancelled: peruttu
+map-link-geo-description: Syötä kartan URL-osoite tähän ja sisällytä koordinaateille
+  {lat} ja {lon}.
+button-encrypt: Salaa URL-osoite
+event-status-tentative: alustus
+style-click: Voit muuttaa napsautettavien elementtien väriä.
+participants-role: Näytetäänkö osallistujan rooli? (eli järjestäjä, pakollinen henkilö
+  tai valinnainen)
+event-status-title: Tapahtuman tila
+skins-flat: Litteä
+event-status-confirmed: vahvistettu
+participants-organizers: Näytetäänkö tapahtuman järjestäjä?
+calendar-urls: 'Useiden kalentereiden yhdistäämiseksi, syötä ICS-kalenterien URL-osoitteet
+  tähän:'
+calendar-code: 'Kalenterin upottamiseksi, käytä tätä koodia verkkosivustollasi:'
+skins-terrace: Terassi
+links-self: Avaa linkitetty asiakirja samassa kehyksessä, jossa sitä napsautettiin.
+links-parent: Avaa linkitetty asiakirja yläkehyksessä.
+links-blank: Avaa linkitetty asiakirja uudessa ikkunassa tai välilehdessä.
+style-title: Mukautettu tyyli CSS:llä
+style-background: Voit muuttaa kalenterin taustaväriä.
+style-days-outside: Jotkut kalenterin päivät ovat eri värisiä, jos ne eivät ole kuukauden
+  sisällä.
+style-days: Jos haluat päiville toisen värin, voit myös määrittää tämän.
+style-css: Voit halutessasi määrittää omat CSS-ominaisuudet.
+loader-title: Ladataan animaatiota
+loader-description: Joissakin tapauksissa palvelimella kestää melko kauan ladata kalenteri.
+  Jos palvelin käyttää ilmaista suunnitelmaa Herokussa, palvelimen on käynnistettävä
+  ensin.
+loader-default: pyöreä lataaja
+tabs-title: Kalenterin välilehdet
+controls-description: 'Saattaa olla, että et halua näyttää kaikkia säätimiä käyttäjien
+  nähtäväksi. Valitse tästä, mitkä säätimet haluat näyttää:'
+timezone-title: Aikavyöhyke
+button-encrypted: Salattu
+map-title: Kartoita linkit ja sijainti
+timezone-browser: käytä selaimen aikavyöhykettä
+spec-link: 'Kun olet sijoittanut määrityksen jonnekin verkkoon, voit luoda seuraavanlaisen
+  linkin:'
+button-remove: Poista
+decrypt-urls: Pura URL-osoitteiden salaus
+add-url-placeholder-username: valinnainen käyttäjänimi
+add-url-placeholder-password: valinnainen salasana
+add-url-button: Lisää
+add-url-calendar-public: Tämä on julkinen URL-osoite
+supported-standards: 'Tuemme seuraavia standardeja: ICAL, CalDAV, webcal.'
+participants-title: Osallistujat ja organisaatio
+participants-attendees: Näytetäänkö tapahtumaan osallistujat?
+caldav-choose-calendar: 'Valitse tililtäsi kalenteri:'
+caldav-allow-sign-up: 'Ota sähköpostilla ilmoittautuminen käyttöön tämän kalenterin
+  tapahtumiin:'
+configure-week-title: Viikon päivät
+loader-none: ei lataajaa
+links-top: Avaa linkitetty asiakirja ikkunan koko rungossa.
+skins-dark: Tumma
+event-status-description: 'Muuta tapahtuman kuvauksen ulkoasua tilan mukaan:'
+skins-contrast-white: Kontrasti valkoinen
+skins-material: Materiaali
+skins-contrast-black: Kontrasti musta
+style-description: Voit muuttaa kalenterisi ja monien muiden ominaisuuksien väriä
+  CSS:n avulla. Räätälöinnilläsi on etusija valitsemaasi ihoon nähden. Alla voit valita
+  muutamista mukautuksista, jotka olemme valmistaneet sinua varten.
+password-urls: Suosittelemme URL-osoitteiden salaamista, jos ne sisältävät arkaluontoisia
+  tietoja. Tallenna seuraava salasana vain, jos aiot purkaa niiden salauksen myöhemmin.
+about: Open Web Calendar käyttää ICS/ICal-kalentereita verkossa ja näyttää ne yhdessä
+  kalenterissa. Voit käyttää sitä Nextcloudin, Meetupin, Google-kalenterin, Outlookin
+  ja muiden ICS-standardia käyttävien kalenterijärjestelmien kanssa.
+button-edit: Muokkaa
+calendar-code-execution: Tuloksena oleva kalenteri on nähtävissä alta.
+language-browser-true: 'Kalenteri on katselimen kielellä. Jos kieltä ei ole käännetty,
+  se näkyy kielellä:'
+section-customization: Voit tehdä lisämuokkauksia kalenteriin.
+spec-host-html: Voit <a href="javascript:downloadJSONSpecification()">ladata tämän
+  määrityksen</a> ja sijoittaa sen jonnekin verkkoon. Näin voit edelleen hallita kalenterin
+  mukauttamista linkin jakamisen jälkeen, esim. GitHubissa <a href="https://gist.github.com/">Gist</a>issä.
+participants-type: Näytä millainen osallistuja tämä on? (eli yksilö tai ryhmä)
+participants-description: Voit kutsua muita tapahtumiin ja ihmiset voivat rekisteröityä.
+  Voit ottaa nämä asetukset käyttöön nähdäksesi nimet ja sähköpostiosoitteet tapahtuman
+  kuvauksen alla.
+links-description: Tapahtumilla voi olla sijainteja ja URL-osoitteita. Jos upotat
+  kalenterin verkkosivustoon, voit valita, mihin napsautettu linkki avaa sivun.
+configure-week-description: Viikko voi alkaa maanantaina tai sunnuntaina.
+style-css-classes: 'Nämä ovat esimerkkejä CSS-luokista tapahtumien tyyliin:'
+loading: ladataan…
+translate: Käännä
+tabs-description: 'Kuukausinäkymä on oletus. Voit kuitenkin näyttää alussa toisenlaisen
+  näkymän. Valitse yksi:'
+timezone-description: 'Aikavyöhyke on otettu käyttäjän selaimesta. Jos haluat kalenterisi
+  olevan kiinnitetty yhteen aikavyöhykkeeseen, sinulla on alla oleva vaihtoehto. Selaimesi
+  käyttää tätä aikavyöhykettä:'
+about-title: Tietoja
+calendar-embed-title: Käytä ja upota
+links-title: Linkit
+map-description: Tapahtumapaikoilla voi olla koordinaatteja tai tekstiä. Määritä tässä,
+  mitä karttapalvelua käytetään, kun napsautat tapahtuman sijaintia.
+map-custom: Mukautettu kartta
+map-custom-summary: Mukauta karttalinkkejä
+map-link-location-description: Syötä kartan URL-osoite tähän ja sisällytä {location}
+  minne hakukysely menee.
+spec-description: 'Kalenteri voidaan luoda paitsi URL-osoitteen avulla myös JSON-
+  tai YAML-määrittelyn avulla tiedostosta. Yllä oleva mukauttaminen luo tämän määrityksen:'
