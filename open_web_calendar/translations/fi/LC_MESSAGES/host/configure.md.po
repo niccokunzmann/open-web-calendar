@@ -1,37 +1,42 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Ricky Tigg <ricky.tigg@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 17:46+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-04-08 08:05+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-server-configuration/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 msgid "Configure a hosted instance."
-msgstr ""
+msgstr "Määritä isännöity ilmentymä."
 
 msgid ""
 "If you want to change the Open Web Calendar to serve your needs, this is "
 "well possible. You can choose to"
 msgstr ""
+"Jos haluat muuttaa Open Web Calendar palvelemaan tarpeitasi, tämä on hyvin "
+"mahdollista. Voit valita"
 
 msgid "Change how the default calendar looks."
-msgstr ""
+msgstr "Muuta oletuskalenterin ulkoasua."
 
 msgid "Change how the server works."
-msgstr ""
+msgstr "Muuta palvelimen toimintaa."
 
 msgid "Server Configuration"
-msgstr ""
+msgstr "Palvelimen määrittäminen"
 
 msgid "Configuring the Default Calendar"
-msgstr ""
+msgstr "Oletuskalenterin määrittäminen"
 
 msgid "`title`"
 msgstr ""
@@ -43,21 +48,23 @@ msgid "`favicon`"
 msgstr ""
 
 msgid "[API](../../dev/api)"
-msgstr ""
+msgstr "[API](../../dev/api)"
 
 msgid "Configuring the Server"
-msgstr ""
+msgstr "Palvelimen määrittäminen"
 
 msgid ""
 "Environment variables only influence the running of the server. These "
 "environment variables can be used to configure the service:"
 msgstr ""
+"Ympäristömuuttujat vaikuttavat vain palvelimen toimintaan. Näitä "
+"ympäristömuuttujia voidaan käyttää palvelun määrittämiseen:"
 
 msgid "ALLOWED_HOSTS"
 msgstr ""
 
 msgid "default empty"
-msgstr ""
+msgstr "oletuksena tyhjä"
 
 msgid ""
 "**Forbidden:** You don't have the permission to access the requested "
@@ -68,19 +75,19 @@ msgid "PORT"
 msgstr ""
 
 msgid "default `5000`, default `80` in the Docker container"
-msgstr ""
+msgstr "oletusarvo `5000`, oletusarvo `80` Docker-kontissa"
 
 msgid "The port that the service is running on."
-msgstr ""
+msgstr "Portti, jolla palvelu on käynnissä."
 
 msgid "Serve on HTTP port: `PORT=80`"
-msgstr ""
+msgstr "Palvele HTTP-portissa: `PORT=80`"
 
 msgid "WORKERS"
 msgstr ""
 
 msgid "default `4`, only for the Docker container"
-msgstr ""
+msgstr "oletusarvo `4`, vain Docker-kontille"
 
 msgid "The number of parallel workers to handle requests."
 msgstr ""
