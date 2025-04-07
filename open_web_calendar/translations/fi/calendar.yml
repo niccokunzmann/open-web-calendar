@@ -55,3 +55,8 @@ labels_next: Seuraava
 labels_hour: Tunti
 language: Suomi
 labels_month: Kuukausi
+signup-name: nimi
+icon_subscribe: Lisää Kalenteriini
+icon_signup: Rekisteröidy
+label_participants: Osallistujat
+signup-email: sähköposti
