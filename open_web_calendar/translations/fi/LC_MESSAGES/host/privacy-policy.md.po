@@ -1,43 +1,53 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Ricky Tigg <ricky.tigg@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-03 17:45+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-04-07 10:01+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-privacy-policy/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #
 msgid "Open Web Calendar Privacy Policy"
-msgstr ""
+msgstr "Open Web Calendarin tietosuojakäytäntö"
 
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Tietosuojakäytäntö"
 
 msgid ""
 "The Open Web Calendar does not collect any personal information from "
 "visitors of the website."
 msgstr ""
+"Open Web Calendar ei kerää henkilötietoja verkkosivuston vierailijoilta."
 
 msgid ""
 "Calendars may contain personal information. For the purpose of serving the "
 "content fast, the calendar files are cached for a short while. As expected, "
 "content of calendars is only processed to display them as a website."
 msgstr ""
+"Kalenterit voivat sisältää henkilökohtaisia tietoja. Sisällön nopeaa "
+"palvelemista varten kalenteritiedostot tallennetaan hetkeksi välimuistiin. "
+"Kuten on odotettavissa, kalentereiden sisältöä käsitellään vain niiden "
+"näyttämiseksi verkkosivustona."
 
 msgid "Documentation Website"
-msgstr ""
+msgstr "Dokumentaatio-verkkosivusto"
 
 msgid ""
 "This website contains the project documentation. It is hosted on GitHub "
 "Pages. Their [Privacy Policy][privacy-policy] applies."
 msgstr ""
+"Tämä sivusto sisältää hankedokumentaation. Sitä isännöi GitHub Pagesissa. "
+"Sen [tietosuojakäytäntönsä][privacy-policy] pätee."
 
 #, fuzzy
 msgid ""
