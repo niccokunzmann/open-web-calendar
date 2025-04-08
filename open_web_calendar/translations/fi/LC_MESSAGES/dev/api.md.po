@@ -303,6 +303,14 @@ msgstr ""
 "[getSpecification()]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
 
+msgid "index.html?language=de calendar.html?title=CALENDAR "
+msgstr ""
+
+msgid ""
+"calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
+"calendar/raw/master/open_web_calendar/default_specification.yml "
+msgstr ""
+
 #~ msgid "Additional parameters are required:"
 #~ msgstr ""
 
@@ -441,12 +449,4 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "```json {   \"title\": \"calendar\" } ``` "
-#~ msgstr ""
-
-#~ msgid "index.html?language=de calendar.html?title=CALENDAR "
-#~ msgstr ""
-
-#~ msgid ""
-#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
-#~ "calendar/raw/master/open_web_calendar/default_specification.yml "
 #~ msgstr ""
