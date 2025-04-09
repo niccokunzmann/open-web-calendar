@@ -129,13 +129,6 @@ msgstr ""
 msgid "[App Description](https://apps.yunohost.org/app/open-web-calendar)"
 msgstr "[App Description](https://apps.yunohost.org/app/open-web-calendar)"
 
-msgid ""
-"[Repository](https://github.com/YunoHost-Apps/open-web-"
-"calendar_ynh/blob/master/ALL_README.md)"
-msgstr ""
-"[Repository](https://github.com/YunoHost-Apps/open-web-"
-"calendar_ynh/blob/master/ALL_README.md)"
-
 msgid "Docker"
 msgstr ""
 
@@ -188,6 +181,16 @@ msgid ""
 "If you run your own server, you can choose to run the Open Web Calendar with"
 " Docker. Building, running and updating are [documented here](../docker)."
 msgstr ""
+
+msgid "[Repository](https://github.com/YunoHost-Apps/open-web-calendar_ynh/)"
+msgstr ""
+
+#~ msgid ""
+#~ "[Repository](https://github.com/YunoHost-Apps/open-web-"
+#~ "calendar_ynh/blob/master/ALL_README.md)"
+#~ msgstr ""
+#~ "[Repository](https://github.com/YunoHost-Apps/open-web-"
+#~ "calendar_ynh/blob/master/ALL_README.md)"
 
 #~ msgid ""
 #~ "If you run your own server, you can choose to run the Open Web Calender with"
