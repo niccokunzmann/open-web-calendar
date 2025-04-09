@@ -50,7 +50,7 @@ tox==4.25.0
     # via -r requirements/dev.in
 virtualenv==20.30.0
     # via tox
-wheel==0.45.1
+wheel==0.46.1
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
