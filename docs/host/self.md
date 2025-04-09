@@ -49,7 +49,7 @@ The Open Web Calendar is available as an app for [YunoHost](https://yunohost.org
 [![Install Open Web Calendar with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=open-web-calendar)
 
 - [App Description](https://apps.yunohost.org/app/open-web-calendar)
-- [Repository](https://github.com/YunoHost-Apps/open-web-calendar_ynh/blob/master/ALL_README.md)
+- [Repository](https://github.com/YunoHost-Apps/open-web-calendar_ynh/)
 
 ## Docker
 
