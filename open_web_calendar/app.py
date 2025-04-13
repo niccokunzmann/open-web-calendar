@@ -9,7 +9,6 @@ import datetime
 import json
 import os
 import sys
-import tempfile
 import traceback
 from http import HTTPStatus
 from pathlib import Path
@@ -31,34 +30,19 @@ from flask import (
     send_from_directory,
 )
 from flask_allowed_hosts import AllowedHosts
-from flask_caching import Cache
+from requests_cache import CachedSession
 
 from open_web_calendar.calendars.caldav import CalDAVCalendars
 from open_web_calendar.util import set_url_username_password
 
 from . import translate, version
+from .config import environment as config
 from .convert_to_dhtmlx import ConvertToDhtmlx
 from .convert_to_ics import ConvertToICS
 from .encryption import EmptyFernetStore, FernetStore
 
 if TYPE_CHECKING:
     from open_web_calendar.conversion_base import ConversionStrategy
-
-
-# configuration
-def DEBUG() -> bool:  # noqa: N802
-    """Wether we are in debug mode."""
-    return os.environ.get("APP_DEBUG", "").lower() == "true"
-
-
-PORT = int(os.environ.get("PORT", "5000"))
-CACHE_REQUESTED_URLS_FOR_SECONDS = int(
-    os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", "600")
-)
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
-if ALLOWED_HOSTS == [""]:  # noqa: SIM300, RUF100
-    ALLOWED_HOSTS = []
-REQUESTS_TIMEOUT = int(os.environ.get("SOURCE_TIMEOUT", "60"))
 
 # constants
 HERE = Path(__file__).parent
@@ -83,15 +67,7 @@ app = Flask(__name__, template_folder="templates")
 
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 31536000
 
-# Check Configuring Flask-Cache section for more details
-CACHE_CONFIG = {
-    "CACHE_TYPE": "FileSystemCache",
-    "CACHE_DIR": tempfile.mkdtemp(prefix="owc-cache-"),
-}
-cache = Cache(app, config=CACHE_CONFIG)
-
-# caching
-
+# caching for tests
 __URL_CACHE = {}
 
 
@@ -100,12 +76,12 @@ def host_not_allowed():
     return render_template(
         "403.html",
         hostname=request.host.split(":")[0],
-        allowed_hosts=", ".join(ALLOWED_HOSTS),
+        allowed_hosts=", ".join(config.allowed_hosts),
     ), 403
 
 
 allowed_hosts = AllowedHosts(
-    app, allowed_hosts=ALLOWED_HOSTS, on_denied=host_not_allowed
+    app, allowed_hosts=config.allowed_hosts, on_denied=host_not_allowed
 )
 
 # This is an in-app override of the default_specification.yml
@@ -184,18 +160,15 @@ def make_js_file_response(content: str) -> Response:
     return response
 
 
-@cache.memoize(
-    CACHE_REQUESTED_URLS_FOR_SECONDS, forced_update=lambda: bool(__URL_CACHE)
-)
 def get_text_from_url(url):
     """Return the text from a url.
 
-    The result is cached CACHE_REQUESTED_URLS_FOR_SECONDS.
+    The result is cached.
     """
     if __URL_CACHE:
         return __URL_CACHE[url]
-    response = requests.get(
-        url, headers=DEFAULT_REQUEST_HEADERS, timeout=REQUESTS_TIMEOUT
+    response = config.requests.get(
+        url, headers=DEFAULT_REQUEST_HEADERS, timeout=config.requests_timeout
     )
     response.raise_for_status()
     return response.content
@@ -293,7 +266,7 @@ def render_app_template(template, specification):
 
 def get_conversion(conversion: type[ConversionStrategy], specification: dict[str, Any]):
     """Return a conversion from the strategy."""
-    strategy = conversion(specification, get_text_from_url, encryption(), DEBUG())
+    strategy = conversion(specification, get_text_from_url, encryption(), config.debug)
     strategy.retrieve_calendars()
     return set_js_headers(strategy.merge())
 
@@ -392,7 +365,7 @@ def unhandled_exception(error):
     """
     trace = (
         f"<pre>\r\n{traceback.format_exc()}</pre>"
-        if DEBUG()
+        if config.debug
         else "Trace only avalilable if DEBUG=true."
     )
     return (
@@ -427,14 +400,14 @@ def json_error():
     _, err, _ = sys.exc_info()
     status_code = http_status_code_for_error(err)
     traceback.print_exc()
-    message = str(err) if DEBUG() else None
+    message = str(err) if config.debug else None
     error = type(err).__name__
     return jsonify(
         {
             "message": message,
             "description": message,
             "url": request.url,
-            "traceback": traceback.format_exc() if DEBUG() else None,
+            "traceback": traceback.format_exc() if config.debug else None,
             "error": error,
             "text": error,
             "code": status_code,
@@ -547,7 +520,7 @@ please use this command:
 
     gunicorn open_web_calendar:app
     """)  # noqa: T201
-    app.run(debug=DEBUG(), host="0.0.0.0", port=PORT)
+    app.run(debug=config.debug, host="0.0.0.0", port=config.port)
 
 
 __all__ = [
