@@ -13,7 +13,6 @@ import os
 import tempfile
 from functools import wraps
 from pathlib import Path
-from tempfile import TemporaryDirectory
 from typing import Any, Callable, Optional
 
 import requests
@@ -21,13 +20,15 @@ import requests_cache
 
 MB = 1024 * 1024
 
+
 def config_property(func: Callable) -> property:
     """Configuration properties.
 
     This equips the properties with a default value.
     You can override the value if you wish to.
     """
-    attr =  f"_{func.__name__}"
+    attr = f"_{func.__name__}"
+
     @property
     @wraps(func)
     def wrapper(config):
@@ -38,6 +39,7 @@ def config_property(func: Callable) -> property:
     @wrapper.setter
     def wrapper(config, value):
         setattr(config, attr, value)
+
     return wrapper
 
 

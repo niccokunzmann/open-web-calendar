@@ -65,9 +65,6 @@ app = Flask(__name__, template_folder="templates")
 
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 31536000
 
-# caching for tests
-__URL_CACHE = {}
-
 
 # limiting access
 def host_not_allowed():
@@ -84,15 +81,6 @@ allowed_hosts = AllowedHosts(
 
 # This is an in-app override of the default_specification.yml
 DEFAULT_SPECIFICATION = {}
-
-
-def cache_url(url, text):
-    """Cache the value of a url."""
-    __URL_CACHE[url] = text
-    try:
-        get_text_from_url(url)
-    finally:
-        del __URL_CACHE[url]
 
 
 def encryption() -> FernetStore | EmptyFernetStore:
@@ -163,8 +151,6 @@ def get_text_from_url(url):
 
     The result is cached.
     """
-    if __URL_CACHE:
-        return __URL_CACHE[url]
     response = config.requests.get(
         url, headers=DEFAULT_REQUEST_HEADERS, timeout=config.requests_timeout
     )
@@ -525,7 +511,6 @@ __all__ = [
     "DEFAULT_REQUEST_HEADERS",
     "DEFAULT_SPECIFICATION",
     "app",
-    "cache_url",
     "get_default_specification",
     "get_specification",
     "get_text_from_url",
