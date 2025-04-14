@@ -11,28 +11,56 @@ from __future__ import annotations
 
 import os
 import tempfile
+from functools import wraps
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Any, Optional
+from typing import Any, Callable, Optional
 
 import requests
 import requests_cache
 
 MB = 1024 * 1024
 
+def config_property(func: Callable) -> property:
+    """Configuration properties.
+
+    This equips the properties with a default value.
+    You can override the value if you wish to.
+    """
+    attr =  f"_{func.__name__}"
+    @property
+    @wraps(func)
+    def wrapper(config):
+        if hasattr(config, attr):
+            return getattr(config, attr)
+        return func(config)
+
+    @wrapper.setter
+    def wrapper(config, value):
+        setattr(config, attr, value)
+    return wrapper
+
 
 class Config:
     """The configuration of the Open Web Calendar.
 
     See https://open-web-calendar.quelltext.eu/host/configure/
+
+    You can set all the properties as environment variables and override them.
+
+        >>> c = Config({})
+        >>> c.port
+        5000
+        >>> c.port = 8080
+        >>> c.port
+        8080
     """
 
     def __init__(self, source: dict[str, str]):
         """Create a new configuration."""
         self._source = source
-        self._tempdir: Optional[TemporaryDirectory] = None
 
-    @property
+    @config_property
     def requests_timeout(self) -> Optional[int]:
         """The timeout for requests of source files from the web in seconds.
 
@@ -46,7 +74,7 @@ class Config:
             return None
         return result
 
-    @property
+    @config_property
     def port(self) -> int:
         """The port of the application.
 
@@ -55,7 +83,7 @@ class Config:
         """
         return int(self._source.get("PORT", "5000"))
 
-    @property
+    @config_property
     def debug(self) -> bool:
         """The debug mode of the application.
 
@@ -64,7 +92,7 @@ class Config:
         """
         return self._source.get("APP_DEBUG", "").lower() == "true"
 
-    @property
+    @config_property
     def cache_expire_after(self) -> int:
         """The cache expiration timeout in seconds.
 
@@ -73,7 +101,7 @@ class Config:
         """
         return int(self._source.get("CACHE_REQUESTED_URLS_FOR_SECONDS", "600"))
 
-    @property
+    @config_property
     def use_requests_cache(self) -> bool:
         """Whether we have a cache."""
         return (
@@ -82,7 +110,7 @@ class Config:
             and self.cache_max_file_bytes > 0
         )
 
-    @property
+    @config_property
     def cache_max_file_bytes(self) -> int:
         """The maximum size of a cached file in bytes.
 
@@ -91,12 +119,12 @@ class Config:
         """
         return int(float(self._source.get("CACHE_FILE_SIZE", "10")) * MB)
 
-    @property
+    @config_property
     def cache_block_bytes(self) -> int:
         """The block size on the file system in bytes."""
         return 4096
 
-    @property
+    @config_property
     def cache_max_bytes(self) -> int:
         """The maximum size of the cache in bytes.
 
@@ -108,7 +136,7 @@ class Config:
             return -1
         return int(float(value) * MB)
 
-    @property
+    @config_property
     def allowed_hosts(self) -> list[str]:
         """The allowed hosts.
 
@@ -120,14 +148,14 @@ class Config:
             return []
         return result
 
-    @property
+    @config_property
     def requests(self) -> requests.Session:
         """The requests session."""
         if self.use_requests_cache:
             return requests_cache.CachedSession(**self.session_params)
         return requests.Session()
 
-    @property
+    @config_property
     def session_params(self) -> dict[str, Any]:
         """The parameters for requests caching's session."""
         if not self.use_requests_cache:
@@ -143,7 +171,7 @@ class Config:
             cache_params["block_bytes"] = self.cache_block_bytes
         return cache_params
 
-    @property
+    @config_property
     def cache_path(self) -> str:
         """The path of the cache.
 

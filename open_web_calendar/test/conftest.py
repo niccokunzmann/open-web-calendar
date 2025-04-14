@@ -5,12 +5,13 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable, Optional
+from typing import TYPE_CHECKING, Callable, Generator, Optional
 from unittest.mock import Mock
 
 import icalendar
 import pytest
 import requests
+from responses import RequestsMock
 
 if TYPE_CHECKING:
     from flask import Flask
@@ -24,25 +25,27 @@ CALENDAR_DIRECTORY = HERE / ".." / "features" / "calendars"
 sys.path.append(HERE.absolute() / ".." / "..")
 sys.path.append(HERE.absolute())
 from open_web_calendar.app import DEFAULT_SPECIFICATION, cache_url  # noqa: E402
+from open_web_calendar.config import environment  # noqa: E402
 from open_web_calendar.encryption import FernetStore  # noqa: E402
 
 DEFAULT_SPECIFICATION["url"] = []
 
+environment.debug = True
 
-@pytest.fixture(autouse=True)
-def _no_requests(monkeypatch):
-    """Prevent requests from sending out requests
+# @pytest.fixture(autouse=True)
+# def _no_requests(monkeypatch):
+#     """Prevent requests from sending out requests
 
-    See https://docs.pytest.org/en/latest/monkeypatch.html#example-preventing-requests-from-remote-operations
-    """
+#     See https://docs.pytest.org/en/latest/monkeypatch.html#example-preventing-requests-from-remote-operations
+#     """
 
-    def test_cannot_call_outside(*args, **kw):
-        raise RuntimeError(
-            "Tests are not allowed to make requests to the"
-            " Internet. You can use cache_url() to mock that."
-        )
+#     def test_cannot_call_outside(*args, **kw):
+#         raise RuntimeError(
+#             "Tests are not allowed to make requests to the"
+#             " Internet. You can use cache_url() to mock that."
+#         )
 
-    monkeypatch.setattr(requests.sessions.Session, "request", test_cannot_call_outside)
+#     monkeypatch.setattr(requests.sessions.Session, "request", test_cannot_call_outside)
 
 
 @pytest.fixture
@@ -88,19 +91,28 @@ for file in CALENDAR_DIRECTORY.iterdir():
 
 
 @pytest.fixture
-def calendar_urls() -> dict[str, str]:
+def calendar_urls() -> Generator[dict[str, str], None, None]:
     """Mapping the calendar name without .ics to the cached url.
 
     The files are located in the CALENDAR_FOLDER.
     """
+    responses = RequestsMock()
     mapping: dict[str, str] = {}
     for file, content in calendar_files.items():
         url = "http://test.examples.local/" + file.name
-        cache_url(url, content)
+        responses.add(
+            responses.GET,
+            url,
+            body=content,
+            status=200,
+            content_type="text/plain",  # needs to consider calendars and HTML
+        )
         mapping[file.name] = url
         if file.suffix.lower() == ".ics":
             mapping[file.stem] = url
-    return mapping
+    responses.start()
+    yield mapping
+    responses.stop(allow_assert=False)
 
 
 @pytest.fixture

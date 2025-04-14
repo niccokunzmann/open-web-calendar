@@ -191,3 +191,18 @@ def test_cache_path(env, expected):
     """Check we parse this nicely."""
     config = config_from(CACHE_DIRECTORY=env and str(env))
     assert config.cache_path == str(expected)
+
+
+def test_override_default():
+    """Override the default in Python."""
+    config = config_from()
+    config.port = 6000
+    assert config.port == 6000
+
+
+def test_override_env():
+    """Override the default in Python."""
+    config = config_from(APP_DEBUG="true")
+    assert config.debug is True
+    config.debug = False
+    assert config.debug is False
