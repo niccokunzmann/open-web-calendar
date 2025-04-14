@@ -6,17 +6,20 @@
 This is inbetween the app and the parameters and environment variables.
 Use open_web_calendar.config.environment as default.
 """
+
 from __future__ import annotations
 
 import os
+import tempfile
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from typing import Any, Optional
 
 import requests
 import requests_cache
-from tempfile import TemporaryDirectory
 
-MB = 1024*1024
+MB = 1024 * 1024
+
 
 class Config:
     """The configuration of the Open Web Calendar.
@@ -27,7 +30,7 @@ class Config:
     def __init__(self, source: dict[str, str]):
         """Create a new configuration."""
         self._source = source
-        self._tempdir : Optional[TemporaryDirectory] = None
+        self._tempdir: Optional[TemporaryDirectory] = None
 
     @property
     def requests_timeout(self) -> Optional[int]:
@@ -73,16 +76,20 @@ class Config:
     @property
     def use_requests_cache(self) -> bool:
         """Whether we have a cache."""
-        return self.cache_expire_after > 0 and self.cache_max_bytes != 0 and self.cache_max_file_bytes > 0
+        return (
+            self.cache_expire_after > 0
+            and self.cache_max_bytes != 0
+            and self.cache_max_file_bytes > 0
+        )
 
     @property
     def cache_max_file_bytes(self) -> int:
         """The maximum size of a cached file in bytes.
 
-        Variable: CACHE_FILE_MB
+        Variable: CACHE_FILE_SIZE
         Default: 10
         """
-        return int(float(self._source.get("CACHE_FILE_MB", "10")) * MB)
+        return int(float(self._source.get("CACHE_FILE_SIZE", "10")) * MB)
 
     @property
     def cache_block_bytes(self) -> int:
@@ -93,10 +100,10 @@ class Config:
     def cache_max_bytes(self) -> int:
         """The maximum size of the cache in bytes.
 
-        Variable: CACHE_MB
-        Default: 200
+        Variable: CACHE_SIZE
+        Default: 200 (MB)
         """
-        value = self._source.get("CACHE_MB", "200")
+        value = self._source.get("CACHE_SIZE", "200")
         if value.lower() == "unlimited":
             return -1
         return int(float(value) * MB)
@@ -127,7 +134,7 @@ class Config:
             return {}
         cache_params = {
             "cache_name": self.cache_path,
-            "expire_after":self.cache_expire_after,
+            "expire_after": self.cache_expire_after,
             "backend": "filesystem",
         }
         if self.cache_max_bytes > 0:
@@ -143,20 +150,11 @@ class Config:
         Variable: CACHE_DIRECTORY
         Default: a temporary directory
         """
-        path = self._source.get("CACHE_DIRECTORY", None)
-        if path is not None:
-            Path(path).mkdir(parents=True, exist_ok=True)
-            return path
-        if self._tempdir is None:
-            # create the temporary directory and delete it when we exit
-            self._tempdir = TemporaryDirectory(prefix="owc-cache-")
-        return self._tempdir.name
+        configured_path = self._source.get("CACHE_DIRECTORY", tempfile.gettempdir())
+        cache_path = Path(configured_path) / "open-web-calendar-cache"
+        cache_path.mkdir(parents=True, exist_ok=True)
+        return str(cache_path)
 
-    def __del__(self):
-        """Delete the temporary directory."""
-        if self._tempdir is not None:
-            self._tempdir.cleanup()
-            self._tempdir = None
 
 environment = Config(os.environ)
 

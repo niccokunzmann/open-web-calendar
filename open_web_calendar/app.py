@@ -17,7 +17,6 @@ from urllib.parse import ParseResult, urlparse
 
 import caldav
 import icalendar
-import requests
 import yaml
 import zoneinfo
 from flask import (
@@ -30,7 +29,6 @@ from flask import (
     send_from_directory,
 )
 from flask_allowed_hosts import AllowedHosts
-from requests_cache import CachedSession
 
 from open_web_calendar.calendars.caldav import CalDAVCalendars
 from open_web_calendar.util import set_url_username_password
