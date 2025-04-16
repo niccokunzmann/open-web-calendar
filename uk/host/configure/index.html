@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_cm_a2in9/uk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_74758ajb/uk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_cm_a2in9/uk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_74758ajb/uk/host/configure/index.png" >
       
     
     
@@ -1225,27 +1225,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#port" class="md-nav__link">
+  <a href="#app_debug" class="md-nav__link">
     <span class="md-ellipsis">
-      PORT
+      APP_DEBUG
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_specification" class="md-nav__link">
+  <a href="#cache_directory" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_SPECIFICATION
+      CACHE_DIRECTORY
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#workers" class="md-nav__link">
+  <a href="#cache_file_size" class="md-nav__link">
     <span class="md-ellipsis">
-      WORKERS
+      CACHE_FILE_SIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_SIZE
     </span>
   </a>
   
@@ -1261,18 +1270,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#app_debug" class="md-nav__link">
+  <a href="#owc_encryption_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      APP_DEBUG
+      OWC_ENCRYPTION_KEYS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_encryption_keys" class="md-nav__link">
+  <a href="#owc_specification" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_ENCRYPTION_KEYS
+      OWC_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      PORT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      WORKERS
     </span>
   </a>
   
@@ -1378,12 +1405,53 @@
 <li>дозволити всім доступ до сервера (за замовчуванням): <code>ALLOWED_HOSTS=</code> або <code>ALLOWED_HOSTS=*</code></li>
 </ul>
 <p>Цю функцію надає <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
-<h3 id="port">PORT<a class="headerlink" href="#port" title="Постійне посилання">&para;</a></h3>
-<p>за замовчуванням <code>5000</code>, за замовчуванням <code>80</code> в контейнері Docker</p>
-<p>Порт, на якому працює служба.</p>
+<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Постійне посилання">&para;</a></h3>
+<p>за замовчуванням <code>false</code>, значення <code>true</code> або <code>false</code>, завжди <code>false</code> у контейнері Docker</p>
+<p>Установіть прапор налагодження для програми.</p>
+<h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="Постійне посилання">&para;</a></h3>
+<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
+<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
+<h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Постійне посилання">&para;</a></h3>
+<p>default <code>20</code> (MB)</p>
+<p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
 <p>Приклади:</p>
 <ul>
-<li>Обслуговувати через порт HTTP: <code>PORT=80</code></li>
+<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
+<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
+<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="Постійне посилання">&para;</a></h3>
+<p>default <code>200</code> (MB)</p>
+<p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
+<p>Приклади:</p>
+<ul>
+<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
+<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
+<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Постійне посилання">&para;</a></h3>
+<p>default <code>600</code> (seconds)</p>
+<p>Секунди для кешування файлів календаря, які завантажуються, щоб зменшити пропускну здатність і затримку.</p>
+<p>Приклади:</p>
+<ul>
+<li>Швидке оновлення: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
+<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+</ul>
+<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Постійне посилання">&para;</a></h3>
+<p>за замовчуванням порожній</p>
+<p>Це розділений комами список ключів шифрування. Їх можна використовувати, щоб приховати конфіденційну інформацію URL-адрес.</p>
+<p>Приклади:</p>
+<ul>
+<li>Вимкнути шифрування (за замовчуванням): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Використовуйте один ключ: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Використовуйте кілька ключів: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> Якщо ви використовуєте кілька ключів, лише перший з них шифрує дані. Інші використовуються лише для розшифровки даних.</li>
+</ul>
+<p>Ви можете створити новий ключ, відвідавши свій екземпляр Open Web Calendar на сторінці <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> або виконавши цю команду:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
+</code></pre></div>
+<p>Дивіться також:</p>
+<ul>
+<li>[Фернет]</li>
 </ul>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Постійне посилання">&para;</a></h3>
 <p><code>OWC_SPECIFICATION</code> – необов’язкова змінна середовища.</p>
@@ -1403,38 +1471,19 @@
 <ul>
 <li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
+<h3 id="port">PORT<a class="headerlink" href="#port" title="Постійне посилання">&para;</a></h3>
+<p>за замовчуванням <code>5000</code>, за замовчуванням <code>80</code> в контейнері Docker</p>
+<p>Порт, на якому працює служба.</p>
+<p>Приклади:</p>
+<ul>
+<li>Обслуговувати через порт HTTP: <code>PORT=80</code></li>
+</ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Постійне посилання">&para;</a></h3>
 <p>за замовчуванням <code>4</code>, лише для контейнера Docker</p>
 <p>Кількість паралельних працівників для обробки запитів.</p>
 <p>Приклади:</p>
 <ul>
 <li>Використовуйте лише один робочий файл: <code>WORKERS=1</code></li>
-</ul>
-<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Постійне посилання">&para;</a></h3>
-<p>за замовчуванням <code>600</code></p>
-<p>Секунди для кешування файлів календаря, які завантажуються, щоб зменшити пропускну здатність і затримку.</p>
-<p>Приклади:</p>
-<ul>
-<li>Швидке оновлення: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
-</ul>
-<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Постійне посилання">&para;</a></h3>
-<p>за замовчуванням <code>false</code>, значення <code>true</code> або <code>false</code>, завжди <code>false</code> у контейнері Docker</p>
-<p>Установіть прапор налагодження для програми.</p>
-<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Постійне посилання">&para;</a></h3>
-<p>за замовчуванням порожній</p>
-<p>Це розділений комами список ключів шифрування. Їх можна використовувати, щоб приховати конфіденційну інформацію URL-адрес.</p>
-<p>Приклади:</p>
-<ul>
-<li>Вимкнути шифрування (за замовчуванням): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Використовуйте один ключ: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Використовуйте кілька ключів: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> Якщо ви використовуєте кілька ключів, лише перший з них шифрує дані. Інші використовуються лише для розшифровки даних.</li>
-</ul>
-<p>Ви можете створити новий ключ, відвідавши свій екземпляр Open Web Calendar на сторінці <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> або виконавши цю команду:</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
-</code></pre></div>
-<p>Дивіться також:</p>
-<ul>
-<li>[Фернет]</li>
 </ul>
 <h2 id="_5">Подальша конфігурація<a class="headerlink" href="#_5" title="Постійне посилання">&para;</a></h2>
 <p>Відкритий веб-календар використовує бібліотеки, поведінку яких можна додатково налаштувати.</p>

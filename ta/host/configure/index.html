@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_cm_a2in9/ta/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_74758ajb/ta/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_cm_a2in9/ta/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_74758ajb/ta/host/configure/index.png" >
       
     
     
@@ -1225,27 +1225,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#port" class="md-nav__link">
+  <a href="#app_debug" class="md-nav__link">
     <span class="md-ellipsis">
-      PORT
+      APP_DEBUG
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_" class="md-nav__link">
+  <a href="#cache_directory" class="md-nav__link">
     <span class="md-ellipsis">
-      ஒடபுள்யுசி_விவரக்குறிப்பு
+      CACHE_DIRECTORY
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#workers" class="md-nav__link">
+  <a href="#cache_file_size" class="md-nav__link">
     <span class="md-ellipsis">
-      WORKERS
+      CACHE_FILE_SIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_SIZE
     </span>
   </a>
   
@@ -1261,18 +1270,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#app_debug" class="md-nav__link">
+  <a href="#owc_encryption_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      APP_DEBUG
+      OWC_ENCRYPTION_KEYS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_encryption_keys" class="md-nav__link">
+  <a href="#_" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_ENCRYPTION_KEYS
+      ஒடபுள்யுசி_விவரக்குறிப்பு
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      PORT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      WORKERS
     </span>
   </a>
   
@@ -1378,12 +1405,53 @@
 <li>சேவையகத்தை அணுக அனைவரையும் அனுமதிக்கவும் (இயல்புநிலை): <code>அனுமதிக்கப்பட்ட_ஓச்ட்ச் =</code> அல்லது <code>அனுமதிக்கப்பட்ட_ஓச்ட்ச் =*</code></li>
 </ul>
 <p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
-<h3 id="port">PORT<a class="headerlink" href="#port" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>இயல்புநிலை <code>5000</code>, இயல்புநிலை<code>80</code> கப்பல்துறை கொள்கலனில்</p>
-<p>பணி இயங்கும் துறைமுகம்.</p>
+<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>பயன்பாட்டிற்கான பிழைத்திருத்த கொடியை அமைக்கவும்.</p>
+<h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
+<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
+<h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>default <code>20</code> (MB)</p>
+<p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
 <p>எடுத்துக்காட்டுகள்:</p>
 <ul>
-<li>HTTP போர்ட்டில் பரிமாறவும்: <code>போர்ட் = 80</code></li>
+<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
+<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
+<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>default <code>200</code> (MB)</p>
+<p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
+<p>எடுத்துக்காட்டுகள்:</p>
+<ul>
+<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
+<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
+<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>default <code>600</code> (seconds)</p>
+<p>அலைவரிசை மற்றும் தாமதத்தைக் குறைப்பதற்காக பதிவிறக்கம் செய்யப்படும் காலண்டர் கோப்புகளை கேச் செய்ய விநாடிகள்.</p>
+<p>எடுத்துக்காட்டுகள்:</p>
+<ul>
+<li>வேகமாக புதுப்பிக்கவும்: <code>cache_requested_urls_for_seconds = 10</code></li>
+<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+</ul>
+<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>இயல்புநிலை காலியாக உள்ளது</p>
+<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>எடுத்துக்காட்டுகள்:</p>
+<ul>
+<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+</ul>
+<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
+</code></pre></div>
+<p>மேலும் காண்க:</p>
+<ul>
+<li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
 <h3 id="_">ஒடபுள்யுசி_விவரக்குறிப்பு<a class="headerlink" href="#_" title="நிரந்தர இணைப்பு">&para;</a></h3>
 <p><code>OWC_SPECIFICATION</code> என்பது ஒரு விருப்ப சூழல் மாறி.</p>
@@ -1403,38 +1471,19 @@
 <ul>
 <li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
+<h3 id="port">PORT<a class="headerlink" href="#port" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>இயல்புநிலை <code>5000</code>, இயல்புநிலை<code>80</code> கப்பல்துறை கொள்கலனில்</p>
+<p>பணி இயங்கும் துறைமுகம்.</p>
+<p>எடுத்துக்காட்டுகள்:</p>
+<ul>
+<li>HTTP போர்ட்டில் பரிமாறவும்: <code>போர்ட் = 80</code></li>
+</ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="நிரந்தர இணைப்பு">&para;</a></h3>
 <p>இயல்புநிலை <code>4</code>, கப்பல்துறை கொள்கலனுக்கு மட்டுமே</p>
 <p>கோரிக்கைகளை கையாள இணையான தொழிலாளர்களின் எண்ணிக்கை.</p>
 <p>எடுத்துக்காட்டுகள்:</p>
 <ul>
 <li>ஒரு தொழிலாளியைப் பயன்படுத்துங்கள்: <code>தொழிலாளர்கள் = 1</code></li>
-</ul>
-<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>இயல்புநிலை <code>600</code></p>
-<p>அலைவரிசை மற்றும் தாமதத்தைக் குறைப்பதற்காக பதிவிறக்கம் செய்யப்படும் காலண்டர் கோப்புகளை கேச் செய்ய விநாடிகள்.</p>
-<p>எடுத்துக்காட்டுகள்:</p>
-<ul>
-<li>வேகமாக புதுப்பிக்கவும்: <code>cache_requested_urls_for_seconds = 10</code></li>
-</ul>
-<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
-<p>பயன்பாட்டிற்கான பிழைத்திருத்த கொடியை அமைக்கவும்.</p>
-<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>இயல்புநிலை காலியாக உள்ளது</p>
-<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
-<p>எடுத்துக்காட்டுகள்:</p>
-<ul>
-<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
-</ul>
-<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
-</code></pre></div>
-<p>மேலும் காண்க:</p>
-<ul>
-<li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
 <h2 id="_5">மேலும் உள்ளமைவு<a class="headerlink" href="#_5" title="நிரந்தர இணைப்பு">&para;</a></h2>
 <p>திறந்த வலை காலண்டர் நூலகங்களைப் பயன்படுத்துகிறது, அதன் நடத்தை மேலும் தனிப்பயனாக்க முடியும்.</p>

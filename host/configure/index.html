@@ -937,27 +937,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#port" class="md-nav__link">
+  <a href="#app_debug" class="md-nav__link">
     <span class="md-ellipsis">
-      PORT
+      APP_DEBUG
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_specification" class="md-nav__link">
+  <a href="#cache_directory" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_SPECIFICATION
+      CACHE_DIRECTORY
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#workers" class="md-nav__link">
+  <a href="#cache_file_size" class="md-nav__link">
     <span class="md-ellipsis">
-      WORKERS
+      CACHE_FILE_SIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_SIZE
     </span>
   </a>
   
@@ -973,18 +982,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#app_debug" class="md-nav__link">
+  <a href="#owc_encryption_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      APP_DEBUG
+      OWC_ENCRYPTION_KEYS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_encryption_keys" class="md-nav__link">
+  <a href="#owc_specification" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_ENCRYPTION_KEYS
+      OWC_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      PORT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      WORKERS
     </span>
   </a>
   
@@ -1456,27 +1483,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#port" class="md-nav__link">
+  <a href="#app_debug" class="md-nav__link">
     <span class="md-ellipsis">
-      PORT
+      APP_DEBUG
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_specification" class="md-nav__link">
+  <a href="#cache_directory" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_SPECIFICATION
+      CACHE_DIRECTORY
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#workers" class="md-nav__link">
+  <a href="#cache_file_size" class="md-nav__link">
     <span class="md-ellipsis">
-      WORKERS
+      CACHE_FILE_SIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_SIZE
     </span>
   </a>
   
@@ -1492,18 +1528,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#app_debug" class="md-nav__link">
+  <a href="#owc_encryption_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      APP_DEBUG
+      OWC_ENCRYPTION_KEYS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_encryption_keys" class="md-nav__link">
+  <a href="#owc_specification" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_ENCRYPTION_KEYS
+      OWC_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      PORT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      WORKERS
     </span>
   </a>
   
@@ -1629,12 +1683,58 @@ You don&rsquo;t have the permission to access the requested resource. It is eith
 <li>permit everyone to access the server (default): <code>ALLOWED_HOSTS=</code> or <code>ALLOWED_HOSTS=*</code></li>
 </ul>
 <p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
-<h3 id="port">PORT<a class="headerlink" href="#port" title="Permanent link">&para;</a></h3>
-<p>default <code>5000</code>, default <code>80</code> in the Docker container  </p>
-<p>The port that the service is running on.</p>
+<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Permanent link">&para;</a></h3>
+<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>Set the debug flag for the app.</p>
+<h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="Permanent link">&para;</a></h3>
+<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
+<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading.
+If the directory does not exist, it will be created.</p>
+<h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Permanent link">&para;</a></h3>
+<p>default <code>20</code> (MB)</p>
+<p>This is the maximum size of one file in the cache.
+When the cache is full, the least recently used file is removed.</p>
 <p>Examples:</p>
 <ul>
-<li>Serve on HTTP port: <code>PORT=80</code></li>
+<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
+<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
+<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="Permanent link">&para;</a></h3>
+<p>default <code>200</code> (MB)</p>
+<p>This is the maximum cache size in megabytes.
+This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
+<p>Examples:</p>
+<ul>
+<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
+<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
+<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Permanent link">&para;</a></h3>
+<p>default <code>600</code> (seconds)</p>
+<p>Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.</p>
+<p>Examples:</p>
+<ul>
+<li>Refresh fast: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
+<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+</ul>
+<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Permanent link">&para;</a></h3>
+<p>default empty</p>
+<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>Examples:</p>
+<ul>
+<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code><br />
+  If you use multiple keys, only the first one encrypts the data.
+  The others are only used to decrypt the data.</li>
+</ul>
+<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
+</code></pre></div>
+<p>See also:</p>
+<ul>
+<li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanent link">&para;</a></h3>
 <p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
@@ -1656,40 +1756,19 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <ul>
 <li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
+<h3 id="port">PORT<a class="headerlink" href="#port" title="Permanent link">&para;</a></h3>
+<p>default <code>5000</code>, default <code>80</code> in the Docker container  </p>
+<p>The port that the service is running on.</p>
+<p>Examples:</p>
+<ul>
+<li>Serve on HTTP port: <code>PORT=80</code></li>
+</ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Permanent link">&para;</a></h3>
 <p>default <code>4</code>, only for the Docker container</p>
 <p>The number of parallel workers to handle requests.</p>
 <p>Examples:</p>
 <ul>
 <li>Only use one worker: <code>WORKERS=1</code></li>
-</ul>
-<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Permanent link">&para;</a></h3>
-<p>default <code>600</code></p>
-<p>Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.</p>
-<p>Examples:</p>
-<ul>
-<li>Refresh fast: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
-</ul>
-<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Permanent link">&para;</a></h3>
-<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
-<p>Set the debug flag for the app.</p>
-<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Permanent link">&para;</a></h3>
-<p>default empty</p>
-<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
-<p>Examples:</p>
-<ul>
-<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code><br />
-  If you use multiple keys, only the first one encrypts the data.
-  The others are only used to decrypt the data.</li>
-</ul>
-<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
-</code></pre></div>
-<p>See also:</p>
-<ul>
-<li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
 <h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Permanent link">&para;</a></h2>
 <p>The Open Web Calendar uses libraries whose behavior can be further customized.</p>

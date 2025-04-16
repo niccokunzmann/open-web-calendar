@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_cm_a2in9/sk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_74758ajb/sk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_cm_a2in9/sk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_74758ajb/sk/host/configure/index.png" >
       
     
     
@@ -1225,27 +1225,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#port" class="md-nav__link">
+  <a href="#app_debug" class="md-nav__link">
     <span class="md-ellipsis">
-      PORT
+      APP_DEBUG
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_specification" class="md-nav__link">
+  <a href="#cache_directory" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_SPECIFICATION
+      CACHE_DIRECTORY
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#workers" class="md-nav__link">
+  <a href="#cache_file_size" class="md-nav__link">
     <span class="md-ellipsis">
-      WORKERS
+      CACHE_FILE_SIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_SIZE
     </span>
   </a>
   
@@ -1261,18 +1270,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#app_debug" class="md-nav__link">
+  <a href="#owc_encryption_keys" class="md-nav__link">
     <span class="md-ellipsis">
-      APP_DEBUG
+      OWC_ENCRYPTION_KEYS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#owc_encryption_keys" class="md-nav__link">
+  <a href="#owc_specification" class="md-nav__link">
     <span class="md-ellipsis">
-      OWC_ENCRYPTION_KEYS
+      OWC_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      PORT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      WORKERS
     </span>
   </a>
   
@@ -1378,12 +1405,53 @@
 <li>permit everyone to access the server (default): <code>ALLOWED_HOSTS=</code> or <code>ALLOWED_HOSTS=*</code></li>
 </ul>
 <p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
-<h3 id="port">PORT<a class="headerlink" href="#port" title="Permanentný odkaz">&para;</a></h3>
-<p>predvolené <code>5000</code>, predvolené <code>80</code> v kontajneri Docker</p>
-<p>Prístav, na ktorom funguje služba.</p>
+<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Permanentný odkaz">&para;</a></h3>
+<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>Nastaviť debug vlajku pre aplikáciu.</p>
+<h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="Permanentný odkaz">&para;</a></h3>
+<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
+<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
+<h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Permanentný odkaz">&para;</a></h3>
+<p>default <code>20</code> (MB)</p>
+<p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
 <p>Examples:</p>
 <ul>
-<li>Slúžiť na HTTP port: <code>PORT=80</code></li>
+<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
+<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
+<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="Permanentný odkaz">&para;</a></h3>
+<p>default <code>200</code> (MB)</p>
+<p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
+<p>Examples:</p>
+<ul>
+<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
+<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
+<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Permanentný odkaz">&para;</a></h3>
+<p>default <code>600</code> (seconds)</p>
+<p>Po druhé vyrovnávanie kalendárových súborov, ktoré sa stiahli na zníženie šírky pásma a oneskorenie.</p>
+<p>Examples:</p>
+<ul>
+<li>Obnoviť rýchlo: <code>CACHE_RESTED_URLS_FOR_SECONDS=10</code></li>
+<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+</ul>
+<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Permanentný odkaz">&para;</a></h3>
+<p>predvolené prázdne</p>
+<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>Examples:</p>
+<ul>
+<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+</ul>
+<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
+</code></pre></div>
+<p>See also:</p>
+<ul>
+<li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanentný odkaz">&para;</a></h3>
 <p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
@@ -1405,38 +1473,19 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <ul>
 <li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
+<h3 id="port">PORT<a class="headerlink" href="#port" title="Permanentný odkaz">&para;</a></h3>
+<p>predvolené <code>5000</code>, predvolené <code>80</code> v kontajneri Docker</p>
+<p>Prístav, na ktorom funguje služba.</p>
+<p>Examples:</p>
+<ul>
+<li>Slúžiť na HTTP port: <code>PORT=80</code></li>
+</ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Permanentný odkaz">&para;</a></h3>
 <p>predvolené <code>4</code>, len pre kontajner Docker</p>
 <p>Počet paralelných pracovníkov na spracovanie požiadaviek.</p>
 <p>Examples:</p>
 <ul>
 <li>Používajte iba jedného pracovníka: <code>WORKERS=1</code></li>
-</ul>
-<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Permanentný odkaz">&para;</a></h3>
-<p>predvolené <code>600</code></p>
-<p>Po druhé vyrovnávanie kalendárových súborov, ktoré sa stiahli na zníženie šírky pásma a oneskorenie.</p>
-<p>Examples:</p>
-<ul>
-<li>Obnoviť rýchlo: <code>CACHE_RESTED_URLS_FOR_SECONDS=10</code></li>
-</ul>
-<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Permanentný odkaz">&para;</a></h3>
-<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
-<p>Nastaviť debug vlajku pre aplikáciu.</p>
-<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Permanentný odkaz">&para;</a></h3>
-<p>predvolené prázdne</p>
-<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
-<p>Examples:</p>
-<ul>
-<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
-</ul>
-<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
-</code></pre></div>
-<p>See also:</p>
-<ul>
-<li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
 <h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Permanentný odkaz">&para;</a></h2>
 <p>Open Web Calendar používa knižnice, ktorých správanie môže byť ďalej prispôsobené.</p>
