@@ -11,7 +11,7 @@ attrs==25.3.0
     #   requests-cache
 bcrypt==4.3.0
     # via -r requirements/base.in
-beautifulsoup4==4.13.3
+beautifulsoup4==4.13.4
     # via -r requirements/base.in
 blinker==1.9.0
     # via flask
