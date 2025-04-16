@@ -97,9 +97,6 @@ msgstr "Nur uzi unu procezon: `WORKERS=1`"
 msgid "CACHE_REQUESTED_URLS_FOR_SECONDS"
 msgstr ""
 
-msgid "default `600`"
-msgstr "implicite `600`"
-
 msgid ""
 "Seconds to cache the calendar files that get downloaded to reduce bandwidth "
 "and delay."
@@ -413,6 +410,68 @@ msgid ""
 "documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
 " The proxy can then handle the filtering."
 msgstr ""
+
+msgid "CACHE_DIRECTORY"
+msgstr ""
+
+msgid "default is a temporary directory (e.g. in `/tmp/`)"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar caches files needed to display calendars in this "
+"directory to speed up loading. If the directory does not exist, it will be "
+"created."
+msgstr ""
+
+msgid "CACHE_FILE_SIZE"
+msgstr ""
+
+msgid "default `20` (MB)"
+msgstr ""
+
+msgid ""
+"This is the maximum size of one file in the cache. When the cache is full, "
+"the least recently used file is removed."
+msgstr ""
+
+msgid "Allow only small files of 4KB: `CACHE_FILE_SIZE=0.004`"
+msgstr ""
+
+msgid "Allow any size: `CACHE_FILE_SIZE=\"$CACHE_SIZE\"`"
+msgstr ""
+
+msgid "Disable caching: `CACHE_FILE_SIZE=0`"
+msgstr ""
+
+msgid "CACHE_SIZE"
+msgstr ""
+
+msgid "default `200` (MB)"
+msgstr ""
+
+msgid ""
+"This is the maximum cache size in megabytes. This size is limited to 200MB "
+"in order to mitigate the cache filling the file system or in case of `/tmp/`"
+" the RAM."
+msgstr ""
+
+msgid "Use 1 GB for caching: `CACHE_SIZE=1024`"
+msgstr ""
+
+msgid "Unlimited cache: `CACHE_SIZE=unlimited`"
+msgstr ""
+
+msgid "Disable caching: `CACHE_SIZE=0`"
+msgstr ""
+
+msgid "default `600` (seconds)"
+msgstr ""
+
+msgid "Disable caching: `CACHE_REQUESTED_URLS_FOR_SECONDS=0`"
+msgstr ""
+
+#~ msgid "default `600`"
+#~ msgstr "implicite `600`"
 
 #~ msgid ""
 #~ "The Open Web Calendar can be used to access the local network behind a "
