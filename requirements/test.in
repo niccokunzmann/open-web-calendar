@@ -4,3 +4,4 @@ selenium
 reuse
 ruff
 responses
+pytest-responses

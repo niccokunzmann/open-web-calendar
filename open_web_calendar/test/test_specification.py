@@ -10,7 +10,6 @@ import pytest
 from werkzeug.datastructures import MultiDict
 
 from open_web_calendar.app import (
-    cache_url,
     get_default_specification,
     get_specification,
 )
@@ -35,7 +34,7 @@ with_url = pytest.mark.parametrize(
 
 
 @with_url
-def test_specification_prefers_url_over_default(url):
+def test_specification_prefers_url_over_default(url, cache_url):
     cache_url(url, '{"css": "123"}')
     assert (
         get_specification(query=MultiDict({"specification_url": url}))["css"] == "123"
@@ -43,7 +42,7 @@ def test_specification_prefers_url_over_default(url):
 
 
 @with_url
-def test_url_parameters_are_more_important_than_specification_url(url):
+def test_url_parameters_are_more_important_than_specification_url(url, cache_url):
     cache_url(url, '{"test": "123"}')
     assert (
         get_specification(query=MultiDict({"specification_url": url, "test": "test"}))[
@@ -54,10 +53,10 @@ def test_url_parameters_are_more_important_than_specification_url(url):
 
 
 @with_url
-def test_specification_can_be_loaded_from_yml_files(url):
-    cache_url(url, 'test: "123"')
+def test_specification_can_be_loaded_from_yml_files(url, cache_url):
+    cache_url(url, 'test: "1234"')
     assert (
-        get_specification(query=MultiDict({"specification_url": url}))["test"] == "123"
+        get_specification(query=MultiDict({"specification_url": url}))["test"] == "1234"
     )
 
 

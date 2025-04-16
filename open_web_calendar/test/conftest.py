@@ -5,16 +5,16 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable, Optional
+from typing import TYPE_CHECKING, Callable, Generator, Optional
 from unittest.mock import Mock
 
 import icalendar
 import pytest
-import requests
 
 if TYPE_CHECKING:
     from flask import Flask
     from flask.testing import FlaskClient
+    from responses import RequestsMock
 
 # constants
 HERE = Path(__file__).parent
@@ -23,26 +23,24 @@ CALENDAR_DIRECTORY = HERE / ".." / "features" / "calendars"
 # relative imports
 sys.path.append(HERE.absolute() / ".." / "..")
 sys.path.append(HERE.absolute())
-from open_web_calendar.app import DEFAULT_SPECIFICATION, cache_url  # noqa: E402
+from open_web_calendar.app import DEFAULT_SPECIFICATION  # noqa: E402
+from open_web_calendar.config import environment  # noqa: E402
 from open_web_calendar.encryption import FernetStore  # noqa: E402
 
 DEFAULT_SPECIFICATION["url"] = []
 
+environment.debug = True
+environment.use_requests_cache = False
+
 
 @pytest.fixture(autouse=True)
-def _no_requests(monkeypatch):
+def _use_responses(responses: RequestsMock) -> Generator[RequestsMock, None, None]:
     """Prevent requests from sending out requests
 
     See https://docs.pytest.org/en/latest/monkeypatch.html#example-preventing-requests-from-remote-operations
     """
-
-    def test_cannot_call_outside(*args, **kw):
-        raise RuntimeError(
-            "Tests are not allowed to make requests to the"
-            " Internet. You can use cache_url() to mock that."
-        )
-
-    monkeypatch.setattr(requests.sessions.Session, "request", test_cannot_call_outside)
+    responses.reset()
+    responses.assert_all_requests_are_fired = False
 
 
 @pytest.fixture
@@ -71,6 +69,26 @@ def app(store, monkeypatch) -> Flask:
 
 
 @pytest.fixture
+def cache_url(responses: RequestsMock) -> Callable[[str, str], None]:
+    """Cache an additional URL."""
+
+    def cache_url(url: str, content: str):
+        print("1", responses.get_registry().registered)
+        responses.remove(responses.GET, url)
+        print("2", responses.get_registry().registered)
+        responses.add(
+            responses.GET,
+            url,
+            body=content,
+            status=200,
+            content_type="text/plain",  # needs to consider calendars and HTML
+        )
+        print("3", responses.get_registry().registered)
+
+    return cache_url
+
+
+@pytest.fixture
 def client(app: Flask) -> FlaskClient:
     return app.test_client()
 
@@ -88,7 +106,7 @@ for file in CALENDAR_DIRECTORY.iterdir():
 
 
 @pytest.fixture
-def calendar_urls() -> dict[str, str]:
+def calendar_urls(cache_url) -> dict[str, str]:
     """Mapping the calendar name without .ics to the cached url.
 
     The files are located in the CALENDAR_FOLDER.

@@ -101,15 +101,83 @@ This functionality is provided by [flask-allowed-hosts].
 
 [flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/
 
-### PORT
+### APP_DEBUG
 
-default `5000`, default `80` in the Docker container  
+default `false`, values `true` or `false`, always `false` in the Docker container
 
-The port that the service is running on.
+Set the debug flag for the app.
+
+### CACHE_DIRECTORY
+
+default is a temporary directory (e.g. in `/tmp/`)
+
+The Open Web Calendar caches files needed to display calendars in this directory to speed up loading.
+If the directory does not exist, it will be created.
+
+
+### CACHE_FILE_SIZE
+
+default `20` (MB)
+
+This is the maximum size of one file in the cache.
+When the cache is full, the least recently used file is removed.
 
 Examples:
 
-- Serve on HTTP port: `PORT=80`
+- Allow only small files of 4KB: `CACHE_FILE_SIZE=0.004`
+- Allow any size: `CACHE_FILE_SIZE="$CACHE_SIZE"`
+- Disable caching: `CACHE_FILE_SIZE=0`
+
+### CACHE_SIZE
+
+default `200` (MB)
+
+This is the maximum cache size in megabytes.
+This size is limited to 200MB in order to mitigate the cache filling the file system or in case of `/tmp/` the RAM.
+
+Examples:
+
+- Use 1 GB for caching: `CACHE_SIZE=1024`
+- Unlimited cache: `CACHE_SIZE=unlimited`
+- Disable caching: `CACHE_SIZE=0`
+
+### CACHE_REQUESTED_URLS_FOR_SECONDS
+
+default `600` (seconds)
+
+Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.
+
+Examples:
+
+- Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`
+- Disable caching: `CACHE_REQUESTED_URLS_FOR_SECONDS=0`
+
+### OWC_ENCRYPTION_KEYS
+
+default empty
+
+This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.
+
+Examples:
+
+- Disable encryption (default): `OWC_ENCRYPTION_KEYS=`
+- Use one key: `OWC_ENCRYPTION_KEYS='Pj...48='`
+- Use multiple keys: `OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='`  
+  If you use multiple keys, only the first one encrypts the data.
+  The others are only used to decrypt the data.
+
+You can generate a new key by visiting your instance of the Open Web Calendar on the page [/new-key] or by running this command:
+
+```sh
+python3 -m open_web_calendar.new_key
+```
+
+See also:
+
+- [Fernet]
+
+[Fernet]: https://cryptography.io/en/latest/fernet/
+[/new-key]: {{ link.web }}/new-key
 
 ### OWC_SPECIFICATION
 
@@ -138,6 +206,16 @@ See also:
 
 - [OWC_SPECIFICATION in the API](../../dev/api#owc_specification)
 
+### PORT
+
+default `5000`, default `80` in the Docker container  
+
+The port that the service is running on.
+
+Examples:
+
+- Serve on HTTP port: `PORT=80`
+
 ### WORKERS
 
 default `4`, only for the Docker container
@@ -147,49 +225,6 @@ The number of parallel workers to handle requests.
 Examples:
 
 - Only use one worker: `WORKERS=1`
-
-### CACHE_REQUESTED_URLS_FOR_SECONDS
-
-default `600`
-
-Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.
-
-Examples:
-
-- Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`
-
-### APP_DEBUG
-
-default `false`, values `true` or `false`, always `false` in the Docker container
-
-Set the debug flag for the app.
-
-### OWC_ENCRYPTION_KEYS
-
-default empty
-
-This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.
-
-Examples:
-
-- Disable encryption (default): `OWC_ENCRYPTION_KEYS=`
-- Use one key: `OWC_ENCRYPTION_KEYS='Pj...48='`
-- Use multiple keys: `OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='`  
-  If you use multiple keys, only the first one encrypts the data.
-  The others are only used to decrypt the data.
-
-You can generate a new key by visiting your instance of the Open Web Calendar on the page [/new-key] or by running this command:
-
-```sh
-python3 -m open_web_calendar.new_key
-```
-
-See also:
-
-- [Fernet]
-
-[Fernet]: https://cryptography.io/en/latest/fernet/
-[/new-key]: {{ link.web }}/new-key
 
 ## Further Configuration
 

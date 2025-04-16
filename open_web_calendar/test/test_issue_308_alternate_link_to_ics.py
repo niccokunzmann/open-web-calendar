@@ -13,8 +13,6 @@ import html
 
 import pytest
 
-from open_web_calendar.app import cache_url
-
 
 @pytest.mark.parametrize("page", ["index.html", "about.html", "calendar.html"])
 @pytest.mark.parametrize(
@@ -24,7 +22,7 @@ from open_web_calendar.app import cache_url
         "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json",
     ],
 )
-def test_the_query_is_used_in_the_alternate_link(client, page, query):
+def test_the_query_is_used_in_the_alternate_link(client, page, query, cache_url):
     """Make sure an alternate link is present."""
     cache_url(
         "https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json",
