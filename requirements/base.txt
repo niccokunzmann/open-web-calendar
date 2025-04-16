@@ -120,7 +120,7 @@ tzdata==2025.2
     #   icalendar
     #   recurring-ical-events
     #   x-wr-timezone
-urllib3==2.3.0
+urllib3==2.4.0
     # via requests
 vobject==0.9.9
     # via caldav
