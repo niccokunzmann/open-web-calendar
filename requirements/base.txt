@@ -115,7 +115,7 @@ six==1.17.0
     # via
     #   python-dateutil
     #   vobject
-soupsieve==2.6
+soupsieve==2.7
     # via beautifulsoup4
 typer==0.15.2
     # via mergecal
