@@ -1,26 +1,32 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Yurt Page <yurtpage@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 11:14+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-04-21 16:05+0000\n"
+"Last-Translator: Yurt Page <yurtpage@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-self-hosting-and-deployment/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.11.1-dev\n"
 
 #
 msgid ""
 "There are various ways to host the Open Web Calendar yourself and customize "
 "the deployment."
 msgstr ""
+"Есть различные способы разместить Open Web Calendar самостоятельно и "
+"настроить развертывание."
 
 msgid "Self-Hosting & Deployment"
-msgstr ""
+msgstr "Самостоятельное размещение в хостинге и развёртывание"
 
 msgid ""
 "You do not have to host the Open Web Calendar yourself but you are "
