@@ -1,31 +1,38 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Yurt Page <yurtpage@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-30 17:45+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-04-21 16:05+0000\n"
+"Last-Translator: Yurt Page <yurtpage@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-api/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.11.1-dev\n"
 
 #
 msgid ""
 "The API of the Open Web Calendar allows more customization than the "
 "configuration page."
 msgstr ""
+"API Open Web Calendar позволяет настроить больше, чем страница конфигурации."
 
 msgid "API"
-msgstr ""
+msgstr "API"
 
 msgid ""
 "Generally, the Open Web Calendar is there to be used without restriction. "
 "You can use this API to customize the calendar on the fly."
 msgstr ""
+"В целом, Open Web Calendar можно использовать без ограничений. Вы можете "
+"использовать этот API для настройки календаря на лету."
 
 msgid "This section can be of use if one of these applies:"
 msgstr ""
