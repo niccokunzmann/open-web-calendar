@@ -92,7 +92,7 @@ sortedcontainers==2.4.0
     # via trio
 tomlkit==0.13.2
     # via reuse
-trio==0.29.0
+trio==0.30.0
     # via
     #   selenium
     #   trio-websocket
