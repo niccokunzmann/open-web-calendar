@@ -7,29 +7,58 @@ msgstr ""
 "POT-Creation-Date: 2024-05-27 00:50+0200\n"
 "PO-Revision-Date: 2025-04-21 16:05+0000\n"
 "Last-Translator: Yurt Page <yurtpage@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/"
-"open-web-calendar/documentation-common-translations/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/open-web-calendar/documentation-common-translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.11.1-dev\n"
 
-#
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
-"Вставьте в свой сайт этот веб-календарь с широкими возможностями настройки с "
-"помощью ссылки источник ICal"
+"Вставьте в свой сайт этот веб-календарь с широкими возможностями настройки с"
+" помощью ссылки источник ICal"
 
 msgid "Open Web Calendar"
 msgstr "Открыть веб-календарь"
 
 msgid "Permanent link"
 msgstr "Постоянная ссылка"
+
+msgid "See also:"
+msgstr ""
+
+msgid "Examples:"
+msgstr ""
+
+msgid "OWC_SPECIFICATION"
+msgstr ""
+
+msgid ""
+"When you try to access a forbidden calendar with the local `open-web-"
+"calendar`, e.q. `http://172.16.0.1/calendar.ics`, you will see this error "
+"message:"
+msgstr ""
+
+msgid "403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics"
+msgstr ""
+
+msgid "Further Configuration"
+msgstr ""
+
+msgid "Python Package"
+msgstr ""
+
+msgid ""
+"After you have set up your own server, you can [configure the "
+"behavior](../configure)."
+msgstr ""
+
+#~ msgid "Showcase"
+#~ msgstr ""
 
 #~ msgid "Translate"
 #~ msgstr ""
@@ -76,3 +105,34 @@ msgstr "Постоянная ссылка"
 #~ " 48 hours they are usually life at the [hosted instance](https://open-web-"
 #~ "calendar.hosted.quelltext.eu)."
 #~ msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
+
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
