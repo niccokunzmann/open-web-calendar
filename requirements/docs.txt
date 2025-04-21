@@ -164,7 +164,7 @@ six==1.17.0
     # via python-dateutil
 smmap==5.0.2
     # via gitdb
-soupsieve==2.6
+soupsieve==2.7
     # via beautifulsoup4
 super-collections==0.5.3
     # via mkdocs-macros-plugin
