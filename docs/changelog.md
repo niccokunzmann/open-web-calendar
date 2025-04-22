@@ -16,6 +16,13 @@ The latest version might not be released, yet.
 <!-- Contributors, if you like to be linked, please put your name down here with a link. -->
 [தமிழ்நேரம்]: https://tamilneram.github.io/
 
+## v1.50
+
+- Free up space at the top of the calendar if there are no controls, see [Issue 753](https://github.com/niccokunzmann/open-web-calendar/issues/753)
+- Always display the bottom navigation bar, also in small screens, see [Issue 752](https://github.com/niccokunzmann/open-web-calendar/issues/752)
+- Update dependencies
+- Update Russian translation by Yurt Page, Ukrainian by Максим Горпиніч, German by Nicco Kunzmann, Finnish by Ricky Tigg, Tamil by [தமிழ்நேரம்], Greek by Dimitris B
+
 ## v1.49
 
 - Allow CalDAV sign-up, see [Issue 679](https://github.com/niccokunzmann/open-web-calendar/issues/679)
