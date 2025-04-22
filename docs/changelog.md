@@ -22,6 +22,7 @@ The latest version might not be released, yet.
 - Always display the bottom navigation bar, also in small screens, see [Issue 752](https://github.com/niccokunzmann/open-web-calendar/issues/752)
 - Update dependencies
 - Update Russian translation by Yurt Page, Ukrainian by Максим Горпиніч, German by Nicco Kunzmann, Finnish by Ricky Tigg, Tamil by [தமிழ்நேரம்], Greek by Dimitris B
+- Update DHTMLX Scheduler to 7.2.3
 
 ## v1.49
 
