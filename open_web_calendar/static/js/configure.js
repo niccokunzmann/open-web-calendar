@@ -341,6 +341,7 @@ const actions = {
 const IS_TOUCH_SCREEN = window.matchMedia("(pointer: coarse)").matches;
 const CAN_HAVE_TOOLTIP = !IS_TOUCH_SCREEN;
 
+
 function loadCalendar() {
     /* Format the time of the hour.
      * see https://docs.dhtmlx.com/scheduler/settings_format.html
@@ -376,6 +377,13 @@ function loadCalendar() {
     // set the skin, scheduler v7
     // see https://docs.dhtmlx.com/scheduler/skins.html#dark
     scheduler.setSkin(getSkin());
+    /* Hide or display the header controls */
+    if (!specification.controls.length && !specification.tabs.length) {
+        document.body.classList.add("no-controls");
+    } else {
+        document.body.classList.remove("no-controls");
+    }
+
     // we do not allow changes to the source calendar
     scheduler.config.readonly = true;
     /* Add a red line at the current time.

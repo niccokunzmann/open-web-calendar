@@ -304,3 +304,14 @@ div.dhx_agenda_line > span {
     /* deactivate the tags in the week view */
     display: none;
 }
+
+.no-controls .dhx_cal_navline {
+    /* hide the navline if we have no controls */
+    display: none;
+}
+
+.no-controls {
+    /* hide the navline if we have no controls */
+    --dhx-scheduler-toolbar-height: 0px;
+}
+  

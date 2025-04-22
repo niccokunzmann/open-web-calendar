@@ -212,7 +212,10 @@ def get_specification(query=None):
                 value[i] = False
             elif value[i] in ("true", "True"):
                 value[i] = True
-        if len(value) == 1 and not isinstance(specification.get(parameter), list):
+        if isinstance(specification.get(parameter), list):
+            if len(value) == 1 and value[0] == "":
+                value = []
+        elif len(value) == 1:
             value = value[0]
         specification[parameter] = value
 
