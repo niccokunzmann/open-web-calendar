@@ -33,10 +33,17 @@ body, .flexcontainer {
   color: var(--primary-color);
 }
 
-main, .navcontent {
+section, .navcontent {
     padding: 1em;
     margin-right: auto;
     margin-left: auto;
+}
+
+main {
+  margin-left: 0em;
+  margin-right: 0em;
+  display: flex;
+  flex-direction: column;
 }
 
 section {
