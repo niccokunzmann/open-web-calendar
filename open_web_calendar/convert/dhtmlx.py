@@ -13,8 +13,8 @@ from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
 
-from .clean_html import clean_html
-from .conversion_base import ConversionStrategy
+from ..clean_html import clean_html
+from .base import ConversionStrategy
 
 if TYPE_CHECKING:
     from icalendar import Event, vCalAddress

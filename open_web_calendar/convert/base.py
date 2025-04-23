@@ -16,12 +16,12 @@ from urllib.parse import urljoin
 import requests
 from lxml import etree
 
-from open_web_calendar.calendars.base import Calendars
-from open_web_calendar.calendars.caldav import (
+from open_web_calendar.calendars import (
     CalDAVCalendars,
+    Calendars,
+    ICSCalendars,
+    InvalidCalendars,
 )
-from open_web_calendar.calendars.errors import InvalidCalendars
-from open_web_calendar.calendars.ics import ICSCalendars
 from open_web_calendar.encryption import EmptyFernetStore, FernetStore
 
 

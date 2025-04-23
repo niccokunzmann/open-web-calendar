@@ -13,7 +13,7 @@ from typing import TYPE_CHECKING
 import pytest
 from icalendar import vCalAddress
 
-from open_web_calendar.convert_to_dhtmlx import ConvertToDhtmlx
+from open_web_calendar.convert.dhtmlx import ConvertToDhtmlx
 
 if TYPE_CHECKING:
     from flask.testing import FlaskClient

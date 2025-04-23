@@ -11,7 +11,7 @@ from mergecal import merge_calendars
 
 from open_web_calendar.calendars.base import Calendars
 
-from .conversion_base import ConversionStrategy
+from .base import ConversionStrategy
 
 
 class ConvertToICS(ConversionStrategy):
@@ -63,3 +63,6 @@ class ConvertToICS(ConversionStrategy):
                 calendar.subcomponents.remove(event)
             calendar.add_component(Event.from_ical(only_event))
         return Response(calendar.to_ical(), mimetype="text/calendar")
+
+
+__all__ = ["ConvertToICS"]

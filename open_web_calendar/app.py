@@ -35,12 +35,12 @@ from open_web_calendar.util import set_url_username_password
 
 from . import translate, version
 from .config import environment as config
-from .convert_to_dhtmlx import ConvertToDhtmlx
-from .convert_to_ics import ConvertToICS
+from .convert.dhtmlx import ConvertToDhtmlx
+from .convert.ics import ConvertToICS
 from .encryption import EmptyFernetStore, FernetStore
 
 if TYPE_CHECKING:
-    from open_web_calendar.conversion_base import ConversionStrategy
+    from open_web_calendar.convert.base import ConversionStrategy
 
 # constants
 HERE = Path(__file__).parent
