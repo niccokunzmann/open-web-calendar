@@ -132,27 +132,39 @@ function setSpecificationValueFromId(specification, key, id) {
 
 
 /* Create a mapping for the map.
- *
+ * If you add something here, also add it to the options in the index.html template.
+ * Berlin, the capital city of Germany, has a latitude of 52.520008 and a longitude of 13.404954.
+ * OpenStreetMap is the default, so make sure this is the same value as in the default_specification.yml.
  */
 
 function getMapOptions() {
     return {
-        "default" : {
-            "location": configuration.default_specification.event_url_location,
-            "geo": configuration.default_specification.event_url_geo,
+        "osm" : {
+            // configuration.default_specification.event_url_location,
+            "location": "https://www.openstreetmap.org/search?query={location}",
+            // configuration.default_specification.event_url_geo,
+            "geo": "https://www.openstreetmap.org/#map={zoom}/{lat}/{lon}",
         },
-        "Google Maps" : {
+        "google" : {
             "location": "https://www.google.com/maps/search/{location}",
             "geo": "https://www.google.com/maps/@{lat},{lon},{zoom}z",
         },
-        "Bing Maps" : {
+        "bing" : {
             "location": "https://www.bing.com/maps?q={location}&lvl={zoom}",
             "geo": "https://www.bing.com/maps?brdr=1&cp={lat}%7E{lon}&lvl={zoom}",
         },
-        "geo:" : {
+        "geo" : {
             "location": "",
             "geo": "geo:{lat},{lon}",
-        }
+        },
+        "none" : {
+            "location": "",
+            "geo": "",
+        },
+        "yandex" : {
+            "location": "https://yandex.com/maps?text={location}",
+            "geo": "https://yandex.com/maps/?ll={lon}%2C{lat}&z={zoom}",
+        },
     }
 }
 
@@ -372,15 +384,8 @@ function fillMapInputs() {
     const options = getMapOptions();
     var optionChosen = false;
     getOwnProperties(options).forEach(function (optionId) {
-        if (optionId != "default") {
-            /* Create an option */
-            var option = document.createElement("option");
-            option.value = optionId;
-            option.text = optionId;
-            mapInputs.appendChild(option);
-        }
         /* select an option */
-        var option = options[optionId];
+        const option = options[optionId];
         if (option.geo == specification.event_url_geo && option.location == specification.event_url_location) {
             mapInputs.value = optionId;
             optionChosen = true;
@@ -389,8 +394,6 @@ function fillMapInputs() {
     if (!optionChosen) {
         mapInputs.value = "";
     }
-    var defaultOption = document.getElementById("map-option-default");
-    defaultOption.text = configuration.default_specification.event_url_name;
     mapInputs.appendChild(lastChild);
     const inputGeo = document.getElementById("map-link-geo");
     inputGeo.value = specification.event_url_geo;

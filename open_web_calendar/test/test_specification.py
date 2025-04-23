@@ -85,9 +85,8 @@ def test_boolean_values_of_parameters():
     assert spec["clean_html_style"] is False
     assert spec["clean_html_links"] is True
 
+
 def test_empty_array():
-    spec = get_specification(
-        query=MultiDict({"tabs": "", "controls": ""})
-    )
+    spec = get_specification(query=MultiDict({"tabs": "", "controls": ""}))
     assert spec["tabs"] == []
     assert spec["controls"] == []

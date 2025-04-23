@@ -1,6 +1,7 @@
 Feature: I want to customize the links to the location of an event.
 
     Scenario: Open Street Map is the default choice.
+        # If this errors, you might have changed the default_specification.yml
         Given we configure the map
          When we choose "OpenStreetMap" in "select-map"
          Then "event_url_location" is not specified

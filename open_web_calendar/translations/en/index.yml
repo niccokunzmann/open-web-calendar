@@ -177,6 +177,13 @@ map-custom-summary: "Customize the map links"
 map-link-location-description: "Enter the URL to the map here and insert {location} where the search query goes."
 # Describe customization
 map-link-geo-description: "Enter the URL to the map here and insert {lat} and {lon} for the coordinates."
+# Specific map names
+map-osm: "OpenStreetMap"
+map-bing: "Bing Maps"
+map-google: "Google Maps"
+map-yandex: "Yandex Maps"
+map-geo: "geo: Link"
+map-none: "Text Without Link"
 
 
 # Heading of option
