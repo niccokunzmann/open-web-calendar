@@ -127,3 +127,9 @@ participants-description: Ви можете запрошувати інших н
 participants-organizers: Покажіть, хто організовує захід?
 caldav-allow-sign-up: 'Увімкнути реєстрацію електронною поштою для подій у цьому календарі:'
 caldav-choose-calendar: 'Виберіть календар зі свого облікового запису:'
+map-yandex: Yandex Maps
+map-geo: 'гео: Посилання'
+map-none: Текст без посилання
+map-google: Google Maps
+map-osm: OpenStreetMap
+map-bing: Карти Bing
