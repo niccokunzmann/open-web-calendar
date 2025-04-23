@@ -626,7 +626,8 @@ def step_impl(context, link_text, link_target):
 
 
 @then('the link "{link_text}" opens "{link_href}"')
-def step_impl(context, link_text, link_href):
+@then('the link "{link_text}" opens ""')
+def step_impl(context, link_text, link_href=""):
     """Check the href of a link."""
     assert_tag_with_text_attribute_equals(context, "a", link_text, "href", link_href)
 

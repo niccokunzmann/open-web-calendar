@@ -219,7 +219,12 @@ SPDX-License-Identifier: GPL-2.0-only
                 </p>
                 <p class="action-paragraph">
                     <select id="select-map">
-                        <option value="default" id="map-option-default"></option>
+                        <option value="osm">{{ string("map-osm") }}</option>
+                        <option value="none">{{ string("map-none") }}</option>
+                        <option value="bing">{{ string("map-bing") }}</option>
+                        <option value="google">{{ string("map-google") }}</option>
+                        <option value="yandex">{{ string("map-yandex") }}</option>
+                        <option value="geo">{{ string("map-geo") }}</option>
                         <option value="" id="map-option-custom">{{ string("map-custom") }}</option>
                     </select>
                 </p>
