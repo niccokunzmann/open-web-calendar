@@ -824,11 +824,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="545"
-   id="percent545">98%</text>
+   id="percent545">100%</text>
 <rect
    style="fill:#2eccaa;fill-opacity:1;stroke:none"
    id="rect545"
-   width="148"
+   width="150"
    height="6"
    x="200"
    rx="2"
