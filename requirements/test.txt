@@ -30,7 +30,7 @@ charset-normalizer==3.4.1
     #   requests
 click==8.1.8
     # via reuse
-h11==0.14.0
+h11==0.16.0
     # via wsproto
 idna==3.10
     # via
