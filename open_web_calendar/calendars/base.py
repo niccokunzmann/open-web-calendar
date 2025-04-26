@@ -13,6 +13,8 @@ if TYPE_CHECKING:
 
     import icalendar
 
+    from open_web_calendar.calendars.info.interface import CalendarInfoInterface
+
 
 class Calendars(ABC):
     """Base class for calendars.
@@ -36,6 +38,10 @@ class Calendars(ABC):
     @abstractmethod
     def get_icalendars(self) -> list[icalendar.Calendar]:
         """Return a list of ICS calendars."""
+
+    def get_infos(self) -> list[CalendarInfoInterface]:
+        """Return information about the calendars."""
+        return []
 
 
 __all__ = ["Calendars"]

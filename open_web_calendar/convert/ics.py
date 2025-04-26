@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 """Convert the source links according to the specification to an ICS file."""
+
 import datetime
 
 from flask import Response

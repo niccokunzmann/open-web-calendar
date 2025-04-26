@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 """Convert the source links according to the specification to a list of events."""
+
 from __future__ import annotations
 
 import datetime
@@ -244,7 +245,9 @@ class ConvertToEvents(ConversionStrategy):
 
     def get_event_categories(self, event) -> list[str]:
         """Return the categories of the event."""
-        categories = event.get("CATEGORIES", None)  # TODO: use icalendar property for more compatibility
+        categories = event.get(
+            "CATEGORIES", None
+        )  # TODO: use icalendar property for more compatibility
         return categories.cats if categories is not None else []
 
 
