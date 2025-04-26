@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
-
+"""Convert the source links according to the specification to an ICS file."""
 import datetime
 
 from flask import Response

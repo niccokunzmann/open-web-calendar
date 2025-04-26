@@ -35,7 +35,7 @@ from open_web_calendar.util import set_url_username_password
 
 from . import translate, version
 from .config import environment as config
-from .convert.dhtmlx import ConvertToDhtmlx
+from .convert.events import ConvertToEvents
 from .convert.ics import ConvertToICS
 from .encryption import EmptyFernetStore, FernetStore
 
@@ -269,7 +269,7 @@ def get_calendar(ext):
         return jsonify(specification)
     if ext == "events.json":
         try:
-            return get_conversion(ConvertToDhtmlx, specification)
+            return get_conversion(ConvertToEvents, specification)
         except:
             return json_error()
     if ext == "ics":

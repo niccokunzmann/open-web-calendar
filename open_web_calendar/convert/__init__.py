@@ -3,10 +3,10 @@
 # SPDX-License-Identifier: GPL-2.0-only
 """Strategies for converting content between different formats."""
 
-from .dhtmlx import ConvertToDhtmlx
+from .events import ConvertToEvents
 from .ics import ConvertToICS
 
 __all__ = [
-    "ConvertToDhtmlx",
+    "ConvertToEvents",
     "ConvertToICS",
 ]

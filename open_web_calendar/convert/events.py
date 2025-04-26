@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+"""Convert the source links according to the specification to a list of events."""
 from __future__ import annotations
 
 import datetime
@@ -28,7 +29,7 @@ def is_date(date):
     return isinstance(date, datetime.date) and not isinstance(date, datetime.datetime)
 
 
-class ConvertToDhtmlx(ConversionStrategy):
+class ConvertToEvents(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern.
 
     - timeshift_minutes is the timeshift specified by the calendar
@@ -247,4 +248,4 @@ class ConvertToDhtmlx(ConversionStrategy):
         return categories.cats if categories is not None else []
 
 
-__all__ = ["ConvertToDhtmlx"]
+__all__ = ["ConvertToEvents"]

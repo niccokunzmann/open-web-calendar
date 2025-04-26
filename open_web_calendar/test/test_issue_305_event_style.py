@@ -13,7 +13,7 @@ from typing import NamedTuple
 
 import pytest
 
-from open_web_calendar.app import ConvertToDhtmlx
+from open_web_calendar.app import ConvertToEvents
 
 
 class CATEGORY(NamedTuple):
@@ -36,7 +36,7 @@ class CATEGORY(NamedTuple):
 )
 def test_get_event_classes(event, expected_classes):
     """Check that event classes are correctly extracted."""
-    dhx = ConvertToDhtmlx({"timezone": "Europe/London"})
+    dhx = ConvertToEvents({"timezone": "Europe/London"})
     classes = dhx.get_event_classes(event)
     assert classes == expected_classes
 

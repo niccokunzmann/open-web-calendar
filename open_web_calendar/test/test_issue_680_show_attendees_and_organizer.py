@@ -13,7 +13,7 @@ from typing import TYPE_CHECKING
 import pytest
 from icalendar import vCalAddress
 
-from open_web_calendar.convert.dhtmlx import ConvertToDhtmlx
+from open_web_calendar.convert.events import ConvertToEvents
 
 if TYPE_CHECKING:
     from flask.testing import FlaskClient
@@ -78,7 +78,7 @@ def test_attendee_yemaya(participants):
 def test_empty_params():
     """If no params are given, this should still contain all values."""
     addr = vCalAddress("mailto:asd@asdf.com")
-    attendee = ConvertToDhtmlx.create_participant_from(addr)
+    attendee = ConvertToEvents.create_participant_from(addr)
     assert attendee["name"] == "asd@asdf.com"
     assert attendee["type"] == "INDIVIDUAL", "RFC 5545:  Default is INDIVIDUAL"
     assert attendee["email"] == "asd@asdf.com"

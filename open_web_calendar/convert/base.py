@@ -126,7 +126,7 @@ class ConversionStrategy:
             with self.lock:
                 self.components.append(self.error(ty, err, tb, url))
 
-    def collect_components_from(self, index, calendars):
+    def collect_components_from(self, index: int, calendars: Calendars):
         """Collect all the compenents from the calendar."""
         raise NotImplementedError("to be implemented in subclasses")
 
