@@ -5,8 +5,6 @@
 
 from typing import Any
 
-from flask import jsonify
-
 from open_web_calendar.calendars.base import Calendars
 from open_web_calendar.convert.base import ConversionStrategy
 
@@ -15,45 +13,54 @@ class ConvertToCalendars(ConversionStrategy):
     """Create a list of metadata for all the calendars.
 
     The result should be like this:
-    [
-        {
-            # for each url
-            index: int,  # sorted by index
-            url: str,
-            errors: []  # would usually be 0/1 error
-            calendars: [  # can be empty on error
-                {
-                    # for each possible calendar
-                    index: int,  # sorted by index in the file. We expect one calendar per file
-                    color: color # influenced by the url and the color attribute
-                    categories: ["cat", ...],
-                    css-classes: ["css-class", ...],
-                    name: str  # also influenced by the url config
-                    description: str # also influenced by the url config
-                }
-            ]
-        }, ...
-    ]
+    {
+        "calendars": [
+            {
+                url_index: int,
+                calendar_index: int,
+                name: str,
+                description: str,
+                color: str,
+                categories: [str, ...],
+                css-classes: [str, ...],
+            }
+        ],
+        errors: [
+            {
+                ...  # json_error
+            }
+        ]
+    }
     """
 
     def created(self):
         """I was just created with a spec."""
         self.calendars: list[dict[str, Any]] = []
+        self.errors = []
 
     def collect_components_from(self, index: int, calendars: Calendars):
         """Collect all calendars in use."""
-        for i, calendar in enumerate(calendars.get_icalendars()):
-            self.calendars.append(
-                {
-                    "index": index,
-                    "innerIndex": i,  # a file can contain several calendars
-                    "url": self.specification["url"][index],
-                }
-            )
+        for info in calendars.get_infos():
+            self.calendars.append({
+                "url_index": index,
+                "calendar_index": info.calendar_index,
+                "name": self.clean_html(info.calendar_name or ""),
+                "description": self.clean_html(info.calendar_description or ""),
+                "color": self.clean_html(info.calendar_color or ""),
+                "categories": [self.clean_html(category) for category in info.calendar_categories],
+                "css-classes": [self.clean_html(category) for category in info.css_classes],
+            })
 
     def merge(self):
         """Merge all retrieved calendars."""
-        return jsonify(self.calendars)
+        return self.jsonify({
+            "calendars": self.calendars,
+            "errors": self.errors
+        })
+
+    def convert_error(self, error: str, url: str, tb_s: str):
+        """Tell the client more about the error."""
+        
 
 
 __all__ = ["ConvertToCalendars"]

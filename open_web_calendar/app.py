@@ -8,7 +8,6 @@ from __future__ import annotations
 import datetime
 import json
 import os
-import sys
 import traceback
 from http import HTTPStatus
 from pathlib import Path
@@ -31,6 +30,7 @@ from flask import (
 from flask_allowed_hosts import AllowedHosts
 
 from open_web_calendar.calendars.caldav import CalDAVCalendars
+from open_web_calendar.error import http_status_code_for_error, json_error
 from open_web_calendar.util import set_url_username_password
 
 from . import translate, version
@@ -375,31 +375,6 @@ def unhandled_exception(error):
     """,
         http_status_code_for_error(error),
     )  # return error code from https://stackoverflow.com/a/7824605
-
-
-def http_status_code_for_error(error: Exception) -> int:
-    """Return the status code from an exception or 500."""
-    return getattr(error, "http_status_code", 500)
-
-
-def json_error():
-    """Return the active exception as json."""
-    _, err, _ = sys.exc_info()
-    status_code = http_status_code_for_error(err)
-    traceback.print_exc()
-    message = str(err) if config.debug else None
-    error = type(err).__name__
-    return jsonify(
-        {
-            "message": message,
-            "description": message,
-            "url": request.url,
-            "traceback": traceback.format_exc() if config.debug else None,
-            "error": error,
-            "text": error,
-            "code": status_code,
-        }
-    ), status_code
 
 
 @app.post("/encrypt")

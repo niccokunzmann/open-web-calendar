@@ -7,6 +7,7 @@
 See https://github.com/niccokunzmann/open-web-calendar/issues/762
 """
 
+import json
 import pytest
 from icalendar import Calendar
 
@@ -17,6 +18,7 @@ from open_web_calendar.calendars.info import (
     IcalInfo,
     ListInfo,
 )
+from open_web_calendar.convert.calendar import ConvertToCalendars
 
 
 @pytest.fixture(params=["My Calendar", "Company Calendar"])
@@ -185,7 +187,7 @@ def test_get_categories(title):
     assert IcalInfo(calendar).calendar_categories == [title]
 
 
-@pytest.fixture()
+@pytest.fixture
 def ics_calendars():
     return ICSCalendars.from_text(
         """
@@ -244,3 +246,65 @@ def test_get_calendar_categories(ics_calendars:ICSCalendars):
         [],
         ["NOSE", "WHOLS"],
     ]
+
+
+class CleanedHTML(str):
+    clean = True
+
+
+@pytest.fixture
+def merged(ics_calendars, index, monkeypatch) -> dict:
+    """Convert a calendar and return the JSON."""
+    cals = ConvertToCalendars({})
+    monkeypatch.setattr(cals, "jsonify", lambda data: data)
+    monkeypatch.setattr(cals, "clean_html", CleanedHTML)
+    cals.collect_components_from(index, ics_calendars)
+    return cals.merge()
+
+
+def test_json_has_no_errors(merged):
+    """Usually, there are no errors."""
+    assert merged["errors"] == []
+
+def test_we_have_several_calendars(merged):
+    """We have several calendars."""
+    assert len(merged["calendars"]) == 4
+
+def test_index_merged(merged, index):
+    """The index is in the right place."""
+    for i, calendar in enumerate(merged["calendars"]):
+        assert calendar["url_index"] == index
+        assert calendar["calendar_index"] == i
+
+
+def test_color_is_clean(merged):
+    """Color is clean."""
+    colors = [calendar["color"] for calendar in merged["calendars"]]
+    assert all(color.clean for color in colors)
+    assert colors == ["", "", "black", ""]
+
+def test_name_is_clean(merged):
+    """Color is clean."""
+    names = [calendar["name"] for calendar in merged["calendars"]]
+    assert all(name.clean for name in names)
+    assert names == ["My Calendar", "", "", ""]
+
+def test_desccription_is_clean(merged):
+    """Color is clean."""
+    desccriptions = [calendar["description"] for calendar in merged["calendars"]]
+    assert all(desccription.clean for desccription in desccriptions)
+    assert desccriptions == ["", "My Calendar Description", "", ""]
+
+
+def test_categories_is_clean(merged):
+    """Color is clean."""
+    categories = [calendar["categories"] for calendar in merged["calendars"]]
+    assert all(category.clean for cats in categories for category in cats)
+    assert categories == [[], [], [], ["NOSE", "WHOLS"]]
+
+
+def test_css_is_clean(merged):
+    """Color is clean."""
+    css_list = [calendar["css-classes"] for calendar in merged["calendars"]]
+    assert all(cls.clean for cats in css_list for cls in cats)
+    assert css_list == [["CALENDAR-INDEX-0"], ["CALENDAR-INDEX-1"], ["CALENDAR-INDEX-2"], ["CALENDAR-INDEX-3", "CATEGORY-NOSE", "CATEGORY-WHOLS"]]

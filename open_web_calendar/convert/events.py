@@ -15,8 +15,6 @@ from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
 
-from open_web_calendar.clean_html import clean_html
-
 from .base import ConversionStrategy
 
 if TYPE_CHECKING:
@@ -214,10 +212,6 @@ class ConvertToEvents(ConversionStrategy):
         """
         description = Description(event).html
         return self.clean_html(description)
-
-    def clean_html(self, html: str):
-        """Return the cleaned HTML."""
-        return clean_html(html, self.specification)
 
     def merge(self):
         return jsonify(self.components)

@@ -13,6 +13,7 @@ from threading import RLock
 from typing import Any, Optional
 from urllib.parse import urljoin
 
+from flask import Response, jsonify
 import requests
 from lxml import etree
 
@@ -22,6 +23,7 @@ from open_web_calendar.calendars import (
     ICSCalendars,
     InvalidCalendars,
 )
+from open_web_calendar.clean_html import clean_html
 from open_web_calendar.encryption import EmptyFernetStore, FernetStore
 
 
@@ -134,5 +136,11 @@ class ConversionStrategy:
         """Return the flask Response for the merged calendars."""
         raise NotImplementedError("to be implemented in subclasses")
 
+    def clean_html(self, html: str) -> str:
+        """Return the cleaned HTML."""
+        return clean_html(html, self.specification)
+
+    def jsonify(self, data: Any) -> Response:
+        return jsonify(data)
 
 __all__ = ["ConversionStrategy", "get_text_from_url"]
