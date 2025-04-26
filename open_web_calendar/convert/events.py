@@ -244,7 +244,7 @@ class ConvertToEvents(ConversionStrategy):
 
     def get_event_categories(self, event) -> list[str]:
         """Return the categories of the event."""
-        categories = event.get("CATEGORIES", None)
+        categories = event.get("CATEGORIES", None)  # TODO: use icalendar property for more compatibility
         return categories.cats if categories is not None else []
 
 
