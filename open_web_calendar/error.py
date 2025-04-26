@@ -17,7 +17,7 @@ def http_status_code_for_error(error: Exception) -> int:
     return getattr(error, "http_status_code", 500)
 
 
-def json_error(err : BaseException | None = None, tb: TracebackType | None = None):
+def json_error(err: BaseException | None = None, tb: TracebackType | None = None):
     """Return the active exception as json."""
     if err is None:
         _, err, tb = sys.exc_info()
@@ -32,11 +32,14 @@ def json_error(err : BaseException | None = None, tb: TracebackType | None = Non
             "message": message,
             "description": message,
             "url": request.url,
-            "traceback": traceback.format_exception(type(err), err, tb) if config.debug else None,
+            "traceback": traceback.format_exception(type(err), err, tb)
+            if config.debug
+            else None,
             "error": error,
             "text": error,
             "code": status_code,
         }
     ), status_code
+
 
 __all__ = ["http_status_code_for_error", "json_error"]

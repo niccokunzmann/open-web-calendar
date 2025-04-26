@@ -30,6 +30,7 @@ from flask import (
 from flask_allowed_hosts import AllowedHosts
 
 from open_web_calendar.calendars.caldav import CalDAVCalendars
+from open_web_calendar.convert.calendar import ConvertToCalendars
 from open_web_calendar.error import http_status_code_for_error, json_error
 from open_web_calendar.util import set_url_username_password
 
@@ -267,6 +268,11 @@ def get_calendar(ext):
     specification = get_specification()
     if ext == "spec":
         return jsonify(specification)
+    if ext == "json":
+        try:
+            return get_conversion(ConvertToCalendars, specification)
+        except:
+            return json_error()
     if ext == "events.json":
         try:
             return get_conversion(ConvertToEvents, specification)

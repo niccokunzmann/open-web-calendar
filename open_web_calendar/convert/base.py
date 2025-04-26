@@ -13,8 +13,8 @@ from threading import RLock
 from typing import Any, Optional
 from urllib.parse import urljoin
 
-from flask import Response, jsonify
 import requests
+from flask import Response, jsonify
 from lxml import etree
 
 from open_web_calendar.calendars import (
@@ -142,5 +142,6 @@ class ConversionStrategy:
 
     def jsonify(self, data: Any) -> Response:
         return jsonify(data)
+
 
 __all__ = ["ConversionStrategy", "get_text_from_url"]

@@ -7,7 +7,9 @@
 See https://github.com/niccokunzmann/open-web-calendar/issues/762
 """
 
-import json
+from pprint import pprint
+from typing import ClassVar
+
 import pytest
 from icalendar import Calendar
 
@@ -187,10 +189,7 @@ def test_get_categories(title):
     assert IcalInfo(calendar).calendar_categories == [title]
 
 
-@pytest.fixture
-def ics_calendars():
-    return ICSCalendars.from_text(
-        """
+CALENDARS = """
 BEGIN:VCALENDAR
 NAME:My Calendar
 END:VCALENDAR
@@ -204,14 +203,19 @@ BEGIN:VCALENDAR
 CATEGORIES:NOSE,WHOLS
 END:VCALENDAR
 """
-)
 
-def test_get_calendar_indices(ics_calendars:ICSCalendars):
+
+@pytest.fixture
+def ics_calendars():
+    return ICSCalendars.from_text(CALENDARS)
+
+
+def test_get_calendar_indices(ics_calendars: ICSCalendars):
     """We want to have it easy with the index."""
     assert [info.calendar_index for info in ics_calendars.get_infos()] == [0, 1, 2, 3]
 
 
-def test_get_calendar_names(ics_calendars:ICSCalendars):
+def test_get_calendar_names(ics_calendars: ICSCalendars):
     """We want to have it easy with the index."""
     assert [info.calendar_name for info in ics_calendars.get_infos()] == [
         "My Calendar",
@@ -220,7 +224,8 @@ def test_get_calendar_names(ics_calendars:ICSCalendars):
         None,
     ]
 
-def test_get_calendar_descriptions(ics_calendars:ICSCalendars):
+
+def test_get_calendar_descriptions(ics_calendars: ICSCalendars):
     """We want to have it easy with the index."""
     assert [info.calendar_description for info in ics_calendars.get_infos()] == [
         None,
@@ -229,7 +234,8 @@ def test_get_calendar_descriptions(ics_calendars:ICSCalendars):
         None,
     ]
 
-def test_get_calendar_colors(ics_calendars:ICSCalendars):
+
+def test_get_calendar_colors(ics_calendars: ICSCalendars):
     """We want to have it easy with the index."""
     assert [info.calendar_color for info in ics_calendars.get_infos()] == [
         None,
@@ -238,7 +244,8 @@ def test_get_calendar_colors(ics_calendars:ICSCalendars):
         None,
     ]
 
-def test_get_calendar_categories(ics_calendars:ICSCalendars):
+
+def test_get_calendar_categories(ics_calendars: ICSCalendars):
     """We want to have it easy with the index."""
     assert [info.calendar_categories for info in ics_calendars.get_infos()] == [
         [],
@@ -248,8 +255,8 @@ def test_get_calendar_categories(ics_calendars:ICSCalendars):
     ]
 
 
-class CleanedHTML(str):
-    clean = True
+class CleanedHTML(str):  # noqa: SLOT000
+    clean: ClassVar[bool] = True
 
 
 @pytest.fixture
@@ -266,9 +273,11 @@ def test_json_has_no_errors(merged):
     """Usually, there are no errors."""
     assert merged["errors"] == []
 
+
 def test_we_have_several_calendars(merged):
     """We have several calendars."""
     assert len(merged["calendars"]) == 4
+
 
 def test_index_merged(merged, index):
     """The index is in the right place."""
@@ -283,11 +292,13 @@ def test_color_is_clean(merged):
     assert all(color.clean for color in colors)
     assert colors == ["", "", "black", ""]
 
+
 def test_name_is_clean(merged):
     """Color is clean."""
     names = [calendar["name"] for calendar in merged["calendars"]]
     assert all(name.clean for name in names)
     assert names == ["My Calendar", "", "", ""]
+
 
 def test_desccription_is_clean(merged):
     """Color is clean."""
@@ -307,4 +318,82 @@ def test_css_is_clean(merged):
     """Color is clean."""
     css_list = [calendar["css-classes"] for calendar in merged["calendars"]]
     assert all(cls.clean for cats in css_list for cls in cats)
-    assert css_list == [["CALENDAR-INDEX-0"], ["CALENDAR-INDEX-1"], ["CALENDAR-INDEX-2"], ["CALENDAR-INDEX-3", "CATEGORY-NOSE", "CATEGORY-WHOLS"]]
+    assert css_list == [
+        ["CALENDAR-INDEX-0"],
+        ["CALENDAR-INDEX-1"],
+        ["CALENDAR-INDEX-2"],
+        ["CALENDAR-INDEX-3", "CATEGORY-NOSE", "CATEGORY-WHOLS"],
+    ]
+
+
+def test_get_merged_from_url(client, cache_url):
+    """Make a  real request and record the result."""
+    cache_url("https://calendar.example.com/ics", CALENDARS)
+    result = client.get("/calendar.json?url=https://calendar.example.com/ics")
+    assert result.status_code == 200
+    data = result.json
+    pprint(data)
+    # {'calendars': [{'calendar_index': 0,
+    assert data["calendars"][0]["calendar_index"] == 0
+    #                 'categories': [],
+    assert data["calendars"][0]["categories"] == []
+    #                 'color': '',
+    assert data["calendars"][0]["color"] == ""
+    #                 'css-classes': ['CALENDAR-INDEX-0\n'],
+    assert data["calendars"][0]["css-classes"] == ["CALENDAR-INDEX-0"]
+    #                 'description': '',
+    assert data["calendars"][0]["description"] == ""
+    #                 'name': 'My Calendar\n',
+    assert data["calendars"][0]["name"] == "My Calendar"
+    #                 'url_index': 0},
+    assert data["calendars"][0]["url_index"] == 0
+    #                {'calendar_index': 1,
+    assert data["calendars"][1]["calendar_index"] == 1
+    #                 'categories': [],
+    assert data["calendars"][1]["categories"] == []
+    #                 'color': '',
+    assert data["calendars"][1]["color"] == ""
+    #                 'css-classes': ['CALENDAR-INDEX-1\n'],
+    assert data["calendars"][1]["css-classes"] == ["CALENDAR-INDEX-1"]
+    #                 'description': 'My Calendar Description\n',
+    assert data["calendars"][1]["description"] == "My Calendar Description"
+    #                 'name': '',
+    assert data["calendars"][1]["name"] == ""
+    #                 'url_index': 0},
+    assert data["calendars"][1]["url_index"] == 0
+    #                {'calendar_index': 2,
+    assert data["calendars"][2]["calendar_index"] == 2
+    #                 'categories': [],
+    assert data["calendars"][2]["categories"] == []
+    #                 'color': 'black\n',
+    assert data["calendars"][2]["color"] == "black"
+    #                 'css-classes': ['CALENDAR-INDEX-2\n'],
+    assert data["calendars"][2]["css-classes"] == ["CALENDAR-INDEX-2"]
+    #                 'description': '',
+    assert data["calendars"][2]["description"] == ""
+    #                 'name': '',
+    assert data["calendars"][2]["name"] == ""
+    #                 'url_index': 0},
+    assert data["calendars"][2]["url_index"] == 0
+    #                {'calendar_index': 3,
+    assert data["calendars"][3]["calendar_index"] == 3
+    #                 'categories': ['NOSE\n', 'WHOLS\n'],
+    assert data["calendars"][3]["categories"] == ["NOSE", "WHOLS"]
+    #                 'color': '',
+    assert data["calendars"][3]["color"] == ""
+    #                 'css-classes': ['CALENDAR-INDEX-3\n',
+    #                                 'CATEGORY-NOSE\n',
+    #                                 'CATEGORY-WHOLS\n'],
+    assert data["calendars"][3]["css-classes"] == [
+        "CALENDAR-INDEX-3",
+        "CATEGORY-NOSE",
+        "CATEGORY-WHOLS",
+    ]
+    #                 'description': '',
+    assert data["calendars"][3]["description"] == ""
+    #                 'name': '',
+    assert data["calendars"][3]["name"] == ""
+    #                 'url_index': 0}],
+    assert data["calendars"][3]["url_index"] == 0
+    #  'errors': []}
+    assert data["errors"] == []

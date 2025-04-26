@@ -41,26 +41,33 @@ class ConvertToCalendars(ConversionStrategy):
     def collect_components_from(self, index: int, calendars: Calendars):
         """Collect all calendars in use."""
         for info in calendars.get_infos():
-            self.calendars.append({
-                "url_index": index,
-                "calendar_index": info.calendar_index,
-                "name": self.clean_html(info.calendar_name or ""),
-                "description": self.clean_html(info.calendar_description or ""),
-                "color": self.clean_html(info.calendar_color or ""),
-                "categories": [self.clean_html(category) for category in info.calendar_categories],
-                "css-classes": [self.clean_html(category) for category in info.css_classes],
-            })
+            self.calendars.append(
+                {
+                    "url_index": index,
+                    "calendar_index": info.calendar_index,
+                    "name": self.clean_html(info.calendar_name or ""),
+                    "description": self.clean_html(info.calendar_description or ""),
+                    "color": self.clean_html(info.calendar_color or ""),
+                    "categories": [
+                        self.clean_html(category)
+                        for category in info.calendar_categories
+                    ],
+                    "css-classes": [
+                        self.clean_html(category) for category in info.css_classes
+                    ],
+                }
+            )
+
+    def clean_html(self, html):
+        """Clean the HTML for JSON content."""
+        return super().clean_html(html).strip()
 
     def merge(self):
         """Merge all retrieved calendars."""
-        return self.jsonify({
-            "calendars": self.calendars,
-            "errors": self.errors
-        })
+        return self.jsonify({"calendars": self.calendars, "errors": self.errors})
 
     def convert_error(self, error: str, url: str, tb_s: str):
         """Tell the client more about the error."""
-        
 
 
 __all__ = ["ConvertToCalendars"]

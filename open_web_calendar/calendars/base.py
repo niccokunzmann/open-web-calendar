@@ -46,10 +46,8 @@ class Calendars(ABC):
     def get_infos(self) -> list[CalendarInfoInterface]:
         """Return information about the calendars."""
         return [
-            ListInfo(
-                [DictInfo(calendar_index=i), IcalInfo(c)])
-                for i, c in enumerate(self.get_icalendars())
-
+            ListInfo([DictInfo(calendar_index=i), IcalInfo(c)])
+            for i, c in enumerate(self.get_icalendars())
         ]
 
 
