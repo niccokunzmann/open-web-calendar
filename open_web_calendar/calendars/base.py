@@ -8,6 +8,10 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING
 
+from open_web_calendar.calendars.info.dict import DictInfo
+from open_web_calendar.calendars.info.ics import IcalInfo
+from open_web_calendar.calendars.info.list import ListInfo
+
 if TYPE_CHECKING:
     from datetime import datetime
 
@@ -41,7 +45,12 @@ class Calendars(ABC):
 
     def get_infos(self) -> list[CalendarInfoInterface]:
         """Return information about the calendars."""
-        return []
+        return [
+            ListInfo(
+                [DictInfo(calendar_index=i), IcalInfo(c)])
+                for i, c in enumerate(self.get_icalendars())
+
+        ]
 
 
 __all__ = ["Calendars"]

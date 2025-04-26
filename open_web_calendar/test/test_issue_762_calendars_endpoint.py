@@ -7,9 +7,10 @@
 See https://github.com/niccokunzmann/open-web-calendar/issues/762
 """
 
-from icalendar import Calendar
 import pytest
+from icalendar import Calendar
 
+from open_web_calendar.calendars.ics import ICSCalendars
 from open_web_calendar.calendars.info import (
     CalendarInfoInterface,
     DictInfo,
@@ -182,3 +183,64 @@ def test_get_categories(title):
     calendar = Calendar()
     calendar.add("CATEGORIES", title)
     assert IcalInfo(calendar).calendar_categories == [title]
+
+
+@pytest.fixture()
+def ics_calendars():
+    return ICSCalendars.from_text(
+        """
+BEGIN:VCALENDAR
+NAME:My Calendar
+END:VCALENDAR
+BEGIN:VCALENDAR
+DESCRIPTION:My Calendar Description
+END:VCALENDAR
+BEGIN:VCALENDAR
+COLOR:black
+END:VCALENDAR
+BEGIN:VCALENDAR
+CATEGORIES:NOSE,WHOLS
+END:VCALENDAR
+"""
+)
+
+def test_get_calendar_indices(ics_calendars:ICSCalendars):
+    """We want to have it easy with the index."""
+    assert [info.calendar_index for info in ics_calendars.get_infos()] == [0, 1, 2, 3]
+
+
+def test_get_calendar_names(ics_calendars:ICSCalendars):
+    """We want to have it easy with the index."""
+    assert [info.calendar_name for info in ics_calendars.get_infos()] == [
+        "My Calendar",
+        None,
+        None,
+        None,
+    ]
+
+def test_get_calendar_descriptions(ics_calendars:ICSCalendars):
+    """We want to have it easy with the index."""
+    assert [info.calendar_description for info in ics_calendars.get_infos()] == [
+        None,
+        "My Calendar Description",
+        None,
+        None,
+    ]
+
+def test_get_calendar_colors(ics_calendars:ICSCalendars):
+    """We want to have it easy with the index."""
+    assert [info.calendar_color for info in ics_calendars.get_infos()] == [
+        None,
+        None,
+        "black",
+        None,
+    ]
+
+def test_get_calendar_categories(ics_calendars:ICSCalendars):
+    """We want to have it easy with the index."""
+    assert [info.calendar_categories for info in ics_calendars.get_infos()] == [
+        [],
+        [],
+        [],
+        ["NOSE", "WHOLS"],
+    ]

@@ -37,4 +37,5 @@ class IcalInfo(CalendarInfoInterface):
         cats = self._calendar.get("CATEGORIES")
         return cats.cats if cats is not None else []
 
+
 __all__ = ["IcalInfo"]
