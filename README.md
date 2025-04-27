@@ -50,4 +50,5 @@ Funding
 
 [<img alt="Logo NLnet: abstract logo of four people seen from above" src="https://nlnet.nl/logo/banner.svg" height="50px" />](https://nlnet.nl/) [<img alt="Logo NGI Zero: letterlogo shaped like a tag" src="https://nlnet.nl/image/logos/NGI0Core_tag.svg" height="50px" />](https://nlnet.nl/core)
 
-This project was funded in 2024 through the [NGI0 Core Fund](https://nlnet.nl/core), a fund established by [NLnet](https://nlnet.nl/) with financial support from the European Commission's [Next Generation Internet programme](https://ngi.eu/). You might be able to get funded, too!
+This project was funded twice - in 2024 and 2025 - through the [NGI0 Core Fund](https://nlnet.nl/core), a fund established by [NLnet](https://nlnet.nl/) with financial support from the European Commission's [Next Generation Internet programme](https://ngi.eu/). You might be able to get funded, too!
+
