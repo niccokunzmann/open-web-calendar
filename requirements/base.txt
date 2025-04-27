@@ -128,7 +128,7 @@ tzdata==2025.2
     #   icalendar
     #   recurring-ical-events
     #   x-wr-timezone
-url-normalize==2.2.0
+url-normalize==2.2.1
     # via requests-cache
 urllib3==2.4.0
     # via
