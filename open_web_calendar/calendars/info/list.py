@@ -51,13 +51,13 @@ class ListInfo(CalendarInfoInterface):
         )
 
     @property
-    def calendar_index(self) -> int | None:
+    def calendar_index_in_file(self) -> int | None:
         """Return the index of the URL of the calendar."""
         return next(
             (
-                info.calendar_index
+                info.calendar_index_in_file
                 for info in self._infos
-                if info.calendar_index is not None
+                if info.calendar_index_in_file is not None
             ),
             None,
         )

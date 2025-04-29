@@ -29,9 +29,9 @@ class DictInfo(CalendarInfoInterface):
         return self._info.get("calendar_url")
 
     @property
-    def calendar_index(self) -> int | None:
+    def calendar_index_in_file(self) -> int | None:
         """Return the index of the URL of the calendar."""
-        return self._info.get("calendar_index")
+        return self._info.get("calendar_index_in_file")
 
     @property
     def calendar_description(self) -> str | None:
@@ -53,9 +53,12 @@ class DictInfo(CalendarInfoInterface):
     ):
         """Set values."""
         if values:
+            for key in values:
+                if not isinstance(self.__class__.__dict__.get(key), property):
+                    raise ValueError(f"Cannot set {key}.")  # noqa: TRY004
             self._info.update(values)
         if kwargs:
-            self._info.update(kwargs)
+            self.set(kwargs)
 
 
 __all__ = ["DictInfo"]

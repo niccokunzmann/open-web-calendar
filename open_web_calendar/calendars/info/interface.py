@@ -18,7 +18,7 @@ class CalendarInfoInterface:
         return None
 
     @property
-    def calendar_index(self) -> int | None:
+    def calendar_index_in_file(self) -> int | None:
         """Return the index of the calendar in the file.
 
         A file can have several calendars.
@@ -45,8 +45,8 @@ class CalendarInfoInterface:
     def css_classes(self) -> list[str]:
         """Return the CSS classes of the calendar."""
         result = []
-        if self.calendar_index is not None:
-            result.append(f"CALENDAR-INDEX-{self.calendar_index}")
+        if self.calendar_index_in_file is not None:
+            result.append(f"CALENDAR-INDEX-IN-FILE-{self.calendar_index_in_file}")
         for category in self.calendar_categories:
             result.append(f"CATEGORY-{category}")
         return result

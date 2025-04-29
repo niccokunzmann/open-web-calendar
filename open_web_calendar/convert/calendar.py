@@ -3,10 +3,14 @@
 # SPDX-License-Identifier: GPL-2.0-only
 """Convert the source links according to the specification to a list of calendars."""
 
-from typing import Any
+from __future__ import annotations
 
-from open_web_calendar.calendars.base import Calendars
+from typing import TYPE_CHECKING, Any
+
 from open_web_calendar.convert.base import ConversionStrategy
+
+if TYPE_CHECKING:
+    from open_web_calendar.calendars.base import Calendars
 
 
 class ConvertToCalendars(ConversionStrategy):
@@ -44,7 +48,7 @@ class ConvertToCalendars(ConversionStrategy):
             self.calendars.append(
                 {
                     "url_index": index,
-                    "calendar_index": info.calendar_index,
+                    "calendar_index": info.calendar_index_in_file,
                     "name": self.clean_html(info.calendar_name or ""),
                     "description": self.clean_html(info.calendar_description or ""),
                     "color": self.clean_html(info.calendar_color or ""),
@@ -52,9 +56,8 @@ class ConvertToCalendars(ConversionStrategy):
                         self.clean_html(category)
                         for category in info.calendar_categories
                     ],
-                    "css-classes": [
-                        self.clean_html(category) for category in info.css_classes
-                    ],
+                    "css-classes": [self.clean_html(f"CALENDAR-INDEX-{index}")]
+                    + [self.clean_html(category) for category in info.css_classes],
                 }
             )
 

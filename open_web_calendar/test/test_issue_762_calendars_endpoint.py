@@ -41,7 +41,7 @@ def str_attr(request) -> str:
     return request.param
 
 
-INT_ATTR = ["calendar_index"]
+INT_ATTR = ["calendar_index_in_file"]
 
 
 @pytest.fixture(params=INT_ATTR)
@@ -153,8 +153,8 @@ def test_empty_css():
 
 def test_css_uses_index(list_info: ListInfo, index):
     """The categories include the index."""
-    list_info.set(calendar_index=index)
-    assert f"CALENDAR-INDEX-{index}" in list_info.css_classes
+    list_info.set(calendar_index_in_file=index)
+    assert f"CALENDAR-INDEX-IN-FILE-{index}" in list_info.css_classes
 
 
 def test_css_uses_categories(list_info: ListInfo, title):
@@ -205,14 +205,26 @@ END:VCALENDAR
 """
 
 
-@pytest.fixture
+@pytest.fixture()
 def ics_calendars():
     return ICSCalendars.from_text(CALENDARS)
 
 
+def test_invalid_key():
+    with pytest.raises(ValueError):
+        DictInfo({"foo": "bar"})
+    with pytest.raises(ValueError):
+        DictInfo(foo="bar")
+
+
 def test_get_calendar_indices(ics_calendars: ICSCalendars):
     """We want to have it easy with the index."""
-    assert [info.calendar_index for info in ics_calendars.get_infos()] == [0, 1, 2, 3]
+    assert [info.calendar_index_in_file for info in ics_calendars.get_infos()] == [
+        0,
+        1,
+        2,
+        3,
+    ]
 
 
 def test_get_calendar_names(ics_calendars: ICSCalendars):
@@ -259,7 +271,7 @@ class CleanedHTML(str):  # noqa: SLOT000
     clean: ClassVar[bool] = True
 
 
-@pytest.fixture
+@pytest.fixture()
 def merged(ics_calendars, index, monkeypatch) -> dict:
     """Convert a calendar and return the JSON."""
     cals = ConvertToCalendars({})
@@ -314,15 +326,16 @@ def test_categories_is_clean(merged):
     assert categories == [[], [], [], ["NOSE", "WHOLS"]]
 
 
-def test_css_is_clean(merged):
+def test_css_is_clean(merged, index):
     """Color is clean."""
     css_list = [calendar["css-classes"] for calendar in merged["calendars"]]
     assert all(cls.clean for cats in css_list for cls in cats)
+    cal_index = f"CALENDAR-INDEX-{index}"
     assert css_list == [
-        ["CALENDAR-INDEX-0"],
-        ["CALENDAR-INDEX-1"],
-        ["CALENDAR-INDEX-2"],
-        ["CALENDAR-INDEX-3", "CATEGORY-NOSE", "CATEGORY-WHOLS"],
+        [cal_index, "CALENDAR-INDEX-IN-FILE-0"],
+        [cal_index, "CALENDAR-INDEX-IN-FILE-1"],
+        [cal_index, "CALENDAR-INDEX-IN-FILE-2"],
+        [cal_index, "CALENDAR-INDEX-IN-FILE-3", "CATEGORY-NOSE", "CATEGORY-WHOLS"],
     ]
 
 
@@ -340,7 +353,10 @@ def test_get_merged_from_url(client, cache_url):
     #                 'color': '',
     assert data["calendars"][0]["color"] == ""
     #                 'css-classes': ['CALENDAR-INDEX-0\n'],
-    assert data["calendars"][0]["css-classes"] == ["CALENDAR-INDEX-0"]
+    assert data["calendars"][0]["css-classes"] == [
+        "CALENDAR-INDEX-0",
+        "CALENDAR-INDEX-IN-FILE-0",
+    ]
     #                 'description': '',
     assert data["calendars"][0]["description"] == ""
     #                 'name': 'My Calendar\n',
@@ -354,7 +370,10 @@ def test_get_merged_from_url(client, cache_url):
     #                 'color': '',
     assert data["calendars"][1]["color"] == ""
     #                 'css-classes': ['CALENDAR-INDEX-1\n'],
-    assert data["calendars"][1]["css-classes"] == ["CALENDAR-INDEX-1"]
+    assert data["calendars"][1]["css-classes"] == [
+        "CALENDAR-INDEX-0",
+        "CALENDAR-INDEX-IN-FILE-1",
+    ]
     #                 'description': 'My Calendar Description\n',
     assert data["calendars"][1]["description"] == "My Calendar Description"
     #                 'name': '',
@@ -368,7 +387,10 @@ def test_get_merged_from_url(client, cache_url):
     #                 'color': 'black\n',
     assert data["calendars"][2]["color"] == "black"
     #                 'css-classes': ['CALENDAR-INDEX-2\n'],
-    assert data["calendars"][2]["css-classes"] == ["CALENDAR-INDEX-2"]
+    assert data["calendars"][2]["css-classes"] == [
+        "CALENDAR-INDEX-0",
+        "CALENDAR-INDEX-IN-FILE-2",
+    ]
     #                 'description': '',
     assert data["calendars"][2]["description"] == ""
     #                 'name': '',
@@ -385,7 +407,8 @@ def test_get_merged_from_url(client, cache_url):
     #                                 'CATEGORY-NOSE\n',
     #                                 'CATEGORY-WHOLS\n'],
     assert data["calendars"][3]["css-classes"] == [
-        "CALENDAR-INDEX-3",
+        "CALENDAR-INDEX-0",
+        "CALENDAR-INDEX-IN-FILE-3",
         "CATEGORY-NOSE",
         "CATEGORY-WHOLS",
     ]
