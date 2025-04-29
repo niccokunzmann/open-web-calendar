@@ -7,7 +7,7 @@
 webcal:// usually means http.
 """
 
-from open_web_calendar.conversion_base import ConversionStrategy
+from open_web_calendar.convert.base import ConversionStrategy
 
 
 def test_webcal_is_replaced(mock):

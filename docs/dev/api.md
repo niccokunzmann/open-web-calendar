@@ -30,6 +30,7 @@ The basic parameters are the same at these endpoints:
 - `/calendar.html` - view the calendar
 - `/calendar.spec` - download the specification
 - `/calendar.ics` - subscribe to the ics file
+- `/calendar.json` - information about the calendar and the content as JSON
 - `/calendar.events.json` - FLEXIBLE - get the events as JSON  
     Please note that you CAN use this but you cannot be sure that the
     JSON schema remains the same. If you want that, add tests.

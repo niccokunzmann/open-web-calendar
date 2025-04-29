@@ -14,14 +14,16 @@ from typing import Any, Optional
 from urllib.parse import urljoin
 
 import requests
+from flask import Response, jsonify
 from lxml import etree
 
-from open_web_calendar.calendars.base import Calendars
-from open_web_calendar.calendars.caldav import (
+from open_web_calendar.calendars import (
     CalDAVCalendars,
+    Calendars,
+    ICSCalendars,
+    InvalidCalendars,
 )
-from open_web_calendar.calendars.errors import InvalidCalendars
-from open_web_calendar.calendars.ics import ICSCalendars
+from open_web_calendar.clean_html import clean_html
 from open_web_calendar.encryption import EmptyFernetStore, FernetStore
 
 
@@ -126,13 +128,20 @@ class ConversionStrategy:
             with self.lock:
                 self.components.append(self.error(ty, err, tb, url))
 
-    def collect_components_from(self, index, calendars):
+    def collect_components_from(self, index: int, calendars: Calendars):
         """Collect all the compenents from the calendar."""
         raise NotImplementedError("to be implemented in subclasses")
 
     def merge(self):
         """Return the flask Response for the merged calendars."""
         raise NotImplementedError("to be implemented in subclasses")
+
+    def clean_html(self, html: str) -> str:
+        """Return the cleaned HTML."""
+        return clean_html(html, self.specification)
+
+    def jsonify(self, data: Any) -> Response:
+        return jsonify(data)
 
 
 __all__ = ["ConversionStrategy", "get_text_from_url"]

@@ -150,6 +150,7 @@ extend-safe-fixes = [
     "T203",   # `pprint` found
     "RUF001", # String contains ambiguous character
     "SLF001", # Private Member Access
+    "PT001",  # fixture() parenthesis
 ]
 "open_web_calendar/features/*" = [
     "F811",   # Redefinition of unused `step_impl` from line 52

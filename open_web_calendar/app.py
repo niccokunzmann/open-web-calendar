@@ -8,7 +8,6 @@ from __future__ import annotations
 import datetime
 import json
 import os
-import sys
 import traceback
 from http import HTTPStatus
 from pathlib import Path
@@ -31,16 +30,18 @@ from flask import (
 from flask_allowed_hosts import AllowedHosts
 
 from open_web_calendar.calendars.caldav import CalDAVCalendars
+from open_web_calendar.convert.calendar import ConvertToCalendars
+from open_web_calendar.error import http_status_code_for_error, json_error
 from open_web_calendar.util import set_url_username_password
 
 from . import translate, version
 from .config import environment as config
-from .convert_to_dhtmlx import ConvertToDhtmlx
-from .convert_to_ics import ConvertToICS
+from .convert.events import ConvertToEvents
+from .convert.ics import ConvertToICS
 from .encryption import EmptyFernetStore, FernetStore
 
 if TYPE_CHECKING:
-    from open_web_calendar.conversion_base import ConversionStrategy
+    from open_web_calendar.convert.base import ConversionStrategy
 
 # constants
 HERE = Path(__file__).parent
@@ -267,9 +268,14 @@ def get_calendar(ext):
     specification = get_specification()
     if ext == "spec":
         return jsonify(specification)
+    if ext == "json":
+        try:
+            return get_conversion(ConvertToCalendars, specification)
+        except:
+            return json_error()
     if ext == "events.json":
         try:
-            return get_conversion(ConvertToDhtmlx, specification)
+            return get_conversion(ConvertToEvents, specification)
         except:
             return json_error()
     if ext == "ics":
@@ -375,31 +381,6 @@ def unhandled_exception(error):
     """,
         http_status_code_for_error(error),
     )  # return error code from https://stackoverflow.com/a/7824605
-
-
-def http_status_code_for_error(error: Exception) -> int:
-    """Return the status code from an exception or 500."""
-    return getattr(error, "http_status_code", 500)
-
-
-def json_error():
-    """Return the active exception as json."""
-    _, err, _ = sys.exc_info()
-    status_code = http_status_code_for_error(err)
-    traceback.print_exc()
-    message = str(err) if config.debug else None
-    error = type(err).__name__
-    return jsonify(
-        {
-            "message": message,
-            "description": message,
-            "url": request.url,
-            "traceback": traceback.format_exc() if config.debug else None,
-            "error": error,
-            "text": error,
-            "code": status_code,
-        }
-    ), status_code
 
 
 @app.post("/encrypt")

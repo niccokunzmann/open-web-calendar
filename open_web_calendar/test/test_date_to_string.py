@@ -7,7 +7,7 @@ import datetime
 import pytest
 from zoneinfo import ZoneInfo
 
-from open_web_calendar.app import ConvertToDhtmlx
+from open_web_calendar.app import ConvertToEvents
 
 berlin = ZoneInfo("Europe/Berlin")
 eastern = ZoneInfo("US/Eastern")
@@ -56,6 +56,6 @@ EASTERN = "US/Eastern"
 )
 def test_date_to_string_conversion(date, tz, expected):
     """Convert dates and datetime objects for the events.json"""
-    string = ConvertToDhtmlx({"timezone": tz}).date_to_string(date)
+    string = ConvertToEvents({"timezone": tz}).date_to_string(date)
     print(date)
     assert string == expected

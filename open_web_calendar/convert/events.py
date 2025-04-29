@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+"""Convert the source links according to the specification to a list of events."""
+
 from __future__ import annotations
 
 import datetime
@@ -13,8 +15,7 @@ from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
 
-from .clean_html import clean_html
-from .conversion_base import ConversionStrategy
+from .base import ConversionStrategy
 
 if TYPE_CHECKING:
     from icalendar import Event, vCalAddress
@@ -27,7 +28,7 @@ def is_date(date):
     return isinstance(date, datetime.date) and not isinstance(date, datetime.datetime)
 
 
-class ConvertToDhtmlx(ConversionStrategy):
+class ConvertToEvents(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern.
 
     - timeshift_minutes is the timeshift specified by the calendar
@@ -212,10 +213,6 @@ class ConvertToDhtmlx(ConversionStrategy):
         description = Description(event).html
         return self.clean_html(description)
 
-    def clean_html(self, html: str):
-        """Return the cleaned HTML."""
-        return clean_html(html, self.specification)
-
     def merge(self):
         return jsonify(self.components)
 
@@ -242,8 +239,10 @@ class ConvertToDhtmlx(ConversionStrategy):
 
     def get_event_categories(self, event) -> list[str]:
         """Return the categories of the event."""
-        categories = event.get("CATEGORIES", None)
+        categories = event.get(
+            "CATEGORIES", None
+        )  # TODO: use icalendar property for more compatibility
         return categories.cats if categories is not None else []
 
 
-__all__ = ["ConvertToDhtmlx"]
+__all__ = ["ConvertToEvents"]

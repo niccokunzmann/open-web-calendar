@@ -13,7 +13,7 @@ import pytest
 from flask.testing import FlaskClient
 
 from open_web_calendar.app import get_configuration
-from open_web_calendar.conversion_base import ConversionStrategy
+from open_web_calendar.convert.base import ConversionStrategy
 from open_web_calendar.encryption import (
     DecryptedData,
     EmptyFernetStore,
