@@ -311,6 +311,10 @@ msgstr ""
 msgid "[JavaScript Customization](../javascript)"
 msgstr ""
 
+msgid ""
+"`/calendar.json` - information about the calendar and the content as JSON"
+msgstr ""
+
 #~ msgid ""
 #~ "Add tests in [features/configure-the-"
 #~ "calendar.feature](https://github.com/niccokunzmann/open-web-"

@@ -365,6 +365,10 @@ msgstr ""
 msgid "[JavaScript Customization](../javascript)"
 msgstr ""
 
+msgid ""
+"`/calendar.json` - information about the calendar and the content as JSON"
+msgstr ""
+
 #, fuzzy
 #~ msgid ""
 #~ "Add tests in [features/configure-the-"

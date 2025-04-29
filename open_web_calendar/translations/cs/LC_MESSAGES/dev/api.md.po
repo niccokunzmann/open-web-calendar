@@ -363,6 +363,10 @@ msgid ""
 "calendar/raw/master/open_web_calendar/default_specification.yml "
 msgstr ""
 
+msgid ""
+"`/calendar.json` - information about the calendar and the content as JSON"
+msgstr ""
+
 #~ msgid "Additional parameters are required:"
 #~ msgstr "Další potřebné parametry:"
 
