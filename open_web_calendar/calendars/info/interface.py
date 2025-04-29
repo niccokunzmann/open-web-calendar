@@ -19,7 +19,11 @@ class CalendarInfoInterface:
 
     @property
     def calendar_index(self) -> int | None:
-        """Return the index of the URL of the calendar."""
+        """Return the index of the calendar in the file.
+
+        A file can have several calendars.
+        This is the index inside.
+        """
         return None
 
     @property
