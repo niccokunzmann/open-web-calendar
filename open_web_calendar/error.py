@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 """Error handling for Open Web Calendar."""
+
 from __future__ import annotations
 
 import sys
