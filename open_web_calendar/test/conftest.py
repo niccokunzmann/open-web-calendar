@@ -33,6 +33,13 @@ environment.debug = True
 environment.use_requests_cache = False
 
 
+@pytest.fixture()
+def production():
+    environment.debug = False
+    yield True
+    environment.debug = True
+
+
 @pytest.fixture(autouse=True)
 def _use_responses(responses: RequestsMock) -> Generator[RequestsMock, None, None]:
     """Prevent requests from sending out requests
@@ -43,12 +50,12 @@ def _use_responses(responses: RequestsMock) -> Generator[RequestsMock, None, Non
     responses.assert_all_requests_are_fired = False
 
 
-@pytest.fixture
+@pytest.fixture()
 def mock():
     return Mock()
 
 
-@pytest.fixture
+@pytest.fixture()
 def app(store, monkeypatch) -> Flask:
     """Create the app.
 
@@ -68,7 +75,7 @@ def app(store, monkeypatch) -> Flask:
     return app
 
 
-@pytest.fixture
+@pytest.fixture()
 def cache_url(responses: RequestsMock) -> Callable[[str, str], None]:
     """Cache an additional URL."""
 
@@ -88,12 +95,12 @@ def cache_url(responses: RequestsMock) -> Callable[[str, str], None]:
     return cache_url
 
 
-@pytest.fixture
+@pytest.fixture()
 def client(app: Flask) -> FlaskClient:
     return app.test_client()
 
 
-@pytest.fixture
+@pytest.fixture()
 def runner(app):
     return app.test_cli_runner()
 
@@ -105,7 +112,7 @@ for file in CALENDAR_DIRECTORY.iterdir():
             calendar_files[file] = f.read()
 
 
-@pytest.fixture
+@pytest.fixture()
 def calendar_urls(cache_url) -> dict[str, str]:
     """Mapping the calendar name without .ics to the cached url.
 
@@ -121,7 +128,7 @@ def calendar_urls(cache_url) -> dict[str, str]:
     return mapping
 
 
-@pytest.fixture
+@pytest.fixture()
 def calendar_content():
     """Mapping the calendar name without .ics to the calendar content.
 
@@ -134,7 +141,7 @@ def calendar_content():
     return mapping
 
 
-@pytest.fixture
+@pytest.fixture()
 def merged(
     client, calendar_urls
 ) -> Callable[[Optional[list[str]], Optional[dict[str, str]]], icalendar.Calendar]:
@@ -159,13 +166,13 @@ def merged(
     return _merged_calendars
 
 
-@pytest.fixture
+@pytest.fixture()
 def store():
     """A test crypt store for the open web calendar."""
     return FernetStore(["n77iebivnjNTLDpmFcu6DuNFTHUnlEjCskx8oe0Xh8k="])
 
 
-@pytest.fixture
-def todo():
+@pytest.fixture()
+def todo() -> None:  # noqa: PT004, RUF100
     """This test should be implement later."""
     pytest.skip("This test needs implementing.")

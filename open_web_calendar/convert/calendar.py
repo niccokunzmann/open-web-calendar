@@ -8,6 +8,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, Any
 
 from open_web_calendar.convert.base import ConversionStrategy
+from open_web_calendar.error import convert_error_message_to_json
 
 if TYPE_CHECKING:
     from open_web_calendar.calendars.base import Calendars
@@ -71,6 +72,14 @@ class ConvertToCalendars(ConversionStrategy):
 
     def convert_error(self, error: str, url: str, tb_s: str):
         """Tell the client more about the error."""
+        self.errors.append(
+            convert_error_message_to_json(
+                f"Error in {type(self).__name__}",
+                error,
+                url,
+                tb_s,
+            )
+        )
 
 
 __all__ = ["ConvertToCalendars"]

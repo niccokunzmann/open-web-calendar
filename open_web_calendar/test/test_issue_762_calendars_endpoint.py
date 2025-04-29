@@ -21,6 +21,7 @@ from open_web_calendar.calendars.info import (
     ListInfo,
 )
 from open_web_calendar.convert.calendar import ConvertToCalendars
+from open_web_calendar.error import convert_error_message_to_json
 
 
 @pytest.fixture(params=["My Calendar", "Company Calendar"])
@@ -272,11 +273,16 @@ class CleanedHTML(str):  # noqa: SLOT000
 
 
 @pytest.fixture()
-def merged(ics_calendars, index, monkeypatch) -> dict:
-    """Convert a calendar and return the JSON."""
+def cals(monkeypatch) -> ConvertToCalendars:
     cals = ConvertToCalendars({})
     monkeypatch.setattr(cals, "jsonify", lambda data: data)
     monkeypatch.setattr(cals, "clean_html", CleanedHTML)
+    return cals
+
+
+@pytest.fixture()
+def merged(ics_calendars, index, cals) -> dict:
+    """Convert a calendar and return the JSON."""
     cals.collect_components_from(index, ics_calendars)
     return cals.merge()
 
@@ -420,3 +426,45 @@ def test_get_merged_from_url(client, cache_url):
     assert data["calendars"][3]["url_index"] == 0
     #  'errors': []}
     assert data["errors"] == []
+
+
+def test_error_is_recorded(cals):
+    """Check that we know when there is an error."""
+    cals.convert_error("Error", "url", "traceback")
+    merged = cals.merge()
+    assert merged["errors"]
+    err = merged["errors"][0]
+    assert err["message"] == "Error"
+    assert err["traceback"] == "traceback"
+    assert err["url"] == "url"
+    error_text = f"Error in {type(cals).__name__}"
+    assert err["error"] == error_text
+    assert err["code"] == 500
+
+
+def test_error_is_not_sensitive_if_not_debugging(production):
+    """We must not include sensitive information in production error messages."""
+    err = convert_error_message_to_json(
+        "Error", "message", "url", "traceback", status_code=500
+    )
+    assert err["message"] == "Error"
+    assert err["description"] == "Error"
+    assert err["traceback"] == ""
+    assert err["url"] == "url"
+    assert err["error"] == "Error"
+    assert err["text"] == "Error"
+    assert err["code"] == 500
+
+
+def test_error_includes_everything_in_debug_mode():
+    """If we debug the application, we want to see everything."""
+    err = convert_error_message_to_json(
+        "Error", "message", "url", "traceback", status_code=501
+    )
+    assert err["message"] == "message"
+    assert err["description"] == "message"
+    assert err["traceback"] == "traceback"
+    assert err["url"] == "url"
+    assert err["error"] == "Error"
+    assert err["text"] == "Error"
+    assert err["code"] == 501
