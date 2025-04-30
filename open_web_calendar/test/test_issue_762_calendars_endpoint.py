@@ -20,6 +20,7 @@ from open_web_calendar.calendars.info import (
     IcalInfo,
     ListInfo,
 )
+from open_web_calendar.calendars.info.url import URLInfo
 from open_web_calendar.convert.calendar import ConvertToCalendars
 from open_web_calendar.error import convert_error_message_to_json
 
@@ -468,3 +469,18 @@ def test_error_includes_everything_in_debug_mode():
     assert err["error"] == "Error"
     assert err["text"] == "Error"
     assert err["code"] == 501
+
+
+@pytest.mark.parametrize(
+    ("url", "name"),
+    [
+        ("https://localhost/asd/b.ics", "b"),
+        ("https://localhost/asd/a.icsasd", "a"),
+        ("http://other.hst/csddd/bashdjahd", "bashdjahd"),
+        ("domain/", "domain"),
+        ("http://domain/", "domain"),
+    ],
+)
+def test_url_can_extract_nice_default_name(url, name):
+    info = URLInfo(url)
+    assert info.calendar_name == name

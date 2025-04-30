@@ -422,7 +422,7 @@ function loadCalendar() {
     scheduler.templates.hour_scale = function(date){
     	const step = 60 / hour_division;
     	let html = "";
-    	for (const i=0; i<hour_division; i++){
+    	for (let i=0; i<hour_division; i++){
     	    html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>"; // TODO: This should be in CSS.
     	    date = scheduler.date.add(date, step, "minute");
     	}
@@ -649,6 +649,19 @@ function onCalendarInfoLoaded() {
     for (error of calendarMetaData.errors) {
         showEventError(error);
     }
+    // set the CSS variables
+    // see https://stackoverflow.com/a/707794/1320237
+    const sheet = document.createElement("style");
+    for (const calendar of calendarMetaData.calendars) {
+        const rules = "." + calendar["css-classes"][0] + ", ." +
+            calendar["css-classes"][0] + " ." + calendar["css-classes"][1] + 
+            " {" +
+                (calendar.color ? " --dhx-scheduler-event-background: " +  calendar.color + "; " : "") +
+                " --owc-menu-item-backgroud-color: var(--dhx-scheduler-event-background); " +
+            "}";
+        sheet.innerHTML += rules;
+    }
+    document.head.appendChild(sheet);
 }
 
 function getMenuContentFromInfo() {
@@ -669,16 +682,20 @@ function getMenuInnerContent(info) {
     for (const calendar of info.calendars) {
         const calendarListElement = document.createElement("div");
         calendarListElement.classList.add("menu__item");
-        // name/title
-        const calendarName = document.createElement("div");
-        calendarName.classList.add("calendar-title");
-        calendarName.innerText = calendar.name;
-        calendarListElement.appendChild(calendarName)
-        // description
-        const calendarDescription = document.createElement("div");
-        calendarDescription.classList.add("calendar-description");
-        calendarDescription.innerText = calendar.description;
-        calendarListElement.appendChild(calendarDescription);
+        if (specification.menu_shows_calendar_names) {
+            // calendar name
+            const calendarName = document.createElement("div");
+            calendarName.classList.add("calendar-title");
+            calendarName.innerText = calendar.name;
+            calendarListElement.appendChild(calendarName)
+        }
+        if (specification.menu_shows_calendar_descriptions) {
+            // calendar description
+            const calendarDescription = document.createElement("div");
+            calendarDescription.classList.add("calendar-description");
+            calendarDescription.innerText = calendar.description;
+            calendarListElement.appendChild(calendarDescription);
+        }
         for (const cssClass of calendar["css-classes"]) {
             calendarInfoList.classList.add(cssClass);
         }

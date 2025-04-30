@@ -8,6 +8,8 @@
 :root {
     --owc-menu-background-color: var(--dhx-scheduler-container-background);
     --owc-menu-box-shadow-color : var(--dhx-scheduler-base-colors-secondary);
+    --owc-menu-item-text-color: var(--dhx-scheduler-base-colors-text-base);
+    --owc-menu-item-backgroud-color: var(--dhx-scheduler-event-background);
 }
 
 /* Styling of the dhtmlx.html file.
@@ -391,7 +393,8 @@ div.dhx_agenda_line > span {
 .menu__item {
   display: block;
   padding: 12px 24px;
-  color: var(--dhx-scheduler-base-colors-text-base);
+  color: var(--owc-menu-item-text-color);
+  background-color: var(--owc-menu-item-backgroud-color);
   /* font-size: 20px;
   font-weight: 600; */
   text-decoration: none;

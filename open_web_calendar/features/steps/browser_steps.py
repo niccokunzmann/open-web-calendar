@@ -749,3 +749,48 @@ def step_impl(context):
     """Click on the burger menu to open or close it."""
     element = context.browser.find_element(By.ID, "burger-menu-label")
     element.click()
+
+
+def normalize_css_value(s):
+    """Normalize the color and other values."""
+    # rgb(231, 128, 116)
+    color_match = re.match(r"rgb\((\d+),\s*(\d+),\s+(\d+)\)", s)
+    if color_match:
+        return "#" + "".join(
+            hex(int(c))[2:].ljust(2, "0") for c in color_match.groups()
+        )
+    return s
+
+
+@then('"{text}" has the {css_property} "{css_value}"')
+def step_impl(context, text, css_property, css_value):
+    """Check the background color of an item."""
+    elements = context.browser.find_elements(
+        By.XPATH, f"//*[contains(text(), {text!r})]"
+    )
+    assert elements, f"Cannot find any element with the text {text!r}"
+    default_skip_to_parent = ["rgba(0, 0, 0, 0)"]
+    for i, element in enumerate(elements):
+        # see https://stackoverflow.com/a/15117720/1320237
+        for _ in range(10):
+            # search until body
+            # see https://dev.to/pavel_polivka/determining-the-effective-background-color-17ld
+            element_css_value = element.value_of_css_property(css_property)
+            if element_css_value not in default_skip_to_parent:
+                break
+            print("skip to parent")
+            try:
+                new_element = element.find_element(By.XPATH, "..")
+            except JavascriptException as e:
+                # Message: Cyclic object value: [object HTMLDocument]
+                raise AssertionError(
+                    "Could not find any value for the element or the element is absent."
+                ) from e
+            assert new_element != element
+            element = new_element  # noqa: PLW2901
+        element_css_value = normalize_css_value(element_css_value)
+        assert element_css_value == css_value, (
+            f"Element {i}/{len(elements)} should have css "
+            f"{css_property} set to {css_value!r} but the "
+            f"value is {element_css_value!r}"
+        )

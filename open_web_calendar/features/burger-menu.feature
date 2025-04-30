@@ -7,6 +7,7 @@ Feature: We want to habe a menu to see more information about the calendar.
 
     Scenario Outline: We can see the menu, open and close it. So, we see more about the calendar.
         Given we set the "controls" parameter to "menu"
+          And we add the calendar "rfc-7986-calendar"
           And we set the "<content_paremeter>" parameter to "<content>"
           And we set the "<show_parameter>" parameter to true
          When we look at 2025-01-16
@@ -17,12 +18,15 @@ Feature: We want to habe a menu to see more information about the calendar.
          Then we cannot see the text "<content>"
 
       Examples:
-        | show_parameter        | content_paremeter | content            |
-        | menu_shows_title       | title             | <a>My Calendar     |
-        | menu_shows_description | description       | This is a calendar |
+        | show_parameter                   | content_paremeter | content                                                  |
+        | menu_shows_title                 | title             | <a>My Calendar                                           |
+        | menu_shows_description           | description       | This is a calendar                                       |
+        | menu_shows_calendar_names        | x                 | RFC 7986 compatible calendar                             |
+        | menu_shows_calendar_descriptions | x                 | This calendar is really nice. It even has a description! |
 
     Scenario Outline: We can see the menu, open and close it. We can hide information.
         Given we set the "controls" parameter to "menu"
+          And we add the calendar "rfc-7986-calendar"
           And we set the "<show_parameter>" parameter to false
           And we set the "<content_paremeter>" parameter to "<content>"
          When we look at 2025-01-16
@@ -31,9 +35,11 @@ Feature: We want to habe a menu to see more information about the calendar.
          Then we cannot see the text "<content>"
 
       Examples:
-        | show_parameter         | content_paremeter | content            |
-        | menu_shows_title       | title             | <a>My Calendar     |
-        | menu_shows_description | description       | This is a calendar |
+        | show_parameter                   | content_paremeter | content                                                  |
+        | menu_shows_title                 | title             | <a>My Calendar                                           |
+        | menu_shows_description           | description       | This is a calendar                                       |
+        | menu_shows_calendar_names        | x                 | RFC 7986 compatible calendar                             |
+        | menu_shows_calendar_descriptions | x                 | This calendar is really nice. It even has a description! |
 
     Scenario Outline: We can configure the title in the menu.
        Given we configure the menu
@@ -41,12 +47,22 @@ Feature: We want to habe a menu to see more information about the calendar.
         Then "<spec>" is specified as <value>
       
       Examples:
-        | label                    | spec                     | value                    |
-        | Show Title in Menu       | menu_shows_title         | false                    |
-        | Show Description in Menu | menu_shows_description   | false                    |
+        | label                      | spec                             | value                    |
+        | Show Title in Menu         | menu_shows_title                 | false                    |
+        | Show Description in Menu   | menu_shows_description           | false                    |
+        | List Calendar Names        | menu_shows_calendar_names        | false                    |
+        | List Calendar Descriptions | menu_shows_calendar_descriptions | true                     |
     
-    Scenario: We can configure the calendar titles in the menu.
+    Scenario Outline: The calendar list items have the color of the calendars in the menu.
+        Given we add the calendar "<calendar>"
+          And we set the "controls" parameter to "menu"
+          And we set the "menu_shows_calendar_descriptions" parameter to "true"
+         When we look at 2025-01-16
+          And we click on the menu
+         Then "<text>" has the background-color "<background-color>"
 
-    Scenario: We can configure the calendar descriptions in the menu.
-
-    Scenario: The calendar list items have the color of the calendars in the menu.
+        Examples:
+            | calendar          | text                          | background-color |
+            | rfc-7986-calendar | This calendar is really nice. | #e78074        |
+            | rfc-7986-calendar | RFC 7986 compatible calendar  | #e78074        |
+            # | food              | food                          | #0288D1        |

@@ -213,6 +213,13 @@ plugin_event_tooltip: true
 menu_shows_title: true
 ## The description is shown in the menu.
 menu_shows_description: true
+## The menu can list the calendars from the "url" parameter.
+## For each URL, we see the name of the calendar
+menu_shows_calendar_names: true
+## For each URL, we see the name of the calendar
+menu_shows_calendar_descriptions: false
+
+
 
 ###################### Clean HTML ######################
 ##

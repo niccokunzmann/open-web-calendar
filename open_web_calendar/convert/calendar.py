@@ -7,6 +7,8 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
+from open_web_calendar.calendars.info.list import ListInfo
+from open_web_calendar.calendars.info.url import URLInfo
 from open_web_calendar.convert.base import ConversionStrategy
 from open_web_calendar.error import convert_error_message_to_json
 
@@ -45,7 +47,9 @@ class ConvertToCalendars(ConversionStrategy):
 
     def collect_components_from(self, index: int, calendars: Calendars):
         """Collect all calendars in use."""
-        for info in calendars.get_infos():
+        default = URLInfo(self.specification["url"][index])
+        for calendar_info in calendars.get_infos():
+            info = ListInfo([calendar_info, default])
             self.calendars.append(
                 {
                     "url_index": index,
