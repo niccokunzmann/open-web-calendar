@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
+from open_web_calendar.calendars.info.dict import DictInfo
 from open_web_calendar.calendars.info.list import ListInfo
 from open_web_calendar.calendars.info.url import URLInfo
 from open_web_calendar.convert.base import ConversionStrategy
@@ -45,9 +46,16 @@ class ConvertToCalendars(ConversionStrategy):
         self.calendars: list[dict[str, Any]] = []
         self.errors = []
 
+    def get_default_info_for_url(self, index: int):
+        """Return default information for the calendar."""
+        urls: list[str] = self.specification.get("url", [])
+        if index >= len(urls):
+            return DictInfo()
+        return URLInfo(urls[index])
+
     def collect_components_from(self, index: int, calendars: Calendars):
         """Collect all calendars in use."""
-        default = URLInfo(self.specification["url"][index])
+        default = self.get_default_info_for_url(index)
         for calendar_info in calendars.get_infos():
             info = ListInfo([calendar_info, default])
             self.calendars.append(

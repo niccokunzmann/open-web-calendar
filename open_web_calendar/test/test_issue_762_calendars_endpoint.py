@@ -383,8 +383,6 @@ def test_get_merged_from_url(client, cache_url):
     ]
     #                 'description': 'My Calendar Description\n',
     assert data["calendars"][1]["description"] == "My Calendar Description"
-    #                 'name': '',
-    assert data["calendars"][1]["name"] == ""
     #                 'url_index': 0},
     assert data["calendars"][1]["url_index"] == 0
     #                {'calendar_index': 2,
@@ -400,8 +398,6 @@ def test_get_merged_from_url(client, cache_url):
     ]
     #                 'description': '',
     assert data["calendars"][2]["description"] == ""
-    #                 'name': '',
-    assert data["calendars"][2]["name"] == ""
     #                 'url_index': 0},
     assert data["calendars"][2]["url_index"] == 0
     #                {'calendar_index': 3,
@@ -422,7 +418,7 @@ def test_get_merged_from_url(client, cache_url):
     #                 'description': '',
     assert data["calendars"][3]["description"] == ""
     #                 'name': '',
-    assert data["calendars"][3]["name"] == ""
+    assert data["calendars"][3]["name"] == "ics"
     #                 'url_index': 0}],
     assert data["calendars"][3]["url_index"] == 0
     #  'errors': []}
