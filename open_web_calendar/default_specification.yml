@@ -208,8 +208,11 @@ plugin_event_details: true
 plugin_event_tooltip: true
 
 ## Configure the menu
+## It must be included in "controls" to be shown.
 ## The title of the calendar is shown in the menu.
 menu_shows_title: true
+## The description is shown in the menu.
+menu_shows_description: true
 
 ###################### Clean HTML ######################
 ##

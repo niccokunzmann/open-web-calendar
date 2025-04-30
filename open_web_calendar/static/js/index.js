@@ -239,17 +239,15 @@ function getSpecification() {
     /* controls */
     spec.controls = [];
     spec.tabs = [];
-    var checkbuttons = document.getElementById("check-controls");
-    for (var i = 0; i < checkbuttons.length; i++) {
-        var checkbutton = checkbuttons[i];
+    let checkbuttons = document.getElementsByClassName("specification-list-checkbox");
+    for (let checkbutton of checkbuttons) {
         if (checkbutton.checked) {
             spec[checkbutton.classList[0]].push(checkbutton.value);
         }
     }
     /* event status */
-    checkbuttons = document.getElementsByClassName("collect-if-checked");
-    for (var i = 0; i < checkbuttons.length; i++) {
-        var checkbutton = checkbuttons[i];
+    checkbuttons = document.getElementsByClassName("specification-checkbox");
+    for (let checkbutton of checkbuttons) {
         spec[checkbutton.id] = checkbutton.checked;
     }
     /* map */
@@ -552,15 +550,14 @@ function listenForCSSChanges() {
 }
 
 function initializeLinkTargetChoice() {
-    var select = document.getElementById("select-target");
+    const select = document.getElementById("select-target");
     select.value = specification.target;
     select.onchange = updateOutputs;
 }
 
 function initializeCollectedCheckBoxes() {
-  var checkboxes = document.getElementsByClassName("collect-if-checked");
-  for (var i = 0; i < checkboxes.length; i++) {
-      var checkbox = checkboxes[i];
+  const checkboxes = document.getElementsByClassName("specification-checkbox");
+  for (const checkbox of checkboxes) {
       changeSpecificationOnChange(checkbox);
       checkbox.checked = ["true", true, "yes"].includes(specification[checkbox.id]);
   }
@@ -575,30 +572,17 @@ function initializeLoader() {
 }
 
 function updateControls() {
-    var initialView = document.getElementById("select-tab");
+    const initialView = document.getElementById("select-tab");
     initialView.value = specification.tab;
     changeSpecificationOnChange(initialView);
-    var form = document.getElementById("check-controls");
-    var checkbuttons = {};
-    ["tabs", "controls"].forEach(function(list) {
-        var checkboxes = form.getElementsByClassName(list);
-        var checked = specification[list];
-        for (var i = 0; i < checkboxes.length; i++) {
-            var checkbox = checkboxes[i];
-            checkbox.checked = checked.includes(checkbox.value);
-            checkbuttons[checkbox.value] = checkbox;
-            changeSpecificationOnChange(checkbox);
-        }
-    });
-    var labels = form.getElementsByTagName("label");
-    for (var i = 0; i < labels.length; i++) {
-        var label = labels[i];
-        label.addEventListener("click", function(event) {
-            var name = event.target.getAttribute("for");
-            var checkbox = checkbuttons[name];
-            checkbox.checked = !checkbox.checked;
-            updateOutputs();
-        });
+    /* We update the checkbuttons according to the specification. */
+    const specificationCheckbuttons = document.getElementsByClassName("specification-list-checkbox");
+    const checkbuttons = {};
+    for (const checkbutton of specificationCheckbuttons) {
+        const list = checkbutton.classList[0];// The list we include the button in
+        checkbutton.checked = specification[list].includes(checkbutton.value);
+        checkbuttons[checkbutton.value] = checkbutton;
+        changeSpecificationOnChange(checkbutton);
     }
 }
 

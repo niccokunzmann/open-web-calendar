@@ -259,8 +259,15 @@ tabs-description: "The Month view is the default. However, you can choose to sho
 # https://open-web-calendar.hosted.quelltext.eu/#translate-controls-description
 controls-description: "It might be that you do not want to show all controls for the\
   \ users to see. Choose here which controls you would like to display:"
-# Options to choose from
-controls-menu: "Burger Menu"
+
+# Menu configuration
+# https://open-web-calendar.hosted.quelltext.eu/#configure-menu
+# Options to choose from and title
+menu-title: "Calendar Menu"
+controls-menu: "Show Menu"
+menu-description: "You can include a burger menu and configure its content."
+menu-shows-title: "Show Title in Menu"
+menu-shows-description: "Show Description in Menu"
 
 
 # Heading of option

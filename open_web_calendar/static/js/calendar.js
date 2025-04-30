@@ -294,8 +294,9 @@ function getHeader() {
                 '</label>' +
                 // we add this inside ul: <li><a class="menu__item" href="#">Home</a></li>
                 '<div class="menu__box">' +
-                    (specification.menu_shows_title ? '<div class="menu-calendar-title">' + escapeHtml(specification.title) + '</div>' : '') +
-                    '<ul id="burger-menu-items"></ul>' +
+                    (specification.menu_shows_title ? '<div class="menu-text menu-calendar-title">' + escapeHtml(specification.title) + '</div>' : '') +
+                    (specification.menu_shows_description ? '<div class="menu-text menu-calendar-description">' + escapeHtml(specification.description) + '</div>' : '') +
+                '<ul id="burger-menu-items"></ul>' +
                 '</div>' +
             '</div>',
         css: "owc_nav_burger_menu" // the CSS class
