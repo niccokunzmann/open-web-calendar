@@ -341,6 +341,7 @@ div.dhx_agenda_line > span {
 }
 #menu__toggle:checked ~ .menu__box {
   left: 0 !important;
+  display: block !important;
 }
 .menu__btn {
   position: fixed;
@@ -370,7 +371,7 @@ div.dhx_agenda_line > span {
   top: 8px;
 }
 .menu__box {
-  display: block;
+  display: none;
   position: fixed;
   top: 0;
   left: -100%;
@@ -378,7 +379,7 @@ div.dhx_agenda_line > span {
   max-width: 90%;
   height: 100%;
   margin: 0;
-  padding: 80px 0;
+  padding: var(--dhx-scheduler-toolbar-height) 1em;
   list-style: none;
   background-color: var(--owc-menu-background-color);
   box-shadow: 2px 2px 6px var(--owc-menu-box-shadow-color);
@@ -391,7 +392,6 @@ div.dhx_agenda_line > span {
   display: block;
   padding: 12px 24px;
   color: #333;
-  font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
@@ -407,5 +407,6 @@ div.dhx_agenda_line > span {
     z-index: 2;
     min-width: 0px !important;
     border-width: 0px;
+    text-transform: none;
 }
 /* END Burger Menu */

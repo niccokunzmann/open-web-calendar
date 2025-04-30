@@ -286,13 +286,17 @@ function getHeader() {
          * 6. Snappy Sliding Hamburger Menu - https://alvarotrigo.com/blog/hamburger-menu-css/
          * See also https://docs.dhtmlx.com/scheduler/api__scheduler_header_config.html
          */
-        html: '<div class="hamburger-menu">' + 
-            '<input id="menu__toggle" type="checkbox" />' +
-            '<label class="menu__btn" for="menu__toggle">' +
-            '<span></span>' +
-            '</label>' +
-            // we add this inside ul: <li><a class="menu__item" href="#">Home</a></li>
-            '<ul class="menu__box" id="burger-menu-items"></ul>' +
+        html:
+            '<div class="hamburger-menu">' + 
+                '<input id="menu__toggle" type="checkbox" />' +
+                '<label class="menu__btn" for="menu__toggle" id="burger-menu-label">' +
+                    '<span></span>' +
+                '</label>' +
+                // we add this inside ul: <li><a class="menu__item" href="#">Home</a></li>
+                '<div class="menu__box">' +
+                    (specification.menu_shows_title ? '<div class="menu-calendar-title">' + escapeHtml(specification.title) + '</div>' : '') +
+                    '<ul id="burger-menu-items"></ul>' +
+                '</div>' +
             '</div>',
         css: "owc_nav_burger_menu" // the CSS class
     }
