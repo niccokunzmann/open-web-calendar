@@ -8,13 +8,13 @@ Feature: We want to habe a menu to see more information about the calendar.
     Scenario: We can see the menu, open and close it. So, we see more about the calendar.
         Given we add the calendar "issue-23-location-berlin"
           And we set the "controls" parameter to "menu"
-          And we set the "title" parameter to "My Calendar"
+          And we set the "title" parameter to "<a>My Calendar"
          When we look at 2025-01-16
-         Then we cannot see the text "My Calendar"
+         Then we cannot see the text "<a>My Calendar"
          When we click on the menu
-         Then we can see the text "My Calendar"
+         Then we can see the text "<a>My Calendar"
          When we click on the menu
-         Then we cannot see the text "My Calendar"
+         Then we cannot see the text "<a>My Calendar"
 
     Scenario: We can configure the title in the menu.
     
