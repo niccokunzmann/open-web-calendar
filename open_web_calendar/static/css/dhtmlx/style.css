@@ -375,6 +375,7 @@ div.dhx_agenda_line > span {
   top: 0;
   left: -100%;
   width: 300px;
+  max-width: 90%;
   height: 100%;
   margin: 0;
   padding: 80px 0;
@@ -382,6 +383,9 @@ div.dhx_agenda_line > span {
   background-color: var(--owc-menu-background-color);
   box-shadow: 2px 2px 6px var(--owc-menu-box-shadow-color);
   transition-duration: 0.25s;
+  /* further customization */
+  z-index: 1;
+  cursor: default;
 }
 .menu__item {
   display: block;
@@ -398,14 +402,6 @@ div.dhx_agenda_line > span {
 }
 
 /* adjust for DTHMLX Scheduler */
-
-.menu__btn {
-}
-
-.menu__box {
-    z-index: 1;
-    cursor: default;
-}
 
 .owc_nav_burger_menu {
     z-index: 2;
