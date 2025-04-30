@@ -30,7 +30,7 @@ class ConvertToCalendars(ConversionStrategy):
                 description: str,
                 color: str,
                 categories: [str, ...],
-                css-classes: [str, ...],
+                css-classes: [str, ...], # the first 2 classes identify the events
             }
         ],
         errors: [
