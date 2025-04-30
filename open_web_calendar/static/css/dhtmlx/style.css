@@ -391,15 +391,15 @@ div.dhx_agenda_line > span {
 .menu__item {
   display: block;
   padding: 12px 24px;
-  color: #333;
-  font-size: 20px;
-  font-weight: 600;
+  color: var(--dhx-scheduler-base-colors-text-base);
+  /* font-size: 20px;
+  font-weight: 600; */
   text-decoration: none;
   transition-duration: 0.25s;
 }
-.menu__item:hover {
+/* .menu__item:hover {
   background-color: #cfd8dc;
-}
+} */
 
 /* adjust for DTHMLX Scheduler */
 
@@ -409,4 +409,9 @@ div.dhx_agenda_line > span {
     border-width: 0px;
     text-transform: none;
 }
+
+.owc_nav_burger_menu .calendar-description {
+    font-weight: normal;
+}
+
 /* END Burger Menu */

@@ -45,8 +45,6 @@ Feature: We want to habe a menu to see more information about the calendar.
         | Show Title in Menu       | menu_shows_title         | false                    |
         | Show Description in Menu | menu_shows_description   | false                    |
     
-    Scenario: We can configure the description in the menu.
-
     Scenario: We can configure the calendar titles in the menu.
 
     Scenario: We can configure the calendar descriptions in the menu.

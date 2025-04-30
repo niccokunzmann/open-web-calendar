@@ -296,7 +296,7 @@ function getHeader() {
                 '<div class="menu__box">' +
                     (specification.menu_shows_title ? '<div class="menu-text menu-calendar-title">' + escapeHtml(specification.title) + '</div>' : '') +
                     (specification.menu_shows_description ? '<div class="menu-text menu-calendar-description">' + escapeHtml(specification.description) + '</div>' : '') +
-                '<ul id="burger-menu-items"></ul>' +
+                    getMenuContentFromInfo() +
                 '</div>' +
             '</div>',
         css: "owc_nav_burger_menu" // the CSS class
@@ -612,4 +612,80 @@ scheduler.attachEvent("onBeforeViewChange", function(old_mode, old_date, mode, d
     return true;
 });
 
+async function getInformationAboutCalendars() {
+    // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    const url = document.location.pathname.replace(/.html$/, ".json") + document.location.search;
+    const response = await fetch(url, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    if (!response.ok) {
+        showEventError(await response.json());
+        throw new Error(`HTTP error! status: ${response.status}: ${response.text()}`);
+    }
+    return await response.json();
+}
+
+let calendarMetaData = null; // We only need to load this once.
+
+async function loadCalendarMetadata() {
+    if (calendarMetaData != null) {
+        onCalendarInfoLoaded();
+        return;
+    }
+    getInformationAboutCalendars().then( (info) => {
+        calendarMetaData = info;
+        onCalendarInfoLoaded();
+    })
+}
+
+function onCalendarInfoLoaded() {
+    // Since we had no data before, we set it now.
+    console.log("Calendar Info:", calendarMetaData);
+    const metaDataInMenu = document.getElementById("menu-meta-data");
+    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    for (error of calendarMetaData.errors) {
+        showEventError(error);
+    }
+}
+
+function getMenuContentFromInfo() {
+    const metaDataInMenu = document.createElement("div");
+    metaDataInMenu.id = "menu-meta-data";
+    if (calendarMetaData == null) {
+        // return the empty element so we can set the content later
+        return metaDataInMenu.outerHTML;
+    }
+    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    return metaDataInMenu.outerHTML;
+}
+
+function getMenuInnerContent(info) {
+    // info is the metadata from /calendar.json
+    const calendarInfoList = document.createElement("div");
+    calendarInfoList.classList.add("calendar-list");
+    for (const calendar of info.calendars) {
+        const calendarListElement = document.createElement("div");
+        calendarListElement.classList.add("menu__item");
+        // name/title
+        const calendarName = document.createElement("div");
+        calendarName.classList.add("calendar-title");
+        calendarName.innerText = calendar.name;
+        calendarListElement.appendChild(calendarName)
+        // description
+        const calendarDescription = document.createElement("div");
+        calendarDescription.classList.add("calendar-description");
+        calendarDescription.innerText = calendar.description;
+        calendarListElement.appendChild(calendarDescription);
+        for (const cssClass of calendar["css-classes"]) {
+            calendarInfoList.classList.add(cssClass);
+        }
+        calendarInfoList.appendChild(calendarListElement);
+    }
+    return calendarInfoList;
+}
+
 window.addEventListener("load", loadCalendar);
+window.addEventListener("load", loadCalendarMetadata);
