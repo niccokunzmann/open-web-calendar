@@ -133,3 +133,9 @@ participants-description: Du kannst andere einladen und sie können teilnehmen. 
   angezeigt werden.
 caldav-allow-sign-up: 'Anmeldung mit E-Mail für diesen Kalender einschalten:'
 caldav-choose-calendar: 'Wähle einen Deiner Kalender:'
+map-bing: Bing Maps
+map-google: Google Maps
+map-osm: OpenStreetMap
+map-yandex: Yandex Maps
+map-geo: geo:-Link
+map-none: Text Ohne Link

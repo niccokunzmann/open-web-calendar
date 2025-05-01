@@ -14,7 +14,7 @@ backrefs==5.8
     # via mkdocs-material
 beautifulsoup4==4.13.4
     # via mkdocs-meta-descriptions-plugin
-cachecontrol[filecache]==0.14.2
+cachecontrol[filecache]==0.14.3
     # via mkdocs-rss-plugin
 cairocffi==1.7.1
     # via cairosvg
@@ -168,7 +168,7 @@ soupsieve==2.7
     # via beautifulsoup4
 super-collections==0.5.3
     # via mkdocs-macros-plugin
-termcolor==3.0.1
+termcolor==3.1.0
     # via mkdocs-macros-plugin
 tinycss2==1.4.0
     # via
