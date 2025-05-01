@@ -645,7 +645,11 @@ function onCalendarInfoLoaded() {
     // Since we had no data before, we set it now.
     console.log("Calendar Info:", calendarMetaData);
     const metaDataInMenu = document.getElementById("menu-meta-data");
-    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    // fill the menu
+    if (metaDataInMenu) {
+        metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    }
+    // handle errors
     for (error of calendarMetaData.errors) {
         showEventError(error);
     }

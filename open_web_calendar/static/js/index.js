@@ -887,8 +887,8 @@ function listenForCalDavCalendars() {
         document.getElementById("add-url-username"),
         document.getElementById("add-url-password"),
     ].forEach(function(input) {
-        input.addEventListener("change", updateCalDavCoice);
-        input.addEventListener("keyup", updateCalDavCoice);
+        input.addEventListener("change", deferCall(updateCalDavCoice));
+        input.addEventListener("keyup", deferCall(updateCalDavCoice));
         });
 }
 
@@ -954,4 +954,27 @@ function editUrl(url) {
 
 function urlIsEncrypted(url) {
     return url.startsWith(ENCRYPTION_PREFIX);
+}
+
+const function2timeout = {};
+const CALL_MS_AFTER_INPUT = 100;
+
+/* We want to defer calling a function if it is called a lot of times like by typing into a text field. */
+function deferCall(callback) {
+    function wrapper(...args) {
+        let timeoutId = function2timeout[callback];
+        if (timeoutId) {
+            try {
+                clearTimeout(timeoutId);
+            } catch (e) {
+                // the timeout was cancelled.
+            }
+            delete function2timeout[callback];
+        }
+        function2timeout[callback] = setTimeout(function() {
+            callback(...args);
+            delete function2timeout[callback];
+        }, CALL_MS_AFTER_INPUT);
+    }
+    return wrapper;
 }
