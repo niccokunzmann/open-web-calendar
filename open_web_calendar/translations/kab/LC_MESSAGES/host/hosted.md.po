@@ -1,0 +1,71 @@
+# Languages add-on <noreply-addon-languages@weblate.org>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-02 20:18+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.15.2\n"
+
+#
+msgid "You can use the hosted version of the Open Web Calendar yourself."
+msgstr ""
+
+msgid "Hosted Version"
+msgstr ""
+
+msgid ""
+"There is a version from which you can access calendars which are hosted in "
+"[Tor Onion Services](https://tb-manual.torproject.org/onion-services/): "
+"[tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-"
+"calendar.hosted.quelltext.eu)."
+msgstr ""
+
+msgid ""
+"A hosted version exists at [open-web-"
+"calendar.hosted.quelltext.eu](https://open-web-"
+"calendar.hosted.quelltext.eu). You can use this version if you like. It is "
+"deployed from the latest version on the `master` branch. Thus, translation "
+"improvements go there after max. 48 hours. This version is intended to stay "
+"free of charge and is funded by [donation ♥️](../../contributing)."
+msgstr ""
+
+msgid ""
+"[How to configure all calendar parameters](../configure/#configuring-the-"
+"default-calendar)"
+msgstr ""
+
+msgid ""
+"If you decide later to [setup your own server](../self), you can do this and"
+" [migrate all calendars](../migrate) you use to the other server."
+msgstr ""
+
+msgid "[Uptime service monitor for the hosted instances][kuma]"
+msgstr ""
+
+#, fuzzy
+msgid "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
+msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
+
+#~ msgid ""
+#~ "[How to configure all parameters](../configure/#configuring-the-default-"
+#~ "calendar)"
+#~ msgstr ""
+
+#~ msgid "[](../configure/#configuring-the-default-calendar)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A hosted version exists at [open-web-"
+#~ "calendar.hosted.quelltext.eu](https://open-web-"
+#~ "calendar.hosted.quelltext.eu). You can use this version if you like. It is "
+#~ "deployed from the latest version on the `master` branch. Thus, translation "
+#~ "improvements go there after max. 48 hours. This version is intended to stay "
+#~ "free of charge and is funded by [donation ♥️](../contributing.md)."
+#~ msgstr ""
