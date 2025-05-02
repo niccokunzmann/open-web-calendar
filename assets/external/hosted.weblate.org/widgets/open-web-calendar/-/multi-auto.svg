@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="570" xml:lang="en">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="585" xml:lang="en">
 <defs>
 
 <style type="text/css">@import url(https://hosted.weblate.org/static/js/vendor/fonts/fonts.css);</style>
@@ -490,27 +490,50 @@
    y="314" />
 </a>
 
-<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ko/" xlink:title="Korean">
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/kab/" xlink:title="Kabyle">
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
    y="335"
-   id="text335">Korean</text>
+   id="text335">Kabyle</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="335"
-   id="percent335">45%</text>
+   id="percent335">10%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect335"
-   width="68"
+   width="15"
    height="6"
    x="200"
    rx="2"
    y="329" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ko/" xlink:title="Korean">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="350"
+   id="text350">Korean</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="350"
+   id="percent350">45%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect350"
+   width="68"
+   height="6"
+   x="200"
+   rx="2"
+   y="344" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ko_LAVA/" xlink:title="Korean (ko_LAVA)">
@@ -518,22 +541,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="350"
-   id="text350">Korean (ko_LAVA)</text>
+   y="365"
+   id="text365">Korean (ko_LAVA)</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="350"
-   id="percent350">13%</text>
+   y="365"
+   id="percent365">13%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
-   id="rect350"
+   id="rect365"
    width="19"
    height="6"
    x="200"
    rx="2"
-   y="344" />
+   y="359" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/nb_NO/" xlink:title="Norwegian Bokmål">
@@ -541,37 +564,14 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="365"
-   id="text365">Norwegian Bokmål</text>
-<text
-   xml:space="preserve"
-   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
-   x="360"
-   y="365"
-   id="percent365">39%</text>
-<rect
-   style="fill:#f6664c;fill-opacity:1;stroke:none"
-   id="rect365"
-   width="58"
-   height="6"
-   x="200"
-   rx="2"
-   y="359" />
-</a>
-
-<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/pl/" xlink:title="Polish">
-<text
-   xml:space="preserve"
-   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
-   x="190"
    y="380"
-   id="text380">Polish</text>
+   id="text380">Norwegian Bokmål</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="380"
-   id="percent380">38%</text>
+   id="percent380">39%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect380"
@@ -582,27 +582,50 @@
    y="374" />
 </a>
 
-<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/pt/" xlink:title="Portuguese">
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/pl/" xlink:title="Polish">
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
    y="395"
-   id="text395">Portuguese</text>
+   id="text395">Polish</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="395"
-   id="percent395">29%</text>
+   id="percent395">43%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect395"
-   width="44"
+   width="65"
    height="6"
    x="200"
    rx="2"
    y="389" />
+</a>
+
+<a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/pt/" xlink:title="Portuguese">
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
+   x="190"
+   y="410"
+   id="text410">Portuguese</text>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
+   x="360"
+   y="410"
+   id="percent410">29%</text>
+<rect
+   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   id="rect410"
+   width="44"
+   height="6"
+   x="200"
+   rx="2"
+   y="404" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ro/" xlink:title="Romanian">
@@ -610,22 +633,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="410"
-   id="text410">Romanian</text>
+   y="425"
+   id="text425">Romanian</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="410"
-   id="percent410">28%</text>
+   y="425"
+   id="percent425">28%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
-   id="rect410"
+   id="rect425"
    width="42"
    height="6"
    x="200"
    rx="2"
-   y="404" />
+   y="419" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ru/" xlink:title="Russian">
@@ -633,22 +656,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="425"
-   id="text425">Russian</text>
+   y="440"
+   id="text440">Russian</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="425"
-   id="percent425">54%</text>
+   y="440"
+   id="percent440">54%</text>
 <rect
    style="fill:#38f;fill-opacity:1;stroke:none"
-   id="rect425"
+   id="rect440"
    width="81"
    height="6"
    x="200"
    rx="2"
-   y="419" />
+   y="434" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/si/" xlink:title="Sinhala">
@@ -656,22 +679,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="440"
-   id="text440">Sinhala</text>
+   y="455"
+   id="text455">Sinhala</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="440"
-   id="percent440">28%</text>
+   y="455"
+   id="percent455">28%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
-   id="rect440"
+   id="rect455"
    width="42"
    height="6"
    x="200"
    rx="2"
-   y="434" />
+   y="449" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/sk/" xlink:title="Slovak">
@@ -679,22 +702,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="455"
-   id="text455">Slovak</text>
+   y="470"
+   id="text470">Slovak</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="455"
-   id="percent455">69%</text>
+   y="470"
+   id="percent470">69%</text>
 <rect
    style="fill:#38f;fill-opacity:1;stroke:none"
-   id="rect455"
+   id="rect470"
    width="103"
    height="6"
    x="200"
    rx="2"
-   y="449" />
+   y="464" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/es/" xlink:title="Spanish">
@@ -702,22 +725,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="470"
-   id="text470">Spanish</text>
+   y="485"
+   id="text485">Spanish</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="470"
-   id="percent470">78%</text>
+   y="485"
+   id="percent485">78%</text>
 <rect
    style="fill:#38f;fill-opacity:1;stroke:none"
-   id="rect470"
+   id="rect485"
    width="117"
    height="6"
    x="200"
    rx="2"
-   y="464" />
+   y="479" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/sv/" xlink:title="Swedish">
@@ -725,22 +748,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="485"
-   id="text485">Swedish</text>
+   y="500"
+   id="text500">Swedish</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="485"
-   id="percent485">28%</text>
+   y="500"
+   id="percent500">28%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
-   id="rect485"
+   id="rect500"
    width="42"
    height="6"
    x="200"
    rx="2"
-   y="479" />
+   y="494" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/ta/" xlink:title="Tamil">
@@ -748,22 +771,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="500"
-   id="text500">Tamil</text>
+   y="515"
+   id="text515">Tamil</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="500"
-   id="percent500">80%</text>
+   y="515"
+   id="percent515">80%</text>
 <rect
    style="fill:#38f;fill-opacity:1;stroke:none"
-   id="rect500"
+   id="rect515"
    width="121"
    height="6"
    x="200"
    rx="2"
-   y="494" />
+   y="509" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/th/" xlink:title="Thai">
@@ -771,22 +794,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="515"
-   id="text515">Thai</text>
+   y="530"
+   id="text530">Thai</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="515"
-   id="percent515">37%</text>
+   y="530"
+   id="percent530">37%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
-   id="rect515"
+   id="rect530"
    width="56"
    height="6"
    x="200"
    rx="2"
-   y="509" />
+   y="524" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/tr/" xlink:title="Turkish">
@@ -794,22 +817,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="530"
-   id="text530">Turkish</text>
+   y="545"
+   id="text545">Turkish</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="530"
-   id="percent530">47%</text>
+   y="545"
+   id="percent545">47%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
-   id="rect530"
+   id="rect545"
    width="70"
    height="6"
    x="200"
    rx="2"
-   y="524" />
+   y="539" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/uk/" xlink:title="Ukrainian">
@@ -817,22 +840,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="545"
-   id="text545">Ukrainian</text>
+   y="560"
+   id="text560">Ukrainian</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="545"
-   id="percent545">100%</text>
+   y="560"
+   id="percent560">100%</text>
 <rect
    style="fill:#2eccaa;fill-opacity:1;stroke:none"
-   id="rect545"
+   id="rect560"
    width="150"
    height="6"
    x="200"
    rx="2"
-   y="539" />
+   y="554" />
 </a>
 
 <a xlink:href="https://hosted.weblate.org/projects/open-web-calendar/-/cy/" xlink:title="Welsh">
@@ -840,22 +863,22 @@
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080;text-anchor:end;"
    x="190"
-   y="560"
-   id="text560">Welsh</text>
+   y="575"
+   id="text575">Welsh</text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
-   y="560"
-   id="percent560">42%</text>
+   y="575"
+   id="percent575">42%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
-   id="rect560"
+   id="rect575"
    width="63"
    height="6"
    x="200"
    rx="2"
-   y="554" />
+   y="569" />
 </a>
 
 
