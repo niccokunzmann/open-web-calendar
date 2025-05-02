@@ -38,3 +38,19 @@ style-description: Za pomocą CSS możesz zmienić kolor swojego kalendarza i wi
   wybrać jedną z kilku dostosowań, które dla Ciebie przygotowaliśmy.
 style-click: Możesz zmienić kolor elementów, które można kliknąć.
 style-date: Możesz zmienić kolor tła bieżącej daty.
+button-encrypt: Zaszyfruj link
+first-hour-description: 'Aby zmienić pierwszą godzinę kalendarza, zobacz:'
+button-encrypted: Zaszywrofany
+button-edit: Edytuj
+button-remove: Usuń
+password-urls: Polecamy szyfrowanie linków, jeżeli zawierają prywatne dane. Zapisz
+  następujące hasło, jeżeli zamierzasz odszyfrować je później.
+decrypt-urls: Odszyfruj linki
+add-url-placeholder-username: Opcjonalna nazwa użytkownika
+about-title: O
+calendar-embed-title: Użyj i Osadź
+add-url-placeholder-password: Opcjonalne hasło
+add-url-button: Dodaj
+add-url-calendar-public: To jest publiczny link
+supported-standards: 'Obsługujemy następujące standardy: ICAL, CalDAV, webcal.'
+add-url-placeholder-url: https://link.do/kalendarza.ics
