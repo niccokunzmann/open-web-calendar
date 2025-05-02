@@ -1,0 +1,579 @@
+# Languages add-on <noreply-addon-languages@weblate.org>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-02 20:18+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 3.15.2\n"
+
+#
+msgid "Configure a hosted instance."
+msgstr ""
+
+msgid ""
+"If you want to change the Open Web Calendar to serve your needs, this is "
+"well possible. You can choose to"
+msgstr ""
+
+msgid "Change how the default calendar looks."
+msgstr ""
+
+msgid "Change how the server works."
+msgstr ""
+
+msgid "Server Configuration"
+msgstr ""
+
+msgid "Configuring the Default Calendar"
+msgstr ""
+
+msgid "`title`"
+msgstr ""
+
+msgid "`language`"
+msgstr ""
+
+msgid "`favicon`"
+msgstr ""
+
+msgid "[API](../../dev/api)"
+msgstr ""
+
+msgid "Configuring the Server"
+msgstr ""
+
+msgid ""
+"Environment variables only influence the running of the server. These "
+"environment variables can be used to configure the service:"
+msgstr ""
+
+msgid "ALLOWED_HOSTS"
+msgstr ""
+
+msgid "default empty"
+msgstr ""
+
+msgid ""
+"**Forbidden:** You don't have the permission to access the requested "
+"resource. It is either read-protected or not readable by the server.*"
+msgstr ""
+
+msgid "PORT"
+msgstr ""
+
+msgid "default `5000`, default `80` in the Docker container"
+msgstr ""
+
+msgid "The port that the service is running on."
+msgstr ""
+
+msgid "Serve on HTTP port: `PORT=80`"
+msgstr ""
+
+msgid "WORKERS"
+msgstr ""
+
+msgid "default `4`, only for the Docker container"
+msgstr ""
+
+msgid "The number of parallel workers to handle requests."
+msgstr ""
+
+msgid "Only use one worker: `WORKERS=1`"
+msgstr ""
+
+msgid "CACHE_REQUESTED_URLS_FOR_SECONDS"
+msgstr ""
+
+msgid ""
+"Seconds to cache the calendar files that get downloaded to reduce bandwidth "
+"and delay."
+msgstr ""
+
+msgid "Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
+msgstr ""
+
+msgid "APP_DEBUG"
+msgstr ""
+
+msgid "Set the debug flag for the app."
+msgstr ""
+
+msgid ""
+"The Open Web Calendar uses libraries whose behavior can be further "
+"customized."
+msgstr ""
+
+msgid ""
+"**Flask** has **[more environment "
+"variables](https://flask.palletsprojects.com/en/3.0.x/config/)** available "
+"to configure how the application serves content."
+msgstr ""
+
+msgid "SSRF Protection with a Proxy Server"
+msgstr ""
+
+msgid ""
+"[Prevent SSRF using a Tor proxy](../docker#preventing-ssrf-attacks-using-a-"
+"tor-proxy)"
+msgstr ""
+
+msgid ""
+"**Requests** is used the get the `.ics` files. You can [configure a "
+"proxy](#ssrf-protection-with-a-proxy-server)."
+msgstr ""
+
+msgid "You might want to change the following values."
+msgstr ""
+
+msgid "The title of your website."
+msgstr ""
+
+msgid ""
+"This is the default language. You might want to change this to serve the "
+"configuration page better to a local audience."
+msgstr ""
+
+msgid "This is a link to the website icon."
+msgstr ""
+
+msgid "`source_code`"
+msgstr ""
+
+msgid ""
+"If you made changes, you are legally required to disclose them to visitors. "
+"Please adjust the link or contribute them back to the main project."
+msgstr ""
+
+msgid "`contributing`"
+msgstr ""
+
+msgid "If you want to redirect to contribute to your project."
+msgstr ""
+
+msgid "`privacy_policy`"
+msgstr ""
+
+msgid ""
+"If you host this service yourself, you can use the default [privacy "
+"policy][privacy-policy]."
+msgstr ""
+
+msgid ""
+"If for some reason you decide to collect data i.e. in the HTTPS proxy or log"
+" IP-addresses, then you need to create your own privacy policy. You can link"
+" to the one of this project."
+msgstr ""
+
+msgid "More Values"
+msgstr ""
+
+#, fuzzy
+msgid "[privacy-policy]: ../privacy-policy"
+msgstr "[privacy-policy]: ../privacy-policy"
+
+msgid ""
+"The clients divided by comma that are allowed to access the Open Web "
+"Calendar. You will see this text if you try to access the service and you "
+"are not allowed:"
+msgstr ""
+
+msgid "permit only the same computer: `ALLOWED_HOSTS=localhost`"
+msgstr ""
+
+msgid ""
+"permit several hosts: `ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com`"
+msgstr ""
+
+msgid ""
+"permit everyone to access the server (default): `ALLOWED_HOSTS=` or "
+"`ALLOWED_HOSTS=*`"
+msgstr ""
+
+msgid ""
+"The configuration of all calendars is rooted in the [default_specification]."
+" All those values can be changed through a copy of this file hosted on the "
+"web through the calendar parameter `specification_url`. Each parameter "
+"should be documented in [default_specification]."
+msgstr ""
+
+msgid ""
+"To modify **all calendars** hosted on your instance, use the "
+"[OWC_SPECIFICATION] environment variable. Calendars still override some "
+"values for their configuration. Those which they do not override are "
+"affected by the default specification. Not all values are exposed to the "
+"configuration page to be changed. Those values can still be changed in the "
+"`specification_url` and the query parameters."
+msgstr ""
+
+msgid ""
+"There are loads more values that can be changed. Please refer to the "
+"[default_specification]. These values are all documented. Please use the "
+"[OWC_SPECIFICATION] environment variable to change them."
+msgstr ""
+
+msgid "`OWC_SPECIFICATION` is an optional environment variable."
+msgstr ""
+
+msgid "It can be a **path** to a file containing valid YAML or JSON."
+msgstr ""
+
+msgid "It can be a **string** containing valid YAML or JSON."
+msgstr ""
+
+msgid ""
+"Setting `OWC_SPECIFICATION` allows you to replace default values for all "
+"calendars."
+msgstr ""
+
+msgid ""
+"In following example, the title for all calendars that do not set their own "
+"title will be changed."
+msgstr ""
+
+msgid "[OWC_SPECIFICATION in the API](../../dev/api#owc_specification)"
+msgstr ""
+
+#, fuzzy
+msgid "[OWC_SPECIFICATION]: #owc_specification"
+msgstr "[OWC_SPECIFICATION]: #owc_specification"
+
+msgid "Note"
+msgstr ""
+
+msgid ""
+"New versions of the Open Web Calendar can add new configuration parameters. "
+"Placing your changes in this variable instead of changing the "
+"`default_specification` file will ensure that you do not break the Open Web "
+"Calendar in a future version."
+msgstr ""
+
+#, fuzzy
+msgid "[default_specification]: /assets/default_specification.yml"
+msgstr "[default_specification]: /assets/default_specification.yml"
+
+msgid "This functionality is provided by [flask-allowed-hosts]."
+msgstr ""
+
+#, fuzzy
+msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+
+msgid "The Open Web Calendar relies on proxy servers for these features:"
+msgstr ""
+
+msgid ""
+"**Access Control and Users** To restrict who can use the Open Web Calendar, "
+"you can use `nginx` or `apache` as a reverse proxy in front of it. YuNoHost "
+"is another self-hosting option to restrict access."
+msgstr ""
+
+msgid "**HTTPS Encryption** This can be done by `nginx`, `apache` or `caddy`."
+msgstr ""
+
+msgid ""
+"**More Advanced Caching** Basic caching is handeled by the Open Web "
+"Calendar. For more advanced cache configuration, use a proxy server like "
+"`squid`. Have a look in the documentation below on how to make the Open Web "
+"Calendar access the web only through a proxy."
+msgstr ""
+
+msgid ""
+"**Restricting Access to Calendars** By default, the Open Web Calendar does "
+"not restrict which calendars to show. Use the proxy server to filter the "
+"calendars. If you run the Open Web Calendar behind a firewall with other web"
+" services, setting up a proxy is necessary to protect from SSRF attacks."
+msgstr ""
+
+msgid "Squid as a Proxy Server"
+msgstr ""
+
+msgid ""
+"The [Squid] Proxy and Cache is flexible and configurable. You can use it in "
+"front of the Open Web Calendar to configure access and customize caching."
+msgstr ""
+
+msgid ""
+"After you have installed the [Squid] Proxy, add this file into the `conf.d` "
+"directory. Squid will load it automatically then."
+msgstr ""
+
+msgid "In Linux, create `/etc/squid/conf.d/open-web-calendar.conf`:"
+msgstr ""
+
+msgid ""
+"The list above denies the Open Web Calendar access to all known "
+"local/internal networks. If you have your own local network (IPv4 or IPv6), "
+"add it to the list above to be sure."
+msgstr ""
+
+msgid "On Linux, you can install the file with this command:"
+msgstr ""
+
+msgid "Then, restart the squid proxy."
+msgstr ""
+
+msgid ""
+"Set the environment variables to tell the Open Web Calendar to use the Squid"
+" proxy installed on `localhost`. Setting this variable changes depending on "
+"how you run the Open Web Calendar."
+msgstr ""
+
+msgid ""
+"If you use the [Python Setup][1], you can set the environment variables for "
+"the server like this:"
+msgstr ""
+
+#, fuzzy
+msgid "[1]: ../pypi"
+msgstr "[1]: ../pypi"
+
+msgid "Operating System"
+msgstr ""
+
+msgid ""
+"Squid is avaiable for all major platforms. For the commands and paths of "
+"this tutorial, we assume you run Squid on Debain/Ubuntu. The commands might "
+"work on other systems, but that is not tested."
+msgstr ""
+
+msgid "OWC_ENCRYPTION_KEYS"
+msgstr ""
+
+msgid ""
+"This is a comma separated list of encryption keys. These can be used to hide"
+" sensitive information of URLs."
+msgstr ""
+
+msgid "Disable encryption (default): `OWC_ENCRYPTION_KEYS=`"
+msgstr ""
+
+msgid "Use one key: `OWC_ENCRYPTION_KEYS='Pj...48='`"
+msgstr ""
+
+msgid ""
+"Use multiple keys: `OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='` If you use "
+"multiple keys, only the first one encrypts the data. The others are only "
+"used to decrypt the data."
+msgstr ""
+
+msgid ""
+"You can generate a new key by visiting your instance of the Open Web "
+"Calendar on the page [/new-key] or by running this command:"
+msgstr ""
+
+msgid "[Fernet]"
+msgstr ""
+
+#, fuzzy
+msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
+msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
+
+#, fuzzy
+msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+msgid ""
+"default `false`, values `true` or `false`, always `false` in the Docker "
+"container"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar can be used to access the local network behind a "
+"firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/250). This free access is intended to show calendars from "
+"everywhere. Since `requests` is used by the Open Web Calendar, it can use a "
+"proxy as described in the [`requests` "
+"documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
+" The proxy can then handle the filtering."
+msgstr ""
+
+msgid "CACHE_DIRECTORY"
+msgstr ""
+
+msgid "default is a temporary directory (e.g. in `/tmp/`)"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar caches files needed to display calendars in this "
+"directory to speed up loading. If the directory does not exist, it will be "
+"created."
+msgstr ""
+
+msgid "CACHE_FILE_SIZE"
+msgstr ""
+
+msgid "default `20` (MB)"
+msgstr ""
+
+msgid ""
+"This is the maximum size of one file in the cache. When the cache is full, "
+"the least recently used file is removed."
+msgstr ""
+
+msgid "Allow only small files of 4KB: `CACHE_FILE_SIZE=0.004`"
+msgstr ""
+
+msgid "Allow any size: `CACHE_FILE_SIZE=\"$CACHE_SIZE\"`"
+msgstr ""
+
+msgid "Disable caching: `CACHE_FILE_SIZE=0`"
+msgstr ""
+
+msgid "CACHE_SIZE"
+msgstr ""
+
+msgid "default `200` (MB)"
+msgstr ""
+
+msgid ""
+"This is the maximum cache size in megabytes. This size is limited to 200MB "
+"in order to mitigate the cache filling the file system or in case of `/tmp/`"
+" the RAM."
+msgstr ""
+
+msgid "Use 1 GB for caching: `CACHE_SIZE=1024`"
+msgstr ""
+
+msgid "Unlimited cache: `CACHE_SIZE=unlimited`"
+msgstr ""
+
+msgid "Disable caching: `CACHE_SIZE=0`"
+msgstr ""
+
+msgid "default `600` (seconds)"
+msgstr ""
+
+msgid "Disable caching: `CACHE_REQUESTED_URLS_FOR_SECONDS=0`"
+msgstr ""
+
+#~ msgid "default `600`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Open Web Calendar can be used to access the local network behind a "
+#~ "firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/issues/250). This free access is intended to show calendars from "
+#~ "everywhere. Since `requests` is used by the Open Web Calender, it can use a "
+#~ "proxy as described in the [`requests` "
+#~ "documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
+#~ " The proxy can then handle the filtering."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "default `true`, values `true` or `false`, always `false` in the Docker "
+#~ "container"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This functionality is provided by [flask-allowed-"
+#~ "hosts](https://pypi.org/project/flask-allowed-hosts/)."
+#~ msgstr ""
+
+#, fuzzy
+#~ msgid "[default_specification]: ../../assets/default_specification.yml"
+#~ msgstr "[default_specification]: ../../assets/default_specification.yml"
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration. Those which they do not override are affected. Not all values"
+#~ " are exposed to the configuration page to be changed. Those values can still"
+#~ " be changed in the [default_specification.yml] and the query parameters."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The configuration of all calendars is rooted in the "
+#~ "[default_specification.yml]. All those values can be changed through a copy "
+#~ "of this file hosted on the web through the calendar parameter "
+#~ "`specification_url`. Each parameter should be documented in "
+#~ "[default_specification.yml]."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There are loads more values that can be changed. Please refer to the "
+#~ "[default_specification.yml]. These values are all documented."
+#~ msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/master/open_web_calendar/default_specification.yml"
+
+#~ msgid ""
+#~ "The hosts divided by comma that the Open Web Calendar permits. This is "
+#~ "required to mitigate the Host Header Injection vulnerability. You will see "
+#~ "this text if the host is not allowed:"
+#~ msgstr ""
+
+#~ msgid "permit one host: `ALLOWED_HOSTS=localhost`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "permit several hosts: `ALLOWED_HOSTS=open-web-"
+#~ "calendar.hosted.quelltext.eu,192.168.0.42`"
+#~ msgstr ""
+
+#~ msgid "permit all hosts (vulnerable): `ALLOWED_HOSTS=`"
+#~ msgstr ""
+
+#~ msgid "You might want to change these values:"
+#~ msgstr ""
+
+#~ msgid "`source_code` - if you made changes"
+#~ msgstr ""
+
+#~ msgid "`contributing` - if you want to redirect to contribute to your project"
+#~ msgstr ""
+
+#~ msgid "Related:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Requests** is used the get the `.ics` files. You can [configure a proxy]."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration Those which they do not override are affected. Not all values "
+#~ "are exposed to the configuration page to be changed. Those values can still "
+#~ "be changed in the [default_specification.yml] and the query parameters."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration Those which they do not override are affected. Not all values "
+#~ "are exposed to the configuration page to be changed. Those values can still "
+#~ "be changed in the [default_specification.yml] and the parameters."
+#~ msgstr ""
+
+#~ msgid "Configuring the Open Web Calender"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration Those which they do not override are affected. Not all values "
+#~ "are exposed to the configuration page to be changed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you modify the default specification, you modify **all calendars** that "
+#~ "are hosted at your instance. Calendars still override some values for their "
+#~ "configuration Those which they do not override are affected."
+#~ msgstr ""
+
+#~ msgid "Configure"
+#~ msgstr ""
