@@ -252,10 +252,10 @@ def test_get_calendar_descriptions(ics_calendars: ICSCalendars):
 def test_get_calendar_colors(ics_calendars: ICSCalendars):
     """We want to have it easy with the index."""
     assert [info.calendar_color for info in ics_calendars.get_infos()] == [
-        None,
-        None,
+        "",
+        "",
         "black",
-        None,
+        "",
     ]
 
 
