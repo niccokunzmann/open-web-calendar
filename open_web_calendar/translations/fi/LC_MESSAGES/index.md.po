@@ -1,21 +1,23 @@
 # Ricky Tigg <ricky.tigg@gmail.com>, 2025.
+# Tomi Pöyskö <tomi.poysko@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 07:31+0200\n"
-"PO-Revision-Date: 2025-04-07 10:01+0000\n"
-"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/fi/>\n"
+"PO-Revision-Date: 2025-05-09 06:03+0000\n"
+"Last-Translator: Tomi Pöyskö <tomi.poysko@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-index/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 msgid "Customize Your Own Online Calendar Display"
-msgstr ""
+msgstr "Mukauta omaa online-kalenterinäyttöäsi"
 
 msgid "See the features or try the Open Web Calendar yourself!"
 msgstr "Katso ominaisuudet tai kokeile Open Web Calendaria itse!"
@@ -96,15 +98,17 @@ msgid "Community and Paid Support"
 msgstr "Yhteisöllinen ja maksettu tuki"
 
 msgid "[See Examples](templates)"
-msgstr ""
+msgstr "[Katso esimerkit](templates)"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self)"
 msgstr ""
+"[Hallinnoitu](https://open-web-calendar.hosted.quelltext.eu) ja "
+"[Itsehallinnoitu](host/self)"
 
 msgid "[Developer API](dev/api)"
-msgstr ""
+msgstr "[Kehittäjä API](dev/api)"
 
 #~ msgid "Getting Started"
 #~ msgstr "Aloittaminen"
