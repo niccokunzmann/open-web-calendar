@@ -127,3 +127,9 @@ map-link-location-description: Syötä kartan URL-osoite tähän ja sisällytä 
   minne hakukysely menee.
 spec-description: 'Kalenteri voidaan luoda paitsi URL-osoitteen avulla myös JSON-
   tai YAML-määrittelyn avulla tiedostosta. Yllä oleva mukauttaminen luo tämän määrityksen:'
+map-osm: OpenStreetMap
+map-bing: Bing Maps
+map-google: Google Maps
+map-yandex: Yandex Maps
+map-geo: 'geo: Link'
+map-none: Teksti ilman linkkiä
