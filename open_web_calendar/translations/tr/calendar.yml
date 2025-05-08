@@ -55,3 +55,8 @@ date_month_short_mar: Mar
 date_month_short_may: May
 language: Türkçe
 labels_month: Ay
+signup-name: Ad
+icon_subscribe: Takvime Ekle
+icon_signup: Kayıt Ol
+label_participants: Katılımcılar
+signup-email: e-posta
