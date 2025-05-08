@@ -24,7 +24,7 @@ certifi==2025.4.26
     # via requests
 cffi==1.17.1
     # via cairocffi
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
 click==8.1.8
     # via mkdocs
@@ -125,7 +125,7 @@ pillow==10.4.0
     # via
     #   cairosvg
     #   mkdocs-material
-platformdirs==4.3.7
+platformdirs==4.3.8
     # via mkdocs-get-deps
 polib==1.2.0
     # via mdpo

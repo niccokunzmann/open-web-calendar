@@ -32,7 +32,7 @@ pip-compile-multi==3.0.0
     # via -r requirements/dev.in
 pip-tools==7.4.1
     # via pip-compile-multi
-platformdirs==4.3.7
+platformdirs==4.3.8
     # via
     #   tox
     #   virtualenv
@@ -48,7 +48,7 @@ toposort==1.10
     # via pip-compile-multi
 tox==4.25.0
     # via -r requirements/dev.in
-virtualenv==20.30.0
+virtualenv==20.31.1
     # via tox
 wheel==0.45.1
     # via pip-tools

@@ -24,7 +24,7 @@ certifi==2025.4.26
     #   selenium
 chardet==5.2.0
     # via binaryornot
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via
     #   python-debian
     #   requests
@@ -78,9 +78,9 @@ responses==0.25.7
     #   pytest-responses
 reuse==5.0.2
     # via -r requirements/test.in
-ruff==0.11.7
+ruff==0.11.8
     # via -r requirements/test.in
-selenium==4.31.0
+selenium==4.32.0
     # via -r requirements/test.in
 six==1.17.0
     # via
