@@ -55,3 +55,8 @@ labels_minute: Minute
 labels_day: Jour
 labels_hour: Heure
 language: Français
+icon_signup: S'inscrire
+signup-name: nom
+label_participants: Participants
+icon_subscribe: Ajouter à Mon Calendrier
+signup-email: courriel
