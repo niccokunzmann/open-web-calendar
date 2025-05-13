@@ -6,7 +6,7 @@
 from __future__ import annotations
 
 import re
-from datetime import date, timedelta
+from datetime import date
 from typing import TYPE_CHECKING, Optional
 
 import caldav
@@ -69,7 +69,7 @@ class CalDAVCalendars(Calendars):
         )
         result = []
         for caldav_event in events:
-            result.extend(caldav_event.icalendar_instance.walk("VEVENT"))
+            result.extend(caldav_event.icalendar_instance.events)
         can_add_attendees = "true" if self.can_add_attendees() else "false"
         for event in result:
             event["X-OWC-CAN-ADD-ATTENDEE"] = can_add_attendees
@@ -88,19 +88,19 @@ class CalDAVCalendars(Calendars):
         """Add an attendee to the event, checking that it is possible."""
         if not self.can_add_attendees():
             raise ValueError(
-                "Adding attendees is not allows. Set #can_add_email_attendee=true"
+                "Adding attendees is not allowed. Set #can_add_email_attendee=true"
             )
         if not validate_email(email):
             raise ValueError(f"Invalid email address {email}")
         if len(name) > 100:
             raise ValueError("Name too long.")
-        query_start = convert_to_date(event.start)
-        query_end = query_start + timedelta(days=1)
+        query_start = event.start
+        query_end = query_start
         events = self.get_events_between(query_start, query_end)
         if event not in events:
             raise ValueError(
-                f"The event was not found among {len(events)} "
-                f"events: \n{event.to_ical()}"
+                f"The event \n{event.to_ical().decode()}\n"
+                f"was not found among {len(events)} events."
             )
         uid = event["UID"]
         caldav_event = next(

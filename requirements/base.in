@@ -4,7 +4,7 @@ icalendar>=6.2.0
 requests
 requests[socks]
 pyyaml
-recurring-ical-events
+recurring-ical-events>=3.7.0
 gunicorn
 lxml
 beautifulsoup4

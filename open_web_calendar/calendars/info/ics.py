@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2025 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: GPL-2.0-only
+"""Get information about a calendar from its ICS representation."""
+
 from __future__ import annotations
 
 from typing import Optional

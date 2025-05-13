@@ -6,11 +6,11 @@
 from __future__ import annotations
 
 import datetime
+import zoneinfo
 from html import escape
 from typing import TYPE_CHECKING, Any, Optional
 from urllib.parse import unquote
 
-import zoneinfo
 from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
