@@ -18,7 +18,7 @@ cachecontrol[filecache]==0.14.3
     # via mkdocs-rss-plugin
 cairocffi==1.7.1
     # via cairosvg
-cairosvg==2.8.0
+cairosvg==2.8.1
     # via mkdocs-material
 certifi==2025.4.26
     # via requests
