@@ -288,7 +288,7 @@ function getHeader() {
          */
         html:
             '<div class="hamburger-menu">' + 
-                '<label class="menu__btn burger-menu-label" for="menu__toggle">' +
+                '<label class="menu__btn burger-menu-label" for="menu__toggle" id="burger-menu-label">' +
                     '<span></span>' +
                 '</label>' +
             '</div>',

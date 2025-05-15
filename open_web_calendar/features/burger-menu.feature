@@ -78,3 +78,10 @@ Feature: We want to habe a menu to see more information about the calendar.
          When we click on the label "food"
          Then we cannot see the text "Head" 
 
+    Scenario: Usually calendars cannot be hidden.
+        Given we add the calendar "food"
+          And we set the "controls" parameter to "menu"
+         When we look at 2024-06-09
+         When we click on the menu
+         When we click on the label "food"
+         Then we can see the text "Head" 
