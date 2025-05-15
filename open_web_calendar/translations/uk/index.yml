@@ -132,3 +132,10 @@ map-none: Текст без посилання
 map-google: Google Maps
 map-osm: OpenStreetMap
 map-bing: Карти Bing
+menu-title: Меню календаря
+controls-menu: Показати меню
+menu-shows-calendar-names: Список назв календарів
+menu-shows-description: Показати опис у меню
+menu-shows-title: Показати заголовок у меню
+menu-shows-calendar-descriptions: Список описів календарів
+menu-description: Ви можете додати меню бургерів та налаштувати його вміст.
