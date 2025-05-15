@@ -3,9 +3,9 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 import datetime
+from zoneinfo import ZoneInfo
 
 import pytest
-from zoneinfo import ZoneInfo
 
 from open_web_calendar.app import ConvertToEvents
 

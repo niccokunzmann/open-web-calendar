@@ -5,13 +5,15 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable, Generator, Optional
+from typing import TYPE_CHECKING, Callable, Optional
 from unittest.mock import Mock
 
 import icalendar
 import pytest
 
 if TYPE_CHECKING:
+    from collections.abc import Generator
+
     from flask import Flask
     from flask.testing import FlaskClient
     from responses import RequestsMock

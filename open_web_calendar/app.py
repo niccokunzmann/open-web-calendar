@@ -9,6 +9,7 @@ import datetime
 import json
 import os
 import traceback
+import zoneinfo
 from http import HTTPStatus
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Optional
@@ -17,7 +18,6 @@ from urllib.parse import ParseResult, urlparse
 import caldav
 import icalendar
 import yaml
-import zoneinfo
 from flask import (
     Flask,
     Response,
