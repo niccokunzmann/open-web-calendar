@@ -160,9 +160,7 @@ class ConvertToEvents(ConversionStrategy):
             "url": calendar_event.get("URL"),
             "id": uid + "-" + start_date.replace(" ", "-").replace(":", "-"),
             "type": "event",
-            "color": calendar_event.get(
-                "COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", "")
-            ),
+            "color": calendar_event.color,
             "categories": self.get_event_categories(calendar_event),
             "css-classes": ["event"]
             + self.get_event_classes(calendar_event)
@@ -237,12 +235,9 @@ class ConvertToEvents(ConversionStrategy):
             classes.append(f"CATEGORY-{category}")
         return classes
 
-    def get_event_categories(self, event) -> list[str]:
+    def get_event_categories(self, event: Event) -> list[str]:
         """Return the categories of the event."""
-        categories = event.get(
-            "CATEGORIES", None
-        )  # TODO: use icalendar property for more compatibility
-        return categories.cats if categories is not None else []
+        return event.categories
 
 
 __all__ = ["ConvertToEvents"]
