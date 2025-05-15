@@ -47,11 +47,12 @@ Feature: We want to habe a menu to see more information about the calendar.
         Then "<spec>" is specified as <value>
       
       Examples:
-        | label                      | spec                             | value                    |
-        | Show Title in Menu         | menu_shows_title                 | false                    |
-        | Show Description in Menu   | menu_shows_description           | false                    |
-        | List Calendar Names        | menu_shows_calendar_names        | false                    |
-        | List Calendar Descriptions | menu_shows_calendar_descriptions | true                     |
+        | label                      | spec                                  | value                    |
+        | Show Title in Menu         | menu_shows_title                      | false                    |
+        | Show Description in Menu   | menu_shows_description                | false                    |
+        | List Calendar Names        | menu_shows_calendar_names             | false                    |
+        | List Calendar Descriptions | menu_shows_calendar_descriptions      | true                     |
+        | Hide/Show Calendars        | menu_shows_calendar_visibility_toggle | true                     |
     
     Scenario Outline: The calendar list items have the color of the calendars in the menu.
         Given we add the calendar "<calendar>"
@@ -66,3 +67,22 @@ Feature: We want to habe a menu to see more information about the calendar.
             | rfc-7986-calendar | This calendar is really nice. | #e78074        |
             | rfc-7986-calendar | RFC 7986 compatible calendar  | #e78074        |
             # | food              | food                          | #0288D1        |
+
+    Scenario: Calendars can be made invisible.
+        Given we add the calendar "food"
+          And we set the "controls" parameter to "menu"
+          And we set the "menu_shows_calendar_visibility_toggle" parameter to "true"
+         When we look at 2024-06-09
+         Then we can see the text "Head"
+         When we click on the menu
+         Then we can see the text "Head"
+         When we click on the label "food"
+         Then we cannot see the text "Head" 
+
+    Scenario: Usually calendars cannot be hidden.
+        Given we add the calendar "food"
+          And we set the "controls" parameter to "menu"
+         When we look at 2024-06-09
+         When we click on the menu
+         When we click on the label "food"
+         Then we can see the text "Head" 

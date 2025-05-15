@@ -270,7 +270,7 @@ menu-shows-title: "Show Title in Menu"
 menu-shows-description: "Show Description in Menu"
 menu-shows-calendar-names: "List Calendar Names"
 menu-shows-calendar-descriptions: "List Calendar Descriptions"
-
+menu-shows-calendar-visibility: "Hide/Show Calendars"
 
 # Heading of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-timezone-title
