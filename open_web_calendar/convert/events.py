@@ -132,10 +132,8 @@ class ConvertToEvents(ConversionStrategy):
             end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
         name = calendar_event.get("SUMMARY", "")
-        sequence = str(calendar_event.get("SEQUENCE", 0))
-        uid = calendar_event.get(
-            "UID", ""
-        )  # issue 69: UID is helpful for debugging but not required
+        sequence = calendar_event.sequence
+        uid = calendar_event.uid
         start_date = self.date_to_string(start)
         location_map: Optional[dict[str, str]] = {
             "text": location.text,
