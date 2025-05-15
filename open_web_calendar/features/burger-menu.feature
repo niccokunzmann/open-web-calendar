@@ -47,11 +47,12 @@ Feature: We want to habe a menu to see more information about the calendar.
         Then "<spec>" is specified as <value>
       
       Examples:
-        | label                      | spec                             | value                    |
-        | Show Title in Menu         | menu_shows_title                 | false                    |
-        | Show Description in Menu   | menu_shows_description           | false                    |
-        | List Calendar Names        | menu_shows_calendar_names        | false                    |
-        | List Calendar Descriptions | menu_shows_calendar_descriptions | true                     |
+        | label                      | spec                                  | value                    |
+        | Show Title in Menu         | menu_shows_title                      | false                    |
+        | Show Description in Menu   | menu_shows_description                | false                    |
+        | List Calendar Names        | menu_shows_calendar_names             | false                    |
+        | List Calendar Descriptions | menu_shows_calendar_descriptions      | true                     |
+        | Hide/Show Calendars        | menu_shows_calendar_visibility_toggle | true                     |
     
     Scenario Outline: The calendar list items have the color of the calendars in the menu.
         Given we add the calendar "<calendar>"
