@@ -2,7 +2,6 @@ time-increment-10: 10 minutter
 time-increment-60: 1 time
 time-increment-15: 15 minutter
 style-title: Egendefinert stil med CSS
-controls-date: Dato
 time-increment-30: 30 minutter
 loader-title: Laster inn animasjon
 language-title: Språk

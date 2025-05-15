@@ -120,7 +120,6 @@ event-status-tentative: með fyrirvara
 style-css-classes: 'Þetta eru dæmi um CSS-klasa til að stýra stíl atburða:'
 loader-title: Hleð inn myndlífgun
 loader-default: hringtengd hleðsla
-controls-date: Dagsetning
 loading: hleð inn…
 translate: Þýða
 timezone-browser: nota tímabelti vafrans

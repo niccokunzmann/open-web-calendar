@@ -6,7 +6,6 @@ time-increment-title: Incremento del tiempo
 time-increment-description: 'Cambiar el incremento de tiempo en la vista del día y
   la semana:'
 skins-contrast-black: Contraste negro
-controls-date: Fecha
 style-title: Estilo personalizado con CSS
 tabs-title: Pestañas del calendario
 starting-date-description: 'Para cambiar la fecha de inicio del calendario:'

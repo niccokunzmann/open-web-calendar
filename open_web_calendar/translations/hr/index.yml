@@ -33,7 +33,6 @@ style-days-outside: Neki dani u kalendaru imaju drugačiju boju ako se ne nalaze
 loader-default: rotirajuća animacija tijekom učitavanja
 controls-description: 'Možda ne želiš prikazati sve kontrole korisnicima. Ovdje odaberi
   kontrole koje želiš prikazati:'
-controls-date: Datum
 tabs-description: 'Standardno se koristi mjesečni prikaz. Međutim, na početku možeš
   odabrati drugačiji prikaz. Odaberi prikaz:'
 starting-date-title: Početni datum

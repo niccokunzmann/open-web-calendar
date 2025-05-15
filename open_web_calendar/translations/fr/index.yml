@@ -6,7 +6,6 @@ time-increment-title: Incrémentation du temps
 time-increment-description: "Modifier l'incrément de temps dans l'affichage du jour
   et de la semaine :"
 skins-contrast-black: Contraste Noir
-controls-date: Date
 style-title: Style CSS personalisé
 tabs-title: Onglets du calendrier
 starting-date-description: 'Pour changer la date de départ du calendrier :'

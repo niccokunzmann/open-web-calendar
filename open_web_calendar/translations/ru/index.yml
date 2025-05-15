@@ -6,7 +6,6 @@ starting-date-title: Начальная дата
 starting-date-description: 'Поменять начальную дату в календаре:'
 first-hour-title: Первый час
 title-description: 'Чтобы изменить название, введите название календаря здесь:'
-controls-date: Дата
 language-browser-false: 'Календарь всегда на этом языке:'
 about: Open Web Calendar использует ICS/ICal онлайн календари и отображает их в едином
   календаре. Вы можете использовать его с Nextcloud, Outlook, Google Calendar, Meetup

@@ -55,7 +55,6 @@ event-status-tentative: 임시
 skins-material: 질감
 skins-flat: 평탄
 skins-contrast-black: 콘트라스트 블랙
-controls-date: 일자
 timezone-title: 시간대
 event-status-confirmed: 확인됨
 event-status-cancelled: 취소됨

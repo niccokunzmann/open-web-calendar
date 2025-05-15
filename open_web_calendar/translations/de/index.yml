@@ -21,7 +21,6 @@ tabs-description: 'Die Monatsansicht wird als erste angezeigt aber du kannst än
   was am Besten passt:'
 controls-description: 'Sollte der Nutzer nicht alle Ansichten und Schalter sehen sollen,
   dann kannst Du hier bestimmen, was möglich ist:'
-controls-date: Datum
 timezone-title: Zeitzone
 translate: Übersetzen
 spec-link: 'Sobald Du die Spezifikation irgendwo online hast, kannst Du z.B. einen
