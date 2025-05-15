@@ -218,6 +218,8 @@ menu_shows_description: true
 menu_shows_calendar_names: true
 ## For each URL, we see the name of the calendar
 menu_shows_calendar_descriptions: false
+## If this is true, calendars can be made invisible.
+menu_shows_calendar_visibility_toggle: false
 
 
 

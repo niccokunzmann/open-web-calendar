@@ -62,6 +62,7 @@ class ConvertToCalendars(ConversionStrategy):
                 {
                     "url_index": index,
                     "calendar_index": info.calendar_index_in_file,
+                    "id": f"calendar-{index}-{info.calendar_index_in_file}",
                     "name": self.clean_html(info.calendar_name or ""),
                     "description": self.clean_html(info.calendar_description or ""),
                     "color": self.clean_html(info.calendar_color or ""),

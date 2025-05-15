@@ -66,3 +66,15 @@ Feature: We want to habe a menu to see more information about the calendar.
             | rfc-7986-calendar | This calendar is really nice. | #e78074        |
             | rfc-7986-calendar | RFC 7986 compatible calendar  | #e78074        |
             # | food              | food                          | #0288D1        |
+
+    Scenario: Calendars can be made invisible.
+        Given we add the calendar "food"
+          And we set the "controls" parameter to "menu"
+          And we set the "menu_shows_calendar_visibility_toggle" parameter to "true"
+         When we look at 2024-06-09
+         Then we can see the text "Head"
+         When we click on the menu
+         Then we can see the text "Head"
+         When we click on the label "food"
+         Then we cannot see the text "Head" 
+

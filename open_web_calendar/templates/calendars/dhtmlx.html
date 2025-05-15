@@ -59,7 +59,16 @@ SPDX-License-Identifier: GPL-2.0-only
         </script>
     </head>
     <body>
-        
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" class="menu__toggle"/>
+            <label class="menu__btn burger-menu-label" for="menu__toggle">
+                <span></span>
+            </label>
+            <div class="menu__box" id="menu-meta-data">
+                {% if specification['menu_shows_title'] %}<div class="menu-text menu-calendar-title">{{ specification["title"] }}</div>{% endif %}
+                {% if specification['menu_shows_description'] %}<div class="menu-text menu-calendar-description">{{ specification["description"] }}</div>{% endif %}
+            </div>
+        </div>
         <div id="scheduler_here" class="dhx_cal_container"
             style='width:100%; height:100%;'>
             <div class="dhx_cal_navline"></div>

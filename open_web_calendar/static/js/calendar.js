@@ -288,16 +288,9 @@ function getHeader() {
          */
         html:
             '<div class="hamburger-menu">' + 
-                '<input id="menu__toggle" type="checkbox" />' +
-                '<label class="menu__btn" for="menu__toggle" id="burger-menu-label">' +
+                '<label class="menu__btn burger-menu-label" for="menu__toggle">' +
                     '<span></span>' +
                 '</label>' +
-                // we add this inside ul: <li><a class="menu__item" href="#">Home</a></li>
-                '<div class="menu__box">' +
-                    (specification.menu_shows_title ? '<div class="menu-text menu-calendar-title">' + escapeHtml(specification.title) + '</div>' : '') +
-                    (specification.menu_shows_description ? '<div class="menu-text menu-calendar-description">' + escapeHtml(specification.description) + '</div>' : '') +
-                    getMenuContentFromInfo() +
-                '</div>' +
             '</div>',
         css: "owc_nav_burger_menu" // the CSS class
     }
@@ -534,7 +527,8 @@ function loadCalendar() {
           * See https://css-tricks.com/change-color-of-svg-on-hover/ 
           * See https://stackoverflow.com/a/707580
           */
-        const styleSheet = document.createElement("style")
+        const styleSheet = document.createElement("style");
+        styleSheet.id = "icon-" + action;
         styleSheet.textContent = `.dhx_menu_icon.${actionId} {mask: url('/img/icons/${action}.svg');mask-size: 100%;}`;
         // Add a default text in case none is translated.
         document.head.appendChild(styleSheet);
@@ -646,9 +640,7 @@ function onCalendarInfoLoaded() {
     console.log("Calendar Info:", calendarMetaData);
     const metaDataInMenu = document.getElementById("menu-meta-data");
     // fill the menu
-    if (metaDataInMenu) {
-        metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
-    }
+    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
     // handle errors
     for (error of calendarMetaData.errors) {
         showEventError(error);
@@ -656,6 +648,7 @@ function onCalendarInfoLoaded() {
     // set the CSS variables
     // see https://stackoverflow.com/a/707794/1320237
     const sheet = document.createElement("style");
+    sheet.id = "calendar-styles";
     for (const calendar of calendarMetaData.calendars) {
         const rules = "." + calendar["css-classes"][0] + ", ." +
             calendar["css-classes"][0] + " ." + calendar["css-classes"][1] + 
@@ -668,15 +661,73 @@ function onCalendarInfoLoaded() {
     document.head.appendChild(sheet);
 }
 
-function getMenuContentFromInfo() {
-    const metaDataInMenu = document.createElement("div");
-    metaDataInMenu.id = "menu-meta-data";
-    if (calendarMetaData == null) {
-        // return the empty element so we can set the content later
-        return metaDataInMenu.outerHTML;
+/* The menu is rendered each time we change the date.
+ * The current state rests in this mapping.
+ */
+
+const calendarStatus = {};
+
+function getCalendarMenuListElement(calendar) {
+    /* For the content of the calendars
+        * see open_web_calendar/convert/calendar.py
+        */
+    if (calendarStatus[calendar.id] == null) {
+        /* Configure the style of how the calendar is displayed. */
+        const status = calendarStatus[calendar.id] = {
+            visible: true,
+            calendar: calendar,
+        };
+        status.calendarStyleSheet = document.createElement("style");
+        status.calendarStyleSheet.id = "calendar-menu-" + calendar.id;
+        status.calendarStyleSheet.textContent = ""
+        document.head.appendChild(status.calendarStyleSheet);
     }
-    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
-    return metaDataInMenu.outerHTML;
+    function toggleVisibility() {
+        const status = calendarStatus[calendar.id];
+        status.visible = !status.visible;
+        console.log("display calendar change ", calendar.id, status.visible);
+        status.calendarStyleSheet.textContent = `
+            .event.${status.calendar["css-classes"][0]} {
+                ${status.visible ? "" : "display: none;"}
+            }`;
+        console.log(status.calendarStyleSheet.textContent);
+        calendarVisibilityToggle.checked = status.visible;
+    }
+    const status = calendarStatus[calendar.id];
+    /* Add content to the calendar item. */
+    const calendarListElement = document.createElement("div");
+    const visibilityId = "calendar-visibility-" + calendar.id;
+    calendarListElement.classList.add("menu__item");
+    const calendarVisibilityToggle = document.createElement("input");
+    if (specification.menu_shows_calendar_visibility_toggle) {
+        // toggle visibility of a calendar
+        calendarVisibilityToggle.type = "checkbox";
+        calendarVisibilityToggle.classList.add("calendar-visibility-checkbox");
+        calendarVisibilityToggle.checked = status.visible;
+        calendarVisibilityToggle.onclick = toggleVisibility;
+        calendarVisibilityToggle.id = visibilityId;
+        calendarListElement.appendChild(calendarVisibilityToggle);
+    }
+    if (specification.menu_shows_calendar_names) {
+        // calendar name
+        const calendarName = document.createElement("label");
+        calendarName.classList.add("calendar-title");
+        calendarName.innerText = calendar.name;
+        calendarVisibilityToggle.onclick = toggleVisibility;
+        calendarName.htmlFor = visibilityId;
+        calendarListElement.appendChild(calendarName)
+    }
+    if (specification.menu_shows_calendar_descriptions) {
+        // calendar description
+        const calendarDescription = document.createElement("div");
+        calendarDescription.classList.add("calendar-description");
+        calendarDescription.innerText = calendar.description;
+        calendarListElement.appendChild(calendarDescription);
+    }
+    for (const cssClass of calendar["css-classes"]) {
+        calendarListElement.classList.add(cssClass);
+    }
+    return calendarListElement;
 }
 
 function getMenuInnerContent(info) {
@@ -684,26 +735,7 @@ function getMenuInnerContent(info) {
     const calendarInfoList = document.createElement("div");
     calendarInfoList.classList.add("calendar-list");
     for (const calendar of info.calendars) {
-        const calendarListElement = document.createElement("div");
-        calendarListElement.classList.add("menu__item");
-        if (specification.menu_shows_calendar_names) {
-            // calendar name
-            const calendarName = document.createElement("div");
-            calendarName.classList.add("calendar-title");
-            calendarName.innerText = calendar.name;
-            calendarListElement.appendChild(calendarName)
-        }
-        if (specification.menu_shows_calendar_descriptions) {
-            // calendar description
-            const calendarDescription = document.createElement("div");
-            calendarDescription.classList.add("calendar-description");
-            calendarDescription.innerText = calendar.description;
-            calendarListElement.appendChild(calendarDescription);
-        }
-        for (const cssClass of calendar["css-classes"]) {
-            calendarInfoList.classList.add(cssClass);
-        }
-        calendarInfoList.appendChild(calendarListElement);
+        calendarInfoList.appendChild(getCalendarMenuListElement(calendar));
     }
     return calendarInfoList;
 }
