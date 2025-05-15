@@ -20,6 +20,7 @@ from open_web_calendar.calendars.info import (
     IcalInfo,
     ListInfo,
 )
+from open_web_calendar.calendars.info.url import URLInfo
 from open_web_calendar.convert.calendar import ConvertToCalendars
 from open_web_calendar.error import convert_error_message_to_json
 
@@ -251,10 +252,10 @@ def test_get_calendar_descriptions(ics_calendars: ICSCalendars):
 def test_get_calendar_colors(ics_calendars: ICSCalendars):
     """We want to have it easy with the index."""
     assert [info.calendar_color for info in ics_calendars.get_infos()] == [
-        None,
-        None,
+        "",
+        "",
         "black",
-        None,
+        "",
     ]
 
 
@@ -382,8 +383,6 @@ def test_get_merged_from_url(client, cache_url):
     ]
     #                 'description': 'My Calendar Description\n',
     assert data["calendars"][1]["description"] == "My Calendar Description"
-    #                 'name': '',
-    assert data["calendars"][1]["name"] == ""
     #                 'url_index': 0},
     assert data["calendars"][1]["url_index"] == 0
     #                {'calendar_index': 2,
@@ -399,8 +398,6 @@ def test_get_merged_from_url(client, cache_url):
     ]
     #                 'description': '',
     assert data["calendars"][2]["description"] == ""
-    #                 'name': '',
-    assert data["calendars"][2]["name"] == ""
     #                 'url_index': 0},
     assert data["calendars"][2]["url_index"] == 0
     #                {'calendar_index': 3,
@@ -421,7 +418,7 @@ def test_get_merged_from_url(client, cache_url):
     #                 'description': '',
     assert data["calendars"][3]["description"] == ""
     #                 'name': '',
-    assert data["calendars"][3]["name"] == ""
+    assert data["calendars"][3]["name"] == "ics"
     #                 'url_index': 0}],
     assert data["calendars"][3]["url_index"] == 0
     #  'errors': []}
@@ -468,3 +465,18 @@ def test_error_includes_everything_in_debug_mode():
     assert err["error"] == "Error"
     assert err["text"] == "Error"
     assert err["code"] == 501
+
+
+@pytest.mark.parametrize(
+    ("url", "name"),
+    [
+        ("https://localhost/asd/b.ics", "b"),
+        ("https://localhost/asd/a.icsasd", "a"),
+        ("http://other.hst/csddd/bashdjahd", "bashdjahd"),
+        ("domain/", "domain"),
+        ("http://domain/", "domain"),
+    ],
+)
+def test_url_can_extract_nice_default_name(url, name):
+    info = URLInfo(url)
+    assert info.calendar_name == name

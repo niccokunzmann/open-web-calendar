@@ -8,5 +8,6 @@ from .dict import DictInfo
 from .ics import IcalInfo
 from .interface import CalendarInfoInterface
 from .list import ListInfo
+from .url import URLInfo
 
-__all__ = ["CalendarInfoInterface", "DictInfo", "IcalInfo", "ListInfo"]
+__all__ = ["CalendarInfoInterface", "DictInfo", "IcalInfo", "ListInfo", "URLInfo"]

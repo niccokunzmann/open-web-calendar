@@ -98,7 +98,7 @@ version-file = "open_web_calendar/_version.py"
 allow-direct-references = true
 
 [tool.ruff]
-target-version = "py38"
+target-version = "py39"
 
 [tool.ruff.lint]
 select = ["ALL"]

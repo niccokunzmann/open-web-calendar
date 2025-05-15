@@ -136,6 +136,8 @@ controls:
 - "today"
 ## Users can see the date.
 - "date"
+## Users can see the menu.
+# - "menu"
 
 ## You can describe the calendar with a text so people know what it is about.
 ## If this is empty, the description is taken from the project's translations.
@@ -204,6 +206,20 @@ plugin_event_details: true
 ## Note: This is only available on non-touch devices
 ##       Even if the values is true.
 plugin_event_tooltip: true
+
+## Configure the menu
+## It must be included in "controls" to be shown.
+## The title of the calendar is shown in the menu.
+menu_shows_title: true
+## The description is shown in the menu.
+menu_shows_description: true
+## The menu can list the calendars from the "url" parameter.
+## For each URL, we see the name of the calendar
+menu_shows_calendar_names: true
+## For each URL, we see the name of the calendar
+menu_shows_calendar_descriptions: false
+
+
 
 ###################### Clean HTML ######################
 ##

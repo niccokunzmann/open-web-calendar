@@ -44,8 +44,7 @@ for language in os.listdir(TRANSLATIONS_PATH):  # noqa: PTH208, RUF100
         if file.suffix != ".yml":
             continue
         name = file.stem
-        if name.endswith(UNUSED):
-            name = name[: -len(UNUSED)]
+        name = name.removesuffix(UNUSED)
         with file.open() as f:
             file_translations[name].update(yaml.safe_load(f))
 

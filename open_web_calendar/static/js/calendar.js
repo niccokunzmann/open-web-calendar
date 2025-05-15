@@ -9,7 +9,7 @@
 function parseDate(yyyy_mm_dd) {
     // parse a date without timezone information
     // see https://stackoverflow.com/questions/17545708/parse-date-without-timezone-javascript
-    var numbers = yyyy_mm_dd.match(/(\d+)-0?(\d+)-0?(\d+)/)
+    const numbers = yyyy_mm_dd.match(/(\d+)-0?(\d+)-0?(\d+)/)
     return new Date(parseInt(numbers[1]), parseInt(numbers[2]) - 1, parseInt(numbers[3]))
 }
 
@@ -25,14 +25,14 @@ function escapeHtml(unsafe) {
 
 function getQueries() {
     // from http://stackoverflow.com/a/1099670/1320237
-    var qs = document.location.search;
-    var tokens, re = /[?&]?([^=]+)=([^&]*)/g;
+    let qs = document.location.search;
+    let tokens, re = /[?&]?([^=]+)=([^&]*)/g;
     qs = qs.split("+").join(" ");
 
-    var queries = {};
+    const queries = {};
     while (tokens = re.exec(qs)) {
-        var id = decodeURIComponent(tokens[1]);
-        var content = decodeURIComponent(tokens[2]);
+        const id = decodeURIComponent(tokens[1]);
+        const content = decodeURIComponent(tokens[2]);
         if (Array.isArray(queries[id])) {
             queries[id].push(content);
         } else if (queries[id]) {
@@ -115,19 +115,19 @@ function joinHtmlLines(lines) {
  * These are template functions to compose event details.
  * Use these instead of custom edits in the scheduler.template replacements.
  */
-var template = {
+const template = {
     "plain_summary": function(event) {
         return escapeHtml(event.text);
     },
     "formatted_summary": function(event) {
-      var summary = template.plain_summary(event);
+      let summary = template.plain_summary(event);
       if (event.url) {
         summary = makeLink(event.url, "🔗 " + summary);
       }
       return summary;
     },
     "details": function(event) {
-        var details = document.createElement("div");
+        const details = document.createElement("div");
         details.classList.add("details");
         details.innerHTML = event.description;
         // set the target of all the links
@@ -195,15 +195,15 @@ var template = {
 }
 
 function showError(element) {
-    var icon = document.getElementById("errorStatusIcon");
+    const icon = document.getElementById("errorStatusIcon");
     icon.classList.add("onError");
-    var errors = document.getElementById("errorWindow");
+    const errors = document.getElementById("errorWindow");
     element.classList.add("item");
     errors.appendChild(element);
 }
 
 function toggleErrorWindow() {
-    // var scheduler_tag = document.getElementById("scheduler_here");
+    // const scheduler_tag = document.getElementById("scheduler_here");
     const errors = document.getElementById("errorWindow");
     // scheduler_tag.classList.toggle("hidden");
     errors.classList.toggle("hidden");
@@ -215,7 +215,7 @@ function showErrorWindows() {
 }
 
 function showXHRError(xhr) {
-    var iframe = document.createElement("iframe");
+    const iframe = document.createElement("iframe");
     iframe.srcdoc = xhr.responseText;
     iframe.className = "errorFrame";
     showError(iframe);
@@ -264,7 +264,7 @@ function setLoader() {
 
 function getHeader() {
     // elements that do not occur in the list will always be permitted
-    var useHeaderElement = {
+    const useHeaderElement = {
       "prev": specification.controls.includes("previous") ,
       "date": specification.controls.includes("date"),
       "next": specification.controls.includes("next"),
@@ -273,11 +273,33 @@ function getHeader() {
       "month": specification.tabs.includes("month"),
       "today": specification.controls.includes("today"),
       "agenda": specification.tabs.includes("agenda"),
+      "menu": specification.controls.includes("menu"),
     }
     function showSelected(headerElements) {
       return headerElements.filter(function(element){
-        return useHeaderElement[element] != false; // null for absent
+        return useHeaderElement[element.id || element] != false; // null for absent
       });
+    }
+    const menu = {
+        id: "menu",
+        /* the HTML for the menu is from here:
+         * 6. Snappy Sliding Hamburger Menu - https://alvarotrigo.com/blog/hamburger-menu-css/
+         * See also https://docs.dhtmlx.com/scheduler/api__scheduler_header_config.html
+         */
+        html:
+            '<div class="hamburger-menu">' + 
+                '<input id="menu__toggle" type="checkbox" />' +
+                '<label class="menu__btn" for="menu__toggle" id="burger-menu-label">' +
+                    '<span></span>' +
+                '</label>' +
+                // we add this inside ul: <li><a class="menu__item" href="#">Home</a></li>
+                '<div class="menu__box">' +
+                    (specification.menu_shows_title ? '<div class="menu-text menu-calendar-title">' + escapeHtml(specification.title) + '</div>' : '') +
+                    (specification.menu_shows_description ? '<div class="menu-text menu-calendar-description">' + escapeHtml(specification.description) + '</div>' : '') +
+                    getMenuContentFromInfo() +
+                '</div>' +
+            '</div>',
+        css: "owc_nav_burger_menu" // the CSS class
     }
     // switch the header to a compact one
     // see https://docs.dhtmlx.com/scheduler/touch_support.html
@@ -286,6 +308,7 @@ function getHeader() {
             rows: [
                 {
                     cols: showSelected([
+                        menu,
                         "prev",
                         "date",
                         "next",
@@ -305,6 +328,7 @@ function getHeader() {
           };
     } else {
         return showSelected([
+            menu,
             "day",
             "week",
             "month",
@@ -348,7 +372,7 @@ function loadCalendar() {
      * see https://docs.dhtmlx.com/scheduler/api__scheduler_hour_date_config.html
      */
     scheduler.config.hour_date = specification["hour_format"];
-    var format = scheduler.date.date_to_str(scheduler.config.hour_date);
+    const format = scheduler.date.date_to_str(scheduler.config.hour_date);
 
     // set the locale
     // loaded from /locale_<lang>.js
@@ -396,9 +420,9 @@ function loadCalendar() {
     let hour_division = parseInt(specification["hour_division"]);
     scheduler.config.hour_size_px = 44 * hour_division;
     scheduler.templates.hour_scale = function(date){
-    	var step = 60 / hour_division;
-    	var html = "";
-    	for (var i=0; i<hour_division; i++){
+    	const step = 60 / hour_division;
+    	let html = "";
+    	for (let i=0; i<hour_division; i++){
     	    html += "<div style='height:44px;line-height:44px;'>"+format(date)+"</div>"; // TODO: This should be in CSS.
     	    date = scheduler.date.add(date, step, "minute");
     	}
@@ -406,7 +430,7 @@ function loadCalendar() {
     }
     scheduler.config.first_hour = parseInt(specification["starting_hour"]);
     scheduler.config.last_hour = parseInt(specification["ending_hour"]);
-    var date = specification["date"] ? parseDate(specification["date"]) : new Date();
+    const date = specification["date"] ? parseDate(specification["date"]) : new Date();
     scheduler.init('scheduler_here', date, specification["tab"]);
 
     // see https://docs.dhtmlx.com/scheduler/custom_events_content.html
@@ -486,7 +510,7 @@ function loadCalendar() {
     scheduler.setLoadMode("day");
     onCalendarInitialized();
     loadScheduler();
-    //var dp = new dataProcessor(schedulerUrl);
+    //const dp = new dataProcessor(schedulerUrl);
     // use RESTful API on the backend
     //dp.setTransactionMode("REST");
     //dp.init(scheduler);
@@ -588,4 +612,101 @@ scheduler.attachEvent("onBeforeViewChange", function(old_mode, old_date, mode, d
     return true;
 });
 
+async function getInformationAboutCalendars() {
+    // see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    const url = document.location.pathname.replace(/.html$/, ".json") + document.location.search;
+    const response = await fetch(url, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    if (!response.ok) {
+        showEventError(await response.json());
+        throw new Error(`HTTP error! status: ${response.status}: ${response.text()}`);
+    }
+    return await response.json();
+}
+
+let calendarMetaData = null; // We only need to load this once.
+
+async function loadCalendarMetadata() {
+    if (calendarMetaData != null) {
+        onCalendarInfoLoaded();
+        return;
+    }
+    getInformationAboutCalendars().then( (info) => {
+        calendarMetaData = info;
+        onCalendarInfoLoaded();
+    })
+}
+
+function onCalendarInfoLoaded() {
+    // Since we had no data before, we set it now.
+    console.log("Calendar Info:", calendarMetaData);
+    const metaDataInMenu = document.getElementById("menu-meta-data");
+    // fill the menu
+    if (metaDataInMenu) {
+        metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    }
+    // handle errors
+    for (error of calendarMetaData.errors) {
+        showEventError(error);
+    }
+    // set the CSS variables
+    // see https://stackoverflow.com/a/707794/1320237
+    const sheet = document.createElement("style");
+    for (const calendar of calendarMetaData.calendars) {
+        const rules = "." + calendar["css-classes"][0] + ", ." +
+            calendar["css-classes"][0] + " ." + calendar["css-classes"][1] + 
+            " {" +
+                (calendar.color ? " --dhx-scheduler-event-background: " +  calendar.color + "; " : "") +
+                " --owc-menu-item-backgroud-color: var(--dhx-scheduler-event-background); " +
+            "}";
+        sheet.innerHTML += rules;
+    }
+    document.head.appendChild(sheet);
+}
+
+function getMenuContentFromInfo() {
+    const metaDataInMenu = document.createElement("div");
+    metaDataInMenu.id = "menu-meta-data";
+    if (calendarMetaData == null) {
+        // return the empty element so we can set the content later
+        return metaDataInMenu.outerHTML;
+    }
+    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    return metaDataInMenu.outerHTML;
+}
+
+function getMenuInnerContent(info) {
+    // info is the metadata from /calendar.json
+    const calendarInfoList = document.createElement("div");
+    calendarInfoList.classList.add("calendar-list");
+    for (const calendar of info.calendars) {
+        const calendarListElement = document.createElement("div");
+        calendarListElement.classList.add("menu__item");
+        if (specification.menu_shows_calendar_names) {
+            // calendar name
+            const calendarName = document.createElement("div");
+            calendarName.classList.add("calendar-title");
+            calendarName.innerText = calendar.name;
+            calendarListElement.appendChild(calendarName)
+        }
+        if (specification.menu_shows_calendar_descriptions) {
+            // calendar description
+            const calendarDescription = document.createElement("div");
+            calendarDescription.classList.add("calendar-description");
+            calendarDescription.innerText = calendar.description;
+            calendarListElement.appendChild(calendarDescription);
+        }
+        for (const cssClass of calendar["css-classes"]) {
+            calendarInfoList.classList.add(cssClass);
+        }
+        calendarInfoList.appendChild(calendarListElement);
+    }
+    return calendarInfoList;
+}
+
 window.addEventListener("load", loadCalendar);
+window.addEventListener("load", loadCalendarMetadata);

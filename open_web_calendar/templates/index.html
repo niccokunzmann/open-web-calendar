@@ -317,9 +317,9 @@ SPDX-License-Identifier: GPL-2.0-only
                 <div class="action-paragraph">
                   <form id="event-status-form">
                     <!-- We have three event status, see https://icalendar.org/iCalendar-RFC-5545/3-8-1-11-status.html -->
-                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-tentative" /><label for="style-event-status-tentative" class="STATUS-TENTATIVE">{{ html("event-status-tentative") }}</label>
-                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-confirmed" /><label for="style-event-status-confirmed" class="STATUS-CONFIRMED">{{ html("event-status-confirmed") }}</label>
-                    <input type="checkbox" class="check-event-status collect-if-checked" id="style-event-status-cancelled" /><label for="style-event-status-cancelled" class="STATUS-CANCELLED">{{ html("event-status-cancelled") }}</label>
+                    <input type="checkbox" class="check-event-status specification-checkbox" id="style-event-status-tentative" /><label for="style-event-status-tentative" class="STATUS-TENTATIVE">{{ html("event-status-tentative") }}</label>
+                    <input type="checkbox" class="check-event-status specification-checkbox" id="style-event-status-confirmed" /><label for="style-event-status-confirmed" class="STATUS-CONFIRMED">{{ html("event-status-confirmed") }}</label>
+                    <input type="checkbox" class="check-event-status specification-checkbox" id="style-event-status-cancelled" /><label for="style-event-status-cancelled" class="STATUS-CANCELLED">{{ html("event-status-cancelled") }}</label>
                   </form>
                 </div>
             </section>
@@ -352,16 +352,27 @@ SPDX-License-Identifier: GPL-2.0-only
                   {{ html("controls-description") }}
                 </p>
                 <div class="action-paragraph">
-                  <form id="check-controls">
-                    <label for="check-controls-month"   ><div class="belongs-together button"><input type="checkbox" class="tabs"     value="month"    id="check-controls-month"   />{{ html("calendar.labels_month_tab")            }}</div></label>
-                    <label for="check-controls-week"    ><div class="belongs-together button"><input type="checkbox" class="tabs"     value="week"     id="check-controls-week"    />{{ html("calendar.labels_week_tab")             }}</div></label>
-                    <label for="check-controls-day"     ><div class="belongs-together button"><input type="checkbox" class="tabs"     value="day"      id="check-controls-day"     />{{ html("calendar.labels_day_tab")              }}</div></label>
-                    <label for="check-controls-agenda"  ><div class="belongs-together button"><input type="checkbox" class="tabs"     value="agenda"   id="check-controls-agenda"  />{{ html("calendar.labels_agenda_tab")           }}</div></label>
-                    <label for="check-controls-next"    ><div class="belongs-together button"><input type="checkbox" class="controls" value="next"     id="check-controls-next"    />{{ html("calendar.labels_next")                 }}</div></label>
-                    <label for="check-controls-previous"><div class="belongs-together button"><input type="checkbox" class="controls" value="previous" id="check-controls-previous"/>{{ html("calendar.labels_prev")                 }}</div></label>
-                    <label for="check-controls-today"   ><div class="belongs-together button"><input type="checkbox" class="controls" value="today"    id="check-controls-today"   />{{ html("calendar.labels_dhx_cal_today_button") }}</div></label>
-                    <label for="check-controls-date"    ><div class="belongs-together button"><input type="checkbox" class="controls" value="date"     id="check-controls-date"    />{{ html("calendar.labels_date")                 }}</div></label>
-                  </form>
+                    <label for="check-controls-month"   ><div class="belongs-together button"><input type="checkbox" class="tabs     specification-list-checkbox" value="month"    id="check-controls-month"   />{{ html("calendar.labels_month_tab")            }}</div></label>
+                    <label for="check-controls-week"    ><div class="belongs-together button"><input type="checkbox" class="tabs     specification-list-checkbox" value="week"     id="check-controls-week"    />{{ html("calendar.labels_week_tab")             }}</div></label>
+                    <label for="check-controls-day"     ><div class="belongs-together button"><input type="checkbox" class="tabs     specification-list-checkbox" value="day"      id="check-controls-day"     />{{ html("calendar.labels_day_tab")              }}</div></label>
+                    <label for="check-controls-agenda"  ><div class="belongs-together button"><input type="checkbox" class="tabs     specification-list-checkbox" value="agenda"   id="check-controls-agenda"  />{{ html("calendar.labels_agenda_tab")           }}</div></label>
+                    <label for="check-controls-next"    ><div class="belongs-together button"><input type="checkbox" class="controls specification-list-checkbox" value="next"     id="check-controls-next"    />{{ html("calendar.labels_next")                 }}</div></label>
+                    <label for="check-controls-previous"><div class="belongs-together button"><input type="checkbox" class="controls specification-list-checkbox" value="previous" id="check-controls-previous"/>{{ html("calendar.labels_prev")                 }}</div></label>
+                    <label for="check-controls-today"   ><div class="belongs-together button"><input type="checkbox" class="controls specification-list-checkbox" value="today"    id="check-controls-today"   />{{ html("calendar.labels_dhx_cal_today_button") }}</div></label>
+                    <label for="check-controls-date"    ><div class="belongs-together button"><input type="checkbox" class="controls specification-list-checkbox" value="date"     id="check-controls-date"    />{{ html("calendar.labels_date")                 }}</div></label>
+                </div>
+            </section>
+            <section id="configure-menu">
+                <h2>{{ html("menu-title") }}</h2>
+                <p>
+                    {{ html("menu-description") }}
+                </p>
+                <div class="action-paragraph">
+                    <label for="check-controls-menu"              ><div class="belongs-together button"><input type="checkbox" class="controls specification-list-checkbox" value="menu" id="check-controls-menu"              />{{ html("controls-menu")                    }}</div></label>
+                    <label for="menu_shows_title"                 ><div class="belongs-together button"><input type="checkbox" class="specification-checkbox"                            id="menu_shows_title"                 />{{ html("menu-shows-title")                 }}</div></label>
+                    <label for="menu_shows_description"           ><div class="belongs-together button"><input type="checkbox" class="specification-checkbox"                            id="menu_shows_description"           />{{ html("menu-shows-description")           }}</div></label>
+                    <label for="menu_shows_calendar_names"        ><div class="belongs-together button"><input type="checkbox" class="specification-checkbox"                            id="menu_shows_calendar_names"        />{{ html("menu-shows-calendar-names")        }}</div></label>
+                    <label for="menu_shows_calendar_descriptions" ><div class="belongs-together button"><input type="checkbox" class="specification-checkbox"                            id="menu_shows_calendar_descriptions" />{{ html("menu-shows-calendar-descriptions") }}</div></label>
                 </div>
             </section>
             <section id="configure-timezone">
@@ -382,11 +393,11 @@ SPDX-License-Identifier: GPL-2.0-only
                   {{ html("participants-description") }}
                 </p>
                 <p class="participants">
-                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_organizers" /><label for="show_organizers">{{ html("participants-organizers") }}</label><br/>
-                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_attendees" /><label for="show_attendees">{{ html("participants-attendees") }}</label><br/>
-                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_participant_status" /><label for="show_participant_status">{{ html("participants-status") }}</label><br/>
-                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_participant_type" /><label for="show_participant_type">{{ html("participants-type") }}</label><br/>
-                    <input type="checkbox" class="check-event-status collect-if-checked" id="show_participant_role" /><label for="show_participant_role">{{ html("participants-role") }}</label>
+                    <input type="checkbox" class="check-event-status specification-checkbox" id="show_organizers" /><label for="show_organizers">{{ html("participants-organizers") }}</label><br/>
+                    <input type="checkbox" class="check-event-status specification-checkbox" id="show_attendees" /><label for="show_attendees">{{ html("participants-attendees") }}</label><br/>
+                    <input type="checkbox" class="check-event-status specification-checkbox" id="show_participant_status" /><label for="show_participant_status">{{ html("participants-status") }}</label><br/>
+                    <input type="checkbox" class="check-event-status specification-checkbox" id="show_participant_type" /><label for="show_participant_type">{{ html("participants-type") }}</label><br/>
+                    <input type="checkbox" class="check-event-status specification-checkbox" id="show_participant_role" /><label for="show_participant_role">{{ html("participants-role") }}</label>
                 </p>
             </section>
             <section id="configure-embed">

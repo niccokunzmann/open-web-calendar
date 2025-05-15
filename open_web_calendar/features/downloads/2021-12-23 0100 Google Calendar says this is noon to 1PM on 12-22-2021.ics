@@ -4,8 +4,8 @@ PRODID:open-web-calendar
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 NAME:Open Web Calendar
-X-PROD-SOURCE:https://github.com/niccokunzmann/open-web-calendar/
 X-WR-CALNAME:Open Web Calendar
+X-PROD-SOURCE:https://github.com/niccokunzmann/open-web-calendar/
 BEGIN:VTIMEZONE
 TZID:America/New_York
 COMMENT:This timezone only works from 1970-01-01 to 2038-01-01.

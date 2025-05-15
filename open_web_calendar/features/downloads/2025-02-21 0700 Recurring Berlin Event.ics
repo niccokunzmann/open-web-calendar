@@ -4,8 +4,8 @@ PRODID:open-web-calendar
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 NAME:Open Web Calendar
-X-PROD-SOURCE:https://github.com/niccokunzmann/open-web-calendar/
 X-WR-CALNAME:Open Web Calendar
+X-PROD-SOURCE:https://github.com/niccokunzmann/open-web-calendar/
 BEGIN:VTIMEZONE
 TZID:Europe/London
 X-TZINFO:Europe/London[2024a]

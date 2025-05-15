@@ -6,11 +6,11 @@
 from __future__ import annotations
 
 import datetime
+import zoneinfo
 from html import escape
 from typing import TYPE_CHECKING, Any, Optional
 from urllib.parse import unquote
 
-import zoneinfo
 from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
@@ -132,10 +132,8 @@ class ConvertToEvents(ConversionStrategy):
             end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
         name = calendar_event.get("SUMMARY", "")
-        sequence = str(calendar_event.get("SEQUENCE", 0))
-        uid = calendar_event.get(
-            "UID", ""
-        )  # issue 69: UID is helpful for debugging but not required
+        sequence = calendar_event.sequence
+        uid = calendar_event.uid
         start_date = self.date_to_string(start)
         location_map: Optional[dict[str, str]] = {
             "text": location.text,
@@ -160,9 +158,7 @@ class ConvertToEvents(ConversionStrategy):
             "url": calendar_event.get("URL"),
             "id": uid + "-" + start_date.replace(" ", "-").replace(":", "-"),
             "type": "event",
-            "color": calendar_event.get(
-                "COLOR", calendar_event.get("X-APPLE-CALENDAR-COLOR", "")
-            ),
+            "color": calendar_event.color,
             "categories": self.get_event_categories(calendar_event),
             "css-classes": ["event"]
             + self.get_event_classes(calendar_event)
@@ -237,12 +233,9 @@ class ConvertToEvents(ConversionStrategy):
             classes.append(f"CATEGORY-{category}")
         return classes
 
-    def get_event_categories(self, event) -> list[str]:
+    def get_event_categories(self, event: Event) -> list[str]:
         """Return the categories of the event."""
-        categories = event.get(
-            "CATEGORIES", None
-        )  # TODO: use icalendar property for more compatibility
-        return categories.cats if categories is not None else []
+        return event.categories
 
 
 __all__ = ["ConvertToEvents"]
