@@ -1,6 +1,6 @@
 flask-allowed-hosts
 flask
-icalendar>=6.2.0
+icalendar>=6.3.0
 requests
 requests[socks]
 pyyaml
