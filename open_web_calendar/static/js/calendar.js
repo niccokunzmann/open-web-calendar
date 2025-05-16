@@ -288,6 +288,7 @@ function getHeader() {
          */
         html:
             '<div class="hamburger-menu">' + 
+                '<input id="menu__toggle__2" type="checkbox" class="menu__toggle"/>' +
                 '<label class="menu__btn burger-menu-label" for="menu__toggle" id="burger-menu-label">' +
                     '<span></span>' +
                 '</label>' +
@@ -625,6 +626,15 @@ async function getInformationAboutCalendars() {
 let calendarMetaData = null; // We only need to load this once.
 
 async function loadCalendarMetadata() {
+    // make the menu with the metadata work
+    const toggleMenuButton = document.getElementById("menu__toggle");
+    toggleMenuButton.addEventListener("change", function() {
+        const otherCheckbox = document.getElementById("menu__toggle__2");
+        if (otherCheckbox != null) {
+            otherCheckbox.checked = toggleMenuButton.checked;
+        }
+    });
+    // only update once
     if (calendarMetaData != null) {
         onCalendarInfoLoaded();
         return;
