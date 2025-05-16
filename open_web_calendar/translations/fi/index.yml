@@ -132,3 +132,10 @@ map-google: Google Maps
 map-yandex: Yandex Maps
 map-geo: 'geo: Link'
 map-none: Teksti ilman linkkiä
+menu-description: Voit sisällyttää hampurilaismenun ja valita sisällön.
+menu-shows-calendar-descriptions: Listaa kalenterikuvaukset
+controls-menu: Näytä valikko
+menu-title: Kalenterin valikko
+menu-shows-description: Näytä kuvaus valikossa
+menu-shows-calendar-names: Listaa kalenterin nimet
+menu-shows-title: Näytä otsikko valikossa
