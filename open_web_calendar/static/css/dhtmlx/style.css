@@ -327,21 +327,21 @@ div.dhx_agenda_line > span {
  * See https://alvarotrigo.com/blog/hamburger-menu-css/ - 6. Snappy Sliding Hamburger Menu
  */
 
-#menu__toggle {
+.menu__toggle {
   opacity: 0;
 }
-#menu__toggle:checked + .menu__btn > span {
+.menu__toggle:checked + .menu__btn > span {
   transform: rotate(45deg);
 }
-#menu__toggle:checked + .menu__btn > span::before {
+.menu__toggle:checked + .menu__btn > span::before {
   top: 0;
   transform: rotate(0deg);
 }
-#menu__toggle:checked + .menu__btn > span::after {
+.menu__toggle:checked + .menu__btn > span::after {
   top: 0;
   transform: rotate(90deg);
 }
-#menu__toggle:checked ~ .menu__box {
+.menu__toggle:checked ~ .menu__box {
   left: 0 !important;
   display: block !important;
 }
@@ -387,7 +387,7 @@ div.dhx_agenda_line > span {
   box-shadow: 2px 2px 6px var(--owc-menu-box-shadow-color);
   transition-duration: 0.25s;
   /* further customization */
-  z-index: 1;
+  z-index: 2;
   cursor: default;
 }
 .menu__item {
@@ -411,10 +411,15 @@ div.dhx_agenda_line > span {
     min-width: 0px !important;
     border-width: 0px;
     text-transform: none;
+    visibility: hidden;
 }
 
 .owc_nav_burger_menu .calendar-description {
     font-weight: normal;
+}
+
+.burger-menu-label {
+    visibility: visible;
 }
 
 /* END Burger Menu */
