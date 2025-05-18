@@ -1,0 +1,6 @@
+{#-
+  This is an alias file: kab -> ar (Arabic)
+  See https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#custom-translations
+-#}
+{% import "partials/languages/ar.html" as ar %}
+{% macro t(key) %}{{ ar.t(key) }}{% endmacro %}
