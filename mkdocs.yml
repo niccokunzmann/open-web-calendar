@@ -137,6 +137,7 @@ plugins:
         - is
         - fi
         - ru
+        - kab
 # add mdpo.languages above
       translate:
         - site_name
@@ -256,6 +257,9 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Русский
       link: ru
       lang: ru
+    - name: Taqbaylit
+      link: kab
+      lang: kab
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/
