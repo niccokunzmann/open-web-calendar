@@ -85,3 +85,55 @@ spec-host-html: Môžete <a href="javascript:downloadJSONSpecification()"> stiah
   túto špecifikáciu</a> a umiestniť ho niekde na webe. Týmto spôsobom ste stále v
   kontrole prispôsobenia kalendára po zdieľaní odkazu, napr. na GitHub v <a href="https://gist.github.com/">Gist</a>.
 style-css: Môžete zadať svoje vlastné CSS vlastnosti, ak sa vám páči.
+caldav-allow-sign-up: 'Povoliť prihlásenie sa na odber udalostí v tomto kalendári
+  e-mailom:'
+map-link-geo-description: Sem zadajte URL adresu mapy a ako súradnice vložte {lat}
+  a {lon}.
+map-geo: 'geo: Odkaz'
+caldav-choose-calendar: 'Vyberte si kalendár z vášho účtu:'
+decrypt-urls: Dešifrovať adresy URL
+participants-status: Zobraziť stav účastníkov? (t. j. prijatí/odmietnutí)
+participants-title: Účastníci a organizácia
+add-url-placeholder-url: https://link.to/a-calendar.ics
+participants-type: Ukážte, o aký typ účastníka ide? (t. j. jednotlivec alebo skupina)
+skins-terrace: Terasa
+button-encrypt: Šifrovať URL
+button-encrypted: Šifrované
+button-edit: Upraviť
+button-remove: Odstrániť
+password-urls: Odporúčame šifrovať adresy URL, ak obsahujú citlivé údaje. Nasledujúce
+  heslo si uložte iba v prípade, že ich chcete neskôr dešifrovať.
+add-url-placeholder-username: voliteľné používateľské meno
+about-title: O nás
+calendar-embed-title: Použiť a vložiť
+map-title: Odkazy na mapu a umiestnenie
+map-description: Miesta udalostí môžu mať súradnice alebo text. Tu nakonfigurujte,
+  ktorá mapová služba sa má použiť pri kliknutí na miesto udalosti.
+map-custom: Vlastná mapa
+map-link-location-description: Sem zadajte URL adresu mapy a vložte {location}, kam
+  smeruje vyhľadávací dopyt.
+add-url-placeholder-password: voliteľné heslo
+add-url-button: Pridať
+add-url-calendar-public: Toto je verejná URL adresa
+supported-standards: 'Podporujeme nasledujúce štandardy: ICAL, CalDAV, webcal.'
+participants-description: Môžete pozývať ostatných na udalosti a ľudia sa môžu registrovať.
+  Tieto možnosti môžete povoliť, aby sa mená a e-mailové adresy zobrazovali pod popisom
+  udalosti.
+participants-organizers: Ukážte, kto organizuje podujatie?
+participants-attendees: Ukázať, kto sa zúčastní podujatia?
+menu-title: Ponuka Kalendára
+controls-menu: Zobraziť ponuku
+menu-description: Môžete zahrnúť menu s burgermi a nakonfigurovať jeho obsah.
+menu-shows-title: Zobraziť názov v ponuke
+menu-shows-description: Zobraziť popis v ponuke
+menu-shows-calendar-names: Zobraziť názvy kalendárov
+menu-shows-calendar-descriptions: Zoznam popisov kalendárov
+map-osm: OpenStreetMap
+map-bing: Bing Maps
+map-google: Mapy Google
+map-yandex: Mapy Yandexu
+map-none: Text bez odkazu
+menu-shows-calendar-visibility: Skryť/Zobraziť kalendáre
+participants-role: Uveďte úlohu účastníka? (t. j. organizátor, povinná osoba alebo
+  voliteľná)
+map-custom-summary: Prispôsobte si odkazy na mapu
