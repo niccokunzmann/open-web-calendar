@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_1ovnbief/sk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8dbm_fxu/sk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_1ovnbief/sk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8dbm_fxu/sk/host/configure/index.png" >
       
     
     
@@ -1204,9 +1204,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-values" class="md-nav__link">
+  <a href="#viac-hodnot" class="md-nav__link">
     <span class="md-ellipsis">
-      More Values
+      Viac hodnôt
     </span>
   </a>
   
@@ -1246,27 +1246,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cache_directory" class="md-nav__link">
+  <a href="#cache_adresar" class="md-nav__link">
     <span class="md-ellipsis">
-      CACHE_DIRECTORY
+      CACHE_ADRESÁR
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cache_file_size" class="md-nav__link">
+  <a href="#cache_velkost_suboru" class="md-nav__link">
     <span class="md-ellipsis">
-      CACHE_FILE_SIZE
+      CACHE_VEĽKOSŤ_SÚBORU
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cache_size" class="md-nav__link">
+  <a href="#velkost-vyrovnavacej-pamate" class="md-nav__link">
     <span class="md-ellipsis">
-      CACHE_SIZE
+      Veľkosť vyrovnávacej pamäte
     </span>
   </a>
   
@@ -1323,9 +1323,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-configuration" class="md-nav__link">
+  <a href="#dalsia-konfiguracia" class="md-nav__link">
     <span class="md-ellipsis">
-      Further Configuration
+      Ďalšia konfigurácia
     </span>
   </a>
   
@@ -1341,9 +1341,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+  <a href="#squid-ako-proxy-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Squid as a Proxy Server
+      Squid ako proxy server
     </span>
   </a>
   
@@ -1380,25 +1380,25 @@
 <li>Zmeniť, ako funguje server.</li>
 </ul>
 <h2 id="konfiguracia-kalendara-default">Konfigurácia kalendára Default<a class="headerlink" href="#konfiguracia-kalendara-default" title="Permanentný odkaz">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="/assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="/assets/default_specification.yml">default_specification</a>.</p>
-<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
-<p>You might want to change the following values.</p>
+<p>Konfigurácia všetkých kalendárov je založená na <a href="/assets/default_specification.yml">default_specification</a>. Všetky tieto hodnoty je možné zmeniť prostredníctvom kópie tohto súboru hostovaného na webe pomocou parametra kalendára <code>specification_url</code>. Každý parameter by mal byť zdokumentovaný v <a href="/assets/default_specification.yml">default_specification</a>.</p>
+<p>Ak chcete upraviť <strong>všetky kalendáre</strong> hostované na vašej inštancii, použite premennú prostredia <a href="#owc_specification">OWC_SPECIFICATION</a>. Kalendáre stále prepíšu niektoré hodnoty pre svoju konfiguráciu. Tie, ktoré neprepíšu, sú ovplyvnené predvolenou špecifikáciou. Nie všetky hodnoty sú zobrazené na konfiguračnej stránke na zmenu. Tieto hodnoty je stále možné zmeniť v <code>specification_url</code> a parametroch dotazu.</p>
+<p>Možno budete chcieť zmeniť nasledujúce hodnoty.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Permanentný odkaz">&para;</a></h3>
-<p>The title of your website.</p>
+<p>Názov vašej webovej stránky.</p>
 <h3 id="language"><code>language</code><a class="headerlink" href="#language" title="Permanentný odkaz">&para;</a></h3>
-<p>This is the default language. You might want to change this to serve the configuration page better to a local audience.</p>
+<p>Toto je predvolený jazyk. Možno ho budete chcieť zmeniť, aby sa konfiguračná stránka lepšie zobrazovala lokálnemu publiku.</p>
 <h3 id="favicon"><code>favicon</code><a class="headerlink" href="#favicon" title="Permanentný odkaz">&para;</a></h3>
-<p>This is a link to the website icon.</p>
+<p>Toto je odkaz na ikonu webovej stránky.</p>
 <h3 id="source_code"><code>source_code</code><a class="headerlink" href="#source_code" title="Permanentný odkaz">&para;</a></h3>
-<p>If you made changes, you are legally required to disclose them to visitors. Please adjust the link or contribute them back to the main project.</p>
+<p>Ak ste vykonali zmeny, máte zo zákona povinnosť ich zverejniť návštevníkom. Upravte odkaz alebo ich vráťte späť do hlavného projektu.</p>
 <h3 id="contributing"><code>contributing</code><a class="headerlink" href="#contributing" title="Permanentný odkaz">&para;</a></h3>
-<p>If you want to redirect to contribute to your project.</p>
+<p>Ak chcete presmerovať, aby ste prispeli k svojmu projektu.</p>
 <h3 id="privacy_policy"><code>privacy_policy</code><a class="headerlink" href="#privacy_policy" title="Permanentný odkaz">&para;</a></h3>
-<p>If you host this service yourself, you can use the default <a href="../privacy-policy">privacy policy</a>.</p>
-<p>If for some reason you decide to collect data i.e. in the HTTPS proxy or log IP-addresses, then you need to create your own privacy policy. You can link to the one of this project.</p>
-<h3 id="more-values">More Values<a class="headerlink" href="#more-values" title="Permanentný odkaz">&para;</a></h3>
-<p>There are loads more values that can be changed. Please refer to the <a href="/assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
-<p>See also:</p>
+<p>Ak túto službu hostujete sami, môžete použiť predvolené <a href="../privacy-policy">privacy policy</a>.</p>
+<p>Ak sa z nejakého dôvodu rozhodnete zhromažďovať údaje, napr. na HTTPS proxy alebo zaznamenávať IP adresy, musíte si vytvoriť vlastné zásady ochrany osobných údajov. Môžete odkazovať na zásady tohto projektu.</p>
+<h3 id="viac-hodnot">Viac hodnôt<a class="headerlink" href="#viac-hodnot" title="Permanentný odkaz">&para;</a></h3>
+<p>Existuje oveľa viac hodnôt, ktoré je možné zmeniť. Pozrite si, prosím, <a href="/assets/default_specification.yml">default_specification</a>. Všetky tieto hodnoty sú zdokumentované. Na ich zmenu použite, prosím, premennú prostredia <a href="#owc_specification">OWC_SPECIFICATION</a>.</p>
+<p>Pozri tiež:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
 </ul>
@@ -1406,132 +1406,128 @@
 <p>Premenné prostredia ovplyvňujú iba chod servera. Tieto premenné prostredia môžu byť použité na konfiguráciu služby:</p>
 <h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="Permanentný odkaz">&para;</a></h3>
 <p>predvolené prázdne</p>
-<p>The clients divided by comma that are allowed to access the Open Web Calendar. You will see this text if you try to access the service and you are not allowed:</p>
+<p>Klienti oddelení čiarkou, ktorí majú povolený prístup k Open Web Calendar. Tento text sa zobrazí, ak sa pokúsite o prístup k službe a nemáte povolený prístup:</p>
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
-<p>Examples:</p>
+<p>Príklady:</p>
 <ul>
-<li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
-<li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
-<li>permit everyone to access the server (default): <code>ALLOWED_HOSTS=</code> or <code>ALLOWED_HOSTS=*</code></li>
+<li>povoliť iba ten istý počítač: <code>ALLOWED_HOSTS=localhost</code></li>
+<li>povoliť viacero hostiteľov: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
+<li>povoliť prístup k serveru každému (predvolené): <code>ALLOWED_HOSTS=</code> alebo <code>ALLOWED_HOSTS=*</code></li>
 </ul>
-<p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
+<p>Túto funkcionalitu poskytuje <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Permanentný odkaz">&para;</a></h3>
-<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>predvolená hodnota <code>false</code>, hodnoty <code>true</code> alebo <code>false</code>, v kontajneri Docker vždy <code>false</code></p>
 <p>Nastaviť debug vlajku pre aplikáciu.</p>
-<h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="Permanentný odkaz">&para;</a></h3>
-<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
-<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
-<h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Permanentný odkaz">&para;</a></h3>
-<p>default <code>20</code> (MB)</p>
-<p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
-<p>Examples:</p>
+<h3 id="cache_adresar">CACHE_ADRESÁR<a class="headerlink" href="#cache_adresar" title="Permanentný odkaz">&para;</a></h3>
+<p>predvolená hodnota je dočasný adresár (napr. v <code>/tmp/</code>)</p>
+<p>Open Web Calendar ukladá súbory potrebné na zobrazenie kalendárov v tomto adresári do vyrovnávacej pamäte, aby sa urýchlilo načítanie. Ak adresár neexistuje, bude vytvorený.</p>
+<h3 id="cache_velkost_suboru">CACHE_VEĽKOSŤ_SÚBORU<a class="headerlink" href="#cache_velkost_suboru" title="Permanentný odkaz">&para;</a></h3>
+<p>predvolené <code>20</code> (MB)</p>
+<p>Toto je maximálna veľkosť jedného súboru vo vyrovnávacej pamäti. Keď je vyrovnávacia pamäť plná, najmenej naposledy použitý súbor sa odstráni.</p>
+<p>Príklady:</p>
 <ul>
-<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
-<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
-<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+<li>Povoliť iba malé súbory s veľkosťou 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
+<li>Povoliť ľubovoľnú veľkosť: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
+<li>Zakázať ukladanie do vyrovnávacej pamäte: <code>CACHE_FILE_SIZE=0</code></li>
 </ul>
-<h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="Permanentný odkaz">&para;</a></h3>
-<p>default <code>200</code> (MB)</p>
-<p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
-<p>Examples:</p>
+<h3 id="velkost-vyrovnavacej-pamate">Veľkosť vyrovnávacej pamäte<a class="headerlink" href="#velkost-vyrovnavacej-pamate" title="Permanentný odkaz">&para;</a></h3>
+<p>predvolená hodnota <code>200</code> (MB)</p>
+<p>Toto je maximálna veľkosť vyrovnávacej pamäte v megabajtoch. Táto veľkosť je obmedzená na 200 MB, aby sa zmiernilo zapĺňanie súborového systému vyrovnávacou pamäťou alebo v prípade <code>/tmp/</code> aj pamäte RAM.</p>
+<p>Príklady:</p>
 <ul>
-<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
-<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
-<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+<li>Použite 1 GB na ukladanie do vyrovnávacej pamäte: <code>CACHE_SIZE=1024</code></li>
+<li>Neobmedzená vyrovnávacia pamäť: <code>CACHE_SIZE=neobmedzená</code></li>
+<li>Zakázať ukladanie do vyrovnávacej pamäte: <code>CACHE_SIZE=0</code></li>
 </ul>
 <h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Permanentný odkaz">&para;</a></h3>
-<p>default <code>600</code> (seconds)</p>
+<p>predvolená hodnota <code>600</code> (sekúnd)</p>
 <p>Po druhé vyrovnávanie kalendárových súborov, ktoré sa stiahli na zníženie šírky pásma a oneskorenie.</p>
-<p>Examples:</p>
+<p>Príklady:</p>
 <ul>
 <li>Obnoviť rýchlo: <code>CACHE_RESTED_URLS_FOR_SECONDS=10</code></li>
-<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+<li>Zakázať ukladanie do vyrovnávacej pamäte: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
 </ul>
 <h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Permanentný odkaz">&para;</a></h3>
 <p>predvolené prázdne</p>
-<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
-<p>Examples:</p>
+<p>Toto je zoznam šifrovacích kľúčov oddelených čiarkami. Tieto kľúče možno použiť na skrytie citlivých informácií z adries URL.</p>
+<p>Príklady:</p>
 <ul>
-<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+<li>Zakázať šifrovanie (predvolené): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Použite jeden kľúč: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Použitie viacerých kľúčov: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> Ak použijete viacero kľúčov, dáta zašifruje iba prvý. Ostatné sa použijú iba na dešifrovanie dát.</li>
 </ul>
-<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<p>Nový kľúč môžete vygenerovať návštevou vašej inštancie Open Web Calendar na stránke <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> alebo spustením tohto príkazu:</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
 </code></pre></div>
-<p>See also:</p>
+<p>Pozri tiež:</p>
 <ul>
 <li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanentný odkaz">&para;</a></h3>
-<p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
+<p><code>OWC_SPECIFICATION</code> je voliteľná premenná prostredia.</p>
 <ul>
-<li>It can be a <strong>path</strong> to a file containing valid YAML or JSON.</li>
-<li>It can be a <strong>string</strong> containing valid YAML or JSON.</li>
+<li>Môže to byť <strong>cesta</strong> k súboru obsahujúcemu platný YAML alebo JSON.</li>
+<li>Môže to byť <strong>reťazec</strong> obsahujúci platný YAML alebo JSON.</li>
 </ul>
-<p>Setting <code>OWC_SPECIFICATION</code> allows you to replace default values for all calendars.</p>
+<p>Nastavenie <code>OWC_SPECIFICATION</code> vám umožňuje nahradiť predvolené hodnoty pre všetky kalendáre.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>New versions of the Open Web Calendar can add new configuration parameters.
-Placing your changes in this variable instead of changing the <code>default_specification</code> file
-will ensure that you do not break the Open Web Calendar in a future version.</p>
+<p class="admonition-title">Poznámka</p>
+<p>Nové verzie Open Web Calendar môžu pridávať nové konfiguračné parametre. Umiestnením zmien do tejto premennej namiesto zmeny súboru <code>default_specification</code> zabezpečíte, že v budúcej verzii nebude Open Web Calendar poškodený.</p>
 </div>
-<p>In following example, the title for all calendars that do not set their own title will be changed.</p>
+<p>V nasledujúcom príklade sa zmení názov všetkých kalendárov, ktoré nemajú nastavený vlastný názov.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-<p>See also:</p>
+<p>Pozri tiež:</p>
 <ul>
 <li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Permanentný odkaz">&para;</a></h3>
 <p>predvolené <code>5000</code>, predvolené <code>80</code> v kontajneri Docker</p>
 <p>Prístav, na ktorom funguje služba.</p>
-<p>Examples:</p>
+<p>Príklady:</p>
 <ul>
 <li>Slúžiť na HTTP port: <code>PORT=80</code></li>
 </ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Permanentný odkaz">&para;</a></h3>
 <p>predvolené <code>4</code>, len pre kontajner Docker</p>
 <p>Počet paralelných pracovníkov na spracovanie požiadaviek.</p>
-<p>Examples:</p>
+<p>Príklady:</p>
 <ul>
 <li>Používajte iba jedného pracovníka: <code>WORKERS=1</code></li>
 </ul>
-<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Permanentný odkaz">&para;</a></h2>
+<h2 id="dalsia-konfiguracia">Ďalšia konfigurácia<a class="headerlink" href="#dalsia-konfiguracia" title="Permanentný odkaz">&para;</a></h2>
 <p>Open Web Calendar používa knižnice, ktorých správanie môže byť ďalej prispôsobené.</p>
 <ul>
 <li><strong>Flask</strong> má **<a href="https://flask.palletsprojects.com/en/3.0.x/config/">Viac premenných prostredia</a> ** k dispozícii na konfiguráciu, ako aplikácia slúži obsahu.</li>
 <li><strong>Requests</strong> sa používa dostať <code>.ics</code> súbory. Môžete <a href="#ssrf-protection-with-a-proxy-server">configure a proxy</a>.</li>
 </ul>
-<p>The Open Web Calendar relies on proxy servers for these features:</p>
+<p>Otvorený webový kalendár sa pri týchto funkciách spolieha na proxy servery:</p>
 <ul>
-<li><strong>Access Control and Users</strong> To restrict who can use the Open Web Calendar, you can use <code>nginx</code> or <code>apache</code> as a reverse proxy in front of it. YuNoHost is another self-hosting option to restrict access.</li>
-<li><strong>HTTPS Encryption</strong> This can be done by <code>nginx</code>, <code>apache</code> or <code>caddy</code>.</li>
-<li><strong>More Advanced Caching</strong> Basic caching is handeled by the Open Web Calendar. For more advanced cache configuration, use a proxy server like <code>squid</code>. Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.</li>
-<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+<li><strong>Riadenie prístupu a používatelia</strong> Ak chcete obmedziť, kto môže používať Open Web Calendar, môžete pred ním použiť <code>nginx</code> alebo <code>apache</code> ako reverzný proxy server. YuNoHost je ďalšia možnosť vlastného hostingu na obmedzenie prístupu.</li>
+<li><strong>Šifrovanie HTTPS</strong> Toto je možné vykonať pomocou nástrojov <code>nginx</code>, <code>apache</code> alebo <code>caddy</code>.</li>
+<li><strong>Pokročilejšie ukladanie do vyrovnávacej pamäte</strong> Základné ukladanie do vyrovnávacej pamäte zabezpečuje Open Web Calendar. Pre pokročilejšiu konfiguráciu vyrovnávacej pamäte použite proxy server, ako napríklad <code>squid</code>. Pozrite si dokumentáciu nižšie, ako nastaviť Open Web Calendar na prístup k webu iba prostredníctvom proxy servera.</li>
+<li><strong>Obmedzenie prístupu ku kalendárom</strong> V predvolenom nastavení Open Web Calendar neobmedzuje, ktoré kalendáre sa majú zobrazovať. Na filtrovanie kalendárov použite proxy server. Ak spustíte Open Web Calendar za firewallom s inými webovými službami, nastavenie proxy servera je potrebné na ochranu pred útokmi SSRF.</li>
 </ul>
 <h2 id="ochrana-ssrf-so-serverom-proxy">Ochrana SSRF so serverom Proxy<a class="headerlink" href="#ochrana-ssrf-so-serverom-proxy" title="Permanentný odkaz">&para;</a></h2>
-<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calendar, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
+<p>Otvorený webový kalendár je možné použiť na prístup k lokálnej sieti za firewallom, pozri <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Problém 250</a>. Tento bezplatný prístup je určený na zobrazenie kalendárov odkiaľkoľvek. Keďže Otvorený webový kalendár používa <code>requests</code>, môže použiť proxy, ako je popísané v <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies">dokumentácii <code>requests</code></a>. Proxy potom dokáže spracovať filtrovanie.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
 </code></pre></div>
-<p>See also:</p>
+<p>Pozri tiež:</p>
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF pomocou Tor proxy</a></li>
 </ul>
-<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="Permanentný odkaz">&para;</a></h2>
-<p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
+<h2 id="squid-ako-proxy-server">Squid ako proxy server<a class="headerlink" href="#squid-ako-proxy-server" title="Permanentný odkaz">&para;</a></h2>
+<p>Proxy a vyrovnávacia pamäť <a href="https://www.squid-cache.org/">Squid</a> sú flexibilné a konfigurovateľné. Môžete ich použiť pred Open Web Calendar na konfiguráciu prístupu a prispôsobenie vyrovnávacej pamäte.</p>
 <div class="admonition note">
-<p class="admonition-title">Operating System</p>
-<p>Squid is avaiable for all major platforms.
-For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
-The commands might work on other systems, but that is not tested.</p>
+<p class="admonition-title">Operačný systém</p>
+<p>Squid je dostupný pre všetky hlavné platformy. Pre príkazy a cesty v tomto návode predpokladáme, že používate Squid na Debiane/Ubuntu. Príkazy môžu fungovať aj na iných systémoch, ale to nie je testované.</p>
 </div>
-<p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
-<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<p>Po nainštalovaní proxy <a href="https://www.squid-cache.org/">Squid</a> pridajte tento súbor do adresára <code>conf.d</code>. Squid ho potom automaticky načíta.</p>
+<p>V Linuxe vytvorte súbor <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
 <span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
 <span class="c1">## should be allowed</span>
@@ -1556,21 +1552,21 @@ http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span cl
 <span class="c1">## See https://superuser.com/a/1443889</span>
 dns_v4_first<span class="w"> </span>on
 </code></pre></div>
-<p>The list above denies the Open Web Calendar access to all known local/internal networks. If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.</p>
-<p>On Linux, you can install the file with this command:</p>
+<p>Vyššie uvedený zoznam zakazuje prístup služby Open Web Calendar ku všetkým známym lokálnym/interným sieťam. Ak máte vlastnú lokálnu sieť (IPv4 alebo IPv6), pre istotu ju pridajte do vyššie uvedeného zoznamu.</p>
+<p>V systéme Linux môžete súbor nainštalovať pomocou tohto príkazu:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>/etc/squid/conf.d/open-web-calendar.conf<span class="w"> </span>https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
 </code></pre></div>
-<p>Then, restart the squid proxy.</p>
+<p>Potom reštartujte proxy server squid.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>squid<span class="w"> </span>reload
 </code></pre></div>
-<p>Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on <code>localhost</code>. Setting this variable changes depending on how you run the Open Web Calendar.</p>
-<p>If you use the <a href="../pypi">Python Setup</a>, you can set the environment variables for the server like this:</p>
+<p>Nastavte premenné prostredia tak, aby Open Web Calendar používal proxy Squid nainštalovaný na <code>localhost</code>. Nastavenie tejto premennej sa mení v závislosti od spôsobu spustenia Open Web Calendar.</p>
+<p>Ak použijete <a href="../pypi">Nastavenie Pythonu</a>, môžete nastaviť premenné prostredia pre server takto:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<p>Keď sa pokúsite získať prístup k zakázanému kalendáru pomocou lokálneho <code>open-web-calendar</code>, napr. <code>http://172.16.0.1/calendar.ics</code>, zobrazí sa táto chybová správa:</p>
 <blockquote>
 <p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
 </blockquote>

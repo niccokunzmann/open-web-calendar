@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_1ovnbief/sk/host/docker/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8dbm_fxu/sk/host/docker/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_1ovnbief/sk/host/docker/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8dbm_fxu/sk/host/docker/index.png" >
       
     
     
@@ -1227,9 +1227,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-configuration" class="md-nav__link">
+  <a href="#dalsia-konfiguracia" class="md-nav__link">
     <span class="md-ellipsis">
-      Further Configuration
+      Ďalšia konfigurácia
     </span>
   </a>
   
@@ -1367,7 +1367,7 @@ You can <a href="https://docs.docker.com/engine/daemon/ipv6/">enable IPv6</a>.</
 <span class="w">    </span><span class="nt">internal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>The configuration above prevents access to the internal network as the requests are sent over the Tor network. A bonus feature is that calendars can be accessed and hosted as a Tor Hidden Service using an <code>.onion</code> address. E.g. a calendar file can be served from a Raspberry Pi behind a home network&rsquo;s firewall. This <a href="https://tor.open-web-calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-day-event-repeat-every-day.ics">example calendar</a> uses <a href="http://3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion/one-day-event-repeat-every-day.ics">this onion address</a>.</p>
-<p>See also:</p>
+<p>Pozri tiež:</p>
 <ul>
 <li><a href="../configure#ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server</a></li>
 </ul>
@@ -1421,7 +1421,7 @@ dns_v4_first<span class="w"> </span>on
 <p>Then, you can start the service with this command:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
-<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<p>Keď sa pokúsite získať prístup k zakázanému kalendáru pomocou lokálneho <code>open-web-calendar</code>, napr. <code>http://172.16.0.1/calendar.ics</code>, zobrazí sa táto chybová správa:</p>
 <blockquote>
 <p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
 </blockquote>
@@ -1455,8 +1455,8 @@ docker<span class="w"> </span>rmi<span class="w"> </span>-f<span class="w">  </s
 <p>And add this line:</p>
 <div class="highlight"><pre><span></span><code>3 * * * * /path/to/update.sh 1&gt; /path/to/update.sh.log 2&gt; /path/to/update.sh.log
 </code></pre></div>
-<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Permanentný odkaz">&para;</a></h2>
-<p>After you have set up your own server, you can <a href="../configure">configure the behavior</a>.</p>
+<h2 id="dalsia-konfiguracia">Ďalšia konfigurácia<a class="headerlink" href="#dalsia-konfiguracia" title="Permanentný odkaz">&para;</a></h2>
+<p>Po nastavení vlastného servera môžete <a href="../configure">nakonfigurovať správanie</a>.</p>
 
 
 

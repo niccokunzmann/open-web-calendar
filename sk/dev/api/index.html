@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_1ovnbief/sk/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8dbm_fxu/sk/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_1ovnbief/sk/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8dbm_fxu/sk/dev/api/index.png" >
       
     
     
@@ -1168,9 +1168,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#query-parameters" class="md-nav__link">
+  <a href="#parametre-dopytu" class="md-nav__link">
     <span class="md-ellipsis">
-      Query parameters
+      Parametre dopytu
     </span>
   </a>
   
@@ -1295,10 +1295,10 @@
 <li><code>/calendar.html</code> - zobraziť kalendár</li>
 <li><code>/calendar.spec</code> - stiahnuť špecifikácie</li>
 <li><code>/calendar.ics</code> - prihlásiť sa k súboru ics</li>
-<li><code>/calendar.json</code> - information about the calendar and the content as JSON</li>
+<li><code>/calendar.json</code> - informácie o kalendári a jeho obsahu vo formáte JSON</li>
 <li><code>/calendar.events.json</code> - FLEXIBLE - dostať udalosti ako JSON Upozorňujeme, že to môžete použiť, ale nemôžete si byť istí, že JSON schema zostáva rovnaký. Ak to chcete, pridajte testy.</li>
 </ul>
-<p>Additional parameters are required for <code>/calendar.events.json</code>:</p>
+<p>Pre súbor <code>/calendar.events.json</code> sú potrebné ďalšie parametre:</p>
 <ul>
 <li><code>timezone=UTC</code> - časové pásmo, ktoré musíte zobraziť udalosti v</li>
 <li><code>od=YYYYYY-MM-DD</code> - začiatok obdobia, v ktorom sa udalosti stávajú (inclusive)</li>
@@ -1328,43 +1328,43 @@
 </div>
 </div>
 <h2 id="dodrziavanie-specifikacie">Dodržiavanie špecifikácie<a class="headerlink" href="#dodrziavanie-specifikacie" title="Permanentný odkaz">&para;</a></h2>
-<p>You can change the calendar behavior and looks with parameters. If the same parameter is specified in different places, the earlier place listed below has the highest precedence. These are the places to specify parameters:</p>
-<h3 id="query-parameters">Query parameters<a class="headerlink" href="#query-parameters" title="Permanentný odkaz">&para;</a></h3>
-<p>All parameters to the calendar url are put into the specification. The query parameters have the highest precedence.</p>
-<p>Examples:</p>
+<p>Správanie a vzhľad kalendára môžete zmeniť pomocou parametrov. Ak je rovnaký parameter zadaný na rôznych miestach, najvyššiu prioritu má skoršie miesto uvedené nižšie. Toto sú miesta na zadanie parametrov:</p>
+<h3 id="parametre-dopytu">Parametre dopytu<a class="headerlink" href="#parametre-dopytu" title="Permanentný odkaz">&para;</a></h3>
+<p>Všetky parametre URL adresy kalendára sú zadané do špecifikácie. Parametre dopytu majú najvyššiu prioritu.</p>
+<p>Príklady:</p>
 <div class="highlight"><pre><span></span><code>index.html?language=de
 calendar.html?title=CALENDAR
 </code></pre></div>
 <h3 id="specification_url">specification_url<a class="headerlink" href="#specification_url" title="Permanentný odkaz">&para;</a></h3>
-<p>If you specify this query parameter, the editor configuration is loaded from this url, too. Query parameters are still more important than what is written in this file. The source format can be YAML or JSON.</p>
-<p>Examples:</p>
+<p>Ak zadáte tento parameter dopytu, konfigurácia editora sa načíta aj z tejto adresy URL. Parametre dopytu sú stále dôležitejšie ako to, čo je zapísané v tomto súbore. Zdrojový formát môže byť YAML alebo JSON.</p>
+<p>Príklady:</p>
 <div class="highlight"><pre><span></span><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/open_web_calendar/default_specification.yml
 </code></pre></div>
 <h3 id="open_web_calendarappdefault_specification">open_web_calendar.app.DEFAULT_SPECIFICATION<a class="headerlink" href="#open_web_calendarappdefault_specification" title="Permanentný odkaz">&para;</a></h3>
-<p>This is intended for developers and Python-internal.</p>
+<p>Toto je určené pre vývojárov a interných používateľov Pythonu.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">open_web_calendar.app</span><span class="w"> </span><span class="kn">import</span> <span class="n">DEFAULT_SPECIFICATION</span>
 <span class="n">DEFAULT_SPECIFICATION</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;calendar&#39;</span>
 </code></pre></div>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanentný odkaz">&para;</a></h3>
-<p>This is an optional environment variable. Please read more about it in the <a href="../../host/configure#owc_specification">Server Configuration</a>.</p>
+<p>Toto je voliteľná premenná prostredia. Viac informácií o nej nájdete v dokumente <a href="../../host/configure#owc_specification">Konfigurácia servera</a>.</p>
 <h3 id="default_specification"><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a><a class="headerlink" href="#default_specification" title="Permanentný odkaz">&para;</a></h3>
-<p>This file contains the default parameters. They must not be hard-coded in the source code. All parameters are listed and documented there so this file can be used for reference. Do not modify this file, instead use the <code>OWC_SPECIFICATION</code> environment variable.</p>
+<p>Tento súbor obsahuje predvolené parametre. Nesmú byť pevne zakódované v zdrojovom kóde. Všetky parametre sú tam uvedené a zdokumentované, takže tento súbor možno použiť ako referenciu. Tento súbor neupravujte, namiesto toho použite premennú prostredia <code>OWC_SPECIFICATION</code>.</p>
 <h2 id="pridavanie-parametrov">Pridávanie parametrov<a class="headerlink" href="#pridavanie-parametrov" title="Permanentný odkaz">&para;</a></h2>
-<p>If you add a new parameter as a developer:</p>
+<p>Ak pridáte nový parameter ako vývojár:</p>
 <ul>
 <li>Pridajte parameter s predvolenou hodnotou [predvolené_specification]</li>
 <li>Pridajte implementáciu, v závislosti od jeho použitia v <code>app.py</code> alebo šablóny JavaScriptových súborov. Špecifikácia je už k dispozícii vo všetkých z nich použiť.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> to check that the calendar responds to the feature.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> to make sure that the parameter can be used when a calendar is edited.</li>
+<li>Pridajte testy do súboru <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a>, aby ste overili, či kalendár reaguje na danú funkciu.</li>
+<li>Pridajte testy do <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a>, aby ste sa uistili, že parameter je možné použiť pri úprave kalendára.</li>
 </ul>
 <h2 id="specifikacia-v-kalendari">Špecifikácia v kalendári<a class="headerlink" href="#specifikacia-v-kalendari" title="Permanentný odkaz">&para;</a></h2>
-<p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compiles the specification from the given parameters in <code>get_specification()</code>. In the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> you can access the specification through the <code>specification</code> variable. The specification is available to JavaScript as the <code>specification</code> variable.</p>
-<p>See also:</p>
+<p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> skompiluje špecifikáciu z daných parametrov v <code>get_specification()</code>. V <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> môžete pristupovať k špecifikácii prostredníctvom premennej <code>specification</code>. Špecifikácia je k dispozícii pre JavaScript ako premenná <code>specification</code>.</p>
+<p>Pozri tiež:</p>
 <ul>
-<li><a href="../javascript">JavaScript Customization</a></li>
+<li><a href="../javascript">Prispôsobenie JavaScriptu</a></li>
 </ul>
 <h2 id="specifikacia-v-sekcii-index">Špecifikácia v sekcii Index<a class="headerlink" href="#specifikacia-v-sekcii-index" title="Permanentný odkaz">&para;</a></h2>
-<p>The default specification is available before the calendar is built via JavaScript in the <code>configuration.default_specification</code> variable. There is a <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a> function which created the specification from the inputs. Generally, the <code>specification</code> variable should be used.</p>
+<p>Predvolená špecifikácia je k dispozícii pred vytvorením kalendára pomocou JavaScriptu v premennej <code>configuration.default_specification</code>. Existuje funkcia <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a>, ktorá vytvorí špecifikáciu zo vstupov. Vo všeobecnosti by sa mala použiť premenná <code>specification</code>.</p>
 <h2 id="architektura">Architektúra<a class="headerlink" href="#architektura" title="Permanentný odkaz">&para;</a></h2>
 <p>Nižšie nájdete obrázok architektúry.</p>
 <p><img alt="architecture" src="/assets/img/architecture.svg" /></p>
