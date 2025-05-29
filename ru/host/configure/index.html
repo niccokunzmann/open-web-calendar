@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8dbm_fxu/ru/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_sr2oinul/ru/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8dbm_fxu/ru/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_sr2oinul/ru/host/configure/index.png" >
       
     
     
@@ -1382,13 +1382,13 @@
 <h2 id="_2">Настройка календаря по умолчанию<a class="headerlink" href="#_2" title="Постоянная ссылка">&para;</a></h2>
 <p>The configuration of all calendars is rooted in the <a href="/assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="/assets/default_specification.yml">default_specification</a>.</p>
 <p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
-<p>You might want to change the following values.</p>
+<p>Возможно, вам захочется изменить следующие значения.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Постоянная ссылка">&para;</a></h3>
-<p>The title of your website.</p>
+<p>Название вашего сайта.</p>
 <h3 id="language"><code>language</code><a class="headerlink" href="#language" title="Постоянная ссылка">&para;</a></h3>
-<p>This is the default language. You might want to change this to serve the configuration page better to a local audience.</p>
+<p>Это язык по умолчанию. Вы можете изменить его, чтобы лучше обслуживать страницу конфигурации для местной аудитории.</p>
 <h3 id="favicon"><code>favicon</code><a class="headerlink" href="#favicon" title="Постоянная ссылка">&para;</a></h3>
-<p>This is a link to the website icon.</p>
+<p>Это ссылка на значок сайта.</p>
 <h3 id="source_code"><code>source_code</code><a class="headerlink" href="#source_code" title="Постоянная ссылка">&para;</a></h3>
 <p>If you made changes, you are legally required to disclose them to visitors. Please adjust the link or contribute them back to the main project.</p>
 <h3 id="contributing"><code>contributing</code><a class="headerlink" href="#contributing" title="Постоянная ссылка">&para;</a></h3>
@@ -1425,7 +1425,7 @@
 <p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
 <h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Постоянная ссылка">&para;</a></h3>
 <p>default <code>20</code> (MB)</p>
-<p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
+<p>Это максимальный размер одного файла в кэше. Когда кэш заполнен, наименее недавно используемый файл удаляется.</p>
 <p>Examples:</p>
 <ul>
 <li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
@@ -1526,12 +1526,10 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
 <div class="admonition note">
 <p class="admonition-title">Operating System</p>
-<p>Squid is avaiable for all major platforms.
-For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
-The commands might work on other systems, but that is not tested.</p>
+<p>Squid доступен для всех основных платформ. Для команд и путей этого руководства, мы предполагаем, что вы используете Squid на Debain/Ubuntu. Команды могут работать на других системах, но это не тестируется.</p>
 </div>
 <p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
-<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<p>В Linux создайте <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
 <span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
 <span class="c1">## should be allowed</span>
