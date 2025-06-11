@@ -1,6 +1,6 @@
 date_month_full_sep: กันยายน
 date_month_full_dec: ธันวาคม
-date_month_short_jan: ม.ค
+date_month_short_jan: ม.ค.
 date_month_short_feb: ก.พ.
 date_month_short_mar: มี.ค.
 date_month_short_apr: เม.ย.
@@ -51,7 +51,12 @@ labels_month: เดือน
 labels_day: วัน
 labels_hour: ชั่วโมง
 labels_minute: นาที
-language-en: ภาษาอังกฤษ
+language-en: Thai
 labels_description: รายละเอียด
-language: อังกฤษ
+language: ไทย
 labels_dhx_cal_today_button: วันนี้
+icon_subscribe: เพิ่มในปฏิทิน
+icon_signup: ลงทะเบียน
+label_participants: ผู้เข้าร่วม
+signup-name: ชื่อ
+signup-email: อีเมล
