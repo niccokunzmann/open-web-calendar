@@ -1,23 +1,25 @@
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # nissara pengpol <fon_nissara@hotmail.com>, 2024.
+# Afdol Kareena <afdol.2548.krn@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-26 22:54+0200\n"
-"PO-Revision-Date: 2024-06-14 11:23+0000\n"
-"Last-Translator: nissara pengpol <fon_nissara@hotmail.com>\n"
-"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/th/>\n"
+"PO-Revision-Date: 2025-06-12 04:03+0000\n"
+"Last-Translator: Afdol Kareena <afdol.2548.krn@gmail.com>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-index/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 msgid "Customize Your Own Online Calendar Display"
-msgstr ""
+msgstr "ปรับแต่งปฏิทินของคุณ"
 
 msgid "See the features or try the Open Web Calendar yourself!"
 msgstr "ดูคุณลักษณะหรือลองใช้ Open Web Calendar ได้ด้วยตัวคุณเอง!"
