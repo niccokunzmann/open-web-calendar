@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_855jl7kt/ta/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hraemi63/ta/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_855jl7kt/ta/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hraemi63/ta/dev/api/index.png" >
       
     
     
@@ -1295,7 +1295,7 @@
 <li><code>/caleendar.html</code> - காலெண்டரைக் காண்க</li>
 <li><code>/காலெண்டர்.ச்பெக்</code> - விவரக்குறிப்பைப் பதிவிறக்கவும்</li>
 <li><code>/caleendar.ics</code> - ICS கோப்பிற்கு குழுசேரவும்</li>
-<li><code>/calendar.json</code> - information about the calendar and the content as JSON</li>
+<li><code>/காலெண்டர்.சான்</code> - காலண்டர் மற்றும் சாதொபொகு ஆக உள்ளடக்கம் பற்றிய செய்தி</li>
 <li><code>/galendar.events.json</code> - நெகிழ்வான - சாதொபொகு என நிகழ்வுகளைப் பெறுங்கள் தயவுசெய்து இதைப் பயன்படுத்தலாம் என்பதை நினைவில் கொள்க, ஆனால் சாதொபொகு ச்கீமா அப்படியே இருக்கிறது என்பதை நீங்கள் உறுதியாக நம்ப முடியாது. நீங்கள் விரும்பினால், சோதனைகளைச் சேர்க்கவும்.</li>
 </ul>
 <p><code>/Calendar.events.json</code> க்கு கூடுதல் அளவுருக்கள் தேவை:</p>
@@ -1354,17 +1354,17 @@ calendar.html?title=CALENDAR
 <ul>
 <li>இயல்புநிலை மதிப்புடன் அளவுருவை [இயல்புநிலை_ விவரக்குறிப்பு] இல் சேர்க்கவும்</li>
 <li><code>App.py</code> அல்லது சாவாச்கிரிப்ட் கோப்புகளின் வார்ப்புருக்கள் ஆகியவற்றில் அதன் பயன்பாட்டைப் பொறுத்து ஒரு செயலாக்கத்தைச் சேர்க்கவும். விவரக்குறிப்பு ஏற்கனவே பயன்படுத்துவதற்கு ஏற்கனவே கிடைக்கிறது.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> to check that the calendar responds to the feature.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> to make sure that the parameter can be used when a calendar is edited.</li>
+<li>அம்சத்திற்கு காலண்டர் பதிலளிக்கிறதா என்பதை சரிபார்க்க [அம்சங்கள்/உள்ளமை-the-calendar.feature] இல் சோதனைகளைச் சேர்க்கவும்.</li>
+<li>ஒரு காலெண்டரைத் திருத்தும்போது அளவுருவைப் பயன்படுத்த முடியுமா என்பதை உறுதிப்படுத்த [அம்சங்கள்/திருத்து-தி-கலெண்டர்.-ஃபீட்டர்] சோதனைகளைச் சேர்க்கவும்.</li>
 </ul>
 <h2 id="_7">காலெண்டரில் விவரக்குறிப்பு<a class="headerlink" href="#_7" title="நிரந்தர இணைப்பு">&para;</a></h2>
-<p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compiles the specification from the given parameters in <code>get_specification()</code>. In the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> you can access the specification through the <code>specification</code> variable. The specification is available to JavaScript as the <code>specification</code> variable.</p>
+<p>. <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">வார்ப்புரு</a> இல் நீங்கள் <code>விவரக்குறிப்பு</code> மாறி மூலம் விவரக்குறிப்பை அணுகலாம். விவரக்குறிப்பு <code>விவரக்குறிப்பு</code> மாறியாக சாவாச்கிரிப்டுக்கு கிடைக்கிறது.</p>
 <p>மேலும் காண்க:</p>
 <ul>
-<li><a href="../javascript">JavaScript Customization</a></li>
+<li>[சாவாச்கிரிப்ட் தனிப்பயனாக்கம்] (../ சாவாச்கிரிப்ட்)</li>
 </ul>
 <h2 id="_8">குறியீட்டு பக்கத்தில் விவரக்குறிப்பு<a class="headerlink" href="#_8" title="நிரந்தர இணைப்பு">&para;</a></h2>
-<p>The default specification is available before the calendar is built via JavaScript in the <code>configuration.default_specification</code> variable. There is a <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a> function which created the specification from the inputs. Generally, the <code>specification</code> variable should be used.</p>
+<p><code>உள்ளமைவு.டெஃபால்ட்_ச்பெசிஃபிகேசன்</code> மாறியில் சாவாச்கிரிப்ட் வழியாக காலெண்டர் கட்டப்படுவதற்கு முன்பு இயல்புநிலை விவரக்குறிப்பு கிடைக்கிறது. உள்ளீடுகளிலிருந்து விவரக்குறிப்பை உருவாக்கிய [getspecification ()] செயல்பாடு உள்ளது. பொதுவாக, <code>விவரக்குறிப்பு</code> மாறி பயன்படுத்தப்பட வேண்டும்.</p>
 <h2 id="_9">கட்டிடக்கலை<a class="headerlink" href="#_9" title="நிரந்தர இணைப்பு">&para;</a></h2>
 <p>கீழே, நீங்கள் கட்டிடக்கலையின் படத்தைக் காணலாம்.</p>
 <p>!</p>

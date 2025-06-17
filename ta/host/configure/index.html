@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_855jl7kt/ta/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hraemi63/ta/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_855jl7kt/ta/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_hraemi63/ta/host/configure/index.png" >
       
     
     
@@ -1248,7 +1248,7 @@
           <li class="md-nav__item">
   <a href="#cache_directory" class="md-nav__link">
     <span class="md-ellipsis">
-      CACHE_DIRECTORY
+      Cache_directory
     </span>
   </a>
   
@@ -1257,7 +1257,7 @@
           <li class="md-nav__item">
   <a href="#cache_file_size" class="md-nav__link">
     <span class="md-ellipsis">
-      CACHE_FILE_SIZE
+      Cache_file_size
     </span>
   </a>
   
@@ -1266,7 +1266,7 @@
           <li class="md-nav__item">
   <a href="#cache_size" class="md-nav__link">
     <span class="md-ellipsis">
-      CACHE_SIZE
+      Cache_size
     </span>
   </a>
   
@@ -1341,9 +1341,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      Squid as a Proxy Server
+      பதிலாள் சேவையகமாக ச்க்விட்
     </span>
   </a>
   
@@ -1416,49 +1416,49 @@
 <li>பல ஓச்ட்களை அனுமதிக்கவும்: <code>அனுமதிக்கப்பட்ட_ஓச்ட்ச் = 192.168.0.1,192.168.2, api.myserver.com</code></li>
 <li>சேவையகத்தை அணுக அனைவரையும் அனுமதிக்கவும் (இயல்புநிலை): <code>அனுமதிக்கப்பட்ட_ஓச்ட்ச் =</code> அல்லது <code>அனுமதிக்கப்பட்ட_ஓச்ட்ச் =*</code></li>
 </ul>
-<p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
+<p>இந்த செயல்பாட்டை [பிளாச்க்-அலோ-அலூட்-ஓச்ட்கள்] வழங்குகின்றன.</p>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>இயல்புநிலை <code>தவறு</code>, மதிப்புகள்<code>உண்மை</code> அல்லது <code>பொய்</code>, எப்போதும் கப்பல்துறை கொள்கலனில்<code>தவறு</code></p>
 <p>பயன்பாட்டிற்கான பிழைத்திருத்த கொடியை அமைக்கவும்.</p>
-<h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
-<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
-<h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>default <code>20</code> (MB)</p>
-<p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
+<h3 id="cache_directory">Cache_directory<a class="headerlink" href="#cache_directory" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>இயல்புநிலை ஒரு தற்காலிக அடைவு (எ.கா. <code>/tmp/</code> இல்)</p>
+<p>ஏற்றுவதை விரைவுபடுத்துவதற்கு இந்த கோப்பகத்தில் காலெண்டரைக் காண்பிக்க தேவையான திறந்த வலை காலண்டர் கேச் கோப்புகள் தேவை. அடைவு இல்லை என்றால், அது உருவாக்கப்படும்.</p>
+<h3 id="cache_file_size">Cache_file_size<a class="headerlink" href="#cache_file_size" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>இயல்புநிலை <code>20</code> (எம்பி)</p>
+<p>இது தற்காலிக சேமிப்பில் ஒரு கோப்பின் அதிகபட்ச அளவு. கேச் நிரம்பும்போது, சமீபத்தில் பயன்படுத்தப்பட்ட கோப்பு அகற்றப்படும்.</p>
 <p>எடுத்துக்காட்டுகள்:</p>
 <ul>
-<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
-<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
-<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+<li>4KB இன் சிறிய கோப்புகளை மட்டுமே அனுமதிக்கவும்: <code>cache_file_size = 0.004</code></li>
+<li>எந்த அளவையும் அனுமதிக்கவும்: <code>cache_file_size =" $ cache_size "</code></li>
+<li>தற்காலிக சேமிப்பை முடக்கு: <code>cache_file_size = 0</code></li>
 </ul>
-<h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>default <code>200</code> (MB)</p>
-<p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
+<h3 id="cache_size">Cache_size<a class="headerlink" href="#cache_size" title="நிரந்தர இணைப்பு">&para;</a></h3>
+<p>இயல்புநிலை <code>200</code> (எம்பி)</p>
+<p>இது மெகாபைட்டுகளில் அதிகபட்ச கேச் அளவு. கோப்பு முறைமையை நிரப்பும் தற்காலிக சேமிப்பைத் தணிக்க அல்லது <code>/tmp/</code> ரேம் விசயத்தில் இந்த அளவு 200mb ஆக வரையறுக்கப்பட்டுள்ளது.</p>
 <p>எடுத்துக்காட்டுகள்:</p>
 <ul>
-<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
-<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
-<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+<li>கேச்சிங்கிற்கு 1 சிபி பயன்படுத்தவும்: <code>cache_size = 1024</code></li>
+<li>வரம்பற்ற தற்காலிக சேமிப்பு: <code>cache_size = வரம்பற்ற</code></li>
+<li>தற்காலிக சேமிப்பை முடக்கு: <code>cache_size = 0</code></li>
 </ul>
 <h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="நிரந்தர இணைப்பு">&para;</a></h3>
-<p>default <code>600</code> (seconds)</p>
+<p>இயல்புநிலை <code>600</code> (விநாடிகள்)</p>
 <p>அலைவரிசை மற்றும் தாமதத்தைக் குறைப்பதற்காக பதிவிறக்கம் செய்யப்படும் காலண்டர் கோப்புகளை கேச் செய்ய விநாடிகள்.</p>
 <p>எடுத்துக்காட்டுகள்:</p>
 <ul>
 <li>வேகமாக புதுப்பிக்கவும்: <code>cache_requested_urls_for_seconds = 10</code></li>
-<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+<li>தற்காலிக சேமிப்பை முடக்கு: <code>cache_requested_urls_for_seconds = 0</code></li>
 </ul>
 <h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="நிரந்தர இணைப்பு">&para;</a></h3>
 <p>இயல்புநிலை காலியாக உள்ளது</p>
-<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>இது கமா பிரிக்கப்பட்ட குறியாக்க விசைகளின் பட்டியல். முகவரி களின் முக்கியமான தகவல்களை மறைக்க இவை பயன்படுத்தப்படலாம்.</p>
 <p>எடுத்துக்காட்டுகள்:</p>
 <ul>
-<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+<li>குறியாக்கத்தை முடக்கு (இயல்புநிலை): <code>owc_encription_keys =</code></li>
+<li>ஒரு விசையைப் பயன்படுத்தவும்: <code>owc_encryption_keys = 'pj ... 48 ='</code> `</li>
+<li>பல விசைகளைப் பயன்படுத்தவும்: <code>owc_encryption_keys = 'pj ... 48 =, cx ... fw ='</code> நீங்கள் பல விசைகளைப் பயன்படுத்தினால், முதல் ஒன்று மட்டுமே தரவை குறியாக்குகிறது. மற்றவர்கள் தரவை மறைகுறியாக்க மட்டுமே பயன்படுத்தப்படுகின்றன.</li>
 </ul>
-<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<p>பக்கத்தில் உள்ள திறந்த வலை காலெண்டரின் உங்கள் நிகழ்வைப் பார்வையிடுவதன் மூலம் அல்லது இந்த கட்டளையை இயக்குவதன் மூலம் புதிய விசையை உருவாக்கலாம்:</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
 </code></pre></div>
 <p>மேலும் காண்க:</p>
@@ -1501,17 +1501,17 @@
 <p>திறந்த வலை காலண்டர் நூலகங்களைப் பயன்படுத்துகிறது, அதன் நடத்தை மேலும் தனிப்பயனாக்க முடியும்.</p>
 <ul>
 <li><strong>Flask</strong> has <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more சூழல் variables</a></strong> available பெறுநர் configure how the application serves content.</li>
-<li>** கோரிக்கைகள் ** <code>.ics</code> கோப்புகளைப் பயன்படுத்துங்கள். நீங்கள் <a href="#எச்.எச்.ஆர்.எஃப்-பாதுகாப்பு-ஒரு-பிராக்சி-சேவையகம்">ப்ராக்சியை உள்ளமைக்கலாம்</a>.</li>
+<li>** கோரிக்கைகள் ** <code>.ics</code> கோப்புகளைப் பயன்படுத்துங்கள். நீங்கள் <a href="#ssrf-protection-with-a-proxy-server">ப்ராக்சியை உள்ளமைக்கலாம்</a>.</li>
 </ul>
-<p>The Open Web Calendar relies on proxy servers for these features:</p>
+<p>திறந்த வலை காலெண்டர் இந்த அம்சங்களுக்கான பதிலாள் சேவையகங்களை நம்பியுள்ளது:</p>
 <ul>
-<li><strong>Access Control and Users</strong> To restrict who can use the Open Web Calendar, you can use <code>nginx</code> or <code>apache</code> as a reverse proxy in front of it. YuNoHost is another self-hosting option to restrict access.</li>
-<li><strong>HTTPS Encryption</strong> This can be done by <code>nginx</code>, <code>apache</code> or <code>caddy</code>.</li>
-<li><strong>More Advanced Caching</strong> Basic caching is handeled by the Open Web Calendar. For more advanced cache configuration, use a proxy server like <code>squid</code>. Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.</li>
-<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+<li>. அணுகலைக் கட்டுப்படுத்த யூனோஓச்ட் மற்றொரு தன்வய ஓச்டிங் விருப்பமாகும்.</li>
+<li>** https குறியாக்க ** இதை <code>nginx</code>,<code>அப்பாச்சி</code> அல்லது <code>கேடி</code> மூலம் செய்யலாம்.</li>
+<li>** மேலும் மேம்பட்ட கேச்சிங் ** அடிப்படை கேச்சிங் திறந்த வலை காலெண்டரால் கையாளப்படுகிறது. மேலும் மேம்பட்ட கேச் உள்ளமைவுக்கு, <code>ச்க்விட்</code> போன்ற பதிலாள் சேவையகத்தைப் பயன்படுத்தவும். திறந்த வலை காலெண்டரை ஒரு பதிலாள் மூலம் மட்டுமே வலையை அணுகுவது குறித்து கீழேயுள்ள ஆவணங்களில் பாருங்கள்.</li>
+<li>** காலெண்டர்களுக்கான அணுகலை கட்டுப்படுத்துதல் ** இயல்பாக, திறந்த வலை காலெண்டர் எந்த காலெண்டர்களைக் காட்ட வேண்டும் என்பதை கட்டுப்படுத்தாது. காலெண்டர்களை வடிகட்ட பதிலாள் சேவையகத்தைப் பயன்படுத்தவும். மற்ற வலை சேவைகளுடன் ஃபயர்வாலுக்கு பின்னால் திறந்த வலை காலெண்டரை இயக்கினால், எச்.எச்.ஆர்.எஃப் தாக்குதல்களிலிருந்து பாதுகாக்க ப்ராக்சியை அமைப்பது தேவை.</li>
 </ul>
 <h2 id="_6">பதிலாள் சேவையகத்துடன் எச்.எச்.ஆர்.எஃப் பாதுகாப்பு<a class="headerlink" href="#_6" title="நிரந்தர இணைப்பு">&para;</a></h2>
-<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calendar, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
+<p>ஃபயர்வாலுக்கு பின்னால் உள்ளக நெட்வொர்க்கை அணுக திறந்த வலை காலெண்டரைப் பயன்படுத்தலாம், <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">வெளியீடு 250</a> ஐப் பார்க்கவும். இந்த இலவச அணுகல் எல்லா இடங்களிலிருந்தும் காலெண்டர்களைக் காண்பிக்கும் நோக்கம் கொண்டது. <code>கோரிக்கைகள்</code> திறந்த வலை காலெண்டரால் பயன்படுத்தப்படுவதால், <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>கோரிக்கைகள்</code> ஆவணங்கள்</a> இல் விவரிக்கப்பட்டுள்ளபடி இது ஒரு ப்ராக்சியைப் பயன்படுத்தலாம். பதிலாள் பின்னர் வடிகட்டலைக் கையாள முடியும்.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
@@ -1520,16 +1520,14 @@
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF using a Tor proxy</a></li>
 </ul>
-<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="நிரந்தர இணைப்பு">&para;</a></h2>
-<p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
+<h2 id="_7">பதிலாள் சேவையகமாக ச்க்விட்<a class="headerlink" href="#_7" title="நிரந்தர இணைப்பு">&para;</a></h2>
+<p>[ச்க்விட்] பதிலாள் மற்றும் கேச் நெகிழ்வானவை மற்றும் உள்ளமைக்கக்கூடியவை. அணுகலை உள்ளமைக்க மற்றும் கேச்சிங்கைத் தனிப்பயனாக்க திறந்த வலை காலெண்டருக்கு முன்னால் இதைப் பயன்படுத்தலாம்.</p>
 <div class="admonition note">
-<p class="admonition-title">Operating System</p>
-<p>Squid is avaiable for all major platforms.
-For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
-The commands might work on other systems, but that is not tested.</p>
+<p class="admonition-title">இயக்க முறைமை</p>
+<p>அனைத்து முக்கிய தளங்களுக்கும் ச்க்விட் கிடைக்கிறது. இந்த டுடோரியலின் கட்டளைகள் மற்றும் பாதைகளுக்கு, நீங்கள் டெபியன்/உபுண்டுவில் ச்க்விட் இயக்குகிறீர்கள் என்று கருதுகிறோம். கட்டளைகள் மற்ற அமைப்புகளில் வேலை செய்யக்கூடும், ஆனால் அது சோதிக்கப்படவில்லை.</p>
 </div>
-<p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
-<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<p>நீங்கள் [ச்க்விட்] ப்ராக்சியை நிறுவிய பிறகு, இந்த கோப்பை <code>conf.d</code> கோப்பகத்தில் சேர்க்கவும். ச்க்விட் அதை தானாக ஏற்றும்.</p>
+<p>லினக்சில், <code>/etc/sknwid/conf.d/திறந்த-வெப்-கலெண்டர்.கான்ஃப்</code> ஐ உருவாக்கவும்:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
 <span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
 <span class="c1">## should be allowed</span>
@@ -1554,15 +1552,15 @@ http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span cl
 <span class="c1">## See https://superuser.com/a/1443889</span>
 dns_v4_first<span class="w"> </span>on
 </code></pre></div>
-<p>The list above denies the Open Web Calendar access to all known local/internal networks. If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.</p>
-<p>On Linux, you can install the file with this command:</p>
+<p>அறியப்பட்ட அனைத்து உள்ளூர்/உள் நெட்வொர்க்குகளுக்கும் திறந்த வலை காலண்டர் அணுகலை மேலே உள்ள பட்டியல் மறுக்கிறது. உங்களிடம் உங்கள் சொந்த உள்ளக பிணையம் (ஐபிவி 4 அல்லது ஐபிவி 6) இருந்தால், அதை உறுதிப்படுத்த மேலே உள்ள பட்டியலில் சேர்க்கவும்.</p>
+<p>லினக்சில், இந்த கட்டளையுடன் கோப்பை நிறுவலாம்:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>/etc/squid/conf.d/open-web-calendar.conf<span class="w"> </span>https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
 </code></pre></div>
-<p>Then, restart the squid proxy.</p>
+<p>பின்னர், ச்க்விட் ப்ராக்சியை மறுதொடக்கம் செய்யுங்கள்.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>squid<span class="w"> </span>reload
 </code></pre></div>
-<p>Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on <code>localhost</code>. Setting this variable changes depending on how you run the Open Web Calendar.</p>
-<p>If you use the <a href="../pypi">Python Setup</a>, you can set the environment variables for the server like this:</p>
+<p><code>லோக்கல் ஓச்ட்</code> இல் நிறுவப்பட்ட ச்க்விட் ப்ராக்சியைப் பயன்படுத்த திறந்த வலை காலெண்டரிடம் சொல்ல சுற்றுச்சூழல் மாறிகள் அமைக்கவும். திறந்த வலை காலெண்டரை நீங்கள் எவ்வாறு இயக்குகிறீர்கள் என்பதைப் பொறுத்து இந்த மாறியை அமைப்பது மாறுகிறது.</p>
+<p>நீங்கள் <a href="../pypi">பைதான் அமைவு</a> ஐப் பயன்படுத்தினால், இது போன்ற சேவையகத்திற்கான சூழல் மாறிகளை அமைக்கலாம்:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
