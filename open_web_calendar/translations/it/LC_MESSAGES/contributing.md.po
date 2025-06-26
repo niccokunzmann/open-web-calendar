@@ -17,6 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.7-dev\n"
 
+msgid "You can improve the project yourself. Get started here."
+msgstr ""
+
+msgid "Contribute ♥️"
+msgstr ""
+
 msgid ""
 "[![Sponsor with GitHub](https://img.shields.io/github/sponsors/niccokunzmann?"
 "logo=github&label=GitHub%20Sponsors)](https://github.com/sponsors/"
@@ -26,6 +32,14 @@ msgid ""
 "(https://img.shields.io/github/issues/niccokunzmann/open-web-calendar?"
 "logo=github&label=issues%20seek%20funding&color=%230062ff)](https://polar.sh/"
 "niccokunzmann/open-web-calendar)"
+msgstr ""
+
+msgid "There are several ways in which you can help this project:"
+msgstr ""
+
+msgid ""
+"[Use it](https://open-web-calendar.hosted.quelltext.eu) and [report errors]"
+"(https://github.com/niccokunzmann/open-web-calendar/issues)"
 msgstr ""
 
 msgid ""
@@ -43,6 +57,19 @@ msgid ""
 msgstr ""
 
 msgid "[Translate this project to your language](../dev/translate)"
+msgstr ""
+
+msgid ""
+"Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
+"calendar/issues) e.g. those especially to get started, labeled [good first "
+"issue](https://github.com/niccokunzmann/open-web-calendar/issues?"
+"q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), leave a note and "
+"work on it."
+msgstr ""
+
+msgid ""
+"If you customized a calendar, please consider [contributing it as a template]"
+"(../templates) for others to use."
 msgstr ""
 
 msgid ""

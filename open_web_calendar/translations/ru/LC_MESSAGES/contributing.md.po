@@ -17,6 +17,9 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.11.1-dev\n"
 
+msgid "You can improve the project yourself. Get started here."
+msgstr ""
+
 msgid "Contribute ♥️"
 msgstr ""
 
@@ -29,6 +32,9 @@ msgid ""
 "(https://img.shields.io/github/issues/niccokunzmann/open-web-calendar?"
 "logo=github&label=issues%20seek%20funding&color=%230062ff)](https://polar.sh/"
 "niccokunzmann/open-web-calendar)"
+msgstr ""
+
+msgid "There are several ways in which you can help this project:"
 msgstr ""
 
 msgid ""
@@ -83,9 +89,25 @@ msgstr ""
 msgid "Support plans and maintenance contracts are available."
 msgstr ""
 
-#, fuzzy
-#~ msgid "[Squid]: https://www.squid-cache.org/"
-#~ msgstr "[Squid]: https://www.squid-cache.org/"
+msgid ""
+"This calendar is not styled but contains events that can be hosted behind a "
+"firewall on a little anonymous server. [Example](https://tor.open-web-"
+"calendar.hosted.quelltext.eu/calendar.html?"
+"url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
+"onion%2Fone-day-event-repeat-every-day.ics)"
+msgstr ""
+"This calendar is not styled but contains events that can be hosted behind a "
+"firewall on a little anonymous server. [Example](https://tor.open-web-"
+"calendar.hosted.quelltext.eu/calendar.html?"
+"url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
+"onion%2Fone-day-event-repeat-every-day.ics)"
+
+msgid ""
+"Below, you can see the source code that you need to add to your website. You "
+"might need to adjust the timezone selection and the id of the iframe."
+msgstr ""
+"Below, you can see the source code that you need to add to your website. You "
+"might need to adjust the timezone selection and the id of the iframe."
 
 #, fuzzy
 #~ msgid ""
@@ -111,3 +133,7 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"

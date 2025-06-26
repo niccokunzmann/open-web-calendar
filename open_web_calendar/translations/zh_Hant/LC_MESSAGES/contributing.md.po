@@ -16,6 +16,9 @@ msgstr ""
 msgid "You can improve the project yourself. Get started here."
 msgstr ""
 
+msgid "Contribute ♥️"
+msgstr ""
+
 msgid ""
 "[![Sponsor with GitHub](https://img.shields.io/github/sponsors/niccokunzmann?"
 "logo=github&label=GitHub%20Sponsors)](https://github.com/sponsors/"
@@ -36,22 +39,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
-"calendar/issues) e.g. those especially to get started, labeled [good first "
-"issue](https://github.com/niccokunzmann/open-web-calendar/issues?"
-"q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), leave a note and "
-"work on it."
-msgstr ""
-
-msgid "Contribute ♥️"
-msgstr ""
-
-msgid ""
-"If you customized a calendar, please consider [contributing it as a template]"
-"(../templates) for others to use."
-msgstr ""
-
-msgid ""
 "[Fund development & maintenance - Polar](https://polar.sh/niccokunzmann/open-"
 "web-calendar)"
 msgstr ""
@@ -66,6 +53,19 @@ msgid ""
 msgstr ""
 
 msgid "[Translate this project to your language](../dev/translate)"
+msgstr ""
+
+msgid ""
+"Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
+"calendar/issues) e.g. those especially to get started, labeled [good first "
+"issue](https://github.com/niccokunzmann/open-web-calendar/issues?"
+"q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), leave a note and "
+"work on it."
+msgstr ""
+
+msgid ""
+"If you customized a calendar, please consider [contributing it as a template]"
+"(../templates) for others to use."
 msgstr ""
 
 msgid ""
@@ -84,10 +84,6 @@ msgstr ""
 
 msgid "Support plans and maintenance contracts are available."
 msgstr ""
-
-#, fuzzy
-#~ msgid "[translate]: #translate"
-#~ msgstr "[translate]: #translate"
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
@@ -132,3 +128,7 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
+
+#, fuzzy
+#~ msgid "[translate]: #translate"
+#~ msgstr "[translate]: #translate"

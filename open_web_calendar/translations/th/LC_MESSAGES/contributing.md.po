@@ -17,6 +17,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.6-rc\n"
 
+msgid "You can improve the project yourself. Get started here."
+msgstr ""
+
 msgid "Contribute ♥️"
 msgstr ""
 
@@ -29,6 +32,14 @@ msgid ""
 "(https://img.shields.io/github/issues/niccokunzmann/open-web-calendar?"
 "logo=github&label=issues%20seek%20funding&color=%230062ff)](https://polar.sh/"
 "niccokunzmann/open-web-calendar)"
+msgstr ""
+
+msgid "There are several ways in which you can help this project:"
+msgstr ""
+
+msgid ""
+"[Use it](https://open-web-calendar.hosted.quelltext.eu) and [report errors]"
+"(https://github.com/niccokunzmann/open-web-calendar/issues)"
 msgstr ""
 
 msgid ""

@@ -17,6 +17,12 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.9-dev\n"
 
+msgid "You can improve the project yourself. Get started here."
+msgstr ""
+
+msgid "Contribute ♥️"
+msgstr ""
+
 msgid ""
 "[![Sponsor with GitHub](https://img.shields.io/github/sponsors/niccokunzmann?"
 "logo=github&label=GitHub%20Sponsors)](https://github.com/sponsors/"
@@ -27,6 +33,77 @@ msgid ""
 "logo=github&label=issues%20seek%20funding&color=%230062ff)](https://polar.sh/"
 "niccokunzmann/open-web-calendar)"
 msgstr ""
+
+msgid "There are several ways in which you can help this project:"
+msgstr ""
+
+msgid ""
+"[Use it](https://open-web-calendar.hosted.quelltext.eu) and [report errors]"
+"(https://github.com/niccokunzmann/open-web-calendar/issues)"
+msgstr ""
+
+msgid ""
+"[Fund development & maintenance - Polar](https://polar.sh/niccokunzmann/open-"
+"web-calendar)"
+msgstr ""
+
+msgid ""
+"[Fund costs - Open Collective](https://opencollective.com/open-web-calendar/)"
+msgstr ""
+
+msgid ""
+"[Fund sustainability - GitHub Sponsors](https://github.com/sponsors/"
+"niccokunzmann)"
+msgstr ""
+
+msgid "[Translate this project to your language](../dev/translate)"
+msgstr ""
+
+msgid ""
+"Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
+"calendar/issues) e.g. those especially to get started, labeled [good first "
+"issue](https://github.com/niccokunzmann/open-web-calendar/issues?"
+"q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), leave a note and "
+"work on it."
+msgstr ""
+
+msgid ""
+"If you customized a calendar, please consider [contributing it as a template]"
+"(../templates) for others to use."
+msgstr ""
+
+msgid ""
+"If you are part of a company depending on the Open Web Calendar, please "
+"contact Nicco Kunzmann, the maintainer:"
+msgstr ""
+
+msgid "You need features added."
+msgstr ""
+
+msgid "You want to mitigate risks."
+msgstr ""
+
+msgid "You need add-ons or integrations."
+msgstr ""
+
+msgid "Support plans and maintenance contracts are available."
+msgstr ""
+
+msgid ""
+"Below, you can see the source code that you need to add to your website. You "
+"might need to adjust the timezone selection and the id of the iframe."
+msgstr ""
+"Below, you can see the source code that you need to add to your website. You "
+"might need to adjust the timezone selection and the id of the iframe."
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json \" target=\"_blank\">Редагувати календар</a>"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
@@ -55,12 +132,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json \" target=\"_blank\">Редагувати календар</a>"
