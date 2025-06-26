@@ -38,8 +38,10 @@ UNUSED = "-unused"
 # Parse the directory structure.
 # translations/<lang>/<file>.yml
 for language in os.listdir(TRANSLATIONS_PATH):  # noqa: PTH208, RUF100
-    TRANSLATIONS[language] = file_translations = defaultdict(dict)
     language_path = TRANSLATIONS_PATH / language
+    if not os.path.isdir(language_path):  # noqa: PTH112
+        continue
+    TRANSLATIONS[language] = file_translations = defaultdict(dict)
     for file in language_path.iterdir():
         if file.suffix != ".yml":
             continue
