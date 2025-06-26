@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import re
 from datetime import date
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING
 
 import caldav
 from icalendar import vCalAddress
@@ -54,7 +54,7 @@ class CalDAVCalendars(Calendars):
         return cls(calendar, capabilities)
 
     def __init__(
-        self, calendar: caldav.Calendar, capability: Optional[URLCapability] = None
+        self, calendar: caldav.Calendar, capability: URLCapability | None = None
     ):
         """Create a new CalDAV interface for one calendar."""
         self._calendar = calendar

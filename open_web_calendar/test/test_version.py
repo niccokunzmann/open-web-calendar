@@ -20,7 +20,7 @@ def test_version_can_be_imported(monkeypatch, no_version_file):
     if no_version_file:
         monkeypatch.delitem(sys.modules, "open_web_calendar")
         monkeypatch.setitem(sys.modules, "open_web_calendar._version", None)
-    import open_web_calendar
+    import open_web_calendar  # noqa: PLC0415, RUF100
 
     assert open_web_calendar.version_tuple == open_web_calendar.__version_tuple__
     assert isinstance(open_web_calendar.__version_tuple__, tuple)

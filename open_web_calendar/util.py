@@ -5,7 +5,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING
 from urllib.parse import quote, urlparse
 
 if TYPE_CHECKING:
@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 
 
 def set_url_username_password(
-    url: str | URL, username: Optional[str], password: Optional[str]
+    url: str | URL, username: str | None, password: str | None
 ) -> str:
     """Create a URL with username and password."""
     # see https://stackoverflow.com/a/75060902/1320237

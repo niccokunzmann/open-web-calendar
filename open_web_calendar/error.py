@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import sys
 import traceback
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING
 
 from flask import Response, jsonify, request
 
@@ -45,7 +45,7 @@ def json_error(
 
 def convert_error_message_to_json(
     error_type: str, message: str, url: str, traceback: str, status_code: int = 500
-) -> dict[str, Optional[str]]:
+) -> dict[str, str | None]:
     """Create a JSON error message for an error.
 
     Args:

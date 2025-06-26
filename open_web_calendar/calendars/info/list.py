@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import functools
 import operator
-from typing import Optional
 
 from open_web_calendar.calendars.info.dict import DictInfo
 from open_web_calendar.calendars.info.interface import CalendarInfoInterface
@@ -16,13 +15,13 @@ from open_web_calendar.calendars.info.interface import CalendarInfoInterface
 class ListInfo(CalendarInfoInterface):
     """Information about a calendar stored in a list."""
 
-    def __init__(self, infos: Optional[list[CalendarInfoInterface]] = None):
+    def __init__(self, infos: list[CalendarInfoInterface] | None = None):
         """Compose information about the calendar from different information sources."""
         self._mine = DictInfo()
         self._infos = [self._mine] + (infos or [])
 
     def set(
-        self, values: Optional[dict[str, str | list[str] | int | None]] = None, **kwargs
+        self, values: dict[str, str | list[str] | int | None] | None = None, **kwargs
     ):
         """Set values."""
         self._mine.set(values)

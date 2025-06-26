@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from typing import TYPE_CHECKING, Callable, Optional
+from typing import TYPE_CHECKING, Callable
 from unittest.mock import Mock
 
 import icalendar
@@ -63,7 +63,7 @@ def app(store, monkeypatch) -> Flask:
 
     See https://flask.palletsprojects.com/en/2.2.x/testing/
     """
-    from open_web_calendar import app
+    from open_web_calendar import app  # noqa: PLC0415, RUF100
 
     monkeypatch.setattr(FernetStore, "from_environment", lambda: store)
     app.config.update(
@@ -146,11 +146,11 @@ def calendar_content():
 @pytest.fixture()
 def merged(
     client, calendar_urls
-) -> Callable[[Optional[list[str]], Optional[dict[str, str]]], icalendar.Calendar]:
+) -> Callable[[list[str] | None, dict[str, str] | None], icalendar.Calendar]:
     """Return a function to get a parsed calendar that is merged according to spec."""
 
     def _merged_calendars(
-        urls: Optional[list[str]] = None, specification: Optional[dict[str, str]] = None
+        urls: list[str] | None = None, specification: dict[str, str] | None = None
     ) -> icalendar.Calendar:
         """Return the merged ICS calendar."""
         urls = urls or []

@@ -6,7 +6,6 @@
 
 from __future__ import annotations
 
-from typing import Optional
 from urllib.parse import parse_qs, urlencode, urlparse
 
 
@@ -29,7 +28,7 @@ class URLCapability:
         """Get the capabilities from a URL."""
         return cls({k: v[0] for k, v in parse_qs(parameters).items()})
 
-    def __init__(self, values: Optional[dict[str, str]] = None):
+    def __init__(self, values: dict[str, str] | None = None):
         """Create a capability based on a hash."""
         self._values = {} if values is None else values.copy()
 

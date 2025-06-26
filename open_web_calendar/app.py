@@ -12,7 +12,7 @@ import traceback
 import zoneinfo
 from http import HTTPStatus
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, Optional
+from typing import TYPE_CHECKING, Any
 from urllib.parse import ParseResult, urlparse
 
 import caldav
@@ -160,7 +160,7 @@ def get_text_from_url(url):
 
 
 # @functools.cache
-def get_specification_from_environment_variable(spec: Optional[str]) -> dict[str, Any]:
+def get_specification_from_environment_variable(spec: str | None) -> dict[str, Any]:
     """Return the specification from the env variable stored in a file."""
     if not spec:
         return {}

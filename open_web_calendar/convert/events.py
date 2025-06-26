@@ -8,7 +8,7 @@ from __future__ import annotations
 import datetime
 import zoneinfo
 from html import escape
-from typing import TYPE_CHECKING, Any, Optional
+from typing import TYPE_CHECKING, Any
 from urllib.parse import unquote
 
 from dateutil.parser import parse as parse_date
@@ -135,7 +135,7 @@ class ConvertToEvents(ConversionStrategy):
         sequence = calendar_event.sequence
         uid = calendar_event.uid
         start_date = self.date_to_string(start)
-        location_map: Optional[dict[str, str]] = {
+        location_map: dict[str, str] | None = {
             "text": location.text,
             "url": location.url,
         }

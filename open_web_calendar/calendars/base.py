@@ -29,7 +29,9 @@ class Calendars(ABC):
     @classmethod
     def empty(cls) -> Calendars:
         """There are no calendars."""
-        from open_web_calendar.calendars.ics import ICSCalendars
+        from open_web_calendar.calendars.ics import (  # noqa: PLC0415, RUF100
+            ICSCalendars,
+        )
 
         return ICSCalendars()
 

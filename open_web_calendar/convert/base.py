@@ -10,7 +10,7 @@ import sys
 import traceback
 from concurrent.futures import ThreadPoolExecutor
 from threading import RLock
-from typing import Any, Optional
+from typing import Any
 from urllib.parse import urljoin
 
 import requests
@@ -45,7 +45,7 @@ class ConversionStrategy:
         self,
         specification: dict[str, Any],
         get_text_from_url=get_text_from_url,
-        encryption: Optional[EmptyFernetStore | FernetStore] = None,
+        encryption: EmptyFernetStore | FernetStore | None = None,
         debug: bool = False,  # noqa: FBT001
     ):
         self.specification = specification

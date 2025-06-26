@@ -5,8 +5,6 @@
 
 from __future__ import annotations
 
-from typing import Optional
-
 from icalendar import Calendar
 
 from open_web_calendar.calendars.info.interface import CalendarInfoInterface
@@ -15,7 +13,7 @@ from open_web_calendar.calendars.info.interface import CalendarInfoInterface
 class IcalInfo(CalendarInfoInterface):
     """Information from an icalendar file."""
 
-    def __init__(self, calendar: Optional[Calendar] = None):
+    def __init__(self, calendar: Calendar | None = None):
         self._calendar = calendar if calendar is not None else Calendar()
 
     @property

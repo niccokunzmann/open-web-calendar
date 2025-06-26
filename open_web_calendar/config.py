@@ -13,7 +13,7 @@ import os
 import tempfile
 from functools import wraps
 from pathlib import Path
-from typing import Any, Callable, Optional
+from typing import Any, Callable
 
 import requests
 import requests_cache
@@ -63,7 +63,7 @@ class Config:
         self._source = source
 
     @config_property
-    def requests_timeout(self) -> Optional[int]:
+    def requests_timeout(self) -> int | None:
         """The timeout for requests of source files from the web in seconds.
 
         Set to 0 to use requests' default timeout.

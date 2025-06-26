@@ -5,8 +5,6 @@
 
 from __future__ import annotations
 
-from typing import Optional
-
 from open_web_calendar.calendars.info.interface import CalendarInfoInterface
 
 
@@ -14,7 +12,7 @@ class DictInfo(CalendarInfoInterface):
     """Calendar information stored in a dictionary."""
 
     def __init__(
-        self, info: Optional[dict[str, str | list[str] | int | None]] = None, **kwargs
+        self, info: dict[str, str | list[str] | int | None] | None = None, **kwargs
     ):
         self._info = {}
         self.set(info)
@@ -51,7 +49,7 @@ class DictInfo(CalendarInfoInterface):
         return self._info.get("calendar_categories", [])
 
     def set(
-        self, values: Optional[dict[str, str | list[str] | int | None]] = None, **kwargs
+        self, values: dict[str, str | list[str] | int | None] | None = None, **kwargs
     ):
         """Set values."""
         if values:

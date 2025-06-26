@@ -16,7 +16,6 @@ import sys
 import threading
 from functools import wraps
 from io import StringIO
-from typing import Optional
 
 from open_web_calendar.test.api_mocking import Recording
 
@@ -35,7 +34,7 @@ def remote_call(func):
     """Turn a function into a remote call."""
 
     @wraps(func)
-    def wrapper(self: Optional[RPCPipe], *args, **kw):
+    def wrapper(self: RPCPipe | None, *args, **kw):
         if self is None:
             return func(*args, **kw)
         return self.call(wrapper, None, *args, **kw)

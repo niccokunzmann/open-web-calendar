@@ -12,7 +12,7 @@ from __future__ import annotations
 import json
 import os
 from abc import ABC, abstractmethod
-from typing import Any, Optional
+from typing import Any
 
 import bcrypt
 from cryptography.fernet import Fernet, MultiFernet
@@ -56,7 +56,7 @@ class DecryptedData:
         return self._data[name]
 
     @property
-    def url(self) -> Optional[str]:
+    def url(self) -> str | None:
         return self._data.get("url")
 
     def expose(self, passwords: list[str]) -> dict:
