@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_exr9blcp/sk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_abimxfs3/sk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_exr9blcp/sk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_abimxfs3/sk/host/configure/index.png" >
       
     
     
@@ -267,6 +267,114 @@
           <li class="md-select__item">
             <a href="../../../ru" hreflang="ru" class="md-select__link">
               Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ar" hreflang="ar" class="md-select__link">
+              العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../be" hreflang="be" class="md-select__link">
+              Беларуская
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ca" hreflang="ca" class="md-select__link">
+              Català
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../cy" hreflang="cy" class="md-select__link">
+              Cymraeg
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../da" hreflang="da" class="md-select__link">
+              Dansk
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../el" hreflang="el" class="md-select__link">
+              Ελληνικά
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../he" hreflang="he" class="md-select__link">
+              אנגלית
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../hu" hreflang="hu" class="md-select__link">
+              Magyar
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../id" hreflang="id" class="md-select__link">
+              Bahasa Indonesia
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ja" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pl" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pt" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ro" hreflang="ro" class="md-select__link">
+              română
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../si" hreflang="si" class="md-select__link">
+              සිංහල
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../sv" hreflang="sv" class="md-select__link">
+              Svenska
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../tr" hreflang="tr" class="md-select__link">
+              Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../zh_Hans" hreflang="zh_Hans" class="md-select__link">
+              中文
             </a>
           </li>
         
@@ -1473,8 +1581,10 @@
 </ul>
 <p>Nastavenie <code>OWC_SPECIFICATION</code> vám umožňuje nahradiť predvolené hodnoty pre všetky kalendáre.</p>
 <div class="admonition note">
-<p class="admonition-title">Poznámka</p>
-<p>Nové verzie Open Web Calendar môžu pridávať nové konfiguračné parametre. Umiestnením zmien do tejto premennej namiesto zmeny súboru <code>default_specification</code> zabezpečíte, že v budúcej verzii nebude Open Web Calendar poškodený.</p>
+<p class="admonition-title">Note</p>
+<p>New versions of the Open Web Calendar can add new configuration parameters.
+Placing your changes in this variable instead of changing the <code>default_specification</code> file
+will ensure that you do not break the Open Web Calendar in a future version.</p>
 </div>
 <p>V nasledujúcom príklade sa zmení názov všetkých kalendárov, ktoré nemajú nastavený vlastný názov.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
@@ -1523,8 +1633,10 @@
 <h2 id="squid-ako-proxy-server">Squid ako proxy server<a class="headerlink" href="#squid-ako-proxy-server" title="Permanentný odkaz">&para;</a></h2>
 <p>Proxy a vyrovnávacia pamäť <a href="https://www.squid-cache.org/">Squid</a> sú flexibilné a konfigurovateľné. Môžete ich použiť pred Open Web Calendar na konfiguráciu prístupu a prispôsobenie vyrovnávacej pamäte.</p>
 <div class="admonition note">
-<p class="admonition-title">Operačný systém</p>
-<p>Squid je dostupný pre všetky hlavné platformy. Pre príkazy a cesty v tomto návode predpokladáme, že používate Squid na Debiane/Ubuntu. Príkazy môžu fungovať aj na iných systémoch, ale to nie je testované.</p>
+<p class="admonition-title">Operating System</p>
+<p>Squid is avaiable for all major platforms.
+For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
+The commands might work on other systems, but that is not tested.</p>
 </div>
 <p>Po nainštalovaní proxy <a href="https://www.squid-cache.org/">Squid</a> pridajte tento súbor do adresára <code>conf.d</code>. Squid ho potom automaticky načíta.</p>
 <p>V Linuxe vytvorte súbor <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
