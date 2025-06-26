@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Translate the Open Web Calender"
 msgstr ""
@@ -10,9 +9,9 @@ msgid "Translate"
 msgstr ""
 
 msgid ""
-"You can help us by [translating the "
-"project](https://hosted.weblate.org/engage/open-web-calendar/) to your "
-"language. If your language is not listed, please request to add it!"
+"You can help us by [translating the project](https://hosted.weblate.org/"
+"engage/open-web-calendar/) to your language. If your language is not listed, "
+"please request to add it!"
 msgstr ""
 
 msgid ""
@@ -46,8 +45,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If you would like to have the **Configuration Page** available for people in"
-" your language."
+"If you would like to have the **Configuration Page** available for people in "
+"your language."
 msgstr ""
 
 msgid "You are very welcome to also translate the documentation:"
@@ -69,9 +68,9 @@ msgid "**Note:**"
 msgstr ""
 
 msgid ""
-"If you add a **new language**, you should also translate the calendar to it,"
-" especially the `language` and `language-en` strings so people can choose "
-"the language for the calendar from the drop down menu."
+"If you add a **new language**, you should also translate the calendar to it, "
+"especially the `language` and `language-en` strings so people can choose the "
+"language for the calendar from the drop down menu."
 msgstr ""
 
 msgid ""

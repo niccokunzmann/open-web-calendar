@@ -98,23 +98,9 @@ msgid "[See Examples](templates)"
 msgstr ""
 
 msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self)"
+"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
+"(host/self)"
 msgstr ""
 
 msgid "[Developer API](dev/api)"
 msgstr ""
-
-#~ msgid "Getting Started"
-#~ msgstr ""
-
-#~ msgid "[See Examples](templates.md)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
-#~ msgstr ""
-
-#~ msgid "[Developer API](dev/api.md)"
-#~ msgstr ""

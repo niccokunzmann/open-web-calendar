@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "How to report security concerns about the Open Web Calendar project."
 msgstr ""
@@ -39,7 +38,7 @@ msgid "Reporting a Vulnerability"
 msgstr ""
 
 msgid ""
-"If you find a security vulnerability, please [report the vulnerability "
-"here](https://github.com/niccokunzmann/open-web-calendar/security/) or reach"
-" out to [@niccokunzmann](https://github.com/niccokunzmann/)."
+"If you find a security vulnerability, please [report the vulnerability here]"
+"(https://github.com/niccokunzmann/open-web-calendar/security/) or reach out "
+"to [@niccokunzmann](https://github.com/niccokunzmann/)."
 msgstr ""

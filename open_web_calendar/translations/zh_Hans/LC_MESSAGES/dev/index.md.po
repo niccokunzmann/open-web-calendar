@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Learn how to develop the Open Web Calendar."
 msgstr ""
@@ -26,8 +25,7 @@ msgid ""
 "expected using [ruff]."
 msgstr ""
 
-msgid ""
-"To format the code before commit without the pre-commit hook, run this:"
+msgid "To format the code before commit without the pre-commit hook, run this:"
 msgstr ""
 
 msgid "Running Tests"
@@ -71,13 +69,13 @@ msgid "Documentation"
 msgstr ""
 
 msgid ""
-"You can build the documentation with `tox`, too. It is located in the `docs`"
-" directory."
+"You can build the documentation with `tox`, too. It is located in the `docs` "
+"directory."
 msgstr ""
 
 msgid ""
-"We are using [mkdocs] with the [material "
-"theme](https://squidfunk.github.io/mkdocs-material/)."
+"We are using [mkdocs] with the [material theme](https://squidfunk.github.io/"
+"mkdocs-material/)."
 msgstr ""
 
 #, fuzzy

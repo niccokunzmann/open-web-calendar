@@ -9,8 +9,8 @@ msgid "License Information"
 msgstr ""
 
 msgid ""
-"This project specifies the licenses of its files according to the "
-"[REUSE](https://reuse.software/) tool."
+"This project specifies the licenses of its files according to the [REUSE]"
+"(https://reuse.software/) tool."
 msgstr ""
 
 msgid "Run a check:"

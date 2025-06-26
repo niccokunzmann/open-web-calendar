@@ -13,7 +13,6 @@ msgstr ""
 "X-Generator: Translate Toolkit 3.13.0\n"
 
 #
-
 msgid "Getting Started"
 msgstr ""
 
@@ -93,8 +92,8 @@ msgid "FOSS - No Vendor Lock-In"
 msgstr ""
 
 msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self.md)"
+"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
+"(host/self.md)"
 msgstr ""
 
 msgid "Subscribe Link"

@@ -21,9 +21,9 @@ msgid "Update DHTMLX Scheduler"
 msgstr ""
 
 msgid ""
-"DHTMLX Scheduler can be updated from its [GitHub "
-"repository](https://github.com/DHTMLX/scheduler). There is a script which "
-"updates the scheduler. Still their changelog needs to be considered."
+"DHTMLX Scheduler can be updated from its [GitHub repository](https://github."
+"com/DHTMLX/scheduler). There is a script which updates the scheduler. Still "
+"their changelog needs to be considered."
 msgstr ""
 
 msgid "If you update the scheduler, also add this to the changelog."
@@ -61,9 +61,9 @@ msgid "Translate Documentation Files"
 msgstr ""
 
 msgid ""
-"We might add more Markdown documentation files to the [Weblate "
-"translation](https://hosted.weblate.org/engage/open-web-calendar/). The aim "
-"of this section is to have a consistent outcome."
+"We might add more Markdown documentation files to the [Weblate translation]"
+"(https://hosted.weblate.org/engage/open-web-calendar/). The aim of this "
+"section is to have a consistent outcome."
 msgstr ""
 
 msgid "Create a component **From existing component**, the `index.html`."
@@ -83,13 +83,11 @@ msgid "File format: `gettext PO file` - **bi**lingual"
 msgstr ""
 
 msgid ""
-"Repository browser: `https://github.com/niccokunzmann/open-web-"
-"calendar/blob/{{ branch }}/docs/<file>?plain=1#L{{ line }}` - replace "
-"`<file>`"
+"Repository browser: `https://github.com/niccokunzmann/open-web-calendar/blob/"
+"{{ branch }}/docs/<file>?plain=1#L{{ line }}` - replace `<file>`"
 msgstr ""
 
-msgid ""
-"File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`"
+msgid "File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`"
 msgstr ""
 
 msgid "Monolingual base language file: empty"
@@ -226,28 +224,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#~ msgid ""
-#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
-#~ "changes.    ```sh    git checkout master git pull git add docs/changelog.md "
-#~ "git commit -m\"log changes\" git push    ```"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Create a tag for the version.    ```sh    git tag v1.30 git push origin "
-#~ "v1.30    ```"
-#~ msgstr ""
-
-#~ msgid "Language filter:       wzxhzdk:3"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "excludes `en`    - Source language: `English`    - Manage strings: **not** "
-#~ "checked"
-#~ msgstr ""
-
-#~ msgid "Add **Translation flags**:       wzxhzdk:4"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px:       wzxhzdk:5"
-#~ msgstr ""

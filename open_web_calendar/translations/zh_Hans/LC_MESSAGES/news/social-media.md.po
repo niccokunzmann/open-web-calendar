@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Social Media News"
 msgstr ""
@@ -21,7 +20,6 @@ msgid "Mastodon"
 msgstr ""
 
 msgid ""
-"Latest updates about "
-"[#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar) on Mastodon are "
-"below:"
+"Latest updates about [#OpenWebCalendar](https://toot.wales/tags/"
+"OpenWebCalendar) on Mastodon are below:"
 msgstr ""

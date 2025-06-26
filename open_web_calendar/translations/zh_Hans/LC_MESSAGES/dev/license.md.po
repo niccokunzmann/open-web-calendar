@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Development information about licensing."
 msgstr ""
@@ -10,8 +9,8 @@ msgid "License Information"
 msgstr ""
 
 msgid ""
-"This project specifies the licenses of its files according to the "
-"[REUSE](https://reuse.software/) tool."
+"This project specifies the licenses of its files according to the [REUSE]"
+"(https://reuse.software/) tool."
 msgstr ""
 
 msgid "Run a check:"

@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "The calendar can be customized with JavaScript."
 msgstr ""
@@ -39,8 +38,8 @@ msgid "`onCalendarInitialized`"
 msgstr ""
 
 msgid ""
-"The `onCalendarInitialized()` function is called after the calendar is fully"
-" configured. You can override the configuration of the calendar at this "
+"The `onCalendarInitialized()` function is called after the calendar is fully "
+"configured. You can override the configuration of the calendar at this "
 "point. After this is called, the events are loaded into the calendar. The "
 "content of this function can be modified with the JavaScript parameter "
 "`javascript=...`."
@@ -58,20 +57,19 @@ msgid "[DHTMLX Scheduler]"
 msgstr ""
 
 msgid ""
-"[Properties](https://docs.dhtmlx.com/scheduler/api__refs__scheduler_props.html)"
+"[Properties](https://docs.dhtmlx.com/scheduler/api__refs__scheduler_props."
+"html)"
 msgstr ""
 
-msgid ""
-"[Sizes](https://docs.dhtmlx.com/scheduler/api__scheduler_xy_other.html)"
+msgid "[Sizes](https://docs.dhtmlx.com/scheduler/api__scheduler_xy_other.html)"
 msgstr ""
 
 msgid "`specification`"
 msgstr ""
 
 msgid ""
-"The `specification` variable contains the full specification of the calendar"
-" with all [parameters] including your own and those defined for all "
-"calendars."
+"The `specification` variable contains the full specification of the calendar "
+"with all [parameters] including your own and those defined for all calendars."
 msgstr ""
 
 msgid "[parameters]"
@@ -83,8 +81,8 @@ msgstr "[parameters]: ../api"
 
 #, fuzzy
 msgid ""
-"[DHTMLX Scheduler]: "
-"https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
+"[DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/api__refs__scheduler."
+"html"
 msgstr ""
-"[DHTMLX Scheduler]: "
-"https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
+"[DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/api__refs__scheduler."
+"html"
