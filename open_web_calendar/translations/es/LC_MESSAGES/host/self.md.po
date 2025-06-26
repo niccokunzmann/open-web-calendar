@@ -16,7 +16,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.8-dev\n"
 
+msgid ""
+"There are various ways to host the Open Web Calendar yourself and customize "
+"the deployment."
+msgstr ""
+
+msgid "Self-Hosting & Deployment"
+msgstr ""
+
+msgid ""
+"You do not have to host the Open Web Calendar yourself but you are "
+"encouraged to. It is intended to work behind a company firewall, through a "
+"proxy and also without access to the Internet."
+msgstr ""
+
+msgid ""
+"Several hosting options are already documented. We are grateful if you can "
+"add your favorite one, too."
+msgstr ""
+
+msgid "**Choose a hoster.** These are listed below."
+msgstr ""
+
+msgid "[**Read about Configuration**](../configure)."
+msgstr ""
+
 msgid "Vercel"
+msgstr ""
+
+msgid ""
+"You can create a fork of this repository which automatically deploys to "
+"[Vercel](https://vercel.com/):"
 msgstr ""
 
 msgid ""
@@ -25,7 +55,15 @@ msgid ""
 "calendar.git)"
 msgstr ""
 
+msgid ""
+"Alternatively you can create a one off deploy by cloning this repository and "
+"running `npx vercel` at the root."
+msgstr ""
+
 msgid "Heroku"
+msgstr ""
+
+msgid "You can deploy the app using [Heroku](https://heroku.com)."
 msgstr ""
 
 msgid ""
@@ -34,16 +72,43 @@ msgid ""
 "calendar)"
 msgstr ""
 
+msgid ""
+"Heroku uses [gunicorn](https://gunicorn.org/) to run the server, see the "
+"[Procfile](https://github.com/niccokunzmann/open-web-calendar/blob/master/"
+"Procfile)."
+msgstr ""
+
 msgid "Cloudron"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar has been integrated into [Cloudron](https://www."
+"cloudron.io/)."
+msgstr ""
+
+msgid ""
+"[Cloudron Documentation](https://docs.cloudron.io/apps/openwebcalendar/)"
+msgstr ""
+
+msgid ""
+"[Cloudron Repository](https://git.cloudron.io/cloudron/openwebcalendar-app)"
 msgstr ""
 
 msgid "YunoHost"
 msgstr ""
 
 msgid ""
+"The Open Web Calendar is available as an app for [YunoHost](https://yunohost."
+"org/)."
+msgstr ""
+
+msgid ""
 "[![Install Open Web Calendar with YunoHost](https://install-app.yunohost.org/"
 "install-with-yunohost.svg)](https://install-app.yunohost.org/?app=open-web-"
 "calendar)"
+msgstr ""
+
+msgid "[App Description](https://apps.yunohost.org/app/open-web-calendar)"
 msgstr ""
 
 msgid "[Repository](https://github.com/YunoHost-Apps/open-web-calendar_ynh/)"
@@ -58,8 +123,34 @@ msgid ""
 msgstr ""
 
 msgid ""
+"You can choose to run the Open Web Calendar installed as a Python package "
+"from PyPI. To do this, have a look at [the documentation](../pypi)."
+msgstr ""
+
+msgid "Update Notifications"
+msgstr ""
+
+msgid ""
+"If you wish to receive notifications about new updates of the software, "
+"watch the [GitHub repository](https://github.com/niccokunzmann/open-web-"
+"calendar/)."
+msgstr ""
+
+msgid ""
 "![Repository, Watch, Custom, Releases](/assets/img/subscribe-to-release.png)"
 msgstr ""
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Editar el calendario</a>"
+
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Eventos recurrentes con categorías"
 
 #~ msgid ""
 #~ "If you are at home, planning the days with the family, events might have "
@@ -105,15 +196,3 @@ msgstr ""
 
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
-
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Editar el calendario</a>"
-
-#~ msgid "Recurring Events with Categories"
-#~ msgstr "Eventos recurrentes con categorías"
