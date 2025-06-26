@@ -224,6 +224,32 @@ msgid ""
 "processing."
 msgstr ""
 
+msgid "Query Parameter"
+msgstr ""
+
+msgid "YAML"
+msgstr ""
+
+msgid "JSON"
+msgstr ""
+
+msgid "Change the title in a query parameter:"
+msgstr ""
+
+msgid "Change the title in a YAML specification:"
+msgstr ""
+
+msgid "Change the title in a JSON specification:"
+msgstr ""
+
+msgid "index.html?language=de calendar.html?title=CALENDAR "
+msgstr ""
+
+msgid ""
+"calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
+"calendar/raw/master/open_web_calendar/default_specification.yml "
+msgstr ""
+
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
@@ -267,29 +293,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#~ msgid "Query Parameter"
-#~ msgstr ""
-
-#~ msgid "YAML"
-#~ msgstr ""
-
-#~ msgid "JSON"
-#~ msgstr ""
-
-#~ msgid "Change the title in a query parameter:"
-#~ msgstr ""
-
-#~ msgid "Change the title in a YAML specification:"
-#~ msgstr ""
-
-#~ msgid "Change the title in a JSON specification:"
-#~ msgstr ""
-
-#~ msgid "index.html?language=de calendar.html?title=CALENDAR "
-#~ msgstr ""
-
-#~ msgid ""
-#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
-#~ "calendar/raw/master/open_web_calendar/default_specification.yml "
-#~ msgstr ""

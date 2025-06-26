@@ -212,6 +212,31 @@ msgstr ""
 msgid "It is nice to know who translated and how often."
 msgstr ""
 
+msgid ""
+"Edit the `docs/changelog.md` file in the Changelog Section and add the "
+"changes.    ```sh    git checkout master git pull git add docs/changelog.md "
+"git commit -m\"log changes\" git push    ```"
+msgstr ""
+
+msgid ""
+"Create a tag for the version.    ```sh    git tag v1.30 git push origin "
+"v1.30    ```"
+msgstr ""
+
+msgid "Language filter:       wzxhzdk:3"
+msgstr ""
+
+msgid ""
+"excludes `en`    - Source language: `English`    - Manage strings: **not** "
+"checked"
+msgstr ""
+
+msgid "Add **Translation flags**:       wzxhzdk:4"
+msgstr ""
+
+msgid "Restrict width and height to 2000px:       wzxhzdk:5"
+msgstr ""
+
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
@@ -269,28 +294,3 @@ msgstr ""
 
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
-
-#~ msgid ""
-#~ "Edit the `docs/changelog.md` file in the Changelog Section and add the "
-#~ "changes.    ```sh    git checkout master git pull git add docs/changelog.md "
-#~ "git commit -m\"log changes\" git push    ```"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Create a tag for the version.    ```sh    git tag v1.30 git push origin "
-#~ "v1.30    ```"
-#~ msgstr ""
-
-#~ msgid "Language filter:       wzxhzdk:3"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "excludes `en`    - Source language: `English`    - Manage strings: **not** "
-#~ "checked"
-#~ msgstr ""
-
-#~ msgid "Add **Translation flags**:       wzxhzdk:4"
-#~ msgstr ""
-
-#~ msgid "Restrict width and height to 2000px:       wzxhzdk:5"
-#~ msgstr ""

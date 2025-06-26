@@ -177,6 +177,26 @@ msgstr ""
 msgid "And add this line:"
 msgstr ""
 
+msgid "Start the container:    wzxhzdk:5"
+msgstr ""
+
+msgid "Growing log files"
+msgstr ""
+
+msgid ""
+"If you use this service, consider setting up [log "
+"rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-"
+"important-how-to-rotate-docker-logs-840520e4c47) as it is very talkative."
+msgstr ""
+
+msgid "IPv6"
+msgstr ""
+
+msgid ""
+"By default, docker only uses IPv4. You can [enable "
+"IPv6](https://docs.docker.com/engine/daemon/ipv6/)."
+msgstr ""
+
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
@@ -234,23 +254,3 @@ msgstr ""
 
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
-
-#~ msgid "Start the container:    wzxhzdk:5"
-#~ msgstr ""
-
-#~ msgid "Growing log files"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you use this service, consider setting up [log "
-#~ "rotation](https://ishitashah142.medium.com/why-rotating-docker-logs-is-"
-#~ "important-how-to-rotate-docker-logs-840520e4c47) as it is very talkative."
-#~ msgstr ""
-
-#~ msgid "IPv6"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "By default, docker only uses IPv4. You can [enable "
-#~ "IPv6](https://docs.docker.com/engine/daemon/ipv6/)."
-#~ msgstr ""
