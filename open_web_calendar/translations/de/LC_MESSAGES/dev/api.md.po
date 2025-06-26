@@ -17,16 +17,107 @@ msgstr ""
 "X-Generator: Weblate 5.10-dev\n"
 
 msgid ""
+"The API of the Open Web Calendar allows more customization than the "
+"configuration page."
+msgstr ""
+
+msgid "API"
+msgstr ""
+
+msgid ""
+"Generally, the Open Web Calendar is there to be used without restriction. "
+"You can use this API to customize the calendar on the fly."
+msgstr ""
+
+msgid "This section can be of use if one of these applies:"
+msgstr ""
+
+msgid "You are a web developer who wants to embed the Open Web Calendar."
+msgstr ""
+
+msgid ""
+"You want to exploit the full flexibility, not just what is exposed on the "
+"configuration page."
+msgstr ""
+
+msgid ""
+"You want to use JavaScript to dynamically generate the calendar design and "
+"options."
+msgstr ""
+
+msgid "You want to extend the functionality of the Open Web Calendar."
+msgstr ""
+
+msgid ""
+"You want to use the Open Web Calendar as a proxy to request JSON events for "
+"your self-made event feed."
+msgstr ""
+
+msgid "Endpoints"
+msgstr ""
+
+msgid "The basic parameters are the same at these endpoints:"
+msgstr ""
+
+msgid "`/index.html` - edit the calendar"
+msgstr ""
+
+msgid "`/about.html` - view the about page"
+msgstr ""
+
+msgid "`/calendar.html` - view the calendar"
+msgstr ""
+
+msgid "`/calendar.spec` - download the specification"
+msgstr ""
+
+msgid "`/calendar.ics` - subscribe to the ics file"
+msgstr ""
+
+msgid ""
 "`/calendar.json` - information about the calendar and the content as JSON"
 msgstr ""
 
+msgid ""
+"`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that "
+"you CAN use this but you cannot be sure that the JSON schema remains the "
+"same. If you want that, add tests."
+msgstr ""
+
 msgid "Additional parameters are required for `/calendar.events.json`:"
+msgstr ""
+
+msgid "`timezone=UTC` - the timezone that you need to display the events in"
+msgstr ""
+
+msgid ""
+"`from=YYYY-MM-DD` - the start of the period in which events happen "
+"(inclusive)"
+msgstr ""
+
+msgid ""
+"`to=YYYY-MM-DD` - the end of the period in which events happen (exclusive)"
+msgstr ""
+
+msgid "Parameters"
+msgstr ""
+
+msgid ""
+"All configuration parameters are described sufficiently in the "
+"[default_specification]. That is the reference. E.g. if you find the "
+"parameter `title` in the [default_specification], you have several options:"
+msgstr ""
+
+msgid "Compiling the Specification"
 msgstr ""
 
 msgid ""
 "You can change the calendar behavior and looks with parameters. If the same "
 "parameter is specified in different places, the earlier place listed below "
 "has the highest precedence. These are the places to specify parameters:"
+msgstr ""
+
+msgid "Query parameters"
 msgstr ""
 
 msgid ""
@@ -64,7 +155,13 @@ msgid ""
 "`OWC_SPECIFICATION` environment variable."
 msgstr ""
 
+msgid "Adding Parameters"
+msgstr ""
+
 msgid "If you add a new parameter as a developer:"
+msgstr ""
+
+msgid "Add the parameter with a default value to the [default_specification]"
 msgstr ""
 
 msgid ""
@@ -83,6 +180,9 @@ msgid ""
 "parameter can be used when a calendar is edited."
 msgstr ""
 
+msgid "Specification in the Calendar"
+msgstr ""
+
 msgid ""
 "[app.py][app.py-81] compiles the specification from the given parameters in "
 "`get_specification()`. In the [template][dhtmlx-23] you can access the "
@@ -93,11 +193,20 @@ msgstr ""
 msgid "[JavaScript Customization](../javascript)"
 msgstr ""
 
+msgid "Specification in the Index Page"
+msgstr ""
+
 msgid ""
 "The default specification is available before the calendar is built via "
 "JavaScript in the `configuration.default_specification` variable. There is a "
 "[getSpecification()] function which created the specification from the "
 "inputs. Generally, the `specification` variable should be used."
+msgstr ""
+
+msgid "Architecture"
+msgstr ""
+
+msgid "Below, you can find a picture of the architecture."
 msgstr ""
 
 msgid "![architecture](/assets/img/architecture.svg)"
@@ -128,6 +237,15 @@ msgid ""
 "omitted but this explains simply the basic, initial idea behind the event "
 "processing."
 msgstr ""
+
+msgid ""
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+"christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+msgstr ""
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+"christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"

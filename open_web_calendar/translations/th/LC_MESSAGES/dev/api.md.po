@@ -16,6 +16,35 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
+msgid ""
+"The API of the Open Web Calendar allows more customization than the "
+"configuration page."
+msgstr ""
+
+msgid "API"
+msgstr ""
+
+msgid ""
+"Generally, the Open Web Calendar is there to be used without restriction. "
+"You can use this API to customize the calendar on the fly."
+msgstr ""
+
+msgid "This section can be of use if one of these applies:"
+msgstr ""
+
+msgid "You are a web developer who wants to embed the Open Web Calendar."
+msgstr ""
+
+msgid ""
+"You want to exploit the full flexibility, not just what is exposed on the "
+"configuration page."
+msgstr ""
+
+msgid ""
+"You want to use JavaScript to dynamically generate the calendar design and "
+"options."
+msgstr ""
+
 msgid "You want to extend the functionality of the Open Web Calendar."
 msgstr ""
 
