@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "The calendar can be customized with JavaScript."
 msgstr ""
@@ -76,15 +75,3 @@ msgstr ""
 
 msgid "[parameters]"
 msgstr ""
-
-#, fuzzy
-msgid "[parameters]: ../api"
-msgstr "[parameters]: ../api"
-
-#, fuzzy
-msgid ""
-"[DHTMLX Scheduler]: "
-"https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
-msgstr ""
-"[DHTMLX Scheduler]: "
-"https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"

@@ -17,6 +17,15 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 5.12-dev\n"
 
+msgid "specification_url"
+msgstr ""
+
+msgid "open_web_calendar.app.DEFAULT_SPECIFICATION"
+msgstr ""
+
+msgid "[default_specification]"
+msgstr ""
+
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
 
@@ -42,3 +51,11 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
+
+#~ msgid "index.html?language=de calendar.html?title=CALENDAR "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
+#~ "calendar/raw/master/open_web_calendar/default_specification.yml "
+#~ msgstr ""

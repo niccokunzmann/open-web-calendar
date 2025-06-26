@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Learn how to develop the Open Web Calendar."
 msgstr ""
@@ -72,18 +71,6 @@ msgid ""
 "theme](https://squidfunk.github.io/mkdocs-material/)."
 msgstr ""
 
-#, fuzzy
-msgid "[ruff]: https://docs.astral.sh/ruff/"
-msgstr "[ruff]: https://docs.astral.sh/ruff/"
-
-#, fuzzy
-msgid "[pre-commit]: https://pre-commit.com/"
-msgstr "[pre-commit]: https://pre-commit.com/"
-
-#, fuzzy
-msgid "[mkdocs]: https://www.mkdocs.org"
-msgstr "[mkdocs]: https://www.mkdocs.org"
-
 msgid "Debug Mode"
 msgstr ""
 
@@ -110,10 +97,6 @@ msgstr ""
 #~ "variables."
 #~ msgstr ""
 
-#, fuzzy
-#~ msgid "[web]: https://open-web-calendar.hosted.quelltext.eu/"
-#~ msgstr "[web]: https://open-web-calendar.hosted.quelltext.eu/"
-
 #~ msgid ""
 #~ "Optional: Install virtualenv and Python3 and create a virtual environment."
 #~ "    ```sh    virtualenv -p python3 ENV source ENV/bin/activate    ```"
@@ -124,6 +107,10 @@ msgstr ""
 
 #~ msgid "Start the app.    wzxhzdk:4"
 #~ msgstr ""
+
+#, fuzzy
+#~ msgid "[web]: https://open-web-calendar.hosted.quelltext.eu/"
+#~ msgstr "[web]: https://open-web-calendar.hosted.quelltext.eu/"
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"

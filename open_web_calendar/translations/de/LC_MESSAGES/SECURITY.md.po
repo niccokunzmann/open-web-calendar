@@ -1,7 +1,47 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "How to report security concerns about the Open Web Calendar project."
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Security Policy"
+msgstr ""
+
+msgid "Supported Versions"
+msgstr ""
+
+msgid ""
+"Only the `master` branch receives security updates. When an security update "
+"is made, it is released with the [latest version](../changelog)."
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Supported"
+msgstr ""
+
+msgid "master"
+msgstr ""
+
+msgid "✅"
+msgstr ""
+
+msgid "anything else"
+msgstr ""
+
+msgid "❌"
+msgstr ""
+
+msgid "Reporting a Vulnerability"
+msgstr ""
+
+msgid ""
+"If you find a security vulnerability, please [report the vulnerability "
+"here](https://github.com/niccokunzmann/open-web-calendar/security/) or reach"
+" out to [@niccokunzmann](https://github.com/niccokunzmann/)."
+msgstr ""
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"
@@ -50,6 +90,18 @@ msgstr ""
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"
 
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBEL - hole die Termine als JSON. Bitte wisse,"
+#~ " dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-"
+#~ "Schema so bleibt. Wenn du das willst, füge neue Tests hinzu."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"
+
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"
 
@@ -84,15 +136,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Editiere diese Datei und füge einen Abschnitt hinzu."
-
-#~ msgid ""
-#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
-#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
-#~ "same. If you want that, add tests."
-#~ msgstr ""
-#~ "`/calendar.events.json` - FLEXIBEL - hole die Termine als JSON. Bitte wisse,"
-#~ " dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-"
-#~ "Schema so bleibt. Wenn du das willst, füge neue Tests hinzu."
-
-#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
-#~ msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"

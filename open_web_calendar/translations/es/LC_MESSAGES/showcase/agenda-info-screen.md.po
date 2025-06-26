@@ -1,7 +1,50 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Agenda info screen"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"In the Amman Valley Maker Space, we used Info Screens with the Agenda and "
+"recent projects. The events were aggregated from different sources: "
+"Discourse and Outlook Calendar. With this, we informed the community about "
+"events that are going to happen using the Open Web Calendar Agenda View. "
+"Events that were in the past were represented by a series of pictures."
+msgstr ""
+
+msgid "![](/assets/img/showcase/infoscreen.jpg)"
+msgstr ""
+
+msgid "Used:"
+msgstr ""
+
+msgid "Raspberry Pi"
+msgstr ""
+
+msgid "A vertical screen"
+msgstr ""
+
+msgid "Relais to the screen on and off"
+msgstr ""
+
+msgid "Different Calendar Sources"
+msgstr ""
+
+msgid "You can view the [source code][infoscreen]."
+msgstr ""
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
+#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
+#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
@@ -48,15 +91,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edita este archivo y añade una sección."
-
-#~ msgid ""
-#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
-#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
-#~ "same. If you want that, add tests."
-#~ msgstr ""
-#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
-#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
-#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
-
-#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
-#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"

@@ -15,6 +15,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.7-dev\n"
 
+msgid "Customize Your Own Online Calendar Display"
+msgstr ""
+
+msgid "![](/assets/img/logo/github-social-preview.svg)"
+msgstr ""
+
+msgid "[See Examples](templates)"
+msgstr ""
+
+msgid ""
+"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+"Hosted](host/self)"
+msgstr ""
+
+msgid "[Developer API](dev/api)"
+msgstr ""
+
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
 

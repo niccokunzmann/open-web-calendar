@@ -15,6 +15,22 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 5.11-dev\n"
 
+msgid ""
+"[![Sponsor with "
+"GitHub](https://img.shields.io/github/sponsors/niccokunzmann?logo=github&label=GitHub%20Sponsors)](https://github.com/sponsors/niccokunzmann)"
+" [![Support on Open "
+"Collective](https://img.shields.io/opencollective/all/open-web-"
+"calendar?label=support%20on%20open%20collective)](https://opencollective.com/open-"
+"web-calendar/) [![Fund Issues with "
+"Polar](https://img.shields.io/github/issues/niccokunzmann/open-web-"
+"calendar?logo=github&label=issues%20seek%20funding&color=%230062ff)](https://polar.sh/niccokunzmann/open-"
+"web-calendar)"
+msgstr ""
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
+
 #, fuzzy
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
@@ -41,7 +57,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#, fuzzy
-#~ msgid "[Squid]: https://www.squid-cache.org/"
-#~ msgstr "[Squid]: https://www.squid-cache.org/"

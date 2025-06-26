@@ -263,6 +263,15 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     # - name: 简体中文
     #   link: zh_Hans
     #   lang: zh_Hans
+    - name: 한국어
+      link: ko
+      lang: ko
+    - name: Norsk bokmål
+      link: nb_NO
+      lang: nb_NO
+    - name: Русский
+      link: ru
+      lang: ru
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/

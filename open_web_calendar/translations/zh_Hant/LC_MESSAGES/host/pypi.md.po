@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "The Open Web Calendar can be installed as a Python package from PyPI."
 msgstr ""
@@ -37,10 +36,6 @@ msgstr ""
 
 msgid "[Gunicorn]"
 msgstr ""
-
-#, fuzzy
-msgid "[Gunicorn]: https://docs.gunicorn.org/"
-msgstr "[Gunicorn]: https://docs.gunicorn.org/"
 
 msgid "Installation"
 msgstr ""

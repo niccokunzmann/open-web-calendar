@@ -1,7 +1,40 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Social Media News"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"We have several channels over which you can get to know the Open Web "
+"Calendar."
+msgstr ""
+
+msgid "Youtube"
+msgstr ""
+
+msgid "This is our playlist on youtube about the Open Web Calendar (English):"
+msgstr ""
+
+msgid "Mastodon"
+msgstr ""
+
+msgid ""
+"Latest updates about "
+"[#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar) on Mastodon are "
+"below:"
+msgstr ""
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Uredi kalendar</a>"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
@@ -28,14 +61,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#~ msgid ""
-#~ "<a href=\"https://open-web-"
-#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
-#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
-#~ "target=\"_blank\">Edit the calendar</a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-"
-#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
-#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
-#~ "target=\"_blank\">Uredi kalendar</a>"

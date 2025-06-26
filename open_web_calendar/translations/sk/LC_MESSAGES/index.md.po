@@ -16,6 +16,9 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 5.13-dev\n"
 
+msgid "![](/assets/img/logo/github-social-preview.svg)"
+msgstr ""
+
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
 

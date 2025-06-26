@@ -1,7 +1,20 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Self-Hosting and Gancio Integration"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"[Gancio] is a federated calendaring platform, integrated into the Fediverse."
+" The Open Web Calendar can be used to display events of [Gancio] calendars."
+msgstr ""
+
+msgid ""
+"The [Antroposofía Chile] has used the Open Web Calendar to customize the "
+"calendar display. of the events and adjust the style to thier hosting "
+"preferences."
+msgstr ""
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"

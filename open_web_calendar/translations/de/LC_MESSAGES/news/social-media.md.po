@@ -1,7 +1,41 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Social Media News"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"We have several channels over which you can get to know the Open Web "
+"Calendar."
+msgstr ""
+
+msgid "Youtube"
+msgstr ""
+
+msgid "This is our playlist on youtube about the Open Web Calendar (English):"
+msgstr ""
+
+msgid "Mastodon"
+msgstr ""
+
+msgid ""
+"Latest updates about "
+"[#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar) on Mastodon are "
+"below:"
+msgstr ""
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBEL - hole die Termine als JSON. Bitte wisse,"
+#~ " dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-"
+#~ "Schema so bleibt. Wenn du das willst, füge neue Tests hinzu."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"
@@ -37,15 +71,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Editiere diese Datei und füge einen Abschnitt hinzu."
-
-#~ msgid ""
-#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
-#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
-#~ "same. If you want that, add tests."
-#~ msgstr ""
-#~ "`/calendar.events.json` - FLEXIBEL - hole die Termine als JSON. Bitte wisse,"
-#~ " dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-"
-#~ "Schema so bleibt. Wenn du das willst, füge neue Tests hinzu."
-
-#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
-#~ msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"

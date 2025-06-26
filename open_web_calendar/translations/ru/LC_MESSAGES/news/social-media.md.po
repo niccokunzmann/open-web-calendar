@@ -1,7 +1,33 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Social Media News"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"We have several channels over which you can get to know the Open Web "
+"Calendar."
+msgstr ""
+
+msgid "Youtube"
+msgstr ""
+
+msgid "This is our playlist on youtube about the Open Web Calendar (English):"
+msgstr ""
+
+msgid "Mastodon"
+msgstr ""
+
+msgid ""
+"Latest updates about "
+"[#OpenWebCalendar](https://toot.wales/tags/OpenWebCalendar) on Mastodon are "
+"below:"
+msgstr ""
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
 
 #, fuzzy
 #~ msgid ""
@@ -29,7 +55,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#, fuzzy
-#~ msgid "[Squid]: https://www.squid-cache.org/"
-#~ msgstr "[Squid]: https://www.squid-cache.org/"

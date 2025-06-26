@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Host the Open Web Calendar using Docker and Docker Compose."
 msgstr ""
@@ -107,11 +106,6 @@ msgid ""
 "day-event-repeat-every-day.ics)."
 msgstr ""
 
-msgid ""
-"[SSRF Protection with a Proxy Server](../configure#ssrf-protection-with-a-"
-"proxy-server)"
-msgstr ""
-
 msgid "Automatic Updates"
 msgstr ""
 
@@ -135,10 +129,6 @@ msgstr ""
 
 msgid "And add this line:"
 msgstr ""
-
-#, fuzzy
-msgid "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
-msgstr "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 
 msgid "Start the container:    wzxhzdk:5"
 msgstr ""

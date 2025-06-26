@@ -1,7 +1,24 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Self-Hosting and Gancio Integration"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"[Gancio] is a federated calendaring platform, integrated into the Fediverse."
+" The Open Web Calendar can be used to display events of [Gancio] calendars."
+msgstr ""
+
+msgid ""
+"The [Antroposofía Chile] has used the Open Web Calendar to customize the "
+"calendar display. of the events and adjust the style to thier hosting "
+"preferences."
+msgstr ""
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
 
 #, fuzzy
 #~ msgid ""
@@ -29,7 +46,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#, fuzzy
-#~ msgid "[Squid]: https://www.squid-cache.org/"
-#~ msgstr "[Squid]: https://www.squid-cache.org/"

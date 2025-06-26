@@ -1,7 +1,31 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Open Web Calendar Privacy Policy"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Privacy Policy"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar does not collect any personal information from "
+"visitors of the website."
+msgstr ""
+
+msgid ""
+"Calendars may contain personal information. For the purpose of serving the "
+"content fast, the calendar files are cached for a short while. As expected, "
+"content of calendars is only processed to display them as a website."
+msgstr ""
+
+msgid "Documentation Website"
+msgstr ""
+
+msgid ""
+"This website contains the project documentation. It is hosted on GitHub "
+"Pages. Their [Privacy Policy][privacy-policy] applies."
+msgstr ""
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"

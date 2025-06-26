@@ -14,6 +14,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 5.11-dev\n"
 
+msgid "![](/assets/img/logo/github-social-preview.svg)"
+msgstr ""
+
+msgid "<center>✔</center>"
+msgstr ""
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
+
 #, fuzzy
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
@@ -40,7 +50,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#, fuzzy
-#~ msgid "[Squid]: https://www.squid-cache.org/"
-#~ msgstr "[Squid]: https://www.squid-cache.org/"

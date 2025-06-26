@@ -1,7 +1,42 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Agenda info screen"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"In the Amman Valley Maker Space, we used Info Screens with the Agenda and "
+"recent projects. The events were aggregated from different sources: "
+"Discourse and Outlook Calendar. With this, we informed the community about "
+"events that are going to happen using the Open Web Calendar Agenda View. "
+"Events that were in the past were represented by a series of pictures."
+msgstr ""
+
+msgid "![](/assets/img/showcase/infoscreen.jpg)"
+msgstr ""
+
+msgid "Used:"
+msgstr ""
+
+msgid "Raspberry Pi"
+msgstr ""
+
+msgid "A vertical screen"
+msgstr ""
+
+msgid "Relais to the screen on and off"
+msgstr ""
+
+msgid "Different Calendar Sources"
+msgstr ""
+
+msgid "You can view the [source code][infoscreen]."
+msgstr ""
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
 
 #, fuzzy
 #~ msgid ""
@@ -29,7 +64,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#, fuzzy
-#~ msgid "[Squid]: https://www.squid-cache.org/"
-#~ msgstr "[Squid]: https://www.squid-cache.org/"

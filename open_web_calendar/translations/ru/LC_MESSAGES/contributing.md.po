@@ -15,6 +15,78 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.11.1-dev\n"
 
+msgid "Contribute ♥️"
+msgstr ""
+
+msgid ""
+"[![Sponsor with "
+"GitHub](https://img.shields.io/github/sponsors/niccokunzmann?logo=github&label=GitHub%20Sponsors)](https://github.com/sponsors/niccokunzmann)"
+" [![Support on Open "
+"Collective](https://img.shields.io/opencollective/all/open-web-"
+"calendar?label=support%20on%20open%20collective)](https://opencollective.com/open-"
+"web-calendar/) [![Fund Issues with "
+"Polar](https://img.shields.io/github/issues/niccokunzmann/open-web-"
+"calendar?logo=github&label=issues%20seek%20funding&color=%230062ff)](https://polar.sh/niccokunzmann/open-"
+"web-calendar)"
+msgstr ""
+
+msgid ""
+"[Use it](https://open-web-calendar.hosted.quelltext.eu) and [report "
+"errors](https://github.com/niccokunzmann/open-web-calendar/issues)"
+msgstr ""
+
+msgid ""
+"[Fund development & maintenance - "
+"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
+msgstr ""
+
+msgid ""
+"[Fund costs - Open Collective](https://opencollective.com/open-web-"
+"calendar/)"
+msgstr ""
+
+msgid ""
+"[Fund sustainability - GitHub "
+"Sponsors](https://github.com/sponsors/niccokunzmann)"
+msgstr ""
+
+msgid "[Translate this project to your language](../dev/translate)"
+msgstr ""
+
+msgid ""
+"Have a look at [open issues](https://github.com/niccokunzmann/open-web-"
+"calendar/issues) e.g. those especially to get started, labeled [good first "
+"issue](https://github.com/niccokunzmann/open-web-"
+"calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), "
+"leave a note and work on it."
+msgstr ""
+
+msgid ""
+"If you customized a calendar, please consider [contributing it as a "
+"template](../templates) for others to use."
+msgstr ""
+
+msgid ""
+"If you are part of a company depending on the Open Web Calendar, please "
+"contact Nicco Kunzmann, the maintainer:"
+msgstr ""
+
+msgid "You need features added."
+msgstr ""
+
+msgid "You want to mitigate risks."
+msgstr ""
+
+msgid "You need add-ons or integrations."
+msgstr ""
+
+msgid "Support plans and maintenance contracts are available."
+msgstr ""
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
+
 #, fuzzy
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
@@ -41,7 +113,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#, fuzzy
-#~ msgid "[Squid]: https://www.squid-cache.org/"
-#~ msgstr "[Squid]: https://www.squid-cache.org/"

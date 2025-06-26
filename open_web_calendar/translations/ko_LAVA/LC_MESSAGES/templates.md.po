@@ -14,6 +14,191 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
+msgid "Play with a variety of Calendars for your own project."
+msgstr ""
+
+msgid "Examples"
+msgstr ""
+
+msgid ""
+"We have prepared a variety of different styles so you can edit them to your "
+"needs. For each style, you can edit the calendar and shape it as you need "
+"it. If you are inspired, you can also just head over and [start from "
+"scratch](https://open-web-calendar.hosted.quelltext.eu)."
+msgstr ""
+
+msgid "Are you proud of your calendar? Share it in the [Showcase Section]!"
+msgstr ""
+
+msgid "Multiple Calendars"
+msgstr ""
+
+msgid ""
+"You can embed several calendars into one view. In this example, we show "
+"different rooms in an office."
+msgstr ""
+
+msgid ""
+"<a href=\"https://open-web-"
+"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+"calendar.quelltext.eu/assets/templates/rooms.json\" target=\"_blank\">Edit "
+"the calendar</a>"
+msgstr ""
+
+msgid ""
+"This is also useful if you have multiple calendar sources - be it different "
+"places, clubs, applications or organizations."
+msgstr ""
+
+msgid "Modifications:"
+msgstr ""
+
+msgid "CSS"
+msgstr ""
+
+msgid "hours"
+msgstr ""
+
+msgid "tab"
+msgstr ""
+
+msgid "Mobile One Day Calendar Feed"
+msgstr ""
+
+msgid "Here is an example of a one day view of a Christmas day:"
+msgstr ""
+
+msgid "start and end time"
+msgstr ""
+
+msgid "fixed date"
+msgstr ""
+
+msgid ""
+"<a href=\"https://open-web-"
+"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+"calendar.quelltext.eu/assets/templates/family-planning.json\" "
+"target=\"_blank\">Edit the calendar</a>"
+msgstr ""
+
+msgid "Events Hosted as a Tor Hidden Service"
+msgstr ""
+
+msgid ""
+"This calendar is not styled but contains events that can be hosted behind a "
+"firewall on a little anonymous server. [Example][tor-example]"
+msgstr ""
+
+msgid ""
+"[proxy parameters](../host/configure#ssrf-protection-with-a-proxy-server)"
+msgstr ""
+
+msgid "Choose Timezones"
+msgstr ""
+
+msgid ""
+"For an international calendar, you can allow choosing the time zone that the"
+" events are displayed in."
+msgstr ""
+
+msgid ""
+"<a href=\"https://open-web-"
+"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+"calendar.quelltext.eu/assets/templates/timezone-example.json\" "
+"target=\"_blank\">Edit the calendar</a>"
+msgstr ""
+
+msgid "JavaScript"
+msgstr ""
+
+msgid "timezone"
+msgstr ""
+
+msgid "Free and Busy"
+msgstr ""
+
+msgid "You can change the design based on whether you are free or busy."
+msgstr ""
+
+msgid ""
+"This calendar has changed CSS so that the background is green and the events"
+" are either orange or red."
+msgstr ""
+
+msgid ""
+"<a href=\"https://open-web-"
+"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+"calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
+"target=\"_blank\">Edit the calendar</a>"
+msgstr ""
+
+msgid "CalDAV Sign Up"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar supports CalDAV for instant event synchronization. You"
+" can use it e.g. with Nextcloud."
+msgstr ""
+
+msgid ""
+"In the example below, we used CalDAV to create event that you can sign up "
+"to. Once you sign up, you receive an email invitation and your name and "
+"email show up in the calendar."
+msgstr ""
+
+msgid ""
+"<a href=\"https://open-web-"
+"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+"calendar.quelltext.eu/assets/templates/caldav-signup.json\" "
+"target=\"_blank\">Edit the calendar</a>"
+msgstr ""
+
+msgid "Activate CalDAV Sign Up"
+msgstr ""
+
+msgid "URL-Encryption"
+msgstr ""
+
+msgid "Participants"
+msgstr ""
+
+msgid "[Tutorial: Event Sign Up with Nextcloud](https://youtu.be/RnMz23p7UP0)"
+msgstr ""
+
+msgid ""
+"[Blog: CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-"
+"sign-up)"
+msgstr ""
+
+msgid "Contribute Examples!"
+msgstr ""
+
+msgid ""
+"If you want to add another example or showcase your calendar, this is the "
+"place. You can **contact us** with the link of the calendar e.g. in an "
+"[issue](https://github.com/niccokunzmann/open-web-calendar/issues)."
+msgstr ""
+
+msgid "You can **edit the page** yourself:"
+msgstr ""
+
+msgid "Place all required `.ics` files in the [calendars] directory."
+msgstr ""
+
+msgid ""
+"Download the specification of the calendar. And add it to the [templates] "
+"directory."
+msgstr ""
+
+msgid "Calendar"
+msgstr ""
+
+msgid "Specification"
+msgstr ""
+
+msgid "HTML"
+msgstr ""
+
 #~ msgid ""
 #~ "This calendar is not styled but contains events that can be hosted behind a "
 #~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
@@ -49,3 +234,75 @@ msgstr ""
 #~ msgstr ""
 #~ "Below, you can see the source code that you need to add to your website. You"
 #~ " might need to adjust the timezone selection and the id of the iframe."
+
+#~ msgid ""
+#~ "<iframe class=\"open-web-calendar\" id=\"\" "
+#~ "style=\"background:url('/assets/img/circular-loader.gif') center center no-"
+#~ "repeat; border-radius: 10px;\" src=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-"
+#~ "web-calendar.quelltext.eu/assets/templates/rooms.json&\" sandbox=\"allow-"
+#~ "scripts allow-same-origin allow-top-navigation\" allowTransparency=\"true\" "
+#~ "scrolling=\"no\" frameborder=\"0\" height=\"600px\" width=\"100%\"></iframe>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<iframe class=\"open-web-calendar\" id=\"\" "
+#~ "style=\"background:url('/assets/img/circular-loader.gif') center center no-"
+#~ "repeat; border-radius: 10px;\" src=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-"
+#~ "web-calendar.quelltext.eu/assets/templates/christmas-day.json&\" "
+#~ "sandbox=\"allow-scripts allow-same-origin allow-top-navigation\" "
+#~ "allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" "
+#~ "height=\"600px\" width=\"300px\"></iframe>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<iframe class=\"open-web-calendar\" id=\"\" "
+#~ "style=\"background:url('/assets/img/circular-loader.gif') center center no-"
+#~ "repeat; border-radius: 10px;\" src=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-"
+#~ "web-calendar.quelltext.eu/assets/templates/family-planning.json&\" "
+#~ "sandbox=\"allow-scripts allow-same-origin allow-top-navigation\" "
+#~ "allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" "
+#~ "height=\"600px\" width=\"100%\"></iframe>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<select id=\"timezoneOption\"><option value=\"America/New_York\">New "
+#~ "York</option><option value=\"Europe/London\">London</option><option "
+#~ "value=\"Asia/Singapore\">Singapore</option><option value=\"\">My Local Time "
+#~ "Zone</option></select>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<iframe class=\"open-web-calendar\" id=\"owcTimezoneExample\" "
+#~ "style=\"background:url('/assets/img/circular-loader.gif') center center no-"
+#~ "repeat; border-radius: 10px;\" src=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-"
+#~ "web-calendar.quelltext.eu/assets/templates/timezone-example.json&\" "
+#~ "sandbox=\"allow-scripts allow-same-origin allow-top-navigation\" "
+#~ "allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" "
+#~ "height=\"600px\" width=\"100%\"></iframe>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<iframe class=\"open-web-calendar\" id=\"\" "
+#~ "style=\"background:url('/assets/img/circular-loader.gif') center center no-"
+#~ "repeat; border-radius: 10px;\" src=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-"
+#~ "web-calendar.quelltext.eu/assets/templates/free-and-busy.json&\" "
+#~ "sandbox=\"allow-scripts allow-same-origin allow-top-navigation\" "
+#~ "allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" "
+#~ "height=\"600px\" width=\"100%\"></iframe>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<iframe class=\"open-web-calendar\" id=\"\" "
+#~ "style=\"background:url('/assets/img/circular-loader.gif') center center no-"
+#~ "repeat; border-radius: 10px;\" src=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-"
+#~ "web-calendar.quelltext.eu/assets/templates/caldav-signup.json&\" "
+#~ "sandbox=\"allow-scripts allow-same-origin allow-top-navigation\" "
+#~ "allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" "
+#~ "height=\"600px\" width=\"100%\"></iframe>"
+#~ msgstr ""

@@ -15,6 +15,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
+msgid ""
+"If you decide later to [setup your own server](../self), you can do this and"
+" [migrate all calendars](../migrate) you use to the other server."
+msgstr ""
+
+msgid "[Uptime service monitor for the hosted instances][kuma]"
+msgstr ""
+
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
 

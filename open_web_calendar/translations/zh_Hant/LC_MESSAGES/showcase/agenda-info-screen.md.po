@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Agenda info screen"
 msgstr ""
@@ -34,7 +33,3 @@ msgstr ""
 
 msgid "You can view the [source code][infoscreen]."
 msgstr ""
-
-#, fuzzy
-msgid "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
-msgstr "[infoscreen]: https://github.com/AmmanVMS/infoscreen"

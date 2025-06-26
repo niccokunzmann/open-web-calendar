@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Events on a Vertical Screen"
 msgstr ""
@@ -20,13 +19,3 @@ msgstr ""
 
 msgid "![](/assets/img/showcase/events-large-screen.png)"
 msgstr ""
-
-#, fuzzy
-msgid "[@dml105]: https://github.com/dml105"
-msgstr "[@dml105]: https://github.com/dml105"
-
-#, fuzzy
-msgid ""
-"[Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
-msgstr ""
-"[Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"

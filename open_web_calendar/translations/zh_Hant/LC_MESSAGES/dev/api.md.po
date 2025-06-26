@@ -249,65 +249,6 @@ msgid ""
 "inputs. Generally, the `specification` variable should be used."
 msgstr ""
 
-#, fuzzy
-msgid ""
-"[features/configure-the-calendar.feature]: "
-"https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/features/configure-the-"
-"calendar.feature"
-msgstr ""
-"[features/configure-the-calendar.feature]: "
-"https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/features/configure-the-"
-"calendar.feature"
-
-#, fuzzy
-msgid ""
-"[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
-"web-calendar/tree/master//open_web_calendar/features/edit-the-"
-"calendar.feature"
-msgstr ""
-"[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
-"web-calendar/tree/master//open_web_calendar/features/edit-the-"
-"calendar.feature"
-
-#, fuzzy
-msgid ""
-"[app.py-81]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
-msgstr ""
-"[app.py-81]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
-
-#, fuzzy
-msgid ""
-"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
-msgstr ""
-"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
-
-#, fuzzy
-msgid ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/default_specification.yml"
-msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/default_specification.yml"
-
-#, fuzzy
-msgid ""
-"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
-msgstr ""
-"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
-
-msgid ""
-"calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
-"calendar/raw/master/open_web_calendar/default_specification.yml "
-msgstr ""
-
 msgid "[JavaScript Customization](../javascript)"
 msgstr ""
 
@@ -346,19 +287,6 @@ msgstr ""
 #~ "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93)"
 #~ " function which created the specification from the inputs. Generally, the "
 #~ "`specification` variable should be used."
-#~ msgstr ""
-
-#, fuzzy
-#~ msgid ""
-#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/tree/master//default_specification.yml"
-#~ msgstr ""
-#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/tree/master//default_specification.yml"
-
-#~ msgid ""
-#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
-#~ "calendar/raw/master/default_specification.yml "
 #~ msgstr ""
 
 #~ msgid "If you add a new parameter as a developer,"
@@ -401,14 +329,6 @@ msgstr ""
 #~ "specification. The query parameters have the highest precedence. Examples:"
 #~ "    ```txt    index.html?language=de calendar.html?title=CALENDAR    ```"
 #~ msgstr ""
-
-#, fuzzy
-#~ msgid ""
-#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
-#~ msgstr ""
-#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
 
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
@@ -493,3 +413,27 @@ msgstr ""
 #~ "specification. The query parameters have the highest precedence. Examples:"
 #~ "         index.html?language=de      calendar.html?title=CALENDAR"
 #~ msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master//default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/master/default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
+#~ "calendar/raw/master/default_specification.yml "
+#~ msgstr ""
+#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/master/default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/master/default_specification.yml"

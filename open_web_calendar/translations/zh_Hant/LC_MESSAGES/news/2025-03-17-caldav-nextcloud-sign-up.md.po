@@ -1,7 +1,6 @@
 #
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Introducing CalDAV and Signing up to Events with Nextcloud"
 msgstr ""
@@ -219,27 +218,3 @@ msgid ""
 "We hope to see this feature used and users to come back with ideas of how to"
 " make their calendars even better."
 msgstr ""
-
-#, fuzzy
-msgid ""
-"[vid-architecture]: "
-"https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
-msgstr ""
-"[vid-architecture]: "
-"https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
-
-#, fuzzy
-msgid "[Radically Open Security]: https://radicallyopensecurity.com/"
-msgstr "[Radically Open Security]: https://radicallyopensecurity.com/"
-
-#, fuzzy
-msgid "[Nextcloud]: https://nextcloud.com/"
-msgstr "[Nextcloud]: https://nextcloud.com/"
-
-#, fuzzy
-msgid "[templates]: ../../templates#caldav-sign-up"
-msgstr "[templates]: ../../templates#caldav-sign-up"
-
-#, fuzzy
-msgid "[grant]: /news/2024-04-10-website"
-msgstr "[grant]: /news/2024-04-10-website"

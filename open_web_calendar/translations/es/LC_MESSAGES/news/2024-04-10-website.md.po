@@ -1,7 +1,35 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "New Website & Funding"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"As the Open Web Calendar is funded by "
+"[NLNet](https://nlnet.nl/project/OpenWebCalendar/), it was also suggested to"
+" setup a website that shows how to use the calendar, not only hosting the "
+"tool itself."
+msgstr ""
+
+msgid "Funding"
+msgstr ""
+
+msgid ""
+"[<img alt=\"Logo NLnet: abstract logo of four people seen from above\" "
+"src=\"https://nlnet.nl/logo/banner.svg\" height=\"50px\" "
+"/>](https://nlnet.nl/) [<img alt=\"Logo NGI Zero: letterlogo shaped like a "
+"tag\" src=\"https://nlnet.nl/image/logos/NGI0Core_tag.svg\" height=\"50px\" "
+"/>](https://nlnet.nl/core)"
+msgstr ""
+
+msgid ""
+"This project was funded in 2024 through the [NGI0 Core "
+"Fund](https://nlnet.nl/core), a fund established by "
+"[NLnet](https://nlnet.nl/) with financial support from the European "
+"Commission's [Next Generation Internet programme](https://ngi.eu/). You "
+"might be able to get funded, too!"
+msgstr ""
 
 #~ msgid ""
 #~ "If you are at home, planning the days with the family, events might have "
@@ -34,6 +62,18 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edita este archivo y añade una sección."
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
+#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
+#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
 
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
@@ -92,15 +132,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edita este archivo y añade una sección."
-
-#~ msgid ""
-#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
-#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
-#~ "same. If you want that, add tests."
-#~ msgstr ""
-#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
-#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
-#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
-
-#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
-#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"

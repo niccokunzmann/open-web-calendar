@@ -1,7 +1,32 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Self-Hosting and Gancio Integration"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"[Gancio] is a federated calendaring platform, integrated into the Fediverse."
+" The Open Web Calendar can be used to display events of [Gancio] calendars."
+msgstr ""
+
+msgid ""
+"The [Antroposofía Chile] has used the Open Web Calendar to customize the "
+"calendar display. of the events and adjust the style to thier hosting "
+"preferences."
+msgstr ""
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBEL - hole die Termine als JSON. Bitte wisse,"
+#~ " dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-"
+#~ "Schema so bleibt. Wenn du das willst, füge neue Tests hinzu."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"
@@ -37,15 +62,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Editiere diese Datei und füge einen Abschnitt hinzu."
-
-#~ msgid ""
-#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
-#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
-#~ "same. If you want that, add tests."
-#~ msgstr ""
-#~ "`/calendar.events.json` - FLEXIBEL - hole die Termine als JSON. Bitte wisse,"
-#~ " dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-"
-#~ "Schema so bleibt. Wenn du das willst, füge neue Tests hinzu."
-
-#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
-#~ msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"

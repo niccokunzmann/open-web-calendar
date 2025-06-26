@@ -1,7 +1,130 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"There are various ways to host the Open Web Calendar yourself and customize "
+"the deployment."
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Self-Hosting & Deployment"
+msgstr ""
+
+msgid ""
+"You do not have to host the Open Web Calendar yourself but you are "
+"encouraged to. It is intended to work behind a company firewall, through a "
+"proxy and also without access to the Internet."
+msgstr ""
+
+msgid ""
+"Several hosting options are already documented. We are grateful if you can "
+"add your favorite one, too."
+msgstr ""
+
+msgid "**Choose a hoster.** These are listed below."
+msgstr ""
+
+msgid "[**Read about Configuration**](../configure)."
+msgstr ""
+
+msgid "Vercel"
+msgstr ""
+
+msgid ""
+"You can create a fork of this repository which automatically deploys to "
+"[Vercel](https://vercel.com/):"
+msgstr ""
+
+msgid ""
+"[![Deploy with "
+"Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-"
+"url=https%3A%2F%2Fgithub.com%2Fniccokunzmann%2Fopen-web-calendar.git)"
+msgstr ""
+
+msgid ""
+"Alternatively you can create a one off deploy by cloning this repository and"
+" running `npx vercel` at the root."
+msgstr ""
+
+msgid "Heroku"
+msgstr ""
+
+msgid "You can deploy the app using [Heroku](https://heroku.com)."
+msgstr ""
+
+msgid ""
+"[![Deploy to "
+"Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/niccokunzmann/open-"
+"web-calendar)"
+msgstr ""
+
+msgid ""
+"Heroku uses [gunicorn](https://gunicorn.org/) to run the server, see the "
+"[Procfile](https://github.com/niccokunzmann/open-web-"
+"calendar/blob/master/Procfile)."
+msgstr ""
+
+msgid "Cloudron"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar has been integrated into "
+"[Cloudron](https://www.cloudron.io/)."
+msgstr ""
+
+msgid ""
+"[Cloudron Documentation](https://docs.cloudron.io/apps/openwebcalendar/)"
+msgstr ""
+
+msgid ""
+"[Cloudron Repository](https://git.cloudron.io/cloudron/openwebcalendar-app)"
+msgstr ""
+
+msgid "YunoHost"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar is available as an app for "
+"[YunoHost](https://yunohost.org/)."
+msgstr ""
+
+msgid ""
+"[![Install Open Web Calendar with YunoHost](https://install-"
+"app.yunohost.org/install-with-yunohost.svg)](https://install-"
+"app.yunohost.org/?app=open-web-calendar)"
+msgstr ""
+
+msgid "[App Description](https://apps.yunohost.org/app/open-web-calendar)"
+msgstr ""
+
+msgid "[Repository](https://github.com/YunoHost-Apps/open-web-calendar_ynh/)"
+msgstr ""
+
+msgid "Docker"
+msgstr ""
+
+msgid ""
+"If you run your own server, you can choose to run the Open Web Calendar with"
+" Docker. Building, running and updating are [documented here](../docker)."
+msgstr ""
+
+msgid ""
+"You can choose to run the Open Web Calendar installed as a Python package "
+"from PyPI. To do this, have a look at [the documentation](../pypi)."
+msgstr ""
+
+msgid "Update Notifications"
+msgstr ""
+
+msgid ""
+"If you wish to receive notifications about new updates of the software, "
+"watch the [GitHub repository](https://github.com/niccokunzmann/open-web-"
+"calendar/)."
+msgstr ""
+
+msgid ""
+"![Repository, Watch, Custom, Releases](/assets/img/subscribe-to-release.png)"
+msgstr ""
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"

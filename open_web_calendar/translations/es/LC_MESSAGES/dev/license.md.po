@@ -1,7 +1,62 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Development information about licensing."
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "License Information"
+msgstr ""
+
+msgid ""
+"This project specifies the licenses of its files according to the "
+"[REUSE](https://reuse.software/) tool."
+msgstr ""
+
+msgid "Run a check:"
+msgstr ""
+
+msgid ""
+"If you added files and now the CI tests fail, annotate them accordingly."
+msgstr ""
+
+msgid "We use `CC-BY-SA-4.0` for:"
+msgstr ""
+
+msgid "documentation"
+msgstr ""
+
+msgid "`.ics` calendar files"
+msgstr ""
+
+msgid "images"
+msgstr ""
+
+msgid "We use `GPL-2.0-only` for:"
+msgstr ""
+
+msgid "source code"
+msgstr ""
+
+msgid "translations of the source code"
+msgstr ""
+
+msgid "build information"
+msgstr ""
+
+msgid "HTML files"
+msgstr ""
+
+msgid "Hints:"
+msgstr ""
+
+msgid "Add `--force-dot-license` for files that should not be touched."
+msgstr ""
+
+msgid ""
+"Add information to the `.reuse/dep5` file for folders under a certain "
+"license."
+msgstr ""
 
 #~ msgid ""
 #~ "If you are at home, planning the days with the family, events might have "
@@ -34,6 +89,18 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edita este archivo y añade una sección."
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
+#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
+#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
 
 #~ msgid ""
 #~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
@@ -92,15 +159,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edita este archivo y añade una sección."
-
-#~ msgid ""
-#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
-#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
-#~ "same. If you want that, add tests."
-#~ msgstr ""
-#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
-#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
-#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
-
-#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
-#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"

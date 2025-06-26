@@ -1,7 +1,40 @@
 #
 msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Showcase"
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid ""
+"The Open Web Calender is used internationally and in a variety of different "
+"places. This page is for community contributions to show how they use the "
+"Open Web Calendar."
+msgstr ""
+
+msgid ""
+"Please share they way you use the Open Web Calendar here and inspire others!"
+msgstr ""
+
+msgid "[Events on a High Screen](events-high-screen)"
+msgstr ""
+
+msgid "[Info Screen with Agenda](agenda-info-screen)"
+msgstr ""
+
+msgid "[Self-hosting & Gancio Integration](self-host-gancio)"
+msgstr ""
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
+#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
+#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
@@ -48,15 +81,3 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edita este archivo y añade una sección."
-
-#~ msgid ""
-#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
-#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
-#~ "same. If you want that, add tests."
-#~ msgstr ""
-#~ "`/calendar.events.json` - FLEXIBLE - obtén los eventos como JSON Por favor, "
-#~ "ten en cuenta que PUEDES usar esto pero no puedes estar seguro de que el "
-#~ "esquema JSON siga siendo el mismo. Si quieres eso, añade tests."
-
-#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
-#~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
