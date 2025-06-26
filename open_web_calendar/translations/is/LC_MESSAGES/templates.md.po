@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-25 23:33+0200\n"
 "PO-Revision-Date: 2025-06-01 04:29+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
@@ -17,14 +17,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
 "X-Generator: Weblate 5.12-dev\n"
 
-msgid "Play with a variety of Calendars for your own project."
-msgstr ""
-
 msgid ""
 "We have prepared a variety of different styles so you can edit them to your "
 "needs. For each style, you can edit the calendar and shape it as you need "
 "it. If you are inspired, you can also just head over and [start from scratch]"
 "(https://open-web-calendar.hosted.quelltext.eu)."
+msgstr ""
+
+msgid "Are you proud of your calendar? Share it in the [Showcase Section]!"
 msgstr ""
 
 msgid "Multiple Calendars"
@@ -46,34 +46,10 @@ msgid ""
 "places, clubs, applications or organizations."
 msgstr ""
 
-msgid "CSS"
-msgstr ""
-
 msgid "hours"
 msgstr ""
 
 msgid "tab"
-msgstr ""
-
-msgid "Mobile One Day Calendar Feed"
-msgstr ""
-
-msgid "Here is an example of a one day view of a Christmas day:"
-msgstr ""
-
-msgid "start and end time"
-msgstr ""
-
-msgid "fixed date"
-msgstr ""
-
-msgid ""
-"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"family-planning.json\" target=\"_blank\">Edit the calendar</a>"
-msgstr ""
-
-msgid "Events Hosted as a Tor Hidden Service"
 msgstr ""
 
 msgid ""
@@ -83,43 +59,6 @@ msgstr ""
 
 msgid ""
 "[proxy parameters](../host/configure#ssrf-protection-with-a-proxy-server)"
-msgstr ""
-
-msgid "Choose Timezones"
-msgstr ""
-
-msgid ""
-"For an international calendar, you can allow choosing the time zone that the "
-"events are displayed in."
-msgstr ""
-
-msgid ""
-"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"timezone-example.json\" target=\"_blank\">Edit the calendar</a>"
-msgstr ""
-
-msgid "JavaScript"
-msgstr ""
-
-msgid "timezone"
-msgstr ""
-
-msgid "Free and Busy"
-msgstr ""
-
-msgid "You can change the design based on whether you are free or busy."
-msgstr ""
-
-msgid ""
-"This calendar has changed CSS so that the background is green and the events "
-"are either orange or red."
-msgstr ""
-
-msgid ""
-"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"free-and-busy.json\" target=\"_blank\">Edit the calendar</a>"
 msgstr ""
 
 msgid "CalDAV Sign Up"
@@ -157,18 +96,6 @@ msgstr ""
 msgid ""
 "[Blog: CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-"
 "up)"
-msgstr ""
-
-msgid "Contribute Examples!"
-msgstr ""
-
-msgid ""
-"If you want to add another example or showcase your calendar, this is the "
-"place. You can **contact us** with the link of the calendar e.g. in an "
-"[issue](https://github.com/niccokunzmann/open-web-calendar/issues)."
-msgstr ""
-
-msgid "You can **edit the page** yourself:"
 msgstr ""
 
 msgid "Place all required `.ics` files in the [calendars] directory."

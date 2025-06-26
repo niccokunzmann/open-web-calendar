@@ -25,9 +25,38 @@ msgstr ""
 msgid "Are you proud of your calendar? Share it in the [Showcase Section]!"
 msgstr ""
 
+msgid "Multiple Calendars"
+msgstr ""
+
+msgid ""
+"You can embed several calendars into one view. In this example, we show "
+"different rooms in an office."
+msgstr ""
+
+msgid ""
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+"rooms.json\" target=\"_blank\">Edit the calendar</a>"
+msgstr ""
+
+msgid ""
+"This is also useful if you have multiple calendar sources - be it different "
+"places, clubs, applications or organizations."
+msgstr ""
+
+msgid "hours"
+msgstr ""
+
+msgid "tab"
+msgstr ""
+
 msgid ""
 "This calendar is not styled but contains events that can be hosted behind a "
 "firewall on a little anonymous server. [Example][tor-example]"
+msgstr ""
+
+msgid ""
+"[proxy parameters](../host/configure#ssrf-protection-with-a-proxy-server)"
 msgstr ""
 
 msgid "CalDAV Sign Up"
@@ -73,6 +102,12 @@ msgstr ""
 msgid ""
 "Download the specification of the calendar. And add it to the [templates] "
 "directory."
+msgstr ""
+
+msgid "Calendar"
+msgstr ""
+
+msgid "Specification"
 msgstr ""
 
 msgid "HTML"
