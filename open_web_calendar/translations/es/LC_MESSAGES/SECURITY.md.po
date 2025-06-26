@@ -1,6 +1,7 @@
 #
 msgid ""
 msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
 
 #~ msgid ""
 #~ "This calendar is not styled but contains events that can be hosted behind a "

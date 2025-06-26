@@ -1,6 +1,7 @@
 #
 msgid ""
 msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
 
 #~ msgid ""
 #~ "If you are at home, planning the days with the family, events might have "
