@@ -227,59 +227,62 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
   #     docs/overrides/partials/languages
   # see also https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#custom-translations
   alternate:
-    - name: English
-      lang: en
+    - name: Čeština
+      link: cs
+      lang: cs
     - name: Deutsch
       link: de
       lang: de
+    - name: English
+      lang: en
     - name: Español
       link: es
       lang: es
-    - name: Norsk bokmål
-      link: nb_NO
-      lang: nb_NO
-    - name: Italiano
-      link: it
-      lang: it
-    - name: อังกฤษ
-      link: th
-      lang: th
     - name: Esperanto
       link: eo
       lang: eo
     - name: Hrvatski
       link: hr
       lang: hr
+    - name: Italiano
+      link: it
+      lang: it
+    - name: Íslenska
+      link: is
+      lang: is
+    - name: Nederlands
+      link: nl
+      lang: nl
+    # - name: Norsk bokmål
+    #   link: nb_NO
+    #   lang: nb_NO
     - name: Slovenčina
       link: sk
       lang: sk
-    - name: 한국어
-      link: ko
-      lang: ko
+    - name: Suomi
+      link: fi
+      lang: fi
+    - name: Taqbaylit
+      link: kab
+      lang: kab
+    # - name: Русский
+    #   link: ru
+    #   lang: ru
     - name: Українська
       link: uk
       lang: uk
     - name: ஆங்கிலம்
       link: ta
       lang: ta
-    - name: Nederlands
-      link: nl
-      lang: nl
-    - name: Čeština
-      link: cs
-      lang: cs
-    - name: Íslenska
-      link: is
-      lang: is
-    - name: Suomi
-      link: fi
-      lang: fi
-    - name: Русский
-      link: ru
-      lang: ru
-    - name: Taqbaylit
-      link: kab
-      lang: kab
+    - name: อังกฤษ
+      link: th
+      lang: th
+    # - name: 한국어
+    #   link: ko
+    #   lang: ko
+    # - name: 简体中文
+    #   link: zh_Hans
+    #   lang: zh_Hans
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/
