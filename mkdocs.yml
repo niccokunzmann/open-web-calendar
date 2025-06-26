@@ -138,6 +138,24 @@ plugins:
         - th
         - uk
         - zh_Hant
+        - ar
+        - be
+        - ca
+        - cy
+        - da
+        - el
+        - fr
+        - he
+        - hu
+        - id
+        - ja
+        - pl
+        - pt
+        - ro
+        - si
+        - sv
+        - tr
+        - zh_Hans
 # add mdpo.languages above
       translate:
         - site_name
@@ -272,6 +290,60 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
     - name: Русский
       link: ru
       lang: ru
+    - name: العربية
+      link: ar
+      lang: ar
+    - name: Беларуская
+      link: be
+      lang: be
+    - name: Català
+      link: ca
+      lang: ca
+    - name: Cymraeg
+      link: cy
+      lang: cy
+    - name: Dansk
+      link: da
+      lang: da
+    - name: Ελληνικά
+      link: el
+      lang: el
+    - name: Français
+      link: fr
+      lang: fr
+    - name: אנגלית
+      link: he
+      lang: he
+    - name: Magyar
+      link: hu
+      lang: hu
+    - name: Bahasa Indonesia
+      link: id
+      lang: id
+    - name: 日本語
+      link: ja
+      lang: ja
+    - name: Polski
+      link: pl
+      lang: pl
+    - name: Português
+      link: pt
+      lang: pt
+    - name: română
+      link: ro
+      lang: ro
+    - name: සිංහල
+      link: si
+      lang: si
+    - name: Svenska
+      link: sv
+      lang: sv
+    - name: Türkçe
+      link: tr
+      lang: tr
+    - name: 中文
+      link: zh_Hans
+      lang: zh_Hans
 # add extra.alternate languages above
     - name: Translate
       link: https://hosted.weblate.org/engage/open-web-calendar/

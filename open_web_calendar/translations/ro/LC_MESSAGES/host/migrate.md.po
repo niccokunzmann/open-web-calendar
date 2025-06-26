@@ -1,0 +1,105 @@
+#
+msgid ""
+msgstr ""
+
+msgid "A guide on how to migrate calendars from one instance to another."
+msgstr ""
+
+msgid "Move Your Calendars to Another Server"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar does not need a database and does not save data about "
+"your calendars. Thus it is easy to change the location of the calendar host "
+"to another server."
+msgstr ""
+
+msgid "You might migrate out of these reasons:"
+msgstr ""
+
+msgid "You use the hosted version but you have set up your own server."
+msgstr ""
+
+msgid ""
+"You would like to use the Open Web Calendar behind a firewall or as a local "
+"service."
+msgstr ""
+
+msgid ""
+"You made modifications to the Open Web Calendar that are not yet in this "
+"repository."
+msgstr ""
+
+msgid ""
+"Moving the calendar requires you to edit the URL that is used. This is an "
+"example URL that you would use to display or link to the calendar:"
+msgstr ""
+
+msgid ""
+"**https://open-web-"
+"calendar.hosted.quelltext.eu**/calendar.html?language=de&url=https%3A%2F%2Fexample.co.uk%2Fcalendar.ics"
+msgstr ""
+
+msgid ""
+"You only need to replace the **bold** part of the calendar with the new "
+"server location. If your server runs with a [local development "
+"setup](../../dev) at `http://localhost:8000`, you would migrate your "
+"calendar by editing the URL, leaving everything behind the first `/` as it "
+"is:"
+msgstr ""
+
+msgid ""
+"**http://localhost:8000**/calendar.html?language=de&url=https%3A%2F%2Fexample.co.uk%2Fcalendar.ics"
+msgstr ""
+
+msgid "That is all! Migration done!"
+msgstr ""
+
+msgid "Versions and Compatibility"
+msgstr ""
+
+msgid ""
+"Different versions have different features. Generally **upgrading** the Open"
+" Web Calendar version improves the calendar functionality, leaving most "
+"features as is."
+msgstr ""
+
+msgid ""
+"**Downgrading** - moving to an earlier version of the Open Web Calendar - "
+"should generally work without total loss as new configuration parameters are"
+" ignored. However, some functionalities might get lost."
+msgstr ""
+
+msgid ""
+"Have a look at the [Changelog](../../changelog) for new features added and "
+"if you can downgrade without loss."
+msgstr ""
+
+msgid "Migration with Altered Default Parameters"
+msgstr ""
+
+msgid ""
+"The Open Web Calendar allows modification of all calendar parameters, as "
+"stated in the [Configuration Section](../configure). In order to migrate "
+"from or to a server that has modified the `default_specification.yml` file, "
+"you will need to retrieve the specification of the calendar."
+msgstr ""
+
+msgid "Click on the question mark at the bottom."
+msgstr ""
+
+msgid "Click on \"Download Calendar Specification\"."
+msgstr ""
+
+msgid "Save and upload this specification."
+msgstr ""
+
+msgid ""
+"Create a calendar link replacing `...` with the URL to the hosted "
+"specification: `http://localhost:8000/calendar.html?specification_url=...`"
+msgstr ""
+
+msgid ""
+"The migrated calendar should look excatly the same as the calendar you had "
+"before."
+msgstr ""

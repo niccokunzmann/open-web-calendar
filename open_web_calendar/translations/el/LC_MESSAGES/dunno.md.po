@@ -1,0 +1,128 @@
+#
+msgid ""
+msgstr ""
+
+msgid "These are some interesting sections to consider."
+msgstr ""
+
+msgid "Good to Know"
+msgstr ""
+
+msgid "The following content belongs nowhere else really, so we put it here."
+msgstr ""
+
+msgid "Related Work"
+msgstr ""
+
+msgid ""
+"[docker-ics-view](https://github.com/11notes/docker-ics-view) and [its "
+"Docker image](https://hub.docker.com/r/11notes/ics-view) - a fork of this "
+"project with further improvements"
+msgstr ""
+
+msgid ""
+"[calender_merger](https://github.com/niccokunzmann/calender_merger) for "
+"merging several ICAL files into one"
+msgstr ""
+
+msgid ""
+"[ical-filter](https://github.com/thoka/ical-filter) for filtering events in "
+"an ICAL file and providing the selection as file"
+msgstr ""
+
+msgid ""
+"[Wordpress all in one event calendar](https://wordpress.org/plugins/all-in-"
+"one-event-calendar/)"
+msgstr ""
+
+msgid ""
+"[My Mailbox Calendar](https://github.com/niccokunzmann/my-mailbox-"
+"calendar#readme)"
+msgstr ""
+
+msgid "Research"
+msgstr ""
+
+msgid ""
+"https://serverfault.com/questions/142598/open-source-web-application-for-"
+"viewing-ics-calendars"
+msgstr ""
+
+msgid ""
+"https://stackoverflow.com/questions/300849/html-viewer-for-ics-ical-files"
+msgstr ""
+
+msgid "https://phpicalendar.net"
+msgstr ""
+
+msgid "https://sourceforge.net/projects/phpicalendar/"
+msgstr ""
+
+msgid "https://icalendar.readthedocs.io/"
+msgstr ""
+
+msgid "https://github.com/rianjs/ical.net"
+msgstr ""
+
+msgid ""
+"https://web.archive.org/web/20210201222328/https://stackoverflow.com/questions/4671764/is-"
+"there-a-javascript-calendar-that-takes-an-ical-link-as-input-to-display-"
+"event"
+msgstr ""
+
+msgid "https://www.webgui.org/content-managers-guide-wiki/calendar"
+msgstr ""
+
+msgid ""
+"https://www.quora.com/What-calendars-can-I-embed-in-my-website-that-arent-"
+"Google-Calendar"
+msgstr ""
+
+msgid "Hosts"
+msgstr ""
+
+msgid "[gancio.org](https://gancio.org/)"
+msgstr ""
+
+msgid "https://www.chronoflocalendar.com/"
+msgstr ""
+
+msgid "with API: http://www.instantcal.com/api.html"
+msgstr ""
+
+msgid "Wordpress: https://de.wordpress.org/plugins/all-in-one-event-calendar/"
+msgstr ""
+
+msgid "Sources/Libs"
+msgstr ""
+
+msgid ""
+"https://stackoverflow.com/questions/9072802/is-there-an-open-source-"
+"javascript-calendar-that-supports-built-in-event-detail#9072985"
+msgstr ""
+
+msgid "Search Terms"
+msgstr ""
+
+msgid ""
+"calendar ics service, ics calendar to html, open source calendar view ical, "
+"python Ical, calendar viewer website for ics, open source calendar website, "
+"embed calendar into website"
+msgstr ""
+
+msgid "Software Components"
+msgstr ""
+
+msgid "Python3 and the packages in requirements.txt"
+msgstr ""
+
+msgid "[Flask](http://flask.pocoo.org/)"
+msgstr ""
+
+msgid "[DHTMLX scheduler](https://docs.dhtmlx.com/scheduler/)"
+msgstr ""
+
+msgid ""
+"[python-recurring-ical-events](https://github.com/niccokunzmann/python-"
+"recurring-ical-events)"
+msgstr ""

@@ -1,0 +1,80 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Learn how to develop the Open Web Calendar."
+msgstr ""
+
+msgid "Setup & Tests"
+msgstr ""
+
+msgid ""
+"This section guides you through everything you need to know to develop the "
+"software: build it and make changes."
+msgstr ""
+
+msgid "Clone the Repository"
+msgstr ""
+
+msgid "Code Quality"
+msgstr ""
+
+msgid ""
+"We use [ruff] to improve the code quality. Please install [pre-commit] "
+"before committing. It will ensure that the code is formatted and linted as "
+"expected using [ruff]."
+msgstr ""
+
+msgid ""
+"To format the code before commit without the pre-commit hook, run this:"
+msgstr ""
+
+msgid "Running Tests"
+msgstr ""
+
+msgid ""
+"To run the tests, we use `tox`. `tox` tests all different Python versions "
+"which we want to be compatible to."
+msgstr ""
+
+msgid "Run all tests:"
+msgstr ""
+
+msgid "Run a specific Python version:"
+msgstr ""
+
+msgid "Browser Testing"
+msgstr ""
+
+msgid ""
+"We use selenium to test the app in different browsers. By default, Firefox "
+"is used. You can test the features like this:"
+msgstr ""
+
+msgid "If you like to change the browser, use"
+msgstr ""
+
+msgid ""
+"You can also change the layout of the window to test the responsive design:"
+msgstr ""
+
+msgid "Debug Mode"
+msgstr ""
+
+msgid ""
+"In case the browser tests fail, screenshots are recorded and a link is "
+"printed."
+msgstr ""
+
+msgid "Documentation"
+msgstr ""
+
+msgid ""
+"You can build the documentation with `tox`, too. It is located in the `docs`"
+" directory."
+msgstr ""
+
+msgid ""
+"We are using [mkdocs] with the [material "
+"theme](https://squidfunk.github.io/mkdocs-material/)."
+msgstr ""

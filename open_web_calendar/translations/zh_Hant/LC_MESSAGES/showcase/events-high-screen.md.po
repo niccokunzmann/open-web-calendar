@@ -12,8 +12,9 @@ msgstr ""
 
 msgid ""
 "[@dml105] discussed this use-case in [Issue 625] and we found a solution. "
-"Using **CSS** and **JavaScript** modifications, the Open Web Calendar can be "
-"modified to display all events on a vertical screen. They can be made higher."
+"Using **CSS** and **JavaScript** modifications, the Open Web Calendar can be"
+" modified to display all events on a vertical screen. They can be made "
+"higher."
 msgstr ""
 
 msgid "![](/assets/img/showcase/events-large-screen.png)"

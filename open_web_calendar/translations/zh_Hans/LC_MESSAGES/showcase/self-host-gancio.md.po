@@ -6,8 +6,8 @@ msgid "Self-Hosting and Gancio Integration"
 msgstr ""
 
 msgid ""
-"[Gancio] is a federated calendaring platform, integrated into the Fediverse. "
-"The Open Web Calendar can be used to display events of [Gancio] calendars."
+"[Gancio] is a federated calendaring platform, integrated into the Fediverse."
+" The Open Web Calendar can be used to display events of [Gancio] calendars."
 msgstr ""
 
 msgid ""
@@ -15,11 +15,3 @@ msgid ""
 "calendar display. of the events and adjust the style to thier hosting "
 "preferences."
 msgstr ""
-
-#, fuzzy
-msgid "[Antroposofía Chile]: https://antroposofiachile.net/home/"
-msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
-
-#, fuzzy
-msgid "[Gancio]: https://gancio.org/"
-msgstr "[Gancio]: https://gancio.org/"

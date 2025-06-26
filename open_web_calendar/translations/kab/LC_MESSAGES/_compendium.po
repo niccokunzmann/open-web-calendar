@@ -14,8 +14,8 @@ msgstr ""
 "X-Generator: Translate Toolkit 3.15.2\n"
 
 msgid ""
-"Embed a highly customizable web calendar into your website using ICal source "
-"links"
+"Embed a highly customizable web calendar into your website using ICal source"
+" links"
 msgstr ""
 
 msgid "Open Web Calendar"
@@ -40,8 +40,8 @@ msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
 msgstr "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
 
 msgid ""
-"After you have set up your own server, you can [configure the behavior](../"
-"configure)."
+"After you have set up your own server, you can [configure the "
+"behavior](../configure)."
 msgstr ""
 
 msgid "Python Package"
@@ -63,75 +63,6 @@ msgstr ""
 msgid "[Squid]: https://www.squid-cache.org/"
 msgstr "[Squid]: https://www.squid-cache.org/"
 
-msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
-
-msgid "A highly flexible calendar display for your website."
-msgstr ""
-
-msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
-
-msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
-
-msgid "Features"
-msgstr ""
-
-msgid "Instant Event Syncing"
-msgstr ""
-
-msgid "<center>✔</center>"
-msgstr ""
-
-msgid "Embed with an HTML snippet"
-msgstr ""
-
-msgid "Desktop and Mobile"
-msgstr ""
-
-msgid "Multi-Language Support"
-msgstr ""
-
-msgid "Fixed and Automatic Timezone"
-msgstr ""
-
-msgid "Easy Editing"
-msgstr ""
-
-msgid "Designs To Choose"
-msgstr ""
-
-msgid "Multiple Calendar Sources"
-msgstr ""
-
-msgid "Style per Calendar, Category and more"
-msgstr ""
-
-msgid "Custom CSS"
-msgstr ""
-
-msgid "Day, Week, Month, Agenda"
-msgstr ""
-
-msgid "Work Week"
-msgstr ""
-
-msgid "Click on Event Location"
-msgstr ""
-
-msgid "Styled Event Descriptions"
-msgstr ""
-
-msgid "FOSS - No Vendor Lock-In"
-msgstr ""
-
-msgid "Subscribe Link"
-msgstr ""
-
-msgid "Community and Paid Support"
-msgstr ""
-
 #, fuzzy
 msgid "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 msgstr "[தமிழ்நேரம்]: https://tamilneram.github.io/"
@@ -142,122 +73,31 @@ msgid ""
 msgstr ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
 
-msgid "Play with a variety of Calendars for your own project."
-msgstr ""
-
-msgid "Examples"
-msgstr ""
-
-msgid "Mobile One Day Calendar Feed"
-msgstr ""
-
-msgid "Here is an example of a one day view of a Christmas day:"
-msgstr ""
-
-msgid "Modifications:"
-msgstr ""
-
-msgid "start and end time"
-msgstr ""
-
-msgid "fixed date"
-msgstr ""
-
-msgid "CSS"
-msgstr ""
-
-msgid "Events Hosted as a Tor Hidden Service"
-msgstr ""
-
-msgid "JavaScript"
-msgstr ""
-
-msgid "timezone"
-msgstr ""
-
-msgid "Free and Busy"
-msgstr ""
-
-msgid "You can change the design based on whether you are free or busy."
-msgstr ""
-
+#, fuzzy
 msgid ""
-"This calendar has changed CSS so that the background is green and the events "
-"are either orange or red."
+"[tor-example]: https://tor.open-web-"
+"calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+"day-event-repeat-every-day.ics"
 msgstr ""
-
-msgid "Contribute Examples!"
-msgstr ""
-
-msgid ""
-"If you want to add another example or showcase your calendar, this is the "
-"place. You can **contact us** with the link of the calendar e.g. in an "
-"[issue](https://github.com/niccokunzmann/open-web-calendar/issues)."
-msgstr ""
-
-msgid "You can **edit the page** yourself:"
-msgstr ""
-
-msgid ""
-"For an international calendar, you can allow choosing the time zone that the "
-"events are displayed in."
-msgstr ""
-
-msgid "Choose Timezones"
-msgstr ""
-
-msgid ""
-"<select id=\"timezoneOption\"><option value=\"America/New_York\">New York</"
-"option><option value=\"Europe/London\">London</option><option value=\"Asia/"
-"Singapore\">Singapore</option><option value=\"\">My Local Time Zone</"
-"option></select>"
-msgstr ""
-
-msgid ""
-"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"family-planning.json\" target=\"_blank\">Edit the calendar</a>"
-msgstr ""
-
-msgid ""
-"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"timezone-example.json\" target=\"_blank\">Edit the calendar</a>"
-msgstr ""
-
-msgid ""
-"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"free-and-busy.json\" target=\"_blank\">Edit the calendar</a>"
-msgstr ""
+"[tor-example]: https://tor.open-web-"
+"calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+"day-event-repeat-every-day.ics"
 
 #, fuzzy
 msgid ""
-"[tor-example]: https://tor.open-web-calendar.hosted.quelltext.eu/calendar."
-"html?"
-"url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-"onion%2Fone-day-event-repeat-every-day.ics"
+"[calendars]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//docs/assets/calendars"
 msgstr ""
-"[tor-example]: https://tor.open-web-calendar.hosted.quelltext.eu/calendar."
-"html?"
-"url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-"onion%2Fone-day-event-repeat-every-day.ics"
+"[calendars]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//docs/assets/calendars"
 
 #, fuzzy
 msgid ""
-"[calendars]: https://github.com/niccokunzmann/open-web-calendar/tree/master//"
-"docs/assets/calendars"
+"[templates]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//docs/assets/templates"
 msgstr ""
-"[calendars]: https://github.com/niccokunzmann/open-web-calendar/tree/master//"
-"docs/assets/calendars"
-
-#, fuzzy
-msgid ""
-"[templates]: https://github.com/niccokunzmann/open-web-calendar/tree/master//"
-"docs/assets/templates"
-msgstr ""
-"[templates]: https://github.com/niccokunzmann/open-web-calendar/tree/master//"
-"docs/assets/templates"
+"[templates]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//docs/assets/templates"
 
 #, fuzzy
 msgid "[Showcase Section]: ../showcase"
@@ -277,57 +117,57 @@ msgstr "[pre-commit]: https://pre-commit.com/"
 
 #, fuzzy
 msgid ""
-"[features/configure-the-calendar.feature]: https://github.com/niccokunzmann/"
-"open-web-calendar/tree/master//open_web_calendar/features/configure-the-"
+"[features/configure-the-calendar.feature]: "
+"https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//open_web_calendar/features/configure-the-"
 "calendar.feature"
 msgstr ""
-"[features/configure-the-calendar.feature]: https://github.com/niccokunzmann/"
-"open-web-calendar/tree/master//open_web_calendar/features/configure-the-"
+"[features/configure-the-calendar.feature]: "
+"https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//open_web_calendar/features/configure-the-"
 "calendar.feature"
 
 #, fuzzy
 msgid ""
 "[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
-"web-calendar/tree/master//open_web_calendar/features/edit-the-calendar."
-"feature"
+"web-calendar/tree/master//open_web_calendar/features/edit-the-"
+"calendar.feature"
 msgstr ""
 "[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
-"web-calendar/tree/master//open_web_calendar/features/edit-the-calendar."
-"feature"
+"web-calendar/tree/master//open_web_calendar/features/edit-the-"
+"calendar.feature"
 
 #, fuzzy
 msgid ""
-"[app.py-81]: https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
+"[app.py-81]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
 msgstr ""
-"[app.py-81]: https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
+"[app.py-81]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
 
 #, fuzzy
 msgid ""
-"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx."
-"html#L23"
+"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
 msgstr ""
-"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx."
-"html#L23"
+"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
 
 #, fuzzy
 msgid ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-calendar/"
-"tree/master//open_web_calendar/default_specification.yml"
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//open_web_calendar/default_specification.yml"
 msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-calendar/"
-"tree/master//open_web_calendar/default_specification.yml"
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//open_web_calendar/default_specification.yml"
 
 #, fuzzy
 msgid ""
-"[getSpecification()]: https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
+"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
 msgstr ""
-"[getSpecification()]: https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
+"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
 
 #, fuzzy
 msgid "[parameters]: ../api"
@@ -335,11 +175,11 @@ msgstr "[parameters]: ../api"
 
 #, fuzzy
 msgid ""
-"[DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/api__refs__scheduler."
-"html"
+"[DHTMLX Scheduler]: "
+"https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
 msgstr ""
-"[DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/api__refs__scheduler."
-"html"
+"[DHTMLX Scheduler]: "
+"https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
 
 #, fuzzy
 msgid "[privacy-policy]: ../privacy-policy"
@@ -389,27 +229,27 @@ msgstr "[Gunicorn]: https://docs.gunicorn.org/"
 
 #, fuzzy
 msgid ""
-"[open-web-calendar.hosted.quelltext.eu]: https://open-web-calendar.hosted."
-"quelltext.eu"
+"[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
+"calendar.hosted.quelltext.eu"
 msgstr ""
-"[open-web-calendar.hosted.quelltext.eu]: https://open-web-calendar.hosted."
-"quelltext.eu"
+"[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
+"calendar.hosted.quelltext.eu"
 
 #, fuzzy
 msgid ""
-"[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-calendar."
-"hosted.quelltext.eu"
+"[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
+"calendar.hosted.quelltext.eu"
 msgstr ""
-"[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-calendar."
-"hosted.quelltext.eu"
+"[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
+"calendar.hosted.quelltext.eu"
 
 #, fuzzy
 msgid ""
-"[vid-architecture]: https://www.youtube.com/watch?"
-"v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
+"[vid-architecture]: "
+"https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
 msgstr ""
-"[vid-architecture]: https://www.youtube.com/watch?"
-"v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
+"[vid-architecture]: "
+"https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
 
 #, fuzzy
 msgid "[Radically Open Security]: https://radicallyopensecurity.com/"
@@ -449,14 +289,195 @@ msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
 msgid "[Gancio]: https://gancio.org/"
 msgstr "[Gancio]: https://gancio.org/"
 
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+msgid "Examples:"
+msgstr ""
+
+msgid "Further Configuration"
+msgstr ""
+
+#~ msgid "Development"
 #~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+
+#~ msgid "Hosting"
+#~ msgstr ""
+
+#~ msgid "News"
+#~ msgstr ""
+
+#~ msgid "Showcase"
+#~ msgstr ""
+
+#~ msgid "See the features or try the Open Web Calendar yourself!"
+#~ msgstr ""
+
+#~ msgid "A highly flexible calendar display for your website."
+#~ msgstr ""
+
+#~ msgid "Give a calendar your personal touch within minutes!"
+#~ msgstr ""
+
+#~ msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
+#~ msgstr ""
+
+#~ msgid "Features"
+#~ msgstr ""
+
+#~ msgid "Instant Event Syncing"
+#~ msgstr ""
+
+#~ msgid "<center>✔</center>"
+#~ msgstr ""
+
+#~ msgid "Embed with an HTML snippet"
+#~ msgstr ""
+
+#~ msgid "Desktop and Mobile"
+#~ msgstr ""
+
+#~ msgid "Multi-Language Support"
+#~ msgstr ""
+
+#~ msgid "Fixed and Automatic Timezone"
+#~ msgstr ""
+
+#~ msgid "Easy Editing"
+#~ msgstr ""
+
+#~ msgid "Designs To Choose"
+#~ msgstr ""
+
+#~ msgid "Multiple Calendar Sources"
+#~ msgstr ""
+
+#~ msgid "Style per Calendar, Category and more"
+#~ msgstr ""
+
+#~ msgid "Custom CSS"
+#~ msgstr ""
+
+#~ msgid "Day, Week, Month, Agenda"
+#~ msgstr ""
+
+#~ msgid "Work Week"
+#~ msgstr ""
+
+#~ msgid "Click on Event Location"
+#~ msgstr ""
+
+#~ msgid "Styled Event Descriptions"
+#~ msgstr ""
+
+#~ msgid "FOSS - No Vendor Lock-In"
+#~ msgstr ""
+
+#~ msgid "Subscribe Link"
+#~ msgstr ""
+
+#~ msgid "Community and Paid Support"
+#~ msgstr ""
+
+#~ msgid "Play with a variety of Calendars for your own project."
+#~ msgstr ""
+
+#~ msgid "Examples"
+#~ msgstr ""
+
+#~ msgid "Mobile One Day Calendar Feed"
+#~ msgstr ""
+
+#~ msgid "Here is an example of a one day view of a Christmas day:"
+#~ msgstr ""
+
+#~ msgid "Modifications:"
+#~ msgstr ""
+
+#~ msgid "start and end time"
+#~ msgstr ""
+
+#~ msgid "fixed date"
+#~ msgstr ""
+
+#~ msgid "CSS"
+#~ msgstr ""
+
+#~ msgid "Events Hosted as a Tor Hidden Service"
+#~ msgstr ""
+
+#~ msgid "JavaScript"
+#~ msgstr ""
+
+#~ msgid "timezone"
+#~ msgstr ""
+
+#~ msgid "Free and Busy"
+#~ msgstr ""
+
+#~ msgid "You can change the design based on whether you are free or busy."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This calendar has changed CSS so that the background is green and the events"
+#~ " are either orange or red."
+#~ msgstr ""
+
+#~ msgid "Contribute Examples!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want to add another example or showcase your calendar, this is the "
+#~ "place. You can **contact us** with the link of the calendar e.g. in an "
+#~ "[issue](https://github.com/niccokunzmann/open-web-calendar/issues)."
+#~ msgstr ""
+
+#~ msgid "You can **edit the page** yourself:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For an international calendar, you can allow choosing the time zone that the"
+#~ " events are displayed in."
+#~ msgstr ""
+
+#~ msgid "Choose Timezones"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<select id=\"timezoneOption\"><option value=\"America/New_York\">New "
+#~ "York</option><option value=\"Europe/London\">London</option><option "
+#~ "value=\"Asia/Singapore\">Singapore</option><option value=\"\">My Local Time "
+#~ "Zone</option></select>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/family-planning.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/timezone-example.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
@@ -471,24 +492,22 @@ msgstr "[Gancio]: https://gancio.org/"
 #~ "Events can be single events or occur every day."
 
 #~ msgid ""
-#~ "This calendar is not styled but contains events that can be hosted behind "
-#~ "a firewall on a little anonymous server. [Example](https://tor.open-web-"
-#~ "calendar.hosted.quelltext.eu/calendar.html?"
-#~ "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~ "onion%2Fone-day-event-repeat-every-day.ics)"
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 #~ msgstr ""
-#~ "This calendar is not styled but contains events that can be hosted behind "
-#~ "a firewall on a little anonymous server. [Example](https://tor.open-web-"
-#~ "calendar.hosted.quelltext.eu/calendar.html?"
-#~ "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~ "onion%2Fone-day-event-repeat-every-day.ics)"
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
 #~ msgid ""
-#~ "Below, you can see the source code that you need to add to your website. "
-#~ "You might need to adjust the timezone selection and the id of the iframe."
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
 #~ msgstr ""
-#~ "Below, you can see the source code that you need to add to your website. "
-#~ "You might need to adjust the timezone selection and the id of the iframe."
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
@@ -497,11 +516,11 @@ msgstr "[Gancio]: https://gancio.org/"
 #~ msgstr "Getting Started"
 
 #~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
-#~ "(host/self.md)"
+#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+#~ "Hosted](host/self.md)"
 #~ msgstr ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
-#~ "(host/self.md)"
+#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
+#~ "Hosted](host/self.md)"
 
 #~ msgid "[Developer API](dev/api.md)"
 #~ msgstr "[Developer API](dev/api.md)"
@@ -517,39 +536,36 @@ msgstr "[Gancio]: https://gancio.org/"
 #~ msgstr "Are you proud of your calendar? Share it here!"
 
 #~ msgid ""
-#~ "Place all required `.ics` files in the [calendars](https://github.com/"
-#~ "niccokunzmann/open-web-calendar/tree/master/docs/assets/calendars) "
-#~ "directory."
+#~ "Place all required `.ics` files in the "
+#~ "[calendars](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/docs/assets/calendars) directory."
 #~ msgstr ""
-#~ "Place all required `.ics` files in the [calendars](https://github.com/"
-#~ "niccokunzmann/open-web-calendar/tree/master/docs/assets/calendars) "
-#~ "directory."
+#~ "Place all required `.ics` files in the "
+#~ "[calendars](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/docs/assets/calendars) directory."
 
 #~ msgid ""
-#~ "Download the specification of the calendar. And add it to the [templates]"
-#~ "(https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/"
-#~ "assets/templates) directory."
+#~ "Download the specification of the calendar. And add it to the "
+#~ "[templates](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/docs/assets/templates) directory."
 #~ msgstr ""
-#~ "Download the specification of the calendar. And add it to the [templates]"
-#~ "(https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/"
-#~ "assets/templates) directory."
+#~ "Download the specification of the calendar. And add it to the "
+#~ "[templates](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/docs/assets/templates) directory."
 
 #~ msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
-#~ msgstr ""
-#~ "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
+#~ msgstr "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
 
 #~ msgid ""
-#~ "We have prepared a variety of different styles so you can edit them to "
-#~ "your needs. For each style, you can click on the `?` question mark in the "
-#~ "corner and edit the calendar. If you are inspired, you can also just head "
-#~ "over and [start from scratch](https://open-web-calendar.hosted.quelltext."
-#~ "eu)."
+#~ "We have prepared a variety of different styles so you can edit them to your "
+#~ "needs. For each style, you can click on the `?` question mark in the corner "
+#~ "and edit the calendar. If you are inspired, you can also just head over and "
+#~ "[start from scratch](https://open-web-calendar.hosted.quelltext.eu)."
 #~ msgstr ""
-#~ "We have prepared a variety of different styles so you can edit them to "
-#~ "your needs. For each style, you can click on the `?` question mark in the "
-#~ "corner and edit the calendar. If you are inspired, you can also just head "
-#~ "over and [start from scratch](https://open-web-calendar.hosted.quelltext."
-#~ "eu)."
+#~ "We have prepared a variety of different styles so you can edit them to your "
+#~ "needs. For each style, you can click on the `?` question mark in the corner "
+#~ "and edit the calendar. If you are inspired, you can also just head over and "
+#~ "[start from scratch](https://open-web-calendar.hosted.quelltext.eu)."
 
 #, fuzzy
 #~ msgid "[web]: https://open-web-calendar.hosted.quelltext.eu/"
@@ -585,22 +601,20 @@ msgstr "[Gancio]: https://gancio.org/"
 
 #, fuzzy
 #~ msgid ""
-#~ "permit several hosts: `ALLOWED_HOSTS=open-web-calendar.hosted.quelltext."
-#~ "eu,192.168.0.42`"
+#~ "permit several hosts: `ALLOWED_HOSTS=open-web-"
+#~ "calendar.hosted.quelltext.eu,192.168.0.42`"
 #~ msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 
 #, fuzzy
 #~ msgid ""
-#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-"
-#~ "calendar/)"
+#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-calendar/)"
 #~ msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
 
 #, fuzzy
 #~ msgid ""
 #~ "[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
 #~ "calendar)"
-#~ msgstr ""
-#~ "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
+#~ msgstr "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 
 #, fuzzy
 #~ msgid "[Translate this project](translate.md)"
@@ -611,146 +625,118 @@ msgstr "[Gancio]: https://gancio.org/"
 #~ msgstr "[translate]: #translate"
 
 #, fuzzy
-#~| msgid ""
-#~| "We have prepared a variety of different styles so you can edit them to "
-#~| "your needs. For each style, you can click on the `?` question mark in "
-#~| "the corner and edit the calendar. If you are inspired, you can also just "
-#~| "head over and [start from scratch](https://open-web-calendar.hosted."
-#~| "quelltext.eu)."
 #~ msgid ""
-#~ "We have prepared a variety of different styles so you can edit them to "
-#~ "your needs. For each style, you can edit the calendar and shape is as you "
-#~ "need it. If you are inspired, you can also just head over and [start from "
+#~ "We have prepared a variety of different styles so you can edit them to your "
+#~ "needs. For each style, you can edit the calendar and shape is as you need "
+#~ "it. If you are inspired, you can also just head over and [start from "
 #~ "scratch](https://open-web-calendar.hosted.quelltext.eu)."
 #~ msgstr ""
-#~ "We have prepared a variety of different styles so you can edit them to "
-#~ "your needs. For each style, you can click on the `?` question mark in the "
-#~ "corner and edit the calendar. If you are inspired, you can also just head "
-#~ "over and [start from scratch](https://open-web-calendar.hosted.quelltext."
-#~ "eu)."
+#~ "We have prepared a variety of different styles so you can edit them to your "
+#~ "needs. For each style, you can click on the `?` question mark in the corner "
+#~ "and edit the calendar. If you are inspired, you can also just head over and "
+#~ "[start from scratch](https://open-web-calendar.hosted.quelltext.eu)."
 
 #, fuzzy
-#~| msgid ""
-#~| "This calendar is not styled but contains events that can be hosted "
-#~| "behind a firewall on a little anonymous server. [Example](https://tor."
-#~| "open-web-calendar.hosted.quelltext.eu/calendar.html?"
-#~| "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~| "onion%2Fone-day-event-repeat-every-day.ics)"
 #~ msgid ""
-#~ "This calendar is not styled but contains events that can be hosted behind "
-#~ "a firewall on a little anonymous server. [Example](https://tor.open-web-"
-#~ "calendar.hosted.quelltext.eu/calendar.html?"
-#~ "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~ "onion%2Fone-day-event-repeat-every-day.ics )"
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics )"
 #~ msgstr ""
-#~ "This calendar is not styled but contains events that can be hosted behind "
-#~ "a firewall on a little anonymous server. [Example](https://tor.open-web-"
-#~ "calendar.hosted.quelltext.eu/calendar.html?"
-#~ "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~ "onion%2Fone-day-event-repeat-every-day.ics)"
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
 #, fuzzy
-#~| msgid ""
-#~| "Below, you can see the source code that you need to add to your website. "
-#~| "You might need to adjust the timezone selection and the id of the iframe."
 #~ msgid ""
-#~ "Below, you can see the source code that you need to add to your website. "
-#~ "You might need to adjust the timezone selection and the id of the iframe. "
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe. "
 #~ "wzxhzdk:5"
 #~ msgstr ""
-#~ "Below, you can see the source code that you need to add to your website. "
-#~ "You might need to adjust the timezone selection and the id of the iframe."
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
 
 #, fuzzy
-#~| msgid "Edit this file and add a section."
 #~ msgid "Edit this file and add a section. ```"
 #~ msgstr "Edit this file and add a section."
 
 #, fuzzy
-#~| msgid ""
-#~| "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~| "specification_url=https://open-web-calendar.quelltext.eu/assets/"
-#~| "templates/christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 #~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">   Edit the calendar </a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">   Edit the calendar </a>"
 #~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
 #, fuzzy
-#~| msgid ""
-#~| "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~| "specification_url=https://open-web-calendar.quelltext.eu/assets/"
-#~| "templates/christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 #~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "family-planning.json\" target=\"_blank\">   Edit the calendar </a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/family-planning.json\" "
+#~ "target=\"_blank\">   Edit the calendar </a>"
 #~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
 #, fuzzy
-#~| msgid ""
-#~| "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~| "specification_url=https://open-web-calendar.quelltext.eu/assets/"
-#~| "templates/christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 #~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "timezone-example.json\" target=\"_blank\">   Edit the calendar </a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/timezone-example.json\" "
+#~ "target=\"_blank\">   Edit the calendar </a>"
 #~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
 #, fuzzy
-#~| msgid ""
-#~| "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~| "specification_url=https://open-web-calendar.quelltext.eu/assets/"
-#~| "templates/christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 #~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "free-and-busy.json\" target=\"_blank\">   Edit the calendar </a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
+#~ "target=\"_blank\">   Edit the calendar </a>"
 #~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
 #, fuzzy
-#~| msgid ""
-#~| "Below, you can see the source code that you need to add to your website. "
-#~| "You might need to adjust the timezone selection and the id of the iframe."
 #~ msgid ""
 #~ "Here, you can see the source code that you need to add to your website:"
 #~ msgstr ""
-#~ "Below, you can see the source code that you need to add to your website. "
-#~ "You might need to adjust the timezone selection and the id of the iframe."
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
 
 #, fuzzy
 #~ msgid ""
-#~ "Add tests in [features/configure-the-calendar.feature](https://github.com/"
-#~ "niccokunzmann/open-web-calendar/tree/master//features/configure-the-"
-#~ "calendar.feature) to check that the calendar responds to the feature."
+#~ "Add tests in [features/configure-the-"
+#~ "calendar.feature](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master//features/configure-the-calendar.feature) to check that"
+#~ " the calendar responds to the feature."
 #~ msgstr ""
-#~ "[features/configure-the-calendar.feature]: https://github.com/"
-#~ "niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/"
-#~ "configure-the-calendar.feature"
+#~ "[features/configure-the-calendar.feature]: "
+#~ "https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master//open_web_calendar/features/configure-the-"
+#~ "calendar.feature"
 
 #, fuzzy
 #~ msgid ""
-#~ "Add tests in [features/edit-the-calendar.feature](https://github.com/"
-#~ "niccokunzmann/open-web-calendar/tree/master//features/edit-the-calendar."
-#~ "feature) to make sure that the parameter can be used when a calendar is "
-#~ "edited."
+#~ "Add tests in [features/edit-the-"
+#~ "calendar.feature](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master//features/edit-the-calendar.feature) to make sure that "
+#~ "the parameter can be used when a calendar is edited."
 #~ msgstr ""
-#~ "[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/"
-#~ "open-web-calendar/tree/master//open_web_calendar/features/edit-the-"
+#~ "[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
+#~ "web-calendar/tree/master//open_web_calendar/features/edit-the-"
 #~ "calendar.feature"
 
 #, fuzzy
@@ -763,29 +749,25 @@ msgstr "[Gancio]: https://gancio.org/"
 
 #, fuzzy
 #~ msgid ""
-#~ "This functionality is provided by [flask-allowed-hosts](https://pypi.org/"
-#~ "project/flask-allowed-hosts/)."
-#~ msgstr ""
-#~ "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+#~ "This functionality is provided by [flask-allowed-"
+#~ "hosts](https://pypi.org/project/flask-allowed-hosts/)."
+#~ msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
 
 #, fuzzy
 #~ msgid ""
-#~ "[SSRF Protection with a Proxy Server](../self#ssrf-protection-with-a-"
-#~ "proxy-server)"
-#~ msgstr ""
-#~ "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
+#~ "[SSRF Protection with a Proxy Server](../self#ssrf-protection-with-a-proxy-"
+#~ "server)"
+#~ msgstr "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
 
 #, fuzzy
 #~ msgid ""
 #~ "[SSRF Protection with a Proxy Server](../hosted#ssrf-protection-with-a-"
 #~ "proxy-server)"
-#~ msgstr ""
-#~ "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
+#~ msgstr "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
 
 #, fuzzy
 #~ msgid "[](../hosted#ssrf-protection-with-a-proxy-server)"
-#~ msgstr ""
-#~ "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
+#~ msgstr "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
 
 #, fuzzy
 #~ msgid "../hosted#ssrf-protection-with-a-proxy-server"
@@ -801,6 +783,5 @@ msgstr "[Gancio]: https://gancio.org/"
 #~ msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 
 #, fuzzy
-#~| msgid "[Developer API](dev/api.md)"
 #~ msgid "[API](../dev/api.md)"
 #~ msgstr "[Developer API](dev/api.md)"

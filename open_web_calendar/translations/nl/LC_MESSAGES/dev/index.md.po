@@ -25,7 +25,8 @@ msgid ""
 "expected using [ruff]."
 msgstr ""
 
-msgid "To format the code before commit without the pre-commit hook, run this:"
+msgid ""
+"To format the code before commit without the pre-commit hook, run this:"
 msgstr ""
 
 msgid "Running Tests"
@@ -69,13 +70,13 @@ msgid "Documentation"
 msgstr ""
 
 msgid ""
-"You can build the documentation with `tox`, too. It is located in the `docs` "
-"directory."
+"You can build the documentation with `tox`, too. It is located in the `docs`"
+" directory."
 msgstr ""
 
 msgid ""
-"We are using [mkdocs] with the [material theme](https://squidfunk.github.io/"
-"mkdocs-material/)."
+"We are using [mkdocs] with the [material "
+"theme](https://squidfunk.github.io/mkdocs-material/)."
 msgstr ""
 
 #~ msgid "Recurring Events with Categories"

@@ -65,9 +65,9 @@ msgid "https://github.com/rianjs/ical.net"
 msgstr ""
 
 msgid ""
-"https://web.archive.org/web/20210201222328/https://stackoverflow.com/"
-"questions/4671764/is-there-a-javascript-calendar-that-takes-an-ical-link-as-"
-"input-to-display-event"
+"https://web.archive.org/web/20210201222328/https://stackoverflow.com/questions/4671764/is-"
+"there-a-javascript-calendar-that-takes-an-ical-link-as-input-to-display-"
+"event"
 msgstr ""
 
 msgid "https://www.webgui.org/content-managers-guide-wiki/calendar"

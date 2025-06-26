@@ -1,0 +1,35 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Agenda info screen"
+msgstr ""
+
+msgid ""
+"In the Amman Valley Maker Space, we used Info Screens with the Agenda and "
+"recent projects. The events were aggregated from different sources: "
+"Discourse and Outlook Calendar. With this, we informed the community about "
+"events that are going to happen using the Open Web Calendar Agenda View. "
+"Events that were in the past were represented by a series of pictures."
+msgstr ""
+
+msgid "![](/assets/img/showcase/infoscreen.jpg)"
+msgstr ""
+
+msgid "Used:"
+msgstr ""
+
+msgid "Raspberry Pi"
+msgstr ""
+
+msgid "A vertical screen"
+msgstr ""
+
+msgid "Relais to the screen on and off"
+msgstr ""
+
+msgid "Different Calendar Sources"
+msgstr ""
+
+msgid "You can view the [source code][infoscreen]."
+msgstr ""

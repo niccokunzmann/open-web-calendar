@@ -33,7 +33,3 @@ msgstr ""
 
 msgid "You can view the [source code][infoscreen]."
 msgstr ""
-
-#, fuzzy
-msgid "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
-msgstr "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
