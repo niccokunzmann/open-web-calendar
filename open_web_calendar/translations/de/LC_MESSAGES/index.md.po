@@ -14,115 +14,52 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.7.2-rc\n"
 
-msgid "Customize Your Own Online Calendar Display"
-msgstr "Gib Deinem Online-Kalender eine Persönliche Ansicht"
-
-msgid "See the features or try the Open Web Calendar yourself!"
-msgstr "Schau, was möglich ist oder probiere den Offenen Web-Kalender aus!"
-
-msgid "![](/assets/img/logo/github-social-preview.svg)"
-msgstr ""
-
-msgid "A highly flexible calendar display for your website."
-msgstr "Eine hoch-flexibel anpassbare Kalenderanzeige für Deine Webseite."
-
-msgid "Give a calendar your personal touch within minutes!"
-msgstr "Gib in wenigen Minuten einem Kalender deine persönliche Note!"
-
-msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr "**[Probiere es aus!](https://open-web-calendar.hosted.quelltext.eu)**"
-
-msgid "Features"
-msgstr "Fähigkeiten"
-
-msgid "Instant Event Syncing"
-msgstr "Sofortige Terminanzeige"
-
-msgid "<center>✔</center>"
-msgstr "<center>✔</center>"
-
-msgid "Embed with an HTML snippet"
-msgstr "Mit HTML einbetten"
-
-msgid "Desktop and Mobile"
-msgstr "Computer und Smartphone"
-
-msgid "Multi-Language Support"
-msgstr "Viele Sprachen"
-
-msgid "Fixed and Automatic Timezone"
-msgstr "Feste und Automatische Zeitzonen"
-
-msgid "Easy Editing"
-msgstr "Einfaches Anpassen"
-
-msgid "Designs To Choose"
-msgstr "Auswahl an Designs"
-
-msgid "Multiple Calendar Sources"
-msgstr "Mehrere Kalenderquellen"
-
-msgid "Style per Calendar, Category and more"
-msgstr "Hervorheben von Kalendern, Kategorien und mehr"
-
-msgid "Custom CSS"
-msgstr "Eigenes CSS"
-
-msgid "Day, Week, Month, Agenda"
-msgstr "Tag, Woche, Monat, Agenda"
-
-msgid "Work Week"
-msgstr "Arbeitswoche"
-
-msgid "Custom Date & Time Range"
-msgstr "Eigene Tages- and Zeitabschnitte"
-
-msgid "Custom Title & Icon"
-msgstr "Eigener Titel und Icon"
-
-msgid "Click on Event Location"
-msgstr "Öffne Terminorte"
-
-msgid "Styled Event Descriptions"
-msgstr "Stilisierte Terminbeschreibungen"
-
-msgid "FOSS - No Vendor Lock-In"
-msgstr "Freie Software - Kein Lock-In"
-
-msgid "Subscribe Link"
-msgstr "Link zum Abbonieren"
-
-msgid "Community and Paid Support"
-msgstr "Gemeinschaftliche und Bezahlte Hilfe"
-
-msgid "[See Examples](templates)"
-msgstr "[Beispiele ansehen](templates)"
-
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self)"
-msgstr ""
-"[Bereitgestellt](https://open-web-calendar.hosted.quelltext.eu) und [eigener"
-" Server](host/self)"
-
-msgid "[Developer API](dev/api)"
-msgstr "[Entwickler-API](dev/api)"
-
-#~ msgid "Getting Started"
-#~ msgstr "Anfang"
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Wiederkehrende Termine mit Kategorie"
 
 #~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 #~ msgstr ""
-#~ "[Bereitgestellt](https://open-web-calendar.hosted.quelltext.eu) oder [auf "
-#~ "eigenem Server](host/self.md)"
+#~ "Zuhause bei der Familienplanung können verschiedene Termine verschiedene "
+#~ "Kategorien haben, diese abhängig davon, für wen der Termin ist: `Arbeit` "
+#~ "oder `persönlich`. Termine können nur einmal stattfinden oder wiederholt."
 
-#~ msgid "[Developer API](dev/api.md)"
-#~ msgstr "[Entwickler API](dev/api.md)"
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "Dieser Kalender ist nicht schön gemacht aber enthält Termine, die hinter "
+#~ "einer Firewall auf einem anonymen Server liegen. "
+#~ "[Beispiel](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
-#~ msgid "[See Examples](templates.md)"
-#~ msgstr "[Sieh die Beispiel an](templates.md)"
+#~ msgid ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+#~ msgstr ""
+#~ "Hier drunter findest Du den Quelltext, den Du zu deiner Webseite hinzufügen "
+#~ "kannst. Wahrscheinlich müssen die Zeitzonenauswahl und die iframe-ID "
+#~ "angepasst werden."
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Editiere diese Datei und füge einen Abschnitt hinzu."
+
+#~ msgid ""
+#~ "`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that"
+#~ " you CAN use this but you cannot be sure that the JSON schema remains the "
+#~ "same. If you want that, add tests."
+#~ msgstr ""
+#~ "`/calendar.events.json` - FLEXIBEL - hole die Termine als JSON. Bitte wisse,"
+#~ " dass Du das nutzen KANNST aber nicht sicher sein kannst, dass das JSON-"
+#~ "Schema so bleibt. Wenn du das willst, füge neue Tests hinzu."
+
+#~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
+#~ msgstr "`timezone=UTC` - die Zeitzone, in der die Termine angezeigt werden"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"

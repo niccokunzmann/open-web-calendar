@@ -16,122 +16,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.12.1\n"
 
-msgid "Customize Your Own Online Calendar Display"
-msgstr "உங்கள் சொந்த நிகழ்நிலை காலண்டர் காட்சியைத் தனிப்பயனாக்கவும்"
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
-msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
-"அம்சங்களைப் பார்க்கவும் அல்லது திறந்த வலை காலெண்டரை நீங்களே முயற்சிக்கவும்!"
-
-msgid "![](/assets/img/logo/github-social-preview.svg)"
-msgstr ""
-
-msgid "A highly flexible calendar display for your website."
-msgstr "உங்கள் வலைத்தளத்திற்கான மிகவும் நெகிழ்வான காலண்டர் காட்சி."
-
-msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
-"ஒரு காலெண்டருக்கு உங்கள் தனிப்பட்ட தொடுதலை சில நிமிடங்களில் கொடுங்கள்!"
-
-msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
-"** [இப்போது முயற்சி செய்யுங்கள்!](https://open-web-"
-"calendar.hosted.quelltext.eu) **"
-
-msgid "Features"
-msgstr "நற்பொருத்தங்கள்"
-
-msgid "Instant Event Syncing"
-msgstr "உடனடி நிகழ்வு ஒத்திசைவு"
-
-msgid "<center>✔</center>"
-msgstr "&lt;சென்டர்&gt; ✔ "
-
-msgid "Embed with an HTML snippet"
-msgstr "உஉகுமொ துணுக்குடன் உட்பொதிக்கப்பட்டுள்ளது"
-
-msgid "Desktop and Mobile"
-msgstr "டெச்க்டாப் மற்றும் மொபைல்"
-
-msgid "Multi-Language Support"
-msgstr "பல மொழி உதவி"
-
-msgid "Fixed and Automatic Timezone"
-msgstr "நிலையான மற்றும் தானியங்கி நேர மண்டலம்"
-
-msgid "Easy Editing"
-msgstr "எளிதான திருத்துதல்"
-
-msgid "Designs To Choose"
-msgstr "தேர்வு செய்ய வடிவமைப்புகள்"
-
-msgid "Multiple Calendar Sources"
-msgstr "பல காலண்டர் ஆதாரங்கள்"
-
-msgid "Style per Calendar, Category and more"
-msgstr "ஒரு காலெண்டருக்கு நடை, வகை மற்றும் பல"
-
-msgid "Custom CSS"
-msgstr "தனிப்பயன் சிஎச்எச்"
-
-msgid "Day, Week, Month, Agenda"
-msgstr "நாள், வாரம், மாதம், நிகழ்ச்சி நிரல்"
-
-msgid "Work Week"
-msgstr "வேலை வாரம்"
-
-msgid "Custom Date & Time Range"
-msgstr "தனிப்பயன் தேதி &amp; நேர வரம்பு"
-
-msgid "Custom Title & Icon"
-msgstr "தனிப்பயன் தலைப்பு &amp; படவுரு"
-
-msgid "Click on Event Location"
-msgstr "நிகழ்வு இருப்பிடத்தைக் சொடுக்கு செய்க"
-
-msgid "Styled Event Descriptions"
-msgstr "பாணியில் நிகழ்வு விளக்கங்கள்"
-
-msgid "FOSS - No Vendor Lock-In"
-msgstr "FOSS - விற்பனையாளர் பூட்டுதல் இல்லை"
-
-msgid "Subscribe Link"
-msgstr "இணைப்பை குழுசேரவும்"
-
-msgid "Community and Paid Support"
-msgstr "சமூகம் மற்றும் கட்டண உதவி"
-
-msgid "[See Examples](templates)"
-msgstr "[எடுத்துக்காட்டுகளைக் காண்க](templates)"
-
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self)"
-msgstr ""
-"[புரவலன்](https://open-web-calendar.hosted.quelltext.eu) மற்றும் "
-"[தன்-புரவலன்](host/self)"
-
-msgid "[Developer API](dev/api)"
-msgstr "[டெவலப்பர் ஏபிஐ](dev/api)"
-
-msgid "&lt;சென்டர்&gt; ✔"
-msgstr "&lt;மையம்&gt; ✔"
-
-#~ msgid "Getting Started"
-#~ msgstr "Getting Started"
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
 #~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 #~ msgstr ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-#~ msgid "[Developer API](dev/api.md)"
-#~ msgstr "[Developer API](dev/api.md)"
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
-#~ msgid "[See Examples](templates.md)"
-#~ msgstr "[See Examples](templates.md)"
+#~ msgid ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+#~ msgstr ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"

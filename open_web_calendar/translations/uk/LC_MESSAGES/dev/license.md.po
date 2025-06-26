@@ -2,58 +2,39 @@
 msgid ""
 msgstr ""
 
-msgid "Development information about licensing."
-msgstr ""
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
-msgid "License Information"
-msgstr ""
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-msgid ""
-"This project specifies the licenses of its files according to the "
-"[REUSE](https://reuse.software/) tool."
-msgstr ""
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
-msgid "Run a check:"
-msgstr ""
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
 
-msgid ""
-"If you added files and now the CI tests fail, annotate them accordingly."
-msgstr ""
-
-msgid "We use `CC-BY-SA-4.0` for:"
-msgstr ""
-
-msgid "documentation"
-msgstr ""
-
-msgid "`.ics` calendar files"
-msgstr ""
-
-msgid "images"
-msgstr ""
-
-msgid "We use `GPL-2.0-only` for:"
-msgstr ""
-
-msgid "source code"
-msgstr ""
-
-msgid "translations of the source code"
-msgstr ""
-
-msgid "build information"
-msgstr ""
-
-msgid "HTML files"
-msgstr ""
-
-msgid "Hints:"
-msgstr ""
-
-msgid "Add `--force-dot-license` for files that should not be touched."
-msgstr ""
-
-msgid ""
-"Add information to the `.reuse/dep5` file for folders under a certain "
-"license."
-msgstr ""
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json \" "
+#~ "target=\"_blank\">Редагувати календар</a>"

@@ -16,115 +16,31 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-msgid "Customize Your Own Online Calendar Display"
-msgstr "Prispôsobte si vlastné zobrazenie online kalendára"
-
-msgid "See the features or try the Open Web Calendar yourself!"
-msgstr "Pozrite si funkcie alebo vyskúšajte Open Web Calendar sami!"
-
-msgid "![](/assets/img/logo/github-social-preview.svg)"
-msgstr ""
-
-msgid "A highly flexible calendar display for your website."
-msgstr "Vysoko flexibilný kalendár pre vaše webové stránky."
-
-msgid "Give a calendar your personal touch within minutes!"
-msgstr "Dajte svoj osobný dotyk do niekoľkých minút!"
-
-msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr "**[Try it now!](https://open-web-calendar.hosted.quelltext.eu)**"
-
-msgid "Features"
-msgstr "Vzhľad"
-
-msgid "Instant Event Syncing"
-msgstr "Okamžitá synchronizácia udalostí"
-
-msgid "<center>✔</center>"
-msgstr "<center>✔</center>"
-
-msgid "Embed with an HTML snippet"
-msgstr "Vloženie s HTML snippet"
-
-msgid "Desktop and Mobile"
-msgstr "Plocha a mobil"
-
-msgid "Multi-Language Support"
-msgstr "Podpora viacerých jazykov"
-
-msgid "Fixed and Automatic Timezone"
-msgstr "Opravený a automatický časzóna"
-
-msgid "Easy Editing"
-msgstr "Jednoduchá úprava"
-
-msgid "Designs To Choose"
-msgstr "Dizajny na výber"
-
-msgid "Multiple Calendar Sources"
-msgstr "Zdroje viacerých kalendárov"
-
-msgid "Style per Calendar, Category and more"
-msgstr "Štýl na kalendár, kategórie a ďalšie"
-
-msgid "Custom CSS"
-msgstr "Vlastné CSS"
-
-msgid "Day, Week, Month, Agenda"
-msgstr "Deň, týždeň, mesiac, agenda"
-
-msgid "Work Week"
-msgstr "Pracovný týždeň"
-
-msgid "Custom Date & Time Range"
-msgstr "Vlastný dátum a časový rozsah"
-
-msgid "Custom Title & Icon"
-msgstr "Vlastný názov &amp; Icon"
-
-msgid "Click on Event Location"
-msgstr "Kliknite na miesto udalosti"
-
-msgid "Styled Event Descriptions"
-msgstr "Popis udalosti"
-
-msgid "FOSS - No Vendor Lock-In"
-msgstr "FOSS - žiadny dodávateľ Lock-In"
-
-msgid "Subscribe Link"
-msgstr "Prihlásiť Link"
-
-msgid "Community and Paid Support"
-msgstr "Komunita a platená podpora"
-
-msgid "[See Examples](templates)"
-msgstr "[Pozri príklady](templates)"
-
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self)"
-msgstr ""
-"[Hostované](https://open-web-calendar.hosted.quelltext.eu) a "
-"[Samohostované](host/self)"
-
-msgid "[Developer API](dev/api)"
-msgstr "[Vývojárske API](dev/api)"
-
-#~ msgid "Getting Started"
-#~ msgstr "Začíname"
-
-#~ msgid "[See Examples](templates.md)"
-#~ msgstr "[Pozri Príklady](templates.md)"
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
 #~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 #~ msgstr ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) a [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-#~ msgid "[Developer API](dev/api.md)"
-#~ msgstr "[Developer API](dev/api.md)"
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"

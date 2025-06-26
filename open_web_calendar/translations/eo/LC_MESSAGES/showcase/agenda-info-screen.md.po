@@ -2,38 +2,28 @@
 msgid ""
 msgstr ""
 
-msgid "Agenda info screen"
-msgstr ""
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
-msgid ""
-"In the Amman Valley Maker Space, we used Info Screens with the Agenda and "
-"recent projects. The events were aggregated from different sources: "
-"Discourse and Outlook Calendar. With this, we informed the community about "
-"events that are going to happen using the Open Web Calendar Agenda View. "
-"Events that were in the past were represented by a series of pictures."
-msgstr ""
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-msgid "![](/assets/img/showcase/infoscreen.jpg)"
-msgstr ""
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
-msgid "Used:"
-msgstr ""
-
-msgid "Raspberry Pi"
-msgstr ""
-
-msgid "A vertical screen"
-msgstr ""
-
-msgid "Relais to the screen on and off"
-msgstr ""
-
-msgid "Different Calendar Sources"
-msgstr ""
-
-msgid "You can view the [source code][infoscreen]."
-msgstr ""
-
-#, fuzzy
-msgid "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
-msgstr "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."

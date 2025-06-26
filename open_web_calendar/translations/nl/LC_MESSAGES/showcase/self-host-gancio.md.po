@@ -2,24 +2,17 @@
 msgid ""
 msgstr ""
 
-msgid "Self-Hosting and Gancio Integration"
-msgstr ""
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
-msgid ""
-"[Gancio] is a federated calendaring platform, integrated into the Fediverse."
-" The Open Web Calendar can be used to display events of [Gancio] calendars."
-msgstr ""
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-msgid ""
-"The [Antroposofía Chile] has used the Open Web Calendar to customize the "
-"calendar display. of the events and adjust the style to thier hosting "
-"preferences."
-msgstr ""
-
-#, fuzzy
-msgid "[Antroposofía Chile]: https://antroposofiachile.net/home/"
-msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
-
-#, fuzzy
-msgid "[Gancio]: https://gancio.org/"
-msgstr "[Gancio]: https://gancio.org/"
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."

@@ -15,113 +15,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.7-dev\n"
 
-msgid "Customize Your Own Online Calendar Display"
-msgstr ""
-
-msgid "See the features or try the Open Web Calendar yourself!"
-msgstr "Vidu la funkciojn, aŭ provu mem la Malfermitan Retan Kalendaron!"
-
-msgid "![](/assets/img/logo/github-social-preview.svg)"
-msgstr ""
-
-msgid "A highly flexible calendar display for your website."
-msgstr "Tre adaptebla kalendara vido por via retpaĝo."
-
-msgid "Give a calendar your personal touch within minutes!"
-msgstr "Facile adaptu la kalendaron laŭ via gusto!"
-
-msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr "**[Provu ĝin nun!](https://open-web-calendar.hosted.quelltext.eu)**"
-
-msgid "Features"
-msgstr "Funkcioj"
-
-msgid "Instant Event Syncing"
-msgstr "Tuja sinkronigado de eventoj"
-
-msgid "<center>✔</center>"
-msgstr "<center>✔</center>"
-
-msgid "Embed with an HTML snippet"
-msgstr "Enmeti per HTML-kodaĵo"
-
-msgid "Desktop and Mobile"
-msgstr "Por labortabloj kaj poŝaparatoj"
-
-msgid "Multi-Language Support"
-msgstr "Subteno de pluraj lingvoj"
-
-msgid "Fixed and Automatic Timezone"
-msgstr "Fiksitaj aŭ aŭtomataj horzonoj"
-
-msgid "Easy Editing"
-msgstr "Facila modifado"
-
-msgid "Designs To Choose"
-msgstr "Elekteblaj ŝablonoj"
-
-msgid "Multiple Calendar Sources"
-msgstr "Pluraj kalendaraj fontoj"
-
-msgid "Style per Calendar, Category and more"
-msgstr "Stiloj por kalendaro, kategorio kaj plu"
-
-msgid "Custom CSS"
-msgstr "Propra CSS"
-
-msgid "Day, Week, Month, Agenda"
-msgstr "Tago, semajno, monato, tagordo"
-
-msgid "Work Week"
-msgstr "Laborsemajno"
-
-msgid "Custom Date & Time Range"
-msgstr "Propra dato-tempa intervalo"
-
-msgid "Custom Title & Icon"
-msgstr "Propraj titolo &amp; piktogramo"
-
-msgid "Click on Event Location"
-msgstr "Alklaki eventan lokon"
-
-msgid "Styled Event Descriptions"
-msgstr "Stilaj eventaj priskriboj"
-
-msgid "FOSS - No Vendor Lock-In"
-msgstr "Libera malfermitkoda programo – sen limigo de vendinto"
-
-msgid "Subscribe Link"
-msgstr "Abona hiperligo"
-
-msgid "Community and Paid Support"
-msgstr "Komunuma kaj porpaga helpo"
-
-msgid "[See Examples](templates)"
-msgstr ""
-
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self)"
-msgstr ""
-
-msgid "[Developer API](dev/api)"
-msgstr ""
-
-#~ msgid "Getting Started"
-#~ msgstr "Unuaj paŝoj"
-
-#~ msgid "[See Examples](templates.md)"
-#~ msgstr "[Vidi ekzemplojn](templates.md)"
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
 #~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 #~ msgstr ""
-#~ "[Gastigite](https://open-web-calendar.hosted.quelltext.eu) aŭ "
-#~ "[memgastigite](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-#~ msgid "[Developer API](dev/api.md)"
-#~ msgstr "[API por programistoj](dev/api.md)"
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"

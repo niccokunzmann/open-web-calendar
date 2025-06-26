@@ -13,7 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 3.13.0\n"
 
-#
 msgid ""
 "The API of the Open Web Calendar allows more customization than the "
 "configuration page."
@@ -78,9 +77,6 @@ msgid ""
 "same. If you want that, add tests."
 msgstr ""
 
-msgid "Additional parameters are required:"
-msgstr ""
-
 msgid "`timezone=UTC` - the timezone that you need to display the events in"
 msgstr ""
 
@@ -105,9 +101,6 @@ msgstr ""
 msgid "Adding Parameters"
 msgstr ""
 
-msgid "If you add a new parameter as a developer,"
-msgstr ""
-
 msgid "Add the parameter with a default value to the [default_specification]"
 msgstr ""
 
@@ -117,69 +110,13 @@ msgid ""
 "them to use."
 msgstr ""
 
-msgid ""
-"Add tests in [features/configure-the-"
-"calendar.feature](https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//features/configure-the-calendar.feature) to check that"
-" the calendar responds to the feature."
-msgstr ""
-
-msgid ""
-"Add tests in [features/edit-the-"
-"calendar.feature](https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//features/edit-the-calendar.feature) to make sure that "
-"the parameter can be used when a calendar is edited."
-msgstr ""
-
 msgid "Compiling the Specification"
-msgstr ""
-
-msgid ""
-"You can change the calendar behavior and looks with parameters. These are "
-"the places to specify parameters:"
-msgstr ""
-
-msgid ""
-"**Query parameters** All parameters to the calendar url are put into the "
-"specification. The query parameters have the highest precedence. Examples:"
-msgstr ""
-
-msgid ""
-"**specification_url** If you specify this query parameter, the editor "
-"configuration is loaded from this url, too. Query parameters are still more "
-"important than what is written in this file. The source format can be YAML "
-"or JSON. Examples:"
-msgstr ""
-
-msgid ""
-"**[default_specification]** This file contains the default parameters. They "
-"must not be hard-coded in the source code. All of them are there. Query "
-"parameters and the `specification_url` override these values."
 msgstr ""
 
 msgid "Specification in the Calendar"
 msgstr ""
 
-msgid ""
-"[app.py](https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81) compiles "
-"the specification from the given parameters in `get_specification()`. In the"
-" [template](https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23)"
-" you can access the specification through the `specification` variable. The "
-"specification is available to JavaScript as the `specification` variable."
-msgstr ""
-
 msgid "Specification in the Index Page"
-msgstr ""
-
-msgid ""
-"The default specification is available before the calendar is built via "
-"JavaScript in the `configuration.default_specification` variable. There is a"
-" [getSpecification()](https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93)"
-" function which created the specification from the inputs. Generally, the "
-"`specification` variable should be used."
 msgstr ""
 
 msgid "Architecture"
@@ -214,29 +151,6 @@ msgid ""
 "processing."
 msgstr ""
 
-#, fuzzy
-msgid ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master/open_web_calendar/default_specification.yml"
-
-msgid ""
-"**Query parameters** All parameters to the calendar url are put into the "
-"specification. The query parameters have the highest precedence. Examples:"
-"    ```txt    index.html?language=de calendar.html?title=CALENDAR    ```"
-msgstr ""
-
-msgid ""
-"**specification_url** If you specify this query parameter, the editor "
-"configuration is loaded from this url, too. Query parameters are still more "
-"important than what is written in this file. The source format can be YAML "
-"or JSON. Examples:         "
-"calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
-"calendar/raw/master/default_specification.yml"
-msgstr ""
-
 msgid "![architecture](/assets/img/architecture.svg)"
 msgstr ""
 
@@ -257,6 +171,226 @@ msgstr ""
 
 msgid "Change the title in a query parameter:"
 msgstr ""
+
+msgid ""
+"`/calendar.json` - information about the calendar and the content as JSON"
+msgstr ""
+
+msgid "Additional parameters are required for `/calendar.events.json`:"
+msgstr ""
+
+msgid ""
+"You can change the calendar behavior and looks with parameters. If the same "
+"parameter is specified in different places, the earlier place listed below "
+"has the highest precedence. These are the places to specify parameters:"
+msgstr ""
+
+msgid "Query parameters"
+msgstr ""
+
+msgid ""
+"All parameters to the calendar url are put into the specification. The query"
+" parameters have the highest precedence."
+msgstr ""
+
+msgid "specification_url"
+msgstr ""
+
+msgid ""
+"If you specify this query parameter, the editor configuration is loaded from"
+" this url, too. Query parameters are still more important than what is "
+"written in this file. The source format can be YAML or JSON."
+msgstr ""
+
+msgid "open_web_calendar.app.DEFAULT_SPECIFICATION"
+msgstr ""
+
+msgid "This is intended for developers and Python-internal."
+msgstr ""
+
+msgid ""
+"This is an optional environment variable. Please read more about it in the "
+"[Server Configuration](../../host/configure#owc_specification)."
+msgstr ""
+
+msgid "[default_specification]"
+msgstr ""
+
+msgid ""
+"This file contains the default parameters. They must not be hard-coded in "
+"the source code. All parameters are listed and documented there so this file"
+" can be used for reference. Do not modify this file, instead use the "
+"`OWC_SPECIFICATION` environment variable."
+msgstr ""
+
+msgid "If you add a new parameter as a developer:"
+msgstr ""
+
+msgid ""
+"Add tests in [features/configure-the-calendar.feature] to check that the "
+"calendar responds to the feature."
+msgstr ""
+
+msgid ""
+"Add tests in [features/edit-the-calendar.feature] to make sure that the "
+"parameter can be used when a calendar is edited."
+msgstr ""
+
+msgid ""
+"[app.py][app.py-81] compiles the specification from the given parameters in "
+"`get_specification()`. In the [template][dhtmlx-23] you can access the "
+"specification through the `specification` variable. The specification is "
+"available to JavaScript as the `specification` variable."
+msgstr ""
+
+msgid "[JavaScript Customization](../javascript)"
+msgstr ""
+
+msgid ""
+"The default specification is available before the calendar is built via "
+"JavaScript in the `configuration.default_specification` variable. There is a"
+" [getSpecification()] function which created the specification from the "
+"inputs. Generally, the `specification` variable should be used."
+msgstr ""
+
+#, fuzzy
+msgid ""
+"[features/configure-the-calendar.feature]: "
+"https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//open_web_calendar/features/configure-the-"
+"calendar.feature"
+msgstr ""
+"[features/configure-the-calendar.feature]: "
+"https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//open_web_calendar/features/configure-the-"
+"calendar.feature"
+
+#, fuzzy
+msgid ""
+"[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
+"web-calendar/tree/master//open_web_calendar/features/edit-the-"
+"calendar.feature"
+msgstr ""
+"[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
+"web-calendar/tree/master//open_web_calendar/features/edit-the-"
+"calendar.feature"
+
+#, fuzzy
+msgid ""
+"[app.py-81]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
+msgstr ""
+"[app.py-81]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
+
+#, fuzzy
+msgid ""
+"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
+msgstr ""
+"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
+
+#, fuzzy
+msgid ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//open_web_calendar/default_specification.yml"
+msgstr ""
+"[default_specification]: https://github.com/niccokunzmann/open-web-"
+"calendar/tree/master//open_web_calendar/default_specification.yml"
+
+#, fuzzy
+msgid ""
+"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
+msgstr ""
+"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
+"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
+
+#~ msgid "Additional parameters are required:"
+#~ msgstr ""
+
+#~ msgid "If you add a new parameter as a developer,"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add tests in [features/configure-the-"
+#~ "calendar.feature](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master//features/configure-the-calendar.feature) to check that"
+#~ " the calendar responds to the feature."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add tests in [features/edit-the-"
+#~ "calendar.feature](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master//features/edit-the-calendar.feature) to make sure that "
+#~ "the parameter can be used when a calendar is edited."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can change the calendar behavior and looks with parameters. These are "
+#~ "the places to specify parameters:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Query parameters** All parameters to the calendar url are put into the "
+#~ "specification. The query parameters have the highest precedence. Examples:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**specification_url** If you specify this query parameter, the editor "
+#~ "configuration is loaded from this url, too. Query parameters are still more "
+#~ "important than what is written in this file. The source format can be YAML "
+#~ "or JSON. Examples:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**[default_specification]** This file contains the default parameters. They "
+#~ "must not be hard-coded in the source code. All of them are there. Query "
+#~ "parameters and the `specification_url` override these values."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[app.py](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81) compiles "
+#~ "the specification from the given parameters in `get_specification()`. In the"
+#~ " [template](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23)"
+#~ " you can access the specification through the `specification` variable. The "
+#~ "specification is available to JavaScript as the `specification` variable."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The default specification is available before the calendar is built via "
+#~ "JavaScript in the `configuration.default_specification` variable. There is a"
+#~ " [getSpecification()](https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93)"
+#~ " function which created the specification from the inputs. Generally, the "
+#~ "`specification` variable should be used."
+#~ msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+
+#~ msgid ""
+#~ "**Query parameters** All parameters to the calendar url are put into the "
+#~ "specification. The query parameters have the highest precedence. Examples:"
+#~ "    ```txt    index.html?language=de calendar.html?title=CALENDAR    ```"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**specification_url** If you specify this query parameter, the editor "
+#~ "configuration is loaded from this url, too. Query parameters are still more "
+#~ "important than what is written in this file. The source format can be YAML "
+#~ "or JSON. Examples:         "
+#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
+#~ "calendar/raw/master/default_specification.yml"
+#~ msgstr ""
 
 #~ msgid "=== YAML"
 #~ msgstr ""
@@ -311,4 +445,12 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "```json {   \"title\": \"calendar\" } ``` "
+#~ msgstr ""
+
+#~ msgid "index.html?language=de calendar.html?title=CALENDAR "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
+#~ "calendar/raw/master/open_web_calendar/default_specification.yml "
 #~ msgstr ""

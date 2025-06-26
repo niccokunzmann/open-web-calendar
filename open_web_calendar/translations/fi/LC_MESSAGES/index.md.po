@@ -15,112 +15,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.12-dev\n"
 
-msgid "Customize Your Own Online Calendar Display"
-msgstr "Mukauta omaa online-kalenterinäyttöäsi"
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
-msgid "See the features or try the Open Web Calendar yourself!"
-msgstr "Katso ominaisuudet tai kokeile Open Web Calendaria itse!"
-
-msgid "![](/assets/img/logo/github-social-preview.svg)"
-msgstr ""
-
-msgid "A highly flexible calendar display for your website."
-msgstr "Erittäin joustava kalenterinäyttö verkkosivustollesi."
-
-msgid "Give a calendar your personal touch within minutes!"
-msgstr "Anna kalenterille persoonallinen kosketus muutamassa minuutissa!"
-
-msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr "**[Kokeile heti!](https://open-web-calendar.hosted.quelltext.eu)**"
-
-msgid "Features"
-msgstr "Ominaisuudet"
-
-msgid "Instant Event Syncing"
-msgstr "Välitön tapahtumien synkronointi"
-
-msgid "<center>✔</center>"
-msgstr ""
-
-msgid "Embed with an HTML snippet"
-msgstr "Upota HTML-koodinpätkällä"
-
-msgid "Desktop and Mobile"
-msgstr "Työpöytä ja mobiili"
-
-msgid "Multi-Language Support"
-msgstr "Monikielinen tuki"
-
-msgid "Fixed and Automatic Timezone"
-msgstr "Kiinteä ja automaattinen aikavyöhyke"
-
-msgid "Easy Editing"
-msgstr "Helppo muokkaaminen"
-
-msgid "Designs To Choose"
-msgstr "Suunnittelut valittavissa"
-
-msgid "Multiple Calendar Sources"
-msgstr "Useita kalenterilähteitä"
-
-msgid "Style per Calendar, Category and more"
-msgstr "Tyyli kalenterin, luokan mukaan ja enemmän"
-
-msgid "Custom CSS"
-msgstr "Mukautettu CSS"
-
-msgid "Day, Week, Month, Agenda"
-msgstr "Päivä, viikko, kuukausi, esityslista"
-
-msgid "Work Week"
-msgstr "Työviikko"
-
-msgid "Custom Date & Time Range"
-msgstr "Mukautettu päivämäärä- ja aikaväli"
-
-msgid "Custom Title & Icon"
-msgstr "Muokattu otsikko ja kuvake"
-
-msgid "Click on Event Location"
-msgstr "Napsauta Tapahtuman sijainti"
-
-msgid "Styled Event Descriptions"
-msgstr "Tyylilliset tapahtumakuvaukset"
-
-msgid "FOSS - No Vendor Lock-In"
-msgstr "FOSS – Ei toimittajan lukitusta"
-
-msgid "Subscribe Link"
-msgstr "Tilaa-linkki"
-
-msgid "Community and Paid Support"
-msgstr "Yhteisöllinen ja maksettu tuki"
-
-msgid "[See Examples](templates)"
-msgstr "[Katso esimerkit](templates)"
-
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self)"
-msgstr ""
-"[Hallinnoitu](https://open-web-calendar.hosted.quelltext.eu) ja "
-"[Itsehallinnoitu](host/self)"
-
-msgid "[Developer API](dev/api)"
-msgstr "[Kehittäjä API](dev/api)"
-
-#~ msgid "Getting Started"
-#~ msgstr "Aloittaminen"
-
-#~ msgid "[See Examples](templates.md)"
-#~ msgstr "[Katso esimerkit](templates.md)"
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
 #~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 #~ msgstr ""
-#~ "[Isännöity](https://open-web-calendar.hosted.quelltext.eu) ja [Itse "
-#~ "isännöity](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-#~ msgid "[Developer API](dev/api.md)"
-#~ msgstr "[Kehittäjien sovellusliittymä](dev/api.md)"
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"

@@ -15,113 +15,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-msgid "Customize Your Own Online Calendar Display"
-msgstr ""
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
-msgid "See the features or try the Open Web Calendar yourself!"
-msgstr "See the features or try the Open Web Calendar yourself!"
-
-msgid "![](/assets/img/logo/github-social-preview.svg)"
-msgstr ""
-
-msgid "A highly flexible calendar display for your website."
-msgstr "A highly flexible calendar display for your website."
-
-msgid "Give a calendar your personal touch within minutes!"
-msgstr "Give a calendar your personal touch within minutes!"
-
-msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-
-msgid "Features"
-msgstr "Features"
-
-msgid "Instant Event Syncing"
-msgstr "Instant Event Syncing"
-
-msgid "<center>✔</center>"
-msgstr "<center>✔</center>"
-
-msgid "Embed with an HTML snippet"
-msgstr "Embed with an HTML snippet"
-
-msgid "Desktop and Mobile"
-msgstr "Desktop and Mobile"
-
-msgid "Multi-Language Support"
-msgstr "Multi-Language Support"
-
-msgid "Fixed and Automatic Timezone"
-msgstr "Fixed and Automatic Timezone"
-
-msgid "Easy Editing"
-msgstr "Easy Editing"
-
-msgid "Designs To Choose"
-msgstr "Designs To Choose"
-
-msgid "Multiple Calendar Sources"
-msgstr "Multiple Calendar Sources"
-
-msgid "Style per Calendar, Category and more"
-msgstr "Style per Calendar, Category and more"
-
-msgid "Custom CSS"
-msgstr "Custom CSS"
-
-msgid "Day, Week, Month, Agenda"
-msgstr "Day, Week, Month, Agenda"
-
-msgid "Work Week"
-msgstr "Work Week"
-
-msgid "Custom Date & Time Range"
-msgstr ""
-
-msgid "Custom Title & Icon"
-msgstr ""
-
-msgid "Click on Event Location"
-msgstr "Click on Event Location"
-
-msgid "Styled Event Descriptions"
-msgstr "Styled Event Descriptions"
-
-msgid "FOSS - No Vendor Lock-In"
-msgstr "FOSS - No Vendor Lock-In"
-
-msgid "Subscribe Link"
-msgstr "Subscribe Link"
-
-msgid "Community and Paid Support"
-msgstr "Community and Paid Support"
-
-msgid "[See Examples](templates)"
-msgstr ""
-
-msgid ""
-"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-"Hosted](host/self)"
-msgstr ""
-
-msgid "[Developer API](dev/api)"
-msgstr ""
-
-#~ msgid "Getting Started"
-#~ msgstr "Getting Started"
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
 #~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 #~ msgstr ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
-#~ "Hosted](host/self.md)"
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-#~ msgid "[Developer API](dev/api.md)"
-#~ msgstr "[Developer API](dev/api.md)"
+#~ msgid ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
+#~ msgstr ""
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
-#~ msgid "[See Examples](templates.md)"
-#~ msgstr "[See Examples](templates.md)"
+#~ msgid ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+#~ msgstr ""
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
+
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"

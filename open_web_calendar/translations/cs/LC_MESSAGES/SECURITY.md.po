@@ -2,43 +2,33 @@
 msgid ""
 msgstr ""
 
-msgid "How to report security concerns about the Open Web Calendar project."
-msgstr ""
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
-msgid "Security Policy"
-msgstr ""
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Recurring Events with Categories"
 
-msgid "Supported Versions"
-msgstr ""
+#~ msgid ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
+#~ msgstr ""
+#~ "If you are at home, planning the days with the family, events might have "
+#~ "different categories depending on who they are for: `work` or `personal`. "
+#~ "Events can be single events or occur every day."
 
-msgid ""
-"Only the `master` branch receives security updates. When an security update "
-"is made, it is released with the [latest version](../changelog)."
-msgstr ""
+#~ msgid "Edit this file and add a section."
+#~ msgstr "Edit this file and add a section."
 
-msgid "Version"
-msgstr ""
-
-msgid "Supported"
-msgstr ""
-
-msgid "master"
-msgstr ""
-
-msgid "✅"
-msgstr ""
-
-msgid "anything else"
-msgstr ""
-
-msgid "❌"
-msgstr ""
-
-msgid "Reporting a Vulnerability"
-msgstr ""
-
-msgid ""
-"If you find a security vulnerability, please [report the vulnerability "
-"here](https://github.com/niccokunzmann/open-web-calendar/security/) or reach"
-" out to [@niccokunzmann](https://github.com/niccokunzmann/)."
-msgstr ""
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"

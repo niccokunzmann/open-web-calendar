@@ -138,6 +138,26 @@ plugins:
         - ko  # 한국어
         - ko_LAVA  # 한국어 (LAVA)
         - zh_Hans  # 简体中文
+        - en
+        - cs
+        - de
+        - eo
+        - es
+        - fi
+        - hr
+        - is
+        - it
+        - kab
+        - ko
+        - ko_LAVA
+        - nb_NO
+        - nl
+        - ru
+        - sk
+        - ta
+        - th
+        - uk
+        - zh_Hant
 # add mdpo.languages above
       translate:
         - site_name
