@@ -1,20 +1,21 @@
 # Milan Šalka <salka.milan@googlemail.com>, 2024.
-# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+# Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024, 2025.
 # Warder <ciksa@seznam.cz>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 07:31+0200\n"
-"PO-Revision-Date: 2025-05-28 11:01+0000\n"
-"Last-Translator: Warder <ciksa@seznam.cz>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/sk/>\n"
+"PO-Revision-Date: 2025-06-26 11:38+0000\n"
+"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-index/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "Customize Your Own Online Calendar Display"
 msgstr "Prispôsobte si vlastné zobrazenie online kalendára"
@@ -98,7 +99,7 @@ msgid "Community and Paid Support"
 msgstr "Komunita a platená podpora"
 
 msgid "[See Examples](templates)"
-msgstr "[Pozri príklady](šablóny)"
+msgstr "[Pozri príklady](templates)"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
