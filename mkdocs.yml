@@ -118,26 +118,6 @@ plugins:
       lc_messages: true # store all documentation translations separately
       languages:
         - pot # generate the template files
-        - de  # Deutsch
-        - en  # English
-        - es  # Español
-        - eo  # Esperanto
-        - hr  # Hrvatski
-        - it  # Italiano
-        - nl  # Nederlands
-        - nb_NO  # Norskbokmål
-        - sk  # Slovenčina
-        - fi  # Suomi
-        - kab  # Taqbaylit
-        - is  # Íslenska
-        - cs  # Čeština
-        - ru  # Русский
-        - uk  # Українська
-        - ta  # ஆங்கிலம்
-        - th  # อังกฤษ
-        - ko  # 한국어
-        - ko_LAVA  # 한국어 (LAVA)
-        - zh_Hans  # 简体中文
         - en
         - cs
         - de
