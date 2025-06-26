@@ -449,767 +449,6 @@ msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
 msgid "[Gancio]: https://gancio.org/"
 msgstr "[Gancio]: https://gancio.org/"
 
-msgid ""
-"`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that "
-"you CAN use this but you cannot be sure that the JSON schema remains the "
-"same. If you want that, add tests."
-msgstr ""
-
-msgid "`timezone=UTC` - the timezone that you need to display the events in"
-msgstr ""
-
-msgid ""
-"The configuration of all calendars is rooted in the [default_specification."
-"yml]. All those values can be changed through a copy of this file hosted on "
-"the web through the calendar parameter `specification_url`. Each parameter "
-"should be documented in [default_specification.yml]."
-msgstr ""
-
-msgid "`title`"
-msgstr ""
-
-msgid "`language`"
-msgstr ""
-
-msgid "`favicon`"
-msgstr ""
-
-msgid "`source_code` - if you made changes"
-msgstr ""
-
-msgid "`contributing` - if you want to redirect to contribute to your project"
-msgstr ""
-
-msgid "SSRF Protection with a Proxy Server"
-msgstr ""
-
-msgid ""
-"The Open Web Calendar can be used to access the local network behind a "
-"firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-calendar/"
-"issues/250). This free access is intended to show calendars from everywhere. "
-"Since `requests` is used by the Open Web Calender, it can use a proxy as "
-"described in the [`requests` documentation](https://requests.readthedocs.io/"
-"en/latest/user/advanced/#proxies). The proxy can then handle the filtering."
-msgstr ""
-
-msgid "[API](../../dev/api)"
-msgstr ""
-
-msgid ""
-"[Prevent SSRF using a Tor proxy](../docker#preventing-ssrf-attacks-using-a-"
-"tor-proxy)"
-msgstr ""
-
-msgid "ALLOWED_HOSTS"
-msgstr ""
-
-msgid "default empty"
-msgstr ""
-
-msgid ""
-"The hosts divided by comma that the Open Web Calendar permits. This is "
-"required to mitigate the Host Header Injection vulnerability. You will see "
-"this text if the host is not allowed:"
-msgstr ""
-
-msgid ""
-"**Forbidden:** You don't have the permission to access the requested "
-"resource. It is either read-protected or not readable by the server.*"
-msgstr ""
-
-msgid "permit one host: `ALLOWED_HOSTS=localhost`"
-msgstr ""
-
-msgid "permit all hosts (vulnerable): `ALLOWED_HOSTS=`"
-msgstr ""
-
-msgid "PORT"
-msgstr ""
-
-msgid "default `5000`, default `80` in the Docker container"
-msgstr ""
-
-msgid "The port that the service is running on."
-msgstr ""
-
-msgid "WORKERS"
-msgstr ""
-
-msgid "default `4`, only for the Docker container"
-msgstr ""
-
-msgid "The number of parallel workers to handle requests."
-msgstr ""
-
-msgid "Serve on HTTP port: `PORT=80`"
-msgstr ""
-
-msgid "CACHE_REQUESTED_URLS_FOR_SECONDS"
-msgstr ""
-
-msgid "default `600`"
-msgstr ""
-
-msgid ""
-"Seconds to cache the calendar files that get downloaded to reduce bandwidth "
-"and delay."
-msgstr ""
-
-msgid "Only use one worker: `WORKERS=1`"
-msgstr ""
-
-msgid "Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`"
-msgstr ""
-
-msgid "APP_DEBUG"
-msgstr ""
-
-msgid ""
-"default `true`, values `true` or `false`, always `false` in the Docker "
-"container"
-msgstr ""
-
-msgid "Set the debug flag for the app."
-msgstr ""
-
-msgid ""
-"Environment variables only influence the running of the server. These "
-"environment variables can be used to configure the service:"
-msgstr ""
-
-msgid ""
-"The Open Web Calendar uses libraries whose behavior can be further "
-"customized."
-msgstr ""
-
-msgid ""
-"**Flask** has **[more environment variables](https://flask.palletsprojects."
-"com/en/3.0.x/config/)** available to configure how the application serves "
-"content."
-msgstr ""
-
-msgid ""
-"**Requests** is used the get the `.ics` files. You can [configure a proxy]."
-msgstr ""
-
-msgid "Configuring the Default Calendar"
-msgstr ""
-
-msgid "Configuring the Server"
-msgstr ""
-
-msgid ""
-"If you modify the default specification, you modify **all calendars** that "
-"are hosted at your instance. You might want to change these values:"
-msgstr ""
-
-msgid "Related:"
-msgstr ""
-
-msgid "Default Parameters"
-msgstr ""
-
-msgid ""
-"`ALLOWED_HOSTS` default empty The hosts divided by comma that the Open Web "
-"Calendar permits. This is required to mitigate the Host Header Injection "
-"vulnerability. You will see this text if the host is not allowed: "
-"*Forbidden: You don't have the permission to access the requested resource. "
-"It is either read-protected or not readable by the server.* Examples:"
-msgstr ""
-
-msgid "**Forbidden**"
-msgstr ""
-
-msgid ""
-"You don't have the permission to access the requested resource. It is either "
-"read-protected or not readable by the server."
-msgstr ""
-
-msgid "Translate"
-msgstr ""
-
-msgid "Cleanup translation files"
-msgstr ""
-
-msgid "Contributors in comment"
-msgstr ""
-
-msgid "Add missing languages"
-msgstr ""
-
-msgid ""
-"You can help us by [translating the project](https://hosted.weblate.org/"
-"engage/open-web-calendar/) to your language. If your language is not listed, "
-"please request to add it!"
-msgstr ""
-
-msgid "Here, you can see the current translation status:"
-msgstr ""
-
-msgid ""
-"[![Translation status](https://hosted.weblate.org/widgets/open-web-"
-"calendar/-/multi-auto.svg)](https://hosted.weblate.org/engage/open-web-"
-"calendar/)"
-msgstr ""
-
-msgid ""
-"Translations are contributed by volunteers and [logged](changelog.md). After "
-"48 hours they are usually life at the [hosted instance](https://open-web-"
-"calendar.hosted.quelltext.eu)."
-msgstr ""
-
-msgid ""
-"[Donate using Open Collective](https://opencollective.com/open-web-calendar/)"
-msgstr ""
-
-msgid ""
-"[Donate using GitHub Sponsors](https://github.com/sponsors/niccokunzmann)"
-msgstr ""
-
-msgid ""
-"If you are part of a company and you would like to commission work, please "
-"get in touch with Nicco Kunzmann."
-msgstr ""
-
-msgid "[Translate this project](../dev/translate)"
-msgstr ""
-
-msgid "[Translate this project](../dev/translate.md)"
-msgstr ""
-
-msgid "[Translate this project](dev/translate.md)"
-msgstr ""
-
-msgid ""
-"If you customized a calendar, please consider [contributing it as a template]"
-"(templates) for others to use."
-msgstr ""
-
-msgid ""
-"If you customized a calendar, please consider [contributing it as a template]"
-"(templates.md) for others to use."
-msgstr ""
-
-msgid "Contributing ♥️"
-msgstr ""
-
-msgid ""
-"[CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)"
-msgstr ""
-
-msgid ""
-"The Open Web Calendar support CalDAV for instant event synchronization. You "
-"can use it e.g. with Nextcloud."
-msgstr ""
-
-msgid ""
-"In the example below, we used CalDAV to create event that you can sign up to."
-msgstr ""
-
-msgid "URL-Encryoption"
-msgstr ""
-
-msgid ""
-"<iframe class=\"open-web-calendar\" id=\"\" style=\"background:url('https://"
-"raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/"
-"loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-"\" src=\"https://open-web-calendar.hosted.quelltext.eu/calendar.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"christmas-day.json&\" sandbox=\"allow-scripts allow-same-origin allow-top-"
-"navigation\" allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" "
-"height=\"600px\" width=\"300px\"></iframe>"
-msgstr ""
-
-msgid ""
-"<iframe class=\"open-web-calendar\" id=\"\" style=\"background:url('https://"
-"raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/"
-"loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-"\" src=\"https://open-web-calendar.hosted.quelltext.eu/calendar.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"family-planning.json&\" sandbox=\"allow-scripts allow-same-origin allow-top-"
-"navigation\" allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" "
-"height=\"600px\" width=\"100%\"></iframe>"
-msgstr ""
-
-msgid ""
-"<iframe class=\"open-web-calendar\" id=\"owcTimezoneExample\" "
-"style=\"background:url('https://raw.githubusercontent.com/niccokunzmann/open-"
-"web-calendar/master/static/img/loaders/circular-loader.gif') center center "
-"no-repeat; border-radius: 10px;\" src=\"https://open-web-calendar.hosted."
-"quelltext.eu/calendar.html?specification_url=https://open-web-calendar."
-"quelltext.eu/assets/templates/timezone-example.json&\" sandbox=\"allow-"
-"scripts allow-same-origin allow-top-navigation\" allowTransparency=\"true\" "
-"scrolling=\"no\" frameborder=\"0\" height=\"600px\" width=\"100%\"></iframe>"
-msgstr ""
-
-msgid ""
-"<iframe class=\"open-web-calendar\" id=\"\" style=\"background:url('https://"
-"raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/static/img/"
-"loaders/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-"\" src=\"https://open-web-calendar.hosted.quelltext.eu/calendar.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"free-and-busy.json&\" sandbox=\"allow-scripts allow-same-origin allow-top-"
-"navigation\" allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" "
-"height=\"600px\" width=\"100%\"></iframe>"
-msgstr ""
-
-msgid ""
-"style=\"background:url('https://raw.githubusercontent.com/niccokunzmann/open-"
-"web-calendar/master/static/img/loaders/circular-loader.gif') center center "
-"no-repeat; border-radius: 10px;\" src=\"https://open-web-calendar.hosted."
-"quelltext.eu/calendar.html?specification_url=https://open-web-calendar."
-"quelltext.eu/assets/templates/christmas-day.json&\" sandbox=\"allow-scripts "
-"allow-same-origin allow-top-navigation\" allowTransparency=\"true\" "
-"scrolling=\"no\" frameborder=\"0\" height=\"600px\" width=\"300px\"></iframe>"
-msgstr ""
-
-msgid "<iframe class=\"open-web-calendar\" id=\"\""
-msgstr ""
-
-msgid "```html <iframe class=\"open-web-calendar\" id=\"\""
-msgstr ""
-
-msgid ""
-"style=\"background:url('https://raw.githubusercontent.com/niccokunzmann/open-"
-"web-calendar/master/static/img/loaders/circular-loader.gif') center center "
-"no-repeat; border-radius: 10px;\" src=\"https://open-web-calendar.hosted."
-"quelltext.eu/calendar.html?specification_url=https://open-web-calendar."
-"quelltext.eu/assets/templates/free-and-busy.json&\" sandbox=\"allow-scripts "
-"allow-same-origin allow-top-navigation\" allowTransparency=\"true\" "
-"scrolling=\"no\" frameborder=\"0\" height=\"600px\" width=\"100%\"></iframe>"
-msgstr ""
-
-msgid ""
-"style=\"background:url('https://raw.githubusercontent.com/niccokunzmann/open-"
-"web-calendar/master/static/img/loaders/circular-loader.gif') center center "
-"no-repeat; border-radius: 10px;\" src=\"https://open-web-calendar.hosted."
-"quelltext.eu/calendar.html?specification_url=https://open-web-calendar."
-"quelltext.eu/assets/templates/free-and-busy.json&\" sandbox=\"allow-scripts "
-"allow-same-origin allow-top-navigation\" allowTransparency=\"true\" "
-"scrolling=\"no\" frameborder=\"0\" height=\"600px\" width=\"100%\"></"
-"iframe>     ```"
-msgstr ""
-
-msgid "<select id=\"timezoneOption\"></select>"
-msgstr ""
-
-msgid "</select>"
-msgstr ""
-
-msgid "<select id=\"timezoneOption\">    wzxhzdk:5"
-msgstr ""
-
-msgid "Timezones"
-msgstr ""
-
-msgid ""
-"The calendar allows choosing the time zone that the events are displayed in. "
-"Whether you have a local website or an international calendar, all is "
-"possible. It is possible to customize with JavaScript."
-msgstr ""
-
-msgid ""
-"The calendar allows choosing the time zone that the events are displayed in. "
-"Whether you have a local website or an international calendar, all is "
-"possible. It is also fairly easy to customize with JavaScript."
-msgstr ""
-
-msgid ""
-"The calendar allows choosing the time zone that the events are displayed in. "
-"Whether you have a local website or an international calendar, all is "
-"possible. It is also fairly easy to customize with JavaScript. You can edit "
-"the page to see how it is done."
-msgstr ""
-
-msgid "<select id=\"timezoneOption\">    wzxhzdk:3"
-msgstr ""
-
-msgid "<select id=\"timezoneOption\">    wzxhzdk:6"
-msgstr ""
-
-msgid ""
-"[app.py](https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81) compiles the "
-"specification from the given parameters in `get_specification()`. In the "
-"[template](https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx."
-"html#L23) you can access the specification through the `specification` "
-"variable. The specification is available to JavaScript as the "
-"`specification` variable."
-msgstr ""
-
-msgid ""
-"The default specification is available before the calendar is built via "
-"JavaScript in the `configuration.default_specification` variable. There is a "
-"[getSpecification()](https://github.com/niccokunzmann/open-web-calendar/"
-"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93) "
-"function which created the specification from the inputs. Generally, the "
-"`specification` variable should be used."
-msgstr ""
-
-msgid "If you add a new parameter as a developer,"
-msgstr ""
-
-msgid ""
-"You can change the calendar behavior and looks with parameters. These are "
-"the places to specify parameters:"
-msgstr ""
-
-msgid ""
-"**Query parameters** All parameters to the calendar url are put into the "
-"specification. The query parameters have the highest precedence. Examples:"
-msgstr ""
-
-msgid ""
-"**specification_url** If you specify this query parameter, the editor "
-"configuration is loaded from this url, too. Query parameters are still more "
-"important than what is written in this file. The source format can be YAML "
-"or JSON. Examples:"
-msgstr ""
-
-msgid ""
-"**[default_specification]** This file contains the default parameters. They "
-"must not be hard-coded in the source code. All of them are there. Query "
-"parameters and the `specification_url` override these values."
-msgstr ""
-
-msgid ""
-"**specification_url** If you specify this query parameter, the editor "
-"configuration is loaded from this url, too. Query parameters are still more "
-"important than what is written in this file. The source format can be YAML "
-"or JSON. Examples:         calendar.html?specification_url=https://github."
-"com/niccokunzmann/open-web-calendar/raw/master/default_specification.yml"
-msgstr ""
-
-msgid ""
-"**Query parameters** All parameters to the calendar url are put into the "
-"specification. The query parameters have the highest precedence. "
-"Examples:    ```txt    index.html?language=de calendar.html?"
-"title=CALENDAR    ```"
-msgstr ""
-
-msgid ""
-"`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that "
-"you CAN use this but you cannot be sure that the JSON schema remains the "
-"same. If you want that, add tests. Additional parameters are required:"
-msgstr ""
-
-msgid "Additional parameters are required:"
-msgstr ""
-
-msgid "=== YAML"
-msgstr ""
-
-msgid "=== JSON"
-msgstr ""
-
-msgid "Change the title in a YAML specification:  ```YAML title: calendar ``` "
-msgstr ""
-
-msgid ""
-"Change the title in a JSON specification:  ```json {   \"title\": "
-"\"calendar\" } ``` "
-msgstr ""
-
-msgid "Change the title by query parameter"
-msgstr ""
-
-msgid "Add it to your own specification as YML:"
-msgstr ""
-
-msgid "Add it to your own specification as JSON:"
-msgstr ""
-
-msgid "Add it to your own specification as YML:    wzxhzdk:1"
-msgstr ""
-
-msgid ""
-"Add it to your own specification as JSON:    ```json    {   \"title\": "
-"\"calendar\" }    ```"
-msgstr ""
-
-msgid "Change the title with a query parameter"
-msgstr ""
-
-msgid "Change it as query parameter"
-msgstr ""
-
-msgid "Change it as query parameter    wzxhzdk:0"
-msgstr ""
-
-msgid "![architecture](../assets/img/architecture.svg)"
-msgstr ""
-
-msgid ""
-"Change the title in a YAML specification:  ```json {   \"title\": "
-"\"calendar\" } ``` "
-msgstr ""
-
-msgid "```YAML title: calendar ``` "
-msgstr ""
-
-msgid "```json {   \"title\": \"calendar\" } ``` "
-msgstr ""
-
-msgid ""
-"`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that "
-"you CAN use this but you cannot be sure that the JSON schema remains the "
-"same. If you want that, add tests. Additional parameters are "
-"required:          - `timezone=UTC` - the timezone that you need to display "
-"the events in"
-msgstr ""
-
-msgid ""
-"**Query parameters** All parameters to the calendar url are put into the "
-"specification. The query parameters have the highest precedence. "
-"Examples:    ```    index.html?language=de calendar.html?title=CALENDAR    "
-"```"
-msgstr ""
-
-msgid ""
-"**Query parameters** All parameters to the calendar url are put into the "
-"specification. The query parameters have the highest precedence. "
-"Examples:         index.html?language=de      calendar.html?title=CALENDAR"
-msgstr ""
-
-msgid ""
-"If you modify the default specification, you modify **all calendars** that "
-"are hosted at your instance. Calendars still override some values for their "
-"configuration. Those which they do not override are affected. Not all values "
-"are exposed to the configuration page to be changed. Those values can still "
-"be changed in the [default_specification.yml] and the query parameters."
-msgstr ""
-
-msgid ""
-"There are loads more values that can be changed. Please refer to the "
-"[default_specification.yml]. These values are all documented."
-msgstr ""
-
-msgid "You might want to change these values:"
-msgstr ""
-
-msgid ""
-"If you modify the default specification, you modify **all calendars** that "
-"are hosted at your instance. Calendars still override some values for their "
-"configuration Those which they do not override are affected. Not all values "
-"are exposed to the configuration page to be changed. Those values can still "
-"be changed in the [default_specification.yml] and the query parameters."
-msgstr ""
-
-msgid ""
-"If you modify the default specification, you modify **all calendars** that "
-"are hosted at your instance. Calendars still override some values for their "
-"configuration Those which they do not override are affected. Not all values "
-"are exposed to the configuration page to be changed. Those values can still "
-"be changed in the [default_specification.yml] and the parameters."
-msgstr ""
-
-msgid "Configuring the Open Web Calender"
-msgstr ""
-
-msgid ""
-"If you modify the default specification, you modify **all calendars** that "
-"are hosted at your instance. Calendars still override some values for their "
-"configuration Those which they do not override are affected. Not all values "
-"are exposed to the configuration page to be changed."
-msgstr ""
-
-msgid ""
-"If you modify the default specification, you modify **all calendars** that "
-"are hosted at your instance. Calendars still override some values for their "
-"configuration Those which they do not override are affected."
-msgstr ""
-
-msgid "Configure"
-msgstr ""
-
-msgid ""
-"[How to configure all parameters](../configure/#configuring-the-default-"
-"calendar)"
-msgstr ""
-
-msgid "[](../configure/#configuring-the-default-calendar)"
-msgstr ""
-
-msgid ""
-"A hosted version exists at [open-web-calendar.hosted.quelltext.eu](https://"
-"open-web-calendar.hosted.quelltext.eu). You can use this version if you "
-"like. It is deployed from the latest version on the `master` branch. Thus, "
-"translation improvements go there after max. 48 hours. This version is "
-"intended to stay free of charge and is funded by [donation ♥️](../"
-"contributing.md)."
-msgstr ""
-
-msgid ""
-"[Repository](https://github.com/YunoHost-Apps/open-web-calendar_ynh/blob/"
-"master/ALL_README.md)"
-msgstr ""
-
-msgid ""
-"If you run your own server, you can choose to run the Open Web Calender with "
-"Docker. Building, running and updating are [documented here](../docker)."
-msgstr ""
-
-msgid ""
-"After you have set up your own server, you can [configure the behavior of "
-"the server](../configure)."
-msgstr ""
-
-msgid ""
-"After you have set up your own version, you can [configure the behavior of "
-"the server](../configure)."
-msgstr ""
-
-msgid "**Read about Configuration** further down."
-msgstr ""
-
-msgid "**Read about Configuration**"
-msgstr ""
-
-msgid "Environment Variables"
-msgstr ""
-
-msgid "COnfiguration with Default Parameters"
-msgstr ""
-
-msgid "[configure a proxy]:"
-msgstr ""
-
-msgid ""
-"**Requests** is used the get the `.ics` files. You can [configure a proxy]"
-msgstr ""
-
-msgid ""
-"Flask has **[more environment variables](https://flask.palletsprojects.com/"
-"en/3.0.x/config/)** available to configure how the application serves "
-"content."
-msgstr ""
-
-msgid ""
-"Environment variables only influence the running of the server. Flask has "
-"**[more environment variables](https://flask.palletsprojects.com/en/3.0.x/"
-"config/)** available to configure the application. These environment "
-"variables can be used to configure the service:"
-msgstr ""
-
-msgid ""
-"Environment variables only influence the running of the server. If you want "
-"to change the default design, read the next section."
-msgstr ""
-
-msgid ""
-"Flask has **[more environment variables](https://flask.palletsprojects.com/"
-"en/3.0.x/config/)** available to configure the application. These "
-"environment variables can be used to configure the service:"
-msgstr ""
-
-msgid ""
-"Environment variables only influence the running of the server. If you want "
-"to change the default design, read the next section. These environment "
-"variables can be used to configure the service:"
-msgstr ""
-
-msgid ""
-"`APP_DEBUG` default `true`, values `true` or `false`, always `false` in the "
-"Docker container Set the debug flag for the app."
-msgstr ""
-
-msgid ""
-"There are **[more environment variables](https://flask.palletsprojects.com/"
-"en/3.0.x/config/)** available to configure the application."
-msgstr ""
-
-msgid "`CACHE_REQUESTED_URLS_FOR_SECONDS=`"
-msgstr ""
-
-msgid "`WORKERS=4`"
-msgstr ""
-
-msgid ""
-"`CACHE_REQUESTED_URLS_FOR_SECONDS` default `600` Seconds to cache the "
-"calendar files that get downloaded to reduce bandwidth and delay."
-msgstr ""
-
-msgid "`PORT=8000`"
-msgstr ""
-
-msgid ""
-"`WORKERS` default `4` only for the Docker container The number of parallel "
-"workers to handle requests."
-msgstr ""
-
-msgid "permit one host: `localhost`"
-msgstr ""
-
-msgid "permit all hosts (vulnerable): empty"
-msgstr ""
-
-msgid ""
-"`PORT` default `5000`, default `80` in the Docker container The port that "
-"the service is running on."
-msgstr ""
-
-msgid ""
-"`ALLOWED_HOSTS` default empty The hosts divided by comma that the Open Web "
-"Calendar permits. This is required to mitigate the Host Header Injection "
-"vulnerability. You will see this text if the host is not allowed: "
-"*Forbidden: You don't have the permission to access the requested resource. "
-"It is either read-protected or not readable by the server.*"
-msgstr ""
-
-msgid ""
-"`ALLOWED_HOSTS` default empty The hosts divided by comma that the Open Web "
-"Calendar permits. This is required to mitigate the Host Header Injection "
-"vulnerability. You will see this text if the host is not allowed:"
-msgstr ""
-
-msgid ""
-"**Forbidden**: You don't have the permission to access the requested "
-"resource. It is either read-protected or not readable by the server. "
-"Examples:"
-msgstr ""
-
-msgid ""
-"**Forbidden**: You don't have the permission to access the requested "
-"resource. It is either read-protected or not readable by the server."
-msgstr ""
-
-msgid ""
-"![Repository, Watch, Custom, Releases](../assets/img/subscribe-to-release."
-"png)"
-msgstr ""
-
-msgid ""
-"If you run your own server, you can choose to run the Open Web Calender with "
-"Docker. Building, running and updating are [documented here](docker.md)."
-msgstr ""
-
-msgid ""
-"[Prevent SSRF using a Tor proxy](docker.md#preventing-ssrf-attacks-using-a-"
-"tor-proxy)"
-msgstr ""
-
-msgid ""
-"`ALLOWED_HOSTS` default empty The hosts divided by comma that the Open Web "
-"Calendar permits. This is required to mitigate the Host Header Injection "
-"vulnerability. You will see this text if the host is not allowed:        > "
-"**Forbidden**     >     > You don't have the permission to access the "
-"requested resource. It is either read-protected or not readable by the "
-"server."
-msgstr ""
-
-#, fuzzy
-#~ msgid ""
-#~ "permit several hosts: `ALLOWED_HOSTS=open-web-calendar.hosted.quelltext."
-#~ "eu,192.168.0.42`"
-#~ msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
-
-#, fuzzy
-#~ msgid ""
-#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-"
-#~ "calendar/)"
-#~ msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
-
 #~ msgid ""
 #~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
 #~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
@@ -1271,6 +510,92 @@ msgstr ""
 #~ msgstr "[See Examples](templates.md)"
 
 #, fuzzy
+#~ msgid "[translate]: #translate"
+#~ msgstr "[translate]: #translate"
+
+#~ msgid "Are you proud of your calendar? Share it here!"
+#~ msgstr "Are you proud of your calendar? Share it here!"
+
+#~ msgid ""
+#~ "Place all required `.ics` files in the [calendars](https://github.com/"
+#~ "niccokunzmann/open-web-calendar/tree/master/docs/assets/calendars) "
+#~ "directory."
+#~ msgstr ""
+#~ "Place all required `.ics` files in the [calendars](https://github.com/"
+#~ "niccokunzmann/open-web-calendar/tree/master/docs/assets/calendars) "
+#~ "directory."
+
+#~ msgid ""
+#~ "Download the specification of the calendar. And add it to the [templates]"
+#~ "(https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/"
+#~ "assets/templates) directory."
+#~ msgstr ""
+#~ "Download the specification of the calendar. And add it to the [templates]"
+#~ "(https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/"
+#~ "assets/templates) directory."
+
+#~ msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
+#~ msgstr ""
+#~ "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
+
+#~ msgid ""
+#~ "We have prepared a variety of different styles so you can edit them to "
+#~ "your needs. For each style, you can click on the `?` question mark in the "
+#~ "corner and edit the calendar. If you are inspired, you can also just head "
+#~ "over and [start from scratch](https://open-web-calendar.hosted.quelltext."
+#~ "eu)."
+#~ msgstr ""
+#~ "We have prepared a variety of different styles so you can edit them to "
+#~ "your needs. For each style, you can click on the `?` question mark in the "
+#~ "corner and edit the calendar. If you are inspired, you can also just head "
+#~ "over and [start from scratch](https://open-web-calendar.hosted.quelltext."
+#~ "eu)."
+
+#, fuzzy
+#~ msgid "[web]: https://open-web-calendar.hosted.quelltext.eu/"
+#~ msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master//default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master//default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
+
+#, fuzzy
+#~ msgid "[default_specification]: ../../assets/default_specification.yml"
+#~ msgstr "[default_specification]: ../../assets/default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/master/open_web_calendar/default_specification.yml"
+#~ msgstr ""
+#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
+#~ "calendar/blob/master/open_web_calendar/default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "permit several hosts: `ALLOWED_HOSTS=open-web-calendar.hosted.quelltext."
+#~ "eu,192.168.0.42`"
+#~ msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+#, fuzzy
+#~ msgid ""
+#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-"
+#~ "calendar/)"
+#~ msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
+
+#, fuzzy
 #~ msgid ""
 #~ "[Fund specific issues with Polar](https://polar.sh/niccokunzmann/open-web-"
 #~ "calendar)"
@@ -1284,13 +609,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "[Translate this project][translate]"
 #~ msgstr "[translate]: #translate"
-
-#, fuzzy
-#~ msgid "[translate]: #translate"
-#~ msgstr "[translate]: #translate"
-
-#~ msgid "Are you proud of your calendar? Share it here!"
-#~ msgstr "Are you proud of your calendar? Share it here!"
 
 #, fuzzy
 #~| msgid ""
@@ -1310,24 +628,6 @@ msgstr ""
 #~ "corner and edit the calendar. If you are inspired, you can also just head "
 #~ "over and [start from scratch](https://open-web-calendar.hosted.quelltext."
 #~ "eu)."
-
-#~ msgid ""
-#~ "Place all required `.ics` files in the [calendars](https://github.com/"
-#~ "niccokunzmann/open-web-calendar/tree/master/docs/assets/calendars) "
-#~ "directory."
-#~ msgstr ""
-#~ "Place all required `.ics` files in the [calendars](https://github.com/"
-#~ "niccokunzmann/open-web-calendar/tree/master/docs/assets/calendars) "
-#~ "directory."
-
-#~ msgid ""
-#~ "Download the specification of the calendar. And add it to the [templates]"
-#~ "(https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/"
-#~ "assets/templates) directory."
-#~ msgstr ""
-#~ "Download the specification of the calendar. And add it to the [templates]"
-#~ "(https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/"
-#~ "assets/templates) directory."
 
 #, fuzzy
 #~| msgid ""
@@ -1365,10 +665,6 @@ msgstr ""
 #~| msgid "Edit this file and add a section."
 #~ msgid "Edit this file and add a section. ```"
 #~ msgstr "Edit this file and add a section."
-
-#~ msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
-#~ msgstr ""
-#~ "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
 
 #, fuzzy
 #~| msgid ""
@@ -1426,19 +722,6 @@ msgstr ""
 #~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
 #~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 
-#~ msgid ""
-#~ "We have prepared a variety of different styles so you can edit them to "
-#~ "your needs. For each style, you can click on the `?` question mark in the "
-#~ "corner and edit the calendar. If you are inspired, you can also just head "
-#~ "over and [start from scratch](https://open-web-calendar.hosted.quelltext."
-#~ "eu)."
-#~ msgstr ""
-#~ "We have prepared a variety of different styles so you can edit them to "
-#~ "your needs. For each style, you can click on the `?` question mark in the "
-#~ "corner and edit the calendar. If you are inspired, you can also just head "
-#~ "over and [start from scratch](https://open-web-calendar.hosted.quelltext."
-#~ "eu)."
-
 #, fuzzy
 #~| msgid ""
 #~| "Below, you can see the source code that you need to add to your website. "
@@ -1448,10 +731,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Below, you can see the source code that you need to add to your website. "
 #~ "You might need to adjust the timezone selection and the id of the iframe."
-
-#, fuzzy
-#~ msgid "[web]: https://open-web-calendar.hosted.quelltext.eu/"
-#~ msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 
 #, fuzzy
 #~ msgid ""
@@ -1476,14 +755,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/tree/master//default_specification.yml"
-#~ msgstr ""
-#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/tree/master//default_specification.yml"
-
-#, fuzzy
-#~ msgid ""
 #~ "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
 #~ "calendar/raw/master/default_specification.yml "
 #~ msgstr ""
@@ -1492,30 +763,10 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
-#~ msgstr ""
-#~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/tree/master/open_web_calendar/default_specification.yml"
-
-#, fuzzy
-#~ msgid ""
 #~ "This functionality is provided by [flask-allowed-hosts](https://pypi.org/"
 #~ "project/flask-allowed-hosts/)."
 #~ msgstr ""
 #~ "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
-
-#, fuzzy
-#~ msgid "[default_specification]: ../../assets/default_specification.yml"
-#~ msgstr "[default_specification]: ../../assets/default_specification.yml"
-
-#, fuzzy
-#~ msgid ""
-#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/blob/master/open_web_calendar/default_specification.yml"
-#~ msgstr ""
-#~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
-#~ "calendar/blob/master/open_web_calendar/default_specification.yml"
 
 #, fuzzy
 #~ msgid ""

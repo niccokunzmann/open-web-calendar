@@ -472,85 +472,6 @@ msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
 msgid "[Gancio]: https://gancio.org/"
 msgstr "[Squid]: https://www.squid-cache.org/"
 
-msgid "Showcase"
-msgstr ""
-
-msgid "Further Configuration"
-msgstr ""
-
-msgid "Translate"
-msgstr ""
-
-msgid "Cleanup translation files"
-msgstr ""
-
-msgid "Contributors in comment"
-msgstr ""
-
-msgid "Add missing languages"
-msgstr ""
-
-msgid "Development"
-msgstr ""
-
-msgid "Hosting"
-msgstr ""
-
-msgid "News"
-msgstr ""
-
-msgid ""
-"You can help us by [translating the project](https://hosted.weblate.org/"
-"engage/open-web-calendar/) to your language. If your language is not listed, "
-"please request to add it!"
-msgstr ""
-
-msgid "Here, you can see the current translation status:"
-msgstr ""
-
-msgid ""
-"[![Translation status](https://hosted.weblate.org/widgets/open-web-"
-"calendar/-/multi-auto.svg)](https://hosted.weblate.org/engage/open-web-"
-"calendar/)"
-msgstr ""
-
-msgid ""
-"Translations are contributed by volunteers and [logged](changelog.md). After "
-"48 hours they are usually life at the [hosted instance](https://open-web-"
-"calendar.hosted.quelltext.eu)."
-msgstr ""
-
-#, fuzzy
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "rooms.json\" target=\"_blank\">Edit the calendar</a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "caldav-signup.json\" target=\"_blank\">Edit the calendar</a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-
-#, fuzzy
-#~| msgid "Examples"
-#~ msgid "Examples:"
-#~ msgstr "Examples"
-
-#, fuzzy
-#~ msgid ""
-#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-"
-#~ "calendar/)"
-#~ msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
-
 #, fuzzy
 #~ msgid ""
 #~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
@@ -637,54 +558,9 @@ msgstr ""
 #~ "(https://github.com/niccokunzmann/open-web-calendar/tree/master/docs/"
 #~ "assets/templates) directory."
 
-#, fuzzy
-#~| msgid "Edit this file and add a section."
-#~ msgid "Edit this file and add a section. ```"
-#~ msgstr "Edit this file and add a section."
-
 #~ msgid "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
 #~ msgstr ""
 #~ "[proxy parameters](host/self.md#ssrf-protection-with-a-proxy-server)"
-
-#, fuzzy
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">   Edit the calendar </a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "family-planning.json\" target=\"_blank\">   Edit the calendar </a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "timezone-example.json\" target=\"_blank\">   Edit the calendar </a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "free-and-busy.json\" target=\"_blank\">   Edit the calendar </a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 
 #~ msgid ""
 #~ "We have prepared a variety of different styles so you can edit them to "
@@ -730,3 +606,79 @@ msgstr ""
 #~ msgstr ""
 #~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
 #~ "calendar/blob/master/open_web_calendar/default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "rooms.json\" target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "caldav-signup.json\" target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+
+#, fuzzy
+#~| msgid "Examples"
+#~ msgid "Examples:"
+#~ msgstr "Examples"
+
+#, fuzzy
+#~ msgid ""
+#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-"
+#~ "calendar/)"
+#~ msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
+
+#, fuzzy
+#~| msgid "Edit this file and add a section."
+#~ msgid "Edit this file and add a section. ```"
+#~ msgstr "Edit this file and add a section."
+
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">   Edit the calendar </a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "family-planning.json\" target=\"_blank\">   Edit the calendar </a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "timezone-example.json\" target=\"_blank\">   Edit the calendar </a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "free-and-busy.json\" target=\"_blank\">   Edit the calendar </a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"

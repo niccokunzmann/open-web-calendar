@@ -470,54 +470,6 @@ msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
 msgid "[Gancio]: https://gancio.org/"
 msgstr "[Gancio]: https://gancio.org/"
 
-msgid "Translate"
-msgstr ""
-
-msgid "Cleanup translation files"
-msgstr ""
-
-msgid "Contributors in comment"
-msgstr ""
-
-msgid "Add missing languages"
-msgstr ""
-
-msgid "Development"
-msgstr ""
-
-msgid "Hosting"
-msgstr ""
-
-msgid "News"
-msgstr ""
-
-msgid ""
-"You can help us by [translating the project](https://hosted.weblate.org/"
-"engage/open-web-calendar/) to your language. If your language is not listed, "
-"please request to add it!"
-msgstr ""
-
-msgid "Here, you can see the current translation status:"
-msgstr ""
-
-msgid ""
-"[![Translation status](https://hosted.weblate.org/widgets/open-web-"
-"calendar/-/multi-auto.svg)](https://hosted.weblate.org/engage/open-web-"
-"calendar/)"
-msgstr ""
-
-msgid ""
-"Translations are contributed by volunteers and [logged](changelog.md). After "
-"48 hours they are usually life at the [hosted instance](https://open-web-"
-"calendar.hosted.quelltext.eu)."
-msgstr ""
-
-#, fuzzy
-#~ msgid ""
-#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-"
-#~ "calendar/)"
-#~ msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
-
 #~ msgid ""
 #~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
 #~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
@@ -651,3 +603,9 @@ msgstr ""
 #~ msgstr ""
 #~ "[default_specification.yml]: https://github.com/niccokunzmann/open-web-"
 #~ "calendar/blob/master/open_web_calendar/default_specification.yml"
+
+#, fuzzy
+#~ msgid ""
+#~ "[Translate on Weblate](https://hosted.weblate.org/engage/open-web-"
+#~ "calendar/)"
+#~ msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
