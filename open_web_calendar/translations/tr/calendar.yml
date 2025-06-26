@@ -1,30 +1,30 @@
 date_month_full_jan: "Ocak"
-date_month_full_feb: "Þubat"
+date_month_full_feb: "Şubat"
 date_month_full_mar: "Mart"
 date_month_full_apr: "Nisan"
-date_month_full_may: "Mayýs"
+date_month_full_may: "Mayıs"
 date_month_full_jun: "Haziran"
 date_month_full_jul: "Temmuz"
-date_month_full_aug: "Aðustos"
+date_month_full_aug: "Ağustos"
 date_month_full_sep: "Eylül"
 date_month_full_oct: "Ekim"
-date_month_full_nov: "Kasým"
-date_month_full_dec: "Aralýk"
+date_month_full_nov: "Kasım"
+date_month_full_dec: "Aralık"
 date_month_short_jan: "Oca"
 date_month_short_feb: "Şub"
 date_month_short_apr: "Nis"
 date_month_short_jun: "Haz"
 date_month_short_jul: "Tem"
-date_month_short_aug: "Aðu"
+date_month_short_aug: "Ağu"
 date_month_short_sep: "Eyl"
 date_month_short_oct: "Eki"
 date_month_short_nov: "Kas"
 date_month_short_dec: "Ara"
 date_day_full_sun: "Pazar"
-date_day_full_mon: "Pazartes,"
-date_day_full_tue: "Salý"
-date_day_full_wed: "Çarþamba"
-date_day_full_thu: "Perþembe"
+date_day_full_mon: "Pazartesi"
+date_day_full_tue: "Salı"
+date_day_full_wed: "Çarşamba"
+date_day_full_thu: "Perşembe"
 date_day_full_fri: "Cuma"
 date_day_full_sat: "Cumartesi"
 date_day_short_sun: "Paz"
@@ -38,11 +38,11 @@ labels_dhx_cal_today_button: "Bugün"
 labels_day_tab: "Gün"
 labels_week_tab: "Hafta"
 labels_month_tab: "Ay"
-labels_section_description: "Açýklama"
-labels_section_time: "Zaman aralýðý"
+labels_section_description: "Açıklama"
+labels_section_time: "Zaman aralığı"
 labels_agenda_tab: "Ajanda"
 labels_date: "Tarih"
-labels_description: "Açýklama"
+labels_description: "Açıklama"
 labels_week_agenda_tab: "Ajanda"
 language-en: "Turkish"
 labels_day: Gün
@@ -56,7 +56,7 @@ date_month_short_may: May
 language: Türkçe
 labels_month: Ay
 signup-name: Ad
-icon_subscribe: Takvime Ekle
-icon_signup: Kayıt Ol
+icon_subscribe: Takvimime Ekle
+icon_signup: Üye Ol
 label_participants: Katılımcılar
-signup-email: e-posta
+signup-email: E-posta
