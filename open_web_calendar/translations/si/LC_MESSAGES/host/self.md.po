@@ -137,22 +137,6 @@ msgid ""
 "![Repository, Watch, Custom, Releases](/assets/img/subscribe-to-release.png)"
 msgstr ""
 
-#, fuzzy
-msgid ""
-"[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
-"calendar.hosted.quelltext.eu"
-msgstr ""
-"[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
-"calendar.hosted.quelltext.eu"
-
-#, fuzzy
-msgid ""
-"[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
-"calendar.hosted.quelltext.eu"
-msgstr ""
-"[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
-"calendar.hosted.quelltext.eu"
-
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"

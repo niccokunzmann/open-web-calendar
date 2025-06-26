@@ -7,8 +7,7 @@ msgstr ""
 "POT-Creation-Date: 2024-05-31 18:26+0200\n"
 "PO-Revision-Date: 2025-01-24 23:11+0000\n"
 "Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/"
-"documentation-api/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/documentation-api/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,98 +16,10 @@ msgstr ""
 "X-Generator: Weblate 5.10-dev\n"
 
 msgid ""
-"The API of the Open Web Calendar allows more customization than the "
-"configuration page."
-msgstr ""
-
-msgid "API"
-msgstr ""
-
-msgid ""
-"Generally, the Open Web Calendar is there to be used without restriction. "
-"You can use this API to customize the calendar on the fly."
-msgstr ""
-
-msgid "This section can be of use if one of these applies:"
-msgstr ""
-
-msgid "You are a web developer who wants to embed the Open Web Calendar."
-msgstr ""
-
-msgid ""
-"You want to exploit the full flexibility, not just what is exposed on the "
-"configuration page."
-msgstr ""
-
-msgid ""
-"You want to use JavaScript to dynamically generate the calendar design and "
-"options."
-msgstr ""
-
-msgid "You want to extend the functionality of the Open Web Calendar."
-msgstr ""
-
-msgid ""
-"You want to use the Open Web Calendar as a proxy to request JSON events for "
-"your self-made event feed."
-msgstr ""
-
-msgid "Endpoints"
-msgstr ""
-
-msgid "The basic parameters are the same at these endpoints:"
-msgstr ""
-
-msgid "`/index.html` - edit the calendar"
-msgstr ""
-
-msgid "`/about.html` - view the about page"
-msgstr ""
-
-msgid "`/calendar.html` - view the calendar"
-msgstr ""
-
-msgid "`/calendar.spec` - download the specification"
-msgstr ""
-
-msgid "`/calendar.ics` - subscribe to the ics file"
-msgstr ""
-
-msgid ""
 "`/calendar.json` - information about the calendar and the content as JSON"
 msgstr ""
 
-msgid ""
-"`/calendar.events.json` - FLEXIBLE - get the events as JSON Please note that "
-"you CAN use this but you cannot be sure that the JSON schema remains the "
-"same. If you want that, add tests."
-msgstr ""
-
 msgid "Additional parameters are required for `/calendar.events.json`:"
-msgstr ""
-
-msgid "`timezone=UTC` - the timezone that you need to display the events in"
-msgstr ""
-
-msgid ""
-"`from=YYYY-MM-DD` - the start of the period in which events happen "
-"(inclusive)"
-msgstr ""
-
-msgid ""
-"`to=YYYY-MM-DD` - the end of the period in which events happen (exclusive)"
-msgstr ""
-
-msgid "Parameters"
-msgstr ""
-
-msgid ""
-"All configuration parameters are described sufficiently in the "
-"[default_specification]. That is the reference. E.g. if you find the "
-"parameter `title` in the [default_specification], you have several options:"
-msgstr ""
-
-msgid "Compiling the Specification"
 msgstr ""
 
 msgid ""
@@ -117,20 +28,17 @@ msgid ""
 "has the highest precedence. These are the places to specify parameters:"
 msgstr ""
 
-msgid "Query parameters"
-msgstr ""
-
 msgid ""
-"All parameters to the calendar url are put into the specification. The query "
-"parameters have the highest precedence."
+"All parameters to the calendar url are put into the specification. The query"
+" parameters have the highest precedence."
 msgstr ""
 
 msgid "specification_url"
 msgstr ""
 
 msgid ""
-"If you specify this query parameter, the editor configuration is loaded from "
-"this url, too. Query parameters are still more important than what is "
+"If you specify this query parameter, the editor configuration is loaded from"
+" this url, too. Query parameters are still more important than what is "
 "written in this file. The source format can be YAML or JSON."
 msgstr ""
 
@@ -150,23 +58,17 @@ msgstr ""
 
 msgid ""
 "This file contains the default parameters. They must not be hard-coded in "
-"the source code. All parameters are listed and documented there so this file "
-"can be used for reference. Do not modify this file, instead use the "
+"the source code. All parameters are listed and documented there so this file"
+" can be used for reference. Do not modify this file, instead use the "
 "`OWC_SPECIFICATION` environment variable."
-msgstr ""
-
-msgid "Adding Parameters"
 msgstr ""
 
 msgid "If you add a new parameter as a developer:"
 msgstr ""
 
-msgid "Add the parameter with a default value to the [default_specification]"
-msgstr ""
-
 msgid ""
-"Add an implementation, depending on its use in the `app.py` or the templates "
-"of the JavaScript files. The specification is already available in all of "
+"Add an implementation, depending on its use in the `app.py` or the templates"
+" of the JavaScript files. The specification is already available in all of "
 "them to use."
 msgstr ""
 
@@ -180,9 +82,6 @@ msgid ""
 "parameter can be used when a calendar is edited."
 msgstr ""
 
-msgid "Specification in the Calendar"
-msgstr ""
-
 msgid ""
 "[app.py][app.py-81] compiles the specification from the given parameters in "
 "`get_specification()`. In the [template][dhtmlx-23] you can access the "
@@ -193,20 +92,11 @@ msgstr ""
 msgid "[JavaScript Customization](../javascript)"
 msgstr ""
 
-msgid "Specification in the Index Page"
-msgstr ""
-
 msgid ""
 "The default specification is available before the calendar is built via "
-"JavaScript in the `configuration.default_specification` variable. There is a "
-"[getSpecification()] function which created the specification from the "
+"JavaScript in the `configuration.default_specification` variable. There is a"
+" [getSpecification()] function which created the specification from the "
 "inputs. Generally, the `specification` variable should be used."
-msgstr ""
-
-msgid "Architecture"
-msgstr ""
-
-msgid "Below, you can find a picture of the architecture."
 msgstr ""
 
 msgid "![architecture](/assets/img/architecture.svg)"
@@ -218,8 +108,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"After the specification is compiled, the calendar (ics) files are downloaded "
-"from the locations on the Internet."
+"After the specification is compiled, the calendar (ics) files are downloaded"
+" from the locations on the Internet."
 msgstr ""
 
 msgid "From the calendar files, the events are generated."
@@ -238,22 +128,10 @@ msgid ""
 "processing."
 msgstr ""
 
-msgid "Query Parameter"
-msgstr ""
-
 msgid "YAML"
 msgstr ""
 
 msgid "JSON"
-msgstr ""
-
-msgid "Change the title in a query parameter:"
-msgstr ""
-
-msgid "Change the title in a YAML specification:"
-msgstr ""
-
-msgid "Change the title in a JSON specification:"
 msgstr ""
 
 msgid "index.html?language=de calendar.html?title=CALENDAR "
@@ -263,15 +141,6 @@ msgid ""
 "calendar.html?specification_url=https://github.com/niccokunzmann/open-web-"
 "calendar/raw/master/open_web_calendar/default_specification.yml "
 msgstr ""
-
-msgid ""
-"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-msgstr ""
-"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-"christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"
@@ -286,25 +155,24 @@ msgstr ""
 #~ "oder `persönlich`. Termine können nur einmal stattfinden oder wiederholt."
 
 #~ msgid ""
-#~ "This calendar is not styled but contains events that can be hosted behind "
-#~ "a firewall on a little anonymous server. [Example](https://tor.open-web-"
-#~ "calendar.hosted.quelltext.eu/calendar.html?"
-#~ "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~ "onion%2Fone-day-event-repeat-every-day.ics)"
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 #~ msgstr ""
 #~ "Dieser Kalender ist nicht schön gemacht aber enthält Termine, die hinter "
-#~ "einer Firewall auf einem anonymen Server liegen. [Beispiel](https://tor."
-#~ "open-web-calendar.hosted.quelltext.eu/calendar.html?"
-#~ "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~ "onion%2Fone-day-event-repeat-every-day.ics)"
+#~ "einer Firewall auf einem anonymen Server liegen. "
+#~ "[Beispiel](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
 #~ msgid ""
-#~ "Below, you can see the source code that you need to add to your website. "
-#~ "You might need to adjust the timezone selection and the id of the iframe."
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
 #~ msgstr ""
-#~ "Hier drunter findest Du den Quelltext, den Du zu deiner Webseite "
-#~ "hinzufügen kannst. Wahrscheinlich müssen die Zeitzonenauswahl und die "
-#~ "iframe-ID angepasst werden."
+#~ "Hier drunter findest Du den Quelltext, den Du zu deiner Webseite hinzufügen "
+#~ "kannst. Wahrscheinlich müssen die Zeitzonenauswahl und die iframe-ID "
+#~ "angepasst werden."
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Editiere diese Datei und füge einen Abschnitt hinzu."

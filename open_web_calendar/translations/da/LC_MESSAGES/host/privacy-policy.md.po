@@ -38,12 +38,6 @@ msgid ""
 "Pages. Their [Privacy Policy][privacy-policy] applies."
 msgstr ""
 
-#, fuzzy
-msgid ""
-"[privacy-policy]: https://docs.github.com/en/site-policy/privacy-policies/"
-msgstr ""
-"[privacy-policy]: https://docs.github.com/en/site-policy/privacy-policies/"
-
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"

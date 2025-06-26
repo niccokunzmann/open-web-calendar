@@ -34,8 +34,8 @@ msgid "Configuring the Default Calendar"
 msgstr ""
 
 msgid ""
-"The configuration of all calendars is rooted in the [default_specification]. "
-"All those values can be changed through a copy of this file hosted on the "
+"The configuration of all calendars is rooted in the [default_specification]."
+" All those values can be changed through a copy of this file hosted on the "
 "web through the calendar parameter `specification_url`. Each parameter "
 "should be documented in [default_specification]."
 msgstr ""
@@ -90,14 +90,14 @@ msgid "`privacy_policy`"
 msgstr ""
 
 msgid ""
-"If you host this service yourself, you can use the default [privacy policy]"
-"[privacy-policy]."
+"If you host this service yourself, you can use the default [privacy "
+"policy][privacy-policy]."
 msgstr ""
 
 msgid ""
-"If for some reason you decide to collect data i.e. in the HTTPS proxy or log "
-"IP-addresses, then you need to create your own privacy policy. You can link "
-"to the one of this project."
+"If for some reason you decide to collect data i.e. in the HTTPS proxy or log"
+" IP-addresses, then you need to create your own privacy policy. You can link"
+" to the one of this project."
 msgstr ""
 
 msgid "More Values"
@@ -203,8 +203,8 @@ msgstr ""
 
 msgid ""
 "This is the maximum cache size in megabytes. This size is limited to 200MB "
-"in order to mitigate the cache filling the file system or in case of `/tmp/` "
-"the RAM."
+"in order to mitigate the cache filling the file system or in case of `/tmp/`"
+" the RAM."
 msgstr ""
 
 msgid "Use 1 GB for caching: `CACHE_SIZE=1024`"
@@ -237,8 +237,8 @@ msgid "OWC_ENCRYPTION_KEYS"
 msgstr ""
 
 msgid ""
-"This is a comma separated list of encryption keys. These can be used to hide "
-"sensitive information of URLs."
+"This is a comma separated list of encryption keys. These can be used to hide"
+" sensitive information of URLs."
 msgstr ""
 
 msgid "Disable encryption (default): `OWC_ENCRYPTION_KEYS=`"
@@ -314,14 +314,14 @@ msgid ""
 msgstr ""
 
 msgid ""
-"**Flask** has **[more environment variables](https://flask.palletsprojects."
-"com/en/3.0.x/config/)** available to configure how the application serves "
-"content."
+"**Flask** has **[more environment "
+"variables](https://flask.palletsprojects.com/en/3.0.x/config/)** available "
+"to configure how the application serves content."
 msgstr ""
 
 msgid ""
-"**Requests** is used the get the `.ics` files. You can [configure a proxy]"
-"(#ssrf-protection-with-a-proxy-server)."
+"**Requests** is used the get the `.ics` files. You can [configure a "
+"proxy](#ssrf-protection-with-a-proxy-server)."
 msgstr ""
 
 msgid "The Open Web Calendar relies on proxy servers for these features:"
@@ -346,8 +346,8 @@ msgstr ""
 msgid ""
 "**Restricting Access to Calendars** By default, the Open Web Calendar does "
 "not restrict which calendars to show. Use the proxy server to filter the "
-"calendars. If you run the Open Web Calendar behind a firewall with other web "
-"services, setting up a proxy is necessary to protect from SSRF attacks."
+"calendars. If you run the Open Web Calendar behind a firewall with other web"
+" services, setting up a proxy is necessary to protect from SSRF attacks."
 msgstr ""
 
 msgid "SSRF Protection with a Proxy Server"
@@ -355,11 +355,12 @@ msgstr ""
 
 msgid ""
 "The Open Web Calendar can be used to access the local network behind a "
-"firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-calendar/"
-"issues/250). This free access is intended to show calendars from everywhere. "
-"Since `requests` is used by the Open Web Calendar, it can use a proxy as "
-"described in the [`requests` documentation](https://requests.readthedocs.io/"
-"en/latest/user/advanced/#proxies). The proxy can then handle the filtering."
+"firewall, see [Issue 250](https://github.com/niccokunzmann/open-web-"
+"calendar/issues/250). This free access is intended to show calendars from "
+"everywhere. Since `requests` is used by the Open Web Calendar, it can use a "
+"proxy as described in the [`requests` "
+"documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies)."
+" The proxy can then handle the filtering."
 msgstr ""
 
 msgid ""
@@ -384,9 +385,9 @@ msgid "In Linux, create `/etc/squid/conf.d/open-web-calendar.conf`:"
 msgstr ""
 
 msgid ""
-"The list above denies the Open Web Calendar access to all known local/"
-"internal networks. If you have your own local network (IPv4 or IPv6), add it "
-"to the list above to be sure."
+"The list above denies the Open Web Calendar access to all known "
+"local/internal networks. If you have your own local network (IPv4 or IPv6), "
+"add it to the list above to be sure."
 msgstr ""
 
 msgid "On Linux, you can install the file with this command:"
@@ -396,8 +397,8 @@ msgid "Then, restart the squid proxy."
 msgstr ""
 
 msgid ""
-"Set the environment variables to tell the Open Web Calendar to use the Squid "
-"proxy installed on `localhost`. Setting this variable changes depending on "
+"Set the environment variables to tell the Open Web Calendar to use the Squid"
+" proxy installed on `localhost`. Setting this variable changes depending on "
 "how you run the Open Web Calendar."
 msgstr ""
 
@@ -426,14 +427,40 @@ msgid ""
 msgstr ""
 
 #, fuzzy
+msgid "[default_specification]: /assets/default_specification.yml"
+msgstr "[default_specification]: /assets/default_specification.yml"
+
+#, fuzzy
+msgid "[privacy-policy]: ../privacy-policy"
+msgstr "[privacy-policy]: ../privacy-policy"
+
+#, fuzzy
+msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
+
+#, fuzzy
+msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
+msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
+
+#, fuzzy
+msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+
+#, fuzzy
+msgid "[1]: ../pypi"
+msgstr "[1]: ../pypi"
+
+#, fuzzy
 #~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 #~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ "<a href=\"https://open-web-"
+#~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
+#~ "calendar.quelltext.eu/assets/templates/christmas-day.json\" "
+#~ "target=\"_blank\">Edit the calendar</a>"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
@@ -448,49 +475,22 @@ msgstr ""
 #~ "Events can be single events or occur every day."
 
 #~ msgid ""
-#~ "This calendar is not styled but contains events that can be hosted behind "
-#~ "a firewall on a little anonymous server. [Example](https://tor.open-web-"
-#~ "calendar.hosted.quelltext.eu/calendar.html?"
-#~ "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~ "onion%2Fone-day-event-repeat-every-day.ics)"
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 #~ msgstr ""
-#~ "This calendar is not styled but contains events that can be hosted behind "
-#~ "a firewall on a little anonymous server. [Example](https://tor.open-web-"
-#~ "calendar.hosted.quelltext.eu/calendar.html?"
-#~ "url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
-#~ "onion%2Fone-day-event-repeat-every-day.ics)"
+#~ "This calendar is not styled but contains events that can be hosted behind a "
+#~ "firewall on a little anonymous server. [Example](https://tor.open-web-"
+#~ "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
+#~ "day-event-repeat-every-day.ics)"
 
 #~ msgid ""
-#~ "Below, you can see the source code that you need to add to your website. "
-#~ "You might need to adjust the timezone selection and the id of the iframe."
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
 #~ msgstr ""
-#~ "Below, you can see the source code that you need to add to your website. "
-#~ "You might need to adjust the timezone selection and the id of the iframe."
+#~ "Below, you can see the source code that you need to add to your website. You"
+#~ " might need to adjust the timezone selection and the id of the iframe."
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
-
-#, fuzzy
-#~ msgid "[default_specification]: /assets/default_specification.yml"
-#~ msgstr "[default_specification]: /assets/default_specification.yml"
-
-#, fuzzy
-#~ msgid "[privacy-policy]: ../privacy-policy"
-#~ msgstr "[privacy-policy]: ../privacy-policy"
-
-#, fuzzy
-#~ msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
-#~ msgstr ""
-#~ "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
-
-#, fuzzy
-#~ msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
-#~ msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
-
-#, fuzzy
-#~ msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
-#~ msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
-
-#, fuzzy
-#~ msgid "[1]: ../pypi"
-#~ msgstr "[1]: ../pypi"

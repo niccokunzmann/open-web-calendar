@@ -68,10 +68,6 @@ msgid "[Uptime service monitor for the hosted instances][kuma]"
 msgstr ""
 
 #, fuzzy
-msgid "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
-msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
-
-#, fuzzy
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
