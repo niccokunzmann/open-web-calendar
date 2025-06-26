@@ -21,13 +21,13 @@ msgstr ""
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
+msgid "[See Examples](templates)"
+msgstr ""
+
 msgid "Custom Date & Time Range"
 msgstr ""
 
 msgid "Custom Title & Icon"
-msgstr ""
-
-msgid "[See Examples](templates)"
 msgstr ""
 
 msgid ""
@@ -37,22 +37,6 @@ msgstr ""
 
 msgid "[Developer API](dev/api)"
 msgstr ""
-
-#~ msgid "Getting Started"
-#~ msgstr "Getting Started"
-
-#~ msgid ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
-#~ "(host/self.md)"
-#~ msgstr ""
-#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
-#~ "(host/self.md)"
-
-#~ msgid "[Developer API](dev/api.md)"
-#~ msgstr "[Developer API](dev/api.md)"
-
-#~ msgid "[See Examples](templates.md)"
-#~ msgstr "[See Examples](templates.md)"
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
@@ -97,3 +81,19 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
+
+#~ msgid "Getting Started"
+#~ msgstr "Getting Started"
+
+#~ msgid ""
+#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
+#~ "(host/self.md)"
+#~ msgstr ""
+#~ "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
+#~ "(host/self.md)"
+
+#~ msgid "[Developer API](dev/api.md)"
+#~ msgstr "[Developer API](dev/api.md)"
+
+#~ msgid "[See Examples](templates.md)"
+#~ msgstr "[See Examples](templates.md)"

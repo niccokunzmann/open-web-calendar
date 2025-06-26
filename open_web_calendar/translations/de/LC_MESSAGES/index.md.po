@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
-"POT-Creation-Date: 2024-05-25 22:37+0200\n"
+"POT-Creation-Date: 2024-05-26 22:54+0200\n"
 "PO-Revision-Date: 2024-09-04 09:26+0000\n"
 "Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/open-web-calendar/"
@@ -15,8 +15,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.7.2-rc\n"
 
+msgid "Customize Your Own Online Calendar Display"
+msgstr ""
+
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
+
+msgid "[See Examples](templates)"
+msgstr ""
+
+msgid "Custom Date & Time Range"
+msgstr ""
+
+msgid "Custom Title & Icon"
+msgstr ""
+
+msgid ""
+"[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
+"(host/self)"
+msgstr ""
+
+msgid "[Developer API](dev/api)"
+msgstr ""
+
+msgid ""
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+"christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+msgstr ""
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+"specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+"christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"

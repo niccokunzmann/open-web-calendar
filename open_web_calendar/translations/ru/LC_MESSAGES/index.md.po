@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
-"POT-Creation-Date: 2024-05-25 07:30+0200\n"
+"POT-Creation-Date: 2024-05-26 22:54+0200\n"
 "PO-Revision-Date: 2025-04-21 16:05+0000\n"
 "Last-Translator: Yurt Page <yurtpage@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/open-web-"
@@ -22,58 +22,7 @@ msgstr ""
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
-msgid "A highly flexible calendar display for your website."
-msgstr ""
-
-msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
-
-msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr ""
-
 msgid "[See Examples](templates)"
-msgstr ""
-
-msgid "Features"
-msgstr ""
-
-msgid "Instant Event Syncing"
-msgstr ""
-
-msgid "<center>✔</center>"
-msgstr ""
-
-msgid "Embed with an HTML snippet"
-msgstr ""
-
-msgid "Desktop and Mobile"
-msgstr ""
-
-msgid "Multi-Language Support"
-msgstr ""
-
-msgid "Fixed and Automatic Timezone"
-msgstr ""
-
-msgid "Easy Editing"
-msgstr ""
-
-msgid "Designs To Choose"
-msgstr ""
-
-msgid "Multiple Calendar Sources"
-msgstr ""
-
-msgid "Style per Calendar, Category and more"
-msgstr ""
-
-msgid "Custom CSS"
-msgstr ""
-
-msgid "Day, Week, Month, Agenda"
-msgstr ""
-
-msgid "Work Week"
 msgstr ""
 
 msgid "Custom Date & Time Range"
@@ -82,32 +31,33 @@ msgstr ""
 msgid "Custom Title & Icon"
 msgstr ""
 
-msgid "Click on Event Location"
-msgstr ""
-
-msgid "Styled Event Descriptions"
-msgstr ""
-
-msgid "FOSS - No Vendor Lock-In"
-msgstr ""
-
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted]"
 "(host/self)"
 msgstr ""
 
-msgid "Subscribe Link"
-msgstr ""
-
-msgid "Community and Paid Support"
-msgstr ""
-
 msgid "[Developer API](dev/api)"
 msgstr ""
 
-#, fuzzy
-#~ msgid "[Squid]: https://www.squid-cache.org/"
-#~ msgstr "[Squid]: https://www.squid-cache.org/"
+msgid ""
+"This calendar is not styled but contains events that can be hosted behind a "
+"firewall on a little anonymous server. [Example](https://tor.open-web-"
+"calendar.hosted.quelltext.eu/calendar.html?"
+"url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
+"onion%2Fone-day-event-repeat-every-day.ics)"
+msgstr ""
+"This calendar is not styled but contains events that can be hosted behind a "
+"firewall on a little anonymous server. [Example](https://tor.open-web-"
+"calendar.hosted.quelltext.eu/calendar.html?"
+"url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd."
+"onion%2Fone-day-event-repeat-every-day.ics)"
+
+msgid ""
+"Below, you can see the source code that you need to add to your website. You "
+"might need to adjust the timezone selection and the id of the iframe."
+msgstr ""
+"Below, you can see the source code that you need to add to your website. You "
+"might need to adjust the timezone selection and the id of the iframe."
 
 #, fuzzy
 #~ msgid ""
@@ -133,3 +83,7 @@ msgstr ""
 
 #~ msgid "Edit this file and add a section."
 #~ msgstr "Edit this file and add a section."
+
+#, fuzzy
+#~ msgid "[Squid]: https://www.squid-cache.org/"
+#~ msgstr "[Squid]: https://www.squid-cache.org/"
