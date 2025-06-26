@@ -16,6 +16,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.8-dev\n"
 
+msgid "Configure a hosted instance."
+msgstr ""
+
+msgid "Server Configuration"
+msgstr ""
+
+msgid ""
+"If you want to change the Open Web Calendar to serve your needs, this is "
+"well possible. You can choose to"
+msgstr ""
+
+msgid "Change how the default calendar looks."
+msgstr ""
+
+msgid "Change how the server works."
+msgstr ""
+
 msgid "Configuring the Default Calendar"
 msgstr ""
 
@@ -35,22 +52,58 @@ msgid ""
 "`specification_url` and the query parameters."
 msgstr ""
 
+msgid "You might want to change the following values."
+msgstr ""
+
 msgid "`title`"
+msgstr ""
+
+msgid "The title of your website."
 msgstr ""
 
 msgid "`language`"
 msgstr ""
 
+msgid ""
+"This is the default language. You might want to change this to serve the "
+"configuration page better to a local audience."
+msgstr ""
+
 msgid "`favicon`"
+msgstr ""
+
+msgid "This is a link to the website icon."
 msgstr ""
 
 msgid "`source_code`"
 msgstr ""
 
+msgid ""
+"If you made changes, you are legally required to disclose them to visitors. "
+"Please adjust the link or contribute them back to the main project."
+msgstr ""
+
 msgid "`contributing`"
 msgstr ""
 
+msgid "If you want to redirect to contribute to your project."
+msgstr ""
+
 msgid "`privacy_policy`"
+msgstr ""
+
+msgid ""
+"If you host this service yourself, you can use the default [privacy policy]"
+"[privacy-policy]."
+msgstr ""
+
+msgid ""
+"If for some reason you decide to collect data i.e. in the HTTPS proxy or log "
+"IP-addresses, then you need to create your own privacy policy. You can link "
+"to the one of this project."
+msgstr ""
+
+msgid "More Values"
 msgstr ""
 
 msgid ""
@@ -77,8 +130,26 @@ msgid "default empty"
 msgstr ""
 
 msgid ""
+"The clients divided by comma that are allowed to access the Open Web "
+"Calendar. You will see this text if you try to access the service and you "
+"are not allowed:"
+msgstr ""
+
+msgid ""
 "**Forbidden:** You don't have the permission to access the requested "
 "resource. It is either read-protected or not readable by the server.*"
+msgstr ""
+
+msgid "permit only the same computer: `ALLOWED_HOSTS=localhost`"
+msgstr ""
+
+msgid ""
+"permit several hosts: `ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com`"
+msgstr ""
+
+msgid ""
+"permit everyone to access the server (default): `ALLOWED_HOSTS=` or "
+"`ALLOWED_HOSTS=*`"
 msgstr ""
 
 msgid "This functionality is provided by [flask-allowed-hosts]."
@@ -250,6 +321,11 @@ msgid ""
 "content."
 msgstr ""
 
+msgid ""
+"**Requests** is used the get the `.ics` files. You can [configure a proxy]"
+"(#ssrf-protection-with-a-proxy-server)."
+msgstr ""
+
 msgid "The Open Web Calendar relies on proxy servers for these features:"
 msgstr ""
 
@@ -333,6 +409,18 @@ msgid ""
 msgstr ""
 
 #~ msgid ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
+#~ msgstr ""
+#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
+#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
+#~ "christmas-day.json\" target=\"_blank\">Editar el calendario</a>"
+
+#~ msgid "Recurring Events with Categories"
+#~ msgstr "Eventos recurrentes con categorías"
+
+#~ msgid ""
 #~ "If you are at home, planning the days with the family, events might have "
 #~ "different categories depending on who they are for: `work` or `personal`. "
 #~ "Events can be single events or occur every day."
@@ -376,15 +464,3 @@ msgstr ""
 
 #~ msgid "`timezone=UTC` - the timezone that you need to display the events in"
 #~ msgstr "`timezone=UTC` - la zona horaria en la que debe mostrar los eventos"
-
-#~ msgid ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Edit the calendar</a>"
-#~ msgstr ""
-#~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
-#~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
-#~ "christmas-day.json\" target=\"_blank\">Editar el calendario</a>"
-
-#~ msgid "Recurring Events with Categories"
-#~ msgstr "Eventos recurrentes con categorías"

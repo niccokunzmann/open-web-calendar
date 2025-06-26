@@ -406,25 +406,6 @@ msgid ""
 "the server like this:"
 msgstr ""
 
-msgid "Note"
-msgstr ""
-
-msgid ""
-"New versions of the Open Web Calendar can add new configuration parameters. "
-"Placing your changes in this variable instead of changing the "
-"`default_specification` file will ensure that you do not break the Open Web "
-"Calendar in a future version."
-msgstr ""
-
-msgid "Operating System"
-msgstr ""
-
-msgid ""
-"Squid is avaiable for all major platforms. For the commands and paths of "
-"this tutorial, we assume you run Squid on Debain/Ubuntu. The commands might "
-"work on other systems, but that is not tested."
-msgstr ""
-
 #~ msgid ""
 #~ "<a href=\"https://open-web-calendar.hosted.quelltext.eu/index.html?"
 #~ "specification_url=https://open-web-calendar.quelltext.eu/assets/templates/"
