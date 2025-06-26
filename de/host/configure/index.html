@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_c4lvmgax/de/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_sd_9h9e3/de/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_c4lvmgax/de/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_sd_9h9e3/de/host/configure/index.png" >
       
     
     
@@ -249,6 +249,24 @@
           <li class="md-select__item">
             <a href="../../../th" hreflang="th" class="md-select__link">
               อังกฤษ
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ko" hreflang="ko" class="md-select__link">
+              한국어
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nb_NO" hreflang="nb_NO" class="md-select__link">
+              Norsk bokmål
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ru" hreflang="ru" class="md-select__link">
+              Русский
             </a>
           </li>
         
@@ -1122,13 +1140,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-the-default-calendar" class="md-nav__link">
+  <a href="#andern-wie-der-standard-kalender-aussieht" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring the Default Calendar
+      Ändern, wie der Standard-Kalender aussieht.
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuring the Default Calendar">
+    <nav class="md-nav" aria-label="Ändern, wie der Standard-Kalender aussieht.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1314,16 +1332,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssrf-protection-with-a-proxy-server" class="md-nav__link">
+  <a href="#squid-als-proxy-server" class="md-nav__link">
     <span class="md-ellipsis">
-      SSRF Protection with a Proxy Server
+      Squid als Proxy-Server
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#squid-als-proxy-server" class="md-nav__link">
+  <a href="#squid-als-proxy-server_1" class="md-nav__link">
     <span class="md-ellipsis">
       Squid als Proxy-Server
     </span>
@@ -1361,7 +1379,7 @@
 <li>Ändern, wie der Standard-Kalender aussieht.</li>
 <li>Ändern, wie der Server funtioniert.</li>
 </ul>
-<h2 id="configuring-the-default-calendar">Configuring the Default Calendar<a class="headerlink" href="#configuring-the-default-calendar" title="Fester Link">&para;</a></h2>
+<h2 id="andern-wie-der-standard-kalender-aussieht">Ändern, wie der Standard-Kalender aussieht.<a class="headerlink" href="#andern-wie-der-standard-kalender-aussieht" title="Fester Link">&para;</a></h2>
 <p>Die Grundeinstellungen aller Kalender befinden sich in der <a href="/assets/default_specification.yml">default_specification</a>. All diese Einstellungen können durch eine Kopie der Datei verändert werden, die irgendwo im Web zu finden ist. Ihre URL muss dann als <code>specification_url</code> Parameter angegeben werden. Jeder Parameter sollte in der <a href="/assets/default_specification.yml">default_specification</a> dokumentiert sein.</p>
 <p>Um <strong>alle Kalender</strong> einer Instanz zu verändern, benutze die Umgebungsvariable <a href="#owc_specification">OWC_SPECIFICATION</a>. Kalender überschreiben dann immer noch ihre Einstellungen. Die Einstellungen, die die Kalender nicht selbst vornehmen, werden durch diese Voreinstellungen bestimmt. Nicht alle Werte werden auf der Konfigurationsseite angeboten. Trotzdem können sie durch die <code>specification_url</code> und die URL-Parameter verändert werden.</p>
 <p>Wahrscheinlich willst Du die folgenden Werte ändern.</p>
@@ -1382,7 +1400,7 @@
 <p>Es gibt viel mehr Werte, die verändert werden können. Siehe <a href="/assets/default_specification.yml">default_specification</a>. Diese Werte sind alle dokumentiert. Benutze die Umgebungsvariable <a href="#owc_specification">OWC_SPECIFICATION</a>, um sie zu ändern.</p>
 <p>Siehe auch:</p>
 <ul>
-<li><a href="../../dev/api">API</a></li>
+<li><a href="dev/api">Entwickler-API</a></li>
 </ul>
 <h2 id="configuring-the-server">Configuring the Server<a class="headerlink" href="#configuring-the-server" title="Fester Link">&para;</a></h2>
 <p>Environment variables only influence the running of the server. These environment variables can be used to configure the service:</p>
@@ -1466,14 +1484,14 @@
 <li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
 </ul>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Fester Link">&para;</a></h3>
-<p>default <code>5000</code>, default <code>80</code> in the Docker container</p>
+<p>Voreinstellung <code>false</code>, Werte <code>true</code> oder <code>false</code>, immer <code>false</code> im Dockercontainer</p>
 <p>The port that the service is running on.</p>
 <p>Examples:</p>
 <ul>
 <li>Serve on HTTP port: <code>PORT=80</code></li>
 </ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Fester Link">&para;</a></h3>
-<p>default <code>4</code>, only for the Docker container</p>
+<p>Voreinstellung <code>false</code>, Werte <code>true</code> oder <code>false</code>, immer <code>false</code> im Dockercontainer</p>
 <p>The number of parallel workers to handle requests.</p>
 <p>Examples:</p>
 <ul>
@@ -1492,7 +1510,7 @@
 <li><strong>Besseres Caching</strong> Rudimentäres Caching ist im Offenen Web-Kalender eingebaut. Um genauere Einstellungen zu treffen, benutze einen Proxy wie <code>squid</code>. Sie die Dokumentation darunter an, um so einen Proxy zu benutzen.</li>
 <li><strong>Zugriff auf Kalender</strong> Standardmäßig wird der Offene Web-Kalender nicht einschränken, welche Kalender angezeigt werden. Benutze einen Proxy, um die Kalender zu filtern. Wenn der Offene Web-Kalender hinter einer Firewall neben anderen Diensten läuft, ist es geraten, einen Proxy zu verwenden, um SSRF-Atacken vorzubeugen.</li>
 </ul>
-<h2 id="ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server<a class="headerlink" href="#ssrf-protection-with-a-proxy-server" title="Fester Link">&para;</a></h2>
+<h2 id="squid-als-proxy-server">Squid als Proxy-Server<a class="headerlink" href="#squid-als-proxy-server" title="Fester Link">&para;</a></h2>
 <p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calendar, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
@@ -1502,7 +1520,7 @@
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF using a Tor proxy</a></li>
 </ul>
-<h2 id="squid-als-proxy-server">Squid als Proxy-Server<a class="headerlink" href="#squid-als-proxy-server" title="Fester Link">&para;</a></h2>
+<h2 id="squid-als-proxy-server_1">Squid als Proxy-Server<a class="headerlink" href="#squid-als-proxy-server_1" title="Fester Link">&para;</a></h2>
 <p><a href="https://www.squid-cache.org/">Squid</a> ist ein Proxy und Cache, flexibel ein einstellbar. Du kannst ihn vor den Offenen Web-Kalender schalten, um Zugriff und Caching einzustellen.</p>
 <div class="admonition note">
 <p class="admonition-title">Betriebssystem</p>
