@@ -146,7 +146,7 @@ msgid "Community and Paid Support"
 msgstr "Спільнота та платна підтримка"
 
 msgid "[தமிழ்நேரம்]: https://tamilneram.github.io/"
-msgstr "[தமிழ்நேரம்]: https://tamilneram.github.io/"
+msgstr "[தமிழ்நேரம் ]: https://tamilneram.github.io/"
 
 msgid ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
@@ -155,75 +155,76 @@ msgstr ""
 "what_s_new.html"
 
 msgid "Play with a variety of Calendars for your own project."
-msgstr "Play with a variety of Calendars for your own project."
+msgstr "Експериментуйте з різноманітними календарями для власного проєкту."
 
 msgid "Examples"
-msgstr "Examples"
+msgstr "Приклади"
 
 msgid "Mobile One Day Calendar Feed"
-msgstr "Mobile One Day Calendar Feed"
+msgstr "Стрічка мобільного календаря на один день"
 
 msgid "Here is an example of a one day view of a Christmas day:"
-msgstr "Here is an example of a one day view of a Christmas day:"
+msgstr "Ось приклад одноденного огляду Різдвяного дня:"
 
 msgid "Modifications:"
 msgstr "Модифікації:"
 
 msgid "start and end time"
-msgstr "start and end time"
+msgstr "час початку та закінчення"
 
 msgid "fixed date"
-msgstr "fixed date"
+msgstr "фіксована дата"
 
 msgid "CSS"
 msgstr "CSS"
 
 msgid "Events Hosted as a Tor Hidden Service"
-msgstr "Events Hosted as a Tor Hidden Service"
+msgstr "Заходи, що проводяться як прихований сервіс Tor"
 
 msgid "JavaScript"
 msgstr "JavaScript"
 
 msgid "timezone"
-msgstr "timezone"
+msgstr "часовий пояс"
 
 msgid "Free and Busy"
-msgstr "Free and Busy"
+msgstr "Вільний і зайнятий"
 
 msgid "You can change the design based on whether you are free or busy."
-msgstr "You can change the design based on whether you are free or busy."
+msgstr "Ви можете змінити дизайн залежно від того, вільні ви чи зайняті."
 
 msgid ""
 "This calendar has changed CSS so that the background is green and the events"
 " are either orange or red."
 msgstr ""
-"This calendar has changed CSS so that the background is green and the events"
-" are either orange or red."
+"У цьому календарі змінено CSS, тепер фон зелений, а події — помаранчеві або "
+"червоні."
 
 msgid "Contribute Examples!"
-msgstr "Contribute Examples!"
+msgstr "Наведіть приклади!"
 
 msgid ""
 "If you want to add another example or showcase your calendar, this is the "
 "place. You can **contact us** with the link of the calendar e.g. in an "
 "[issue](https://github.com/niccokunzmann/open-web-calendar/issues)."
 msgstr ""
-"If you want to add another example or showcase your calendar, this is the "
-"place. You can **contact us** with the link of the calendar e.g. in an "
-"[issue](https://github.com/niccokunzmann/open-web-calendar/issues)."
+"Якщо ви хочете додати ще один приклад або продемонструвати свій календар, "
+"вам сюди. Ви можете **зв’язатися з нами**, надавши посилання на календар, "
+"наприклад, у [випуску](https://github.com/niccokunzmann/open-web-calendar/"
+"issues)."
 
 msgid "You can **edit the page** yourself:"
-msgstr "You can **edit the page** yourself:"
+msgstr "Ви можете **редагувати сторінку** самостійно:"
 
 msgid ""
 "For an international calendar, you can allow choosing the time zone that the"
 " events are displayed in."
 msgstr ""
-"For an international calendar, you can allow choosing the time zone that the"
-" events are displayed in."
+"Для міжнародного календаря можна дозволити вибір часового поясу, в якому "
+"відображатимуться події."
 
 msgid "Choose Timezones"
-msgstr "Choose Timezones"
+msgstr "Виберіть часові пояси"
 
 msgid ""
 "<select id=\"timezoneOption\"><option value=\"America/New_York\">New "
@@ -231,10 +232,10 @@ msgid ""
 "value=\"Asia/Singapore\">Singapore</option><option value=\"\">My Local Time "
 "Zone</option></select>"
 msgstr ""
-"<select id=\"timezoneOption\"><option value=\"America/New_York\">New "
-"York</option><option value=\"Europe/London\">London</option><option "
-"value=\"Asia/Singapore\">Singapore</option><option value=\"\">My Local Time "
-"Zone</option></select>"
+"<select id=\"timezoneOption\"><option value=\"America/New_York\">Нью-Йорк</"
+"option><option value=\"Europe/London\">Лондон</option><option value="
+"\"Asia/Singapore\">Сінгапур</option><option value=\"\">Мій місцевий часовий "
+"пояс</option></select>"
 
 msgid ""
 "<a href=\"https://open-web-"
@@ -242,10 +243,9 @@ msgid ""
 "calendar.quelltext.eu/assets/templates/family-planning.json\" "
 "target=\"_blank\">Edit the calendar</a>"
 msgstr ""
-"<a href=\"https://open-web-"
-"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
-"calendar.quelltext.eu/assets/templates/family-planning.json\" "
-"target=\"_blank\">Edit the calendar</a>"
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/"
+"index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/"
+"templates/family-planning.json\" target=\"_blank\">Редагувати календар</a>"
 
 msgid ""
 "<a href=\"https://open-web-"
@@ -253,10 +253,9 @@ msgid ""
 "calendar.quelltext.eu/assets/templates/timezone-example.json\" "
 "target=\"_blank\">Edit the calendar</a>"
 msgstr ""
-"<a href=\"https://open-web-"
-"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
-"calendar.quelltext.eu/assets/templates/timezone-example.json\" "
-"target=\"_blank\">Edit the calendar</a>"
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/"
+"index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/"
+"templates/timezone-example.json\" target=\"_blank\">Редагувати календар</a>"
 
 msgid ""
 "<a href=\"https://open-web-"
@@ -264,10 +263,9 @@ msgid ""
 "calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
 "target=\"_blank\">Edit the calendar</a>"
 msgstr ""
-"<a href=\"https://open-web-"
-"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
-"calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
-"target=\"_blank\">Edit the calendar</a>"
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/"
+"index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/"
+"templates/free-and-busy.json\" target=\"_blank\">Редагувати календар</a>"
 
 msgid ""
 "[tor-example]: https://tor.open-web-"
@@ -374,13 +372,13 @@ msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
 msgstr "[flask-allowed-hosts ]: https://pypi.org/project/flask-allowed-hosts/"
 
 msgid "[1]: ../pypi"
-msgstr "[1]: ../pypi"
+msgstr "[1 ]: ../pypi"
 
 msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
-msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
+msgstr "[Fernet ]: https://cryptography.io/en/latest/fernet/"
 
 msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
-msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
+msgstr "[/new-key ]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 
 msgid "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 msgstr "[Докерхаб]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
@@ -422,37 +420,30 @@ msgid "[Radically Open Security]: https://radicallyopensecurity.com/"
 msgstr "[Радикально відкрита безпека]: https://radicallyopensecurity.com/"
 
 msgid "[Nextcloud]: https://nextcloud.com/"
-msgstr "[Nextcloud]: https://nextcloud.com/"
+msgstr "[Nextcloud ]: https://nextcloud.com/"
 
-#, fuzzy
 msgid "[templates]: ../../templates#caldav-sign-up"
-msgstr "[templates]: ../../templates#caldav-sign-up"
+msgstr "[шаблони]: ../../templates#caldav-sign-up"
 
-#, fuzzy
 msgid "[grant]: /news/2024-04-10-website"
-msgstr "[grant]: /news/2024-04-10-website"
+msgstr "[грант]: /news/2024-04-10-website"
 
-#, fuzzy
 msgid "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
-msgstr "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
+msgstr "[інформаційний екран]: https://github.com/AmmanVMS/infoscreen"
 
-#, fuzzy
 msgid "[@dml105]: https://github.com/dml105"
-msgstr "[@dml105]: https://github.com/dml105"
+msgstr "[@dml105 ]: https://github.com/dml105"
 
-#, fuzzy
 msgid ""
 "[Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
 msgstr ""
-"[Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
+"[Проблема 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
 
-#, fuzzy
 msgid "[Antroposofía Chile]: https://antroposofiachile.net/home/"
-msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
+msgstr "[Антропософія Чилі]: https://antroposofiachile.net/home/"
 
-#, fuzzy
 msgid "[Gancio]: https://gancio.org/"
-msgstr "[Gancio]: https://gancio.org/"
+msgstr "[Gancio ]: https://gancio.org/"
 
 msgid "Examples:"
 msgstr "Приклади:"
