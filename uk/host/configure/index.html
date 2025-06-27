@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_abimxfs3/uk/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rkd67m_c/uk/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_abimxfs3/uk/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rkd67m_c/uk/host/configure/index.png" >
       
     
     
@@ -1581,10 +1581,8 @@
 </ul>
 <p>Налаштування <code>OWC_SPECIFICATION</code> дозволяє замінити значення за замовчуванням для всіх календарів.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>New versions of the Open Web Calendar can add new configuration parameters.
-Placing your changes in this variable instead of changing the <code>default_specification</code> file
-will ensure that you do not break the Open Web Calendar in a future version.</p>
+<p class="admonition-title">Примітка</p>
+<p>Нові версії Open Web Calendar можуть додавати нові параметри конфігурації. Внесення змін до цієї змінної замість зміни файлу <code>default_specification</code> гарантує, що ви не порушите відкритий веб-календар у майбутній версії.</p>
 </div>
 <p>У наступному прикладі буде змінено заголовок для всіх календарів, які не встановили власний заголовок.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
@@ -1633,10 +1631,8 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <h2 id="squid-">Squid як проксі-сервер<a class="headerlink" href="#squid-" title="Постійне посилання">&para;</a></h2>
 <p>Проксі та кеш <a href="https://www.squid-cache.org/">Squid</a> є гнучкими та налаштовуються. Ви можете використовувати його перед відкритим веб-календарем, щоб налаштувати доступ і налаштувати кешування.</p>
 <div class="admonition note">
-<p class="admonition-title">Operating System</p>
-<p>Squid is avaiable for all major platforms.
-For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
-The commands might work on other systems, but that is not tested.</p>
+<p class="admonition-title">Операційна система</p>
+<p>Squid доступний для всіх основних платформ. Для команд і шляхів у цьому посібнику ми припускаємо, що ви запускаєте Squid на Debain/Ubuntu. Команди можуть працювати в інших системах, але це не перевірено.</p>
 </div>
 <p>Після встановлення проксі-сервера <a href="https://www.squid-cache.org/">Squid</a> додайте цей файл до каталогу <code>conf.d</code>. Тоді Squid автоматично завантажить його.</p>
 <p>У Linux створіть <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>

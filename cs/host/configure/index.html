@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_abimxfs3/cs/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rkd67m_c/cs/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_abimxfs3/cs/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rkd67m_c/cs/host/configure/index.png" >
       
     
     
@@ -1581,10 +1581,8 @@
 </ul>
 <p>Nastavení <code>OWC_SPECIFICATION</code> umožňuje nahradit výchozí hodnoty pro všechny kalendáře.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>New versions of the Open Web Calendar can add new configuration parameters.
-Placing your changes in this variable instead of changing the <code>default_specification</code> file
-will ensure that you do not break the Open Web Calendar in a future version.</p>
+<p class="admonition-title">Poznámka</p>
+<p>Nové verze Open Web Calendar mohou přidávat nové konfigurační parametry. Uvedení změn v této proměnné namísto změny souboru <code>default_specification</code> zajistí, že v budoucí verzi bude Open Web Calendar funkční.</p>
 </div>
 <p>V následujícím příkladu se změní název pro všechny kalendáře, které nemají svůj vlastní titul.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
@@ -1633,10 +1631,8 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <h2 id="squid-jako-proxy-server">Squid jako proxy server<a class="headerlink" href="#squid-jako-proxy-server" title="Trvalý odkaz">&para;</a></h2>
 <p><a href="https://www.squid-cache.org/">Squid</a> Proxy a cache je flexibilní a konfigurovatelný. Můžete jej použít na Open Web Calendar pro konfiguraci přístupu a přizpůsobení cachingu.</p>
 <div class="admonition note">
-<p class="admonition-title">Operating System</p>
-<p>Squid is avaiable for all major platforms.
-For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
-The commands might work on other systems, but that is not tested.</p>
+<p class="admonition-title">Operační systém</p>
+<p>Squid je dostupný pro všechny hlavní platformy. Pro příkazy a cesty tohoto návodu předpokládáme, že Squid běží na Debain/Ubuntu. Příkazy mohou pracovat na jiných systémech, ale to není testováno.</p>
 </div>
 <p>Poté, co jste nainstalovali <a href="https://www.squid-cache.org/">Squid</a> proxy, přidejte tento soubor do adresáře <code>conf.d</code>. Squid jej automaticky načte.</p>
 <p>V Linuxu vytvořte <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
