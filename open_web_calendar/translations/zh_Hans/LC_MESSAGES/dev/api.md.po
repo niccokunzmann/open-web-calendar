@@ -262,60 +262,6 @@ msgid ""
 msgstr ""
 
 #, fuzzy
-msgid ""
-"[features/configure-the-calendar.feature]: "
-"https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/features/configure-the-"
-"calendar.feature"
-msgstr ""
-"[features/configure-the-calendar.feature]: "
-"https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/features/configure-the-"
-"calendar.feature"
-
-#, fuzzy
-msgid ""
-"[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
-"web-calendar/tree/master//open_web_calendar/features/edit-the-"
-"calendar.feature"
-msgstr ""
-"[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
-"web-calendar/tree/master//open_web_calendar/features/edit-the-"
-"calendar.feature"
-
-#, fuzzy
-msgid ""
-"[app.py-81]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
-msgstr ""
-"[app.py-81]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
-
-#, fuzzy
-msgid ""
-"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
-msgstr ""
-"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
-
-#, fuzzy
-msgid ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/default_specification.yml"
-msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/default_specification.yml"
-
-#, fuzzy
-msgid ""
-"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
-msgstr ""
-"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
-
-#, fuzzy
 #~ msgid ""
 #~ "[default_specification]: https://github.com/niccokunzmann/open-web-"
 #~ "calendar/tree/master/open_web_calendar/default_specification.yml"

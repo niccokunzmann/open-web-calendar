@@ -420,34 +420,6 @@ msgid ""
 "work on other systems, but that is not tested."
 msgstr ""
 
-#, fuzzy
-msgid "[default_specification]: /assets/default_specification.yml"
-msgstr "[default_specification]: /assets/default_specification.yml"
-
-#, fuzzy
-msgid "[privacy-policy]: ../privacy-policy"
-msgstr "[privacy-policy]: ../privacy-policy"
-
-#, fuzzy
-msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
-msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
-
-#, fuzzy
-msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
-msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
-
-#, fuzzy
-msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
-msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
-
-#, fuzzy
-msgid "[OWC_SPECIFICATION]: #owc_specification"
-msgstr "[OWC_SPECIFICATION]: #owc_specification"
-
-#, fuzzy
-msgid "[1]: ../pypi"
-msgstr "[1]: ../pypi"
-
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
