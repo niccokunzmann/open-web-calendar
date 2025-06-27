@@ -401,30 +401,26 @@ msgid ""
 "[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
 "calendar.hosted.quelltext.eu"
 msgstr ""
-"[open-web-calendar.hosted.quelltext.eun ]: https://open-web-"
+"[open-web-calendar.hosted.quelltext.eu ]: https://open-web-"
 "calendar.hosted.quelltext.eu"
 
-#, fuzzy
 msgid ""
 "[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
 "calendar.hosted.quelltext.eu"
 msgstr ""
-"[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
+"[tor.open-web-calendar.hosted.quelltext.eu ]: https://tor.open-web-"
 "calendar.hosted.quelltext.eu"
 
-#, fuzzy
 msgid ""
 "[vid-architecture]: "
 "https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
 msgstr ""
-"[vid-architecture]: "
-"https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
+"[відеоархітектура]: https://www.youtube.com/watch?v=JVosZ6zht5I&amp;list"
+"=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&amp;index=2"
 
-#, fuzzy
 msgid "[Radically Open Security]: https://radicallyopensecurity.com/"
-msgstr "[Radically Open Security]: https://radicallyopensecurity.com/"
+msgstr "[Радикально відкрита безпека]: https://radicallyopensecurity.com/"
 
-#, fuzzy
 msgid "[Nextcloud]: https://nextcloud.com/"
 msgstr "[Nextcloud]: https://nextcloud.com/"
 
