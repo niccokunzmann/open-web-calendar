@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rkd67m_c/uk/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ekn9ishj/uk/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rkd67m_c/uk/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ekn9ishj/uk/dev/api/index.png" >
       
     
     
@@ -1314,7 +1314,7 @@
           <li class="md-nav__item">
   <a href="#default_specification" class="md-nav__link">
     <span class="md-ellipsis">
-      default_specification
+      [default_specification]
     </span>
   </a>
   
@@ -1413,7 +1413,7 @@
 <li><code>to=YYYY-MM-DD</code> - кінець періоду, в якому відбуваються події (виключно)</li>
 </ul>
 <h2 id="_2">Параметри<a class="headerlink" href="#_2" title="Постійне посилання">&para;</a></h2>
-<p>Усі параметри конфігурації достатньо детально описано в <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a>. Це посилання. наприклад якщо ви знайдете параметр <code>title</code> в <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a>, у вас є кілька варіантів:</p>
+<p>Усі параметри конфігурації достатньо детально описано в [default_specification]. Це посилання. наприклад якщо ви знайдете параметр <code>title</code> в [default_specification], у вас є кілька варіантів:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="параметр-запиту" name="__tabbed_1" type="radio" /><input id="yaml" name="__tabbed_1" type="radio" /><input id="json" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="параметр-запиту">Параметр запиту</label><label for="yaml">YAML</label><label for="json">JSON</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1440,13 +1440,12 @@
 <h3 id="_4">Параметри запиту<a class="headerlink" href="#_4" title="Постійне посилання">&para;</a></h3>
 <p>Усі параметри URL-адреси календаря містяться в специфікації. Параметри запиту мають найвищий пріоритет.</p>
 <p>Приклади:</p>
-<div class="highlight"><pre><span></span><code>index.html?language=de
-calendar.html?title=CALENDAR
+<div class="highlight"><pre><span></span><code>index.html?language=de calendar.html?title=CALENDAR 
 </code></pre></div>
 <h3 id="specification_url">specification_url<a class="headerlink" href="#specification_url" title="Постійне посилання">&para;</a></h3>
 <p>Якщо вказати цей параметр запиту, конфігурація редактора також завантажується з цієї URL-адреси. Параметри запиту все ще важливіші за те, що написано в цьому файлі. Вихідним форматом може бути YAML або JSON.</p>
 <p>Приклади:</p>
-<div class="highlight"><pre><span></span><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/open_web_calendar/default_specification.yml
+<div class="highlight"><pre><span></span><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/open_web_calendar/default_specification.yml 
 </code></pre></div>
 <h3 id="open_web_calendarappdefault_specification">open_web_calendar.app.DEFAULT_SPECIFICATION<a class="headerlink" href="#open_web_calendarappdefault_specification" title="Постійне посилання">&para;</a></h3>
 <p>Це призначено для розробників і внутрішніх Python.</p>
@@ -1455,12 +1454,12 @@ calendar.html?title=CALENDAR
 </code></pre></div>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Постійне посилання">&para;</a></h3>
 <p>Це необов’язкова змінна середовища. Будь ласка, прочитайте більше про це в <a href="../../host/configure#owc_specification">Конфігурації сервера</a>.</p>
-<h3 id="default_specification"><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a><a class="headerlink" href="#default_specification" title="Постійне посилання">&para;</a></h3>
+<h3 id="default_specification">[default_specification]<a class="headerlink" href="#default_specification" title="Постійне посилання">&para;</a></h3>
 <p>Цей файл містить параметри за замовчуванням. Вони не повинні бути жорстко закодовані у вихідному коді. Усі параметри перераховані та задокументовані там, тому цей файл можна використовувати для довідки. Не змінюйте цей файл, натомість використовуйте змінну середовища <code>OWC_SPECIFICATION</code>.</p>
 <h2 id="_5">Додавання параметрів<a class="headerlink" href="#_5" title="Постійне посилання">&para;</a></h2>
 <p>Якщо ви додаєте новий параметр як розробник:</p>
 <ul>
-<li>Додайте параметр із значенням за замовчуванням до <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a></li>
+<li>Додайте параметр із значенням за замовчуванням до [default_specification]</li>
 <li>Додайте реалізацію залежно від її використання в <code>app.py</code> або шаблонах файлів JavaScript. Специфікація вже доступна для використання в усіх них.</li>
 <li>Додайте тести в <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a>, щоб перевірити, чи календар відповідає функції.</li>
 <li>Додайте тести в <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a>, щоб переконатися, що параметр можна використовувати під час редагування календаря.</li>

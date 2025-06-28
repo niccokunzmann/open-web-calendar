@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rkd67m_c/uk/host/docker/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ekn9ishj/uk/host/docker/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_rkd67m_c/uk/host/docker/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ekn9ishj/uk/host/docker/index.png" >
       
     
     
@@ -1379,7 +1379,7 @@
 </code></pre></div>
 <p>This will create the image <code>niccokunzmann/open-web-calendar</code>.</p>
 <h2 id="run-the-docker-image">Run the Docker Image<a class="headerlink" href="#run-the-docker-image" title="Постійне посилання">&para;</a></h2>
-<p>You can use the existing image: <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">niccokunzmann/open-web-calendar</a>.</p>
+<p>You can use the existing image: [niccokunzmann/open-web-calendar][Dockerhub].</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>--name<span class="w"> </span>open-web-calendar<span class="w"> </span>niccokunzmann/open-web-calendar
 </code></pre></div>
 <p>Then, you should see your service running at <a href="http://localhost:5000">http://localhost:5000</a>.</p>
@@ -1416,7 +1416,7 @@
 <li>Start the container:
    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div></li>
-<li>The container will be pulled automatically from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> and then starts.</li>
+<li>The container will be pulled automatically from [Dockerhub] and then starts.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Growing log files</p>
@@ -1430,7 +1430,7 @@ as it is very talkative.</p>
 You can <a href="https://docs.docker.com/engine/daemon/ipv6/">enable IPv6</a>.</p>
 </div>
 <h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="Постійне посилання">&para;</a></h2>
-<p>If you want to update your image with the latest version from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> run this:</p>
+<p>If you want to update your image with the latest version from [Dockerhub] run this:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull
 </code></pre></div>
 <p>Note: You need to restart the container after pulling in order for the update to apply:</p>
