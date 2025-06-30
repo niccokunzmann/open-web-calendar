@@ -1,4 +1,9 @@
-from pathlib import Path  # noqa: INP001
+#!/usr/bin/env python3
+
+# SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+from pathlib import Path
 from subprocess import check_call
 
 HERE = Path(__file__).parent
