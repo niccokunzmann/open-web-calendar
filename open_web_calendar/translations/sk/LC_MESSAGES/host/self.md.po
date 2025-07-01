@@ -43,10 +43,10 @@ msgstr ""
 "calendar)"
 
 msgid "Cloudron"
-msgstr ""
+msgstr "Cloudron"
 
 msgid "YunoHost"
-msgstr ""
+msgstr "YunoHost"
 
 msgid ""
 "[![Install Open Web Calendar with YunoHost](https://install-"
@@ -58,7 +58,7 @@ msgstr ""
 "app.yunohost.org/?app=open-web-calendar)"
 
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 msgid ""
 "![Repository, Watch, Custom, Releases](/assets/img/subscribe-to-release.png)"
