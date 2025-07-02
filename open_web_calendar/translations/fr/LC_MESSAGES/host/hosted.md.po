@@ -1,30 +1,30 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # Prefill add-on <noreply-addon-prefill@weblate.org>, 2024.
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+# Méli <miel+git@lly.fr>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-28 10:40+0200\n"
-"PO-Revision-Date: 2024-05-30 15:45+0000\n"
-"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/open-web-calendar/documentation-hosted-version/fr/>\n"
+"PO-Revision-Date: 2025-07-02 15:04+0000\n"
+"Last-Translator: Méli <miel+git@lly.fr>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-hosted-version/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, fuzzy
 msgid "You can use the hosted version of the Open Web Calendar yourself."
 msgstr "You can use the hosted version of the Open Web Calendar yourself."
 
-#, fuzzy
 msgid "Hosted Version"
-msgstr "Hosted Version"
+msgstr "Version hébergée"
 
-#, fuzzy
 msgid ""
 "A hosted version exists at [open-web-"
 "calendar.hosted.quelltext.eu](https://open-web-"
@@ -33,12 +33,13 @@ msgid ""
 "improvements go there after max. 48 hours. This version is intended to stay "
 "free of charge and is funded by [donation ♥️](../../contributing)."
 msgstr ""
-"A hosted version exists at [open-web-"
-"calendar.hosted.quelltext.eu](https://open-web-"
-"calendar.hosted.quelltext.eu). You can use this version if you like. It is "
-"deployed from the latest version on the `master` branch. Thus, translation "
-"improvements go there after max. 48 hours. This version is intended to stay "
-"free of charge and is funded by [donation ♥️](../../contributing)."
+"Une version hébergée existe à l'adresse "
+"[open-web-calendar.hosted.quelltext.eu](https://open-web-"
+"calendar.hosted.quelltext.eu). Tu peux utiliser cette version si tu le "
+"souhaites. Elle est déployée à partir de la dernière version de la branche "
+"`master`. Par conséquent, les améliorations de traduction y sont mis en "
+"ligne sous 48 heures. Il est prévu que cette version reste gratuite et "
+"financée par [des dons ♥️](../../contributing)."
 
 msgid ""
 "There is a version from which you can access calendars which are hosted in "
