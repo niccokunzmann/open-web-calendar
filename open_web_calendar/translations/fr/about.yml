@@ -1,12 +1,12 @@
 links-website: Revenir en arrière pour consulter le calendrier.
-description: Voici plus d'informations sur le calendrier. Consultez les liens ci-dessous
-  pour utiliser ce calendrier de différentes manières.
+description: Voici plus d'informations sur le calendrier. Consultez les liens 
+  ci-dessous pour utiliser ce calendrier de différentes manières.
 links-edit: Modifier une copie du calendrier.
 license: Licence
 timezone-browser: 'Voilà le fuseau horaire de votre dispositif :'
 timezone-choice: 'Vous pouvez choisir si vous voulez changer le fuseau horaire du
   calendrier ici :'
-links-ics: Utilisez ce lien pour vous abonner au calendrier ou pour ajouter les évènements
-  à votre propre calendrier.
-links-spec: Voir ou télécharger la demande de calendrier.
-project-title: À propos du Projet du Calendrier Open Web
+links-ics: Utilisez ce lien pour vous abonner au calendrier ou pour ajouter les 
+  évènements à votre propre calendrier.
+links-spec: Voir ou télécharger la spécification du calendrier.
+project-title: À propos du projet Open Web Calendar
