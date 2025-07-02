@@ -1,28 +1,35 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# Méli <miel+git@lly.fr>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:51+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-07-02 15:04+0000\n"
+"Last-Translator: Méli <miel+git@lly.fr>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-common-translations/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.13.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
+#, fuzzy
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
 " links"
 msgstr ""
+"Incorpore un calendrier hautement personnalisable à ton site web à partir de "
+"liens ICal."
 
+#, fuzzy
 msgid "Open Web Calendar"
-msgstr ""
+msgstr "Open Web Calendar"
 
 msgid "Permanent link"
-msgstr ""
+msgstr "Lien permanent"
 
 msgid "See also:"
 msgstr ""
