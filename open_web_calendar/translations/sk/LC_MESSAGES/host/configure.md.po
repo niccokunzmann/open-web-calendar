@@ -6,59 +6,62 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 17:46+0200\n"
-"PO-Revision-Date: 2025-05-28 11:01+0000\n"
+"PO-Revision-Date: 2025-07-02 15:28+0000\n"
 "Last-Translator: Warder <ciksa@seznam.cz>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/open-web-calendar/documentation-server-configuration/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-server-configuration/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "`title`"
-msgstr ""
+msgstr "`titul`"
 
 msgid "`language`"
-msgstr ""
+msgstr "`jazyk`"
 
 msgid "`favicon`"
-msgstr ""
+msgstr "`ikona stránky`"
 
 msgid "`source_code`"
-msgstr ""
+msgstr "`zdrojový_kód`"
 
 msgid "`contributing`"
-msgstr ""
+msgstr "`prispievanie`"
 
 msgid "`privacy_policy`"
-msgstr ""
+msgstr "`zásady ochrany osobných údajov`"
 
 msgid "ALLOWED_HOSTS"
-msgstr ""
+msgstr "POVOLENÍ_HOSTITEĽIA"
 
 msgid ""
 "**Forbidden:** You don't have the permission to access the requested "
 "resource. It is either read-protected or not readable by the server.*"
 msgstr ""
+"**Zakázané:** Nemáte povolenie na prístup k požadovanému zdroju. Je buď "
+"chránený proti čítaniu, alebo ho server nedokáže prečítať.*"
 
 msgid "APP_DEBUG"
-msgstr ""
+msgstr "LADENIE_APLIKÁCIE"
 
 msgid "OWC_ENCRYPTION_KEYS"
-msgstr ""
+msgstr "OWC_ŠIFROVACIE_KĽÚČE"
 
 msgid "[Fernet]"
-msgstr ""
+msgstr "[Fernet]"
 
 msgid "[OWC_SPECIFICATION in the API](../../dev/api#owc_specification)"
-msgstr ""
+msgstr "[OWC_SPECIFIKACIA v API](../../dev/api#owc_specification)"
 
 msgid "PORT"
-msgstr ""
+msgstr "PORT"
 
 msgid "WORKERS"
-msgstr ""
+msgstr "PRACOVNÍCI"
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
