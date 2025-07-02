@@ -52,7 +52,7 @@ msgid "OWC_ENCRYPTION_KEYS"
 msgstr "OWC_ŠIFROVACIE_KĽÚČE"
 
 msgid "[Fernet]"
-msgstr ""
+msgstr "[Fernet]"
 
 msgid "[OWC_SPECIFICATION in the API](../../dev/api#owc_specification)"
 msgstr "[OWC_SPECIFIKACIA v API](../../dev/api#owc_specification)"
