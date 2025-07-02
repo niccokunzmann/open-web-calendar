@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wpbcuj49/sk/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__q4pqro8/sk/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_wpbcuj49/sk/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__q4pqro8/sk/dev/api/index.png" >
       
     
     
@@ -638,12 +638,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
+      <a href="../../../fr/contributing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Contribute ♥️
+    Contribuer ♥️
     
   </span>
   
@@ -812,12 +812,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../host/hosted/" class="md-nav__link">
+      <a href="../../../fr/host/hosted/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Hosted Version
+    Version hébergée
     
   </span>
   
@@ -1314,7 +1314,7 @@
           <li class="md-nav__item">
   <a href="#default_specification" class="md-nav__link">
     <span class="md-ellipsis">
-      default_specification
+      [default_specification]
     </span>
   </a>
   
@@ -1455,15 +1455,15 @@ calendar.html?title=CALENDAR
 </code></pre></div>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanentný odkaz">&para;</a></h3>
 <p>Toto je voliteľná premenná prostredia. Viac informácií o nej nájdete v dokumente <a href="../../host/configure#owc_specification">Konfigurácia servera</a>.</p>
-<h3 id="default_specification"><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a><a class="headerlink" href="#default_specification" title="Permanentný odkaz">&para;</a></h3>
+<h3 id="default_specification">[default_specification]<a class="headerlink" href="#default_specification" title="Permanentný odkaz">&para;</a></h3>
 <p>Tento súbor obsahuje predvolené parametre. Nesmú byť pevne zakódované v zdrojovom kóde. Všetky parametre sú tam uvedené a zdokumentované, takže tento súbor možno použiť ako referenciu. Tento súbor neupravujte, namiesto toho použite premennú prostredia <code>OWC_SPECIFICATION</code>.</p>
 <h2 id="pridavanie-parametrov">Pridávanie parametrov<a class="headerlink" href="#pridavanie-parametrov" title="Permanentný odkaz">&para;</a></h2>
 <p>Ak pridáte nový parameter ako vývojár:</p>
 <ul>
 <li>Pridajte parameter s predvolenou hodnotou [predvolené_specification]</li>
 <li>Pridajte implementáciu, v závislosti od jeho použitia v <code>app.py</code> alebo šablóny JavaScriptových súborov. Špecifikácia je už k dispozícii vo všetkých z nich použiť.</li>
-<li>Pridajte testy do súboru <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a>, aby ste overili, či kalendár reaguje na danú funkciu.</li>
-<li>Pridajte testy do <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a>, aby ste sa uistili, že parameter je možné použiť pri úprave kalendára.</li>
+<li>Pridajte testy do súboru [features/configure-the-calendar.feature], aby ste overili, či kalendár reaguje na danú funkciu.</li>
+<li>Pridajte testy do [features/edit-the-calendar.feature], aby ste sa uistili, že parameter je možné použiť pri úprave kalendára.</li>
 </ul>
 <h2 id="specifikacia-v-kalendari">Špecifikácia v kalendári<a class="headerlink" href="#specifikacia-v-kalendari" title="Permanentný odkaz">&para;</a></h2>
 <p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> skompiluje špecifikáciu z daných parametrov v <code>get_specification()</code>. V <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> môžete pristupovať k špecifikácii prostredníctvom premennej <code>specification</code>. Špecifikácia je k dispozícii pre JavaScript ako premenná <code>specification</code>.</p>
@@ -1472,7 +1472,7 @@ calendar.html?title=CALENDAR
 <li><a href="../javascript">Prispôsobenie JavaScriptu</a></li>
 </ul>
 <h2 id="specifikacia-v-sekcii-index">Špecifikácia v sekcii Index<a class="headerlink" href="#specifikacia-v-sekcii-index" title="Permanentný odkaz">&para;</a></h2>
-<p>Predvolená špecifikácia je k dispozícii pred vytvorením kalendára pomocou JavaScriptu v premennej <code>configuration.default_specification</code>. Existuje funkcia <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a>, ktorá vytvorí špecifikáciu zo vstupov. Vo všeobecnosti by sa mala použiť premenná <code>specification</code>.</p>
+<p>Predvolená špecifikácia je k dispozícii pred vytvorením kalendára pomocou JavaScriptu v premennej <code>configuration.default_specification</code>. Existuje funkcia [getSpecification()], ktorá vytvorí špecifikáciu zo vstupov. Vo všeobecnosti by sa mala použiť premenná <code>specification</code>.</p>
 <h2 id="architektura">Architektúra<a class="headerlink" href="#architektura" title="Permanentný odkaz">&para;</a></h2>
 <p>Nižšie nájdete obrázok architektúry.</p>
 <p><img alt="architecture" src="/assets/img/architecture.svg" /></p>
