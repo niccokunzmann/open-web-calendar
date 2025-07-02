@@ -26,7 +26,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Open Web Calendar"
-msgstr "Open Web Calendar"
+msgstr "Calendrier Web Ouvert"
 
 msgid "Permanent link"
 msgstr "Lien permanent"
