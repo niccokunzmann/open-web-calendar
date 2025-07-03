@@ -82,7 +82,7 @@ platformdirs==4.3.8
     # via requests-cache
 pycparser==2.22
     # via cffi
-pygments==2.19.1
+pygments==2.19.2
     # via rich
 pysocks==1.7.1
     # via requests
