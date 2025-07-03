@@ -120,7 +120,7 @@ soupsieve==2.7
     # via beautifulsoup4
 typer==0.16.0
     # via mergecal
-typing-extensions==4.13.2
+typing-extensions==4.14.0
     # via
     #   beautifulsoup4
     #   typer
