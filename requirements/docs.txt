@@ -108,7 +108,7 @@ mkdocs-meta-descriptions-plugin==4.1.0
     # via -r requirements/docs.in
 mkdocs-rss-plugin==1.17.3
     # via -r requirements/docs.in
-msgpack==1.1.0
+msgpack==1.1.1
     # via cachecontrol
 packaging==25.0
     # via
