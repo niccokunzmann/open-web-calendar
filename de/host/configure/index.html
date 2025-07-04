@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_kottbeoi/de/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_suu1sfui/de/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_kottbeoi/de/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_suu1sfui/de/host/configure/index.png" >
       
     
     
@@ -1326,13 +1326,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-the-server" class="md-nav__link">
+  <a href="#servereinstellungen_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring the Server
+      Servereinstellungen
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuring the Server">
+    <nav class="md-nav" aria-label="Servereinstellungen">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1510,10 +1510,10 @@
 <ul>
 <li><a href="dev/api">Entwickler-API</a></li>
 </ul>
-<h2 id="configuring-the-server">Configuring the Server<a class="headerlink" href="#configuring-the-server" title="Fester Link">&para;</a></h2>
-<p>Environment variables only influence the running of the server. These environment variables can be used to configure the service:</p>
+<h2 id="servereinstellungen_1">Servereinstellungen<a class="headerlink" href="#servereinstellungen_1" title="Fester Link">&para;</a></h2>
+<p>Die Umgebungsvariablen verändern, wie der Server läuft. Diese Variable können gesetzt werden, um den Dienst anzupassen:</p>
 <h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="Fester Link">&para;</a></h3>
-<p>default empty</p>
+<p>Standartwert: leer</p>
 <p>Die Klienten durch Komma getrennt, die den Open Web Calendar benutzen dürfen. Du wirst diesen Text sehen, wenn du den Dienst benutzen willst aber nicht darfst:</p>
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
@@ -1527,7 +1527,7 @@
 <p>Diese Funktionalität wird durch <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a> bereitgestellt.</p>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Fester Link">&para;</a></h3>
 <p>Voreinstellung <code>false</code>, Werte <code>true</code> oder <code>false</code>, immer <code>false</code> im Dockercontainer</p>
-<p>Set the debug flag for the app.</p>
+<p>Setze die Debug-Ausgabe für die App.</p>
 <h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="Fester Link">&para;</a></h3>
 <p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
 <p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
@@ -1558,7 +1558,7 @@
 <li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
 </ul>
 <h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Fester Link">&para;</a></h3>
-<p>default empty</p>
+<p>Standartwert: leer</p>
 <p>Das ist eine Liste von Schlüsseln, die durch Komma getrennt sind. Diese Schlüssel werden genutzt, um vertrauliche Informationen zu verstecken.</p>
 <p>Examples:</p>
 <ul>
