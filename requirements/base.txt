@@ -19,7 +19,7 @@ caldav==1.5.0
     # via -r requirements/base.in
 cattrs==24.1.3
     # via requests-cache
-certifi==2025.4.26
+certifi==2025.6.15
     # via requests
 cffi==1.17.1
     # via cryptography
