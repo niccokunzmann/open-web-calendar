@@ -7,7 +7,7 @@
 #
 build==1.2.2.post1
     # via pip-tools
-cachetools==6.0.0
+cachetools==6.1.0
     # via tox
 chardet==5.2.0
     # via tox
