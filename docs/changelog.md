@@ -21,10 +21,35 @@ The latest version might not be released, yet.
 - Free up space at the top of the calendar if there are no controls, see [Issue 753](https://github.com/niccokunzmann/open-web-calendar/issues/753)
 - Always display the bottom navigation bar, also in small screens, see [Issue 752](https://github.com/niccokunzmann/open-web-calendar/issues/752)
 - Update dependencies
-- Update Russian translation by Yurt Page, Ukrainian by Максим Горпиніч, German by Nicco Kunzmann, Finnish by Ricky Tigg, Tamil by [தமிழ்நேரம்], Greek by Dimitris B
+- Update translations:
+  - Russian by Yurt Page
+  - Ukrainian by Максим Горпиніч
+  - German by Nicco Kunzmann
+  - Finnish by Ricky Tigg and Tomi Pöyskö
+  - Tamil by [தமிழ்நேரம்] and Anonymous
+  - Greek by Dimitris B, French by Méli and Dream X
+  - Slovak by Warder, Icelandic by Sveinn í Felli
+  - Portuguese by Manuela Silva and Lourenço Martins
+  - Turkish by Busra, Mehmet Sefa Ercan and Serhat
+  - Thai by Afdol Kareena
+  - Kabyle by ButterflyOfFire
+  - Hebrew by Eden Kuperman
+  - Polish by Provek
+  - Czech by Tomáš Chlubna
 - Update DHTMLX Scheduler to 7.2.3
 - Add option to disable map links for event locations, see [Issue 717](https://github.com/niccokunzmann/open-web-calendar/issues/717)
 - Remove `event_url_name` parameter and translate "OpenStreetMap".
+- Stop checking links in documentation because it take too long to build the web page.
+- Update Weblate plugins to allow all files to be translated. They were sometimes empty.
+- Manually only display languages in the documentation drop-down menu that translate parts of the main page.
+- Sort languages in language drop down of documentation.
+- Display unknown Kabyle strings as Arabic
+- Remove usage of Google Fonts by DHTMLX Scheduler default skin.
+- Add a calendar menu:
+  - Display the calendar name and description.
+  - Allow hiding and showing calendars.
+- Add a `calendar.json` endpoint for calendar metadata.
+
 
 ## v1.49
 
