@@ -70,6 +70,8 @@ jobs:
     name: "Publish Documentation to GitHub Pages"
     runs-on: ubuntu-latest
     if: ${{ github.ref_name == 'master' }}
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
