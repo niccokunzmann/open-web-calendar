@@ -23,7 +23,7 @@
     
     
       
-        <title>Introducing CalDAV and Signing up to Events with Nextcloud - Open Web Calendar</title>
+        <title>Introducing CalDAV and Signing up to Events with Nextcloud - Opna vefdagatalið</title>
       
     
     
@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_gy8qcsu6/is/news/2025-03-17-caldav-nextcloud-sign-up/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__bp0e26e/is/news/2025-03-17-caldav-nextcloud-sign-up/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_gy8qcsu6/is/news/2025-03-17-caldav-nextcloud-sign-up/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__bp0e26e/is/news/2025-03-17-caldav-nextcloud-sign-up/index.png" >
       
     
     
@@ -1189,7 +1189,7 @@
   
   
   <span class="md-ellipsis">
-    Privacy Policy
+    Meðferð persónuupplýsinga
     
   </span>
   
@@ -1316,10 +1316,10 @@
   
 
 
-<h1 id="introducing-caldav-and-signing-up-to-events-with-nextcloud">Introducing CalDAV and Signing up to Events with Nextcloud<a class="headerlink" href="#introducing-caldav-and-signing-up-to-events-with-nextcloud" title="Permanent link">&para;</a></h1>
+<h1 id="introducing-caldav-and-signing-up-to-events-with-nextcloud">Introducing CalDAV and Signing up to Events with Nextcloud<a class="headerlink" href="#introducing-caldav-and-signing-up-to-events-with-nextcloud" title="Varanlegur tengill">&para;</a></h1>
 <p>For years now, the Open Web Calendar has served as a static display for your online calendar. Due to to the funding we have received from <a href="/news/2024-04-10-website">NLNet</a>, it can be an active part of your website: Sign up to events!</p>
 <p>First, we had to solve a few problems.</p>
-<h2 id="no-knowledge-challenge">No Knowledge Challenge<a class="headerlink" href="#no-knowledge-challenge" title="Permanent link">&para;</a></h2>
+<h2 id="no-knowledge-challenge">No Knowledge Challenge<a class="headerlink" href="#no-knowledge-challenge" title="Varanlegur tengill">&para;</a></h2>
 <p>The Open Web Calendar is designed to shield you from potential trackers, see <a href="https://www.youtube.com/watch?v=JVosZ6zht5I&amp;list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&amp;index=2">the video about its architecture</a>. Part of the idea is to get you started fast: No sign-up, no emails, no identification. This way, the Open Web Calendar does not need to store anything about the calendars that it displays or the people using them.</p>
 <blockquote>
 <p>We show how to create services that <strong>protect your privacy</strong> and do not treat your data as a business value.</p>
@@ -1332,7 +1332,7 @@
 </ul>
 <p>So whether we have 10 or 100.000 calendars, it still costs roughly the same. We call this cloud architecture pattern &ldquo;Function as a Service&rdquo; (FaaS).</p>
 <p>A <strong>challenge</strong> now arises: How can we display calendars publicly if they have sensitive information such as passwords?</p>
-<h2 id="encrypted-urls">Encrypted URLs<a class="headerlink" href="#encrypted-urls" title="Permanent link">&para;</a></h2>
+<h2 id="encrypted-urls">Encrypted URLs<a class="headerlink" href="#encrypted-urls" title="Varanlegur tengill">&para;</a></h2>
 <p>Encrypted source URLs are the answer to securing passwords in public calendars!</p>
 <p>When you create a calendar, you have the choice of encrypting your URL. Then, only the Open Web Calendar can read it, authenticate and display the calendar. As an add-on, we generate a random password which you can use to decrypt the URL later.</p>
 <p>As before, the Open Web Calendar does not store any sensitive information. Everything is included in the encrypted part of the URL.</p>
@@ -1346,7 +1346,7 @@
 </ul>
 <p>We want to thank <a href="https://radicallyopensecurity.com/">Radically Open Security</a> for their security review of the software, (see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/595">Issue 595</a>, NF-008).</p>
 <p>By encrypting URLs, the Open Web Calendar now provides an additional layer of protection for sensitive information.</p>
-<h2 id="caldav-calendars">CalDAV Calendars<a class="headerlink" href="#caldav-calendars" title="Permanent link">&para;</a></h2>
+<h2 id="caldav-calendars">CalDAV Calendars<a class="headerlink" href="#caldav-calendars" title="Varanlegur tengill">&para;</a></h2>
 <p>CalDAV is the web standard to manage calendars on web servers. Users can organize their events and TODOs, share calendars and invite others to collaborate. For the CalDAV feature, we have chosen <a href="https://nextcloud.com/">Nextcloud</a> to test compatibility as it is a widely trusted open-source in-house cloud solution.</p>
 <p>Technically, we use the <a href="https://pypi.org/project/caldav/"><code>caldav</code> library</a> as it utilizes <code>recurring-ical-events</code>, one of the components of the Open Web Calendar. Additionally to this relationship and because of <code>caldav</code>&rsquo;s year-long experience, it instantly boosts the compatibility of the Open Web Calendar with existing CalDAV servers.</p>
 <p>Leveraging the speed of open-source development, we get:</p>
@@ -1358,7 +1358,7 @@
 <iframe class="open-web-calendar" id="" style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;" src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/caldav-signup.json&" sandbox="allow-scripts allow-same-origin allow-top-navigation" allowTransparency="true" scrolling="no" frameborder="0" height="600px" width="100%"></iframe>
 
 <p>You can find the resulting calendar in the <a href="../../templates#caldav-sign-up">Examples Section</a>, too.</p>
-<h2 id="economic-summary">Economic Summary<a class="headerlink" href="#economic-summary" title="Permanent link">&para;</a></h2>
+<h2 id="economic-summary">Economic Summary<a class="headerlink" href="#economic-summary" title="Varanlegur tengill">&para;</a></h2>
 <p>Using industry-proven, open-source libraries, we build secure solutions fast. They respect privacy and deliver new use-cases. Having a stable open-source ecosystem around existing web-standards allows us to create compatible software at scale. NLNet funded <a href="/news/2024-04-10-website">Python&rsquo;s calendaring ecosystem in 2024</a> which is built on open web-standards that everyone can use. With this, critical public infrastructure is secured, yielding economic value for everyone in the EU and world-wide, achieved on a relatively small budget.</p>
 <p>Leveraging an open-source architecture design, the Open Web Calendar builds on compatible software components. Some of these are:</p>
 <ul>
@@ -1376,7 +1376,7 @@
 <li>stability of critical infrastructure</li>
 </ul>
 <p>We want to thank NLNet for the opportunity to work for the open web and a democratic society in a technical era.</p>
-<h2 id="project-summary">Project Summary<a class="headerlink" href="#project-summary" title="Permanent link">&para;</a></h2>
+<h2 id="project-summary">Project Summary<a class="headerlink" href="#project-summary" title="Varanlegur tengill">&para;</a></h2>
 <p>As one of the highlights of the <a href="/news/2024-04-10-website">2024 grant by NLNet</a>, the CalDAV implementation added exciting new features:</p>
 <p>Now, it is possible to display your private calendars publicly on your website, from any source. Even if the calendar is usually protected by a password, you can now share it with others. There exist many CalDAV servers. Using the Open Web Calendar, they support signing up to events on a public page!</p>
 <p>We hope to see this feature used and users to come back with ideas of how to make their calendars even better.</p>

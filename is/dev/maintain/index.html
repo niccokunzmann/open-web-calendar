@@ -23,7 +23,7 @@
     
     
       
-        <title>Notes for Maintainers - Open Web Calendar</title>
+        <title>Notes for Maintainers - Opna vefdagatalið</title>
       
     
     
@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_gy8qcsu6/is/dev/maintain/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__bp0e26e/is/dev/maintain/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_gy8qcsu6/is/dev/maintain/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__bp0e26e/is/dev/maintain/index.png" >
       
     
     
@@ -1189,7 +1189,7 @@
   
   
   <span class="md-ellipsis">
-    Privacy Policy
+    Meðferð persónuupplýsinga
     
   </span>
   
@@ -1325,18 +1325,18 @@
   
 
 
-<h1 id="notes-for-maintainers">Notes for Maintainers<a class="headerlink" href="#notes-for-maintainers" title="Permanent link">&para;</a></h1>
+<h1 id="notes-for-maintainers">Notes for Maintainers<a class="headerlink" href="#notes-for-maintainers" title="Varanlegur tengill">&para;</a></h1>
 <p>This section clarifies how to maintain the project.</p>
-<h2 id="update-dependencies">Update Dependencies<a class="headerlink" href="#update-dependencies" title="Permanent link">&para;</a></h2>
+<h2 id="update-dependencies">Update Dependencies<a class="headerlink" href="#update-dependencies" title="Varanlegur tengill">&para;</a></h2>
 <p>To update the dependencies, run this command:</p>
 <div class="highlight"><pre><span></span><code>pip-compile-multi<span class="w"> </span>--upgrade
 </code></pre></div>
-<h2 id="update-dhtmlx-scheduler">Update DHTMLX Scheduler<a class="headerlink" href="#update-dhtmlx-scheduler" title="Permanent link">&para;</a></h2>
+<h2 id="update-dhtmlx-scheduler">Update DHTMLX Scheduler<a class="headerlink" href="#update-dhtmlx-scheduler" title="Varanlegur tengill">&para;</a></h2>
 <p>DHTMLX Scheduler can be updated from its <a href="https://github.com/DHTMLX/scheduler">GitHub repository</a>. There is a script which updates the scheduler. Still their changelog needs to be considered.</p>
 <div class="highlight"><pre><span></span><code>./scripts/update-scheduler.sh
 </code></pre></div>
 <p>If you update the scheduler, also add this to the changelog.</p>
-<h2 id="release-a-new-version">Release a new Version<a class="headerlink" href="#release-a-new-version" title="Permanent link">&para;</a></h2>
+<h2 id="release-a-new-version">Release a new Version<a class="headerlink" href="#release-a-new-version" title="Varanlegur tengill">&para;</a></h2>
 <p>To release a new version:</p>
 <ol>
 <li>Edit the <code>docs/changelog.md</code> file in the Changelog Section and add the changes.
@@ -1351,13 +1351,13 @@ git push</code></li>
    git tag v1.30
 git push origin v1.30</code></li>
 </ol>
-<h2 id="package">Package<a class="headerlink" href="#package" title="Permanent link">&para;</a></h2>
+<h2 id="package">Package<a class="headerlink" href="#package" title="Varanlegur tengill">&para;</a></h2>
 <p>The Open Web Calendar is a package on PyPI. You can build the package locally.</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>build<span class="w"> </span>wheel<span class="w"> </span>twine
 python3<span class="w"> </span>-m<span class="w"> </span>build
 </code></pre></div>
 <p>New versions are automatically uploaded. This process follows <a href="https://packaging.python.org/en/latest/tutorials/packaging-projects/">the official tutorial</a>.</p>
-<h2 id="translate-documentation-files">Translate Documentation Files<a class="headerlink" href="#translate-documentation-files" title="Permanent link">&para;</a></h2>
+<h2 id="translate-documentation-files">Translate Documentation Files<a class="headerlink" href="#translate-documentation-files" title="Varanlegur tengill">&para;</a></h2>
 <p>We might add more Markdown documentation files to the <a href="https://hosted.weblate.org/engage/open-web-calendar/">Weblate translation</a>. The aim of this section is to have a consistent outcome.</p>
 <ol>
 <li>Create a component <strong>From existing component</strong>, the <code>index.html</code>.</li>
@@ -1437,7 +1437,7 @@ python3<span class="w"> </span>-m<span class="w"> </span>build
 <li>Clear any component alerts.</li>
 <li>Skip through all the strings. If some strings are not for translation, add the flag <code>read-only</code>.</li>
 </ol>
-<h2 id="translators">Translators<a class="headerlink" href="#translators" title="Permanent link">&para;</a></h2>
+<h2 id="translators">Translators<a class="headerlink" href="#translators" title="Varanlegur tengill">&para;</a></h2>
 <p>It is nice to know who translated and how often.</p>
 <div class="highlight"><pre><span></span><code>./scripts/who-translated.sh
 </code></pre></div>
