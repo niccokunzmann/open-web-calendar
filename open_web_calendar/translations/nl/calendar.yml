@@ -55,3 +55,8 @@ labels_week_agenda_tab: Agenda
 language: Nederlands
 date_month_short_sep: Sep
 labels_minute: Minuut
+icon_subscribe: Voeg toe aan mijn kalender
+icon_signup: Registreren
+label_participants: Deelnemers
+signup-email: email
+signup-name: naam
