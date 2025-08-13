@@ -15,3 +15,34 @@ configure-week-description: De week kan op maandag of zondag starten.
 event-status-tentative: voorlopig
 loader-default: ronde lader
 translate: Vertaal
+about: De Open Web Calender gebruikt ICS/ICal kalenders online en toont deze in 
+  een kalender. U kunt het gebruiken met NextCloud, Outlook, Google Calendar, 
+  Meetup en andere kalendersystemen die de ICS standaard gebruiken.
+calendar-urls: 'Om meerdere kalenders samen te voegen, voert u per keer het adres
+  van de ICS kalender toe:'
+button-encrypt: Codeer URL
+button-encrypted: Gecodeerd
+button-edit: Wjzig
+button-remove: Verwijder
+password-urls: Wij raden aan om URL's te coderen als deze gevoelige informatie 
+  bevat. Sla het volgende wachtwoord op, alleen als u van plan bent om deze URLS
+  later te decoderen.
+decrypt-urls: Decodeer URL's
+add-url-placeholder-url: https://link.to/a-calendar.ics
+add-url-placeholder-username: optionele gebruikersnaam
+add-url-placeholder-password: optioneel wachtwoord
+add-url-button: Toevoegen
+add-url-calendar-public: Dit is een publieke URL
+language-title: Taal
+language-description: U kunt de taal van de kalender instellen.
+language-browser-false: 'De kalender is altijd in deze taal:'
+language-browser-true: 'De kalender is in de taal van de bezoeker. Als de vertaling
+  niet aanwezig is, wordt het getoond in:'
+skins-title: Skins
+skins-description: U kunt verschillende skins selecteren voor de kalender.
+skins-terrace: Terras
+skins-dark: Donker
+skins-material: Material
+skins-flat: Plat
+skins-contrast-black: Contrast zwart
+skins-contrast-white: Contrast wit
