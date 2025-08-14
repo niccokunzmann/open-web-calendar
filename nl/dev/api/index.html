@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Embed a highly customizable web calendar into your website using ICal source links">
+        <meta name="description" content="De API van Open Web Calendar staat meer configuratieopties toe dan de configuratiepagina.">
       
       
       
@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_92qnd9fb/nl/dev/api/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_h59a7xg4/nl/dev/api/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_92qnd9fb/nl/dev/api/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_h59a7xg4/nl/dev/api/index.png" >
       
     
     
@@ -462,7 +462,7 @@
   
   
   <span class="md-ellipsis">
-    Customize Your Own Online Calendar Display
+    Pas weergave aan van uw eigen online calendar
     
   </span>
   
@@ -840,7 +840,7 @@
   
   
   <span class="md-ellipsis">
-    Self-Hosting & Deployment
+    Zelf hosten en deployen
     
   </span>
   
@@ -909,7 +909,7 @@
   
   
   <span class="md-ellipsis">
-    Server Configuration
+    Serverconfiguratie
     
   </span>
   
@@ -1335,27 +1335,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#specification-in-the-calendar" class="md-nav__link">
+  <a href="#specificatie-in-de-kalender" class="md-nav__link">
     <span class="md-ellipsis">
-      Specification in the Calendar
+      Specificatie in de kalender
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#specification-in-the-index-page" class="md-nav__link">
+  <a href="#specificatie-in-de-indexpagina" class="md-nav__link">
     <span class="md-ellipsis">
-      Specification in the Index Page
+      Specificatie in de Indexpagina
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#architectuur" class="md-nav__link">
     <span class="md-ellipsis">
-      Architecture
+      Architectuur
     </span>
   </a>
   
@@ -1385,21 +1385,21 @@
   
 
 
-<h1 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
-<p>Generally, the Open Web Calendar is there to be used without restriction. You can use this API to customize the calendar on the fly.</p>
-<p>This section can be of use if one of these applies:</p>
+<h1 id="api">API<a class="headerlink" href="#api" title="Permanente link">&para;</a></h1>
+<p>In zijn algemeenheid kan Open Web Calendar zonder restricties gebruikt worden. U kunt deze API gebruiken om kalenders ad hoc aan te passen.</p>
+<p>Deze sectie kan interessant zijn voor u als een van deze opties van toepassing is:</p>
 <ul>
-<li>You are a web developer who wants to embed the Open Web Calendar.</li>
-<li>You want to exploit the full flexibility, not just what is exposed on the configuration page.</li>
-<li>You want to use JavaScript to dynamically generate the calendar design and options.</li>
-<li>You want to extend the functionality of the Open Web Calendar.</li>
-<li>You want to use the Open Web Calendar as a proxy to request JSON events for your self-made event feed.</li>
+<li>U bent een web-ontwikkelaar die Open Web Calendar wil integreren.</li>
+<li>U wilt volledige vrijheid in flexibiliteit, niet alleen wat getoond wordt op de configuratiepagina.</li>
+<li>U wilt JavaScript gebruiken om alle kalenderontwerpen en opties dynamisch te genereren.</li>
+<li>U wilt de functionaliteit uitbreiden van Open Web Calendar.</li>
+<li>U wilt Open Web Calendar gebruiken als een proxy om gebeurtenissen in JSON voor uw zelfgemaakte gebeurtenissen feed te gebruiken.</li>
 </ul>
-<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
-<p>The basic parameters are the same at these endpoints:</p>
+<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanente link">&para;</a></h2>
+<p>De standaardparameters zijn gelijk bij deze endpoints:</p>
 <ul>
-<li><code>/index.html</code> - edit the calendar</li>
-<li><code>/about.html</code> - view the about page</li>
+<li><code>/index.html</code> - wijzig de kalender</li>
+<li><code>/about.html</code> - bekijk de &ldquo;over&rdquo; pagina</li>
 <li><code>/calendar.html</code> - bekijk de kalender</li>
 <li><code>/calendar.spec</code> - download de specificaties</li>
 <li><code>/calendar.ics</code> - abonneer op het ICS-bestand</li>
@@ -1412,7 +1412,7 @@
 <li><code>from=YYYY-MM-DD</code> - the start of the period in which events happen (inclusive)</li>
 <li><code>to=YYYY-MM-DD</code> - the end of the period in which events happen (exclusive)</li>
 </ul>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanente link">&para;</a></h2>
 <p>All configuration parameters are described sufficiently in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a>. That is the reference. E.g. if you find the parameter <code>title</code> in the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a>, you have several options:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="query-parameter" name="__tabbed_1" type="radio" /><input id="yaml" name="__tabbed_1" type="radio" /><input id="json" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="query-parameter">Query Parameter</label><label for="yaml">YAML</label><label for="json">JSON</label></div>
 <div class="tabbed-content">
@@ -1435,49 +1435,49 @@
 </div>
 </div>
 </div>
-<h2 id="compiling-the-specification">Compiling the Specification<a class="headerlink" href="#compiling-the-specification" title="Permanent link">&para;</a></h2>
+<h2 id="compiling-the-specification">Compiling the Specification<a class="headerlink" href="#compiling-the-specification" title="Permanente link">&para;</a></h2>
 <p>You can change the calendar behavior and looks with parameters. If the same parameter is specified in different places, the earlier place listed below has the highest precedence. These are the places to specify parameters:</p>
-<h3 id="query-parameters">Query parameters<a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h3>
+<h3 id="query-parameters">Query parameters<a class="headerlink" href="#query-parameters" title="Permanente link">&para;</a></h3>
 <p>All parameters to the calendar url are put into the specification. The query parameters have the highest precedence.</p>
 <p>Examples:</p>
 <div class="highlight"><pre><span></span><code>index.html?language=de
 calendar.html?title=CALENDAR
 </code></pre></div>
-<h3 id="specification_url">specification_url<a class="headerlink" href="#specification_url" title="Permanent link">&para;</a></h3>
+<h3 id="specification_url">specification_url<a class="headerlink" href="#specification_url" title="Permanente link">&para;</a></h3>
 <p>If you specify this query parameter, the editor configuration is loaded from this url, too. Query parameters are still more important than what is written in this file. The source format can be YAML or JSON.</p>
 <p>Examples:</p>
 <div class="highlight"><pre><span></span><code>calendar.html?specification_url=https://github.com/niccokunzmann/open-web-calendar/raw/master/open_web_calendar/default_specification.yml
 </code></pre></div>
-<h3 id="open_web_calendarappdefault_specification">open_web_calendar.app.DEFAULT_SPECIFICATION<a class="headerlink" href="#open_web_calendarappdefault_specification" title="Permanent link">&para;</a></h3>
+<h3 id="open_web_calendarappdefault_specification">open_web_calendar.app.DEFAULT_SPECIFICATION<a class="headerlink" href="#open_web_calendarappdefault_specification" title="Permanente link">&para;</a></h3>
 <p>This is intended for developers and Python-internal.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">open_web_calendar.app</span><span class="w"> </span><span class="kn">import</span> <span class="n">DEFAULT_SPECIFICATION</span>
 <span class="n">DEFAULT_SPECIFICATION</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;calendar&#39;</span>
 </code></pre></div>
-<h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanent link">&para;</a></h3>
+<h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanente link">&para;</a></h3>
 <p>This is an optional environment variable. Please read more about it in the <a href="../../host/configure#owc_specification">Server Configuration</a>.</p>
-<h3 id="default_specification"><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a><a class="headerlink" href="#default_specification" title="Permanent link">&para;</a></h3>
+<h3 id="default_specification"><a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a><a class="headerlink" href="#default_specification" title="Permanente link">&para;</a></h3>
 <p>This file contains the default parameters. They must not be hard-coded in the source code. All parameters are listed and documented there so this file can be used for reference. Do not modify this file, instead use the <code>OWC_SPECIFICATION</code> environment variable.</p>
-<h2 id="adding-parameters">Adding Parameters<a class="headerlink" href="#adding-parameters" title="Permanent link">&para;</a></h2>
+<h2 id="adding-parameters">Adding Parameters<a class="headerlink" href="#adding-parameters" title="Permanente link">&para;</a></h2>
 <p>If you add a new parameter as a developer:</p>
 <ul>
 <li>Add the parameter with a default value to the <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/default_specification.yml">default_specification</a></li>
 <li>Add an implementation, depending on its use in the <code>app.py</code> or the templates of the JavaScript files. The specification is already available in all of them to use.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> to check that the calendar responds to the feature.</li>
-<li>Add tests in <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> to make sure that the parameter can be used when a calendar is edited.</li>
+<li>Voeg tests toe <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/configure-the-calendar.feature">features/configure-the-calendar.feature</a> om te controleren of de kalender juist functioneert.</li>
+<li>Voeg tests toe <a href="https://github.com/niccokunzmann/open-web-calendar/tree/master//open_web_calendar/features/edit-the-calendar.feature">features/edit-the-calendar.feature</a> om zeker te weten dat de parameter gebruikt kan worden wanneer een kalender wordt gewijzigd.</li>
 </ul>
-<h2 id="specification-in-the-calendar">Specification in the Calendar<a class="headerlink" href="#specification-in-the-calendar" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compiles the specification from the given parameters in <code>get_specification()</code>. In the <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">template</a> you can access the specification through the <code>specification</code> variable. The specification is available to JavaScript as the <code>specification</code> variable.</p>
-<p>See also:</p>
+<h2 id="specificatie-in-de-kalender">Specificatie in de kalender<a class="headerlink" href="#specificatie-in-de-kalender" title="Permanente link">&para;</a></h2>
+<p><a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81">app.py</a> compileert de specificatie van de gegeven parameters in <code>get_specification()</code>. In het <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23">sjabloon</a> kunt u de specificatie benaderen via de <code>specification</code> variabele. De specificatie is beschikbaar in JavaScript als de <code>specification</code> variabele.</p>
+<p>Bekijk ook:</p>
 <ul>
-<li><a href="../javascript">JavaScript Customization</a></li>
+<li><a href="../javascript">JavaScript-aanpassing</a></li>
 </ul>
-<h2 id="specification-in-the-index-page">Specification in the Index Page<a class="headerlink" href="#specification-in-the-index-page" title="Permanent link">&para;</a></h2>
-<p>The default specification is available before the calendar is built via JavaScript in the <code>configuration.default_specification</code> variable. There is a <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a> function which created the specification from the inputs. Generally, the <code>specification</code> variable should be used.</p>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<p>Below, you can find a picture of the architecture.</p>
+<h2 id="specificatie-in-de-indexpagina">Specificatie in de Indexpagina<a class="headerlink" href="#specificatie-in-de-indexpagina" title="Permanente link">&para;</a></h2>
+<p>De standaardspecificatie is beschikbaar voordat de kalender opgebouwd wordt door JabaScript in de <code>configuration.default_specification</code> variabele. Er is een <a href="https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93">getSpecification()</a> functie die de specificatie maakt op basis van de invoer. In het algemeen, de <code>specification</code> variabele zal gebruikt moeten worden.</p>
+<h2 id="architectuur">Architectuur<a class="headerlink" href="#architectuur" title="Permanente link">&para;</a></h2>
+<p>Hieronder kunt u een schematische weergave zien van de architectuur.</p>
 <p><img alt="architecture" src="/assets/img/architecture.svg" /></p>
-<p>The base of a calendar is the specification, given in the various forms. This specification influences all the steps.</p>
-<p>After the specification is compiled, the calendar (ics) files are downloaded from the locations on the Internet.</p>
+<p>De basis van de kalender is de specificatie, in de verschillende vormen. Deze specificatie beïnvloedt alle stappen.</p>
+<p>Nadat de specificatie is gecompileerd worden de kalenderbestanden (ics) gedownload van de locaties op het internet.</p>
 <p>From the calendar files, the events are generated.</p>
 <p>Then, different views are chosen to display the events.</p>
 <p>In the end, these lead to HTML and style changes of the calendar website.</p>
