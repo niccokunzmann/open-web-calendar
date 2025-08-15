@@ -6,15 +6,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:51+0200\n"
-"PO-Revision-Date: 2025-08-14 11:01+0000\n"
+"PO-Revision-Date: 2025-08-15 09:25+0000\n"
 "Last-Translator: Mark Kuiphuis <mark@kuiphuis.online>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/open-web-calendar/documentation-common-translations/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-common-translations/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.13\n"
 
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
@@ -77,7 +78,6 @@ msgstr "[Squid]: https://www.squid-cache.org/"
 msgid "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 msgstr "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 
-#, fuzzy
 msgid ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
 msgstr ""
@@ -267,81 +267,65 @@ msgstr ""
 "[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
 
-#, fuzzy
 msgid ""
 "[default_specification]: https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//open_web_calendar/default_specification.yml"
 msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/default_specification.yml"
+"[default_specification]: https://github.com/niccokunzmann/open-web-calendar/"
+"tree/master//open_web_calendar/default_specification.yml"
 
-#, fuzzy
 msgid ""
 "[getSpecification()]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
 msgstr ""
-"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
+"[getSpecification()]: https://github.com/niccokunzmann/open-web-calendar/"
+"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
 
-#, fuzzy
 msgid "[parameters]: ../api"
 msgstr "[parameters]: ../api"
 
-#, fuzzy
 msgid ""
 "[DHTMLX Scheduler]: "
 "https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
 msgstr ""
-"[DHTMLX Scheduler]: "
-"https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
+"[DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/"
+"api__refs__scheduler.html"
 
-#, fuzzy
 msgid "[privacy-policy]: ../privacy-policy"
 msgstr "[privacy-policy]: ../privacy-policy"
 
-#, fuzzy
 msgid "[OWC_SPECIFICATION]: #owc_specification"
 msgstr "[OWC_SPECIFICATION]: #owc_specification"
 
-#, fuzzy
 msgid "[default_specification]: /assets/default_specification.yml"
 msgstr "[default_specification]: /assets/default_specification.yml"
 
-#, fuzzy
 msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
 msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
 
-#, fuzzy
 msgid "[1]: ../pypi"
 msgstr "[1]: ../pypi"
 
-#, fuzzy
 msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
 msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
 
-#, fuzzy
 msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 
-#, fuzzy
 msgid "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 msgstr "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 
-#, fuzzy
 msgid "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
 msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
 
-#, fuzzy
 msgid ""
 "[privacy-policy]: https://docs.github.com/en/site-policy/privacy-policies/"
 msgstr ""
 "[privacy-policy]: https://docs.github.com/en/site-policy/privacy-policies/"
 
-#, fuzzy
 msgid "[Gunicorn]: https://docs.gunicorn.org/"
 msgstr "[Gunicorn]: https://docs.gunicorn.org/"
 
-#, fuzzy
 msgid ""
 "[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
 "calendar.hosted.quelltext.eu"
@@ -349,7 +333,6 @@ msgstr ""
 "[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
 "calendar.hosted.quelltext.eu"
 
-#, fuzzy
 msgid ""
 "[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
 "calendar.hosted.quelltext.eu"
@@ -357,57 +340,47 @@ msgstr ""
 "[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
 "calendar.hosted.quelltext.eu"
 
-#, fuzzy
 msgid ""
 "[vid-architecture]: "
 "https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
 msgstr ""
-"[vid-architecture]: "
-"https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
+"[vid-architecture]: https://www.youtube.com/watch?v=JVosZ6zht5I&amp;list"
+"=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&amp;index=2"
 
-#, fuzzy
 msgid "[Radically Open Security]: https://radicallyopensecurity.com/"
 msgstr "[Radically Open Security]: https://radicallyopensecurity.com/"
 
-#, fuzzy
 msgid "[Nextcloud]: https://nextcloud.com/"
 msgstr "[Nextcloud]: https://nextcloud.com/"
 
-#, fuzzy
 msgid "[templates]: ../../templates#caldav-sign-up"
-msgstr "[templates]: ../../templates#caldav-sign-up"
+msgstr "[sjablonen]: ../../templates#caldav-sign-up"
 
-#, fuzzy
 msgid "[grant]: /news/2024-04-10-website"
 msgstr "[grant]: /news/2024-04-10-website"
 
-#, fuzzy
 msgid "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
 msgstr "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
 
-#, fuzzy
 msgid "[@dml105]: https://github.com/dml105"
 msgstr "[@dml105]: https://github.com/dml105"
 
-#, fuzzy
 msgid ""
 "[Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
 msgstr ""
 "[Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
 
-#, fuzzy
 msgid "[Antroposofía Chile]: https://antroposofiachile.net/home/"
 msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
 
-#, fuzzy
 msgid "[Gancio]: https://gancio.org/"
 msgstr "[Gancio]: https://gancio.org/"
 
 msgid "Examples:"
-msgstr ""
+msgstr "Voorbeelden:"
 
 msgid "Further Configuration"
-msgstr ""
+msgstr "Overige configuratie"
 
 #~ msgid "Development"
 #~ msgstr ""
