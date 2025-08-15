@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 name: Ruff
+permissions:
+  contents: read
 on: [push, pull_request]
 jobs:
   ruff:
