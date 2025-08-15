@@ -4,15 +4,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-26 22:54+0200\n"
-"PO-Revision-Date: 2025-08-14 11:01+0000\n"
+"PO-Revision-Date: 2025-08-15 09:25+0000\n"
 "Last-Translator: Mark Kuiphuis <mark@kuiphuis.online>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-index/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.13\n"
 
 msgid "See the features or try the Open Web Calendar yourself!"
 msgstr "Bekijk de functies of probeer zelf de Open Web Calender!"
@@ -55,58 +56,58 @@ msgid "Features"
 msgstr "Functies"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "Directe evenementensynchronisatie"
 
 msgid "<center>✔</center>"
 msgstr ""
 
 msgid "Embed with an HTML snippet"
-msgstr ""
+msgstr "Integreer met een stukje HTML code"
 
 msgid "Desktop and Mobile"
-msgstr ""
+msgstr "Desktop en mobiel"
 
 msgid "Multi-Language Support"
-msgstr ""
+msgstr "Meertaligheidondersteuning"
 
 msgid "Fixed and Automatic Timezone"
-msgstr ""
+msgstr "Vaste en automatische tijdzone"
 
 msgid "Easy Editing"
-msgstr ""
+msgstr "Eenvoudig wijzigen"
 
 msgid "Designs To Choose"
-msgstr ""
+msgstr "Beschikbare ontwerpen"
 
 msgid "Multiple Calendar Sources"
-msgstr ""
+msgstr "Meerdere kalenderbronnen"
 
 msgid "Style per Calendar, Category and more"
-msgstr ""
+msgstr "Stijl per kalender, categorie en meer"
 
 msgid "Custom CSS"
-msgstr ""
+msgstr "Aangepaste CSS"
 
 msgid "Day, Week, Month, Agenda"
-msgstr ""
+msgstr "Dag, Week, Maand, Agenda"
 
 msgid "Work Week"
-msgstr ""
+msgstr "Werkweek"
 
 msgid "Click on Event Location"
-msgstr ""
+msgstr "Klik op evenementlocatie"
 
 msgid "Styled Event Descriptions"
-msgstr ""
+msgstr "Gestijlde evenementomschrijvingen"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr ""
+msgstr "FOSS - Vrij van leveranciersafhankelijkheid"
 
 msgid "Subscribe Link"
-msgstr ""
+msgstr "Aanmeldlink"
 
 msgid "Community and Paid Support"
-msgstr ""
+msgstr "Gemeenschap en betaalde ondersteuning"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"
