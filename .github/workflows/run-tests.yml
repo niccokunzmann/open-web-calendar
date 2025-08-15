@@ -87,6 +87,8 @@ jobs:
   link-check:
     name: "Check Links in Documentation"
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     if: ${{ ! startsWith(github.ref, 'refs/tags/v')}}
     steps:
       - uses: actions/checkout@v4
