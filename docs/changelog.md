@@ -16,6 +16,11 @@ The latest version might not be released, yet.
 <!-- Contributors, if you like to be linked, please put your name down here with a link. -->
 [தமிழ்நேரம்]: https://tamilneram.github.io/
 
+## v1.51
+
+- Update dependencies
+- Update Dutch translation by Mark Kuiphuis and michte, Finnish by Ricky Tigg, Tamil by [தமிழ்நேரம்], Icelandic by Sveinn í Felli, Ukrainian by Максим Горпиніч, Slovak by Warder, Kabyle by ButterflyOfFire, Chinese (Simplified Han script) by Alioc
+
 ## v1.50
 
 - Free up space at the top of the calendar if there are no controls, see [Issue 753](https://github.com/niccokunzmann/open-web-calendar/issues/753)
