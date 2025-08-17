@@ -469,10 +469,6 @@ def step_impl(context, choice, select_id):
     end = time.time() + WAIT
     selected = None
     selected_text = None
-    with contextlib.suppress(StaleElementReferenceException):
-        element = context.browser.find_element(By.ID, select_id)
-        select = Select(element)
-        select.select_by_visible_text(choice)
     while not selected and time.time() < end:
         with contextlib.suppress(StaleElementReferenceException):
             element = context.browser.find_element(By.ID, select_id)
@@ -484,13 +480,11 @@ def step_impl(context, choice, select_id):
                     selected = option
                     selected_text = text
                     # break
+        if not selected:
             time.sleep(0.01)
-    # while True:
-    #     select.select_by_visible_text(choice)
-    #     if not time.time() < end or element.get_attribute("value") != "":
-    #         break
-    #     time.sleep(0.01)
     try:
+        element = context.browser.find_element(By.ID, select_id)
+        select = Select(element)
         print(
             f"{select_id} selected {element.get_attribute('value')!r} "
             f"through text {choice!r}, showing "
