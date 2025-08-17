@@ -20,7 +20,7 @@ cairocffi==1.7.1
     # via cairosvg
 cairosvg==2.8.2
     # via mkdocs-material
-certifi==2025.7.9
+certifi==2025.7.14
     # via requests
 cffi==1.17.1
     # via cairocffi
@@ -42,7 +42,7 @@ ghp-import==2.1.0
     # via mkdocs
 gitdb==4.0.12
     # via gitpython
-gitpython==3.1.44
+gitpython==3.1.45
     # via
     #   mkdocs-git-revision-date-localized-plugin
     #   mkdocs-rss-plugin
@@ -96,7 +96,7 @@ mkdocs-macros-plugin==1.3.7
     # via -r requirements/docs.in
 mkdocs-markdownextradata-plugin==0.2.6
     # via -r requirements/docs.in
-mkdocs-material[imaging]==9.6.15
+mkdocs-material[imaging]==9.6.16
     # via -r requirements/docs.in
 mkdocs-material-extensions==1.3.1
     # via mkdocs-material
@@ -135,7 +135,7 @@ pygments==2.19.2
     # via mkdocs-material
 pymd4c==1.3.0
     # via mdpo
-pymdown-extensions==10.16
+pymdown-extensions==10.16.1
     # via
     #   mkdocs-material
     #   mkdocs-meta-descriptions-plugin

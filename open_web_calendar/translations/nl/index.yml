@@ -15,3 +15,139 @@ configure-week-description: De week kan op maandag of zondag starten.
 event-status-tentative: voorlopig
 loader-default: ronde lader
 translate: Vertaal
+about: De Open Web Calender gebruikt ICS/ICal kalenders online en toont deze in 
+  een kalender. U kunt het gebruiken met NextCloud, Outlook, Google Calendar, 
+  Meetup en andere kalendersystemen die de ICS standaard gebruiken.
+calendar-urls: 'Om meerdere kalenders samen te voegen, voert u per keer het adres
+  van de ICS kalender toe:'
+button-encrypt: Codeer URL
+button-encrypted: Gecodeerd
+button-edit: Wjzig
+button-remove: Verwijder
+password-urls: Wij raden aan om URL's te coderen als deze gevoelige informatie 
+  bevat. Sla het volgende wachtwoord op, alleen als u van plan bent om deze URLS
+  later te decoderen.
+decrypt-urls: Decodeer URL's
+add-url-placeholder-url: https://link.to/a-calendar.ics
+add-url-placeholder-username: optionele gebruikersnaam
+add-url-placeholder-password: optioneel wachtwoord
+add-url-button: Toevoegen
+add-url-calendar-public: Dit is een publieke URL
+language-title: Taal
+language-description: U kunt de taal van de kalender instellen.
+language-browser-false: 'De kalender is altijd in deze taal:'
+language-browser-true: 'De kalender is in de taal van de bezoeker. Als de vertaling
+  niet aanwezig is, wordt het getoond in:'
+skins-title: Skins
+skins-description: U kunt verschillende skins selecteren voor de kalender.
+skins-terrace: Terras
+skins-dark: Donker
+skins-material: Material
+skins-flat: Plat
+skins-contrast-black: Contrast zwart
+skins-contrast-white: Contrast wit
+supported-standards: 'Wij ondersteunen de volgende standaarden: ICAL, CalDAV, webcal.'
+about-title: Over
+calendar-embed-title: Gebruik & Integratie
+calendar-code: 'Gebruik deze code om een kalender te integreren in uw website:'
+title-description: 'Voer hier de naam van de kalender in om de titel aan te passen:'
+starting-date-title: Startdatum
+starting-date-description: 'Om de startdatum te wijzigen van de kalender:'
+first-hour-title: Eerste uur
+first-hour-description: 'Om het eerste uur van de kalenderweergave te wijzigen:'
+last-hour-title: Laatste uur
+last-hour-description: 'Om het laatste uur te wijzigen van de kalenderweergave:'
+time-increment-title: Tijdinterval
+time-increment-description: 'Wijzig het tijdsinterval in de dag- & weekweergave:'
+time-increment-10: 10 minuten
+time-increment-60: 1 uur
+hour-format-title: Tijdnotatie
+hour-format-description: U kunt kiezen tussen de 24 uurs klok en de 12 uurs 
+  klok. Meer opties zijn beschikbaar.
+hour-format-specification-link: Bekijk de specificatie.
+links-title: Links
+links-description: Evenementen kunnen een locaties en URL's bevatten. Als u een 
+  kalender integreert in een website, kunt u kiezen waar de aangeklikte link de 
+  pagina opent.
+links-self: Open het gekoppelde document in hetzelfde frame als waar het was 
+  aangeklikt.
+links-parent: Open het gekoppelde document in het parent frame.
+links-blank: Open het gekoppelde document in een nieuw venster of tab.
+links-top: Open het gekoppelde document in het volledige venster.
+map-title: Kaart Links en Locatie
+map-description: Evenementlocaties kunnen coördinaten of tekst bevatten. 
+  Configureer hier welke kaarten-service gebruikt moet worden wanneer geklikt 
+  wordt op de locatie van een gebeurtenis.
+map-custom: Aangepaste kaart
+map-custom-summary: Pas de kaart-links aan
+map-link-location-description: Voer de URL in naar de kaart en voeg {location} 
+  toe waar de zoekopdracht toe leidt.
+map-link-geo-description: Voer de URL in naar de kaart en voeg de {lat} en {lon}
+  toe voor de coördinaten.
+map-osm: OpenStreetMap
+map-bing: Bing Maps
+map-google: Google Maps
+map-yandex: Yandex Maps
+map-geo: 'geo: Link'
+map-none: Tekst zonder link
+style-title: Aangepaste stijl met CSS
+style-description: U kunt de kleur van uw kalender en veel meer eigenschappen 
+  aanpassen middels CSS. Uw aanpassingen hebben prioriteit over de gekozen Skin.
+  Hieronder kunt u kiezen uit een aantal eigenschappen die we voor u al 
+  voorbereid hebben.
+style-background: U kunt de achtergrondkleur van de kalender aanpassen.
+style-click: U kunt de kleur van de elementen aanpassen die aangeklikt kunnen 
+  worden.
+style-date: U kunt de achtergrondkleur van de huidige datum aanpassen.
+style-days: Indien u verschillende kleuren wilt voor de dagen, kunt u dit ook 
+  specificeren.
+style-days-outside: Sommige dagen in de kalender hebben een andere kleur als 
+  deze zich niet in de huidige maand bevinden.
+style-css: Indien u wilt, kunt u uw eigen CSS eigenschappen specificeren.
+style-css-classes: 'Dit zijn voorbeelden van CSS classes voor stijlevenementen:'
+event-status-title: Evenementstatus
+event-status-description: 'Wijzig de weergave van de evenementomschrijving afhankelijk
+  van de status:'
+loader-title: Animatie tijdens laden
+loader-description: In sommige gevallen kan het enige tijd duren voordat de 
+  kalender geladen wordt. In het geval dat de server een gratis abonnement op 
+  Heroku heeft, dient de server eerst gestart te worden.
+tabs-description: 'De maandweergave is de standaard weergave. U kunt echter ook een
+  andere startweergave selecteren. Kies een:'
+controls-description: 'Het kan voorkomen dat u niet alle controle-elementen wilt tonen
+  aan de gebruikers. Kies hier welke elementen u wilt tonen:'
+menu-title: Kalendermenu
+controls-menu: Weergavemenu
+menu-description: U kunt een hamburgermenu toevoegen en de inhoud configureren.
+menu-shows-title: Toon titel in menu
+menu-shows-description: Toon omschrijving in menu
+menu-shows-calendar-names: Toon kalendernamen
+menu-shows-calendar-descriptions: Toon kalenderomschrijvingen
+menu-shows-calendar-visibility: Verberg/Toon kalenders
+timezone-description: 'De tijdzone wordt bepaald door de browser van de gebruiker.
+  Indien u de kalender wilt fixeren op een vaste tijdzone, heeft u de volgende optie
+  hieronder. Uw browser gebruikt deze tijdzone:'
+spec-title: De specificatie hosten
+spec-description: 'De kalender kan niet alleen gegenereerd worden door gebruik te
+  maken van de URL, maar ook via een JSON of YAML specificatie vanuit een bestand.
+  De aanpassingen hierboven genereren de volgende specificatie:'
+spec-host-html: U kunt de <a 
+  href="javascript:downloadJSONSpecification()">specificatie downloaden</a> en 
+  dit ergens op het web plaatsen. Op deze manier heeft u nog steeds controle 
+  over de aanpassingen aan de kalender nadat u deze heeft gedeeld via een link, 
+  bijv. op GitHub in een <a href="https://gist.github.com/">Gist</a>.
+spec-link: 'Zodra u de specificatie ergens online hebt gezet, kunt u een link maken
+  zoals deze:'
+participants-title: Deelnemers en organisatie
+participants-description: U kunt anderen uitnodigen voor evenementen en personen
+  kunnen zich aanmelden. U kunt deze opties aanzetten voor de weergave van namen
+  en e-mailadressen onder de evenementomschrijving.
+participants-organizers: Organisator van de evenement tonen?
+participants-attendees: Toon deelnemers aan het evenement?
+participants-status: Toon de status van de deelnemers? (bijv. geaccepteerd, 
+  afgewezen)
+participants-type: Toon het type deelnemer? (bijv. individu of groep)
+participants-role: Toon de rol van de deelnemer? (bijv. organisator, verplicht 
+  of optioneel persoon)
+caldav-choose-calendar: 'Kies een kalender van uw account:'
+caldav-allow-sign-up: 'E-mail aanmeldingen aanzetten voor evenementen in deze kalender:'

@@ -297,6 +297,7 @@ def before_all(context):
     use_fixture(set_window_size, context)
     use_fixture(app_server, context)
     use_fixture(calendars_server, context)
+    context.take_screenshot = lambda: take_screenshot(context)
 
 
 os.environ["OWC_SPECIFICATION"] = str(HERE / "environment_specification.yml")
@@ -318,21 +319,31 @@ def after_step(context, step: Step):
     """Run after each step to check success."""
     # see https://stackoverflow.com/a/31545036/1320237
     if step.status == Status.failed:
-        # https://pythonspot.com/selenium-take-screenshot/
-        browser: WebDriver = context.browser
-        # Take screenshot of element
-        # see https://stackoverflow.com/a/53825388/1320237
-        element: WebElement = browser.find_element(By.TAG_NAME, "body")
-        file = SCREENSHOTS_FOLDER / f"{Path(step.filename).stem}@line-{step.line}.png"
-        print(f"Test failed, capturing screenshot to {file}")
-        element.screenshot(str(file))
-        print(context.server.get_output())
+        context.take_screenshot()
+        print("Test failed")
 
 
-def before_step(context, step):
+def take_screenshot(context):
+    """Take a screenshot of the browser saving the file with the step name."""
+    # https://pythonspot.com/selenium-take-screenshot/
+    browser: WebDriver = context.browser
+    # Take screenshot of element
+    # see https://stackoverflow.com/a/53825388/1320237
+    element: WebElement = browser.find_element(By.TAG_NAME, "body")
+    file = (
+        SCREENSHOTS_FOLDER
+        / f"{Path(context.step.filename).stem}@line-{context.step.line}.png"
+    )
+    print(f"Capturing screenshot to {file}")
+    element.screenshot(str(file))
+    print(context.server.get_output())
+
+
+def before_step(context, step: Step):
     """Run before each step."""
     # from https://stackoverflow.com/a/73913239
     context.step_name = step.name
+    context.step = step
 
 
 def after_scenario(context, _):
