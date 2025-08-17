@@ -30,7 +30,7 @@ packaging==25.0
     #   tox
 pip-compile-multi==3.2.1
     # via -r requirements/dev.in
-pip-tools==7.4.1
+pip-tools==7.5.0
     # via pip-compile-multi
 platformdirs==4.3.8
     # via
