@@ -72,7 +72,7 @@ pyyaml==6.0.2
     # via responses
 requests==2.32.4
     # via responses
-responses==0.25.7
+responses==0.25.8
     # via
     #   -r requirements/test.in
     #   pytest-responses
