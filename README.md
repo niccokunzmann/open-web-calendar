@@ -8,7 +8,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 [![](https://badge.fury.io/py/open-web-calendar.svg)](https://pypi.org/project/open-web-calendar/)
 [![](https://img.shields.io/pypi/pyversions/open-web-calendar)](https://pypi.org/project/open-web-calendar)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/niccokunzmann/open-web-calendar/run-tests.yml?logo=github)](https://github.com/niccokunzmann/open-web-calendar/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/niccokunzmann/open-web-calendar/run-tests.yml?logo=github)](https://github.com/niccokunzmann/open-web-calendar/actions?query=branch%3Amaster)
 ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)
 
 You might want to:
