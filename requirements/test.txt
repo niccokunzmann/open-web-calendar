@@ -54,7 +54,7 @@ parse==1.20.2
     # via
     #   behave
     #   parse-type
-parse-type==0.6.4
+parse-type==0.6.6
     # via behave
 pluggy==1.6.0
     # via pytest
