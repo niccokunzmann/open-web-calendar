@@ -8,6 +8,7 @@ import difflib
 import json
 import re
 import time
+from typing import Callable
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
@@ -25,6 +26,20 @@ from selenium.webdriver.support.ui import Select, WebDriverWait
 
 # default wait time in seconds
 WAIT = 10
+
+
+def wait_until(condition: Callable[[], bool], error_message: str):
+    """Wait until the condition is true.
+
+    Raise a TimeoutError if the condition is not met.
+    """
+    end = time.time() + WAIT
+    while time.time() < end:
+        value = condition()
+        if value:
+            return value
+        time.sleep(0.01)
+    raise TimeoutError(error_message)
 
 
 @contextlib.contextmanager
@@ -671,6 +686,8 @@ CHECK = ".checked"
 @then('we download the file "{file_name}"')
 def step_impl(context, file_name: str):
     """Check that we downloaded the file."""
+    print("Test download directory:     ", context.download_directory)
+    print("Reference download directory:", context.expected_download_directory)
     file_check = context.download_directory / (file_name + CHECK)
     file_expected = context.expected_download_directory / file_name
     file_downloaded = context.download_directory / file_name
@@ -689,9 +706,10 @@ def step_impl(context, file_name: str):
             with contextlib.suppress(ValueError):
                 all_files.remove(file[: -len(CHECK)])
 
-    assert file_downloaded.exists(), (
-        f"The file we downloaded should exist!: {file_name}. "
-        f"Instead we have {', '.join(all_files)}"
+    wait_until(
+        lambda: file_downloaded.exists() and file_downloaded.read_text(),
+        f'The file "{file_name}" should exist as "{file_downloaded}". '
+        f"Instead we have {', '.join(all_files)}.",
     )
     l1 = file_downloaded.read_text().splitlines()
     l2 = file_expected.read_text().splitlines()
