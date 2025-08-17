@@ -487,13 +487,13 @@ def step_impl(context, choice, select_id):
             time.sleep(0.01)
     # while True:
     #     select.select_by_visible_text(choice)
-    #     if not time.time() < end or not element.get_attribute('value') == "":
+    #     if not time.time() < end or element.get_attribute("value") != "":
     #         break
     #     time.sleep(0.01)
     try:
         print(
             f"{select_id} selected {element.get_attribute('value')!r} "
-            f"though text {choice!r}, showing "
+            f"through text {choice!r}, showing "
             f"{select.first_selected_option.text!r} {selected_text!r}"
         )
     except Exception as e:  # noqa: BLE001
