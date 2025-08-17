@@ -18,7 +18,7 @@ boolean-py==5.0
     # via
     #   license-expression
     #   reuse
-certifi==2025.7.14
+certifi==2025.8.3
     # via
     #   requests
     #   selenium
