@@ -74,8 +74,6 @@ jobs:
     permissions:
       contents: write
     if: ${{ github.ref_name == 'master' }}
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -188,8 +186,6 @@ jobs:
     needs:
     - run-tests
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     # This environment stores the TWINE_USERNAME and TWINE_PASSWORD
     # see https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
     environment:
