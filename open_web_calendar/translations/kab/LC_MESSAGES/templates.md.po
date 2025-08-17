@@ -1,19 +1,20 @@
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 # Languages add-on <noreply-addon-languages@weblate.org>, 2025.
+# ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-25 23:33+0200\n"
-"PO-Revision-Date: 2024-05-26 20:54+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-07-10 17:01+0000\n"
+"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Kabyle <https://hosted.weblate.org/projects/open-web-calendar/documentation-templates/kab/>\n"
 "Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "Play with a variety of Calendars for your own project."
 msgstr ""
@@ -49,7 +50,7 @@ msgid ""
 msgstr ""
 
 msgid "hours"
-msgstr ""
+msgstr "isragen"
 
 msgid "tab"
 msgstr ""
@@ -91,7 +92,7 @@ msgid "URL-Encryption"
 msgstr ""
 
 msgid "Participants"
-msgstr ""
+msgstr "Imttekkiyen"
 
 msgid "[Tutorial: Event Sign Up with Nextcloud](https://youtu.be/RnMz23p7UP0)"
 msgstr ""
@@ -110,7 +111,7 @@ msgid ""
 msgstr ""
 
 msgid "Calendar"
-msgstr ""
+msgstr "Awitay"
 
 msgid "Specification"
 msgstr ""

@@ -19,7 +19,7 @@ caldav==1.5.0
     # via -r requirements/base.in
 cattrs==25.1.1
     # via requests-cache
-certifi==2025.7.9
+certifi==2025.7.14
     # via requests
 cffi==1.17.1
     # via cryptography
@@ -106,7 +106,7 @@ requests[socks]==2.32.4
     #   requests-cache
 requests-cache==1.3.0a0
     # via -r requirements/base.in
-rich==14.0.0
+rich==14.1.0
     # via
     #   mergecal
     #   typer

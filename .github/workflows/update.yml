@@ -5,6 +5,9 @@
 # up-to-date.
 name: "Update Repository"
 
+permissions:
+  contents: write
+
 on: [push]
 
 # cancel builds in progress if a new push has been made to the same ref

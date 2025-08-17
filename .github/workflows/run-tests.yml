@@ -74,6 +74,8 @@ jobs:
     permissions:
       contents: write
     if: ${{ github.ref_name == 'master' }}
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -91,6 +93,8 @@ jobs:
   link-check:
     name: "Check Links in Documentation"
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     if: ${{ ! startsWith(github.ref, 'refs/tags/v')}}
     steps:
       - uses: actions/checkout@v4
@@ -115,6 +119,8 @@ jobs:
     name: Publish Docker Image on Docker Hub
     runs-on: ubuntu-latest
     if: ${{ github.ref_name == 'master' || startsWith(github.ref, 'refs/tags/v') }}
+    permissions:
+      contents: read
     # This environment stores the DOCKERHUB_USERNAME and DOCKERHUB_TOKEN
     # see https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
     environment:
@@ -182,6 +188,8 @@ jobs:
     needs:
     - run-tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     # This environment stores the TWINE_USERNAME and TWINE_PASSWORD
     # see https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
     environment:
@@ -246,6 +254,8 @@ jobs:
       - dockerhub
       - deploy-tag-to-pypi
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: create release

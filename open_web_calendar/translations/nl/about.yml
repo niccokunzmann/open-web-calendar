@@ -5,3 +5,7 @@ timezone-browser: 'Dit is de tijdszone van jouw apparaat:'
 timezone-choice: 'Je kan hier kiezen om de tijdszone van je kalender te wijzigen:'
 project-title: Over het Open Web Calender-project
 license: Licentie
+description: Hier is meer informatie over de kalender. Bekijk de links hieronder
+  hoe u de kalender op verschillende manieren kunt gebruiken.
+links-ics: Gebruik deze link om te abonneren op deze kalender of om 
+  gebeurtenissen aan je eigen kalender toe te voegen.
