@@ -4,104 +4,109 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-26 22:54+0200\n"
-"PO-Revision-Date: 2025-04-21 16:05+0000\n"
+"PO-Revision-Date: 2025-08-19 20:01+0000\n"
 "Last-Translator: Yurt Page <yurtpage@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-index/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.11.1-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13\n"
 
 msgid "Customize Your Own Online Calendar Display"
-msgstr ""
+msgstr "Настройте ваш собственный Календарь"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""
 
 msgid "[See Examples](templates)"
-msgstr ""
+msgstr "[См. Примеры](templates)"
 
 msgid "Custom Date & Time Range"
-msgstr ""
+msgstr "Пользовательский диапазон дат и времени"
 
 msgid "Custom Title & Icon"
-msgstr ""
+msgstr "Пользовательский заголовок и значок"
 
 msgid ""
 "[Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-"
 "Hosted](host/self)"
 msgstr ""
+"[Сервис](https://open-web-calendar.hosted.quelltext.eu) и "
+"[развёрнутый у себя](host/self)"
 
 msgid "[Developer API](dev/api)"
-msgstr ""
+msgstr "[API для разработчиков](dev/api)"
 
 msgid "A highly flexible calendar display for your website."
-msgstr ""
+msgstr "Гибкий дизайн календаря для вашего сайта."
 
 msgid "Give a calendar your personal touch within minutes!"
-msgstr ""
+msgstr "Придайте календарю индивидуальность за считанные минуты!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
 msgstr ""
+"**[Попробуйте прямо сейчас!](https://open-web-calendar.hosted.quelltext.eu)**"
 
 msgid "Features"
-msgstr ""
+msgstr "Возможности"
 
 msgid "Instant Event Syncing"
-msgstr ""
+msgstr "Мгновенная синхронизация событий"
 
 msgid "<center>✔</center>"
 msgstr ""
 
 msgid "Embed with an HTML snippet"
-msgstr ""
+msgstr "Встраивание с помощью HTML-кода"
 
 msgid "Desktop and Mobile"
-msgstr ""
+msgstr "Для настольного компьютера и мобильных устройств"
 
 msgid "Multi-Language Support"
-msgstr ""
+msgstr "Поддержка нескольких языков"
 
 msgid "Fixed and Automatic Timezone"
-msgstr ""
+msgstr "Фиксированный и автоматический часовой пояс"
 
 msgid "Easy Editing"
-msgstr ""
+msgstr "Простое редактирование"
 
 msgid "Designs To Choose"
-msgstr ""
+msgstr "Выбор дизайна"
 
 msgid "Multiple Calendar Sources"
-msgstr ""
+msgstr "Различные источники календарей"
 
 msgid "Style per Calendar, Category and more"
-msgstr ""
+msgstr "Стиль для каждого календаря, категории и других параметров"
 
 msgid "Custom CSS"
-msgstr ""
+msgstr "Пользовательский CSS"
 
 msgid "Day, Week, Month, Agenda"
-msgstr ""
+msgstr "День, неделя, месяц, повестка дня"
 
 msgid "Work Week"
-msgstr ""
+msgstr "Рабочая неделя"
 
 msgid "Click on Event Location"
-msgstr ""
+msgstr "Клик по месту проведения события"
 
 msgid "Styled Event Descriptions"
-msgstr ""
+msgstr "Стилизованные описания событий"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr ""
+msgstr "Свободный проект — без привязки к поставщику"
 
 msgid "Subscribe Link"
-msgstr ""
+msgstr "Ссылка для подписки"
 
 msgid "Community and Paid Support"
-msgstr ""
+msgstr "Сообщество и платная поддержка"
 
 #, fuzzy
 #~ msgid "[Squid]: https://www.squid-cache.org/"
