@@ -70,7 +70,7 @@ python-debian==1.0.1
     # via reuse
 pyyaml==6.0.2
     # via responses
-requests==2.32.4
+requests==2.32.5
     # via responses
 responses==0.25.8
     # via
