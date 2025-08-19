@@ -99,7 +99,7 @@ recurring-ical-events==3.8.0
     # via
     #   -r requirements/base.in
     #   caldav
-requests[socks]==2.32.4
+requests[socks]==2.32.5
     # via
     #   -r requirements/base.in
     #   caldav
