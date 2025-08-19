@@ -70,7 +70,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_33kg36nd/ru/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ezdtgwoi/ru/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -86,7 +86,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_33kg36nd/ru/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_ezdtgwoi/ru/host/configure/index.png" >
       
     
     
@@ -1312,9 +1312,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-values" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      More Values
+      Дополнительные значения
     </span>
   </a>
   
@@ -1326,7 +1326,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       Настройка сервера
     </span>
@@ -1408,18 +1408,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#port" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      PORT
+      ПОРТ
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#workers" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      WORKERS
+      РАБОТНИКИ
     </span>
   </a>
   
@@ -1449,9 +1449,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+  <a href="#squid-" class="md-nav__link">
     <span class="md-ellipsis">
-      Squid as a Proxy Server
+      Squid как прокси-сервер
     </span>
   </a>
   
@@ -1488,8 +1488,8 @@
 <li>Изменить как работает сервер.</li>
 </ul>
 <h2 id="_2">Настройка календаря по умолчанию<a class="headerlink" href="#_2" title="Постоянная ссылка">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="/assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="/assets/default_specification.yml">default_specification</a>.</p>
-<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
+<p>Конфигурация всех календарей основана на <a href="/assets/default_specification.yml">default_specification</a>. Все эти значения можно изменить, скопировав этот файл в веб-версии с помощью параметра календаря <code>specification_url</code>. Каждый параметр должен быть задокументирован в <a href="/assets/default_specification.yml">default_specification</a>.</p>
+<p>Чтобы изменить <strong>все календари</strong>, размещённые на вашем экземпляре, используйте переменную среды <a href="#owc_specification">OWC_SPECIFICATION</a>. Календари по-прежнему переопределяют некоторые значения своей конфигурации. Те, которые они не переопределяют, попадают под действие спецификации по умолчанию. Не все значения доступны для изменения на странице конфигурации. Эти значения по-прежнему можно изменить в <code>specification_url</code> и параметрах запроса.</p>
 <p>Возможно, вам захочется изменить следующие значения.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Постоянная ссылка">&para;</a></h3>
 <p>Название вашего сайта.</p>
@@ -1498,75 +1498,75 @@
 <h3 id="favicon"><code>favicon</code><a class="headerlink" href="#favicon" title="Постоянная ссылка">&para;</a></h3>
 <p>Это ссылка на значок сайта.</p>
 <h3 id="source_code"><code>source_code</code><a class="headerlink" href="#source_code" title="Постоянная ссылка">&para;</a></h3>
-<p>If you made changes, you are legally required to disclose them to visitors. Please adjust the link or contribute them back to the main project.</p>
+<p>Если вы внесли изменения, вы обязаны по закону раскрыть их посетителям. Пожалуйста, исправьте ссылку или верните их в основной проект.</p>
 <h3 id="contributing"><code>contributing</code><a class="headerlink" href="#contributing" title="Постоянная ссылка">&para;</a></h3>
-<p>If you want to redirect to contribute to your project.</p>
+<p>Если вы хотите перенаправить пользователя для участия в вашем проекте.</p>
 <h3 id="privacy_policy"><code>privacy_policy</code><a class="headerlink" href="#privacy_policy" title="Постоянная ссылка">&para;</a></h3>
-<p>If you host this service yourself, you can use the default <a href="../privacy-policy">privacy policy</a>.</p>
-<p>If for some reason you decide to collect data i.e. in the HTTPS proxy or log IP-addresses, then you need to create your own privacy policy. You can link to the one of this project.</p>
-<h3 id="more-values">More Values<a class="headerlink" href="#more-values" title="Постоянная ссылка">&para;</a></h3>
-<p>There are loads more values that can be changed. Please refer to the <a href="/assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
+<p>Если вы размещаете этот сервис самостоятельно, вы можете использовать <a href="../privacy-policy">политику конфиденциальности</a> по умолчанию. Вы можете сослаться на политику конфиденциальности этого проекта.</p>
+<p>Если по какой-либо причине вы решили собирать данные, например, через HTTPS-прокси или регистрировать IP-адреса, вам необходимо создать собственную политику конфиденциальности.</p>
+<h3 id="_3">Дополнительные значения<a class="headerlink" href="#_3" title="Постоянная ссылка">&para;</a></h3>
+<p>Существует множество других значений, которые можно изменить. См. <a href="/assets/default_specification.yml">default_specification</a>. Все эти значения документированы. Для их изменения используйте переменную окружения <a href="#owc_specification">OWC_SPECIFICATION</a>.</p>
 <p>See also:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
 </ul>
-<h2 id="_3">Настройка сервера<a class="headerlink" href="#_3" title="Постоянная ссылка">&para;</a></h2>
+<h2 id="_4">Настройка сервера<a class="headerlink" href="#_4" title="Постоянная ссылка">&para;</a></h2>
 <p>Переменные окружения влияют только на работу сервера. Такие переменные окружения можно использовать для настройки службы:</p>
 <h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="Постоянная ссылка">&para;</a></h3>
 <p>по умолчанию пустой</p>
-<p>The clients divided by comma that are allowed to access the Open Web Calendar. You will see this text if you try to access the service and you are not allowed:</p>
+<p>Перечень клиентов, разделённых запятой, которым разрешён доступ к Open Web Calendar. Вы увидите этот текст, если попытаетесь получить доступ к сервису, но вам это не разрешено:</p>
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
 <p>Examples:</p>
 <ul>
-<li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
-<li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
-<li>permit everyone to access the server (default): <code>ALLOWED_HOSTS=</code> or <code>ALLOWED_HOSTS=*</code></li>
+<li>разрешить доступ только к одному компьютеру: <code>ALLOWED_HOSTS=localhost</code></li>
+<li>разрешить доступ нескольким хостам: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
+<li>разрешить всем доступ к серверу (по умолчанию): <code>ALLOWED_HOSTS=</code> или <code>ALLOWED_HOSTS=*</code></li>
 </ul>
-<p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
+<p>Эта функциональность предоставляется <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Постоянная ссылка">&para;</a></h3>
-<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>по умолчанию <code>false</code>, значения <code>true</code> или <code>false</code>, всегда <code>false</code> в контейнере Docker</p>
 <p>Включить режим отладки для приложения.</p>
 <h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="Постоянная ссылка">&para;</a></h3>
-<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
-<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
+<p>по умолчанию — временный каталог (например, <code>/tmp/</code>)</p>
+<p>Open Web Calendar кэширует файлы, необходимые для отображения календарей, в этом каталоге для ускорения загрузки. Если каталог не существует, он будет создан.</p>
 <h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Постоянная ссылка">&para;</a></h3>
-<p>default <code>20</code> (MB)</p>
+<p>по умолчанию <code>20</code> (МБ)</p>
 <p>Это максимальный размер одного файла в кэше. Когда кэш заполнен, наименее недавно используемый файл удаляется.</p>
 <p>Examples:</p>
 <ul>
-<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
-<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
-<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+<li>Разрешить только небольшие файлы размером 4 КБ: <code>CACHE_FILE_SIZE=0.004</code></li>
+<li>Разрешить любой размер: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
+<li>Отключить кэширование: <code>CACHE_FILE_SIZE=0</code></li>
 </ul>
 <h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="Постоянная ссылка">&para;</a></h3>
-<p>default <code>200</code> (MB)</p>
-<p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
+<p>по умолчанию <code>200</code> (МБ)</p>
+<p>Это максимальный размер кэша в мегабайтах. Этот размер ограничен 200 МБ, чтобы предотвратить заполнение кэшем файловой системы или, в случае <code>/tmp/</code>, оперативной памяти.</p>
 <p>Examples:</p>
 <ul>
-<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
-<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
-<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+<li>Использовать 1 ГБ для кэширования: <code>CACHE_SIZE=1024</code></li>
+<li>Неограниченный кэш: <code>CACHE_SIZE=unlimited</code></li>
+<li>Отключить кэширование: <code>CACHE_SIZE=0</code></li>
 </ul>
 <h3 id="cache_requested_urls_for_seconds10">Быстрое обновление: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code><a class="headerlink" href="#cache_requested_urls_for_seconds10" title="Постоянная ссылка">&para;</a></h3>
-<p>default <code>600</code> (seconds)</p>
+<p>по умолчанию <code>600</code> (секунд)</p>
 <p>Секунд для кеширования календарных файлов которые скачиваются, чтобы уменьшить сетевой поток и задержку.</p>
 <p>Examples:</p>
 <ul>
 <li>Быстрое обновление: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
-<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+<li>Отключить кэширование: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
 </ul>
 <h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Постоянная ссылка">&para;</a></h3>
 <p>по умолчанию пустой</p>
-<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>Это список ключей шифрования, разделенных запятыми. Их можно использовать для сокрытия конфиденциальной информации URL-адресов.</p>
 <p>Examples:</p>
 <ul>
-<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+<li>Отключить шифрование (по умолчанию): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Использовать один ключ: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Использовать несколько ключей: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> При использовании нескольких ключей только первый из них шифрует данные. Остальные используются только для расшифровки.</li>
 </ul>
-<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<p>Вы можете сгенерировать новый ключ, посетив свой экземпляр Open Web Calendar на странице <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> или выполнив следующую команду:</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
 </code></pre></div>
 <p>See also:</p>
@@ -1574,33 +1574,33 @@
 <li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
 </ul>
 <h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Постоянная ссылка">&para;</a></h3>
-<p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
+<p><code>OWC_SPECIFICATION</code> — необязательная переменная окружения.</p>
 <ul>
-<li>It can be a <strong>path</strong> to a file containing valid YAML or JSON.</li>
-<li>It can be a <strong>string</strong> containing valid YAML or JSON.</li>
+<li>Это может быть <strong>путь</strong> к файлу, содержащему корректный YAML или JSON.</li>
+<li>Это может быть <strong>строка</strong>, содержащая корректный YAML или JSON.</li>
 </ul>
-<p>Setting <code>OWC_SPECIFICATION</code> allows you to replace default values for all calendars.</p>
+<p>Настройка <code>OWC_SPECIFICATION</code> позволяет заменить значения по умолчанию для всех календарей.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>New versions of the Open Web Calendar can add new configuration parameters.
 Placing your changes in this variable instead of changing the <code>default_specification</code> file
 will ensure that you do not break the Open Web Calendar in a future version.</p>
 </div>
-<p>In following example, the title for all calendars that do not set their own title will be changed.</p>
+<p>В следующем примере будут изменены заголовки всех календарей, у которых нет собственных заголовков.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
 <p>See also:</p>
 <ul>
-<li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
+<li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION в API</a></li>
 </ul>
-<h3 id="port">PORT<a class="headerlink" href="#port" title="Постоянная ссылка">&para;</a></h3>
+<h3 id="_5">ПОРТ<a class="headerlink" href="#_5" title="Постоянная ссылка">&para;</a></h3>
 <p>по умолчанию <code>5000</code>, по умолчанию <code>80</code> в контейнере Docker</p>
 <p>Порт на котором работает служба.</p>
 <p>Examples:</p>
 <ul>
 <li>Обслуживать через порт HTTP: <code>PORT=80</code></li>
 </ul>
-<h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Постоянная ссылка">&para;</a></h3>
+<h3 id="_6">РАБОТНИКИ<a class="headerlink" href="#_6" title="Постоянная ссылка">&para;</a></h3>
 <p>по умолчанию <code>4</code>, только для контейнера Docker</p>
 <p>Количество параллельных обработчиков для запросов.</p>
 <p>Examples:</p>
@@ -1613,15 +1613,15 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <li><strong>Flask</strong> имеет <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">больше переменных окружения</a></strong> доступных для настройки того как приложение раздаёт содержимое.</li>
 <li><strong>Requests</strong> используются для получения файлов <code>.ics</code>. Вы можете <a href="#ssrf-protection-with-a-proxy-server">настроить прокси</a>.</li>
 </ul>
-<p>The Open Web Calendar relies on proxy servers for these features:</p>
+<p>Открытый Web Calendar использует прокси-серверы для следующих функций:</p>
 <ul>
-<li><strong>Access Control and Users</strong> To restrict who can use the Open Web Calendar, you can use <code>nginx</code> or <code>apache</code> as a reverse proxy in front of it. YuNoHost is another self-hosting option to restrict access.</li>
-<li><strong>HTTPS Encryption</strong> This can be done by <code>nginx</code>, <code>apache</code> or <code>caddy</code>.</li>
-<li><strong>More Advanced Caching</strong> Basic caching is handeled by the Open Web Calendar. For more advanced cache configuration, use a proxy server like <code>squid</code>. Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.</li>
-<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+<li><strong>Управление доступом и пользователи</strong> Чтобы ограничить доступ к Open Web Calendar, вы можете использовать <code>nginx</code> или <code>apache</code> в качестве обратного прокси-сервера перед ним. YuNoHost — ещё один вариант самостоятельного размещения для ограничения доступа.</li>
+<li><strong>HTTPS-шифрование</strong>. Это можно реализовать с помощью <code>nginx</code>, <code>apache</code> или <code>caddy</code>.</li>
+<li><strong>Более продвинутое кэширование</strong>. Базовое кэширование осуществляется Open Web Calendar. Для более продвинутой настройки кэша используйте прокси-сервер, например <code>squid</code>. Ознакомьтесь с документацией ниже, чтобы узнать, как настроить Open Web Calendar для доступа к веб-ресурсам только через прокси-сервер.</li>
+<li><strong>Ограничение доступа к календарям</strong>. По умолчанию Open Web Calendar не ограничивает отображаемые календари. Используйте прокси-сервер для фильтрации календарей. Если Open Web Calendar работает за брандмауэром с другими веб-сервисами, необходимо настроить прокси-сервер для защиты от SSRF-атак.</li>
 </ul>
 <h2 id="ssrf-">Защита SSRF с помощью прокси-сервера<a class="headerlink" href="#ssrf-" title="Постоянная ссылка">&para;</a></h2>
-<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calendar, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
+<p>Open Web Calendar можно использовать для доступа к локальной сети за брандмауэром, см. <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Проблема 250</a>. Этот бесплатный доступ предназначен для отображения календарей из любой точки мира. Поскольку <code>requests</code> используется Open Web Calendar, он может использовать прокси-сервер, как описано в <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies">документации <code>requests</code></a>. Прокси-сервер затем может выполнять фильтрацию.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
@@ -1630,10 +1630,10 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Защита SSRF используя прокси Tor</a></li>
 </ul>
-<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="Постоянная ссылка">&para;</a></h2>
+<h2 id="squid-">Squid как прокси-сервер<a class="headerlink" href="#squid-" title="Постоянная ссылка">&para;</a></h2>
 <p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
 <div class="admonition note">
-<p class="admonition-title">Operating System</p>
+<p class="admonition-title">Операционная система</p>
 <p>Squid доступен для всех основных платформ. Для команд и путей этого руководства, мы предполагаем, что вы используете Squid на Debain/Ubuntu. Команды могут работать на других системах, но это не тестируется.</p>
 </div>
 <p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
