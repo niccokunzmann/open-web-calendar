@@ -32,7 +32,7 @@ click==8.1.8
     #   x-wr-timezone
 cryptography==45.0.6
     # via -r requirements/base.in
-flask==3.1.1
+flask==3.1.2
     # via
     #   -r requirements/base.in
     #   flask-allowed-hosts
