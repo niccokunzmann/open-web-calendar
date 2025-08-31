@@ -56,3 +56,7 @@ labels_hour: Ora
 labels_minute: Minuto
 language: Italiano
 icon_subscribe: Aggiungi al mio calendario
+icon_signup: Iscriviti
+label_participants: Partecipanti
+signup-email: email
+signup-name: Nome
