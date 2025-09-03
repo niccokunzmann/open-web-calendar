@@ -46,7 +46,7 @@ pyproject-hooks==1.2.0
     #   pip-tools
 toposort==1.10
     # via pip-compile-multi
-tox==4.29.0
+tox==4.30.1
     # via -r requirements/dev.in
 virtualenv==20.34.0
     # via tox
