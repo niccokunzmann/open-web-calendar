@@ -10,7 +10,7 @@ attrs==25.3.0
     #   outcome
     #   reuse
     #   trio
-behave==1.3.2
+behave==1.3.3
     # via -r requirements/test.in
 binaryornot==0.4.4
     # via reuse
