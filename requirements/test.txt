@@ -76,7 +76,7 @@ responses==0.25.8
     # via
     #   -r requirements/test.in
     #   pytest-responses
-reuse==5.0.2
+reuse==5.1.0
     # via -r requirements/test.in
 ruff==0.12.12
     # via -r requirements/test.in
