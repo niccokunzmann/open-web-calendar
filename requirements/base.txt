@@ -21,7 +21,7 @@ cattrs==25.2.0
     # via requests-cache
 certifi==2025.8.3
     # via requests
-cffi==1.17.1
+cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.3
     # via requests

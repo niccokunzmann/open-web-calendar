@@ -22,7 +22,7 @@ cairosvg==2.8.2
     # via mkdocs-material
 certifi==2025.8.3
     # via requests
-cffi==1.17.1
+cffi==2.0.0
     # via cairocffi
 charset-normalizer==3.4.3
     # via requests
