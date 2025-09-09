@@ -129,7 +129,7 @@ platformdirs==4.4.0
     # via mkdocs-get-deps
 polib==1.2.0
     # via mdpo
-pycparser==2.22
+pycparser==2.23
     # via cffi
 pygments==2.19.2
     # via mkdocs-material

@@ -80,7 +80,7 @@ packaging==25.0
     # via gunicorn
 platformdirs==4.4.0
     # via requests-cache
-pycparser==2.22
+pycparser==2.23
     # via cffi
 pygments==2.19.2
     # via rich
