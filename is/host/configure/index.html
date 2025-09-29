@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Embed a highly customizable web calendar into your website using ICal source links">
+        <meta name="description" content="Bættu einstaklega sérsníðanlegu dagatali inn í vefsíðurnar þínar sem styðst við ICal-skrár">
       
       
       
@@ -72,7 +72,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_yvgahtuh/is/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_i92fi0_f/is/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -88,7 +88,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_yvgahtuh/is/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_i92fi0_f/is/host/configure/index.png" >
       
     
     
@@ -1433,9 +1433,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-configuration" class="md-nav__link">
+  <a href="#frekari-stillingar" class="md-nav__link">
     <span class="md-ellipsis">
-      Further Configuration
+      Frekari stillingar
     </span>
   </a>
   
@@ -1520,7 +1520,7 @@
 <blockquote>
 <p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
 </blockquote>
-<p>Examples:</p>
+<p>Dæmi:</p>
 <ul>
 <li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
 <li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
@@ -1536,7 +1536,7 @@
 <h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Varanlegur tengill">&para;</a></h3>
 <p>default <code>20</code> (MB)</p>
 <p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
-<p>Examples:</p>
+<p>Dæmi:</p>
 <ul>
 <li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
 <li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
@@ -1545,7 +1545,7 @@
 <h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="Varanlegur tengill">&para;</a></h3>
 <p>default <code>200</code> (MB)</p>
 <p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
-<p>Examples:</p>
+<p>Dæmi:</p>
 <ul>
 <li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
 <li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
@@ -1554,7 +1554,7 @@
 <h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Varanlegur tengill">&para;</a></h3>
 <p>default <code>600</code> (seconds)</p>
 <p>Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.</p>
-<p>Examples:</p>
+<p>Dæmi:</p>
 <ul>
 <li>Refresh fast: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
 <li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
@@ -1562,7 +1562,7 @@
 <h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Varanlegur tengill">&para;</a></h3>
 <p>default empty</p>
 <p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
-<p>Examples:</p>
+<p>Dæmi:</p>
 <ul>
 <li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
 <li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
@@ -1598,18 +1598,18 @@ will ensure that you do not break the Open Web Calendar in a future version.</p>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Varanlegur tengill">&para;</a></h3>
 <p>default <code>5000</code>, default <code>80</code> in the Docker container</p>
 <p>The port that the service is running on.</p>
-<p>Examples:</p>
+<p>Dæmi:</p>
 <ul>
 <li>Serve on HTTP port: <code>PORT=80</code></li>
 </ul>
 <h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Varanlegur tengill">&para;</a></h3>
 <p>default <code>4</code>, only for the Docker container</p>
 <p>The number of parallel workers to handle requests.</p>
-<p>Examples:</p>
+<p>Dæmi:</p>
 <ul>
 <li>Only use one worker: <code>WORKERS=1</code></li>
 </ul>
-<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Varanlegur tengill">&para;</a></h2>
+<h2 id="frekari-stillingar">Frekari stillingar<a class="headerlink" href="#frekari-stillingar" title="Varanlegur tengill">&para;</a></h2>
 <p>The Open Web Calendar uses libraries whose behavior can be further customized.</p>
 <ul>
 <li><strong>Flask</strong> has <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more environment variables</a></strong> available to configure how the application serves content.</li>
@@ -1680,7 +1680,7 @@ dns_v4_first<span class="w"> </span>on
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<p>Þegar þú reynir að nota bannað dagatal með staðværa <code>open-web-calendar</code>, t.d. <code>http://172.16.0.1/dagatal.ics</code>, þá muntu sjá þessa villumeldingu:</p>
 <blockquote>
 <p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
 </blockquote>
