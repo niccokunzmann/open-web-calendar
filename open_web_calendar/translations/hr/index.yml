@@ -1,6 +1,6 @@
-about: Otvoreni web kalendar koristi ICS/ICal kalendare online i prikazuje ih u jednom
-  kalendaru. Možeš ga koristiti s Nextcloudom, Outlookom, Google kalendarom, Meetupom
-  i drugim sustavima kalendara koji koriste ICS standard.
+about: Otvoreni web kalendar koristi ICS/ICal kalendare online i prikazuje ih u 
+  jednom kalendaru. Možeš ga koristiti s Nextcloudom, Outlookom, Google 
+  kalendarom, Meetupom i drugim sustavima kalendara koji koriste ICS standard.
 calendar-urls: 'Za sjedinjavanje kalendara, ovdje upiši URL-ove ICS kalendara:'
 calendar-code: 'Za ugrađivanje kalendara koristi ovaj kod na tvojoj web stranici:'
 calendar-code-execution: Evo kako će kalendar izgledati.
@@ -20,16 +20,17 @@ skins-material: Material
 skins-flat: Plošno
 skins-contrast-black: Crni kontrast
 skins-contrast-white: Bijeli kontrast
-links-description: Događaji mogu sadržati mjesta i URL-ove. Ako kalendar ugradiš u
-  web stranicu, možeš odabrati gdje će pritisnuta poveznica otvoriti stranicu.
+links-description: Događaji mogu sadržati mjesta i URL-ove. Ako kalendar ugradiš
+  u web stranicu, možeš odabrati gdje će pritisnuta poveznica otvoriti stranicu.
 links-title: Poveznice
 style-click: Možeš promijeniti boju elemenata koji se mogu pritisnuti.
 style-css: Ako želiš, možeš odrediti vlastita CSS svojstva.
 loader-title: Animacija tijekom učitavanja
 style-date: Možeš promijeniti boju pozadine aktualnog datuma.
-style-days: Ako želiš koristiti drugačiju boju za dane, to također možeš odediti.
-style-days-outside: Neki dani u kalendaru imaju drugačiju boju ako se ne nalaze unutar
-  mjeseca.
+style-days: Ako želiš koristiti drugačiju boju za dane, to također možeš 
+  odediti.
+style-days-outside: Neki dani u kalendaru imaju drugačiju boju ako se ne nalaze 
+  unutar mjeseca.
 loader-default: rotirajuća animacija tijekom učitavanja
 controls-description: 'Možda ne želiš prikazati sve kontrole korisnicima. Ovdje odaberi
   kontrole koje želiš prikazati:'
@@ -47,9 +48,9 @@ links-parent: Otvori povezani dokument u nadređenom okviru.
 links-blank: Otvori povezani dokument u novom prozoru ili registru.
 links-top: Otvori povezani dokument u cijelom prozoru.
 style-title: Prilagođeni stil pomoću CSS-a
-style-description: Pomoću CSS-a možeš promijeniti boju kalendara i razna druga svojstva.
-  Tvoj prilagođeni dizajn ima prioritet nad odabranim dizajnom. U sljedećem popisu
-  možeš odabrati unaprijed pripremljene dizajne.
+style-description: Pomoću CSS-a možeš promijeniti boju kalendara i razna druga 
+  svojstva. Tvoj prilagođeni dizajn ima prioritet nad odabranim dizajnom. U 
+  sljedećem popisu možeš odabrati unaprijed pripremljene dizajne.
 style-background: Možeš promijeniti boju pozadine kalendara.
 tabs-title: Registri kalendara
 loader-none: bez animacije tijekom učitavanja
@@ -58,9 +59,9 @@ timezone-browser: koristi vremensku zonu preglednika
 loading: učitavanje …
 translate: Prevedi
 skins-description: Ovdje odaberi dizajn kalendara.
-loader-description: U nekim slučajevima server treba dosta vremena za učitavanje kalendara.
-  U slučaju da server koristi besplatni plan na platformi Heroku, server se mora prvi
-  pokrenuti.
+loader-description: U nekim slučajevima server treba dosta vremena za učitavanje
+  kalendara. U slučaju da server koristi besplatni plan na platformi Heroku, 
+  server se mora prvi pokrenuti.
 timezone-description: 'Vremenska zona se preuzima iz korisničkog preglednika. Ako
   želiš fiksirati vremensku zonu za kalendar odaberi jednu opciju. Tvoj preglednik
   koristi sljedeću vremensku zonu:'
@@ -69,14 +70,15 @@ spec-link: 'Nakon što postaviš specifikaciju negdje online možeš stvoriti po
 spec-description: 'Kalendar se može generirati ne samo pomoću URL-a, već i putem JSON
   ili YAML specifikacije iz datoteke. Gornja prilagodba generira ovu specifikaciju:'
 spec-title: Hosting specifikacije
-spec-host-html: <a href="javascript:downloadJSONSpecification()">Ovu specifikaciju
-  možeš preuzeti</a> i postaviti je negdje na webu. Na taj način i dalje kontroliraš
-  prilagođavanje kalendara nakon dijeljenja poveznice, npr. na GitHub-u u jednom <a
-  href="https://gist.github.com/">Gistu</a>.
+spec-host-html: <a href="javascript:downloadJSONSpecification()">Ovu 
+  specifikaciju možeš preuzeti</a> i postaviti je negdje na webu. Na taj način i
+  dalje kontroliraš prilagođavanje kalendara nakon dijeljenja poveznice, npr. na
+  GitHub-u u jednom <a href="https://gist.github.com/">Gistu</a>.
 configure-week-title: Dani tjedna
 configure-week-description: Početak tjedna može biti ponedjeljak ili nedjelja.
 hour-format-title: Prikaz sata
-hour-format-description: Odaberi 24-satni i 12-satni prikaz. Postoje daljnje opcije.
+hour-format-description: Odaberi 24-satni i 12-satni prikaz. Postoje daljnje 
+  opcije.
 hour-format-specification-link: Pogledaj specifikaciju.
 style-css-classes: 'Ovo su primjeri CSS klasa za stiliziranje događaja:'
 event-status-tentative: nesigurno
@@ -90,10 +92,54 @@ language-browser-true: 'Kalendar koristi jezik preglednika. Ako jezik nije preve
   koristi se:'
 map-custom: Prilagođena karta
 map-title: Poveznice za karte i mjesto
-map-description: Mjesta događaja mogu sadržati koordinate ili tekst. Ovdje konfiguriraj
-  kartografsku uslugu koja će se koristiti kada se klikne mjesto događaja.
+map-description: Mjesta događaja mogu sadržati koordinate ili tekst. Ovdje 
+  konfiguriraj kartografsku uslugu koja će se koristiti kada se klikne mjesto 
+  događaja.
 map-custom-summary: Prilagodi poveznice na kartu
-map-link-location-description: Ovdje upiši URL karte i umetni {mjesto} kamo pretraga
-  upućuje.
-map-link-geo-description: Ovdje upiši URL karte i umetni {geografsku širinu} i {geografsku
-  dužinu} za koordinate.
+map-link-location-description: Ovdje upiši URL karte i umetni {mjesto} kamo 
+  pretraga upućuje.
+map-link-geo-description: Ovdje upiši URL karte i umetni {geografsku širinu} i 
+  {geografsku dužinu} za koordinate.
+button-encrypt: Šifriraj URL
+button-encrypted: Šifrirano
+button-edit: Uredi
+button-remove: Ukloni
+password-urls: Preporučujemo šifriranje URL-ova ako sadrže osjetljive podatke. 
+  Spremi sljedeću lozinku samo ako ih namjeravaš kasnije dešifrirati.
+decrypt-urls: Dešifriraj URL-ove
+add-url-placeholder-url: https://link.to/a-calendar.ics
+add-url-placeholder-username: opcionalno korisničko ime
+add-url-placeholder-password: opcionalna lozinka
+add-url-button: Dodaj
+add-url-calendar-public: Ovo je javni URL
+supported-standards: 'Podržavamo sljedeće standarde: ICAL, CalDAV, webcal.'
+about-title: Informacije
+calendar-embed-title: Koristi i ugradi
+map-osm: OpenStreetMap
+map-bing: Bing karte
+map-google: Google karte
+map-yandex: Yandex karte
+map-geo: 'geo: poveznica'
+map-none: Tekst bez poveznice
+menu-title: Izbornik kalendara
+controls-menu: Prikaži izbornik
+menu-description: Možeš uključiti ikonu izbornika i konfigurirati njegov 
+  sadržaj.
+menu-shows-title: Prikaži naslov u izborniku
+menu-shows-description: Prikaži opis u izborniku
+menu-shows-calendar-names: Popis imena kalendara
+menu-shows-calendar-descriptions: Popis opisa kalendara
+menu-shows-calendar-visibility: Sakrij/Prikaži kalendare
+participants-title: Sudionici i organizacija
+participants-description: Možeš pozvati druge osobe na događaje i ljudi se mogu 
+  registrirati. Ove opcije možeš aktivirati za prikaz imena i e-mail adresa 
+  ispod opisa događaja.
+participants-organizers: Prikazati organizatora događaja?
+participants-attendees: Prikazati sudionike događaja?
+participants-status: Prikazati status sudionika? (npr. prihvaćen/odbijen)
+participants-type: Prikazati o kojoj se vrsti sudionika radi? (npr. pojedinac 
+  ili grupa)
+participants-role: Prikazati ulogu sudionika? (npr. organizator, obavezna osoba 
+  ili opcionalno)
+caldav-choose-calendar: 'Odaberi jedan kalendar iz svog računa:'
+caldav-allow-sign-up: 'Omogući registraciju putem e-maila za događaje u ovom kalendaru:'
