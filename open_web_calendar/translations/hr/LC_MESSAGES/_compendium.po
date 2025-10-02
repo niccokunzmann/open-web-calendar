@@ -5,15 +5,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:50+0200\n"
-"PO-Revision-Date: 2025-01-27 13:02+0000\n"
+"PO-Revision-Date: 2025-10-03 18:02+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/open-web-calendar/documentation-common-translations/hr/>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/"
+"open-web-calendar/documentation-common-translations/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
@@ -39,11 +41,9 @@ msgstr ""
 "[calendars]: https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//docs/assets/calendars"
 
-#, fuzzy
 msgid "[configure a proxy]: #ssrf-protection-with-a-proxy-server"
 msgstr ""
-"[parameteri proksi servera](../host/configure#ssrf-protection-with-a-proxy-"
-"server)"
+"[konfiguriraj proxy](../host/configure#ssrf-protection-with-a-proxy-server)"
 
 msgid ""
 "After you have set up your own server, you can [configure the "
@@ -63,6 +63,8 @@ msgid ""
 "calendar`, e.q. `http://172.16.0.1/calendar.ics`, you will see this error "
 "message:"
 msgstr ""
+"Kada pokušaš pristupiti zabranjenom kalendaru s lokalnim `open-web-calendar`"
+", npr. `http://172.16.0.1/calendar.ics`, vidjet ćeš ovu poruku o grešci:"
 
 msgid "403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics"
 msgstr ""
@@ -72,7 +74,7 @@ msgid "[Squid]: https://www.squid-cache.org/"
 msgstr "[Squid]: https://www.squid-cache.org/"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr "Pogledaj značajke ili isprobaj „Otvoreni web kalendar”!"
+msgstr "Pogledaj funkcije ili isprobaj „Otvoreni web kalendar”!"
 
 msgid "A highly flexible calendar display for your website."
 msgstr "Vrlo fleksibilan prikaz kalendara za tvoju web stranicu."
@@ -81,7 +83,7 @@ msgid "Give a calendar your personal touch within minutes!"
 msgstr "Dizajniraj vlastiti kalendar u roku od par minuta!"
 
 msgid "**[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**"
-msgstr "**[Isprobaj!](https://open-web-calendar.hosted.quelltext.eu)**"
+msgstr "**[Isprobaj sada!](https://open-web-calendar.hosted.quelltext.eu)**"
 
 msgid "Features"
 msgstr "Značajke"
@@ -144,11 +146,11 @@ msgstr "Zajednica i naplativa podrška"
 msgid "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 msgstr "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 
-#, fuzzy
 msgid ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
 msgstr ""
-"[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
+"[Aktualiziraj DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/"
+"what_s_new.html"
 
 msgid "Play with a variety of Calendars for your own project."
 msgstr "Isprobaj razne kalendare za vlastiti projekt."
@@ -238,10 +240,9 @@ msgid ""
 "calendar.quelltext.eu/assets/templates/family-planning.json\" "
 "target=\"_blank\">Edit the calendar</a>"
 msgstr ""
-"<a href=\"https://open-web-"
-"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
-"calendar.quelltext.eu/assets/templates/family-planning.json\" "
-"target=\"_blank\">Edit the calendar</a>"
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/"
+"index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/"
+"templates/family-planning.json\" target=\"_blank\">Uredi kalendar</a>"
 
 msgid ""
 "<a href=\"https://open-web-"
@@ -260,166 +261,138 @@ msgid ""
 "calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
 "target=\"_blank\">Edit the calendar</a>"
 msgstr ""
-"<a href=\"https://open-web-"
-"calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"
-"calendar.quelltext.eu/assets/templates/free-and-busy.json\" "
-"target=\"_blank\">Edit the calendar</a>"
+"<a href=\"https://open-web-calendar.hosted.quelltext.eu/"
+"index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/"
+"templates/free-and-busy.json\" target=\"_blank\">Uredi kalendar</a>"
 
-#, fuzzy
 msgid ""
 "[tor-example]: https://tor.open-web-"
 "calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
 "day-event-repeat-every-day.ics"
 msgstr ""
-"[tor-example]: https://tor.open-web-"
-"calendar.hosted.quelltext.eu/calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion%2Fone-"
-"day-event-repeat-every-day.ics"
+"[tor-primjer]: https://tor.open-web-calendar.hosted.quelltext.eu/"
+"calendar.html?url=http%3A%2F%2F3nbwmxezp5hfdylggjjegrkv5ljuhguyuisgotrjksepeyc2hax2lxyd.onion"
+"%2Fone-day-event-repeat-every-day.ics"
 
-#, fuzzy
 msgid ""
 "[calendars]: https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//docs/assets/calendars"
 msgstr ""
-"[calendars]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//docs/assets/calendars"
+"[kalendari]: https://github.com/niccokunzmann/open-web-calendar/tree/master//"
+"docs/assets/calendars"
 
-#, fuzzy
 msgid ""
 "[templates]: https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//docs/assets/templates"
 msgstr ""
-"[templates]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//docs/assets/templates"
+"[predlošci]: https://github.com/niccokunzmann/open-web-calendar/tree/master//"
+"docs/assets/templates"
 
-#, fuzzy
 msgid "[Showcase Section]: ../showcase"
-msgstr "[Showcase Section]: ../showcase"
+msgstr "[Galerija]: ../showcase"
 
-#, fuzzy
 msgid "[mkdocs]: https://www.mkdocs.org"
 msgstr "[mkdocs]: https://www.mkdocs.org"
 
-#, fuzzy
 msgid "[ruff]: https://docs.astral.sh/ruff/"
 msgstr "[ruff]: https://docs.astral.sh/ruff/"
 
-#, fuzzy
 msgid "[pre-commit]: https://pre-commit.com/"
 msgstr "[pre-commit]: https://pre-commit.com/"
 
-#, fuzzy
 msgid ""
 "[features/configure-the-calendar.feature]: "
 "https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//open_web_calendar/features/configure-the-"
 "calendar.feature"
 msgstr ""
-"[features/configure-the-calendar.feature]: "
-"https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/features/configure-the-"
+"[features/configure-the-calendar.feature]: https://github.com/niccokunzmann/"
+"open-web-calendar/tree/master//open_web_calendar/features/configure-the-"
 "calendar.feature"
 
-#, fuzzy
 msgid ""
 "[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
 "web-calendar/tree/master//open_web_calendar/features/edit-the-"
 "calendar.feature"
 msgstr ""
-"[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/open-"
-"web-calendar/tree/master//open_web_calendar/features/edit-the-"
+"[features/edit-the-calendar.feature]: https://github.com/niccokunzmann/"
+"open-web-calendar/tree/master//open_web_calendar/features/edit-the-"
 "calendar.feature"
 
-#, fuzzy
 msgid ""
 "[app.py-81]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
 msgstr ""
-"[app.py-81]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
+"[app.py-81]: https://github.com/niccokunzmann/open-web-calendar/blob/"
+"85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81"
 
-#, fuzzy
 msgid ""
 "[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
 msgstr ""
-"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
+"[dhtmlx-23]: https://github.com/niccokunzmann/open-web-calendar/blob/"
+"85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23"
 
-#, fuzzy
 msgid ""
 "[default_specification]: https://github.com/niccokunzmann/open-web-"
 "calendar/tree/master//open_web_calendar/default_specification.yml"
 msgstr ""
-"[default_specification]: https://github.com/niccokunzmann/open-web-"
-"calendar/tree/master//open_web_calendar/default_specification.yml"
+"[zadana_specifikacija]: https://github.com/niccokunzmann/open-web-calendar/"
+"tree/master//open_web_calendar/default_specification.yml"
 
-#, fuzzy
 msgid ""
 "[getSpecification()]: https://github.com/niccokunzmann/open-web-"
 "calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
 msgstr ""
-"[getSpecification()]: https://github.com/niccokunzmann/open-web-"
-"calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
+"[getSpecification()]: https://github.com/niccokunzmann/open-web-calendar/"
+"blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93"
 
-#, fuzzy
 msgid "[parameters]: ../api"
-msgstr "[parameters]: ../api"
+msgstr "[parametri]: ../api"
 
-#, fuzzy
 msgid ""
 "[DHTMLX Scheduler]: "
 "https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
 msgstr ""
-"[DHTMLX Scheduler]: "
-"https://docs.dhtmlx.com/scheduler/api__refs__scheduler.html"
+"[DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/"
+"api__refs__scheduler.html"
 
-#, fuzzy
 msgid "[privacy-policy]: ../privacy-policy"
-msgstr "[privacy-policy]: ../privacy-policy"
+msgstr "[politika-privatnosti]: ../privacy-policy"
 
-#, fuzzy
 msgid "[OWC_SPECIFICATION]: #owc_specification"
-msgstr "[OWC_SPECIFICATION]: #owc_specification"
+msgstr "[OWC_SPECIFIKACIJA]: #owc_specification"
 
-#, fuzzy
 msgid "[default_specification]: /assets/default_specification.yml"
-msgstr "[default_specification]: /assets/default_specification.yml"
+msgstr "[zadana_specifikacija]: /assets/default_specification.yml"
 
-#, fuzzy
 msgid "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
 msgstr "[flask-allowed-hosts]: https://pypi.org/project/flask-allowed-hosts/"
 
-#, fuzzy
 msgid "[1]: ../pypi"
 msgstr "[1]: ../pypi"
 
-#, fuzzy
 msgid "[Fernet]: https://cryptography.io/en/latest/fernet/"
 msgstr "[Fernet]: https://cryptography.io/en/latest/fernet/"
 
-#, fuzzy
 msgid "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 msgstr "[/new-key]: https://open-web-calendar.hosted.quelltext.eu/new-key"
 
-#, fuzzy
 msgid "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 msgstr "[Dockerhub]: https://hub.docker.com/r/niccokunzmann/open-web-calendar"
 
-#, fuzzy
 msgid "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
 msgstr "[kuma]: https://kuma.hosted.quelltext.eu/status/open-web-calendar"
 
-#, fuzzy
 msgid ""
 "[privacy-policy]: https://docs.github.com/en/site-policy/privacy-policies/"
 msgstr ""
-"[privacy-policy]: https://docs.github.com/en/site-policy/privacy-policies/"
+"[politika-privatnosti]: https://docs.github.com/en/site-policy/"
+"privacy-policies/"
 
-#, fuzzy
 msgid "[Gunicorn]: https://docs.gunicorn.org/"
 msgstr "[Gunicorn]: https://docs.gunicorn.org/"
 
-#, fuzzy
 msgid ""
 "[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
 "calendar.hosted.quelltext.eu"
@@ -427,7 +400,6 @@ msgstr ""
 "[open-web-calendar.hosted.quelltext.eu]: https://open-web-"
 "calendar.hosted.quelltext.eu"
 
-#, fuzzy
 msgid ""
 "[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
 "calendar.hosted.quelltext.eu"
@@ -435,49 +407,39 @@ msgstr ""
 "[tor.open-web-calendar.hosted.quelltext.eu]: https://tor.open-web-"
 "calendar.hosted.quelltext.eu"
 
-#, fuzzy
 msgid ""
 "[vid-architecture]: "
 "https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
 msgstr ""
-"[vid-architecture]: "
-"https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2"
+"[vid-architecture]: https://www.youtube.com/watch?v=JVosZ6zht5I&amp;list"
+"=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&amp;index=2"
 
-#, fuzzy
 msgid "[Radically Open Security]: https://radicallyopensecurity.com/"
 msgstr "[Radically Open Security]: https://radicallyopensecurity.com/"
 
-#, fuzzy
 msgid "[Nextcloud]: https://nextcloud.com/"
 msgstr "[Nextcloud]: https://nextcloud.com/"
 
-#, fuzzy
 msgid "[templates]: ../../templates#caldav-sign-up"
-msgstr "[templates]: ../../templates#caldav-sign-up"
+msgstr "[predlošci]: ../../templates#caldav-sign-up"
 
-#, fuzzy
 msgid "[grant]: /news/2024-04-10-website"
 msgstr "[grant]: /news/2024-04-10-website"
 
-#, fuzzy
 msgid "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
 msgstr "[infoscreen]: https://github.com/AmmanVMS/infoscreen"
 
-#, fuzzy
 msgid "[@dml105]: https://github.com/dml105"
 msgstr "[@dml105]: https://github.com/dml105"
 
-#, fuzzy
 msgid ""
 "[Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
 msgstr ""
-"[Issue 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
+"[Problem 625]: https://github.com/niccokunzmann/open-web-calendar/issues/625"
 
-#, fuzzy
 msgid "[Antroposofía Chile]: https://antroposofiachile.net/home/"
 msgstr "[Antroposofía Chile]: https://antroposofiachile.net/home/"
 
-#, fuzzy
 msgid "[Gancio]: https://gancio.org/"
 msgstr "[Gancio]: https://gancio.org/"
 
