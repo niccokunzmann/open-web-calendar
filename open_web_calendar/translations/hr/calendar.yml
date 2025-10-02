@@ -55,3 +55,8 @@ labels_hour: "Sati"
 language-en: "Croatian"
 labels_minute: Minute
 language: Hrvatski
+icon_subscribe: Dodaj u moj kalendar
+icon_signup: Resgistriraj se
+label_participants: Sudionici
+signup-email: e-mail adresa
+signup-name: ime
