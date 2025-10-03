@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Ugradi prilagodljiv web kalendar u svoju web stranicu koristeći izvorne ICal poveznice">
+        <meta name="description" content="Konfiguriraj hostiranu instancu.">
       
       
       
@@ -72,7 +72,7 @@
       
         <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_i92fi0_f/hr/host/configure/index.png" >
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__ucoudzg/hr/host/configure/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -88,7 +88,7 @@
       
         <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
       
-        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_i92fi0_f/hr/host/configure/index.png" >
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__ucoudzg/hr/host/configure/index.png" >
       
     
     
@@ -1451,9 +1451,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+  <a href="#squid-kao-proxy-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Squid as a Proxy Server
+      Squid kao proxy server
     </span>
   </a>
   
@@ -1490,8 +1490,8 @@
 <li>Promijeniti način rada servera.</li>
 </ul>
 <h2 id="konfiguriranje-zadanog-kalendara">Konfiguriranje zadanog kalendara<a class="headerlink" href="#konfiguriranje-zadanog-kalendara" title="Stalna poveznica">&para;</a></h2>
-<p>The configuration of all calendars is rooted in the <a href="/assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="/assets/default_specification.yml">default_specification</a>.</p>
-<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
+<p>Konfiguracija svih kalendara temelji se na <a href="/assets/default_specification.yml">zadana_specifikacija</a>. Sve te vrijednosti mogu se promijeniti putem kopije ove datoteke koja se nalazi na webu putem parametra kalendara <code>specification_url</code>. Svaki parametar treba biti dokumentiran u [zadanoj_specifikaciji].</p>
+<p>Za mijenjanje <strong>svih kalendara</strong> koji se nalaze na tvojoj instanci, koristi varijablu okruženja [OWC_SPECIFICATION]. Kalendari i dalje nadjačavaju neke vrijednosti za svoju konfiguraciju. Na one koje ne nadjačavaju utječe zadana specifikacija. Na stranici za konfiguraciju se ne prikazuju sve vrijednosti za mijenjenje. Te se vrijednosti i dalje mogu mijenjati u <code>specification_url</code> i parametrima upita.</p>
 <p>Možda ćeš htjeti promijeniti sljedeće vrijednosti.</p>
 <h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Stalna poveznica">&para;</a></h3>
 <p>Naslov tvoje web stranice.</p>
@@ -1504,10 +1504,10 @@
 <h3 id="contributing"><code>contributing</code><a class="headerlink" href="#contributing" title="Stalna poveznica">&para;</a></h3>
 <p>Ako želiš preusmjeriti za doprinešenje tvom projektu.</p>
 <h3 id="privacy_policy"><code>privacy_policy</code><a class="headerlink" href="#privacy_policy" title="Stalna poveznica">&para;</a></h3>
-<p>If you host this service yourself, you can use the default <a href="../privacy-policy">privacy policy</a>.</p>
-<p>If for some reason you decide to collect data i.e. in the HTTPS proxy or log IP-addresses, then you need to create your own privacy policy. You can link to the one of this project.</p>
+<p>Ako hostiraš ovu uslugu, može koristiti zadani dokument za [pravila privatnosti][privacy-policy].</p>
+<p>Ako iz nekog razloga odlučiš prikupljati podatke, npr. putem HTTPS proxyja ili zapisivati IP adrese, tada moraš izraditi vlastitu politiku privatnosti. Možeš se povezati na politiku privatnosti ovog projekta.</p>
 <h3 id="vise-vrijednosti">Više vrijednosti<a class="headerlink" href="#vise-vrijednosti" title="Stalna poveznica">&para;</a></h3>
-<p>There are loads more values that can be changed. Please refer to the <a href="/assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
+<p>Postoji još mnogo vrijednosti koje se mogu promijeniti. Pogledaj datoteku <a href="/assets/default_specification.yml">zadana_specifikacija</a>. Sve su ove vrijednosti dokumentirane. Za mijenjanje vrijednosti koristi varijablu okruženja [OWC_SPECIFICATION].</p>
 <p>Također pogledaj:</p>
 <ul>
 <li><a href="../../dev/api">API</a></li>
@@ -1528,47 +1528,47 @@
 </ul>
 <p>Ovu funkcionalnost pruža <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
 <h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Stalna poveznica">&para;</a></h3>
-<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>zadano <code>false</code>, vrijednosti <code>true</code> ili <code>false</code>, uvijek <code>false</code> u Docker kontejneru</p>
 <p>Postavi oznaku za otklanjanje grešaka za aplikaciju.</p>
 <h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="Stalna poveznica">&para;</a></h3>
-<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
-<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
+<p>zadana vrijednost je privremeni direktorij (npr. u <code>/tmp/</code>)</p>
+<p>Otvoreni web kalendar sprema datoteke potrebne za prikaz kalendara u ovom direktoriju radi ubrzavanja učitavanja. Ako direktorij ne postoji on će se kreiran stvoriti.</p>
 <h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Stalna poveznica">&para;</a></h3>
-<p>default <code>20</code> (MB)</p>
-<p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
+<p>zadano <code>20</code> (MB)</p>
+<p>Ovo je maksimalna veličina jedne datoteke u predmemoriji. Kada se predmemorija napuni, uklanja se datoteka koja se najdulje nije koristila.</p>
 <p>Primjeri:</p>
 <ul>
-<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
-<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
-<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+<li>Dozvoli samo male datoteke od 4 KB: <code>CACHE_FILE_SIZE=0.004</code></li>
+<li>Dozvoli bilo koju veličinu: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
+<li>Deaktiviraj spremanje u predmemoriju: <code>CACHE_FILE_SIZE=0</code></li>
 </ul>
 <h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="Stalna poveznica">&para;</a></h3>
-<p>default <code>200</code> (MB)</p>
-<p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
+<p>zadano <code>200</code> (MB)</p>
+<p>Ovo je maksimalna veličina predmemorije u megabajtima. Ova veličina je ograničena na 200 MB kako bi se spriječilo da predmemorija ispuni datotečni sustav ili, u slučaju <code>/tmp/</code>, radnu memoriju (RAM).</p>
 <p>Primjeri:</p>
 <ul>
-<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
-<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
-<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+<li>Koristi 1 GB za predmemoriranje: <code>CACHE_SIZE=1024</code></li>
+<li>Neograničena predmemorija: <code>CACHE_SIZE=unlimited</code></li>
+<li>Deaktiviraj spremanje u predmemoriju: <code>CACHE_SIZE=0</code></li>
 </ul>
 <h3 id="brzo-aktualiziranje-cache_requested_urls_for_seconds10">Brzo aktualiziranje: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code><a class="headerlink" href="#brzo-aktualiziranje-cache_requested_urls_for_seconds10" title="Stalna poveznica">&para;</a></h3>
-<p>default <code>600</code> (seconds)</p>
+<p>zadano <code>600</code> (sekundi)</p>
 <p>Broj sekundi za predmemoriranje datoteka kalendara koje se preuzimaju kako bi se smanjila propusnost i kašnjenje.</p>
 <p>Primjeri:</p>
 <ul>
 <li>Brzo aktualiziranje: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
-<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+<li>Deaktiviraj spremanje u predmemoriju: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
 </ul>
 <h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Stalna poveznica">&para;</a></h3>
 <p>zadana vrijednost je prazna</p>
-<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>Ovo je popis ključeva za šifriranje odvojenih zarezima. Mogu se koristiti za skrivanje osjetljivih informacija URL-ova.</p>
 <p>Primjeri:</p>
 <ul>
-<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
-<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
-<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+<li>Deaktiviraj šifriranje (zadano): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Koristi jedan ključ: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Koristi više ključeva: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> Ako koristiš više ključeva, samo prvi šifrira podatke. Ostali se koriste samo za dešifriranje podataka.</li>
 </ul>
-<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<p>Novi ključ možeš generirati na stranici <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> tvoje instance za Otvoreni web kalendar ili pokretanjem ove naredbe:</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
 </code></pre></div>
 <p>Također pogledaj:</p>
@@ -1591,7 +1591,7 @@
 </code></pre></div>
 <p>Također pogledaj:</p>
 <ul>
-<li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
+<li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION u API-ju</a></li>
 </ul>
 <h3 id="port">PORT<a class="headerlink" href="#port" title="Stalna poveznica">&para;</a></h3>
 <p>zadano je <code>5000</code>, zadano je <code>80</code> u Docker kontejneru</p>
@@ -1610,18 +1610,18 @@
 <h2 id="daljnja-konfiguracija">Daljnja konfiguracija<a class="headerlink" href="#daljnja-konfiguracija" title="Stalna poveznica">&para;</a></h2>
 <p>Otvoreni web kalendar koristi biblioteke za dodatno prilagođavanje.</p>
 <ul>
-<li><strong>Flask</strong> has <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more environment variables</a></strong> available to configure how the application serves content.</li>
-<li><strong>Requests</strong> is used the get the <code>.ics</code> files. You can <a href="#ssrf-protection-with-a-proxy-server">configure a proxy</a>.</li>
+<li><strong>Flask</strong> ima <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">više varijabli okruženja</a></strong> koje su dostupne za konfiguriranje načina na koji aplikacija poslužuje sadržaj.</li>
+<li><strong>Zahtjevi</strong> se koriste za dobivanje <code>.ics</code> datoteka. Možeš <a href="#ssrf-protection-with-a-proxy-server">konfigurirati proxy</a>.</li>
 </ul>
-<p>The Open Web Calendar relies on proxy servers for these features:</p>
+<p>Otvoreni web kalendar se oslanja na proxy servere za ove funkcije:</p>
 <ul>
-<li><strong>Access Control and Users</strong> To restrict who can use the Open Web Calendar, you can use <code>nginx</code> or <code>apache</code> as a reverse proxy in front of it. YuNoHost is another self-hosting option to restrict access.</li>
-<li><strong>HTTPS Encryption</strong> This can be done by <code>nginx</code>, <code>apache</code> or <code>caddy</code>.</li>
-<li><strong>More Advanced Caching</strong> Basic caching is handeled by the Open Web Calendar. For more advanced cache configuration, use a proxy server like <code>squid</code>. Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.</li>
-<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+<li><strong>Kontrola pristupa i korisnici</strong> Za oraničavanje korištenja kalendara „Otvoreni web kalendar”, možeš koristiti <code>ginx</code> ili <code>apache</code> kao obrnuti proxy ispred njega. YuNoHost je još jedna opcija samostalnog hostinga za ograničavanje pristupa.</li>
+<li><strong>HTTPS šifriranje</strong> To se može učiniti pomoću <code>nginx</code>, <code>apache</code> ili <code>caddy</code>.</li>
+<li><strong>Naprednije predmemoriranje</strong> Osnovno predmemoriranje obrađuje Otvoreni web kalendar. Za naprednije konfiguracije predmemorije, koristi proxy server poput <code>squid</code>. Pročitaj u dokumentaciji u nastavku kako omogućiti da Otvoreni web kalendar pristupi internetu isključivo putem proxyja.</li>
+<li><strong>Ograničavanje pristupa kalendarima</strong> Prema zadanim postavkama, Otvoreni web kalendar ne ograničava koji će se kalendari prikazati. Za filtriranje kalendara koristi proxy server. Ako Otvoreni web kalendar pokrećeš iza vatrozida s drugim web uslugama, postavljanje proxyja je potrebno za zaštitu od SSRF napada.</li>
 </ul>
 <h2 id="ssrf-zastita-s-proxy-serverom">SSRF zaštita s proxy serverom<a class="headerlink" href="#ssrf-zastita-s-proxy-serverom" title="Stalna poveznica">&para;</a></h2>
-<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calendar, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
+<p>Otvoreni web kalendar se može koristiti za pristup lokalnoj mreži iza vatrozida, pogledaj <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Problem 250</a>. Ovaj besplatni pristup namijenjen je prikazu kalendara s bilo kojeg mjesta. Budući da Otvoreni web kalendar koristi <code>requests</code>, on može koristiti proxy kako je opisano u <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> dokumentaciji</a>. Tada proxy može obraditi filtriranje.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
@@ -1630,16 +1630,14 @@
 <ul>
 <li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Spriječi SSRF pomoću Tor proxya</a></li>
 </ul>
-<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="Stalna poveznica">&para;</a></h2>
-<p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
+<h2 id="squid-kao-proxy-server">Squid kao proxy server<a class="headerlink" href="#squid-kao-proxy-server" title="Stalna poveznica">&para;</a></h2>
+<p><a href="https://www.squid-cache.org/">Squid</a> proxy i predmemorija su fleksibilni i prilagodljivi. Možeš ih koristiti ispred Otvorenog web kalendara za konfiguriranje pristupa i prilagodbu predmemorije.</p>
 <div class="admonition note">
-<p class="admonition-title">Operating System</p>
-<p>Squid is avaiable for all major platforms.
-For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
-The commands might work on other systems, but that is not tested.</p>
+<p class="admonition-title">Operacijski sustav</p>
+<p>Squid je dostupan za sve glavne platforme. Za naredbe i staze u ovom vodiču pretpostavljamo da pokrećeš Squid na Debain/Ubuntu. Naredbe bi mogle raditi na drugim sustavima, ali to nije testirano.</p>
 </div>
-<p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
-<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<p>Nakon što instaliraš <a href="https://www.squid-cache.org/">Squid</a> proxy, dodaj ovu datoteku u direktorij <code>conf.d</code>. Squid će je tada automatski učitati.</p>
+<p>Na Linuxu stvori <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
 <span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
 <span class="c1">## should be allowed</span>
@@ -1664,21 +1662,21 @@ http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span cl
 <span class="c1">## See https://superuser.com/a/1443889</span>
 dns_v4_first<span class="w"> </span>on
 </code></pre></div>
-<p>The list above denies the Open Web Calendar access to all known local/internal networks. If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.</p>
-<p>On Linux, you can install the file with this command:</p>
+<p>Gornji popis onemogućuje Otvorenom web kalendaru pristup svim poznatim lokalnim/internim mrežama. Ako imaš vlastitu lokalnu mrežu (IPv4 ili IPv6), dodaj je na gornji popis.</p>
+<p>Na Linuxu možeš instalirati datoteku ovom naredbom:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>/etc/squid/conf.d/open-web-calendar.conf<span class="w"> </span>https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
 </code></pre></div>
-<p>Then, restart the squid proxy.</p>
+<p>Zatim ponovo pokreni squid proxy.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>squid<span class="w"> </span>reload
 </code></pre></div>
-<p>Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on <code>localhost</code>. Setting this variable changes depending on how you run the Open Web Calendar.</p>
-<p>If you use the <a href="../pypi">Python Setup</a>, you can set the environment variables for the server like this:</p>
+<p>Postavi varijable okruženja kako bi Otvoreni web kalendar znao da koristi Squid proxy instaliran na <code>localhost</code>. Postavljanje ove varijable se mijenja ovisno o tome kako se Otvoreni web kalendar pokreće.</p>
+<p>Ako koristiš <a href="../pypi">Python postavljanje</a>, možeš postaviti varijable okruženja za server ovako:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
 gunicorn<span class="w"> </span>open_web_calendar:app
 </code></pre></div>
-<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<p>Kada pokušaš pristupiti zabranjenom kalendaru s lokalnim <code>open-web-calendar</code>, npr. <code>http://172.16.0.1/calendar.ics</code>, vidjet ćeš ovu poruku o grešci:</p>
 <blockquote>
 <p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
 </blockquote>
