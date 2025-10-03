@@ -26,7 +26,7 @@ cffi==2.0.0
     # via cairocffi
 charset-normalizer==3.4.3
     # via requests
-click==8.2.0
+click==8.3.0
     # via mkdocs
 colorama==0.4.6
     # via mkdocs-material
