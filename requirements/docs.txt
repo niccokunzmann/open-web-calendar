@@ -166,7 +166,7 @@ smmap==5.0.2
     # via gitdb
 soupsieve==2.8
     # via beautifulsoup4
-super-collections==0.5.3
+super-collections==0.6.2
     # via mkdocs-macros-plugin
 termcolor==3.1.0
     # via mkdocs-macros-plugin
