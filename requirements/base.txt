@@ -118,7 +118,7 @@ six==1.17.0
     #   vobject
 soupsieve==2.8
     # via beautifulsoup4
-typer==0.17.4
+typer==0.19.2
     # via mergecal
 typing-extensions==4.13.2
     # via
