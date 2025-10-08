@@ -93,7 +93,7 @@ python-dateutil==2.9.0.post0
     #   vobject
 pytz==2025.2
     # via vobject
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via -r requirements/base.in
 recurring-ical-events==3.8.0
     # via
