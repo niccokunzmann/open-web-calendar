@@ -42,7 +42,7 @@ jinja2==3.1.6
     # via reuse
 license-expression==30.4.4
     # via reuse
-markupsafe==3.0.2
+markupsafe==3.0.3
     # via jinja2
 outcome==1.3.0.post0
     # via
