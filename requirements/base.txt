@@ -30,7 +30,7 @@ click==8.1.8
     #   flask
     #   typer
     #   x-wr-timezone
-cryptography==45.0.7
+cryptography==46.0.2
     # via -r requirements/base.in
 flask==3.1.2
     # via
