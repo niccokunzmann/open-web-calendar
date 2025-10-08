@@ -59,6 +59,9 @@ starting-date-description: "To change the starting date of the calendar:"
 
 
 # Heading of option
+time-and-hours-title: "Time and Hours"
+
+# Heading of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-first-hour-title
 first-hour-title: "First Hour"
 # Description of option
