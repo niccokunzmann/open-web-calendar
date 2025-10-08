@@ -63,7 +63,7 @@ lxml==6.0.2
     #   -r requirements/base.in
     #   caldav
     #   lxml-html-clean
-lxml-html-clean==0.4.2
+lxml-html-clean==0.4.3
     # via -r requirements/base.in
 markdown-it-py==3.0.0
     # via rich
