@@ -58,7 +58,7 @@ itsdangerous==2.2.0
     # via flask
 jinja2==3.1.6
     # via flask
-lxml==6.0.1
+lxml==6.0.2
     # via
     #   -r requirements/base.in
     #   caldav
