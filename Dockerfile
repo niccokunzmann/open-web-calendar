@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 
-FROM python:3.13-alpine
+FROM python:3.14-alpine
 
 # make pip also use piwheels
 COPY docker/pip.conf /etc/pip.conf
