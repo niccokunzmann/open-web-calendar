@@ -48,7 +48,7 @@ toposort==1.10
     # via pip-compile-multi
 tox==4.30.3
     # via -r requirements/dev.in
-virtualenv==20.34.0
+virtualenv==20.35.0
     # via tox
 wheel==0.45.1
     # via pip-tools
