@@ -78,7 +78,7 @@ responses==0.25.8
     #   pytest-responses
 reuse==5.1.1
     # via -r requirements/test.in
-ruff==0.12.12
+ruff==0.14.0
     # via -r requirements/test.in
 selenium==4.33.0
     # via -r requirements/test.in
