@@ -221,14 +221,14 @@ def wait_for_http_server(url, on_error=lambda: None):
     """Make sure the HTTP server is up and running."""
     print(f"HTTP SERVER: Waiting for {url} to start ... ", end="")
     timeout = time.time() + WAIT
-    ty = err = tb = None
+    _ty = err = tb = None
     while time.time() < timeout:
         try:
             requests.get(url, timeout=WAIT)
-            ty = err = tb = None
+            _ty = err = tb = None
             break
         except:
-            ty, err, tb = sys.exc_info()
+            _ty, err, tb = sys.exc_info()
             time.sleep(0.01)
     if err is not None:
         print("FAIL")
