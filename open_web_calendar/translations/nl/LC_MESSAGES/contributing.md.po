@@ -42,13 +42,6 @@ msgstr ""
 "fouten](https://github.com/niccokunzmann/open-web-calendar/issues)"
 
 msgid ""
-"[Fund development & maintenance - "
-"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
-msgstr ""
-"[Financier de ontwikkeling & het onderhoud - "
-"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
-
-msgid ""
 "[Fund costs - Open Collective](https://opencollective.com/open-web-"
 "calendar/)"
 msgstr ""
@@ -104,6 +97,13 @@ msgstr "U heeft add-ons of integraties nodig."
 
 msgid "Support plans and maintenance contracts are available."
 msgstr "Ondersteuning en onderhoudsabonementen zijn beschikbaar."
+
+#~ msgid ""
+#~ "[Fund development & maintenance - "
+#~ "Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
+#~ msgstr ""
+#~ "[Financier de ontwikkeling & het onderhoud - "
+#~ "Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
 
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Recurring Events with Categories"

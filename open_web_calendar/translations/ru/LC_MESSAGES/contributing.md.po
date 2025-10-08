@@ -36,11 +36,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"[Fund development & maintenance - "
-"Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
-msgstr ""
-
-msgid ""
 "[Fund costs - Open Collective](https://opencollective.com/open-web-"
 "calendar/)"
 msgstr ""
@@ -82,6 +77,11 @@ msgstr ""
 
 msgid "Support plans and maintenance contracts are available."
 msgstr ""
+
+#~ msgid ""
+#~ "[Fund development & maintenance - "
+#~ "Polar](https://polar.sh/niccokunzmann/open-web-calendar)"
+#~ msgstr ""
 
 #, fuzzy
 #~ msgid "[Squid]: https://www.squid-cache.org/"
