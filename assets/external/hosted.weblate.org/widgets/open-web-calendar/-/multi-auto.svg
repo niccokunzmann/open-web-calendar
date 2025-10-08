@@ -88,11 +88,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="65"
-   id="percent65">36%</text>
+   id="percent65">35%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect65"
-   width="54"
+   width="53"
    height="6"
    x="200"
    rx="2"
@@ -134,11 +134,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="95"
-   id="percent95">100%</text>
+   id="percent95">99%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect95"
-   width="150"
+   width="149"
    height="6"
    x="200"
    rx="2"
@@ -203,11 +203,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="140"
-   id="percent140">100%</text>
+   id="percent140">99%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect140"
-   width="150"
+   width="149"
    height="6"
    x="200"
    rx="2"
@@ -276,7 +276,7 @@
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect185"
-   width="92"
+   width="91"
    height="6"
    x="200"
    rx="2"
@@ -318,7 +318,7 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="215"
-   id="percent215">75%</text>
+   id="percent215">74%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect215"
@@ -709,11 +709,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="470"
-   id="percent470">100%</text>
+   id="percent470">99%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect470"
-   width="150"
+   width="149"
    height="6"
    x="200"
    rx="2"
@@ -847,11 +847,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="560"
-   id="percent560">100%</text>
+   id="percent560">99%</text>
 <rect
    style="fill:#f6664c;fill-opacity:1;stroke:none"
    id="rect560"
-   width="150"
+   width="149"
    height="6"
    x="200"
    rx="2"
