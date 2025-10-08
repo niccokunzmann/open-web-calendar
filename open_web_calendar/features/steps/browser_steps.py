@@ -769,8 +769,8 @@ def normalize_css_value(s):
     color_match = re.match(r"rgb\((\d+),\s*(\d+),\s+(\d+)\)", s)
     if color_match:
         return "#" + "".join(
-            hex(int(c))[2:].ljust(2, "0")
-            for c in color_match.groups()  # noqa: FURB116, RUF100
+            hex(int(c))[2:].ljust(2, "0")  # noqa: FURB116, RUF100
+            for c in color_match.groups()
         )
     return s
 
