@@ -25,7 +25,7 @@ Have an idea? [Open an issue](https://github.com/niccokunzmann/open-web-calendar
 
 #### 🔧 Code Contributions
 1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/your-feature-name`
+2. **Create a sub branch**: `git checkout -b feature/your-feature-name`
 3. **Set up development environment**: See [development documentation](https://open-web-calendar.quelltext.eu/dev/)
 4. **Make your changes**
 5. **Run tests**: Follow the testing guidelines in the dev docs
