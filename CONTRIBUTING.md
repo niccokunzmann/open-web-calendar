@@ -1,8 +1,8 @@
----
+<!---
 # SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
 #
 # SPDX-License-Identifier: CC-BY-SA-4.0
----
+--->
 
 # Contributing to Open Web Calendar ♥️
 [![Sponsor with GitHub](https://img.shields.io/github/sponsors/niccokunzmann?logo=github&label=GitHub%20Sponsors
