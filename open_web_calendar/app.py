@@ -483,6 +483,20 @@ def sign_up_for_event():
 
 def main():
     """Run the Open Web Calendar"""
+    import argparse
+    
+    parser = argparse.ArgumentParser(
+        description='Open Web Calendar',
+        epilog="""
+Documentation: https://open-web-calendar.quelltext.eu/
+Contributing: https://open-web-calendar.quelltext.eu/contributing/
+Development: https://open-web-calendar.quelltext.eu/dev/
+        """,
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    
+    parser.parse_args()
+    
     print("""If you want to run the Open Web Calendar in production,
 please use this command:
 
