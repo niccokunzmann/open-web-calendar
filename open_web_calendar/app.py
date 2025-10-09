@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 from __future__ import annotations
 
-import argpars
+import argparse
 import datetime
 import json
 import os
