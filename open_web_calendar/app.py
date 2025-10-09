@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 from __future__ import annotations
 
+import argpars
 import datetime
 import json
 import os
@@ -14,7 +15,6 @@ from http import HTTPStatus
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 from urllib.parse import ParseResult, urlparse
-import argparse
 
 import caldav
 import icalendar
@@ -492,7 +492,6 @@ Contributing: https://open-web-calendar.quelltext.eu/contributing/
 Development: https://open-web-calendar.quelltext.eu/dev/
         """,
         formatter_class=argparse.RawDescriptionHelpFormatter)
-
     parser.parse_args()
     
     print("""If you want to run the Open Web Calendar in production,
