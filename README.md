@@ -14,6 +14,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 You might want to:
 - **[Try&nbsp;it&nbsp;out][web]**
 - [Contribute!](https://open-web-calendar.quelltext.eu/contributing/)
+- [Set up for development](https://open-web-calendar.quelltext.eu/dev/)
 - [Read the documentation][docs]
 
 There are several commercial solutions which allow embedding of calendars into my website.
