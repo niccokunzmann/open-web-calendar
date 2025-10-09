@@ -9,7 +9,7 @@ attrs==25.4.0
     # via
     #   cattrs
     #   requests-cache
-bcrypt==4.3.0
+bcrypt==5.0.0
     # via -r requirements/base.in
 beautifulsoup4==4.14.2
     # via -r requirements/base.in
