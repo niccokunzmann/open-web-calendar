@@ -7,7 +7,10 @@ comments: true
 description: "You can improve the project yourself. Get started here."
 ---
 
-# Contributing to Open Web Calendar
+# Contributing to Open Web Calendar ♥️
+[![Sponsor with GitHub](https://img.shields.io/github/sponsors/niccokunzmann?logo=github&label=GitHub%20Sponsors
+)]({{link.fund.github_sponsors}})
+[![Support on Open Collective](https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective)]({{link.fund.open_collective}})
 
 Thank you for your interest in contributing to Open Web Calendar! 🎉
 
