@@ -68,6 +68,9 @@ msgid ""
 "web-calendar/)"
 msgstr ""
 
+msgid "[Set up your development environment](../dev/)"
+msgstr ""
+
 #~ msgid ""
 #~ "[![Sponsor with "
 #~ "GitHub](https://img.shields.io/github/sponsors/niccokunzmann?logo=github&label=GitHub%20Sponsors)](https://github.com/sponsors/niccokunzmann)"
