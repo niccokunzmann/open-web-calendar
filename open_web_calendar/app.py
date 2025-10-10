@@ -66,6 +66,7 @@ TIMEZONES.sort()
 app = Flask(__name__, template_folder="templates")
 
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 31536000
+app.config["JSON_AS_ASCII"] = False  # Ensure JSON responses use UTF-8
 
 
 # limiting access
@@ -144,7 +145,7 @@ def make_js_file_response(content: str) -> Response:
     """Modify the response to set the content type for .js files."""
     response = make_response(content)
     set_js_headers(response)
-    response.headers["Content-Type"] = "text/javascript"
+    response.headers["Content-Type"] = "text/javascript; charset=utf-8"
     return response
 
 
@@ -225,7 +226,8 @@ def get_specification(query=None):
 
 
 def get_query_string():
-    return "?" + request.query_string.decode()
+    from urllib.parse import unquote
+    return "?" + unquote(request.query_string.decode('utf-8'))
 
 
 def render_app_template(template, specification):
@@ -313,6 +315,10 @@ for folder_path in STATIC_FOLDER_PATH.iterdir():
         ).strftime("%a, %d %b %Y %H:%M:%S GMT")
         response.headers["Pragma"] = "public"
         response.headers["Vary"] = "Accept-Encoding"
+        
+        # Ensure UTF-8 encoding for text files
+        if path.endswith(('.js', '.css', '.html', '.txt')):
+            response.headers["Content-Type"] = response.headers.get("Content-Type", "") + "; charset=utf-8"
 
         return response
 
