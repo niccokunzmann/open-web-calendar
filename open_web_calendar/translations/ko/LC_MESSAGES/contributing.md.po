@@ -79,6 +79,9 @@ msgid ""
 "web-calendar/)"
 msgstr ""
 
+msgid "[Set up your development environment](../dev/)"
+msgstr ""
+
 #~ msgid ""
 #~ "[Fund development & maintenance - "
 #~ "Polar](https://polar.sh/niccokunzmann/open-web-calendar)"

@@ -23,6 +23,9 @@ msgid ""
 "web-calendar/)"
 msgstr ""
 
+msgid "[Set up your development environment](../dev/)"
+msgstr ""
+
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
 #~ "calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-"

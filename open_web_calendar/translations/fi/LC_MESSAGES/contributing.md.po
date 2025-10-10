@@ -24,6 +24,9 @@ msgid ""
 "web-calendar/)"
 msgstr ""
 
+msgid "[Set up your development environment](../dev/)"
+msgstr ""
+
 #, fuzzy
 #~ msgid "[Squid]: https://www.squid-cache.org/"
 #~ msgstr "[Squid]: https://www.squid-cache.org/"

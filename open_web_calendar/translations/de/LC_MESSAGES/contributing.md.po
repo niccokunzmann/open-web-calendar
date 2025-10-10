@@ -23,6 +23,9 @@ msgid ""
 "web-calendar/)"
 msgstr ""
 
+msgid "[Set up your development environment](../dev/)"
+msgstr ""
+
 #~ msgid "Recurring Events with Categories"
 #~ msgstr "Wiederkehrende Termine mit Kategorie"
 
