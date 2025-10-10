@@ -36,7 +36,7 @@ cssselect2==0.8.0
     # via cairosvg
 defusedxml==0.7.1
     # via cairosvg
-filelock==3.19.1
+filelock==3.20.0
     # via cachecontrol
 ghp-import==2.1.0
     # via mkdocs
@@ -92,7 +92,7 @@ mkdocs-get-deps==0.2.0
     # via mkdocs
 mkdocs-git-revision-date-localized-plugin==1.4.7
     # via -r requirements/docs.in
-mkdocs-macros-plugin==1.3.9
+mkdocs-macros-plugin==1.4.0
     # via -r requirements/docs.in
 mkdocs-markdownextradata-plugin==0.2.6
     # via -r requirements/docs.in

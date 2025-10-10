@@ -16,6 +16,7 @@ description: "You can improve the project yourself. Get started here."
 There are several ways in which you can help this project:
 
 - [Use it]({{link.web}}) and [report errors]({{link.issues}})
+- [Set up your development environment](../dev/)
 - [Fund costs - Open Collective]({{link.fund.open_collective}})
 - [Fund sustainability - GitHub Sponsors]({{link.fund.github_sponsors}})
 - [Translate this project to your language](../dev/translate)
