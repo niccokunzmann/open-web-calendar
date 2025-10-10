@@ -16,6 +16,12 @@ The latest version might not be released, yet.
 <!-- Contributors, if you like to be linked, please put your name down here with a link. -->
 [தமிழ்நேரம்]: https://tamilneram.github.io/
 
+## v1.52 (Unreleased)
+
+- Add development guide links 
+- Add CLI help implementation for better developer onboarding, see [Pull Request #981](https://github.com/niccokunzmann/open-web-calendar/pull/981) by [@Stazz0](https://github.com/Stazz0)
+
+
 ## v1.51
 
 - Update dependencies
