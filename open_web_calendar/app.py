@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 from __future__ import annotations
 
+import argparse
 import datetime
 import json
 import os
@@ -483,13 +484,21 @@ def sign_up_for_event():
 
 def main():
     """Run the Open Web Calendar"""
+    parser = argparse.ArgumentParser(
+        description="Open Web Calendar",
+        epilog="""
+Documentation: https://open-web-calendar.quelltext.eu/
+Contributing: https://open-web-calendar.quelltext.eu/contributing/
+Development: https://open-web-calendar.quelltext.eu/dev/
+        """,
+        formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.parse_args()
     print("""If you want to run the Open Web Calendar in production,
 please use this command:
 
     gunicorn open_web_calendar:app
     """)  # noqa: T201
     app.run(debug=config.debug, host="0.0.0.0", port=config.port)
-
 
 __all__ = [
     "DEFAULT_REQUEST_HEADERS",
