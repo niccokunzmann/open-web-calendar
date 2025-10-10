@@ -26,7 +26,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
-          python-version: 3.14
+          python-version: ${{ 3.11 }}  # try to avoid renovate update
       - name: Install tox
         run: pip install tox
       # run adding languages before the build to make sure that it succeeds
