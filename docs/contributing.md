@@ -23,6 +23,34 @@ There are several ways in which you can help this project:
 - Have a look at [open issues]({{link.issues}}) e.g. those especially to get started, labeled [good first issue]({{link.good_first_issue}}), leave a note and work on it.
 - If you customized a calendar, please consider [contributing it as a template](../templates) for others to use.
 
+## Ways to Contribute
+
+### 🐛 Report Bugs
+Found a bug? Please [create an issue]({{link.issues}}) with:
+- Clear description of the problem
+- Steps to reproduce
+- Expected vs actual behavior
+
+### 💡 Suggest Features
+Have an idea? [Open an issue]({{link.issues}}) to discuss it!
+
+### 🔧 Code Contributions
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/your-feature-name`
+3. **Set up development environment**: See [development documentation](../dev/)
+4. **Make your changes**
+5. **Run tests**
+6. **Submit a pull request**
+
+### 📚 Documentation
+Help improve our documentation by:
+- Fixing typos or unclear instructions
+- Adding examples
+
+## Get Help
+
+Questions? Check our [documentation]({{link.web}}) or join the [discussions](https://github.com/niccokunzmann/open-web-calendar/discussions).
+
 If you are part of a company depending on the Open Web Calendar,
 please contact Nicco Kunzmann, the maintainer:
 
