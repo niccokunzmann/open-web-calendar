@@ -71,6 +71,79 @@ msgstr ""
 msgid "[Set up your development environment](../dev/)"
 msgstr ""
 
+msgid "Ways to Contribute"
+msgstr ""
+
+msgid "🐛 Report Bugs"
+msgstr ""
+
+msgid ""
+"Found a bug? Please [create an issue](https://github.com/niccokunzmann/open-"
+"web-calendar/issues) with:"
+msgstr ""
+
+msgid "Clear description of the problem"
+msgstr ""
+
+msgid "Steps to reproduce"
+msgstr ""
+
+msgid "Expected vs actual behavior"
+msgstr ""
+
+msgid "💡 Suggest Features"
+msgstr ""
+
+msgid ""
+"Have an idea? [Open an issue](https://github.com/niccokunzmann/open-web-"
+"calendar/issues) to discuss it!"
+msgstr ""
+
+msgid "🔧 Code Contributions"
+msgstr ""
+
+msgid "**Fork the repository**"
+msgstr ""
+
+msgid ""
+"**Create a feature branch**: `git checkout -b feature/your-feature-name`"
+msgstr ""
+
+msgid ""
+"**Set up development environment**: See [development documentation](../dev/)"
+msgstr ""
+
+msgid "**Make your changes**"
+msgstr ""
+
+msgid "**Run tests**"
+msgstr ""
+
+msgid "**Submit a pull request**"
+msgstr ""
+
+msgid "📚 Documentation"
+msgstr ""
+
+msgid "Help improve our documentation by:"
+msgstr ""
+
+msgid "Fixing typos or unclear instructions"
+msgstr ""
+
+msgid "Adding examples"
+msgstr ""
+
+msgid "Get Help"
+msgstr ""
+
+msgid ""
+"Questions? Check our [documentation](https://open-web-"
+"calendar.hosted.quelltext.eu) or join the "
+"[discussions](https://github.com/niccokunzmann/open-web-"
+"calendar/discussions)."
+msgstr ""
+
 #~ msgid ""
 #~ "[![Sponsor with "
 #~ "GitHub](https://img.shields.io/github/sponsors/niccokunzmann?logo=github&label=GitHub%20Sponsors)](https://github.com/sponsors/niccokunzmann)"
