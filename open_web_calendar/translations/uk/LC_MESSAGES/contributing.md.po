@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 01:04+0200\n"
-"PO-Revision-Date: 2025-10-09 20:07+0000\n"
+"PO-Revision-Date: 2025-10-13 05:07+0000\n"
 "Last-Translator: Максим Горпиніч <gorpinicmaksim0@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/open-web-calendar/documentation-contributing/uk/>\n"
 "Language: uk\n"
@@ -32,7 +32,92 @@ msgstr ""
 "web-calendar/)"
 
 msgid "[Set up your development environment](../dev/)"
+msgstr "[Налаштуйте середовище розробки](../dev/)"
+
+msgid "Ways to Contribute"
+msgstr "Способи зробити внесок"
+
+msgid "🐛 Report Bugs"
+msgstr "🐛 Повідомити про помилки"
+
+msgid ""
+"Found a bug? Please [create an issue](https://github.com/niccokunzmann/open-"
+"web-calendar/issues) with:"
 msgstr ""
+"Знайшли помилку? Будь ласка, [створіть "
+"проблему](https://github.com/niccokunzmann/open-web-calendar/issues) за "
+"допомогою:"
+
+msgid "Clear description of the problem"
+msgstr "Чіткий опис проблеми"
+
+msgid "Steps to reproduce"
+msgstr "Кроки для розмноження"
+
+msgid "Expected vs actual behavior"
+msgstr "Очікувана та фактична поведінка"
+
+msgid "💡 Suggest Features"
+msgstr "💡 Запропонувати функції"
+
+msgid ""
+"Have an idea? [Open an issue](https://github.com/niccokunzmann/open-web-"
+"calendar/issues) to discuss it!"
+msgstr ""
+"Маєте ідею? [Відкрийте проблему](https://github.com/niccokunzmann/open-web-"
+"calendar/issues), щоб обговорити її!"
+
+msgid "🔧 Code Contributions"
+msgstr "🔧 Внески коду"
+
+msgid "**Fork the repository**"
+msgstr "**Форк репозиторію**"
+
+msgid ""
+"**Create a feature branch**: `git checkout -b feature/your-feature-name`"
+msgstr ""
+"**Створити гілку feature**: `git checkout -b feature/назва-вашої-функції`"
+
+msgid ""
+"**Set up development environment**: See [development documentation](../dev/)"
+msgstr ""
+"**Налаштування середовища розробки**: Див. [документацію з "
+"розробки](../dev/)"
+
+msgid "**Make your changes**"
+msgstr "**Внесіть зміни**"
+
+msgid "**Run tests**"
+msgstr "**Виконайте тести**"
+
+msgid "**Submit a pull request**"
+msgstr "**Надіслати запит на зняття**"
+
+msgid "📚 Documentation"
+msgstr "📚 Документація"
+
+msgid "Help improve our documentation by:"
+msgstr "Допоможіть покращити нашу документацію, виконавши такі дії:"
+
+msgid "Fixing typos or unclear instructions"
+msgstr "Виправлення друкарських помилок або незрозумілих інструкцій"
+
+msgid "Adding examples"
+msgstr "Додавання прикладів"
+
+msgid "Get Help"
+msgstr "Отримати допомогу"
+
+msgid ""
+"Questions? Check our [documentation](https://open-web-"
+"calendar.hosted.quelltext.eu) or join the "
+"[discussions](https://github.com/niccokunzmann/open-web-"
+"calendar/discussions)."
+msgstr ""
+"Є питання? Перегляньте нашу [документацію](https://open-web-"
+"calendar.hosted.quelltext.eu) або приєднуйтесь до "
+"[обговорень](https://github.com/niccokunzmann/open-web-"
+"calendar/discussions)."
 
 #, fuzzy
 #~ msgid ""
