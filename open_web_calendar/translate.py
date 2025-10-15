@@ -254,14 +254,14 @@ def dhtmlx(language: str):
 
 def dhtmlx_languages() -> list:
     """Return tuples of language name and language code."""
-    result = set()
+    result = {}
     for tid in ("language", "language-en"):
         default = string(DEFAULT_LANGUAGE, "calendar", tid)
         for code in TRANSLATIONS:
             language = string(code, "calendar", tid)
             if language != default or code == DEFAULT_LANGUAGE:
-                result.add((language, code))
-    result = list(result)
+                result.setdefault(code, language)
+    result = [(language, code) for code, language in result.items()]
     result.sort()
     return result
 
