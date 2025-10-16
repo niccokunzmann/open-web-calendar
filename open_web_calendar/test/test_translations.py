@@ -221,12 +221,18 @@ def test_ua_calendar():
     [
         ("Deutsch", "de"),
         ("English", "en"),
-        ("Portuguese", "pt"),
+        ("Português", "pt"),
     ],
 )
 def test_languages_are_listed(entry):
     languages = translate.dhtmlx_languages()
     assert entry in languages
+
+
+def test_languages_are_not_repeated():
+    languages = translate.dhtmlx_languages()
+    codes = [code for (language, code) in languages]
+    assert len(codes) == len(set(codes))
 
 
 def test_language_alias_is_not_a_translation_language():

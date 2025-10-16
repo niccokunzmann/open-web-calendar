@@ -9,7 +9,7 @@ Feature: The calendar is translated into different languages. We want to
 
       Examples:
         | word        | language |
-        | calendrier  | French   |
+        | calendrier  | Français |
         | Kalender    | Deutsch  |
         | calendario  | Español  |
 
