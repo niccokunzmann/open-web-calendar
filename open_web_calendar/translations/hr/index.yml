@@ -143,3 +143,4 @@ participants-role: Prikazati ulogu sudionika? (npr. organizator, obavezna osoba
   ili opcionalno)
 caldav-choose-calendar: 'Odaberi jedan kalendar iz svog računa:'
 caldav-allow-sign-up: 'Omogući registraciju putem e-maila za događaje u ovom kalendaru:'
+time-and-hours-title: Vrijeme i sati
