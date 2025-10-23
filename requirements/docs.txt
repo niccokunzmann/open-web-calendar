@@ -174,7 +174,7 @@ tinycss2==1.4.0
     # via
     #   cairosvg
     #   cssselect2
-typing-extensions==4.13.2
+typing-extensions==4.15.0
     # via beautifulsoup4
 urllib3==2.4.0
     # via requests
