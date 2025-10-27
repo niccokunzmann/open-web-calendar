@@ -4,7 +4,6 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only
 from __future__ import annotations
-from urllib.parse import unquote
 
 import argparse
 import datetime
@@ -15,7 +14,7 @@ import zoneinfo
 from http import HTTPStatus
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
-from urllib.parse import ParseResult, urlparse
+from urllib.parse import ParseResult, unquote ,urlparse
 
 import caldav
 import icalendar
