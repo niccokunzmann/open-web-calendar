@@ -25,7 +25,7 @@ cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.3
     # via requests
-click==8.1.8
+click==8.3.0
     # via
     #   flask
     #   typer
