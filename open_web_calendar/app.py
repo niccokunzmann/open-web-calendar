@@ -14,7 +14,7 @@ import zoneinfo
 from http import HTTPStatus
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
-from urllib.parse import ParseResult, unquote ,urlparse
+from urllib.parse import ParseResult, unquote, urlparse
 
 import caldav
 import icalendar
