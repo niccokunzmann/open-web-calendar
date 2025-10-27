@@ -32,7 +32,7 @@ pip-compile-multi==3.2.2
     # via -r requirements/dev.in
 pip-tools==7.5.1
     # via pip-compile-multi
-platformdirs==4.4.0
+platformdirs==4.5.0
     # via
     #   tox
     #   virtualenv
