@@ -14,7 +14,7 @@ import zoneinfo
 from http import HTTPStatus
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
-from urllib.parse import ParseResult, urlparse
+from urllib.parse import ParseResult, unquote, urlparse
 
 import caldav
 import icalendar
@@ -226,8 +226,7 @@ def get_specification(query=None):
 
 
 def get_query_string():
-    from urllib.parse import unquote
-    return "?" + unquote(request.query_string.decode('utf-8'))
+    return "?" + unquote(request.query_string.decode("utf-8"))
 
 
 def render_app_template(template, specification):
@@ -315,10 +314,11 @@ for folder_path in STATIC_FOLDER_PATH.iterdir():
         ).strftime("%a, %d %b %Y %H:%M:%S GMT")
         response.headers["Pragma"] = "public"
         response.headers["Vary"] = "Accept-Encoding"
-        
         # Ensure UTF-8 encoding for text files
-        if path.endswith(('.js', '.css', '.html', '.txt')):
-            response.headers["Content-Type"] = response.headers.get("Content-Type", "") + "; charset=utf-8"
+        if path.endswith((".js", ".css", ".html", ".txt")):
+            response.headers["Content-Type"] = (
+                response.headers.get("Content-Type", "") + "; charset=utf-8"
+            )
 
         return response
 
