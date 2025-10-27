@@ -76,7 +76,6 @@ test-fix = [
 open-web-calendar = "open_web_calendar:main"
 
 [tool.hatch.metadata.hooks.vcs.urls]
-#[project.urls]
 Homepage = "https://open-web-calendar.hosted.quelltext.eu/"
 Repository = "https://github.com/niccokunzmann/open-web-calendar/"
 source_archive = "https://github.com/niccokunzmann/open-web-calendar/archive/{commit_hash}.zip"
