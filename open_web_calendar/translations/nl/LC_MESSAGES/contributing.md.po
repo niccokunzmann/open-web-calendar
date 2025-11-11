@@ -6,15 +6,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 01:05+0200\n"
-"PO-Revision-Date: 2025-10-09 20:07+0000\n"
+"PO-Revision-Date: 2025-11-12 15:51+0000\n"
 "Last-Translator: Mark Kuiphuis <mark@kuiphuis.online>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/open-web-calendar/documentation-contributing/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-contributing/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "You can improve the project yourself. Get started here."
 msgstr "U kunt het project zelf verbeteren. Begin hier."
@@ -102,73 +103,79 @@ msgstr ""
 "web-calendar/)"
 
 msgid "[Set up your development environment](../dev/)"
-msgstr ""
+msgstr "[Instellen van uw ontwikkelomgeving](../dev/)"
 
 msgid "Ways to Contribute"
-msgstr ""
+msgstr "Manieren om bij te dragen"
 
 msgid "🐛 Report Bugs"
-msgstr ""
+msgstr "🐛 Meld bugs"
 
 msgid ""
 "Found a bug? Please [create an issue](https://github.com/niccokunzmann/open-"
 "web-calendar/issues) with:"
 msgstr ""
+"Een bug gevonden? Maak alstublieft een [issue]"
+"(https://github.com/niccokunzmann/open-web-calendar/issues) aan met:"
 
 msgid "Clear description of the problem"
-msgstr ""
+msgstr "Heldere omschrijving van het probleem"
 
 msgid "Steps to reproduce"
-msgstr ""
+msgstr "Stappen om het probleem te kunnen reproduceren"
 
 msgid "Expected vs actual behavior"
-msgstr ""
+msgstr "Verwachte vs het actuele gedrag"
 
 msgid "💡 Suggest Features"
-msgstr ""
+msgstr "💡 Stel nieuwe features voor"
 
 msgid ""
 "Have an idea? [Open an issue](https://github.com/niccokunzmann/open-web-"
 "calendar/issues) to discuss it!"
 msgstr ""
+"Heb je een idee? [Open een issue]"
+"(https://github.com/niccokunzmann/open-web-calendar/issues) om te overleggen!"
 
 msgid "🔧 Code Contributions"
-msgstr ""
+msgstr "🔧 Codecontributies"
 
 msgid "**Fork the repository**"
-msgstr ""
+msgstr "**Maak een fork van de repository**"
 
 msgid ""
 "**Create a feature branch**: `git checkout -b feature/your-feature-name`"
 msgstr ""
+"**Maak een feature branch**: `git checkout -b feature/your-feature-name`"
 
 msgid ""
 "**Set up development environment**: See [development documentation](../dev/)"
 msgstr ""
+"**Configureer de ontwikkelomgeving**: Zie [ontwikkeldocumentatie](../dev/)"
 
 msgid "**Make your changes**"
-msgstr ""
+msgstr "**Maak je wijzigingen**"
 
 msgid "**Run tests**"
-msgstr ""
+msgstr "**Voer de tests uit**"
 
 msgid "**Submit a pull request**"
-msgstr ""
+msgstr "**Verstuur een pull request**"
 
 msgid "📚 Documentation"
-msgstr ""
+msgstr "📚 Documentatie"
 
 msgid "Help improve our documentation by:"
-msgstr ""
+msgstr "Help onze documentatie te verbeteren door:"
 
 msgid "Fixing typos or unclear instructions"
-msgstr ""
+msgstr "Verbeter typefouten of wazige instructies"
 
 msgid "Adding examples"
-msgstr ""
+msgstr "Voeg voorbeelden toe"
 
 msgid "Get Help"
-msgstr ""
+msgstr "Krijg hulp"
 
 msgid ""
 "Questions? Check our [documentation](https://open-web-"
@@ -176,6 +183,9 @@ msgid ""
 "[discussions](https://github.com/niccokunzmann/open-web-"
 "calendar/discussions)."
 msgstr ""
+"Vragen? Bekijk onze [documentatie]"
+"(https://open-web-calendar.hosted.quelltext.eu) of meld je aan voor de "
+"[discussies](https://github.com/niccokunzmann/open-web-calendar/discussions)."
 
 #, fuzzy
 #~ msgid ""
