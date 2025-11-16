@@ -57,7 +57,7 @@ tox
 Run a specific Python version:
 
 ```sh
-tox -e py39
+tox -e py310
 ```
 
 ## Browser Testing

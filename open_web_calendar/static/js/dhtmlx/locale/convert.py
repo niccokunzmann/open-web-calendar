@@ -71,10 +71,10 @@ for file in ["locale_en.js"] + os.listdir("."):  # noqa: PTH208, RUF100
     print(r)
     yaml = ""
     for x in ["month_full", "month_short"]:
-        for k, v in zip(M, r["date"][x]):
+        for k, v in zip(M, r["date"][x], strict=False):
             add(["date", x, k], v)
     for x in ["day_full", "day_short"]:
-        for k, v in zip(D, r["date"][x]):
+        for k, v in zip(D, r["date"][x], strict=False):
             if x == "day_full" and lang == "el" and k == "sat" and v == "Κυριακή":
                 # https://github.com/niccokunzmann/open-web-calendar/commit/670b6a7587a3b6bc730301bf288b31afb760d419
                 v = "Σάββατο"
@@ -85,10 +85,10 @@ for file in ["locale_en.js"] + os.listdir("."):  # noqa: PTH208, RUF100
             continue
         add(["labels", k], v)
     if "month_for_recurring" in r["labels"]:
-        for k, v in zip(M, r["labels"]["month_for_recurring"]):
+        for k, v in zip(M, r["labels"]["month_for_recurring"], strict=False):
             add(["labels", "month_for_recurring", k], v)
     if "day_for_recurring" in r["labels"]:
-        for k, v in zip(D, r["labels"]["day_for_recurring"]):
+        for k, v in zip(D, r["labels"]["day_for_recurring"], strict=False):
             add(["labels", "day_for_recurring", k], v)
     print(yaml)
     directory = "../../../../translations/" + lang

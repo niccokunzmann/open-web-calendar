@@ -13,10 +13,13 @@ import os
 import tempfile
 from functools import wraps
 from pathlib import Path
-from typing import Any, Callable
+from typing import TYPE_CHECKING, Any
 
 import requests
 import requests_cache
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
 
 MB = 1024 * 1024
 

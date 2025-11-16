@@ -29,7 +29,7 @@ jobs:
         # - tox.ini
         # - pyproject.toml
         # - README.md
-        python: ["3.9", "3.10", "3.11", "3.12"]
+        python: ["3.10", "3.11", "3.12"]
         tox_env: ["py"]
         # see https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
         include:

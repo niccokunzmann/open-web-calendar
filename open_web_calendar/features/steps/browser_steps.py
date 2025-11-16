@@ -8,7 +8,7 @@ import difflib
 import json
 import re
 import time
-from typing import Callable
+from typing import TYPE_CHECKING
 from urllib.parse import urlencode, urljoin
 
 from behave import given, then, when
@@ -23,6 +23,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC  # noqa: N812
 from selenium.webdriver.support.ui import Select, WebDriverWait
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
 
 # default wait time in seconds
 WAIT = 10
