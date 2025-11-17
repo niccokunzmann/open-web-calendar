@@ -65,7 +65,7 @@ lxml==6.0.2
     #   lxml-html-clean
 lxml-html-clean==0.4.3
     # via -r requirements/base.in
-markdown-it-py==3.0.0
+markdown-it-py==4.0.0
     # via rich
 markupsafe==3.0.3
     # via
