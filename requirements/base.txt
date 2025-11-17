@@ -50,7 +50,7 @@ icalendar==6.3.2
     #   x-wr-timezone
 icalendar-compatibility==0.1.4
     # via -r requirements/base.in
-idna==3.10
+idna==3.11
     # via
     #   requests
     #   url-normalize

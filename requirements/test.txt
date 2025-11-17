@@ -32,7 +32,7 @@ click==8.3.1
     # via reuse
 h11==0.16.0
     # via wsproto
-idna==3.10
+idna==3.11
     # via
     #   requests
     #   trio

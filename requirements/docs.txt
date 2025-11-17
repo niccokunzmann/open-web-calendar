@@ -50,7 +50,7 @@ hjson==3.1.0
     # via
     #   mkdocs-macros-plugin
     #   super-collections
-idna==3.10
+idna==3.11
     # via requests
 importlib-metadata-argparse-version==2.0.1
     # via mdpo
