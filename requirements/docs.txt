@@ -24,7 +24,7 @@ certifi==2025.10.5
     # via requests
 cffi==2.0.0
     # via cairocffi
-charset-normalizer==3.4.3
+charset-normalizer==3.4.4
     # via requests
 click==8.3.1
     # via mkdocs
