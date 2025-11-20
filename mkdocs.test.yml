@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2025 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+# Test-specific MkDocs config: Inherits from main config but limits languages for faster builds.
+# Only builds English + one well-translated language (de/German) to speed up CI/testing.
+
+INHERIT: mkdocs.yml
+
+plugins:
+  - mdpo:
+      languages:
+        - en
+        - de
