@@ -139,14 +139,14 @@ class ConvertToEvents(ConversionStrategy):
         if is_date(start) and is_date(end) and start == end:
             end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
-        name = calendar_event.get("SUMMARY", "")
+        name = normalize_text(calendar_event.get("SUMMARY", ""))
         sequence = calendar_event.sequence
         uid = calendar_event.uid
         start_date = self.date_to_string(start)
         location_map: dict[str, str] | None = {
-            "text": location.text,
-            "url": location.url,
-        }
+    "text": normalize_text(location.text),
+    "url": location.url,
+}
         if not location_map["text"] and not location_map["url"]:
             location_map = None
         return {
@@ -214,7 +214,7 @@ class ConvertToEvents(ConversionStrategy):
 
         HTML is cleaned.
         """
-        description = Description(event).html
+        description = normalize_text(Description(event).html)
         return self.clean_html(description)
 
     def merge(self):
