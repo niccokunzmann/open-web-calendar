@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import datetime
+import unicodedata
 import zoneinfo
 from html import escape
 from typing import TYPE_CHECKING, Any
@@ -19,16 +20,13 @@ from .base import ConversionStrategy
 
 if TYPE_CHECKING:
     from icalendar import Event, vCalAddress
-
     from open_web_calendar.calendars.base import Calendars
     
-import unicodedata
 
 def normalize_text(value):
     if not isinstance(value, str):
         return value
-   
-    return unicodedata.normalize("NFC", value)
+   return unicodedata.normalize("NFC", value)
 
 
 def is_date(date):
