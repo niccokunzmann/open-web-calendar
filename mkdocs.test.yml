@@ -7,8 +7,10 @@
 
 INHERIT: mkdocs.yml
 
+# To merge "plugins" options (add/override values), alternative syntax (key/value pairs instead of list -) must be used in parent and child config file
+# See https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
 plugins:
-  - mdpo:
-      languages:
-        - en
-        - de
+  mdpo:
+    languages:
+      - en
+      - de
