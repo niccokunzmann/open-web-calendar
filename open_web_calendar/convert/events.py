@@ -21,10 +21,11 @@ from .base import ConversionStrategy
 if TYPE_CHECKING:
     from icalendar import Event, vCalAddress
     from open_web_calendar.calendars.base import Calendars
+    
 def normalize_text(value):
     if not isinstance(value, str):
         return value
-   return unicodedata.normalize("NFC", value)
+        return unicodedata.normalize("NFC", value)
 
 def is_date(date):
     """Whether the date is a datetime.date and not a datetime.datetime"""
@@ -239,5 +240,6 @@ class ConvertToEvents(ConversionStrategy):
     def get_event_categories(self, event: Event) -> list[str]:
         """Return the categories of the event."""
         return event.categories
+        
         
 __all__ = ["ConvertToEvents"]
