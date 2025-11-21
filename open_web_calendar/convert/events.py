@@ -21,7 +21,6 @@ from .base import ConversionStrategy
 if TYPE_CHECKING:
     from icalendar import Event, vCalAddress
     from open_web_calendar.calendars.base import Calendars
-    
 def normalize_text(value):
     if not isinstance(value, str):
         return value
@@ -240,6 +239,5 @@ class ConvertToEvents(ConversionStrategy):
     def get_event_categories(self, event: Event) -> list[str]:
         """Return the categories of the event."""
         return event.categories
-
-
+        
 __all__ = ["ConvertToEvents"]
