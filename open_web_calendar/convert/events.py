@@ -21,6 +21,14 @@ if TYPE_CHECKING:
     from icalendar import Event, vCalAddress
 
     from open_web_calendar.calendars.base import Calendars
+    
+import unicodedata
+
+def normalize_text(value):
+    if not isinstance(value, str):
+        return value
+   
+    return unicodedata.normalize("NFC", value)
 
 
 def is_date(date):
