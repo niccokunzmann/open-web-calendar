@@ -170,7 +170,7 @@ super-collections==0.6.2
     # via mkdocs-macros-plugin
 termcolor==3.2.0
     # via mkdocs-macros-plugin
-tinycss2==1.5.0
+tinycss2==1.5.1
     # via
     #   cairosvg
     #   cssselect2
