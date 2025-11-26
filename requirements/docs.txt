@@ -135,7 +135,7 @@ pygments==2.19.2
     # via mkdocs-material
 pymd4c==1.3.0
     # via mdpo
-pymdown-extensions==10.17.1
+pymdown-extensions==10.17.2
     # via
     #   mkdocs-material
     #   mkdocs-meta-descriptions-plugin
