@@ -97,8 +97,13 @@ You can build the documentation with `tox`, too.
 It is located in the `docs` directory.
 
 ```sh
+# For all languages
 tox -e docs -- build # ./site
 tox -e docs -- serve
+
+# Quick testing, for English and German only
+tox -e docs-quick -- build
+tox -e docs-quick -- serve
 ```
 
 We are using [mkdocs] with the [material theme](https://squidfunk.github.io/mkdocs-material/).

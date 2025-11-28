@@ -75,110 +75,110 @@ theme:
 
 plugins:
   # privacy, see https://squidfunk.github.io/mkdocs-material/plugins/privacy/
-  - privacy # asset filtering can be circumvented by html escaping the content
-            # for l in b'https://giscus.app/client.js': print('&#' + hex(l)[1:]+';', end="")
-#      assets_exclude: # see also https://github.com/giscus/giscus/issues/1348
-#        - cdn.jsdelivr.net/npm/mathjax@3/*
-#        - giscus.app/* # see https://squidfunk.github.io/mkdocs-material/plugins/privacy/#config.assets_exclude
+  privacy: {} # asset filtering can be circumvented by html escaping the content
+              # for l in b'https://giscus.app/client.js': print('&#' + hex(l)[1:]+';', end="")
+  # assets_exclude: # see also https://github.com/giscus/giscus/issues/1348
+  #   - cdn.jsdelivr.net/npm/mathjax@3/*
+  #   - giscus.app/* # see https://squidfunk.github.io/mkdocs-material/plugins/privacy/#config.assets_exclude
   # offline, see https://squidfunk.github.io/mkdocs-material/plugins/offline/
-#  - offline
-  - social
+  # offline: {}
+  social: {}
   # blog, see https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
   # incompatible with translation by i18n
-#  - blog
-#      authors_profiles: true # sponsors only
-  - rss:
-      match_path: news/.*
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-#  - tags\
+  # blog:
+  #   authors_profiles: true # sponsors only
+  rss:
+    match_path: news/.*
+    date_from_meta:
+      as_creation: date
+    categories:
+      - categories
+  # tags: {}
   # markdownextradata, see https://github.com/rosscdh/mkdocs-markdownextradata-plugin
-  - markdownextradata
+  markdownextradata: {}
   # macros, see https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/
-  - macros
+  macros: {}
   # meta description, see https://github.com/prcr/mkdocs-meta-descriptions-plugin
-  - meta-descriptions
-  # - i18n:
-  #     reconfigure_material: true
-  #     languages:
-  #       - locale: en
-  #         name: English
-  #         default: true
-  #       - locale: de
-  #         name: Deutsch
-  #         nav_translations:
-  #           Hosting: Aufsetzen
-  #           Development: Entwicklung
-  #           News: Neuigkeiten
+  meta-descriptions: {}
+  # i18n:
+  #   reconfigure_material: true
+  #   languages:
+  #     - locale: en
+  #       name: English
+  #       default: true
+  #     - locale: de
+  #       name: Deutsch
+  #       nav_translations:
+  #         Hosting: Aufsetzen
+  #         Development: Entwicklung
+  #         News: Neuigkeiten
 
-  - mdpo:
-      locale_dir: ../translations
-      lc_messages: true # store all documentation translations separately
-      languages:
-        - pot # generate the template files
-        - en
-        - cs
-        - de
-        - eo
-        - es
-        - fi
-        - hr
-        - is
-        - it
-        - kab
-        - ko
-        - ko_LAVA
-        - nb_NO
-        - nl
-        - ru
-        - sk
-        - ta
-        - th
-        - uk
-        - zh_Hant
-        - ar
-        - be
-        - ca
-        - cy
-        - da
-        - el
-        - fr
-        - he
-        - hu
-        - id
-        - ja
-        - pl
-        - pt
-        - ro
-        - si
-        - sv
-        - tr
-        - zh_Hans
-# add mdpo.languages above
-      translate:
-        - site_name
-        - site_description
-#        - copyright
-#      min_translated_messages: 50%
-      exclude:
-        - docs/changelog.md
-        - docs/dev/translate.md
-        - docs/dev/maintain.md
-        - docs/dunno.md
-        - docs/news/*
+  mdpo:
+    locale_dir: ../translations
+    lc_messages: true # store all documentation translations separately
+    languages:
+      - pot # generate the template files
+      - en
+      - cs
+      - de
+      - eo
+      - es
+      - fi
+      - hr
+      - is
+      - it
+      - kab
+      - ko
+      - ko_LAVA
+      - nb_NO
+      - nl
+      - ru
+      - sk
+      - ta
+      - th
+      - uk
+      - zh_Hant
+      - ar
+      - be
+      - ca
+      - cy
+      - da
+      - el
+      - fr
+      - he
+      - hu
+      - id
+      - ja
+      - pl
+      - pt
+      - ro
+      - si
+      - sv
+      - tr
+      - zh_Hans
+    # add mdpo.languages above
+    translate:
+      - site_name
+      - site_description
+    #   - copyright
+    # min_translated_messages: 50%
+    exclude:
+      - docs/changelog.md
+      - docs/dev/translate.md
+      - docs/dev/maintain.md
+      - docs/dunno.md
+      - docs/news/*
 
   # git revision, see https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
-#  - git-revision-date-localized:
-#      enable_creation_date: true
-# do not use the language selector
-#  - material-relative-language-selector
+  # git-revision-date-localized:
+  #   enable_creation_date: true
+  # do not use the language selector
+  # material-relative-language-selector: {}
   # snippets and exclude from https://pypi.org/project/mkdocs-snippets/
-  - exclude:
-      glob:
-        - snippets/*
-#  - snippets
+  exclude:
+    glob:
+      - snippets/*
+  # snippets: {}
 
 extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
   social:

@@ -215,3 +215,21 @@ jobs:
           allowUpdates: true
           body: "For a list of changes, please refer to the [Changelog](https://open-web-calendar.quelltext.eu/changelog/)."
           generateReleaseNotes: false
+
+  docs-test:
+    name: "Test Documentation Build"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # required for mkdocs git date, see  https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file#note-when-using-build-environments
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ 3.11 }}  # try to avoid renovate update
+      - name: Install tox
+        run: pip install tox
+      - name: mkdocs for en and de
+        run: tox -e docs-quick -- build # Uses mkdocs.test.yml (en + de only)
