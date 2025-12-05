@@ -78,7 +78,7 @@ mergecal==0.5.0
     # via -r requirements/base.in
 packaging==25.0
     # via gunicorn
-platformdirs==4.5.0
+platformdirs==4.5.1
     # via requests-cache
 pycparser==2.23
     # via cffi
