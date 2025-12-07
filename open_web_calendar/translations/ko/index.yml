@@ -1,17 +1,17 @@
 style-days: 요일별로 다른 색상을 사용하고 싶다면 이 역시 지정할 수 있습니다.
-style-description: CSS를 사용하여 캘린더의 색상과 여러 가지 속성을 변경할 수 있습니다. 사용자 지정은 선택한 스킨보다 우선합니다.
-  아래에서 저희가 준비한 몇 가지 사용자 정의 중에서 선택할 수 있습니다.
+style-description: CSS를 사용하여 캘린더의 색상과 여러 가지 속성을 변경할 수 있습니다. 사용자 지정은 선택한 스킨보다 
+  우선합니다. 아래에서 저희가 준비한 몇 가지 사용자 정의 중에서 선택할 수 있습니다.
 skins-contrast-white: 콘트라스트 화이트
-about: 오픈 웹 캘린더는 온라인에서 ICS/ICal 캘린더를 사용하여 하나의 캘린더에 표시합니다. Nextcloud, Outlook, Google
-  캘린더, Meetup 및 ICS 표준을 사용하는 기타 캘린더 시스템과 함께 사용할 수 있습니다.
+about: 오픈 웹 캘린더는 온라인에서 ICS/ICal 캘린더를 사용하여 하나의 캘린더에 표시합니다. Nextcloud, Outlook, 
+  Google 캘린더, Meetup 및 ICS 표준을 사용하는 기타 캘린더 시스템과 함께 사용할 수 있습니다.
 calendar-urls: '여러 개의 캘린더를 병합하려면 여기에 ICS 캘린더의 URL을 입력하세요:'
 calendar-code: '캘린더를 삽입하려면 웹사이트에 이 코드를 사용하세요:'
 calendar-code-execution: 아래에서 결과 캘린더를 확인할 수 있습니다.
 section-customization: 캘린더를 추가로 커스터마이징할 수 있습니다.
-title-title: 타이틀
+title-title: 제목
 title-description: '제목을 변경하려면 여기에 캘린더 이름을 입력하세요:'
-starting-date-title: 시작 날짜
-starting-date-description: '캘린더의 시작 날짜를 변경하려면 다음과 같이 하세요:'
+starting-date-title: 시작일
+starting-date-description: '캘린더의 시작일을 변경하려면:'
 first-hour-title: 시작 시간
 first-hour-description: '캘린더에 보이는 시작 시간을 변경:'
 last-hour-title: 마지막 시간
@@ -34,14 +34,14 @@ skins-description: 캘린더의 스킨을 선택할 수 있습니다.
 skins-terrace: 테라스
 skins-dark: 다크
 links-title: 링크
-links-description: 이벤트에는 위치와 URL이 있을 수 있습니다. 캘린더를 웹사이트에 임베드하는 경우 클릭한 링크가 페이지가 열리는
-  위치를 선택할 수 있습니다.
+links-description: 이벤트에는 위치와 URL이 있을 수 있습니다. 캘린더를 웹사이트에 임베드하는 경우 클릭한 링크가 페이지가 
+  열리는 위치를 선택할 수 있습니다.
 links-self: 링크된 문서를 클릭한 것과 같은 프레임에서 엽니다.
 links-parent: 상위 프레임에서 링크된 문서를 엽니다.
 links-blank: 링크된 문서를 새 창 또는 탭에서 엽니다.
 links-top: 창 본문에서 링크된 문서를 엽니다.
-configure-week-title: 요일 설정
-configure-week-description: 한 주는 월요일 또는 일요일에 시작될 수 있습니다.
+configure-week-title: 요일 구성
+configure-week-description: 한 주는 월요일이나 일요일에 시작할 수 있습니다.
 style-title: CSS를 사용한 사용자 정의 스타일
 style-background: 캘린더의 배경색을 변경할 수 있습니다.
 style-click: 클릭할 수 있는 요소의 색상을 변경할 수 있습니다.
@@ -52,15 +52,15 @@ style-css-classes: '다음은 이벤트 스타일을 지정하는 CSS 클래스�
 event-status-title: 이벤트 상태
 event-status-description: '상태에 따라 이벤트 설명의 모양을 변경합니다:'
 event-status-tentative: 임시
-skins-material: 질감
-skins-flat: 평탄
+skins-material: 머티리얼
+skins-flat: 플랫
 skins-contrast-black: 콘트라스트 블랙
 timezone-title: 시간대
 event-status-confirmed: 확인됨
 event-status-cancelled: 취소됨
 loader-title: 로딩 애니메이션
-loader-description: 경우에 따라 서버가 캘린더를 로드하는 데 시간이 꽤 걸리는 경우가 있습니다. 서버가 Heroku에서 무료 요금제를
-  사용하는 경우 서버가 먼저 시작되어야 합니다.
+loader-description: 경우에 따라 서버가 캘린더를 로드하는 데 시간이 꽤 걸리는 경우가 있습니다. 서버가 Heroku에서 무료 
+  요금제를 사용하는 경우 서버가 먼저 시작되어야 합니다.
 loader-default: 원형 로더
 loader-none: 로더 없음
 tabs-title: 캘린더 탭
@@ -78,3 +78,49 @@ spec-description: '캘린더는 URL뿐만 아니라 파일에서 JSON 또는 YAM
 spec-host-html: '<a href="javascript:downloadJSONSpecification()">이 사양을 다운로드</a>하여
   웹 어딘가에 배치할 수 있습니다. 이렇게 하면 링크를 공유한 후에도 캘린더의 사용자 지정을 계속 제어할 수 있습니다(예: GitHub의 <a href="https://gist.github.com/">Gist</a>).'
 spec-link: '온라인 어딘가에 사양을 배치한 후에는 다음과 같은 링크를 만들 수 있습니다:'
+button-encrypt: URL 암호화
+supported-standards: '다음과 같은 표준을 지원합니다: ICAL, CalDAV, webcal.'
+button-encrypted: 암호화됨
+button-edit: 편집
+button-remove: 제거
+password-urls: 민감한 데이터가 포함된 URL은 암호화하는 것이 좋습니다. 나중에 암호를 해독할 경우에만 다음 비밀번호를 저장하세요.
+decrypt-urls: URL 복호화
+add-url-placeholder-url: https://link.to/a-calendar.ics
+add-url-placeholder-username: '선택사항: 사용자이름'
+add-url-placeholder-password: '선택사항: 비밀번호'
+add-url-button: 추가
+add-url-calendar-public: 이것은 공개 URL입니다
+about-title: 정보
+calendar-embed-title: 사용 및 임베드
+time-and-hours-title: 특정시각 및 시간
+map-title: 지도 링크 및 위치
+map-osm: OpenStreetMap
+map-bing: Bing 지도
+map-google: Google 지도
+map-yandex: Yandex 지도
+map-geo: 'geo: Link'
+map-none: Text Without Link
+map-description: 이벤트 위치에는 좌표나 텍스트가 포함될 수 있습니다. 이벤트 위치를 클릭할 때 사용할 지도 서비스를 여기에서 
+  설정하세요.
+map-custom: 사용자 지정 지도
+map-custom-summary: 지도 링크 사용자 정의
+map-link-location-description: 여기에 지도의 URL을 입력하고 검색어가 입력되는 곳에 {location}을 삽입하세요.
+map-link-geo-description: 여기에 지도의 URL을 입력하고 좌표로 {lat}와 {lon}을 삽입하세요.
+menu-title: 캘린더 메뉴
+controls-menu: 메뉴 표시
+menu-description: 버거 메뉴를 포함하고 내용을 구성할 수 있습니다.
+menu-shows-title: 메뉴에 제목 표시
+menu-shows-description: 메뉴에 설명 표시
+menu-shows-calendar-names: 캘린더 이름 나열
+menu-shows-calendar-descriptions: 캘린더 설명 나열
+menu-shows-calendar-visibility: 캘린더 숨김/표시
+participants-title: 참가자 및 조직
+participants-description: 다른 사람들을 이벤트에 초대하고, 사람들이 등록할 수 있습니다. 이 옵션을 활성화하면 이벤트 설명
+  아래에 이름과 이메일 주소가 표시됩니다.
+participants-organizers: 이벤트를 조직한 사람을 표시할까요?
+participants-attendees: 이벤트에 누가 참석하는지 표시할까요?
+participants-status: '참가자의 상태를 표시할까요? (예: 수락됨/거부됨)'
+participants-type: '이 참가자가 어떤 유형인지 표시할까요? (예: 개인 또는 그룹)'
+participants-role: '참가자의 역할을 표시할까요? (예: 주최자, 필수 인원 또는 선택 인원)'
+caldav-choose-calendar: '사용자의 계정에서 캘린더를 선택하세요:'
+caldav-allow-sign-up: '이 캘린더에서 이벤트에 대한 이메일 가입 활성화:'
