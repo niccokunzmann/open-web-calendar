@@ -60,7 +60,7 @@ pluggy==1.6.0
     # via pytest
 pysocks==1.7.1
     # via urllib3
-pytest==9.0.1
+pytest==9.0.2
     # via
     #   -r requirements/test.in
     #   pytest-responses
