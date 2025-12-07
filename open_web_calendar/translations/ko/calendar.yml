@@ -49,9 +49,14 @@ labels_section_time: 기한
 labels_date: 날짜
 labels_hour: 시간
 labels_minute: 분
-language: 한국어
-language-en: 한국어
+language: Korean
+language-en: Korean
 labels_next: 다음
 labels_prev: 이전
 labels_description: 설명
 labels_week_agenda_tab: 일정
+icon_subscribe: 내 캘린더에 추가
+icon_signup: 가입하기
+signup-email: 이메일
+signup-name: 이름
+label_participants: 참석자
