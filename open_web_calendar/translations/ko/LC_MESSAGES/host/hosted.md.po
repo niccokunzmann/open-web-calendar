@@ -1,22 +1,24 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # "Paimon (JeaHoon Cha)" <faimeon616@gmail.com>, 2024.
+# 이정희 <daemul72@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-23 01:35+0200\n"
-"PO-Revision-Date: 2024-11-27 14:44+0000\n"
-"Last-Translator: \"Paimon (JeaHoon Cha)\" <faimeon616@gmail.com>\n"
-"Language-Team: Korean <https://hosted.weblate.org/projects/open-web-calendar/documentation-hosted-version/ko/>\n"
+"PO-Revision-Date: 2025-12-08 04:00+0000\n"
+"Last-Translator: 이정희 <daemul72@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-hosted-version/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "[Uptime service monitor for the hosted instances][kuma]"
-msgstr ""
+msgstr "[호스팅된 인스턴스에 대한 업타임 서비스 모니터][kuma]"
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
