@@ -132,6 +132,17 @@ class ConvertToEvents(ConversionStrategy):
             end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
         name = calendar_event.get("SUMMARY", "")
+        raw_categories = calendar_event.get("CATEGORIES", "")
+        if raw_categories:
+            # raw_categories may be a string or list depending on the ICS parser
+            try:
+                # Convert to string and split by comma
+                categories = [c.strip() for c in str(raw_categories).split(",") if c.strip()]
+            except Exception:
+                categories = []
+        else:
+            categories = []
+
         sequence = calendar_event.sequence
         uid = calendar_event.uid
         start_date = self.date_to_string(start)
@@ -158,6 +169,7 @@ class ConvertToEvents(ConversionStrategy):
             "url": calendar_event.get("URL"),
             "id": uid + "-" + start_date.replace(" ", "-").replace(":", "-"),
             "type": "event",
+            "categories": categories,
             "color": calendar_event.color,
             "categories": self.get_event_categories(calendar_event),
             "css-classes": ["event"]
