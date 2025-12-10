@@ -146,7 +146,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Hosting with Docker - Open Web Calendar" />
 <meta property="og:description" content="You can use docker and docker compose to host the Open Web Calendar." />
-<meta property="og:image" content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_losnrk0m/ko/host/docker/index.png" />
+<meta property="og:image" content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8gt4y90y/ko/host/docker/index.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -154,7 +154,7 @@
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="Hosting with Docker - Open Web Calendar" />
 <meta property="twitter:description" content="You can use docker and docker compose to host the Open Web Calendar." />
-<meta property="twitter:image" content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_losnrk0m/ko/host/docker/index.png" />
+<meta property="twitter:image" content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_8gt4y90y/ko/host/docker/index.png" />
 </head>
   
   
@@ -188,7 +188,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="상단/헤더">
-    <a href="../../../nl/" title="Open Web Calendar" class="md-header__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
+    <a href="../../" title="Open Web Calendar" class="md-header__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
       
   <img src="../../../assets/img/logo/owc.svg" alt="logo">
 
@@ -493,7 +493,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="네비게이션" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../nl/" title="Open Web Calendar" class="md-nav__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
+    <a href="../../" title="Open Web Calendar" class="md-nav__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
       
   <img src="../../../assets/img/logo/owc.svg" alt="logo">
 
@@ -522,14 +522,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nl/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Pas weergave aan van uw eigen online calendar
+    나만의 온라인 캘린더 디스플레이 사용자 정의
   
 
     
@@ -742,14 +742,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fr/contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Contribuer ♥️
+    기여하기 ♥️
   
 
     
@@ -982,14 +982,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nl/host/self/" class="md-nav__link">
+      <a href="../self/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Zelf hosten en deployen
+    셀프 호스팅 및 배포
   
 
     
@@ -1066,14 +1066,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nl/host/configure/" class="md-nav__link">
+      <a href="../configure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Serverconfiguratie
+    서버 구성
   
 
     
@@ -1584,10 +1584,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-configuration" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Further Configuration
+        추가 구성
       
     </span>
   </a>
@@ -1781,7 +1781,7 @@ dns_v4_first<span class="w"> </span>on
 <p>Then, you can start the service with this command:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
-<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<p>로컬 <code>open-web-calendar</code>(예: <code>http://172.16.0.1/calendar.ics</code>)를 사용하여 금지된 캘린더에 액세스하려고 하면 다음과 같은 오류 메시지가 표시됩니다:</p>
 <blockquote>
 <p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
 </blockquote>
@@ -1815,8 +1815,8 @@ docker<span class="w"> </span>rmi<span class="w"> </span>-f<span class="w">  </s
 <p>And add this line:</p>
 <div class="highlight"><pre><span></span><code>3 * * * * /path/to/update.sh 1&gt; /path/to/update.sh.log 2&gt; /path/to/update.sh.log
 </code></pre></div>
-<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="퍼머넌트 링크">&para;</a></h2>
-<p>자체 서버를 설정한 후에는 <a href="../configure">동작 구성</a>을 할 수 있습니다.</p>
+<h2 id="_1">추가 구성<a class="headerlink" href="#_1" title="퍼머넌트 링크">&para;</a></h2>
+<p>자체 서버를 설정한 후에는 <a href="../configure">동작방식 구성하기</a>을 할 수 있습니다.</p>
 
 
 

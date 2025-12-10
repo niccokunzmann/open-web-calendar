@@ -525,11 +525,11 @@
    style="font-style:normal;font-weight:normal;font-size:11px;font-family:'Source Sans 3',sans-serif;fill:#808080"
    x="360"
    y="350"
-   id="percent350">33%</text>
+   id="percent350">53%</text>
 <rect
-   style="fill:#f6664c;fill-opacity:1;stroke:none"
+   style="fill:#38f;fill-opacity:1;stroke:none"
    id="rect350"
-   width="50"
+   width="79"
    height="6"
    x="200"
    rx="2"

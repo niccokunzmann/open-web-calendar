@@ -1748,8 +1748,13 @@ tox<span class="w"> </span>-e<span class="w"> </span>web<span class="w"> </span>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
 <p>You can build the documentation with <code>tox</code>, too.
 It is located in the <code>docs</code> directory.</p>
-<div class="highlight"><pre><span></span><code>tox<span class="w"> </span>-e<span class="w"> </span>docs<span class="w"> </span>--<span class="w"> </span>build<span class="w"> </span><span class="c1"># ./site</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># For all languages</span>
+tox<span class="w"> </span>-e<span class="w"> </span>docs<span class="w"> </span>--<span class="w"> </span>build<span class="w"> </span><span class="c1"># ./site</span>
 tox<span class="w"> </span>-e<span class="w"> </span>docs<span class="w"> </span>--<span class="w"> </span>serve
+
+<span class="c1"># Quick testing, for English and German only</span>
+tox<span class="w"> </span>-e<span class="w"> </span>docs-quick<span class="w"> </span>--<span class="w"> </span>build
+tox<span class="w"> </span>-e<span class="w"> </span>docs-quick<span class="w"> </span>--<span class="w"> </span>serve
 </code></pre></div>
 <p>We are using <a href="https://www.mkdocs.org">mkdocs</a> with the <a href="https://squidfunk.github.io/mkdocs-material/">material theme</a>.</p>
 
