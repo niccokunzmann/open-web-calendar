@@ -25,7 +25,7 @@ if TYPE_CHECKING:
 def normalize_text(value):
     if not isinstance(value, str):
         return value
-        return unicodedata.normalize("NFC", value)
+    return unicodedata.normalize("NFC", value)
 
 def is_date(date):
     """Whether the date is a datetime.date and not a datetime.datetime"""
