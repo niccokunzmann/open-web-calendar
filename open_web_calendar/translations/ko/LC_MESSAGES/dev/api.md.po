@@ -1,27 +1,28 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # "Paimon (JeaHoon Cha)" <faimeon616@gmail.com>, 2024.
+# 이정희 <daemul72@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-23 01:35+0200\n"
-"PO-Revision-Date: 2024-11-27 14:44+0000\n"
-"Last-Translator: \"Paimon (JeaHoon Cha)\" <faimeon616@gmail.com>\n"
+"PO-Revision-Date: 2025-12-08 04:00+0000\n"
+"Last-Translator: 이정희 <daemul72@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/open-web-calendar/documentation-api/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "You want to extend the functionality of the Open Web Calendar."
-msgstr ""
+msgstr "Open Web Calendar의 기능을 확장하고자 합니다."
 
 msgid ""
 "You want to use the Open Web Calendar as a proxy to request JSON events for "
 "your self-made event feed."
-msgstr ""
+msgstr "Open Web Calendar를 프록시로 사용하여 자체 제작한 이벤트 피드에 대한 JSON 이벤트를 요청하려고 합니다."
 
 msgid "Endpoints"
 msgstr ""

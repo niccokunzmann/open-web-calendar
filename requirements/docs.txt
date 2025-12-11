@@ -12,7 +12,7 @@ babel==2.17.0
     #   mkdocs-material
 backrefs==5.9
     # via mkdocs-material
-beautifulsoup4==4.14.2
+beautifulsoup4==4.14.3
     # via mkdocs-meta-descriptions-plugin
 cachecontrol[filecache]==0.14.4
     # via mkdocs-rss-plugin
@@ -121,11 +121,11 @@ pathspec==0.12.1
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
-pillow==12.0.0
+pillow==10.4.0
     # via
     #   cairosvg
     #   mkdocs-material
-platformdirs==4.5.0
+platformdirs==4.5.1
     # via mkdocs-get-deps
 polib==1.2.0
     # via mdpo
@@ -135,7 +135,7 @@ pygments==2.19.2
     # via mkdocs-material
 pymd4c==1.3.0
     # via mdpo
-pymdown-extensions==10.17.1
+pymdown-extensions==10.18
     # via
     #   mkdocs-material
     #   mkdocs-meta-descriptions-plugin
@@ -170,7 +170,7 @@ super-collections==0.6.2
     # via mkdocs-macros-plugin
 termcolor==3.2.0
     # via mkdocs-macros-plugin
-tinycss2==1.5.0
+tinycss2==1.5.1
     # via
     #   cairosvg
     #   cssselect2

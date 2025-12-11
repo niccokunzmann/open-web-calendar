@@ -1,25 +1,26 @@
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
+# 이정희 <daemul72@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: niccokunzmann@rambler.ru\n"
 "POT-Creation-Date: 2024-05-26 22:54+0200\n"
-"PO-Revision-Date: 2024-05-26 20:54+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-12-08 04:00+0000\n"
+"Last-Translator: 이정희 <daemul72@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/open-web-calendar/documentation-index/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "See the features or try the Open Web Calendar yourself!"
-msgstr ""
+msgstr "기능을 확인하거나 Open Web Calendar를 직접 사용해 보세요!"
 
 msgid "Customize Your Own Online Calendar Display"
-msgstr ""
+msgstr "나만의 온라인 캘린더 디스플레이 사용자 정의"
 
 msgid "![](/assets/img/logo/github-social-preview.svg)"
 msgstr ""

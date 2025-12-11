@@ -25,7 +25,7 @@ jobs:
       contents: write
     if: ${{ github.ref_name == 'master' }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0 # required for mkdocs git date, see  https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file#note-when-using-build-environments
       - name: Setup Python
@@ -45,7 +45,7 @@ jobs:
       contents: read
     if: ${{ github.ref_name == 'master' }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0 # required for mkdocs git date, see  https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file#note-when-using-build-environments
       - name: Setup Python
