@@ -132,7 +132,12 @@ class ConvertToEvents(ConversionStrategy):
             end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
         name = calendar_event.get("SUMMARY", "")
-        raw_categories = calendar_event.get("CATEGORIES", "")
+       raw_categories = calendar_event.categories or []
+
+        categories = []
+        for cat in raw_categories:
+        categories.append(str(cat).strip())
+
         if raw_categories:
             # raw_categories may be a string or list depending on the ICS parser
             try:
