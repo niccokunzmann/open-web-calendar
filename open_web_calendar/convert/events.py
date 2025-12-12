@@ -126,37 +126,30 @@ class ConvertToEvents(ConversionStrategy):
         return participant
 
     def convert_ical_event(self, calendar_index, calendar_event: Event):
-        start = calendar_event.start
-        end = calendar_event.end
-        if is_date(start) and is_date(end) and start == end:
-            end = start + datetime.timedelta(days=1)
-        location = Location(calendar_event, self.location_spec)
-        name = calendar_event.get("SUMMARY", "")
-       raw_categories = calendar_event.categories or []
+    start = calendar_event.start
+    end = calendar_event.end
+    if is_date(start) and is_date(end) and start == end:
+        end = start + datetime.timedelta(days=1)
 
-        categories = []
-        for cat in raw_categories:
+    location = Location(calendar_event, self.location_spec)
+    name = calendar_event.get("SUMMARY", "")
+
+    raw_categories = calendar_event.categories or []
+    categories = []
+    for cat in raw_categories:
         categories.append(str(cat).strip())
 
-        if raw_categories:
-            # raw_categories may be a string or list depending on the ICS parser
-            try:
-                # Convert to string and split by comma
-                categories = [c.strip() for c in str(raw_categories).split(",") if c.strip()]
-            except Exception:
-                categories = []
-        else:
-            categories = []
+    sequence = calendar_event.sequence
+    uid = calendar_event.uid
+    start_date = self.date_to_string(start)
 
-        sequence = calendar_event.sequence
-        uid = calendar_event.uid
-        start_date = self.date_to_string(start)
-        location_map: dict[str, str] | None = {
-            "text": location.text,
-            "url": location.url,
-        }
-        if not location_map["text"] and not location_map["url"]:
-            location_map = None
+    location_map: dict[str, str] | None = {
+        "text": location.text,
+        "url": location.url,
+    }
+    if not location_map["text"] and not location_map["url"]:
+        location_map = None
+        
         return {
             "start_date": start_date,
             "end_date": self.date_to_string(end),
