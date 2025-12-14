@@ -154,17 +154,23 @@ const template = {
       }
       return "";
     },
+    
     "date": function (start, end) {
-        /* One day
-         * Multiday
-         * Within a day
-         * From one day to another
-         */
-        if (isOneDay(start, end)) {
-          return "";
-        }
-        return scheduler.templates.event_date(start) + " - " + scheduler.templates.event_date(end)
-    },
+        
+       // Fix for all-day events showing as two-day ranges
+    if (isStartOfDay(start) && isStartOfDay(end)) {
+        const fixedEnd = new Date(end);
+        fixedEnd.setDate(fixedEnd.getDate() - 1);
+        end = fixedEnd;
+    }
+
+    if (isOneDay(start, end)) {
+        return scheduler.templates.event_date(start);
+    }
+
+    return scheduler.templates.event_date(start) + " - " + scheduler.templates.event_date(end)
+},
+    
     "participants" : function (participants) {
         if (!specification.show_organizers && !specification.show_attendees || participants.length == 0) {
             return "";
