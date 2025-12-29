@@ -168,7 +168,7 @@ soupsieve==2.8.1
     # via beautifulsoup4
 super-collections==0.6.2
     # via mkdocs-macros-plugin
-termcolor==3.2.0
+termcolor==3.3.0
     # via mkdocs-macros-plugin
 tinycss2==1.5.1
     # via
