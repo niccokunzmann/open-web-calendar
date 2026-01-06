@@ -106,7 +106,7 @@ mkdocs-mdpo-plugin @ git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git
     # via -r requirements/docs.in
 mkdocs-meta-descriptions-plugin==4.1.0
     # via -r requirements/docs.in
-mkdocs-rss-plugin==1.17.7
+mkdocs-rss-plugin==1.17.9
     # via -r requirements/docs.in
 msgpack==1.1.2
     # via cachecontrol
