@@ -117,7 +117,7 @@ packaging==25.0
     #   mkdocs-meta-descriptions-plugin
 paginate==0.5.7
     # via mkdocs-material
-pathspec==1.0.1
+pathspec==1.0.2
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
