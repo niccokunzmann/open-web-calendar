@@ -137,7 +137,7 @@ urllib3==2.4.0
     #   requests-cache
 vobject==0.9.9
     # via caldav
-werkzeug==3.1.4
+werkzeug==3.1.5
     # via flask
 x-wr-timezone==2.0.1
     # via
