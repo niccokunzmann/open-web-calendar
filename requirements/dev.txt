@@ -28,8 +28,9 @@ packaging==25.0
     #   build
     #   pyproject-api
     #   tox
+    #   wheel
 pip-compile-multi==3.2.2
-    # via -r requirements/dev.in
+    # via -r dev.in
 pip-tools==7.5.2
     # via pip-compile-multi
 platformdirs==4.5.1
@@ -47,10 +48,10 @@ pyproject-hooks==1.2.0
 toposort==1.10
     # via pip-compile-multi
 tox==4.34.1
-    # via -r requirements/dev.in
+    # via -r dev.in
 virtualenv==20.36.1
     # via tox
-wheel==0.45.1
+wheel==0.46.2
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
