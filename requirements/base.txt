@@ -131,7 +131,7 @@ tzdata==2025.3
     #   x-wr-timezone
 url-normalize==2.2.1
     # via requests-cache
-urllib3==2.4.0
+urllib3==2.6.3
     # via
     #   requests
     #   requests-cache
