@@ -220,6 +220,8 @@ menu_shows_calendar_names: true
 menu_shows_calendar_descriptions: false
 ## If this is true, calendars can be made invisible.
 menu_shows_calendar_visibility_toggle: false
+## If this is true, each calendar shows subscription/download links
+menu_shows_calendar_sources: true
 
 
 

@@ -54,10 +54,22 @@ labels_day: "Day"
 labels_hour: "Hour"
 labels_minute: "Minute"
 
-# Everything starting with label_ or icon_ will be added automatically 
+# Everything starting with label_ or icon_ will be added automatically
 icon_subscribe: "Add to My Calendar"
 icon_signup: "Sign Up"
 label_participants: "Participants" # added without label_
+
+# Calendar source links in menu
+label_menu_subscribe: "Subscribe"
+label_menu_subscribe_title: "Subscribe with your calendar app"
+label_menu_download_ics: "Download"
+label_menu_download_ics_title: "Download ICS file"
+label_menu_add_to_google: "Google"
+label_menu_add_to_google_title: "Add to Google Calendar"
+label_menu_add_to_outlook: "Outlook"
+label_menu_add_to_outlook_title: "Add to Outlook"
+label_menu_view_source: "Source"
+label_menu_view_source_title: "View ICS source"
 
 signup-email: "email"
 signup-name: "name"

@@ -50,6 +50,17 @@ function isSafeUrl(urlString) {
     });
 }
 
+/* Calendar service URL helpers for subscription/download links */
+const calendarServices = {
+    getWebcalUrl: (url) => url.replace(/^https?:\/\//, 'webcal://'),
+    getGoogleCalendarUrl: (url) => 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(url),
+    getOutlookUrl: (url) => 'https://outlook.live.com/calendar/0/addfromweb?url=' + encodeURIComponent(url),
+    getSourceUrl: (urlIndex) => {
+        const urls = specification.url;
+        return (typeof urls === 'string') ? (urlIndex === 0 ? urls : null) : urls[urlIndex];
+    }
+};
+
 /* Create a link around the HTML text.
  * Use this instead of creating links manually because it also sets the
  * target according to the specification.
@@ -733,6 +744,63 @@ function getCalendarMenuListElement(calendar) {
         calendarDescription.classList.add("calendar-description");
         calendarDescription.innerText = calendar.description;
         calendarListElement.appendChild(calendarDescription);
+    }
+    if (specification.menu_shows_calendar_sources) {
+        // calendar source links (subscribe, download, add to services)
+        const sourceUrl = calendarServices.getSourceUrl(calendar.url_index);
+        if (sourceUrl) {
+            const sourceLinksContainer = document.createElement("div");
+            sourceLinksContainer.classList.add("calendar-source-links");
+
+            // Subscribe link (webcal://)
+            const subscribeLink = document.createElement("a");
+            subscribeLink.href = calendarServices.getWebcalUrl(sourceUrl);
+            subscribeLink.classList.add("source-link", "source-subscribe");
+            subscribeLink.innerText = OWCLocale.labels.menu_subscribe || "Subscribe";
+            subscribeLink.title = OWCLocale.labels.menu_subscribe_title || "Subscribe with your calendar app";
+            sourceLinksContainer.appendChild(subscribeLink);
+
+            // Download ICS link
+            const downloadLink = document.createElement("a");
+            downloadLink.href = sourceUrl;
+            downloadLink.classList.add("source-link", "source-download");
+            downloadLink.innerText = OWCLocale.labels.menu_download_ics || "Download";
+            downloadLink.title = OWCLocale.labels.menu_download_ics_title || "Download ICS file";
+            downloadLink.download = (calendar.name || "calendar") + ".ics";
+            sourceLinksContainer.appendChild(downloadLink);
+
+            // Google Calendar link
+            const googleLink = document.createElement("a");
+            googleLink.href = calendarServices.getGoogleCalendarUrl(sourceUrl);
+            googleLink.classList.add("source-link", "source-google");
+            googleLink.innerText = OWCLocale.labels.menu_add_to_google || "Google";
+            googleLink.title = OWCLocale.labels.menu_add_to_google_title || "Add to Google Calendar";
+            googleLink.target = "_blank";
+            googleLink.rel = "noopener noreferrer";
+            sourceLinksContainer.appendChild(googleLink);
+
+            // Outlook link
+            const outlookLink = document.createElement("a");
+            outlookLink.href = calendarServices.getOutlookUrl(sourceUrl);
+            outlookLink.classList.add("source-link", "source-outlook");
+            outlookLink.innerText = OWCLocale.labels.menu_add_to_outlook || "Outlook";
+            outlookLink.title = OWCLocale.labels.menu_add_to_outlook_title || "Add to Outlook";
+            outlookLink.target = "_blank";
+            outlookLink.rel = "noopener noreferrer";
+            sourceLinksContainer.appendChild(outlookLink);
+
+            // View Source link
+            const viewSourceLink = document.createElement("a");
+            viewSourceLink.href = sourceUrl;
+            viewSourceLink.classList.add("source-link", "source-view");
+            viewSourceLink.innerText = OWCLocale.labels.menu_view_source || "Source";
+            viewSourceLink.title = OWCLocale.labels.menu_view_source_title || "View ICS source";
+            viewSourceLink.target = "_blank";
+            viewSourceLink.rel = "noopener noreferrer";
+            sourceLinksContainer.appendChild(viewSourceLink);
+
+            calendarListElement.appendChild(sourceLinksContainer);
+        }
     }
     for (const cssClass of calendar["css-classes"]) {
         calendarListElement.classList.add(cssClass);
