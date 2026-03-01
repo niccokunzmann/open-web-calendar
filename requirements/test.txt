@@ -105,7 +105,7 @@ urllib3[socks]==2.4.0
     #   requests
     #   responses
     #   selenium
-websocket-client==1.8.0
+websocket-client==1.9.0
     # via selenium
 wsproto==1.3.2
     # via trio-websocket
