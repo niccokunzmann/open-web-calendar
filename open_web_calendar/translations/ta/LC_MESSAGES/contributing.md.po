@@ -1,20 +1,22 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2025.
 # தமிழ்நேரம் <anishprabu.t@gmail.com>, 2025.
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2025.
+# தமிழ்நேரம் <tamilneram247@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-23 18:34+0200\n"
-"PO-Revision-Date: 2025-06-17 15:01+0000\n"
-"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/open-web-calendar/documentation-contributing/ta/>\n"
+"PO-Revision-Date: 2026-03-01 21:09+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-contributing/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.1\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 msgid ""
 "[![Sponsor with "
@@ -24,75 +26,85 @@ msgid ""
 "calendar?label=support%20on%20open%20collective)](https://opencollective.com/open-"
 "web-calendar/)"
 msgstr ""
+"[![GitHub உடன் ச்பான்சர்](https://img.shields.io/github/sponsors/"
+"niccokunzmann?logo=github&label=GitHub%20Sponsors)](https://github.com/"
+"sponsors/niccokunzmann) [![ஆதரவு திற தொகுப்பு](https://img.shields.io/"
+"opencollective/all/open-web-calendar?label=support%20on%20open%20collective)]"
+"(https://opencollective.com/open-web-calendar/)"
 
 msgid "[Set up your development environment](../dev/)"
-msgstr ""
+msgstr "[உங்கள் மேம்பாட்டு சூழலை அமைக்கவும்](../dev/)"
 
 msgid "Ways to Contribute"
-msgstr ""
+msgstr "பங்களிப்பதற்கான வழிகள்"
 
 msgid "🐛 Report Bugs"
-msgstr ""
+msgstr "🐛 பிழைகளைப் புகாரளிக்கவும்"
 
 msgid ""
 "Found a bug? Please [create an issue](https://github.com/niccokunzmann/open-"
 "web-calendar/issues) with:"
 msgstr ""
+"பிழை கண்டுபிடிக்கப்பட்டதா? தயவுசெய்து [சிக்கலை உருவாக்கவும்](https://github.com/"
+"niccokunzmann/open-web-calendar/issues) உடன்:"
 
 msgid "Clear description of the problem"
-msgstr ""
+msgstr "பிரச்சனையின் தெளிவான விளக்கம்"
 
 msgid "Steps to reproduce"
-msgstr ""
+msgstr "இனப்பெருக்கம் செய்வதற்கான படிகள்"
 
 msgid "Expected vs actual behavior"
-msgstr ""
+msgstr "எதிர்பார்க்கப்பட்ட மற்றும் உண்மையான நடத்தை"
 
 msgid "💡 Suggest Features"
-msgstr ""
+msgstr "💡 அம்சங்களைப் பரிந்துரைக்கவும்"
 
 msgid ""
 "Have an idea? [Open an issue](https://github.com/niccokunzmann/open-web-"
 "calendar/issues) to discuss it!"
 msgstr ""
+"சிந்தனை உள்ளதா? [ஒரு சிக்கலைத் திறக்கவும்](https://github.com/niccokunzmann/open-"
+"web-calendar/issues) அதைப் பற்றி விவாதிக்க!"
 
 msgid "🔧 Code Contributions"
-msgstr ""
+msgstr "🔧 குறியீடு பங்களிப்புகள்"
 
 msgid "**Fork the repository**"
-msgstr ""
+msgstr "** களஞ்சியத்தை பிரிக்கவும்**"
 
 msgid ""
 "**Create a feature branch**: `git checkout -b feature/your-feature-name`"
 msgstr ""
+"**ஒரு அம்சக் கிளையை உருவாக்கவும்**: `சிட் செக்அவுட் -பி அம்சம்/உங்கள் அம்சம்-பெயர்`"
 
 msgid ""
 "**Set up development environment**: See [development documentation](../dev/)"
-msgstr ""
+msgstr "**வளர்ச்சி சூழலை அமை**: [மேம்பாட்டு ஆவணங்கள்](../dev/) பார்க்கவும்"
 
 msgid "**Make your changes**"
-msgstr ""
+msgstr "**உங்கள் மாற்றங்களைச் செய்யுங்கள்**"
 
 msgid "**Run tests**"
-msgstr ""
+msgstr "**சோதனைகளை இயக்கு**"
 
 msgid "**Submit a pull request**"
-msgstr ""
+msgstr "** இழுக்கும் கோரிக்கையைச் சமர்ப்பிக்கவும்**"
 
 msgid "📚 Documentation"
-msgstr ""
+msgstr "📚 ஆவணம்"
 
 msgid "Help improve our documentation by:"
-msgstr ""
+msgstr "இதன் மூலம் எங்கள் ஆவணங்களை மேம்படுத்த உதவுங்கள்:"
 
 msgid "Fixing typos or unclear instructions"
-msgstr ""
+msgstr "எழுத்துப்பிழைகள் அல்லது தெளிவற்ற வழிமுறைகளை சரிசெய்தல்"
 
 msgid "Adding examples"
-msgstr ""
+msgstr "எடுத்துக்காட்டுகளைச் சேர்த்தல்"
 
 msgid "Get Help"
-msgstr ""
+msgstr "உதவி பெறு"
 
 msgid ""
 "Questions? Check our [documentation](https://open-web-"
@@ -100,6 +112,9 @@ msgid ""
 "[discussions](https://github.com/niccokunzmann/open-web-"
 "calendar/discussions)."
 msgstr ""
+"கேள்விகள்? எங்கள் [ஆவணத்தை](https://open-web-calendar.hosted.quelltext.eu) "
+"சரிபார்க்கவும் அல்லது [விவாதங்களில்](https://github.com/niccokunzmann/open-web-"
+"calendar/discussions) சேரவும்."
 
 #~ msgid ""
 #~ "<a href=\"https://open-web-"
