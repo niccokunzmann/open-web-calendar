@@ -1,19 +1,21 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # nissara pengpol <fon_nissara@hotmail.com>, 2024.
+# Afdol Kareena <afdol.2548.krn@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 05:04+0200\n"
-"PO-Revision-Date: 2024-06-14 11:24+0000\n"
-"Last-Translator: nissara pengpol <fon_nissara@hotmail.com>\n"
-"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/documentation-server-configuration/th/>\n"
+"PO-Revision-Date: 2026-03-24 00:10+0000\n"
+"Last-Translator: Afdol Kareena <afdol.2548.krn@gmail.com>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-server-configuration/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid ""
 "The configuration of all calendars is rooted in the [default_specification]."
@@ -32,7 +34,7 @@ msgid ""
 msgstr ""
 
 msgid "You might want to change the following values."
-msgstr ""
+msgstr "คุณอาจต้องเปลี่ยนแปลงค่าต่อไปนี้"
 
 msgid "`title`"
 msgstr ""
