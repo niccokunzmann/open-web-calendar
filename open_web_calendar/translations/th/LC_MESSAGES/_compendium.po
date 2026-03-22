@@ -1,19 +1,21 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # nissara pengpol <fon_nissara@hotmail.com>, 2024.
+# Afdol Kareena <afdol.2548.krn@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 05:03+0200\n"
-"PO-Revision-Date: 2024-06-14 11:23+0000\n"
-"Last-Translator: nissara pengpol <fon_nissara@hotmail.com>\n"
-"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/documentation-common-translations/th/>\n"
+"PO-Revision-Date: 2026-03-24 00:09+0000\n"
+"Last-Translator: Afdol Kareena <afdol.2548.krn@gmail.com>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/"
+"documentation-common-translations/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
@@ -26,7 +28,7 @@ msgid "Open Web Calendar"
 msgstr "Open Web Calendar"
 
 msgid "Permanent link"
-msgstr "ลิงค์ถาวร"
+msgstr "ลิงก์ถาวร"
 
 msgid "See also:"
 msgstr "ดูเพิ่มเติม:"
@@ -90,11 +92,10 @@ msgstr "การซิงค์เหตุการณ์ทันที"
 msgid "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 msgstr "[தமிழ்நேரம்]: https://tamilneram.github.io/"
 
-#, fuzzy
 msgid ""
 "[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
 msgstr ""
-"[Update DHTMLX Scheduler]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
+"[อัปเดตตัวกำหนดเวลา DHTMLX]: https://docs.dhtmlx.com/scheduler/what_s_new.html"
 
 msgid "Play with a variety of Calendars for your own project."
 msgstr "เล่นกับรูปแบบของปฏิทินที่หลากหลายสำหรับโปรเจ็กต์ของคุณ"
