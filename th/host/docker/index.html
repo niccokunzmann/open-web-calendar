@@ -146,7 +146,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Hosting with Docker - Open Web Calendar" />
 <meta property="og:description" content="You can use docker and docker compose to host the Open Web Calendar." />
-<meta property="og:image" content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_m8dkz2n7/th/host/docker/index.png" />
+<meta property="og:image" content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__5osb55m/th/host/docker/index.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -154,7 +154,7 @@
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="Hosting with Docker - Open Web Calendar" />
 <meta property="twitter:description" content="You can use docker and docker compose to host the Open Web Calendar." />
-<meta property="twitter:image" content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_m8dkz2n7/th/host/docker/index.png" />
+<meta property="twitter:image" content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo__5osb55m/th/host/docker/index.png" />
 </head>
   
   
@@ -1619,9 +1619,9 @@
   
 
 
-<h1 id="hosting-with-docker">Hosting with Docker<a class="headerlink" href="#hosting-with-docker" title="ลิงค์ถาวร">&para;</a></h1>
+<h1 id="hosting-with-docker">Hosting with Docker<a class="headerlink" href="#hosting-with-docker" title="ลิงก์ถาวร">&para;</a></h1>
 <p>You can use <code>docker</code> and <code>docker compose</code> to host the Open Web Calendar.</p>
-<h2 id="build-the-image">Build the Image<a class="headerlink" href="#build-the-image" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="build-the-image">Build the Image<a class="headerlink" href="#build-the-image" title="ลิงก์ถาวร">&para;</a></h2>
 <p>First, clone the repository:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/niccokunzmann/open-web-calendar
 <span class="nb">cd</span><span class="w"> </span>open-web-calendar
@@ -1630,7 +1630,7 @@
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>--tag<span class="w"> </span>niccokunzmann/open-web-calendar<span class="w"> </span>.
 </code></pre></div>
 <p>This will create the image <code>niccokunzmann/open-web-calendar</code>.</p>
-<h2 id="run-the-docker-image">Run the Docker Image<a class="headerlink" href="#run-the-docker-image" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="run-the-docker-image">Run the Docker Image<a class="headerlink" href="#run-the-docker-image" title="ลิงก์ถาวร">&para;</a></h2>
 <p>You can use the existing image: <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">niccokunzmann/open-web-calendar</a>.</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:80<span class="w"> </span>--name<span class="w"> </span>open-web-calendar<span class="w"> </span>niccokunzmann/open-web-calendar
 </code></pre></div>
@@ -1638,10 +1638,10 @@
 <p>This way, you can stop the service:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>stop<span class="w"> </span>open-web-calendar
 </code></pre></div>
-<h2 id="container-tags">Container Tags<a class="headerlink" href="#container-tags" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="container-tags">Container Tags<a class="headerlink" href="#container-tags" title="ลิงก์ถาวร">&para;</a></h2>
 <p>The container <code>niccokunzmann/open-web-calendar:latest</code> contains the latest release. Containers are also tagged with the version from the <a href="../../changelog">changelog</a>, e.g. <code>niccokunzmann/open-web-calendar:v1.10</code>.</p>
 <p>If you wish to run the latest development version, use <code>niccokunzmann/open-web-calendar:master</code>. This includes unchecked translations.</p>
-<h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="ลิงก์ถาวร">&para;</a></h2>
 <p>Use the pre-build Dockerhub image with <code>docker compose</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
@@ -1681,17 +1681,17 @@ as it is very talkative.</p>
 <p>By default, docker only uses IPv4.
 You can <a href="https://docs.docker.com/engine/daemon/ipv6/">enable IPv6</a>.</p>
 </div>
-<h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="update-pre-build-image-with-docker-compose">Update pre-build image with Docker Compose<a class="headerlink" href="#update-pre-build-image-with-docker-compose" title="ลิงก์ถาวร">&para;</a></h2>
 <p>If you want to update your image with the latest version from <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar">Dockerhub</a> run this:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull
 </code></pre></div>
 <p>Note: You need to restart the container after pulling in order for the update to apply:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
-<h2 id="preventing-ssrf-attacks">Preventing SSRF Attacks<a class="headerlink" href="#preventing-ssrf-attacks" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="preventing-ssrf-attacks">Preventing SSRF Attacks<a class="headerlink" href="#preventing-ssrf-attacks" title="ลิงก์ถาวร">&para;</a></h2>
 <p>The Open Web Calendar by default allows unrestricted access to the local network and Internet. Adding a proxy to filter the requests is important, especially if you host other services which should be not accessed by external requests. Such an attack is called <a href="https://en.wikipedia.org/wiki/Server-side_request_forgery">Server Side Request Forgery</a>.</p>
 <p>The Open Web Calendar can be configured to use a <strong>proxy</strong> to request <code>.ics</code> and other files. Filtering traffic is a complicated task and out of scope for this project. Proxies do that well better!</p>
-<h3 id="preventing-ssrf-attacks-using-a-tor-proxy">Preventing SSRF attacks using a Tor proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-tor-proxy" title="ลิงค์ถาวร">&para;</a></h3>
+<h3 id="preventing-ssrf-attacks-using-a-tor-proxy">Preventing SSRF attacks using a Tor proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-tor-proxy" title="ลิงก์ถาวร">&para;</a></h3>
 <p>The following example shows the usage of a Tor proxy. You can try it out at <a href="https://tor.open-web-calendar.hosted.quelltext.eu/">tor.open-web-calendar.hosted.quelltext.eu</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
 <span class="nt">services</span><span class="p">:</span>
@@ -1731,7 +1731,7 @@ You can <a href="https://docs.docker.com/engine/daemon/ipv6/">enable IPv6</a>.</
 <ul>
 <li><a href="../configure#ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server</a></li>
 </ul>
-<h2 id="preventing-ssrf-attacks-using-a-squid-proxy">Preventing SSRF attacks using a Squid Proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-squid-proxy" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="preventing-ssrf-attacks-using-a-squid-proxy">Preventing SSRF attacks using a Squid Proxy<a class="headerlink" href="#preventing-ssrf-attacks-using-a-squid-proxy" title="ลิงก์ถาวร">&para;</a></h2>
 <p>The <a href="https://www.squid-cache.org/">Squid</a> proxy is a flexible and highly configurable proxy server. The Open Web Calendar can be configured to use it to request <code>.ics</code> and other files.</p>
 <p>Use this as your <code>docker-compose.yml</code> file:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
@@ -1785,7 +1785,7 @@ dns_v4_first<span class="w"> </span>on
 <blockquote>
 <p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
 </blockquote>
-<h2 id="automatic-updates">Automatic Updates<a class="headerlink" href="#automatic-updates" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="automatic-updates">Automatic Updates<a class="headerlink" href="#automatic-updates" title="ลิงก์ถาวร">&para;</a></h2>
 <p>If you have not fixed your version but you use the <code>latest</code> or <code>master</code> tag, you can automatically update all the services required.</p>
 <p>Create an <code>update.sh</code> file next to your <code>docker-compose.yml</code> file and add this content:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
@@ -1815,7 +1815,7 @@ docker<span class="w"> </span>rmi<span class="w"> </span>-f<span class="w">  </s
 <p>And add this line:</p>
 <div class="highlight"><pre><span></span><code>3 * * * * /path/to/update.sh 1&gt; /path/to/update.sh.log 2&gt; /path/to/update.sh.log
 </code></pre></div>
-<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="ลิงค์ถาวร">&para;</a></h2>
+<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="ลิงก์ถาวร">&para;</a></h2>
 <p>หลังจากที่คุณตั้งค่าเซิร์ฟเวอร์ของคุณเองแล้ว คุณสามารถ <a href="../configure">กำหนดค่าลักษณะการทำงาน</a> ได้</p>
 
 
