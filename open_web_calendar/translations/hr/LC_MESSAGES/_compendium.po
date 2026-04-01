@@ -1,19 +1,21 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
-# Milo Ivir <mail@milotype.de>, 2024, 2025.
+# Milo Ivir <mail@milotype.de>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-27 00:50+0200\n"
-"PO-Revision-Date: 2025-10-03 18:02+0000\n"
+"PO-Revision-Date: 2026-04-02 11:09+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/open-web-calendar/documentation-common-translations/hr/>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/open-web-"
+"calendar/documentation-common-translations/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.14-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid ""
 "Embed a highly customizable web calendar into your website using ICal source"
@@ -97,7 +99,7 @@ msgid "Embed with an HTML snippet"
 msgstr "Ugradi s HTML isječkom"
 
 msgid "Desktop and Mobile"
-msgstr "Desktop i mobitel"
+msgstr "Desktop i mobilni uređaji"
 
 msgid "Multi-Language Support"
 msgstr "Višejezična podrška"
@@ -109,7 +111,7 @@ msgid "Easy Editing"
 msgstr "Jednostavno uređivanje"
 
 msgid "Designs To Choose"
-msgstr "Izbor izgleda"
+msgstr "Izbor dizajna"
 
 msgid "Multiple Calendar Sources"
 msgstr "Višebrojni izvori kalendara"
@@ -127,13 +129,13 @@ msgid "Work Week"
 msgstr "Radni tjedan"
 
 msgid "Click on Event Location"
-msgstr "Prikaz mjesta događaja"
+msgstr "Klikni na mjesto događaja"
 
 msgid "Styled Event Descriptions"
 msgstr "Stilizirani opisi događaja"
 
 msgid "FOSS - No Vendor Lock-In"
-msgstr "FOSS – Bez ovisnosti o dobavljaču"
+msgstr "FOSS – Bez ovisnosti"
 
 msgid "Subscribe Link"
 msgstr "Poveznica za pretplatu"
