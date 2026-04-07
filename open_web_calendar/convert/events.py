@@ -185,7 +185,7 @@ class ConvertToEvents(ConversionStrategy):
             "end_date_iso": now_iso,
             "start_date_iso_0": now_iso,
             "end_date_iso_0": now_iso,
-            "text": escape(error.split(":")[0]),
+            "text": escape(error.split(":", maxsplit=1)[0]),
             "description": self.clean_html(escape(error)),
             "traceback": self.clean_html(escape(tb_s)),
             "location": None,

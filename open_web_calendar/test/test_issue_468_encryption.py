@@ -117,7 +117,7 @@ def test_can_encrypt_in_configuration(client):
 
 def test_encryption_not_possible(monkeypatch):
     """If we have no keys."""
-    monkeypatch.setattr(FernetStore, "from_environment", lambda: EmptyFernetStore())
+    monkeypatch.setattr(FernetStore, "from_environment", EmptyFernetStore)
     configuration = get_configuration()
     assert configuration["encryption"] is False
 
