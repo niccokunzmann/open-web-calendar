@@ -60,7 +60,7 @@ jobs:
         # run even if tests fail
         # see https://stackoverflow.com/a/58859404/1320237
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: screenshots-${{ matrix.python }}-${{ matrix.tox_env }}
           path: screenshots

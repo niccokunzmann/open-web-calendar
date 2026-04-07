@@ -5,9 +5,9 @@
 #
 #    pip-compile-multi
 #
-build==1.3.0
+build==1.4.0
     # via pip-tools
-cachetools==6.2.2
+cachetools==6.2.4
     # via tox
 chardet==5.2.0
     # via tox
@@ -19,7 +19,7 @@ colorama==0.4.6
     # via tox
 distlib==0.4.0
     # via virtualenv
-filelock==3.20.0
+filelock==3.20.3
     # via
     #   tox
     #   virtualenv
@@ -46,11 +46,11 @@ pyproject-hooks==1.2.0
     #   pip-tools
 toposort==1.10
     # via pip-compile-multi
-tox==4.32.0
+tox==4.34.1
     # via -r requirements/dev.in
-virtualenv==20.35.4
+virtualenv==20.36.1
     # via tox
-wheel==0.45.1
+wheel==0.46.2
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:

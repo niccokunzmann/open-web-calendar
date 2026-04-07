@@ -1,0 +1,26 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Democratic Socialists of America"
+msgstr ""
+
+msgid "![](/assets/img/showcase/2025-12-18-Philly-DSA.png)"
+msgstr ""
+
+msgid ""
+"The Philadelphia chapter of the Democratic Socialists of America uses the "
+"Open Web Calendar to display events. Due to the CSS modifications, the "
+"calendar"
+msgstr ""
+
+msgid "Links:"
+msgstr ""
+
+msgid "[Event page](https://www.phillydsa.org/events)"
+msgstr ""
+
+msgid ""
+"[GitHub Discussion](https://github.com/niccokunzmann/open-web-"
+"calendar/discussions/1030)"
+msgstr ""

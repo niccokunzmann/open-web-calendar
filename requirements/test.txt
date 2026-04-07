@@ -18,7 +18,7 @@ boolean-py==5.0
     # via
     #   license-expression
     #   reuse
-certifi==2025.11.12
+certifi==2026.1.4
     # via
     #   requests
     #   selenium
@@ -78,7 +78,7 @@ responses==0.25.8
     #   pytest-responses
 reuse==6.2.0
     # via -r requirements/test.in
-ruff==0.14.8
+ruff==0.14.13
     # via -r requirements/test.in
 selenium==4.33.0
     # via -r requirements/test.in
@@ -90,7 +90,7 @@ sniffio==1.3.1
     # via trio
 sortedcontainers==2.4.0
     # via trio
-tomlkit==0.13.3
+tomlkit==0.14.0
     # via reuse
 trio==0.30.0
     # via

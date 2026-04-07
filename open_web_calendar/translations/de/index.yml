@@ -10,9 +10,10 @@ skins-terrace: Terrasse
 skins-material: Material
 skins-flat: Flach
 style-date: Du kannst die Farbe des heutigen Tages anpassen.
-style-days: Wenn Du eine andere Farbe für die Tage magst, dann ist auch das möglich.
-style-days-outside: Manche Tage haben eine andere Farbe, wenn sie nicht innerhalb
-  des Monats sind.
+style-days: Wenn Du eine andere Farbe für die Tage magst, dann ist auch das 
+  möglich.
+style-days-outside: Manche Tage haben eine andere Farbe, wenn sie nicht 
+  innerhalb des Monats sind.
 style-css: Eigene CSS-Eigenschaften sind möglich.
 loader-default: Kreis-Animation
 loader-none: Keine Animation
@@ -29,17 +30,18 @@ loader-title: Lade-Animation
 timezone-description: 'Die Zeitzone wird von dem Webbrowser des Nutzers bestimmt.
   Wenn der Kalender in einer festen Zeitzone angezeigt werden soll, dann ist das möglich.
   Dein Browser nutzt diese Zeitzone:'
-loader-description: In manchen Fällen brauch der Server eine Weile, um den Kalender
-  zu laden, z.B. wenn der Server erst starten muss.
+loader-description: In manchen Fällen brauch der Server eine Weile, um den 
+  Kalender zu laden, z.B. wenn der Server erst starten muss.
 spec-title: Die Spezifikation Hosten
 spec-description: 'Der Kalender kann nicht nur durch eine URL generiert werden sondern
   auch durch eine JSON oder YAML-Spezifikation aus einer Datei. Deine Anpassungen
   erzeugen die folgende Spezifikation:'
 calendar-code: 'Um den Kalender einzubetten, nutze diesen Code auf der Webseite:'
 calendar-code-execution: Das Resultat kannst Du hier drunter ansehen.
-about: Der Offene Web-Kalender nutzt online ICS/ICal-Kalender und zeigt sie in einem
-  Kalender an. Du kannst ihn mit Nextcloud, Outlook, Google Calendar, Meetup und anderen
-  Kalendersystemen benutzen, die den ICS-Standard exportieren.
+about: Der Offene Web-Kalender nutzt online ICS/ICal-Kalender und zeigt sie in 
+  einem Kalender an. Du kannst ihn mit Nextcloud, Outlook, Google Calendar, 
+  Meetup und anderen Kalendersystemen benutzen, die den ICS-Standard 
+  exportieren.
 calendar-urls: 'Um mehrere Kalender anzuzeigen, füge die URLs zu diesen hier unten
   ein:'
 language-title: Sprache
@@ -57,30 +59,31 @@ time-increment-15: 15 Minuten
 time-increment-30: 30 Minuten
 time-increment-60: 1 Stunde
 style-title: Eigener Style mit CSS
-style-description: Du kannst die Farbe des Kalenders und viele andere Eigenschaften
-  mit CSS anpassen. Deine Anpassungen überschreiben die des Designs. Unten kannst
-  Du ein paar Anpassungen vornehmen, die wir vorbereitet haben.
+style-description: Du kannst die Farbe des Kalenders und viele andere 
+  Eigenschaften mit CSS anpassen. Deine Anpassungen überschreiben die des 
+  Designs. Unten kannst Du ein paar Anpassungen vornehmen, die wir vorbereitet 
+  haben.
 style-background: Du kannst die Hintergrundfarbe verändern.
 skins-contrast-black: Schwarzer Kontrast
 skins-contrast-white: Weißer Kontrast
 links-title: Links
-links-description: Einträge können Orte und Links enthalten. Wenn der Kalender in
-  eine Webseite eingebettet wird, kannst Du auswählen, wo sich ein Link öffnet, wenn
-  er geklickt wird.
+links-description: Einträge können Orte und Links enthalten. Wenn der Kalender 
+  in eine Webseite eingebettet wird, kannst Du auswählen, wo sich ein Link 
+  öffnet, wenn er geklickt wird.
 links-self: Öffne den Link im selben Frame wie der Kalender.
 links-parent: Öffne den Link in dem Frame drüber.
 links-blank: Öffne den Link in einem neuen Fenster oder Tab.
 links-top: Öffne den Link im vollen Fenster.
-spec-host-html: Du kannst <a href="javascript:downloadJSONSpecification()">die Spezifikation
-  herunterladen</a> und sie irgendwo im Web platzieren. Auf diese Weise kannst Du
-  den Kalender später überall, wo er verwendet wird, mit einem Mal verändern. Dazu
-  kannst du die Spezifikation z.B. in einem <a href="https://gist.github.com/">Gist</a>
-  veröffentlichen.
+spec-host-html: Du kannst <a href="javascript:downloadJSONSpecification()">die 
+  Spezifikation herunterladen</a> und sie irgendwo im Web platzieren. Auf diese 
+  Weise kannst Du den Kalender später überall, wo er verwendet wird, mit einem 
+  Mal verändern. Dazu kannst du die Spezifikation z.B. in einem <a 
+  href="https://gist.github.com/">Gist</a> veröffentlichen.
 configure-week-title: Wochentage
 configure-week-description: Die Woche kann am Montag oder Sonntag anfangen.
 hour-format-title: Zeitanzeige
-hour-format-description: Du kannst zwischen einer Anzeige mit 24 Stunden oder 12 Stunden
-  auswählen. Es gibt auch andere Optionen.
+hour-format-description: Du kannst zwischen einer Anzeige mit 24 Stunden oder 12
+  Stunden auswählen. Es gibt auch andere Optionen.
 hour-format-specification-link: Spezifikation ansehen.
 event-status-title: Terminstatus
 event-status-tentative: Vorläufig
@@ -95,20 +98,20 @@ language-browser-false: 'Der Kalender ist immer in dieser Sprache:'
 language-browser-true: 'Der Kalender ist in der Sprache vom Betrachter. Wenn es die
   Sprache aber nicht gibt, ist er in:'
 map-title: Links zur Karte
-map-description: Ereignisse können Koordinaten und Text zu einem Ort haben. Hier kannst
-  Du einstellen, welcher Kartendienst geöffnet wird, wenn man auf den Ort eines Ereignisses
-  klickt.
+map-description: Ereignisse können Koordinaten und Text zu einem Ort haben. Hier
+  kannst Du einstellen, welcher Kartendienst geöffnet wird, wenn man auf den Ort
+  eines Ereignisses klickt.
 map-custom: Eigene Karte
 map-custom-summary: Verändere die Karten-Links
-map-link-location-description: Schreibe eine URL hier rein und füge {location} dort
-  ein, wo der Text vom Ort stehen würde.
-map-link-geo-description: Gib eine URL zur Karte hier ein. {lat} und {lon} stehen
-  an der Stelle der Koordinaten.
+map-link-location-description: Schreibe eine URL hier rein und füge {location} 
+  dort ein, wo der Text vom Ort stehen würde.
+map-link-geo-description: Gib eine URL zur Karte hier ein. {lat} und {lon} 
+  stehen an der Stelle der Koordinaten.
 button-encrypt: URL Verschlüsseln
 button-encrypted: Verschlüsselt
-password-urls: Wir empfehlen, URLs zu verschlüsseln, wenn sie vertrauliche Daten enthalten.
-  Speichere das folgende Passwort nur dann ab, wenn du vorhast diese irgendwann zu
-  entschlüsseln.
+password-urls: Wir empfehlen, URLs zu verschlüsseln, wenn sie vertrauliche Daten
+  enthalten. Speichere das folgende Passwort nur dann ab, wenn du vorhast diese 
+  irgendwann zu entschlüsseln.
 decrypt-urls: URLs entschlüsseln
 about-title: Mehr Infos
 button-edit: Bearbeiten
@@ -125,11 +128,11 @@ participants-organizers: Organisator anzeigen?
 participants-attendees: Teilnehmer anzeigen?
 participants-status: Den Teilnahmestatus anzeigen? (z.B. angenommen/abgelehnt)
 participants-type: Teilnehmertyp anzeigen? (z.B. Person oder Gruppe)
-participants-role: Rolle des Teilnehmers anzeigen? (z.B. Organisator, benötigter oder
-  optionaler Teilnehmer)
-participants-description: Du kannst andere einladen und sie können teilnehmen. Du
-  kannst hier bestimmen, ob Namen mit E-Mail-Adressen von Teilnehmern unter der Beschreibung
-  angezeigt werden.
+participants-role: Rolle des Teilnehmers anzeigen? (z.B. Organisator, benötigter
+  oder optionaler Teilnehmer)
+participants-description: Du kannst andere einladen und sie können teilnehmen. 
+  Du kannst hier bestimmen, ob Namen mit E-Mail-Adressen von Teilnehmern unter 
+  der Beschreibung angezeigt werden.
 caldav-allow-sign-up: 'Anmeldung mit E-Mail für diesen Kalender einschalten:'
 caldav-choose-calendar: 'Wähle einen Deiner Kalender:'
 map-bing: Bing Maps
@@ -138,3 +141,11 @@ map-osm: OpenStreetMap
 map-yandex: Yandex Maps
 map-geo: geo:-Link
 map-none: Text Ohne Link
+time-and-hours-title: Zeit und Stunden
+menu-title: Kalendermenü
+controls-menu: Menü anzeigen
+menu-shows-title: Titel in Menü anzeigen
+menu-shows-description: Beschreibung in Menü anzeigen
+menu-shows-calendar-names: Kalendernamen auflisten
+menu-shows-calendar-descriptions: Kalenderbeschreibungen auflisten
+menu-shows-calendar-visibility: Kalender anzeigen/ausblenden
