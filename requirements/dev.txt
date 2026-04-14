@@ -5,7 +5,7 @@
 #
 #    pip-compile-multi
 #
-build==1.4.2
+build==1.4.3
     # via pip-tools
 cachetools==6.2.6
     # via tox
