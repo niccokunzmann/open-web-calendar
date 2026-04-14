@@ -5,7 +5,7 @@
 #
 #    pip-compile-multi
 #
-babel==2.17.0
+babel==2.18.0
     # via
     #   mkdocs
     #   mkdocs-git-revision-date-localized-plugin
