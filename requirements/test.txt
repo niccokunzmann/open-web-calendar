@@ -66,7 +66,7 @@ pytest==9.0.3
     #   pytest-responses
 pytest-responses==0.5.1
     # via -r requirements/test.in
-python-debian==1.0.1
+python-debian==1.1.0
     # via reuse
 pyyaml==6.0.3
     # via responses
