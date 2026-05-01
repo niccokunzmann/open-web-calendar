@@ -110,7 +110,7 @@ def runner(app):
 calendar_files = {}
 for file in CALENDAR_DIRECTORY.iterdir():
     if file.is_file():
-        with file.open() as f:
+        with file.open(encoding="utf-8") as f:
             calendar_files[file] = f.read()
 
 

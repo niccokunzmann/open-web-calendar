@@ -47,7 +47,7 @@ for language in os.listdir(TRANSLATIONS_PATH):  # noqa: PTH208, RUF100
             continue
         name = file.stem
         name = name.removesuffix(UNUSED)
-        with file.open() as f:
+        with file.open(encoding="utf-8") as f:
             file_translations[name].update(yaml.safe_load(f))
 
 
