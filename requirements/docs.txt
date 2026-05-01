@@ -10,7 +10,7 @@ babel==2.18.0
     #   mkdocs
     #   mkdocs-git-revision-date-localized-plugin
     #   mkdocs-material
-backrefs==5.9
+backrefs==7.0
     # via mkdocs-material
 beautifulsoup4==4.14.3
     # via mkdocs-meta-descriptions-plugin
