@@ -28,7 +28,7 @@ charset-normalizer==3.4.7
     # via
     #   python-debian
     #   requests
-click==8.3.2
+click==8.3.3
     # via reuse
 h11==0.16.0
     # via wsproto
