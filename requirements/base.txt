@@ -76,7 +76,7 @@ mdurl==0.1.2
     # via markdown-it-py
 mergecal==0.5.0
     # via -r requirements/base.in
-packaging==25.0
+packaging==26.2
     # via gunicorn
 platformdirs==4.9.6
     # via requests-cache
