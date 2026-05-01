@@ -40,7 +40,7 @@ flask-allowed-hosts==1.2.0
     # via -r requirements/base.in
 gunicorn==25.3.0
     # via -r requirements/base.in
-icalendar==6.3.2
+icalendar==7.1.0
     # via
     #   -r requirements/base.in
     #   caldav
