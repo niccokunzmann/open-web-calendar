@@ -222,6 +222,11 @@ menu_shows_calendar_descriptions: false
 menu_shows_calendar_visibility_toggle: false
 ## If this is true, each calendar shows subscription/download links
 menu_shows_calendar_sources: true
+menu_shows_calendar_source_webcal: true
+menu_shows_calendar_source_download: false
+menu_shows_calendar_source_google: true
+menu_shows_calendar_source_outlook: false
+menu_shows_calendar_source_view: false
 
 
 

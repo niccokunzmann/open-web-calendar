@@ -752,52 +752,63 @@ function getCalendarMenuListElement(calendar) {
             const sourceLinksContainer = document.createElement("div");
             sourceLinksContainer.classList.add("calendar-source-links");
 
+            
             // Subscribe link (webcal://)
-            const subscribeLink = document.createElement("a");
-            subscribeLink.href = calendarServices.getWebcalUrl(sourceUrl);
-            subscribeLink.classList.add("source-link", "source-subscribe");
-            subscribeLink.innerText = OWCLocale.labels.menu_subscribe || "Subscribe";
-            subscribeLink.title = OWCLocale.labels.menu_subscribe_title || "Subscribe with your calendar app";
-            sourceLinksContainer.appendChild(subscribeLink);
+            if (specification.menu_shows_calendar_source_webcal) {
+              const subscribeLink = document.createElement("a");
+              subscribeLink.href = calendarServices.getWebcalUrl(sourceUrl);
+              subscribeLink.classList.add("source-link", "source-subscribe");
+              subscribeLink.innerText = OWCLocale.labels.menu_subscribe || "Subscribe";
+              subscribeLink.title = OWCLocale.labels.menu_subscribe_title || "Subscribe with your calendar app";
+              sourceLinksContainer.appendChild(subscribeLink);
+            }
 
             // Download ICS link
-            const downloadLink = document.createElement("a");
-            downloadLink.href = sourceUrl;
-            downloadLink.classList.add("source-link", "source-download");
-            downloadLink.innerText = OWCLocale.labels.menu_download_ics || "Download";
-            downloadLink.title = OWCLocale.labels.menu_download_ics_title || "Download ICS file";
-            downloadLink.download = (calendar.name || "calendar") + ".ics";
-            sourceLinksContainer.appendChild(downloadLink);
+            if (specification.menu_shows_calendar_source_download) {
+              const downloadLink = document.createElement("a");
+              downloadLink.href = sourceUrl;
+              downloadLink.classList.add("source-link", "source-download");
+              downloadLink.innerText = OWCLocale.labels.menu_download_ics || "Download";
+              downloadLink.title = OWCLocale.labels.menu_download_ics_title || "Download ICS file";
+              downloadLink.download = (calendar.name || "calendar") + ".ics";
+              sourceLinksContainer.appendChild(downloadLink);
+            }
 
             // Google Calendar link
-            const googleLink = document.createElement("a");
-            googleLink.href = calendarServices.getGoogleCalendarUrl(sourceUrl);
-            googleLink.classList.add("source-link", "source-google");
-            googleLink.innerText = OWCLocale.labels.menu_add_to_google || "Google";
-            googleLink.title = OWCLocale.labels.menu_add_to_google_title || "Add to Google Calendar";
-            googleLink.target = "_blank";
-            googleLink.rel = "noopener noreferrer";
-            sourceLinksContainer.appendChild(googleLink);
+            if (specification.menu_shows_calendar_source_google) {
+              const googleLink = document.createElement("a");
+              googleLink.href = calendarServices.getGoogleCalendarUrl(sourceUrl);
+              googleLink.classList.add("source-link", "source-google");
+              googleLink.innerText = OWCLocale.labels.menu_add_to_google || "Google";
+              googleLink.title = OWCLocale.labels.menu_add_to_google_title || "Add to Google Calendar";
+              googleLink.target = "_blank";
+              googleLink.rel = "noopener noreferrer";
+              sourceLinksContainer.appendChild(googleLink);
+            }
 
             // Outlook link
-            const outlookLink = document.createElement("a");
-            outlookLink.href = calendarServices.getOutlookUrl(sourceUrl);
-            outlookLink.classList.add("source-link", "source-outlook");
-            outlookLink.innerText = OWCLocale.labels.menu_add_to_outlook || "Outlook";
-            outlookLink.title = OWCLocale.labels.menu_add_to_outlook_title || "Add to Outlook";
-            outlookLink.target = "_blank";
-            outlookLink.rel = "noopener noreferrer";
-            sourceLinksContainer.appendChild(outlookLink);
+            if (specification.menu_shows_calendar_source_outlook) {
+              const outlookLink = document.createElement("a");
+              outlookLink.href = calendarServices.getOutlookUrl(sourceUrl);
+              outlookLink.classList.add("source-link", "source-outlook");
+              outlookLink.innerText = OWCLocale.labels.menu_add_to_outlook || "Outlook";
+              outlookLink.title = OWCLocale.labels.menu_add_to_outlook_title || "Add to Outlook";
+              outlookLink.target = "_blank";
+              outlookLink.rel = "noopener noreferrer";
+              sourceLinksContainer.appendChild(outlookLink);
+            }
 
             // View Source link
-            const viewSourceLink = document.createElement("a");
-            viewSourceLink.href = sourceUrl;
-            viewSourceLink.classList.add("source-link", "source-view");
-            viewSourceLink.innerText = OWCLocale.labels.menu_view_source || "Source";
-            viewSourceLink.title = OWCLocale.labels.menu_view_source_title || "View ICS source";
-            viewSourceLink.target = "_blank";
-            viewSourceLink.rel = "noopener noreferrer";
-            sourceLinksContainer.appendChild(viewSourceLink);
+            if (specification.menu_shows_calendar_source_view) {
+              const viewSourceLink = document.createElement("a");
+              viewSourceLink.href = sourceUrl;
+              viewSourceLink.classList.add("source-link", "source-view");
+              viewSourceLink.innerText = OWCLocale.labels.menu_view_source || "Source";
+              viewSourceLink.title = OWCLocale.labels.menu_view_source_title || "View ICS source";
+              viewSourceLink.target = "_blank";
+              viewSourceLink.rel = "noopener noreferrer";
+              sourceLinksContainer.appendChild(viewSourceLink);
+            }
 
             calendarListElement.appendChild(sourceLinksContainer);
         }
