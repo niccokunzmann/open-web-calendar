@@ -422,6 +422,13 @@ div.dhx_agenda_line > span {
     visibility: visible;
 }
 
+
+.calendar-list {
+  overflow-y: auto;
+  max-height: 90%;
+}
+
+
 /* END Burger Menu */
 
 /* Calendar Source Links in Menu */
