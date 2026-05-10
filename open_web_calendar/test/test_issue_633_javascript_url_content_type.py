@@ -21,12 +21,15 @@ def test_javascript_url_is_served_with_javascript_content_type(client, cache_url
     page = client.get(f"/calendar.html?javascript_url={js_url}").text
     sources = re.findall(r'<script\s+src="([^"]+)"', page)
 
-    served_contents = []
-    for src in sources:
-        if src.startswith(("http://", "https://")):
-            continue  # remote scripts must not be referenced directly
-        response = client.get(src)
-        if response.headers.get("Content-Type", "").startswith("text/javascript"):
-            served_contents.append(response.data.decode("utf-8"))
+    assert not any(src.startswith(("http://", "https://")) for src in sources), (
+        f"remote script src must be proxied, got: {sources}"
+    )
 
-    assert any(js_content in body for body in served_contents)
+    js_responses = [client.get(src) for src in sources]
+    js_bodies = [
+        r.data.decode("utf-8")
+        for r in js_responses
+        if r.headers.get("Content-Type", "").startswith("text/javascript")
+    ]
+
+    assert any(js_content in body for body in js_bodies)

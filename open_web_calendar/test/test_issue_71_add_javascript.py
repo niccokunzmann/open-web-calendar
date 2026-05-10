@@ -21,10 +21,7 @@ import pytest
         ),
         (
             "?javascript_url=/feature1.js&javascript_url=/feature2.js",
-            [
-                '<script src="/js/proxy?url=/feature1.js"',
-                '<script src="/js/proxy?url=/feature2.js"',
-            ],
+            ['<script src="/feature1.js"', '<script src="/feature2.js"'],
         ),
     ],
 )
