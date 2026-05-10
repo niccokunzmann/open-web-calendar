@@ -25,11 +25,11 @@ def test_javascript_url_is_served_with_javascript_content_type(client, cache_url
         f"remote script src must be proxied, got: {sources}"
     )
 
-    js_responses = [client.get(src) for src in sources]
-    js_bodies = [
-        r.data.decode("utf-8")
-        for r in js_responses
-        if r.headers.get("Content-Type", "").startswith("text/javascript")
-    ]
-
-    assert any(js_content in body for body in js_bodies)
+    served_as_js = False
+    for src in sources:
+        r = client.get(src)
+        is_js = r.headers.get("Content-Type", "").startswith("text/javascript")
+        if is_js and js_content in r.data.decode("utf-8"):
+            served_as_js = True
+            break
+    assert served_as_js, f"no script source served {js_content!r} as text/javascript"
