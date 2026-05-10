@@ -50,7 +50,11 @@ SPDX-License-Identifier: GPL-2.0-only
             {{ specification['css'] | safe }}
         </style>
         {% for link in specification.javascript_url %}
+        {% if link.startswith("http://") or link.startswith("https://") %}
+        <script src="/js/proxy?url={{ link | urlencode }}" charset="utf-8"></script>
+        {% else %}
         <script src="{{ link }}" charset="utf-8"></script>
+        {% endif %}
         {% endfor %}
         <script type="text/javascript">
             function onCalendarInitialized() {

@@ -358,6 +358,16 @@ def serve_locale(lang):
     )
 
 
+@app.route("/js/proxy")
+@allowed_hosts.limit()
+def serve_js_proxy():
+    """Proxy a remote script and re-serve it as text/javascript."""
+    url = request.args.get("url")
+    if not url:
+        return "Missing url parameter", 400
+    return make_js_file_response(get_text_from_url(url).decode("utf-8"))
+
+
 @app.errorhandler(500)
 def unhandled_exception(error):
     """Called when an error occurs.

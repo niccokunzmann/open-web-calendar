@@ -17,7 +17,7 @@ import pytest
     [
         (
             "?javascript_url=https://tippi.js/embed.js",
-            ['<script src="https://tippi.js/embed.js"'],
+            ['<script src="/js/proxy?url=https%3A//tippi.js/embed.js"'],
         ),
         (
             "?javascript_url=/feature1.js&javascript_url=/feature2.js",
