@@ -8,15 +8,17 @@ import datetime
 from flask import Response
 from icalendar import Calendar, Event, Timezone
 from icalendar.prop import vDDDTypes
+from icalendar_compatibility import Description
 from mergecal import merge_calendars
 
 from open_web_calendar.calendars.base import Calendars
+from open_web_calendar.clean_html import remove_html
 
 from .base import ConversionStrategy
 
 
 class ConvertToICS(ConversionStrategy):
-    """Convert events to dhtmlx. This conforms to a stratey pattern."""
+    """Convert events to dhtmlx. This conforms to a strategy pattern."""
 
     def created(self):
         self.title = self.specification["title"]
@@ -63,6 +65,15 @@ class ConvertToICS(ConversionStrategy):
             for event in calendar.events:
                 calendar.subcomponents.remove(event)
             calendar.add_component(Event.from_ical(only_event))
+        else:
+            for event in calendar.events:
+                description = Description(event)
+                html = description.html
+                if not html:
+                    continue
+                event["DESCRIPTION"] = description.text or remove_html(html)
+                if "X-ALT-DESC" not in event:
+                    event.add("X-ALT-DESC", html, parameters={"FMTTYPE": "text/html"})
         return Response(calendar.to_ical(), mimetype="text/calendar")
 
 
