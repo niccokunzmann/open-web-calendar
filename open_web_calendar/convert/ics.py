@@ -18,7 +18,7 @@ from .base import ConversionStrategy
 
 
 class ConvertToICS(ConversionStrategy):
-    """Convert events to dhtmlx. This conforms to a strategy pattern."""
+    """Convert events to ICS. This conforms to a strategy pattern."""
 
     def created(self):
         self.title = self.specification["title"]
@@ -37,7 +37,7 @@ class ConvertToICS(ConversionStrategy):
             self.components.extend(calendars.get_icalendars())
 
     def convert_error(self, error: str, url: str, tb_s: str):
-        """Create an error which can be used by the dhtmlx scheduler."""
+        """Create an error event that appears in the ICS output."""
         event = Event()
         event["DTSTART"] = event["DTEND"] = vDDDTypes(datetime.datetime.now())
         event["SUMMARY"] = error
