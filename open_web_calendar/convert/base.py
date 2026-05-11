@@ -133,9 +133,9 @@ class ConversionStrategy:
             self.collect_components_from(index, calendars)
         except:
             ty, err, tb = sys.exc_info()
-            with self.lock:
-                component = self.error(ty, err, tb, url)
-                if component is not None:
+            component = self.error(ty, err, tb, url)
+            if component is not None:
+                with self.lock:
                     self.components.append(component)
 
     def collect_components_from(self, index: int, calendars: Calendars):
