@@ -35,7 +35,7 @@ def get_text_from_url(url):
 class ConversionStrategy:
     """Base class for conversions.
 
-    You can customize how calendars are retrived and if encryption is used.
+    You can customize how calendars are retrieved and if encryption is used.
     """
 
     # TODO: add as parameters
@@ -52,6 +52,7 @@ class ConversionStrategy:
         self.encryption = EmptyFernetStore() if encryption is None else encryption
         self.lock = RLock()
         self.components = []
+        self.seen_errors: set[tuple[str, str]] = set()
         self.get_text_from_url = get_text_from_url
         self.debug = debug
         self.created()
@@ -60,10 +61,17 @@ class ConversionStrategy:
         """Template method for subclasses."""
 
     def error(self, ty, err, tb, url):
+        traceback.print_exception(ty, err, tb)
+        error_str = str(err) if self.debug else type(err).__name__
+        key = (error_str, url)
+        with self.lock:
+            if key in self.seen_errors:
+                return None
+            self.seen_errors.add(key)
         tb_s = io.StringIO()
         traceback.print_exception(ty, err, tb, file=tb_s)
         return self.convert_error(
-            str(err) if self.debug else type(err).__name__,
+            error_str,
             url,
             tb_s.getvalue() if self.debug else "",
         )
@@ -86,7 +94,7 @@ class ConversionStrategy:
                 pass  # no error should pass silently; import this
 
     def get_calendars_from_url(self, url: str) -> Calendars:
-        """Return a lis of calendars from a URL."""
+        """Return a list of calendars from a URL."""
         if self.encryption.is_encrypted(url):
             url = self.encryption.decrypt(url).url
             if url is None:
@@ -126,10 +134,12 @@ class ConversionStrategy:
         except:
             ty, err, tb = sys.exc_info()
             with self.lock:
-                self.components.append(self.error(ty, err, tb, url))
+                component = self.error(ty, err, tb, url)
+                if component is not None:
+                    self.components.append(component)
 
     def collect_components_from(self, index: int, calendars: Calendars):
-        """Collect all the compenents from the calendar."""
+        """Collect all the components from the calendar."""
         raise NotImplementedError("to be implemented in subclasses")
 
     def merge(self):
