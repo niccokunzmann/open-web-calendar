@@ -68,13 +68,13 @@ class ConversionStrategy:
             if key in self.seen_errors:
                 return None
             self.seen_errors.add(key)
-        tb_s = io.StringIO()
-        traceback.print_exception(ty, err, tb, file=tb_s)
-        return self.convert_error(
-            error_str,
-            url,
-            tb_s.getvalue() if self.debug else "",
-        )
+            tb_s = io.StringIO()
+            traceback.print_exception(ty, err, tb, file=tb_s)
+            return self.convert_error(
+                error_str,
+                url,
+                tb_s.getvalue() if self.debug else "",
+            )
 
     def convert_error(self, error: str, url: str, tb_s: str):
         """Tell the client more about the error."""
