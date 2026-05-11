@@ -37,7 +37,13 @@ def test_html_is_preserved_in_x_alt_desc(merged):
 
 
 def test_plain_text_description_is_unchanged(merged):
-    """Events with plain-text DESCRIPTION must not get a spurious X-ALT-DESC."""
-    cal = merged(["one-event"])
-    for event in cal.events:
-        assert event.get("X-ALT-DESC") is None
+    """A source event with plain-text DESCRIPTION keeps its text verbatim
+    and gets no spurious X-ALT-DESC."""
+    cal = merged(["issue-287-links-1"])
+    plain_text_event = next(
+        e
+        for e in cal.events
+        if str(e.get("UID", "")) == "1lnco7mmf4p8042a098k4h968g@google.com"
+    )
+    assert plain_text_event.get("X-ALT-DESC") is None
+    assert "www.DowntownMarceline.org" in str(plain_text_event["DESCRIPTION"])
