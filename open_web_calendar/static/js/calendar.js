@@ -64,7 +64,7 @@ function makeLink(url, html) {
 
 
 /*
- * Download the vent ICS with a file name.
+ * Download the event ICS with a file name.
  */
 function downloadICS(event) {
     // from https://stackoverflow.com/a/18197341/1320237
@@ -544,7 +544,7 @@ function loadScheduler() {
     scheduler.clearAll();
     let schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + document.location.search;
     // add the time zone if not specified
-    if (specification.timezone == "") {
+    if (specification.timezone == "" && !/[?&]timezone=/.test(schedulerUrl)) {
         schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
     }
 
