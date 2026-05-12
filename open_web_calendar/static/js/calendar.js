@@ -544,8 +544,10 @@ function loadScheduler() {
     scheduler.clearAll();
     let schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + document.location.search;
     // add the time zone if not specified
-    if (specification.timezone == "" && !/[?&]timezone=/.test(schedulerUrl)) {
-        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
+    if (specification.timezone == "") {
+        const params = new URLSearchParams(document.location.search);
+        params.set("timezone", getTimezone());
+        schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + "?" + params.toString();
     }
 
     scheduler.load(schedulerUrl, "json");
