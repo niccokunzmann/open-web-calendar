@@ -4,6 +4,7 @@
 """Convert the source links according to the specification to an ICS file."""
 
 import datetime
+import re
 
 from flask import Response
 from icalendar import Calendar, Event, Timezone
@@ -20,6 +21,13 @@ from .base import ConversionStrategy
 class ConvertToICS(ConversionStrategy):
     """Convert events to ICS. This conforms to a strategy pattern."""
 
+    html_description_property = "X-ALT-DESC"
+
+    def clean_ics_html(self, html: str) -> str:
+        """Clean and compact HTML before storing it in an ICS property."""
+        cleaned_html = " ".join(self.clean_html(html).split())
+        return re.sub(r">\s+<", "><", cleaned_html)
+
     def created(self):
         self.title = self.specification["title"]
         self.timezones = set()  # ids
@@ -35,6 +43,25 @@ class ConvertToICS(ConversionStrategy):
     def collect_components_from(self, calendar_index: int, calendars: Calendars):
         with self.lock:
             self.components.extend(calendars.get_icalendars())
+
+    def clean_html_descriptions(self, calendar: Calendar):
+        """Clean HTML descriptions before serializing the ICS response."""
+        for event in calendar.walk("VEVENT"):
+            description = event.get(self.html_description_property)
+            if description is None:
+                continue
+            descriptions = (
+                description if isinstance(description, list) else [description]
+            )
+            cleaned_descriptions = []
+            for value in descriptions:
+                parameters = value.params.copy() if hasattr(value, "params") else {}
+                cleaned_descriptions.append(
+                    (self.clean_ics_html(str(value)), parameters)
+                )
+            del event[self.html_description_property]
+            for value, parameters in cleaned_descriptions:
+                event.add(self.html_description_property, value, parameters=parameters)
 
     def convert_error(self, error: str, url: str, tb_s: str):
         """Create an error event that appears in the ICS output."""
@@ -74,6 +101,7 @@ class ConvertToICS(ConversionStrategy):
                 event["DESCRIPTION"] = description.text or remove_html(html)
                 if "X-ALT-DESC" not in event:
                     event.add("X-ALT-DESC", html, parameters={"FMTTYPE": "text/html"})
+        self.clean_html_descriptions(calendar)
         return Response(calendar.to_ical(), mimetype="text/calendar")
 
 
