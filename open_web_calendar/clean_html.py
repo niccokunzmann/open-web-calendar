@@ -8,7 +8,6 @@ This is important to mitigate attacks from ICS sources.
 See https://stackoverflow.com/questions/3073881/clean-up-html-in-python
 """
 
-import re
 import warnings
 
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
@@ -19,7 +18,6 @@ DEFAULT_SPEC = {
     "page_structure": True,
     "remove_tags": ("body", "div"),
 }
-HTML_TAG_MATCH = re.compile("<[^>]*>")
 
 
 def clean_html(bad_html: str, spec: dict) -> str:
@@ -51,8 +49,15 @@ def clean_html(bad_html: str, spec: dict) -> str:
 
 
 def remove_html(html: str) -> str:
-    """Remove all HTML from the html string and only return the text."""
-    return HTML_TAG_MATCH.sub("", html)
+    """Remove all HTML from the html string and only return the text.
+
+    Uses an HTML parser rather than a regex so malformed input like
+    ``><<<>`` is treated as text instead of being partially consumed,
+    and HTML entities (``&amp;``, ``&nbsp;``, ...) are unescaped.
+    """
+    with warnings.catch_warnings():
+        warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
+        return BeautifulSoup(html, "html.parser").get_text()
 
 
 __all__ = ["clean_html", "remove_html"]

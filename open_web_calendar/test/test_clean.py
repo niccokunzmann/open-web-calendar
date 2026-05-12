@@ -27,7 +27,12 @@ def test_clean_html_from_spec(html, spec, expected_output):
 def test_remove_html():
     """Remove all HTML tags - we do not expect them in the summary."""
     assert remove_html("<asd>aaa</asd>bbb") == "aaabbb"
-    assert remove_html("><<<>") == ">"
+    # Malformed input is treated as plain text by the HTML parser instead
+    # of being partially eaten by a regex (was ">" with the old regex).
+    assert remove_html("><<<>") == "><<<>"
+    # HTML entities are unescaped now that we parse the input.
+    assert remove_html("a&amp;b") == "a&b"
+    assert remove_html("plain text") == "plain text"
 
 
 def test_nice_id_for_event(client, calendar_urls):
