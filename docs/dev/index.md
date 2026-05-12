@@ -88,8 +88,16 @@ tox -e web -- -D window=375x812 # iPhone11 size
 In case the browser tests fail, screenshots are recorded and a link is printed.
 
 ```sh
-
+tox -e dev
 ```
+
+The debug environment starts the test server with `APP_DEBUG=true` and uses the
+test specification from `open_web_calendar/features/environment_specification.yml`.
+When a browser step fails, the test run prints the captured server output and
+stores a screenshot in the `screenshots/` directory. Open the printed screenshot
+path to inspect the page state at the failing step.
+
+For Behave browser tests, see the [Behave testing guide](behave.md).
 
 ## Documentation
 

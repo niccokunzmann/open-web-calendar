@@ -372,6 +372,7 @@ nav:
   - Development:
     - dev/translate.md
     - dev/index.md
+    - dev/behave.md
     - dev/api.md
     - dev/javascript.md
     - dev/maintain.md

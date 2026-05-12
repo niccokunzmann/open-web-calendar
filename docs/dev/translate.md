@@ -14,6 +14,16 @@ If your language is not listed, please request to add it!
 
 - [Translate on Weblate]({{link.weblate}})
 
+If your language is missing on Weblate, use Weblate's "Start new translation"
+or request the language in a project issue and include the language name and
+locale code. This helps maintainers enable the right plural rules and language
+selector entry.
+
+If you find a wrong translation, leave a Weblate comment or suggestion on the
+affected string. For broader wording issues, open a project issue and include
+the language, the page or calendar view where you saw the text, and the current
+and suggested wording.
+
 Here, you can see the current translation status:
 
 [![Translation status](https://hosted.weblate.org/widgets/open-web-calendar/-/multi-auto.svg)]({{link.weblate}})
@@ -38,6 +48,11 @@ I am not a native speaker, so my English is a bit clunky and your translation co
 
 - If you add a **new language**, you should also translate the calendar to it, especially the `language` and `language-en` strings so people can choose the language for the calendar from the drop down menu.
 - If you want your language to be featured at the top of the front page so people can click on it, you need at least 50% of the About Page and Configuration Page page.
+
+The `language` string is the language name as it should appear to speakers of
+that language, for example `Deutsch`. The `language-en` string is the English
+name, for example `German`. Keep both translated for new languages so users can
+recognize the language selector even when they do not understand the current UI.
 
 Have **fun** translating and thank you so much! If you have any questions, get in contact with me, @niccokunzmann.
 
