@@ -47,7 +47,7 @@ def wait_until(condition: Callable[[], bool], error_message: str):
 
 @contextlib.contextmanager
 def no_time_to_wait_for_elements(context):
-    """Set the global wait to 0 and expect everythign to be there."""
+    """Set the global wait to 0 and expect everything to be there."""
     context.browser.implicitly_wait(0)
     yield
     context.browser.implicitly_wait(WAIT)
@@ -209,14 +209,11 @@ def step_impl(context, text):
 def step_impl(context, text):
     xpath = f"//a[contains(text(), {text!r})]"
     # from https://stackoverflow.com/a/27603477/1320237
-    link = WebDriverWait(context.browser, 10).until(
+    link = WebDriverWait(context.browser, WAIT).until(
         EC.element_to_be_clickable((By.XPATH, xpath))
     )
-    # see also https://stackoverflow.com/a/9678084/1320237
-    link.send_keys(Keys.CONTROL)
-    link.send_keys(Keys.RETURN)
     link.click()
-    time.sleep(0.1)
+    WebDriverWait(context.browser, WAIT).until(EC.staleness_of(link))
 
 
 @when('we click on the link "{text}"')
@@ -576,7 +573,7 @@ def step_impl(context, tag, text):
 
 @when("we wait for the loader to disappear")
 def step_impl(context):
-    """Wait for the loader to disappaer."""
+    """Wait for the loader to disappear."""
     wait_for_calendar_to_load(context)
 
 
