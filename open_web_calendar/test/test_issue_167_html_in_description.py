@@ -11,11 +11,43 @@ clean text while X-ALT-DESC carries the HTML for clients that want it.
 See https://github.com/niccokunzmann/open-web-calendar/issues/167
 """
 
+from icalendar import Calendar, Event
 from icalendar_compatibility import Description
+
+from open_web_calendar.app import get_default_specification
+from open_web_calendar.convert.ics import ConvertToICS
 
 
 def event_by_uid(cal, uid):
     return next(e for e in cal.events if str(e.get("UID", "")) == uid)
+
+
+def merged_event(event):
+    """Return the event after serializing and parsing the ICS response."""
+    source = Calendar()
+    source.add_component(event)
+    converter = ConvertToICS(get_default_specification())
+    converter.components.append(source)
+    return Calendar.from_ical(converter.merge().data).events[0]
+
+
+def unsafe_html():
+    return (
+        '<p>safe</p><script>alert(1)</script>'
+        '<a href="javascript:alert(2)" onclick="evil()">bad</a>'
+    )
+
+
+def assert_x_alt_desc_is_cleaned(event):
+    x_alt = event["X-ALT-DESC"]
+    text = str(x_alt)
+    assert x_alt.params.get("FMTTYPE") == "text/html"
+    assert "safe" in text
+    assert "bad" in text
+    assert "<script" not in text
+    assert "javascript:" not in text
+    assert "onclick" not in text
+    assert "\n" not in text
 
 
 def test_html_in_description_is_stripped(merged):
@@ -29,8 +61,7 @@ def test_html_in_description_is_stripped(merged):
 
 
 def test_html_is_preserved_in_x_alt_desc(merged):
-    """When the source carried HTML, X-ALT-DESC must keep it so HTML-aware
-    clients still get the formatted version."""
+    """When the source carried HTML, X-ALT-DESC keeps sanitized HTML."""
     cal = merged(["issue-287-links-1"])
     events_with_html = [e for e in cal.events if e.get("X-ALT-DESC") is not None]
     assert events_with_html, "expected at least one event with X-ALT-DESC"
@@ -61,12 +92,27 @@ def test_altrep_html_is_normalised(merged):
     assert Description.this_could_be_html(str(x_alt))
 
 
-def test_existing_x_alt_desc_is_preserved(merged):
-    """When the source already has X-ALT-DESC;FMTTYPE=text/html, the HTML
-    is preserved verbatim (no overwrite)."""
-    cal = merged(["food"])
-    event = event_by_uid(cal, "2845")
-    x_alt = event["X-ALT-DESC"]
-    assert x_alt.params.get("FMTTYPE") == "text/html"
-    # Source X-ALT-DESC starts with this DOCTYPE; verify it wasn't overwritten.
-    assert str(x_alt).startswith("<!DOCTYPE HTML")
+def test_existing_x_alt_desc_is_cleaned():
+    """Source X-ALT-DESC HTML is cleaned before /calendar.ics serves it."""
+    event = Event()
+    event.add("uid", "existing-x-alt-desc")
+    event.add("summary", "Existing X-ALT-DESC")
+    event.add(
+        "x-alt-desc",
+        unsafe_html(),
+        parameters={"FMTTYPE": "text/html"},
+    )
+
+    assert_x_alt_desc_is_cleaned(merged_event(event))
+
+
+def test_promoted_description_x_alt_desc_is_cleaned():
+    """DESCRIPTION HTML promoted into X-ALT-DESC is cleaned too."""
+    event = Event()
+    event.add("uid", "promoted-x-alt-desc")
+    event.add("summary", "Promoted X-ALT-DESC")
+    event.add("description", unsafe_html())
+
+    merged = merged_event(event)
+    assert_x_alt_desc_is_cleaned(merged)
+    assert "<script" not in str(merged["DESCRIPTION"])
