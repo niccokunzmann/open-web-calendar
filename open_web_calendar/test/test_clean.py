@@ -8,7 +8,7 @@ from pprint import pprint
 
 import pytest
 
-from open_web_calendar.clean_html import clean_html, remove_html
+from open_web_calendar.clean_html import clean_html, html_to_text, remove_html
 
 
 @pytest.mark.parametrize(
@@ -28,6 +28,17 @@ def test_remove_html():
     """Remove all HTML tags - we do not expect them in the summary."""
     assert remove_html("<asd>aaa</asd>bbb") == "aaabbb"
     assert remove_html("><<<>") == ">"
+
+
+def test_html_to_text_keeps_readable_breaks():
+    """Extract text from HTML while preserving meaningful line breaks."""
+    html = "<p>Breakfast<br>Eggs and toast</p><p>Lunch</p>"
+    assert html_to_text(html) == "Breakfast\nEggs and toast\nLunch"
+
+
+def test_html_to_text_keeps_inline_text_together():
+    """Inline formatting should not add noisy line breaks."""
+    assert html_to_text("A <strong>bold</strong> day") == "A bold day"
 
 
 def test_nice_id_for_event(client, calendar_urls):

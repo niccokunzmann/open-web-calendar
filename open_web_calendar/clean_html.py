@@ -20,6 +20,7 @@ DEFAULT_SPEC = {
     "remove_tags": ("body", "div"),
 }
 HTML_TAG_MATCH = re.compile("<[^>]*>")
+HTML_TEXT_BREAK_TAGS = ("br", "div", "p", "li", "tr", "hr")
 
 
 def clean_html(bad_html: str, spec: dict) -> str:
@@ -55,4 +56,19 @@ def remove_html(html: str) -> str:
     return HTML_TAG_MATCH.sub("", html)
 
 
-__all__ = ["clean_html", "remove_html"]
+def html_to_text(html: str) -> str:
+    """Extract readable plain text from HTML.
+
+    Unlike remove_html(), this keeps natural line breaks for block and break
+    tags while preserving remove_html()'s compact historical behavior.
+    """
+    with warnings.catch_warnings():
+        warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
+        tree = BeautifulSoup(html, "html.parser")
+    for tag in tree.find_all(HTML_TEXT_BREAK_TAGS):
+        tag.append("\n")
+    lines = [line.strip() for line in tree.get_text().splitlines()]
+    return "\n".join(line for line in lines if line)
+
+
+__all__ = ["clean_html", "html_to_text", "remove_html"]
