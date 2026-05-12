@@ -29,14 +29,14 @@ def is_date(date):
 
 
 class ConvertToEvents(ConversionStrategy):
-    """Convert events to dhtmlx. This conforms to a stratey pattern.
+    """Convert events to dhtmlx. This conforms to a strategy pattern.
 
     - timeshift_minutes is the timeshift specified by the calendar
         for dates.
     """
 
     def created(self):
-        """Set attribtues when created."""
+        """Set attributes when created."""
         try:
             self.timezone = zoneinfo.ZoneInfo(self.specification["timezone"])
         except (zoneinfo.ZoneInfoNotFoundError, ValueError):
@@ -204,10 +204,11 @@ class ConvertToEvents(ConversionStrategy):
     def get_event_description(self, event: Event):
         """Return a formatted description of the event.
 
-        HTML is cleaned.
+        HTML is cleaned. When the source has no HTML description,
+        the plain-text DESCRIPTION is used.
         """
-        description = Description(event).html
-        return self.clean_html(description)
+        description = Description(event)
+        return self.clean_html(description.html or description.text)
 
     def merge(self):
         return jsonify(self.components)
