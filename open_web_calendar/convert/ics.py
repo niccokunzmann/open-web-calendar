@@ -12,7 +12,7 @@ from icalendar_compatibility import Description
 from mergecal import merge_calendars
 
 from open_web_calendar.calendars.base import Calendars
-from open_web_calendar.clean_html import remove_html
+from open_web_calendar.clean_html import html_to_text
 
 from .base import ConversionStrategy
 
@@ -71,7 +71,7 @@ class ConvertToICS(ConversionStrategy):
                 html = description.html
                 if not html:
                     continue
-                event["DESCRIPTION"] = description.text or remove_html(html)
+                event["DESCRIPTION"] = description.text or html_to_text(html)
                 if "X-ALT-DESC" not in event:
                     event.add("X-ALT-DESC", html, parameters={"FMTTYPE": "text/html"})
         return Response(calendar.to_ical(), mimetype="text/calendar")
