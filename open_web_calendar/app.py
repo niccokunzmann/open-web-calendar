@@ -218,8 +218,8 @@ def get_specification(query=None):
         if isinstance(specification.get(parameter), list):
             if len(value) == 1 and value[0] == "":
                 value = []
-        elif len(value) == 1:
-            value = value[0]
+        else:
+            value = value[-1]
         specification[parameter] = value
 
     specification.pop(PARAM_SPECIFICATION_URL, None)
@@ -377,7 +377,7 @@ def unhandled_exception(error):
     trace = (
         f"<pre>\r\n{traceback.format_exc()}</pre>"
         if config.debug
-        else "Trace only avalilable if DEBUG=true."
+        else "Trace only available if DEBUG=true."
     )
     return (
         f"""
