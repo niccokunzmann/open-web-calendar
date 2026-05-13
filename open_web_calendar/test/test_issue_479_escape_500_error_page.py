@@ -73,12 +73,17 @@ def test_500_in_debug_escapes_script_tag_in_exception_message(
     client, debug, errors_propagate_to_handler
 ):
     """An attacker-controlled <script> tag in the ValueError message must
-    appear HTML-escaped in the 500 response (NF-006)."""
-    response = client.get("/calendar.%3Cscript%3Ealert(1)%3C/script%3E")
+    appear HTML-escaped in the 500 response (NF-006).
+
+    The URL converter rejects encoded slashes, so this exercises the
+    opening-tag payload only. The closing-tag case is covered by the
+    direct-handler-call test below, which is not subject to URL routing.
+    """
+    response = client.get("/calendar.%3Cscript%3E")
     assert response.status_code == 500
     body = response.data.decode("utf-8")
-    assert "<script>alert(1)</script>" not in body
-    assert "&lt;script&gt;alert(1)&lt;/script&gt;" in body
+    assert "<script>" not in body
+    assert "&lt;script&gt;" in body
 
 
 def _raise_xss_payload():
