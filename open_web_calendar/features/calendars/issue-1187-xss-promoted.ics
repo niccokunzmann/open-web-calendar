@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Issue 1187 fixture//EN
+BEGIN:VEVENT
+UID:issue-1187-promoted@example.com
+DTSTAMP:20260101T000000Z
+DTSTART:20260101T100000Z
+DTEND:20260101T110000Z
+SUMMARY:Event with HTML in DESCRIPTION (promoted to X-ALT-DESC)
+DESCRIPTION:<p>Hello</p><script>alert('XSS-promoted')</script><img src=x onerror="alert(1)">
+END:VEVENT
+END:VCALENDAR
