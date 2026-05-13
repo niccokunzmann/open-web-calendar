@@ -276,8 +276,8 @@ menu-shows-calendar-descriptions: "List Calendar Descriptions"
 menu-shows-calendar-visibility: "Hide/Show Calendars"
 
 event-details-title: "Event Details"
-event-details-description: "Choose whether clicking an event opens quick info and whether hovering shows a tooltip."
-event-details-popup: "Show quick info on click"
+event-details-description: "Choose whether clicking an event shows its details and whether hovering shows a tooltip."
+event-details-popup: "Show event details on click"
 event-details-tooltip: "Show tooltip on hover"
 
 # Heading of option
