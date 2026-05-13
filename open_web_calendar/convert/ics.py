@@ -72,8 +72,10 @@ class ConvertToICS(ConversionStrategy):
                 if not html:
                     continue
                 event["DESCRIPTION"] = description.text or remove_html(html)
-                if "X-ALT-DESC" not in event:
-                    event.add("X-ALT-DESC", html, parameters={"FMTTYPE": "text/html"})
+                safe_html = self.clean_html(html)
+                if "X-ALT-DESC" in event:
+                    del event["X-ALT-DESC"]
+                event.add("X-ALT-DESC", safe_html, parameters={"FMTTYPE": "text/html"})
         return Response(calendar.to_ical(), mimetype="text/calendar")
 
 

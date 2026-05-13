@@ -61,12 +61,12 @@ def test_altrep_html_is_normalised(merged):
     assert Description.this_could_be_html(str(x_alt))
 
 
-def test_existing_x_alt_desc_is_preserved(merged):
+def test_existing_x_alt_desc_is_sanitized(merged):
     """When the source already has X-ALT-DESC;FMTTYPE=text/html, the HTML
-    is preserved verbatim (no overwrite)."""
+    is sanitized but the content survives (see #1187)."""
     cal = merged(["food"])
     event = event_by_uid(cal, "2845")
     x_alt = event["X-ALT-DESC"]
     assert x_alt.params.get("FMTTYPE") == "text/html"
-    # Source X-ALT-DESC starts with this DOCTYPE; verify it wasn't overwritten.
-    assert str(x_alt).startswith("<!DOCTYPE HTML")
+    assert Description.this_could_be_html(str(x_alt))
+    assert "Breakfast" in str(x_alt)
