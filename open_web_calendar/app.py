@@ -370,35 +370,9 @@ def serve_js_proxy():
 
 @app.errorhandler(500)
 def unhandled_exception(error):
-    """Called when an error occurs.
-
-    See https://stackoverflow.com/q/14993318
-    """
-    trace = (
-        f"<pre>\r\n{traceback.format_exc()}</pre>"
-        if config.debug
-        else "Trace only available if DEBUG=true."
-    )
-    return (
-        f"""
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-    <html>
-        <head>
-            <title>500 Internal Server Error</title>
-        </head>
-        <body>
-            <h1>Internal Server Error</h1>
-            <p>
-                The server encountered an internal error and was unable to
-                complete your request.  Either the server is overloaded or
-                there is an error in the application.
-            </p>
-            {trace}
-        </body>
-    </html>
-    """,
-        http_status_code_for_error(error),
-    )  # return error code from https://stackoverflow.com/a/7824605
+    """Called when an error occurs."""
+    trace = traceback.format_exc() if config.debug else None
+    return render_template("500.html", trace=trace), http_status_code_for_error(error)
 
 
 @app.post("/encrypt")
