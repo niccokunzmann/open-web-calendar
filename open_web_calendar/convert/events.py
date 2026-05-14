@@ -214,6 +214,11 @@ class ConvertToEvents(ConversionStrategy):
         return self.clean_html(description.html or description.text)
 
     def merge(self):
+        if len(self.components) > config.max_response_events:
+            raise ResponseTooLarge(
+                f"Response would have {len(self.components)} events; "
+                f"max is {config.max_response_events}."
+            )
         response = jsonify(self.components)
         body_size = len(response.get_data())
         if body_size > config.max_response_bytes:

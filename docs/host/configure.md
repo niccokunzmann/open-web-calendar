@@ -226,10 +226,10 @@ This addresses pentest finding CLN-007 (recurring-event denial of service).
 
 default `1000` (events)
 
-The maximum number of `VEVENT` components accepted in a single source
-calendar. This is a pre-expansion cap that rejects abnormally large source
-calendars before the recurring-event expansion step runs. When exceeded,
-the request returns HTTP 413.
+The maximum number of `VEVENT` components accepted from a single fetched
+ICS payload, summed across all `VCALENDAR` blocks in that payload. This is a
+pre-expansion cap that rejects abnormally large source calendars before the
+recurring-event expansion step runs. When exceeded, the request returns HTTP 413.
 
 This addresses pentest finding CLN-007 (recurring-event denial of service).
 
