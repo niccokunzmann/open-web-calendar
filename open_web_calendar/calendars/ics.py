@@ -54,8 +54,8 @@ class ICSCalendars(Calendars):
         total_source = sum(len(calendar.walk("VEVENT")) for calendar in self._calendars)
         if total_source > config.max_source_events:
             raise ResponseTooLarge(
-                f"Calendar has {total_source} events; "
-                f"max is {config.max_source_events}."
+                f"Source events ({total_source}) exceed "
+                f"max_source_events ({config.max_source_events})."
             )
         events = []
         for calendar in self._calendars:

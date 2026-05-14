@@ -216,27 +216,30 @@ class ConvertToEvents(ConversionStrategy):
     def merge(self):
         if len(self.components) > config.max_response_events:
             raise ResponseTooLarge(
-                f"Response would have {len(self.components)} events; "
-                f"max is {config.max_response_events}."
+                f"Response has {len(self.components)} events; "
+                f"max_response_events is {config.max_response_events}."
             )
         response = jsonify(self.components)
-        body_size = len(response.get_data())
-        if body_size > config.max_response_bytes:
+        # calculate_content_length() reads the cached body size without
+        # forcing a second buffer copy via get_data().
+        body_size = response.calculate_content_length()
+        if body_size is not None and body_size > config.max_response_bytes:
             raise ResponseTooLarge(
-                f"Response would be {body_size} bytes; "
-                f"max is {config.max_response_bytes}."
+                f"Response is {body_size} bytes; "
+                f"max_response_bytes is {config.max_response_bytes}."
             )
         return response
 
     def collect_components_from(self, calendar_index: int, calendars: Calendars):
         # see https://stackoverflow.com/a/16115575/1320237
         events = calendars.get_events_between(self.from_date, self.to_date)
-        if len(events) > config.max_response_events:
-            raise ResponseTooLarge(
-                f"Calendar would generate {len(events)} events; "
-                f"max is {config.max_response_events}."
-            )
         with self.lock:
+            total = len(self.components) + len(events)
+            if total > config.max_response_events:
+                raise ResponseTooLarge(
+                    f"Expanded events ({total}) exceed "
+                    f"max_response_events ({config.max_response_events})."
+                )
             for event in events:
                 json_event = self.convert_ical_event(calendar_index, event)
                 self.components.append(json_event)

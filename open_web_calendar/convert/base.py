@@ -132,6 +132,7 @@ class ConversionStrategy:
             calendars = self.get_calendars_from_url(url)
             self.collect_components_from(index, calendars)
         except ResponseTooLarge:
+            # CLN-007 caps must surface as HTTP 413, not as an in-band error event.
             raise
         except:
             ty, err, tb = sys.exc_info()
