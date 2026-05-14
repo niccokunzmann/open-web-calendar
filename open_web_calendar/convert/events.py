@@ -214,19 +214,16 @@ class ConvertToEvents(ConversionStrategy):
         return self.clean_html(description.html or description.text)
 
     def merge(self):
-        if len(self.components) > config.max_response_events:
-            raise ResponseTooLarge(
-                f"Response has {len(self.components)} events; "
-                f"max_response_events is {config.max_response_events}."
-            )
         response = jsonify(self.components)
         # calculate_content_length() reads the cached body size without
         # forcing a second buffer copy via get_data().
         body_size = response.calculate_content_length()
-        if body_size is not None and body_size > config.max_response_bytes:
-            raise ResponseTooLarge(
-                f"Response is {body_size} bytes; "
-                f"max_response_bytes is {config.max_response_bytes}."
+        if body_size is not None:
+            ResponseTooLarge.check(
+                "Response bytes",
+                body_size,
+                "max_response_bytes",
+                config.max_response_bytes,
             )
         return response
 
@@ -235,11 +232,12 @@ class ConvertToEvents(ConversionStrategy):
         events = calendars.get_events_between(self.from_date, self.to_date)
         with self.lock:
             total = len(self.components) + len(events)
-            if total > config.max_response_events:
-                raise ResponseTooLarge(
-                    f"Expanded events ({total}) exceed "
-                    f"max_response_events ({config.max_response_events})."
-                )
+            ResponseTooLarge.check(
+                "Expanded events",
+                total,
+                "max_response_events",
+                config.max_response_events,
+            )
             for event in events:
                 json_event = self.convert_ical_event(calendar_index, event)
                 self.components.append(json_event)

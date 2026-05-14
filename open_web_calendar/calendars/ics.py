@@ -52,11 +52,12 @@ class ICSCalendars(Calendars):
         # Sum across all parsed calendars so an attacker can't bypass the cap
         # by concatenating multiple VCALENDAR blocks in one response.
         total_source = sum(len(calendar.walk("VEVENT")) for calendar in self._calendars)
-        if total_source > config.max_source_events:
-            raise ResponseTooLarge(
-                f"Source events ({total_source}) exceed "
-                f"max_source_events ({config.max_source_events})."
-            )
+        ResponseTooLarge.check(
+            "Source events",
+            total_source,
+            "max_source_events",
+            config.max_source_events,
+        )
         events = []
         for calendar in self._calendars:
             events.extend(recurring_ical_events.of(calendar).between(start, end))
