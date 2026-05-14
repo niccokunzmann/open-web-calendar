@@ -107,6 +107,33 @@ class Config:
         return self._source.get("OWC_ENABLE_JS", "true").lower() != "false"
 
     @config_property
+    def max_source_events(self) -> int:
+        """Maximum VEVENTs accepted in a single source calendar.
+
+        Variable: OWC_MAX_SOURCE_EVENTS
+        Default: 1000
+        """
+        return int(self._source.get("OWC_MAX_SOURCE_EVENTS", "1000"))
+
+    @config_property
+    def max_response_events(self) -> int:
+        """Maximum expanded events in a /calendar.events.json response.
+
+        Variable: OWC_MAX_RESPONSE_EVENTS
+        Default: 10000
+        """
+        return int(self._source.get("OWC_MAX_RESPONSE_EVENTS", "10000"))
+
+    @config_property
+    def max_response_bytes(self) -> int:
+        """Maximum byte size of a /calendar.events.json response body.
+
+        Variable: OWC_MAX_RESPONSE_MB
+        Default: 10 (MB)
+        """
+        return int(float(self._source.get("OWC_MAX_RESPONSE_MB", "10")) * MB)
+
+    @config_property
     def cache_expire_after(self) -> int:
         """The cache expiration timeout in seconds.
 

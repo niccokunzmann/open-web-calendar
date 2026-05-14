@@ -82,13 +82,13 @@ def test_default_allows_normal_recurring_calendar(client, cache_url):
 def test_pentest_poc_is_rejected(client, cache_url):
     """A scaled-down CLN-007 pentest pattern is rejected by the expanded cap.
 
-    Real PoC uses 100 source events; we use 5 to keep CI time bounded while
-    still triggering >10000 expanded events from daily-until-2050 RRULEs.
+    Real PoC uses 100 source events; we use 5 over a 6-year window which still
+    expands to ~10960 events (over the OWC_MAX_RESPONSE_EVENTS cap of 10000).
     """
     url = "http://example.com/poc.ics"
     cache_url(url, _build_pentest_poc(source_event_count=5))
     response = client.get(
-        f"/calendar.events.json?url={url}&from=2025-01-01&to=2027-01-01"
+        f"/calendar.events.json?url={url}&from=2020-01-01&to=2026-01-01"
     )
     assert response.status_code == 413
 

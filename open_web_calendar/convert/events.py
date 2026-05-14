@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import datetime
+import json
 import zoneinfo
 from html import escape
 from typing import TYPE_CHECKING, Any
@@ -14,6 +15,9 @@ from urllib.parse import unquote
 from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
+
+from open_web_calendar.config import environment as config
+from open_web_calendar.error import ResponseTooLarge
 
 from .base import ConversionStrategy
 
@@ -211,11 +215,22 @@ class ConvertToEvents(ConversionStrategy):
         return self.clean_html(description.html or description.text)
 
     def merge(self):
+        body = json.dumps(self.components).encode("utf-8")
+        if len(body) > config.max_response_bytes:
+            raise ResponseTooLarge(
+                f"Response would be {len(body)} bytes; "
+                f"max is {config.max_response_bytes}."
+            )
         return jsonify(self.components)
 
     def collect_components_from(self, calendar_index: int, calendars: Calendars):
         # see https://stackoverflow.com/a/16115575/1320237
         events = calendars.get_events_between(self.from_date, self.to_date)
+        if len(events) > config.max_response_events:
+            raise ResponseTooLarge(
+                f"Calendar would generate {len(events)} events; "
+                f"max is {config.max_response_events}."
+            )
         with self.lock:
             for event in events:
                 json_event = self.convert_ical_event(calendar_index, event)

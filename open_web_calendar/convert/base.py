@@ -25,6 +25,7 @@ from open_web_calendar.calendars import (
 )
 from open_web_calendar.clean_html import clean_html
 from open_web_calendar.encryption import EmptyFernetStore, FernetStore
+from open_web_calendar.error import ResponseTooLarge
 
 
 def get_text_from_url(url):
@@ -130,6 +131,8 @@ class ConversionStrategy:
             index, url = index_url
             calendars = self.get_calendars_from_url(url)
             self.collect_components_from(index, calendars)
+        except ResponseTooLarge:
+            raise
         except:
             ty, err, tb = sys.exc_info()
             component = self.error(ty, err, tb, url)

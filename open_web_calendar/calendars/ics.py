@@ -12,6 +12,8 @@ import recurring_ical_events
 
 from open_web_calendar.calendars.base import Calendars
 from open_web_calendar.calendars.errors import InvalidCalendars
+from open_web_calendar.config import environment as config
+from open_web_calendar.error import ResponseTooLarge
 
 if TYPE_CHECKING:
     from datetime import datetime
@@ -49,6 +51,12 @@ class ICSCalendars(Calendars):
     ) -> list[icalendar.Event]:
         events = []
         for calendar in self._calendars:
+            source_count = sum(1 for _ in calendar.walk("VEVENT"))
+            if source_count > config.max_source_events:
+                raise ResponseTooLarge(
+                    f"Calendar has {source_count} events; "
+                    f"max is {config.max_source_events}."
+                )
             events.extend(recurring_ical_events.of(calendar).between(start, end))
         return events
 
