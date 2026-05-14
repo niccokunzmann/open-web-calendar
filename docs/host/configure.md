@@ -207,7 +207,11 @@ Recurring events expand into one entry per occurrence, so a small ICS with
 a long RRULE can balloon into millions of events. When the expanded count
 exceeds this cap, the request returns HTTP 413.
 
-This addresses pentest finding CLN-007 (recurring-event denial of service).
+This is a defense-in-depth check that fires after recurring-event expansion
+has already run, so the CPU work of expansion itself is not avoided.
+Operators experiencing CPU pressure should lower `OWC_MAX_SOURCE_EVENTS`,
+which is the true pre-expansion defense. This addresses pentest finding
+CLN-007 (recurring-event denial of service).
 
 ### OWC_MAX_RESPONSE_MB
 

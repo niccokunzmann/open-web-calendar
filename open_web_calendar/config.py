@@ -121,6 +121,11 @@ class Config:
 
         Variable: OWC_MAX_RESPONSE_EVENTS
         Default: 10000
+
+        Defense-in-depth only: the check fires after recurring_ical_events
+        has already expanded all occurrences, so the CPU work of expansion
+        is not avoided. Real pagination is a future change. Operators with
+        CPU pressure should also lower max_source_events.
         """
         return int(self._source.get("OWC_MAX_RESPONSE_EVENTS", "10000"))
 

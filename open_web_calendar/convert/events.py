@@ -6,7 +6,6 @@
 from __future__ import annotations
 
 import datetime
-import json
 import zoneinfo
 from html import escape
 from typing import TYPE_CHECKING, Any
@@ -215,13 +214,14 @@ class ConvertToEvents(ConversionStrategy):
         return self.clean_html(description.html or description.text)
 
     def merge(self):
-        body = json.dumps(self.components).encode("utf-8")
-        if len(body) > config.max_response_bytes:
+        response = jsonify(self.components)
+        body_size = len(response.get_data())
+        if body_size > config.max_response_bytes:
             raise ResponseTooLarge(
-                f"Response would be {len(body)} bytes; "
+                f"Response would be {body_size} bytes; "
                 f"max is {config.max_response_bytes}."
             )
-        return jsonify(self.components)
+        return response
 
     def collect_components_from(self, calendar_index: int, calendars: Calendars):
         # see https://stackoverflow.com/a/16115575/1320237

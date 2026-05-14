@@ -146,3 +146,26 @@ def test_cap_rejection_has_413_status_and_json_body(client, cache_url):
     assert response.status_code == 413
     assert response.content_type.startswith("application/json")
     assert response.json["code"] == 413
+
+
+def test_response_bytes_cap_is_enforced(client, cache_url, monkeypatch):
+    """Lowering OWC_MAX_RESPONSE_MB rejects an otherwise-passing calendar."""
+    monkeypatch.setitem(os.environ, "OWC_MAX_RESPONSE_MB", "0.001")
+    url = "http://example.com/byte-cap.ics"
+    cache_url(url, _build_simple_calendar(event_count=50))
+    response = client.get(
+        f"/calendar.events.json?url={url}&from=2026-01-01&to=2026-02-01"
+    )
+    assert response.status_code == 413
+
+
+def test_source_cap_sums_across_concatenated_calendars(client, cache_url):
+    """Splitting events across multiple VCALENDAR blocks must not bypass the cap."""
+    url = "http://example.com/multi-cal.ics"
+    # Two concatenated calendars, each with 600 events: 1200 > default cap 1000.
+    half = _build_simple_calendar(event_count=600)
+    cache_url(url, half + half)
+    response = client.get(
+        f"/calendar.events.json?url={url}&from=2026-01-01&to=2026-02-01"
+    )
+    assert response.status_code == 413

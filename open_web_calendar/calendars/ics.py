@@ -49,14 +49,18 @@ class ICSCalendars(Calendars):
     def get_events_between(
         self, start: datetime, end: datetime
     ) -> list[icalendar.Event]:
+        # Sum across all parsed calendars so an attacker can't bypass the cap
+        # by concatenating multiple VCALENDAR blocks in one response.
+        total_source = sum(
+            1 for calendar in self._calendars for _ in calendar.walk("VEVENT")
+        )
+        if total_source > config.max_source_events:
+            raise ResponseTooLarge(
+                f"Calendar has {total_source} events; "
+                f"max is {config.max_source_events}."
+            )
         events = []
         for calendar in self._calendars:
-            source_count = sum(1 for _ in calendar.walk("VEVENT"))
-            if source_count > config.max_source_events:
-                raise ResponseTooLarge(
-                    f"Calendar has {source_count} events; "
-                    f"max is {config.max_source_events}."
-                )
             events.extend(recurring_ical_events.of(calendar).between(start, end))
         return events
 
