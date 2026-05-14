@@ -231,6 +231,7 @@ menu_shows_calendar_visibility_toggle: false
 ## See https://stackoverflow.com/questions/3073881/clean-up-html-in-python
 ## See https://github.com/niccokunzmann/open-web-calendar/issues/165
 ## If you disable any cleaning here, you might make your site vulnerable.
+## clean_html_host_whitelist is dropped (pentest finding CLN-004).
 clean_html_page_structure: true
 clean_html_meta: true
 clean_html_embedded: true
