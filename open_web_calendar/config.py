@@ -107,6 +107,45 @@ class Config:
         return self._source.get("OWC_ENABLE_JS", "true").lower() != "false"
 
     @config_property
+    def max_source_events(self) -> int:
+        """Maximum VEVENTs accepted from a single ICS payload.
+
+        The cap sums across all VCALENDAR blocks in one fetched ICS response,
+        so an attacker can't bypass it by concatenating multiple calendars.
+
+        Variable: OWC_MAX_SOURCE_EVENTS
+        Default: 1000
+        """
+        return int(self._source.get("OWC_MAX_SOURCE_EVENTS", "1000"))
+
+    @config_property
+    def max_response_events(self) -> int:
+        """Maximum expanded events in a /calendar.events.json response.
+
+        Variable: OWC_MAX_RESPONSE_EVENTS
+        Default: 10000
+
+        Defense-in-depth only: the check fires after recurring_ical_events
+        has already expanded all occurrences, so the CPU work of expansion
+        is not avoided. Real pagination is a future change. Operators with
+        CPU pressure should also lower max_source_events.
+        """
+        return int(self._source.get("OWC_MAX_RESPONSE_EVENTS", "10000"))
+
+    @config_property
+    def max_response_bytes(self) -> int:
+        """Maximum byte size of a /calendar.events.json response body.
+
+        Variable: OWC_MAX_RESPONSE_MB
+        Default: 10 (MB)
+
+        The check runs after the full JSON has been serialized in memory,
+        so an extreme response transiently allocates the full size before
+        rejection. Real streaming serialization is a future change.
+        """
+        return int(float(self._source.get("OWC_MAX_RESPONSE_MB", "10")) * MB)
+
+    @config_property
     def cache_expire_after(self) -> int:
         """The cache expiration timeout in seconds.
 

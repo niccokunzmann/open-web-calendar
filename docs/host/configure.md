@@ -198,6 +198,41 @@ See also:
 [Fernet]: https://cryptography.io/en/latest/fernet/
 [/new-key]: {{ link.web }}/new-key
 
+### OWC_MAX_RESPONSE_EVENTS
+
+default `10000` (events)
+
+The maximum number of expanded events returned by `/calendar.events.json`.
+Recurring events expand into one entry per occurrence, so a small ICS with
+a long RRULE can balloon into millions of events. When the expanded count
+exceeds this cap, the request returns HTTP 413.
+
+This is a defense-in-depth check that fires after recurring-event expansion
+has already run, so the CPU work of expansion itself is not avoided.
+Operators experiencing CPU pressure should lower `OWC_MAX_SOURCE_EVENTS`,
+which is the true pre-expansion defense. This addresses pentest finding
+CLN-007 (recurring-event denial of service).
+
+### OWC_MAX_RESPONSE_MB
+
+default `10` (MB)
+
+The maximum byte size of the JSON body returned by `/calendar.events.json`.
+When the serialized response exceeds this cap, the request returns HTTP 413.
+
+This addresses pentest finding CLN-007 (recurring-event denial of service).
+
+### OWC_MAX_SOURCE_EVENTS
+
+default `1000` (events)
+
+The maximum number of `VEVENT` components accepted from a single fetched
+ICS payload, summed across all `VCALENDAR` blocks in that payload. This is a
+pre-expansion cap that rejects abnormally large source calendars before the
+recurring-event expansion step runs. When exceeded, the request returns HTTP 413.
+
+This addresses pentest finding CLN-007 (recurring-event denial of service).
+
 ### OWC_SPECIFICATION
 
 [OWC_SPECIFICATION]: #owc_specification
@@ -260,7 +295,7 @@ The Open Web Calendar relies on proxy servers for these features:
 - **HTTPS Encryption**  
   This can be done by `nginx`, `apache` or `caddy`.
 - **More Advanced Caching**  
-  Basic caching is handeled by the Open Web Calendar.
+  Basic caching is handled by the Open Web Calendar.
   For more advanced cache configuration, use a proxy server like `squid`.
   Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.
 - **Restricting Access to Calendars**
@@ -295,7 +330,7 @@ You can use it in front of the Open Web Calendar to configure access and customi
 
 !!! note "Operating System"
 
-    Squid is avaiable for all major platforms.
+    Squid is available for all major platforms.
     For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
     The commands might work on other systems, but that is not tested.
 
