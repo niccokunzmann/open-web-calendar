@@ -41,6 +41,8 @@ def clean_html(bad_html: str, spec: dict) -> str:
             name[len(CLEAN_HTML_SPECIFICATION_PREFIX) :]: value
             for name, value in spec.items()
             if name.startswith(CLEAN_HTML_SPECIFICATION_PREFIX)
+            # CLN-004: host_whitelist is dropped (lxml_html_clean bypass via `\`).
+            and name != "clean_html_host_whitelist"
         }
     )
     cleaner = Cleaner(**kw)
