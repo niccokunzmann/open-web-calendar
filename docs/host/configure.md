@@ -157,9 +157,10 @@ Examples:
 default `true`, values `true` or `false`
 
 When set to `false`, user-supplied JavaScript via the `javascript` and `javascript_url`
-spec keys is silently dropped from query strings and from `specification_url` JSON,
-and `/js/proxy` returns 403. JavaScript set in `default_specification.yml` or the
-`OWC_SPECIFICATION` env var still works (admin-trusted).
+spec keys is silently dropped from query strings and from the body fetched via
+`specification_url`, and `/js/proxy` returns 403. JavaScript set in
+`default_specification.yml` or the `OWC_SPECIFICATION` env var still works
+(admin-trusted).
 
 This is a defense-in-depth layer on top of `Content-Security-Policy` for instances
 hosted on the **same domain or sub-path** as another service: with JavaScript enabled,

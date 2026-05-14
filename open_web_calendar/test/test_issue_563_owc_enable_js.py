@@ -7,10 +7,11 @@
 See https://github.com/niccokunzmann/open-web-calendar/issues/563
 
 When the env var is set to `false`, the `javascript` and `javascript_url`
-spec keys are silently dropped from query strings and from
-specification_url JSON. JavaScript set in default_specification.yml or
-the OWC_SPECIFICATION env var still works (admin-trusted). The
-/js/proxy route returns 403 so direct attempts also fail.
+spec keys are silently dropped from query strings and from the body
+fetched via `specification_url`. JavaScript set in
+`default_specification.yml` or the `OWC_SPECIFICATION` env var still
+works (admin-trusted). The `/js/proxy` route returns 403 so direct
+attempts also fail.
 
 The default is `true` for backward compatibility with OWC's standard
 "own subdomain" deployment model.
