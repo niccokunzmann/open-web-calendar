@@ -59,6 +59,8 @@ DEFAULT_REQUEST_HEADERS = {
 
 # specification
 PARAM_SPECIFICATION_URL = "specification_url"
+# Spec keys gated by OWC_ENABLE_JS — see issue #563.
+JS_SPEC_KEYS = ("javascript", "javascript_url")
 TIMEZONES = list(zoneinfo.available_timezones())
 TIMEZONES.sort()
 
@@ -204,8 +206,14 @@ def get_specification(query=None):
     if url:
         url_specification_response = get_text_from_url(url)
         url_specification_values = yaml.safe_load(url_specification_response)
+        if not config.enable_js:
+            for js_key in JS_SPEC_KEYS:
+                url_specification_values.pop(js_key, None)
         specification.update(url_specification_values)
     for parameter in query:
+        # OWC_ENABLE_JS=false drops JS keys from untrusted query params; see #563.
+        if not config.enable_js and parameter in JS_SPEC_KEYS:
+            continue
         # get a list of arguments
         # see https://web.archive.org/web/20230325034825/https://werkzeug.palletsprojects.com/en/0.14.x/datastructures/
         value = query.getlist(parameter)

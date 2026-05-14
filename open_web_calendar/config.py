@@ -98,6 +98,15 @@ class Config:
         return self._source.get("APP_DEBUG", "").lower() == "true"
 
     @config_property
+    def enable_js(self) -> bool:
+        """Whether user-supplied JavaScript is allowed.
+
+        Variable: OWC_ENABLE_JS
+        Default: True
+        """
+        return self._source.get("OWC_ENABLE_JS", "true").lower() != "false"
+
+    @config_property
     def cache_expire_after(self) -> int:
         """The cache expiration timeout in seconds.
 
