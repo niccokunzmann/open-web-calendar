@@ -370,8 +370,6 @@ def serve_locale(lang):
 @allowed_hosts.limit()
 def serve_js_proxy():
     """Proxy a remote script and re-serve it as text/javascript."""
-    if not config.enable_js:
-        return "JavaScript is disabled on this instance", 403
     url = request.args.get("url")
     if not url:
         return "Missing url parameter", 400

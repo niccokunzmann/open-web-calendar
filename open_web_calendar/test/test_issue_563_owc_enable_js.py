@@ -10,8 +10,8 @@ When the env var is set to `false`, the `javascript` and `javascript_url`
 spec keys are silently dropped from query strings and from the body
 fetched via `specification_url`. JavaScript set in
 `default_specification.yml` or the `OWC_SPECIFICATION` env var still
-works (admin-trusted). The `/js/proxy` route returns 403 so direct
-attempts also fail.
+works (admin-trusted), including admin-supplied absolute `javascript_url`
+entries that proxy through `/js/proxy`.
 
 The default is `true` for backward compatibility with OWC's standard
 "own subdomain" deployment model.
@@ -68,11 +68,14 @@ def test_disable_keeps_admin_supplied_js_from_app_default(monkeypatch):
     assert spec["javascript"] == "console.log('admin')"
 
 
-def test_disable_returns_403_from_js_proxy(client, monkeypatch):
-    """OWC_ENABLE_JS=false: /js/proxy returns 403."""
+def test_disable_keeps_admin_js_url_working_via_proxy(client, cache_url, monkeypatch):
+    """OWC_ENABLE_JS=false: admin-trusted absolute javascript_url still proxies."""
     monkeypatch.setitem(os.environ, "OWC_ENABLE_JS", "false")
-    response = client.get("/js/proxy?url=http://example.com/x.js")
-    assert response.status_code == 403
+    js_url = "http://example.com/admin.js"
+    cache_url(js_url, "console.log('admin');")
+    response = client.get(f"/js/proxy?url={js_url}")
+    assert response.status_code == 200
+    assert b"console.log('admin');" in response.data
 
 
 def test_default_allows_js_proxy(client, cache_url):
