@@ -152,6 +152,24 @@ Examples:
 - Refresh fast: `CACHE_REQUESTED_URLS_FOR_SECONDS=10`
 - Disable caching: `CACHE_REQUESTED_URLS_FOR_SECONDS=0`
 
+### OWC_ENABLE_JS
+
+default `true`, values `true` or `false`
+
+When set to `false`, user-supplied JavaScript via the `javascript` and `javascript_url`
+spec keys is silently dropped from query strings and from `specification_url` JSON,
+and `/js/proxy` returns 403. JavaScript set in `default_specification.yml` or the
+`OWC_SPECIFICATION` env var still works (admin-trusted).
+
+This is a defense-in-depth layer on top of `Content-Security-Policy` for instances
+hosted on the **same domain or sub-path** as another service: with JavaScript enabled,
+an attacker-controlled URL could execute arbitrary JS in the parent service's origin.
+By default OWC assumes it runs on its own subdomain with no shared cookies or state.
+
+Even with `OWC_ENABLE_JS=false`, hosts on shared domains should also set a strict
+`Content-Security-Policy` header — this env var prevents OWC from injecting attacker
+JS but does not by itself isolate OWC from the parent origin.
+
 ### OWC_ENCRYPTION_KEYS
 
 default empty
