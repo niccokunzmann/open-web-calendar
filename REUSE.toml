@@ -36,3 +36,9 @@ path = "open_web_calendar/static/css/dhtmlx/dhtmlxscheduler_material/fonts.googl
 precedence = "aggregate"
 SPDX-FileCopyrightText = "Christian Robertson <https://fonts.google.com/specimen/Roboto/about> <https://github.com/googlefonts/roboto>"
 SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ".github/ISSUE_TEMPLATE/**.md"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>"
+SPDX-License-Identifier = "CC-BY-SA-4.0"

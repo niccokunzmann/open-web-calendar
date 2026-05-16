@@ -372,6 +372,8 @@ nav:
   - Development:
     - dev/translate.md
     - dev/index.md
+    - dev/testing.md
+    - dev/unit-tests.md
     - dev/api.md
     - dev/javascript.md
     - dev/maintain.md
