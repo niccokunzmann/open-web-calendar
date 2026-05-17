@@ -30,10 +30,10 @@ assignees: ''
 
 ## Environment
 
-- [ ] Where you ran into the bug: [hosted instance](https://open-web-calendar.hosted.quelltext.eu) / self-hosted / Docker
-- [ ] Browser:           <!-- e.g. Firefox 138, Chrome 126, Safari 17 -->
-- [ ] Operating system:  <!-- e.g. Ubuntu 24, macOS 14, Windows 11, Android 14 -->
-- [ ] Calendar source:   <!-- e.g. Nextcloud CalDAV, plain .ics URL, ICS feed from another service -->
+- Where you ran into the bug: [hosted instance](https://open-web-calendar.hosted.quelltext.eu) / self-hosted / Docker
+- Browser:           <!-- e.g. Firefox 138, Chrome 126, Safari 17 -->
+- Operating system:  <!-- e.g. Ubuntu 24, macOS 14, Windows 11, Android 14 -->
+- Calendar source:   <!-- e.g. Nextcloud CalDAV, plain .ics URL, ICS feed from another service -->
 
 ## Additional context
 
