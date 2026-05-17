@@ -20,6 +20,9 @@ The latest version might not be released, yet.
 
 - Add development guide links 
 - Add CLI help implementation for better developer onboarding, see [Pull Request #981](https://github.com/niccokunzmann/open-web-calendar/pull/981) by [@Stazz0](https://github.com/Stazz0)
+- Add browser and unit testing guides, complete the debug mode section, and expand the translation guide, see [Issue 1115](https://github.com/niccokunzmann/open-web-calendar/issues/1115) and [Issue 987](https://github.com/niccokunzmann/open-web-calendar/issues/987)
+- Fix broken links in `docs/contributing.md` so they work in GitHub's blob view, see [Issue 834](https://github.com/niccokunzmann/open-web-calendar/issues/834)
+- Add `CODE_OF_CONDUCT.md`, `CODEOWNERS`, pull request template, and bug, feature, and config issue templates, see [Pull Request #1208](https://github.com/niccokunzmann/open-web-calendar/pull/1208)
 
 ## v1.51
 
