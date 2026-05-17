@@ -70,4 +70,4 @@ def test_issue_NNN_specific_behavior(merged):
 For features that are easier to verify in a real browser
 (rendering, clicks, layout), write a [browser test](testing.md) instead.
 
-[conftest]: https://github.com/niccokunzmann/open-web-calendar/blob/main/open_web_calendar/test/conftest.py
+[conftest]: https://github.com/niccokunzmann/open-web-calendar/blob/HEAD/open_web_calendar/test/conftest.py

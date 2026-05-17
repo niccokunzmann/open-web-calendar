@@ -86,4 +86,4 @@ See [Browser Testing](index.md#browser-testing) for where screenshots land
 and how to jump from a failed step back to its source line.
 
 [Behave]: https://behave.readthedocs.io/
-[browser_steps.py]: https://github.com/niccokunzmann/open-web-calendar/blob/main/open_web_calendar/features/steps/browser_steps.py
+[browser_steps.py]: https://github.com/niccokunzmann/open-web-calendar/blob/HEAD/open_web_calendar/features/steps/browser_steps.py

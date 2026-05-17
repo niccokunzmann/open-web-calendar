@@ -36,7 +36,7 @@ below for details).
 ## Translator Guide
 
 Translations are contributed by volunteers and [logged](../../changelog).
-After 48 hours they are usually life at the [hosted instance]({{link.web}}).
+After 48 hours they are usually live at the [hosted instance]({{link.web}}).
 
 1. The most important file is probably the **calendar file**.
 2. The **About Page** and **Common Translations** is also very important as users see it when they click the `?` at the bottom right.

@@ -107,9 +107,12 @@ see what the browser actually saw at the moment of failure.
 The screenshots land in the `screenshots/` folder at the project root,
 named after the feature and the line that failed
 (for example, `issue-679-caldav-sign-up@line-7.png`).
-Behave also prints the path and line of the failing step in `<file>:<line>`
-form, which most modern terminals (VS Code, iTerm2, Windows Terminal) turn
-into a clickable link to the source.
+The runner prints the full path as `Capturing screenshot to <path>` so you
+can open it directly from the terminal.
+
+Behave's own output lists each step with its source location as `<file>:<line>`.
+Most modern terminals (VS Code, iTerm2, Windows Terminal) turn these into
+clickable links that jump to the failing step in the source.
 
 For details on writing browser tests, see the
 [browser testing guide](testing.md).
