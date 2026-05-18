@@ -12,6 +12,16 @@
     --owc-menu-item-backgroud-color: var(--dhx-scheduler-event-background);
     --owc-help-link-color: inherit;
     --owc-help-link-background-color: rgba(0, 0, 0, 0.1);
+    --owc-today-background-color: var(--dhx-scheduler-base-colors-select);
+}
+
+/* Highlight today's cell in month view. */
+.dhx_cal_month_cell:has(> .dhx_month_body > .dhx_now_time) {
+    background-color: var(--owc-today-background-color);
+}
+
+.dhx_cal_month_cell > .dhx_month_body > .dhx_now_time {
+    display: none;
 }
 
 /* Styling of the dhtmlx.html file.
