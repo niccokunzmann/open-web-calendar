@@ -646,6 +646,28 @@ async function loadCalendarMetadata() {
             otherCheckbox.checked = toggleMenuButton.checked;
         }
     });
+    // close the menu on outside click or Escape
+    function closeMenu() {
+        toggleMenuButton.checked = false;
+        const otherCheckbox = document.getElementById("menu__toggle__2");
+        if (otherCheckbox != null) {
+            otherCheckbox.checked = false;
+        }
+    }
+    document.addEventListener("mousedown", function(event) {
+        if (!toggleMenuButton.checked) return;
+        const menuBox = document.getElementById("menu-meta-data");
+        const isInsideMenu = menuBox && menuBox.contains(event.target);
+        const isMenuButton = event.target.closest(".menu__btn") != null;
+        if (!isInsideMenu && !isMenuButton) {
+            closeMenu();
+        }
+    });
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && toggleMenuButton.checked) {
+            closeMenu();
+        }
+    });
     // only update once
     if (calendarMetaData != null) {
         onCalendarInfoLoaded();
