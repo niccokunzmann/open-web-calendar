@@ -292,6 +292,24 @@ function showCalendarSourceCode(sourceCode) {
     link.innerText = sourceCode;
 }
 
+async function copyEmbedCode() {
+    const button = document.getElementById("calendar-code-copy");
+    const code = document.getElementById("calendar-code").innerText;
+    try {
+        await navigator.clipboard.writeText(code);
+    } catch (e) {
+        const area = document.createElement("textarea");
+        area.value = code;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        document.body.removeChild(area);
+    }
+    const original = button.innerText;
+    button.innerText = translations["calendar-code-copied"];
+    setTimeout(() => { button.innerText = original; }, 2000);
+}
+
 function getLoadingAnimationUrl() {
     var url = getValueById("select-loader");
     if (url[0] == "/") {

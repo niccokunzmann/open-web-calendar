@@ -32,6 +32,12 @@ calendar-embed-title: "Use & Embed"
 # This describes the calendar code to embed.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code
 calendar-code: "To embed the calendar, use this code on your website:"
+# Button next to the embed code that copies it to the clipboard.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code-copy
+calendar-code-copy: "Copy"
+# Button label shown for a few seconds after the embed code is copied.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code-copied
+calendar-code-copied: "Copied!"
 # This describes the visible calendar that is updated with every change.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code-execution
 calendar-code-execution: "You can view the resulting calendar below."

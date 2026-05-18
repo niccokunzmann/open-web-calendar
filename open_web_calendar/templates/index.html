@@ -19,6 +19,8 @@ SPDX-License-Identifier: GPL-2.0-only
                 "button-encrypted": {{ string("button-encrypted") | tojson }},
                 "button-edit": {{ string("button-edit") | tojson }},
                 "button-remove": {{ string("button-remove") | tojson }},
+                "calendar-code-copy": {{ string("calendar-code-copy") | tojson }},
+                "calendar-code-copied": {{ string("calendar-code-copied") | tojson }},
             };
         </script>
         <link href="css/common.css" rel="stylesheet" type="text/css">
@@ -411,6 +413,7 @@ SPDX-License-Identifier: GPL-2.0-only
                     {{ html("calendar-code") }}
                 </p>
                 <pre id="calendar-code" class="code"></pre>
+                <button type="button" id="calendar-code-copy" onclick="copyEmbedCode()">{{ html("calendar-code-copy") }}</button>
             </section>
             <section id="configure-spec" class="not-for-config">
                 <h2>{{ html("spec-title") }}</h2>
