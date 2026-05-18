@@ -232,6 +232,12 @@ style-days-outside: "Some days of the calendar have a different color if they ar
 # https://open-web-calendar.hosted.quelltext.eu/#translate-style-css
 style-css: "You can specify your own CSS properties if you like."
 style-css-classes: "These are examples of CSS classes to style events:"
+# External CSS stylesheets to load, one URL per line.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-css-url
+style-css-url: "You can also load external CSS stylesheets, one URL per line:"
+# External JavaScript files to load, one URL per line.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-javascript-url
+style-javascript-url: "You can load external JavaScript files to customise the calendar, one URL per line:"
 
 
 event-status-title: "Event Status"

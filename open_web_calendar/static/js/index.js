@@ -230,6 +230,9 @@ function getSpecification() {
     if (css) {
         spec.css = css;
     }
+    /* css_url and javascript_url: newline separated lists */
+    spec.css_url = parseUrlList("css-url-input");
+    spec.javascript_url = parseUrlList("javascript-url-input");
     /* link targets */
     setSpecificationValueFromId(spec, "target", "select-target");
     /* loader */
@@ -290,6 +293,12 @@ function displayCalendar(sourceCode) {
 function showCalendarSourceCode(sourceCode) {
     var link = document.getElementById("calendar-code");
     link.innerText = sourceCode;
+}
+
+function parseUrlList(textareaId) {
+    return getValueById(textareaId)
+        .split(/\s+/)
+        .filter(function (url) { return url.length > 0; });
 }
 
 async function copyEmbedCode() {
@@ -565,6 +574,14 @@ function listenForCSSChanges() {
     var CSSText = document.getElementById("css-input");
     CSSText.value = specification.css;
     changeSpecificationOnChange(CSSText);
+    initializeUrlList("css-url-input", specification.css_url);
+    initializeUrlList("javascript-url-input", specification.javascript_url);
+}
+
+function initializeUrlList(textareaId, urls) {
+    var textarea = document.getElementById(textareaId);
+    textarea.value = (urls || []).join("\n");
+    changeSpecificationOnChange(textarea);
 }
 
 function initializeLinkTargetChoice() {
