@@ -10,6 +10,8 @@
     --owc-menu-box-shadow-color : var(--dhx-scheduler-base-colors-secondary);
     --owc-menu-item-text-color: var(--dhx-scheduler-base-colors-text-base);
     --owc-menu-item-backgroud-color: var(--dhx-scheduler-event-background);
+    --owc-help-link-color: inherit;
+    --owc-help-link-background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Styling of the dhtmlx.html file.
@@ -33,7 +35,8 @@
 }
 
 #infoIcon {
-    background-color: rgba(0,0,0,0.1);
+    color: var(--owc-help-link-color);
+    background-color: var(--owc-help-link-background-color);
 }
 
 #errorStatusIcon {
