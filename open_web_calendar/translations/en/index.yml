@@ -269,6 +269,9 @@ tabs-title: "Calendar Tabs"
 tabs-description: "The Month view is the default. However, you can choose to show\
   \ a different view in the beginning. Choose one:"
 
+# Label for the number input that controls how many months the agenda view spans.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-agenda-months
+agenda-months: "Number of months the agenda view spans:"
 
 # Description of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-controls-description

@@ -239,6 +239,8 @@ function getSpecification() {
     setSpecificationValueFromId(spec, "loader", "select-loader");
     /* initial view */
     setSpecificationValueFromId(spec, "tab", "select-tab");
+    /* agenda date range */
+    spec.agenda_months = Math.max(1, parseInt(getValueById("agenda_months")) || 1);
     /* controls */
     spec.controls = [];
     spec.tabs = [];
@@ -610,6 +612,9 @@ function updateControls() {
     const initialView = document.getElementById("select-tab");
     initialView.value = specification.tab;
     changeSpecificationOnChange(initialView);
+    const agendaMonths = document.getElementById("agenda_months");
+    agendaMonths.value = specification.agenda_months;
+    changeSpecificationOnChange(agendaMonths);
     /* We update the checkbuttons according to the specification. */
     const specificationCheckbuttons = document.getElementsByClassName("specification-list-checkbox");
     const checkbuttons = {};

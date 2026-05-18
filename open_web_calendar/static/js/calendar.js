@@ -383,6 +383,19 @@ function loadCalendar() {
         limit: true,
         serialize: true,
     });
+    /* Override agenda_view defaults so agenda_months controls the range. */
+    scheduler.date.add_agenda = function(date, inc){
+        const months = Math.max(1, parseInt(specification.agenda_months) || 1);
+        return scheduler.date.add(date, inc * months, "month");
+    };
+    scheduler.templates.agenda_date = function(start) {
+        const months = Math.max(1, parseInt(specification.agenda_months) || 1);
+        if (months === 1) {
+            return scheduler.templates.month_date(start);
+        }
+        const end = scheduler.date.add(start, months - 1, "month");
+        return scheduler.templates.month_date(start) + " – " + scheduler.templates.month_date(end);
+    };
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
 
@@ -485,9 +498,6 @@ function loadCalendar() {
         }
         return event["css-classes"].map(escapeHtml).join(" ");
     };
-
-    // set agenda date
-    scheduler.templates.agenda_date = scheduler.templates.month_date;
 
     /* load the events */
     scheduler.attachEvent("onLoadError", function(xhr) {

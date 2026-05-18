@@ -125,6 +125,10 @@ tabs:
 - "day"
 #- agenda
 
+## Number of months the agenda view spans.
+## Useful for academic calendars or project timelines.
+agenda_months: 1
+
 ## Users can control the calendar.
 ## You can hide these buttons:
 controls:
