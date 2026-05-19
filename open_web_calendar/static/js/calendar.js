@@ -399,9 +399,9 @@ function loadCalendar() {
     /* Append the cleaned description under the title when inline_description is on. */
     scheduler.templates.agenda_text = function(start, end, event) {
         if (specification.inline_description && event.description) {
-            return event.text + template.details(event);
+            return template.formatted_summary(event) + template.details(event);
         }
-        return event.text;
+        return template.formatted_summary(event);
     };
     /* Use short weekday names in month view on narrow viewports so headers do not overlap. */
     const NARROW_VIEWPORT = "(max-width: 480px)";
