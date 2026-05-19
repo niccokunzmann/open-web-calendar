@@ -403,6 +403,16 @@ function loadCalendar() {
         }
         return event.text;
     };
+    /* Use short weekday names in month view on narrow viewports so headers do not overlap. */
+    const NARROW_VIEWPORT = "(max-width: 480px)";
+    const formatMonthScaleFull = scheduler.date.date_to_str("%l");
+    scheduler.templates.month_scale_date = function(date) {
+        if (window.matchMedia(NARROW_VIEWPORT).matches) {
+            return OWCLocale.date.day_short[date.getDay()];
+        }
+        return formatMonthScaleFull(date);
+    };
+    window.matchMedia(NARROW_VIEWPORT).addEventListener("change", () => scheduler.updateView());
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
 
