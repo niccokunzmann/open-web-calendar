@@ -10,6 +10,18 @@
     --owc-menu-box-shadow-color : var(--dhx-scheduler-base-colors-secondary);
     --owc-menu-item-text-color: var(--dhx-scheduler-base-colors-text-base);
     --owc-menu-item-backgroud-color: var(--dhx-scheduler-event-background);
+    --owc-help-link-color: inherit;
+    --owc-help-link-background-color: rgba(0, 0, 0, 0.1);
+    --owc-today-background-color: var(--dhx-scheduler-base-colors-select);
+}
+
+/* Highlight today's cell in month view. */
+.dhx_cal_month_cell:has(> .dhx_month_body > .dhx_now_time) {
+    background-color: var(--owc-today-background-color);
+}
+
+.dhx_cal_month_cell > .dhx_month_body > .dhx_now_time {
+    display: none;
 }
 
 /* Styling of the dhtmlx.html file.
@@ -33,7 +45,8 @@
 }
 
 #infoIcon {
-    background-color: rgba(0,0,0,0.1);
+    color: var(--owc-help-link-color);
+    background-color: var(--owc-help-link-background-color);
 }
 
 #errorStatusIcon {
@@ -136,6 +149,22 @@ div.dhx_agenda_line > span {
         font-size: 2.5vw;
         line-height: 3.75vw;
     }
+}
+
+/* Allow long event titles to wrap in the popup. */
+.dhx_cal_qi_tcontent,
+.dhx_cal_qi_tcontent > span {
+  white-space: normal;
+  overflow: visible;
+}
+
+/* Inline description in agenda view. */
+.dhx_cal_agenda_event_line .details {
+  font-size: 0.9em;
+  font-weight: normal;
+  color: var(--dhx-scheduler-base-colors-text-light, #555);
+  margin-top: 0.2em;
+  white-space: pre-line;
 }
 
 /* The possible link in the title. */

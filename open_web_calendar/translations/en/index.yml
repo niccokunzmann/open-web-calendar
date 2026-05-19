@@ -32,6 +32,12 @@ calendar-embed-title: "Use & Embed"
 # This describes the calendar code to embed.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code
 calendar-code: "To embed the calendar, use this code on your website:"
+# Button next to the embed code that copies it to the clipboard.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code-copy
+calendar-code-copy: "Copy"
+# Button label shown for a few seconds after the embed code is copied.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code-copied
+calendar-code-copied: "Copied!"
 # This describes the visible calendar that is updated with every change.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-calendar-code-execution
 calendar-code-execution: "You can view the resulting calendar below."
@@ -226,6 +232,21 @@ style-days-outside: "Some days of the calendar have a different color if they ar
 # https://open-web-calendar.hosted.quelltext.eu/#translate-style-css
 style-css: "You can specify your own CSS properties if you like."
 style-css-classes: "These are examples of CSS classes to style events:"
+# External CSS stylesheets to load, one URL per line.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-css-url
+style-css-url: "You can also load external CSS stylesheets, one URL per line:"
+# External JavaScript files to load, one URL per line.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-javascript-url
+style-javascript-url: "You can load external JavaScript files to customise the calendar, one URL per line:"
+# Checkbox label that enables wrapping long event titles onto multiple lines in month view.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-month-event-multiline
+style-month-event-multiline: "Allow events to wrap on multiple lines in month view"
+# Checkbox label that shows the event description inline in the agenda view.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-inline-description
+style-inline-description: "Show event descriptions in the agenda view"
+# Checkbox label that shows the "Add to my Calendar" button in the event popup.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-event-popup-add-to-calendar
+style-event-popup-add-to-calendar: "Show the \"Add to my Calendar\" button in the event popup"
 
 
 event-status-title: "Event Status"
@@ -257,6 +278,9 @@ tabs-title: "Calendar Tabs"
 tabs-description: "The Month view is the default. However, you can choose to show\
   \ a different view in the beginning. Choose one:"
 
+# Label for the number input that controls how many months the agenda view spans.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-agenda-months
+agenda-months: "Number of months the agenda view spans:"
 
 # Description of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-controls-description

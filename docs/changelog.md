@@ -37,6 +37,17 @@ The latest version might not be released, yet.
 - Add browser and unit testing guides, complete the debug mode section, and expand the translation guide, see [Issue 1115](https://github.com/niccokunzmann/open-web-calendar/issues/1115) and [Issue 987](https://github.com/niccokunzmann/open-web-calendar/issues/987)
 - Fix broken links in `docs/contributing.md` so they work in GitHub's blob view, see [Issue 834](https://github.com/niccokunzmann/open-web-calendar/issues/834)
 - Add `CODE_OF_CONDUCT.md`, `CODEOWNERS`, pull request template, and bug, feature, and config issue templates, see [Pull Request #1208](https://github.com/niccokunzmann/open-web-calendar/pull/1208)
+- Add CSS variables for the help link color so it can be themed, see [Issue 774](https://github.com/niccokunzmann/open-web-calendar/issues/774)
+- Highlight today's cell in the month view, see [Issue 756](https://github.com/niccokunzmann/open-web-calendar/issues/756)
+- Add a copy button next to the embed code on the configuration page
+- Add `css_url` and `javascript_url` input fields to the configuration page
+- Add `agenda_months` to configure how many months the agenda view spans
+- Close the calendar menu when clicking outside or pressing Escape, see [Issue 835](https://github.com/niccokunzmann/open-web-calendar/issues/835)
+- Add `month_event_multiline` to allow events to wrap on multiple lines in month view, see [Issue 625](https://github.com/niccokunzmann/open-web-calendar/issues/625)
+- Wrap long event titles in the event popup
+- Add `inline_description` to show event descriptions inline in the agenda view, see [Issue 298](https://github.com/niccokunzmann/open-web-calendar/issues/298)
+- Use short weekday names in the month view on narrow viewports so headers do not overlap, see [Issue 280](https://github.com/niccokunzmann/open-web-calendar/issues/280)
+- Add `event_popup_add_to_calendar` to hide the "Add to my Calendar" button in the event popup, see [Issue 804](https://github.com/niccokunzmann/open-web-calendar/issues/804)
 
 ## v1.51
 

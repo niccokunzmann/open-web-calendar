@@ -125,6 +125,22 @@ tabs:
 - "day"
 #- agenda
 
+## Number of months the agenda view spans.
+## Useful for academic calendars or project timelines.
+agenda_months: 1
+
+## Allow events in month view to wrap to multiple lines.
+## Useful for tall narrow dashboards where one-line truncation cuts off titles.
+month_event_multiline: false
+
+## Show event descriptions inline in the agenda view, under the title.
+## Useful when descriptions hold important content like a school lunch menu.
+inline_description: false
+
+## Show the "Add to my Calendar" button at the bottom of the event popup.
+## Set to false for a minimal popup without download options.
+event_popup_add_to_calendar: true
+
 ## Users can control the calendar.
 ## You can hide these buttons:
 controls:
