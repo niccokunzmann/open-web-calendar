@@ -133,6 +133,10 @@ agenda_months: 1
 ## Useful for tall narrow dashboards where one-line truncation cuts off titles.
 month_event_multiline: false
 
+## Show event descriptions inline in the agenda view, under the title.
+## Useful when descriptions hold important content like a school lunch menu.
+inline_description: false
+
 ## Users can control the calendar.
 ## You can hide these buttons:
 controls:

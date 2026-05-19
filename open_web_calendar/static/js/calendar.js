@@ -396,6 +396,13 @@ function loadCalendar() {
         const end = scheduler.date.add(start, months - 1, "month");
         return scheduler.templates.month_date(start) + " – " + scheduler.templates.month_date(end);
     };
+    /* Append the cleaned description under the title when inline_description is on. */
+    scheduler.templates.agenda_text = function(start, end, event) {
+        if (specification.inline_description && event.description) {
+            return event.text + template.details(event);
+        }
+        return event.text;
+    };
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
 

@@ -241,6 +241,9 @@ style-javascript-url: "You can load external JavaScript files to customise the c
 # Checkbox label that enables wrapping long event titles onto multiple lines in month view.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-style-month-event-multiline
 style-month-event-multiline: "Allow events to wrap on multiple lines in month view"
+# Checkbox label that shows the event description inline in the agenda view.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-inline-description
+style-inline-description: "Show event descriptions in the agenda view"
 
 
 event-status-title: "Event Status"

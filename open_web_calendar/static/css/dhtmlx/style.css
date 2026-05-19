@@ -158,6 +158,15 @@ div.dhx_agenda_line > span {
   overflow: visible;
 }
 
+/* Inline description in agenda view. */
+.dhx_cal_agenda_event_line .details {
+  font-size: 0.9em;
+  font-weight: normal;
+  color: var(--dhx-scheduler-base-colors-text-light, #555);
+  margin-top: 0.2em;
+  white-space: pre-line;
+}
+
 /* The possible link in the title. */
 .dhx_cal_qi_tcontent a {
   color: inherit;
