@@ -553,6 +553,10 @@ function loadCalendar() {
     scheduler.config.icons_select = [];
     getOwnProperties(actions).forEach(function(action) {
         let actionId = "icon_" + action;
+        // Hide the "Add to my Calendar" button when event_popup_add_to_calendar is off.
+        if (action === "subscribe" && !specification.event_popup_add_to_calendar) {
+            return;
+        }
         // Add this to the config.
         scheduler.config.icons_select.push(actionId);
         // Add an action.

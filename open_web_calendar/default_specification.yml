@@ -137,6 +137,10 @@ month_event_multiline: false
 ## Useful when descriptions hold important content like a school lunch menu.
 inline_description: false
 
+## Show the "Add to my Calendar" button at the bottom of the event popup.
+## Set to false for a minimal popup without download options.
+event_popup_add_to_calendar: true
+
 ## Users can control the calendar.
 ## You can hide these buttons:
 controls:

@@ -244,6 +244,9 @@ style-month-event-multiline: "Allow events to wrap on multiple lines in month vi
 # Checkbox label that shows the event description inline in the agenda view.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-style-inline-description
 style-inline-description: "Show event descriptions in the agenda view"
+# Checkbox label that shows the "Add to my Calendar" button in the event popup.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-event-popup-add-to-calendar
+style-event-popup-add-to-calendar: "Show the \"Add to my Calendar\" button in the event popup"
 
 
 event-status-title: "Event Status"
