@@ -19,6 +19,8 @@ SPDX-License-Identifier: GPL-2.0-only
                 "button-encrypted": {{ string("button-encrypted") | tojson }},
                 "button-edit": {{ string("button-edit") | tojson }},
                 "button-remove": {{ string("button-remove") | tojson }},
+                "calendar-code-copy": {{ string("calendar-code-copy") | tojson }},
+                "calendar-code-copied": {{ string("calendar-code-copied") | tojson }},
             };
         </script>
         <link href="css/common.css" rel="stylesheet" type="text/css">
@@ -308,6 +310,26 @@ SPDX-License-Identifier: GPL-2.0-only
                     <code class="css-class-example">.error {}</code>
                     <textarea id="css-input"></textarea>
                 </p>
+                <p>
+                    {{ html("style-css-url") }}
+                    <textarea id="css-url-input" rows="2" placeholder="https://example.com/style.css"></textarea>
+                </p>
+                <p>
+                    {{ html("style-javascript-url") }}
+                    <textarea id="javascript-url-input" rows="2" placeholder="https://example.com/script.js"></textarea>
+                </p>
+                <p>
+                    <input type="checkbox" class="specification-checkbox" id="month_event_multiline" />
+                    <label for="month_event_multiline">{{ html("style-month-event-multiline") }}</label>
+                </p>
+                <p>
+                    <input type="checkbox" class="specification-checkbox" id="inline_description" />
+                    <label for="inline_description">{{ html("style-inline-description") }}</label>
+                </p>
+                <p>
+                    <input type="checkbox" class="specification-checkbox" id="event_popup_add_to_calendar" />
+                    <label for="event_popup_add_to_calendar">{{ html("style-event-popup-add-to-calendar") }}</label>
+                </p>
             </section>
             <section id="configure-event-status">
                 <h2>{{ html("event-status-title") }}</h2>
@@ -347,6 +369,10 @@ SPDX-License-Identifier: GPL-2.0-only
                       <option value="day">{{ string("calendar.labels_day_tab") }}</option>
                       <option value="agenda">{{ string("calendar.labels_agenda_tab") }}</option>
                   </select>
+                </p>
+                <p>
+                  <label for="agenda_months">{{ html("agenda-months") }}</label>
+                  <input type="number" id="agenda_months" min="1" max="12" />
                 </p>
                 <p>
                   {{ html("controls-description") }}
@@ -421,6 +447,7 @@ SPDX-License-Identifier: GPL-2.0-only
                     {{ html("calendar-code") }}
                 </p>
                 <pre id="calendar-code" class="code"></pre>
+                <button type="button" id="calendar-code-copy" onclick="copyEmbedCode()">{{ html("calendar-code-copy") }}</button>
             </section>
             <section id="configure-spec" class="not-for-config">
                 <h2>{{ html("spec-title") }}</h2>

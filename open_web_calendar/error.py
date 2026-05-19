@@ -17,6 +17,18 @@ if TYPE_CHECKING:
     from types import TracebackType
 
 
+class ResponseTooLarge(Exception):
+    """Raised when an events.json response exceeds configured caps (CLN-007)."""
+
+    http_status_code = 413
+
+    @classmethod
+    def check(cls, label: str, value: int, cap_name: str, cap: int) -> None:
+        """Raise if value > cap, naming the cap in the error message."""
+        if value > cap:
+            raise cls(f"{label} ({value}) exceed {cap_name} ({cap}).")
+
+
 def http_status_code_for_error(error: Exception) -> int:
     """Return the status code from an exception or 500."""
     return getattr(error, "http_status_code", 500)
@@ -71,4 +83,9 @@ def convert_error_message_to_json(
     }
 
 
-__all__ = ["convert_error_message_to_json", "http_status_code_for_error", "json_error"]
+__all__ = [
+    "ResponseTooLarge",
+    "convert_error_message_to_json",
+    "http_status_code_for_error",
+    "json_error",
+]

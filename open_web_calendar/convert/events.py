@@ -15,6 +15,9 @@ from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
 
+from open_web_calendar.config import environment as config
+from open_web_calendar.error import ResponseTooLarge
+
 from .base import ConversionStrategy
 
 if TYPE_CHECKING:
@@ -29,14 +32,14 @@ def is_date(date):
 
 
 class ConvertToEvents(ConversionStrategy):
-    """Convert events to dhtmlx. This conforms to a stratey pattern.
+    """Convert events to dhtmlx. This conforms to a strategy pattern.
 
     - timeshift_minutes is the timeshift specified by the calendar
         for dates.
     """
 
     def created(self):
-        """Set attribtues when created."""
+        """Set attributes when created."""
         try:
             self.timezone = zoneinfo.ZoneInfo(self.specification["timezone"])
         except (zoneinfo.ZoneInfoNotFoundError, ValueError):
@@ -204,18 +207,37 @@ class ConvertToEvents(ConversionStrategy):
     def get_event_description(self, event: Event):
         """Return a formatted description of the event.
 
-        HTML is cleaned.
+        HTML is cleaned. When the source has no HTML description,
+        the plain-text DESCRIPTION is used.
         """
-        description = Description(event).html
-        return self.clean_html(description)
+        description = Description(event)
+        return self.clean_html(description.html or description.text)
 
     def merge(self):
-        return jsonify(self.components)
+        response = jsonify(self.components)
+        # calculate_content_length() reads the cached body size without
+        # forcing a second buffer copy via get_data().
+        body_size = response.calculate_content_length()
+        if body_size is not None:
+            ResponseTooLarge.check(
+                "Response bytes",
+                body_size,
+                "max_response_bytes",
+                config.max_response_bytes,
+            )
+        return response
 
     def collect_components_from(self, calendar_index: int, calendars: Calendars):
         # see https://stackoverflow.com/a/16115575/1320237
         events = calendars.get_events_between(self.from_date, self.to_date)
         with self.lock:
+            total = len(self.components) + len(events)
+            ResponseTooLarge.check(
+                "Expanded events",
+                total,
+                "max_response_events",
+                config.max_response_events,
+            )
             for event in events:
                 json_event = self.convert_ical_event(calendar_index, event)
                 self.components.append(json_event)

@@ -12,6 +12,8 @@ import recurring_ical_events
 
 from open_web_calendar.calendars.base import Calendars
 from open_web_calendar.calendars.errors import InvalidCalendars
+from open_web_calendar.config import environment as config
+from open_web_calendar.error import ResponseTooLarge
 
 if TYPE_CHECKING:
     from datetime import datetime
@@ -47,6 +49,15 @@ class ICSCalendars(Calendars):
     def get_events_between(
         self, start: datetime, end: datetime
     ) -> list[icalendar.Event]:
+        # Sum across all parsed calendars so an attacker can't bypass the cap
+        # by concatenating multiple VCALENDAR blocks in one response.
+        total_source = sum(len(calendar.walk("VEVENT")) for calendar in self._calendars)
+        ResponseTooLarge.check(
+            "Source events",
+            total_source,
+            "max_source_events",
+            config.max_source_events,
+        )
         events = []
         for calendar in self._calendars:
             events.extend(recurring_ical_events.of(calendar).between(start, end))

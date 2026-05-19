@@ -59,6 +59,8 @@ DEFAULT_REQUEST_HEADERS = {
 
 # specification
 PARAM_SPECIFICATION_URL = "specification_url"
+# Spec keys gated by OWC_ENABLE_JS — see issue #563.
+JS_SPEC_KEYS = ("javascript", "javascript_url")
 TIMEZONES = list(zoneinfo.available_timezones())
 TIMEZONES.sort()
 
@@ -204,8 +206,14 @@ def get_specification(query=None):
     if url:
         url_specification_response = get_text_from_url(url)
         url_specification_values = yaml.safe_load(url_specification_response)
+        if not config.enable_js:
+            for js_key in JS_SPEC_KEYS:
+                url_specification_values.pop(js_key, None)
         specification.update(url_specification_values)
     for parameter in query:
+        # OWC_ENABLE_JS=false drops JS keys from untrusted query params; see #563.
+        if not config.enable_js and parameter in JS_SPEC_KEYS:
+            continue
         # get a list of arguments
         # see https://web.archive.org/web/20230325034825/https://werkzeug.palletsprojects.com/en/0.14.x/datastructures/
         value = query.getlist(parameter)
@@ -218,8 +226,8 @@ def get_specification(query=None):
         if isinstance(specification.get(parameter), list):
             if len(value) == 1 and value[0] == "":
                 value = []
-        elif len(value) == 1:
-            value = value[0]
+        else:
+            value = value[-1]
         specification[parameter] = value
 
     specification.pop(PARAM_SPECIFICATION_URL, None)
@@ -358,37 +366,21 @@ def serve_locale(lang):
     )
 
 
+@app.route("/js/proxy")
+@allowed_hosts.limit()
+def serve_js_proxy():
+    """Proxy a remote script and re-serve it as text/javascript."""
+    url = request.args.get("url")
+    if not url:
+        return "Missing url parameter", 400
+    return make_js_file_response(get_text_from_url(url).decode("utf-8"))
+
+
 @app.errorhandler(500)
 def unhandled_exception(error):
-    """Called when an error occurs.
-
-    See https://stackoverflow.com/q/14993318
-    """
-    trace = (
-        f"<pre>\r\n{traceback.format_exc()}</pre>"
-        if config.debug
-        else "Trace only avalilable if DEBUG=true."
-    )
-    return (
-        f"""
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-    <html>
-        <head>
-            <title>500 Internal Server Error</title>
-        </head>
-        <body>
-            <h1>Internal Server Error</h1>
-            <p>
-                The server encountered an internal error and was unable to
-                complete your request.  Either the server is overloaded or
-                there is an error in the application.
-            </p>
-            {trace}
-        </body>
-    </html>
-    """,
-        http_status_code_for_error(error),
-    )  # return error code from https://stackoverflow.com/a/7824605
+    """Called when an error occurs."""
+    trace = traceback.format_exc() if config.debug else None
+    return render_template("500.html", trace=trace), http_status_code_for_error(error)
 
 
 @app.post("/encrypt")

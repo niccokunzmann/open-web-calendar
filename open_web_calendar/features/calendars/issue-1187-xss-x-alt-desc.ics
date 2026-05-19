@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Issue 1187 fixture//EN
+BEGIN:VEVENT
+UID:issue-1187-x-alt-desc@example.com
+DTSTAMP:20260101T000000Z
+DTSTART:20260101T100000Z
+DTEND:20260101T110000Z
+SUMMARY:Event with malicious X-ALT-DESC from source
+DESCRIPTION:Plain text fallback
+X-ALT-DESC;FMTTYPE=text/html:<p>Hello</p><script>alert('XSS-source')</script><img src=x onerror="alert(2)">
+END:VEVENT
+END:VCALENDAR

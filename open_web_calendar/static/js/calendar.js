@@ -64,7 +64,7 @@ function makeLink(url, html) {
 
 
 /*
- * Download the vent ICS with a file name.
+ * Download the event ICS with a file name.
  */
 function downloadICS(event) {
     // from https://stackoverflow.com/a/18197341/1320237
@@ -383,6 +383,36 @@ function loadCalendar() {
         limit: true,
         serialize: true,
     });
+    /* Override agenda_view defaults so agenda_months controls the range. */
+    scheduler.date.add_agenda = function(date, inc){
+        const months = Math.max(1, parseInt(specification.agenda_months) || 1);
+        return scheduler.date.add(date, inc * months, "month");
+    };
+    scheduler.templates.agenda_date = function(start) {
+        const months = Math.max(1, parseInt(specification.agenda_months) || 1);
+        if (months === 1) {
+            return scheduler.templates.month_date(start);
+        }
+        const end = scheduler.date.add(start, months - 1, "month");
+        return scheduler.templates.month_date(start) + " – " + scheduler.templates.month_date(end);
+    };
+    /* Append the cleaned description under the title when inline_description is on. */
+    scheduler.templates.agenda_text = function(start, end, event) {
+        if (specification.inline_description && event.description) {
+            return template.formatted_summary(event) + template.details(event);
+        }
+        return template.formatted_summary(event);
+    };
+    /* Use short weekday names in month view on narrow viewports so headers do not overlap. */
+    const NARROW_VIEWPORT = "(max-width: 480px)";
+    const formatMonthScaleFull = scheduler.date.date_to_str("%l");
+    scheduler.templates.month_scale_date = function(date) {
+        if (window.matchMedia(NARROW_VIEWPORT).matches) {
+            return OWCLocale.date.day_short[date.getDay()];
+        }
+        return formatMonthScaleFull(date);
+    };
+    window.matchMedia(NARROW_VIEWPORT).addEventListener("change", () => scheduler.updateView());
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
 
@@ -395,6 +425,12 @@ function loadCalendar() {
     // set the skin, scheduler v7
     // see https://docs.dhtmlx.com/scheduler/skins.html#dark
     scheduler.setSkin(getSkin());
+    /* Skin init resets bar_height; re-apply after onSchedulerReady. */
+    if (specification.month_event_multiline) {
+        scheduler.attachEvent("onSchedulerReady", function(){
+            scheduler.xy.bar_height = 46;
+        });
+    }
     /* Hide or display the header controls */
     if (!specification.controls.length && !specification.tabs.length) {
         document.body.classList.add("no-controls");
@@ -486,9 +522,6 @@ function loadCalendar() {
         return event["css-classes"].map(escapeHtml).join(" ");
     };
 
-    // set agenda date
-    scheduler.templates.agenda_date = scheduler.templates.month_date;
-
     /* load the events */
     scheduler.attachEvent("onLoadError", function(xhr) {
         disableLoader();
@@ -516,6 +549,10 @@ function loadCalendar() {
     scheduler.config.icons_select = [];
     getOwnProperties(actions).forEach(function(action) {
         let actionId = "icon_" + action;
+        // Hide the "Add to my Calendar" button when event_popup_add_to_calendar is off.
+        if (action === "subscribe" && !specification.event_popup_add_to_calendar) {
+            return;
+        }
         // Add this to the config.
         scheduler.config.icons_select.push(actionId);
         // Add an action.
@@ -545,7 +582,9 @@ function loadScheduler() {
     let schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + document.location.search;
     // add the time zone if not specified
     if (specification.timezone == "") {
-        schedulerUrl += (document.location.search ? "&" : "?") + "timezone=" + getTimezone();
+        const params = new URLSearchParams(document.location.search);
+        params.set("timezone", getTimezone());
+        schedulerUrl = document.location.pathname.replace(/.html$/, ".events.json") + "?" + params.toString();
     }
 
     scheduler.load(schedulerUrl, "json");
@@ -628,12 +667,36 @@ let calendarMetaData = null; // We only need to load this once.
 async function loadCalendarMetadata() {
     // make the menu with the metadata work
     const toggleMenuButton = document.getElementById("menu__toggle");
-    toggleMenuButton.addEventListener("change", function() {
-        const otherCheckbox = document.getElementById("menu__toggle__2");
-        if (otherCheckbox != null) {
-            otherCheckbox.checked = toggleMenuButton.checked;
+    if (toggleMenuButton != null) {
+        toggleMenuButton.addEventListener("change", function() {
+            const otherCheckbox = document.getElementById("menu__toggle__2");
+            if (otherCheckbox != null) {
+                otherCheckbox.checked = toggleMenuButton.checked;
+            }
+        });
+        // close the menu on outside click or Escape
+        function closeMenu() {
+            toggleMenuButton.checked = false;
+            const otherCheckbox = document.getElementById("menu__toggle__2");
+            if (otherCheckbox != null) {
+                otherCheckbox.checked = false;
+            }
         }
-    });
+        document.addEventListener("mousedown", function(event) {
+            if (!toggleMenuButton.checked) return;
+            const menuBox = document.getElementById("menu-meta-data");
+            const isInsideMenu = menuBox && menuBox.contains(event.target);
+            const isMenuButton = event.target.closest(".menu__btn") != null;
+            if (!isInsideMenu && !isMenuButton) {
+                closeMenu();
+            }
+        });
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape" && toggleMenuButton.checked) {
+                closeMenu();
+            }
+        });
+    }
     // only update once
     if (calendarMetaData != null) {
         onCalendarInfoLoaded();
@@ -650,7 +713,9 @@ function onCalendarInfoLoaded() {
     console.log("Calendar Info:", calendarMetaData);
     const metaDataInMenu = document.getElementById("menu-meta-data");
     // fill the menu
-    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    if (metaDataInMenu != null) {
+        metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    }
     // handle errors
     for (error of calendarMetaData.errors) {
         showEventError(error);

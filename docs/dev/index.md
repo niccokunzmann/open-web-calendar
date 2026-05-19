@@ -12,6 +12,25 @@ description: "Learn how to develop the Open Web Calendar."
 This section guides you through everything you need to know to develop the
 software: build it and make changes.
 
+## First-time Contributors
+
+Contributions from people new to the Open Web Calendar are welcome.
+A few things worth knowing before you start:
+
+- You are free to pick up any open issue. Comment on it to say you are
+  starting, and open a draft pull request when you have something to show.
+- Open the PR early. It saves other people from duplicating your effort and
+  gives reviewers a chance to weigh in before you go too far.
+- Ask questions if the scope is unclear. Better to clarify on the issue
+  than to rebuild after a review.
+- The [`good first issue`](https://github.com/niccokunzmann/open-web-calendar/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+  label is a good place to start if you are looking for something small.
+
+If you use AI to help write a pull request, follow the
+[PCE AI policy](https://pycal.org/ai-policy/). The short version: take
+responsibility for what you submit, disclose the model and how you used it
+in your commit messages, and be ready to discuss the code.
+
 ## Clone the Repository
 
 ```sh
@@ -83,13 +102,32 @@ You can also change the layout of the window to test the responsive design:
 tox -e web -- -D window=375x812 # iPhone11 size
 ```
 
+When a browser test fails, the runner saves a screenshot of the page so you can
+see what the browser actually saw at the moment of failure.
+The screenshots land in the `screenshots/` folder at the project root,
+named after the feature and the line that failed
+(for example, `issue-679-caldav-sign-up@line-7.png`).
+The runner prints the full path as `Capturing screenshot to <path>` so you
+can open it directly from the terminal.
+
+Behave's own output lists each step with its source location as `<file>:<line>`.
+Most modern terminals (VS Code, iTerm2, Windows Terminal) turn these into
+clickable links that jump to the failing step in the source.
+
+For details on writing browser tests, see the
+[browser testing guide](testing.md).
+
 ### Debug Mode
 
-In case the browser tests fail, screenshots are recorded and a link is printed.
+To run the app locally with debug mode on, use:
 
 ```sh
-
+tox -e dev
 ```
+
+This starts the Flask dev server on <http://localhost:5000> with `APP_DEBUG=true`
+and a test encryption key. The full list of environment variables it sets is
+in `tox.ini` under `[testenv:dev]`.
 
 ## Documentation
 
@@ -109,3 +147,23 @@ tox -e docs-quick -- serve
 We are using [mkdocs] with the [material theme](https://squidfunk.github.io/mkdocs-material/).
 
 [mkdocs]: https://www.mkdocs.org
+
+## Troubleshooting
+
+A few things that tend to trip people up:
+
+- **Browser tests can't find Firefox.** Install Firefox locally, or pass
+  `-D browser=chrome` (you need a real Chrome install for that too). Selenium
+  drives the browser of your choice; we don't ship one.
+- **Docs build fails on Windows with `FileNotFoundError: ...\translations\de`.**
+  The `translations` entry in the repo root is a symlink that Windows checks
+  out as a plain file unless symlinks are enabled. Replace it with a directory
+  symlink locally (`mklink /D translations open_web_calendar\translations`).
+  Do not commit the change.
+- **`tox -e reuse` flags missing SPDX headers.** Every new source file needs
+  the SPDX header at the top (copyright line + license identifier). Copy it
+  from any existing file of the same type.
+- **The docs build writes changes to `.po` files.** Those are translation
+  templates regenerated from your source edits. They get synced separately by
+  the maintainers' translation workflow, so don't commit them as part of an
+  unrelated PR.

@@ -20,6 +20,34 @@ The latest version might not be released, yet.
 
 - Add development guide links 
 - Add CLI help implementation for better developer onboarding, see [Pull Request #981](https://github.com/niccokunzmann/open-web-calendar/pull/981) by [@Stazz0](https://github.com/Stazz0)
+- Open files with explicit UTF-8 encoding to fix Windows test failures, see [Issue 1127](https://github.com/niccokunzmann/open-web-calendar/issues/1127)
+- Remove `specification_url` from the resulting specification, see [Issue 461](https://github.com/niccokunzmann/open-web-calendar/issues/461)
+- Proxy `javascript_url` through OWC to enforce the JavaScript content type, see [Issue 633](https://github.com/niccokunzmann/open-web-calendar/issues/633)
+- Deduplicate error messages in user-facing output while logging every occurrence, see [Issue 777](https://github.com/niccokunzmann/open-web-calendar/issues/777)
+- Skip traceback formatting in production mode, see [Issue 1183](https://github.com/niccokunzmann/open-web-calendar/issues/1183)
+- Strip HTML from VEVENT DESCRIPTION in ICS output per RFC 5545, moving HTML to `X-ALT-DESC;FMTTYPE=text/html`, see [Issue 167](https://github.com/niccokunzmann/open-web-calendar/issues/167)
+- Stop 500 errors when the `timezone` query parameter appears twice, see [Issue 320](https://github.com/niccokunzmann/open-web-calendar/issues/320)
+- Fix flaky Selenium link-click race in the we-click-on-a-link step, see [Issue 1194](https://github.com/niccokunzmann/open-web-calendar/issues/1194)
+- Preserve plain-text DESCRIPTION in the event popup, see [Issue 443](https://github.com/niccokunzmann/open-web-calendar/issues/443)
+- Sanitize X-ALT-DESC HTML in ICS output, see [Issue 1187](https://github.com/niccokunzmann/open-web-calendar/issues/1187)
+- Escape exception details in the 500 error page to prevent XSS, see [Issue 479](https://github.com/niccokunzmann/open-web-calendar/issues/479)
+- Disable `clean_html_host_whitelist` to close the lxml URL allowlist bypass, see [Pull Request #1205](https://github.com/niccokunzmann/open-web-calendar/pull/1205)
+- Add `OWC_ENABLE_JS` environment variable to disable user-supplied JavaScript, see [Issue 563](https://github.com/niccokunzmann/open-web-calendar/issues/563)
+- Cap event count and JSON size to mitigate recurring-event denial of service, see [Pull Request #1207](https://github.com/niccokunzmann/open-web-calendar/pull/1207)
+- Add browser and unit testing guides, complete the debug mode section, and expand the translation guide, see [Issue 1115](https://github.com/niccokunzmann/open-web-calendar/issues/1115) and [Issue 987](https://github.com/niccokunzmann/open-web-calendar/issues/987)
+- Fix broken links in `docs/contributing.md` so they work in GitHub's blob view, see [Issue 834](https://github.com/niccokunzmann/open-web-calendar/issues/834)
+- Add `CODE_OF_CONDUCT.md`, `CODEOWNERS`, pull request template, and bug, feature, and config issue templates, see [Pull Request #1208](https://github.com/niccokunzmann/open-web-calendar/pull/1208)
+- Add CSS variables for the help link color so it can be themed, see [Issue 774](https://github.com/niccokunzmann/open-web-calendar/issues/774)
+- Highlight today's cell in the month view, see [Issue 756](https://github.com/niccokunzmann/open-web-calendar/issues/756)
+- Add a copy button next to the embed code on the configuration page
+- Add `css_url` and `javascript_url` input fields to the configuration page
+- Add `agenda_months` to configure how many months the agenda view spans
+- Close the calendar menu when clicking outside or pressing Escape, see [Issue 835](https://github.com/niccokunzmann/open-web-calendar/issues/835)
+- Add `month_event_multiline` to allow events to wrap on multiple lines in month view, see [Issue 625](https://github.com/niccokunzmann/open-web-calendar/issues/625)
+- Wrap long event titles in the event popup
+- Add `inline_description` to show event descriptions inline in the agenda view, see [Issue 298](https://github.com/niccokunzmann/open-web-calendar/issues/298)
+- Use short weekday names in the month view on narrow viewports so headers do not overlap, see [Issue 280](https://github.com/niccokunzmann/open-web-calendar/issues/280)
+- Add `event_popup_add_to_calendar` to hide the "Add to my Calendar" button in the event popup, see [Issue 804](https://github.com/niccokunzmann/open-web-calendar/issues/804)
 
 ## v1.51
 

@@ -8,15 +8,17 @@ import datetime
 from flask import Response
 from icalendar import Calendar, Event, Timezone
 from icalendar.prop import vDDDTypes
+from icalendar_compatibility import Description
 from mergecal import merge_calendars
 
 from open_web_calendar.calendars.base import Calendars
+from open_web_calendar.clean_html import remove_html
 
 from .base import ConversionStrategy
 
 
 class ConvertToICS(ConversionStrategy):
-    """Convert events to dhtmlx. This conforms to a stratey pattern."""
+    """Convert events to ICS. This conforms to a strategy pattern."""
 
     def created(self):
         self.title = self.specification["title"]
@@ -35,7 +37,7 @@ class ConvertToICS(ConversionStrategy):
             self.components.extend(calendars.get_icalendars())
 
     def convert_error(self, error: str, url: str, tb_s: str):
-        """Create an error which can be used by the dhtmlx scheduler."""
+        """Create an error event that appears in the ICS output."""
         event = Event()
         event["DTSTART"] = event["DTEND"] = vDDDTypes(datetime.datetime.now())
         event["SUMMARY"] = error
@@ -63,6 +65,17 @@ class ConvertToICS(ConversionStrategy):
             for event in calendar.events:
                 calendar.subcomponents.remove(event)
             calendar.add_component(Event.from_ical(only_event))
+        else:
+            for event in calendar.events:
+                description = Description(event)
+                html = description.html
+                if not html:
+                    continue
+                event["DESCRIPTION"] = description.text or remove_html(html)
+                safe_html = self.clean_html(html)
+                if "X-ALT-DESC" in event:
+                    del event["X-ALT-DESC"]
+                event.add("X-ALT-DESC", safe_html, parameters={"FMTTYPE": "text/html"})
         return Response(calendar.to_ical(), mimetype="text/calendar")
 
 

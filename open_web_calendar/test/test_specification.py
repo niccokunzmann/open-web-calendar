@@ -98,3 +98,14 @@ def test_specification_url_is_not_in_resulting_spec(url, cache_url):
     cache_url(url, '{"css": "123"}')
     spec = get_specification(query=MultiDict({"specification_url": url}))
     assert "specification_url" not in spec
+
+
+def test_duplicate_timezone_takes_last_value():
+    """A scalar spec key keeps a scalar value when the query duplicates it.
+
+    See https://github.com/niccokunzmann/open-web-calendar/issues/320
+    """
+    spec = get_specification(
+        query=MultiDict([("timezone", ""), ("timezone", "Asia/Kolkata")])
+    )
+    assert spec["timezone"] == "Asia/Kolkata"

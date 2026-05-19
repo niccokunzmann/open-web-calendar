@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+#
+# SPDX-License-Identifier: GPL-2.0-only
+
+blank_issues_enabled: true
+contact_links:
+  - name: Discussions
+    url: https://github.com/niccokunzmann/open-web-calendar/discussions
+    about: For questions, ideas, and general conversation. Not for bug reports.
+  - name: Security issues
+    url: https://github.com/niccokunzmann/open-web-calendar/security/advisories/new
+    about: Report a security vulnerability privately. See SECURITY.md for details.

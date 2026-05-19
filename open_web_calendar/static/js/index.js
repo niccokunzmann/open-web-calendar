@@ -230,12 +230,17 @@ function getSpecification() {
     if (css) {
         spec.css = css;
     }
+    /* css_url and javascript_url: newline separated lists */
+    spec.css_url = parseUrlList("css-url-input");
+    spec.javascript_url = parseUrlList("javascript-url-input");
     /* link targets */
     setSpecificationValueFromId(spec, "target", "select-target");
     /* loader */
     setSpecificationValueFromId(spec, "loader", "select-loader");
     /* initial view */
     setSpecificationValueFromId(spec, "tab", "select-tab");
+    /* agenda date range */
+    spec.agenda_months = Math.max(1, parseInt(getValueById("agenda_months")) || 1);
     /* controls */
     spec.controls = [];
     spec.tabs = [];
@@ -290,6 +295,31 @@ function displayCalendar(sourceCode) {
 function showCalendarSourceCode(sourceCode) {
     var link = document.getElementById("calendar-code");
     link.innerText = sourceCode;
+}
+
+function parseUrlList(textareaId) {
+    return getValueById(textareaId)
+        .split(/\r?\n/)
+        .map(function (url) { return url.trim(); })
+        .filter(function (url) { return url.length > 0; });
+}
+
+async function copyEmbedCode() {
+    const button = document.getElementById("calendar-code-copy");
+    const code = document.getElementById("calendar-code").innerText;
+    try {
+        await navigator.clipboard.writeText(code);
+    } catch (e) {
+        const area = document.createElement("textarea");
+        area.value = code;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        document.body.removeChild(area);
+    }
+    const original = button.innerText;
+    button.innerText = translations["calendar-code-copied"];
+    setTimeout(() => { button.innerText = original; }, 2000);
 }
 
 function getLoadingAnimationUrl() {
@@ -547,6 +577,14 @@ function listenForCSSChanges() {
     var CSSText = document.getElementById("css-input");
     CSSText.value = specification.css;
     changeSpecificationOnChange(CSSText);
+    initializeUrlList("css-url-input", specification.css_url);
+    initializeUrlList("javascript-url-input", specification.javascript_url);
+}
+
+function initializeUrlList(textareaId, urls) {
+    var textarea = document.getElementById(textareaId);
+    textarea.value = (urls || []).join("\n");
+    changeSpecificationOnChange(textarea);
 }
 
 function initializeLinkTargetChoice() {
@@ -575,6 +613,9 @@ function updateControls() {
     const initialView = document.getElementById("select-tab");
     initialView.value = specification.tab;
     changeSpecificationOnChange(initialView);
+    const agendaMonths = document.getElementById("agenda_months");
+    agendaMonths.value = specification.agenda_months;
+    changeSpecificationOnChange(agendaMonths);
     /* We update the checkbuttons according to the specification. */
     const specificationCheckbuttons = document.getElementsByClassName("specification-list-checkbox");
     const checkbuttons = {};
