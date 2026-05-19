@@ -129,6 +129,10 @@ tabs:
 ## Useful for academic calendars or project timelines.
 agenda_months: 1
 
+## Allow events in month view to wrap to multiple lines.
+## Useful for tall narrow dashboards where one-line truncation cuts off titles.
+month_event_multiline: false
+
 ## Users can control the calendar.
 ## You can hide these buttons:
 controls:

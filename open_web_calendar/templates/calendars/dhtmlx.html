@@ -47,6 +47,12 @@ SPDX-License-Identifier: GPL-2.0-only
             {% if not specification['show_participant_status'] %}.PARTICIPANT .status { display: none; }{% endif %}
             {% if not specification['show_participant_type'] %}.PARTICIPANT .type { display: none; }{% endif %}
             {% if not specification['show_participant_role'] %}.PARTICIPANT .role { display: none; }{% endif %}
+            /* multiline events in month view */
+            {% if specification['month_event_multiline'] %}
+            .dhx_cal_event_line { height: 40px !important; white-space: normal; }
+            .dhx_cal_event_clear { height: 40px; white-space: normal; }
+            .dhx_cal_event_line_content { white-space: normal; align-self: start; line-height: 1.2em; padding: 2px 4px; }
+            {% endif %}
             {{ specification['css'] | safe }}
         </style>
         {% for link in specification.javascript_url %}

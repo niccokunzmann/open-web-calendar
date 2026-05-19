@@ -238,6 +238,9 @@ style-css-url: "You can also load external CSS stylesheets, one URL per line:"
 # External JavaScript files to load, one URL per line.
 # https://open-web-calendar.hosted.quelltext.eu/#translate-style-javascript-url
 style-javascript-url: "You can load external JavaScript files to customise the calendar, one URL per line:"
+# Checkbox label that enables wrapping long event titles onto multiple lines in month view.
+# https://open-web-calendar.hosted.quelltext.eu/#translate-style-month-event-multiline
+style-month-event-multiline: "Allow events to wrap on multiple lines in month view"
 
 
 event-status-title: "Event Status"

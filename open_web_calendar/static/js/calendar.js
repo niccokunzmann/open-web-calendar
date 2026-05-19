@@ -399,6 +399,10 @@ function loadCalendar() {
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
 
+    if (specification.month_event_multiline) {
+        scheduler.config.multi_day = true;
+    }
+
     // responsive lightbox, see https://docs.dhtmlx.com/scheduler/touch_support.html
     scheduler.config.responsive_lightbox = true;
     resetConfig();
@@ -408,6 +412,12 @@ function loadCalendar() {
     // set the skin, scheduler v7
     // see https://docs.dhtmlx.com/scheduler/skins.html#dark
     scheduler.setSkin(getSkin());
+    /* Skin init resets bar_height; re-apply after onSchedulerReady. */
+    if (specification.month_event_multiline) {
+        scheduler.attachEvent("onSchedulerReady", function(){
+            scheduler.xy.bar_height = 46;
+        });
+    }
     /* Hide or display the header controls */
     if (!specification.controls.length && !specification.tabs.length) {
         document.body.classList.add("no-controls");
