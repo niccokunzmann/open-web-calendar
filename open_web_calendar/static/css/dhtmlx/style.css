@@ -151,6 +151,13 @@ div.dhx_agenda_line > span {
     }
 }
 
+/* Allow long event titles to wrap in the popup. */
+.dhx_cal_qi_tcontent,
+.dhx_cal_qi_tcontent > span {
+  white-space: normal;
+  overflow: visible;
+}
+
 /* The possible link in the title. */
 .dhx_cal_qi_tcontent a {
   color: inherit;
