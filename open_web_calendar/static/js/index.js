@@ -299,7 +299,8 @@ function showCalendarSourceCode(sourceCode) {
 
 function parseUrlList(textareaId) {
     return getValueById(textareaId)
-        .split(/\s+/)
+        .split(/\r?\n/)
+        .map(function (url) { return url.trim(); })
         .filter(function (url) { return url.length > 0; });
 }
 

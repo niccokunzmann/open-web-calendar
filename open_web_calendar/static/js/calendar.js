@@ -416,10 +416,6 @@ function loadCalendar() {
     // set format of dates in the data source
     scheduler.config.xml_date="%Y-%m-%d %H:%i";
 
-    if (specification.month_event_multiline) {
-        scheduler.config.multi_day = true;
-    }
-
     // responsive lightbox, see https://docs.dhtmlx.com/scheduler/touch_support.html
     scheduler.config.responsive_lightbox = true;
     resetConfig();
@@ -671,34 +667,36 @@ let calendarMetaData = null; // We only need to load this once.
 async function loadCalendarMetadata() {
     // make the menu with the metadata work
     const toggleMenuButton = document.getElementById("menu__toggle");
-    toggleMenuButton.addEventListener("change", function() {
-        const otherCheckbox = document.getElementById("menu__toggle__2");
-        if (otherCheckbox != null) {
-            otherCheckbox.checked = toggleMenuButton.checked;
+    if (toggleMenuButton != null) {
+        toggleMenuButton.addEventListener("change", function() {
+            const otherCheckbox = document.getElementById("menu__toggle__2");
+            if (otherCheckbox != null) {
+                otherCheckbox.checked = toggleMenuButton.checked;
+            }
+        });
+        // close the menu on outside click or Escape
+        function closeMenu() {
+            toggleMenuButton.checked = false;
+            const otherCheckbox = document.getElementById("menu__toggle__2");
+            if (otherCheckbox != null) {
+                otherCheckbox.checked = false;
+            }
         }
-    });
-    // close the menu on outside click or Escape
-    function closeMenu() {
-        toggleMenuButton.checked = false;
-        const otherCheckbox = document.getElementById("menu__toggle__2");
-        if (otherCheckbox != null) {
-            otherCheckbox.checked = false;
-        }
+        document.addEventListener("mousedown", function(event) {
+            if (!toggleMenuButton.checked) return;
+            const menuBox = document.getElementById("menu-meta-data");
+            const isInsideMenu = menuBox && menuBox.contains(event.target);
+            const isMenuButton = event.target.closest(".menu__btn") != null;
+            if (!isInsideMenu && !isMenuButton) {
+                closeMenu();
+            }
+        });
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape" && toggleMenuButton.checked) {
+                closeMenu();
+            }
+        });
     }
-    document.addEventListener("mousedown", function(event) {
-        if (!toggleMenuButton.checked) return;
-        const menuBox = document.getElementById("menu-meta-data");
-        const isInsideMenu = menuBox && menuBox.contains(event.target);
-        const isMenuButton = event.target.closest(".menu__btn") != null;
-        if (!isInsideMenu && !isMenuButton) {
-            closeMenu();
-        }
-    });
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape" && toggleMenuButton.checked) {
-            closeMenu();
-        }
-    });
     // only update once
     if (calendarMetaData != null) {
         onCalendarInfoLoaded();
@@ -715,7 +713,9 @@ function onCalendarInfoLoaded() {
     console.log("Calendar Info:", calendarMetaData);
     const metaDataInMenu = document.getElementById("menu-meta-data");
     // fill the menu
-    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    if (metaDataInMenu != null) {
+        metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    }
     // handle errors
     for (error of calendarMetaData.errors) {
         showEventError(error);
