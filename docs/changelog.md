@@ -48,6 +48,17 @@ The latest version might not be released, yet.
 - Add `inline_description` to show event descriptions inline in the agenda view, see [Issue 298](https://github.com/niccokunzmann/open-web-calendar/issues/298)
 - Use short weekday names in the month view on narrow viewports so headers do not overlap, see [Issue 280](https://github.com/niccokunzmann/open-web-calendar/issues/280)
 - Add `event_popup_add_to_calendar` to hide the "Add to my Calendar" button in the event popup, see [Issue 804](https://github.com/niccokunzmann/open-web-calendar/issues/804)
+- Add a Specification Reference page covering every spec key
+- Add a CSS Classes reference page for the auto-generated event classes
+- Add a Specification Inheritance page covering the precedence of query parameters, `specification_url`, `OWC_SPECIFICATION`, and `default_specification.yml`
+- Add a Security Model page covering the threat model and a sub-path hosting checklist
+- Document the recorded API testing pattern for browser tests
+- Add an Integration Tests page covering Flask test client patterns
+- Document the `--owc-*` CSS variables for theming the help link and today's month-view cell
+- Document the `X-ALT-DESC;FMTTYPE=text/html` ICS output
+- Reorganize the documentation landing page around user tasks
+- Replace stale commit links in `docs/dev/api.md` with stable `master` links
+- Fix `tox -e docs-quick` so the docs build runs without a manual workaround
 
 ## v1.51
 

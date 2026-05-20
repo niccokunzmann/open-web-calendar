@@ -69,12 +69,38 @@ Please refer to the [default_specification].
 These values are all documented.
 Please use the [OWC_SPECIFICATION] environment variable to change them.
 
+### Custom Theme Colors
+
+A few CSS variables let you change accent colors without writing custom
+selectors. Override any of them through the `css` or `css_url` spec key.
+
+| Variable                            | What it controls                                       |
+| ----------------------------------- | ------------------------------------------------------ |
+| `--owc-help-link-color`             | Text color of the `?` help link.                       |
+| `--owc-help-link-background-color`  | Background color of the `?` help link.                 |
+| `--owc-today-background-color`      | Background color of today's cell in the month view.    |
+
+A soft yellow today cell takes one rule in your `css` spec key:
+
+```css
+:root {
+  --owc-today-background-color: #fff3a8;
+}
+```
+
+The burger menu also uses CSS variables prefixed with `--owc-menu-*`. They
+default to DHTMLX skin colors and are not part of the stable theming
+surface, but you can override them when needed. See
+[`style.css`]({{link.code}}/open_web_calendar/static/css/dhtmlx/style.css)
+for the full list.
+
 [default_specification]: /assets/default_specification.yml
 [privacy-policy]: ../privacy-policy
 
 See also:
 
 - [API](../../dev/api)
+- [Auto-Generated CSS Classes](../../dev/css-classes) for class-level styling
 
 ## Configuring the Server
 
@@ -170,6 +196,11 @@ By default OWC assumes it runs on its own subdomain with no shared cookies or st
 Even with `OWC_ENABLE_JS=false`, hosts on shared domains should also set a strict
 `Content-Security-Policy` header — this env var prevents OWC from injecting attacker
 JS but does not by itself isolate OWC from the parent origin.
+
+See also:
+
+- [Security Model](security-model) for the full threat model and a sub-path
+  hosting checklist.
 
 ### OWC_ENCRYPTION_KEYS
 
@@ -331,7 +362,7 @@ You can use it in front of the Open Web Calendar to configure access and customi
 !!! note "Operating System"
 
     Squid is available for all major platforms.
-    For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
+    For the commands and paths of this tutorial, we assume you run Squid on Debian/Ubuntu.
     The commands might work on other systems, but that is not tested.
 
 After you have installed the [Squid] Proxy, add this file into the  `conf.d` directory.

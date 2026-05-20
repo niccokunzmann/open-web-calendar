@@ -13,6 +13,12 @@ The unit tests live in `open_web_calendar/test/` and run with `pytest`
 through `tox`. They cover the pieces below the HTTP layer: parsing,
 merging, the configuration object, encryption, and so on.
 
+The project has three testing layers. Unit tests sit at the bottom.
+[Integration tests](integration-tests.md) exercise the Flask app through
+its HTTP routes; they live in the same directory and use the same
+runner. [Browser tests](testing.md) drive a real browser through Behave
+and Selenium.
+
 If you have not run the tests before, the
 [running tests section](index.md#running-tests) in the setup guide
 covers `tox` and how to target one Python version.

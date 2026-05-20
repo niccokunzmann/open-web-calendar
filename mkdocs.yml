@@ -351,6 +351,7 @@ extra: # language support, see https://squidfunk.github.io/mkdocs-material/setup
 # navigation, see https://www.mkdocs.org/user-guide/configuration/#nav
 nav:
   - index.md
+  - reference.md
   - templates.md
   - Showcase:
     - showcase/index.md
@@ -368,13 +369,17 @@ nav:
     - host/docker.md
     - host/pypi.md
     - host/configure.md
+    - host/security-model.md
     - host/migrate.md
   - Development:
     - dev/translate.md
     - dev/index.md
     - dev/testing.md
     - dev/unit-tests.md
+    - dev/integration-tests.md
     - dev/api.md
+    - dev/specification-inheritance.md
+    - dev/css-classes.md
     - dev/javascript.md
     - dev/maintain.md
     - dev/license.md

@@ -41,6 +41,21 @@ Additional parameters are required for `/calendar.events.json`:
 - `from=YYYY-MM-DD` - the start of the period in which events happen (inclusive)
 - `to=YYYY-MM-DD` - the end of the period in which events happen (exclusive)
 
+### ICS Output Format
+
+The merged feed at `/calendar.ics` follows
+[RFC 5545](https://www.rfc-editor.org/rfc/rfc5545.html). One detail to
+flag:
+
+`DESCRIPTION` properties that contain HTML are split. The plain-text
+version stays in `DESCRIPTION` (per RFC 5545), and the original HTML
+moves to a parallel `X-ALT-DESC;FMTTYPE=text/html` property. Clients that
+understand `X-ALT-DESC` (Outlook, some Apple Calendar versions) render
+the HTML. Older clients fall back to the plain-text description.
+
+The HTML in `X-ALT-DESC` goes through the same `clean_html_*` rules as
+the rest of the calendar, so it is safe to render.
+
 ## Parameters
 
 All configuration parameters are described sufficiently in the [default_specification].
@@ -79,6 +94,9 @@ you have several options:
 You can change the calendar behavior and looks with parameters.
 If the same parameter is specified in different places, the earlier place listed below has the highest precedence.
 These are the places to specify parameters:
+
+For a worked example and a diagram of how the layers combine, see
+[Specification Inheritance](specification-inheritance).
 
 ### Query parameters
 
@@ -138,8 +156,8 @@ If you add a new parameter as a developer:
 
 ## Specification in the Calendar
 
-[app.py][app.py-81] compiles the specification from the given parameters in `get_specification()`.
-In the [template][dhtmlx-23] you can access the specification through the `specification` variable.
+[app.py][app.py-link] compiles the specification from the given parameters in `get_specification()`.
+In the [template][dhtmlx-link] you can access the specification through the `specification` variable.
 The specification is available to JavaScript as the `specification` variable.
 
 See also:
@@ -147,8 +165,8 @@ See also:
 - [JavaScript Customization](../javascript)
 
 
-[app.py-81]: https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/app.py#L81
-[dhtmlx-23]: https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/templates/calendars/dhtmlx.html#L23
+[app.py-link]: {{link.code}}/open_web_calendar/app.py
+[dhtmlx-link]: {{link.code}}/open_web_calendar/templates/calendars/dhtmlx.html
 
 ## Specification in the Index Page
 
@@ -159,7 +177,7 @@ specification from the inputs.
 Generally, the `specification` variable should be used.
 
 [default_specification]: {{link.code}}/open_web_calendar/default_specification.yml
-[getSpecification()]: https://github.com/niccokunzmann/open-web-calendar/blob/85a72dab4561e250aec69b5ad7c3de074eefa1e8/static/js/index.js#L93
+[getSpecification()]: {{link.code}}/open_web_calendar/static/js/index.js
 
 ## Architecture
 
