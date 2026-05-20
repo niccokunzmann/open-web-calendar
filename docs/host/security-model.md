@@ -66,8 +66,11 @@ origin. It can read cookies, read local storage, and call APIs.
 The calendar is safe with no extra work when it runs on:
 
 - A dedicated domain such as `calendar.example.com`.
-- A dedicated subdomain with no shared cookies. `SameSite` defaults do
-  not cross subdomains, but it is worth a check on the other services.
+- A dedicated subdomain with no shared cookies or storage.
+  Cookies stay isolated only when no other service on the same site
+  sets cookies with `Domain=example.com` or `Domain=.example.com`,
+  since those are sent to every subdomain. `SameSite` does not help
+  here; it gates cross-site requests, not cross-subdomain ones.
 - A separate origin entirely, such as the hosted instance at
   [open-web-calendar.hosted.quelltext.eu]({{ link.web }}).
 
