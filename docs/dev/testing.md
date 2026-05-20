@@ -13,6 +13,12 @@ Bug fixes that affect the user-facing interface usually ship with a regression t
 We use [Behave] with Selenium to drive a real browser against a live Flask app.
 The suite lives in `open_web_calendar/features/`.
 
+Browser tests are the top layer of the test pyramid.
+[Unit tests](unit-tests.md) cover pure functions and
+[integration tests](integration-tests.md) cover HTTP routes through the
+Flask test client. Reach for a browser test when the behavior under test
+is rendering, clicks, or layout.
+
 If you have not run the browser tests before, start with the
 [browser testing section](index.md#browser-testing) in the setup guide.
 It covers `tox -e web`, picking a browser, and changing the window size.
@@ -84,6 +90,81 @@ If none fits, add a function to `browser_steps.py` decorated with `@given`,
 
 See [Browser Testing](index.md#browser-testing) for where screenshots land
 and how to jump from a failed step back to its source line.
+
+## Recording API responses
+
+Some scenarios talk to a real CalDAV server like Nextcloud. The browser
+tests cannot reach one, so the calls are recorded once and replayed on
+each run. The [responses] library does the replay. Recordings live as
+YAML files under `open_web_calendar/test/responses/`.
+
+Recordings freeze the API in time on purpose. A test should not break
+because Nextcloud shipped a new release overnight. The cost: when the
+external API really does change, the recording has to be re-captured
+against the live server.
+
+### Replay a recording in a feature
+
+In a scenario, load a recording before any step that triggers an HTTP
+request:
+
+```gherkin
+Scenario: A user signs up for an event.
+    Given we load the api recording "issue-680-sign-up-for-event"
+      And we add the calendar "issue-679-sign-up-for-event"
+     When we look at 2025-03-17
+      ...
+```
+
+The argument is the recording stem. The `.yml` extension is implied. The
+recording stops at the end of the scenario.
+
+### Record a new interaction
+
+Start the dev server in recording mode:
+
+```sh
+tox -e dev
+```
+
+The dev server records by default. Every outbound HTTP request is captured
+and written to `open_web_calendar/test/responses/dev.yml` once a second.
+
+Drive the interaction you want to capture: open `index.html`, fill the
+calendar URL, click through the configuration page. Stop the server when
+you are done.
+
+Rename `dev.yml` to a meaningful stem, like
+`issue-1234-event-signup.yml`, and keep it under
+`open_web_calendar/test/responses/`. Reference it from your feature with
+`Given we load the api recording "issue-1234-event-signup"`.
+
+### Replay a recording locally
+
+Pass the recording name to the dev module to run the calendar against a
+saved recording instead of the live network:
+
+```sh
+python -m open_web_calendar.test issue-680-sign-up-for-event
+```
+
+The server still listens on <http://localhost:5000>. Every external HTTP
+call is served from the YAML file. Handy for iterating on a scenario
+before turning it into a feature.
+
+### When to record fresh
+
+Re-record when:
+
+- The external API changes shape (a Nextcloud release, say).
+- You add a scenario that exercises an interaction not in any existing
+  recording.
+- A scenario fails with an `OrderedRegistry` mismatch and the new request
+  order is intentional.
+
+Keep recordings small. One scenario per recording is the norm.
+
+[responses]: https://github.com/getsentry/responses
 
 [Behave]: https://behave.readthedocs.io/
 [browser_steps.py]: https://github.com/niccokunzmann/open-web-calendar/blob/HEAD/open_web_calendar/features/steps/browser_steps.py

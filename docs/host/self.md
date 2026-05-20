@@ -73,6 +73,14 @@ watch the [GitHub repository]({{link.repo}}).
 After you have set up your own server,
 you can [configure the behavior](../configure).
 
+## Hosting on a Shared Domain
+
+If the calendar runs on the same domain as another service, set
+[`OWC_ENABLE_JS=false`](../configure#owc_enable_js) and add a strict
+`Content-Security-Policy` header through your reverse proxy.
+The full reasoning and a sub-path hosting checklist are in the
+[Security Model](../security-model).
+
 
 [open-web-calendar.hosted.quelltext.eu]: {{link.web}}
 [tor.open-web-calendar.hosted.quelltext.eu]: {{link.tor}}
