@@ -18,6 +18,9 @@ The latest version might not be released, yet.
 
 ## v1.52 (Unreleased)
 
+- Migrate the documentation stack from MkDocs to Sphinx with the MyST
+  parser, sphinx-intl for translations, and pydata-sphinx-theme, see
+  [Issue 1116](https://github.com/niccokunzmann/open-web-calendar/issues/1116)
 - Add development guide links 
 - Add CLI help implementation for better developer onboarding, see [Pull Request #981](https://github.com/niccokunzmann/open-web-calendar/pull/981) by [@Stazz0](https://github.com/Stazz0)
 - Open files with explicit UTF-8 encoding to fix Windows test failures, see [Issue 1127](https://github.com/niccokunzmann/open-web-calendar/issues/1127)
@@ -463,7 +466,7 @@ The latest version might not be released, yet.
 
 ## v1.5
 
-- add link to [Contributing Section](../contributing) in about page
+- add link to [Contributing Section](contributing.md) in about page
 - make event clickable even if there is a tool tip window
 - [@MrKoga](https://github.com/MrKoga) [donated][github-sponsors] to the project! Thanks!
 

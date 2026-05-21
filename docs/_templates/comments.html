@@ -1,0 +1,25 @@
+{#
+ # SPDX-FileCopyrightText: 2026 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+ # SPDX-License-Identifier: CC-BY-SA-4.0
+ #
+ # Renders giscus comments when the page front-matter has `comments: true`.
+ # See https://giscus.app/.
+ #}
+{% if meta and meta.get('comments') == 'true' %}
+<h2 id="__comments">Comments</h2>
+<script src="&#x68;&#x74;&#x74;&#x70;&#x73;&#x3a;&#x2f;&#x2f;&#x67;&#x69;&#x73;&#x63;&#x75;&#x73;&#x2e;&#x61;&#x70;&#x70;&#x2f;&#x63;&#x6c;&#x69;&#x65;&#x6e;&#x74;&#x2e;&#x6a;&#x73;"
+        data-repo="niccokunzmann/open-web-calendar"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxNzA4ODYyNzY="
+        data-category-id="DIC_kwDOCi-EhM4CesB-"
+        data-mapping="og:title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="noborder_light"
+        data-lang="{{ language|default('en') }}"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+{% endif %}

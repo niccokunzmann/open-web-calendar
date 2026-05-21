@@ -95,12 +95,12 @@ surface, but you can override them when needed. See
 for the full list.
 
 [default_specification]: /assets/default_specification.yml
-[privacy-policy]: ../privacy-policy
+[privacy-policy]: privacy-policy.md
 
 See also:
 
-- [API](../../dev/api)
-- [Auto-Generated CSS Classes](../../dev/css-classes) for class-level styling
+- [API](../dev/api.md)
+- [Auto-Generated CSS Classes](../dev/css-classes.md) for class-level styling
 
 ## Configuring the Server
 
@@ -289,7 +289,7 @@ OWC_SPECIFICATION='{"title": "calendar"}' gunicorn open_web_calendar:app
 
 See also:
 
-- [OWC_SPECIFICATION in the API](../../dev/api#owc_specification)
+- [OWC_SPECIFICATION in the API](../dev/api.md#owc_specification)
 
 ### PORT
 
@@ -352,7 +352,7 @@ export ALL_PROXY="socks5://10.10.1.10:3434"
 
 See also:
 
-- [Prevent SSRF using a Tor proxy](../docker#preventing-ssrf-attacks-using-a-tor-proxy)
+- [Prevent SSRF using a Tor proxy](docker.md#preventing-ssrf-attacks-using-a-tor-proxy)
 
 ## Squid as a Proxy Server
 
@@ -370,8 +370,8 @@ Squid will load it automatically then.
 
 In Linux, create `/etc/squid/conf.d/open-web-calendar.conf`:
 
-```sh
---8<-- "squid/open-web-calendar.conf"
+```{literalinclude} ../snippets/squid/open-web-calendar.conf
+:language: sh
 ```
 
 The list above denies the Open Web Calendar access to all known local/internal networks.
@@ -392,7 +392,7 @@ sudo service squid reload
 Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on `localhost`.
 Setting this variable changes depending on how you run the Open Web Calendar.
 
-If you use the [Python Setup](../pypi), you can set the environment variables for the server like this:
+If you use the [Python Setup](pypi.md), you can set the environment variables for the server like this:
 
 ```sh
 export HTTP_PROXY="http://localhost:3128"

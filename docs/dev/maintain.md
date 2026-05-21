@@ -78,12 +78,12 @@ The aim of this section is to have a consistent outcome.
 
     - File format: `gettext PO file` - **bi**lingual
     - Repository browser: `https://github.com/niccokunzmann/open-web-calendar/blob/{{branch}}/docs/<file>?plain=1#L{{line}}` - replace `<file>`
-    - File mask: `translations/*/LC_MESSAGES/<file>.md.po` - replace `<file>`
+    - File mask: `docs/locale/*/LC_MESSAGES/<file>.po` - replace `<file>`
     - Monolingual base language file: empty
     - Edit base file: **not** checked
     - Intermediate language file: empty
     - Adding new translation: `Create new language file`
-    - Template for new translations: `translations/en/LC_MESSAGES/<file>.md.po` - replace `<file>`
+    - Template for new translations: `docs/locale/en/LC_MESSAGES/<file>.po` - replace `<file>`
     - Translation license: `Create Commons Attribution Share Alike 4.0 International`
     - Language code style: `Default based on the file format`
     - Language filter:

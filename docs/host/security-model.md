@@ -37,7 +37,9 @@ The encryption module uses Fernet with bcrypt for URL secrets.
 Security reports go through [private advisories][advisories] so a fix
 can land before the report is public.
 If you find something in this layer, please follow the
-[Security Policy](../../SECURITY).
+[Security Policy][security-policy].
+
+[security-policy]: https://github.com/niccokunzmann/open-web-calendar/security/policy
 
 [advisories]: https://github.com/niccokunzmann/open-web-calendar/security/advisories
 
@@ -85,7 +87,7 @@ service, in either of these shapes:
   `example.com/app/`. Cookies and storage are shared.
 - **Same domain, root path.** Same risk; just no sub-path.
 
-Set [`OWC_ENABLE_JS=false`](../configure#owc_enable_js) on the calendar
+Set [`OWC_ENABLE_JS=false`](configure.md#owc_enable_js) on the calendar
 server.
 The configuration guide covers the exact behavior.
 
@@ -112,7 +114,7 @@ When the calendar must live at a sub-path:
 3. Set `ALLOWED_HOSTS` to your domain. Requests with a `Host` header
    that does not match are rejected before any route runs.
 4. Put SSRF protection in front of the calendar. See
-   [SSRF Protection with a Proxy Server](../configure#ssrf-protection-with-a-proxy-server).
+   [SSRF Protection with a Proxy Server](configure.md#ssrf-protection-with-a-proxy-server).
 5. Review the [`clean_html_*` defaults](/assets/default_specification.yml).
    Tighter is safer.
 
@@ -129,11 +131,11 @@ The server does not run untrusted code.
 Every script from a spec key runs in the browser only.
 
 No logging of calendar contents or IP addresses by default.
-See the [Privacy Policy](../privacy-policy) for what the hosted instance
+See the [Privacy Policy](privacy-policy.md) for what the hosted instance
 records.
 
 See also:
 
-- [Security Policy](../../SECURITY)
-- [Server Configuration](../configure)
-- [Privacy Policy](../privacy-policy)
+- [Security Policy][security-policy]
+- [Server Configuration](configure.md)
+- [Privacy Policy](privacy-policy.md)

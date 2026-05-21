@@ -1,0 +1,31 @@
+/*
+ * SPDX-FileCopyrightText: 2026 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+ * SPDX-License-Identifier: CC-BY-SA-4.0
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Ubuntu+Mono&display=swap');
+
+:root {
+  --pst-font-family-base: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pst-font-family-heading: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pst-font-family-monospace: 'Ubuntu Mono', SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Primary: black. Accent: yellow. */
+  --pst-color-primary: #000000;
+  --pst-color-secondary: #efbb00;
+  --pst-color-accent: #efbb00;
+}
+
+html[data-theme="light"] {
+  --pst-color-primary: #000000;
+  --pst-color-link: #000000;
+  --pst-color-link-hover: #efbb00;
+  --pst-color-inline-code-links: #000000;
+}
+
+html[data-theme="dark"] {
+  --pst-color-primary: #ffffff;
+  --pst-color-link: #efbb00;
+  --pst-color-link-hover: #ffffff;
+  --pst-color-inline-code-links: #efbb00;
+}

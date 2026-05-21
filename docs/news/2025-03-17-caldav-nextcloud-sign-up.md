@@ -120,5 +120,5 @@ We hope to see this feature used and users to come back with ideas of how to mak
 [vid-architecture]: https://www.youtube.com/watch?v=JVosZ6zht5I&list=PLxMGFFiBKgdaIo4j-Cw4SOjE_7ta7TM5q&index=2
 [Radically Open Security]: https://radicallyopensecurity.com/
 [Nextcloud]: https://nextcloud.com/
-[templates]: ../../templates#caldav-sign-up
-[grant]: /news/2024-04-10-website
+[templates]: ../templates.md#caldav-sign-up
+[grant]: 2024-04-10-website.md

@@ -136,17 +136,27 @@ It is located in the `docs` directory.
 
 ```sh
 # For all languages
-tox -e docs -- build # ./site
-tox -e docs -- serve
+tox -e docs                          # writes to docs/_build/html
 
-# Quick testing, for English and German only
-tox -e docs-quick -- build
-tox -e docs-quick -- serve
+# Quick testing, English and German only
+tox -e docs-quick                    # writes docs/_build/html-en and html-de
+
+# Regenerate translation templates and update PO files
+tox -e docs-i18n
+
+# Check external links
+tox -e docs-linkcheck
 ```
 
-We are using [mkdocs] with the [material theme](https://squidfunk.github.io/mkdocs-material/).
+We are using [Sphinx] with the [MyST parser] for Markdown and the
+[pydata-sphinx-theme] for styling. Translations live under `docs/locale/`
+and are managed by [sphinx-intl] (driven by Weblate on
+[hosted.weblate.org](https://hosted.weblate.org/engage/open-web-calendar/)).
 
-[mkdocs]: https://www.mkdocs.org
+[Sphinx]: https://www.sphinx-doc.org/
+[MyST parser]: https://myst-parser.readthedocs.io/
+[pydata-sphinx-theme]: https://pydata-sphinx-theme.readthedocs.io/
+[sphinx-intl]: https://sphinx-intl.readthedocs.io/
 
 ## Troubleshooting
 
@@ -155,15 +165,15 @@ A few things that tend to trip people up:
 - **Browser tests can't find Firefox.** Install Firefox locally, or pass
   `-D browser=chrome` (you need a real Chrome install for that too). Selenium
   drives the browser of your choice; we don't ship one.
-- **Docs build fails on Windows with `FileNotFoundError: ...\translations\de`.**
-  The `translations` entry in the repo root is a symlink that Windows checks
-  out as a plain file unless symlinks are enabled. Replace it with a directory
-  symlink locally (`mklink /D translations open_web_calendar\translations`).
-  Do not commit the change.
+- **Docs build fails on Windows with a missing `assets/img/logo` directory.**
+  `docs/assets/img/logo` is a git symlink that Windows checks out as a plain
+  file unless symlinks are enabled. Replace it with a directory junction
+  locally (`mklink /J docs\assets\img\logo open_web_calendar\static\img\logo`)
+  and `git update-index --skip-worktree` to ignore the change.
 - **`tox -e reuse` flags missing SPDX headers.** Every new source file needs
   the SPDX header at the top (copyright line + license identifier). Copy it
   from any existing file of the same type.
-- **The docs build writes changes to `.po` files.** Those are translation
-  templates regenerated from your source edits. They get synced separately by
-  the maintainers' translation workflow, so don't commit them as part of an
-  unrelated PR.
+- **`tox -e docs-i18n` writes changes to `.po` files under `docs/locale/`.**
+  Those are translation templates regenerated from your source edits. They
+  get synced separately by the maintainers' translation workflow, so don't
+  commit them as part of an unrelated PR.

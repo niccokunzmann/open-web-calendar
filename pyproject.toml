@@ -168,8 +168,15 @@ extend-safe-fixes = [
   "PLW2901"
 ]
 
-"docs/hooks/set_canonical_url.py" = [
-  "INP001"    # File `docs/hooks/set_canonical_url.py` is part of an implicit namespace package. Add an `__init__.py`.
+"docs/conf.py" = [
+  "INP001",   # Sphinx loads conf.py by name, not via package import
+  "E402",     # Module-level imports after _ext sys.path insert
+]
+"docs/_ext/*" = [
+  "INP001",   # Sphinx loads extensions by name
+]
+"docs/locale/fix_po_files.py" = [
+  "EXE001",   # Shebang present but file is not executable
 ]
 
 [tool.pip-tools.compile]

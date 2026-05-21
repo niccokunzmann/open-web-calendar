@@ -9,58 +9,48 @@ description: "Play with a variety of Calendars for your own project."
 
 # Examples
 
-<!-- Page level macros, see https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/#page-level-macros -->
-{% macro calendar_iframe(spec, width="100%", params="", id="") -%}
-
-<iframe class="open-web-calendar" id="{{id}}"
-    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
-    src="{{link.web}}/calendar.html?specification_url={{link.templates}}/{{spec}}&{{params}}"
-    sandbox="allow-scripts allow-same-origin allow-top-navigation"
-    allowTransparency="true" scrolling="no"
-    frameborder="0" height="600px" width="{{width}}"></iframe>
-
-{%- endmacro %}
-
-{% macro calendar_example(spec, width="100%", params="", id="", html="") -%}
-
-=== "Calendar"
-
-    {{ calendar_iframe(spec, width, params, id) }}
-
-=== "Specification"
-
-
-    ```json
-    --8<-- "{{ spec }}"
-    ```
-
-=== "HTML"
-
-    ```html
-    {{ calendar_iframe(spec, width, params, id) }}
-    {% if html != "" %}
-    --8<-- "{{ html }}"
-    {% endif %}
-    ```
-
-<a href="{{link.web}}/index.html?specification_url={{link.templates}}/{{spec}}" target="_blank">Edit the calendar</a>
-{%- endmacro %}
-
-
 We have prepared a variety of different styles so you can edit them to your needs.
 For each style, you can edit the calendar and shape it as you need it.
-If you are inspired, you can also just head over and [start from scratch]({{link.web}}).
+If you are inspired, you can also just head over and [start from scratch](https://open-web-calendar.hosted.quelltext.eu).
 
-> Are you proud of your calendar? Share it in the [Showcase Section]!
-
-[Showcase Section]: ../showcase
+> Are you proud of your calendar? Share it in the [Showcase Section](showcase/index.md)!
 
 ## Multiple Calendars
 
 You can embed several calendars into one view. In this example, we show
 different rooms in an office.
 
-{{calendar_example("rooms.json")}}
+::::{tab-set}
+
+:::{tab-item} Calendar
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/rooms.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+:::
+
+:::{tab-item} Specification
+```{literalinclude} assets/templates/rooms.json
+:language: json
+```
+:::
+
+:::{tab-item} HTML
+```html
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/rooms.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+```
+:::
+
+::::
+
+[Edit the calendar](https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/rooms.json)
 
 This is also useful if you have multiple calendar sources - be it
 different places, clubs, applications or organizations.
@@ -75,7 +65,37 @@ Modifications:
 
 Here is an example of a one day view of a Christmas day:
 
-{{calendar_example("christmas-day.json", "300px")}}
+::::{tab-set}
+
+:::{tab-item} Calendar
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="300px"></iframe>
+:::
+
+:::{tab-item} Specification
+```{literalinclude} assets/templates/christmas-day.json
+:language: json
+```
+:::
+
+:::{tab-item} HTML
+```html
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="300px"></iframe>
+```
+:::
+
+::::
+
+[Edit the calendar](https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/christmas-day.json)
 
 Modifications:
 
@@ -89,7 +109,37 @@ If you are at home, planning the days with the family, events might have
 different categories depending on who they are for: `work` or `personal`.
 Events can be single events or occur every day.
 
-{{calendar_example("family-planning.json")}}
+::::{tab-set}
+
+:::{tab-item} Calendar
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+:::
+
+:::{tab-item} Specification
+```{literalinclude} assets/templates/family-planning.json
+:language: json
+```
+:::
+
+:::{tab-item} HTML
+```html
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+```
+:::
+
+::::
+
+[Edit the calendar](https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/family-planning.json)
 
 Modifications:
 
@@ -106,16 +156,51 @@ a firewall on a little anonymous server. [Example][tor-example]
 
 Modifications:
 
-- [proxy parameters](../host/configure#ssrf-protection-with-a-proxy-server)
+- [proxy parameters](host/configure.md#ssrf-protection-with-a-proxy-server)
 
 ## Choose Timezones
 
 For an international calendar, you can allow choosing the time zone that the
 events are displayed in.
 
---8<-- "choose-timezone.html"
+```{literalinclude} snippets/choose-timezone.html
+:language: html
+```
 
-{{calendar_example("timezone-example.json", id="owcTimezoneExample", html="choose-timezone.html")}}
+::::{tab-set}
+
+:::{tab-item} Calendar
+<iframe class="open-web-calendar" id="owcTimezoneExample"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+:::
+
+:::{tab-item} Specification
+```{literalinclude} assets/templates/timezone-example.json
+:language: json
+```
+:::
+
+:::{tab-item} HTML
+```html
+<iframe class="open-web-calendar" id="owcTimezoneExample"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+```
+```{literalinclude} snippets/choose-timezone.html
+:language: html
+```
+:::
+
+::::
+
+[Edit the calendar](https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/timezone-example.json)
 
 Modifications:
 
@@ -129,7 +214,37 @@ You can change the design based on whether you are free or busy.
 This calendar has changed CSS so that the background is green and the
 events are either orange or red.
 
-{{calendar_example("free-and-busy.json")}}
+::::{tab-set}
+
+:::{tab-item} Calendar
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+:::
+
+:::{tab-item} Specification
+```{literalinclude} assets/templates/free-and-busy.json
+:language: json
+```
+:::
+
+:::{tab-item} HTML
+```html
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+```
+:::
+
+::::
+
+[Edit the calendar](https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/free-and-busy.json)
 
 Modifications:
 
@@ -144,7 +259,37 @@ In the example below, we used CalDAV to create event that you can sign up to.
 Once you sign up, you receive an email invitation and your name and email show
 up in the calendar.
 
-{{calendar_example("caldav-signup.json")}}
+::::{tab-set}
+
+:::{tab-item} Calendar
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/caldav-signup.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+:::
+
+:::{tab-item} Specification
+```{literalinclude} assets/templates/caldav-signup.json
+:language: json
+```
+:::
+
+:::{tab-item} HTML
+```html
+<iframe class="open-web-calendar"
+    style="background:url('/assets/img/circular-loader.gif') center center no-repeat; border-radius: 10px;"
+    src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/caldav-signup.json"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    allowTransparency="true" scrolling="no"
+    frameborder="0" height="600px" width="100%"></iframe>
+```
+:::
+
+::::
+
+[Edit the calendar](https://open-web-calendar.hosted.quelltext.eu/index.html?specification_url=https://open-web-calendar.quelltext.eu/assets/templates/caldav-signup.json)
 
 Modifications:
 
@@ -155,12 +300,12 @@ Modifications:
 See also:
 
 - [Tutorial: Event Sign Up with Nextcloud](https://youtu.be/RnMz23p7UP0)
-- [Blog: CalDAV Sign Up with Nextcloud](/news/2025-03-17-caldav-nextcloud-sign-up)
+- [Blog: CalDAV Sign Up with Nextcloud](news/2025-03-17-caldav-nextcloud-sign-up.md)
 
 ## Contribute Examples!
 
 If you want to add another example or showcase your calendar, this is the place.
-You can **contact us** with the link of the calendar e.g. in an [issue]({{link.issues}}).
+You can **contact us** with the link of the calendar e.g. in an [issue](https://github.com/niccokunzmann/open-web-calendar/issues).
 
 You can **edit the page** yourself:
 
@@ -168,5 +313,5 @@ You can **edit the page** yourself:
 2. Download the specification of the calendar. And add it to the [templates] directory.
 3. Edit this file and add a section.
 
-[calendars]: {{link.code}}/docs/assets/calendars
-[templates]: {{link.code}}/docs/assets/templates
+[calendars]: https://github.com/niccokunzmann/open-web-calendar/tree/HEAD/docs/assets/calendars
+[templates]: https://github.com/niccokunzmann/open-web-calendar/tree/HEAD/docs/assets/templates
