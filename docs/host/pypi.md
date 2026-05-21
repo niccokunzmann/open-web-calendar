@@ -118,7 +118,7 @@ sudo systemctl status open_web_calendar
 For more configuration options, see here:
 
 - [Gunicorn Command Line Arguments](https://docs.gunicorn.org/en/stable/run.html#commonly-used-arguments) and `gunicorn --help`.
-- [Configuration](../configure)
+- [Configuration](configure.md)
 - [Gunicorn]
 
 [Gunicorn]: https://docs.gunicorn.org/

@@ -16,7 +16,7 @@ Several hosting options are already documented.
 We are grateful if you can add your favorite one, too.
 
 1. **Choose a hoster.** These are listed below.
-2. [**Read about Configuration**](../configure).
+2. [**Read about Configuration**](configure.md).
 
 ## Vercel
 
@@ -33,7 +33,7 @@ You can deploy the app using [Heroku](https://heroku.com).
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/niccokunzmann/open-web-calendar)
 
 Heroku uses [gunicorn](https://gunicorn.org/)
-to run the server, see the [Procfile](https://github.com/niccokunzmann/open-web-calendar/blob/master/Procfile).
+to run the server, see the [Procfile](https://github.com/niccokunzmann/open-web-calendar/blob/HEAD/Procfile).
 
 ## Cloudron
 
@@ -54,12 +54,12 @@ The Open Web Calendar is available as an app for [YunoHost](https://yunohost.org
 ## Docker
 
 If you run your own server, you can choose to run the Open Web Calendar with Docker.
-Building, running and updating are [documented here](../docker).
+Building, running and updating are [documented here](docker.md).
 
 ## Python Package
 
 You can choose to run the Open Web Calendar installed as a Python package from PyPI.
-To do this, have a look at [the documentation](../pypi).
+To do this, have a look at [the documentation](pypi.md).
 
 ## Update Notifications
 
@@ -71,15 +71,15 @@ watch the [GitHub repository]({{link.repo}}).
 ## Further Configuration
 
 After you have set up your own server,
-you can [configure the behavior](../configure).
+you can [configure the behavior](configure.md).
 
 ## Hosting on a Shared Domain
 
 If the calendar runs on the same domain as another service, set
-[`OWC_ENABLE_JS=false`](../configure#owc_enable_js) and add a strict
+[`OWC_ENABLE_JS=false`](configure.md#owc_enable_js) and add a strict
 `Content-Security-Policy` header through your reverse proxy.
 The full reasoning and a sub-path hosting checklist are in the
-[Security Model](../security-model).
+[Security Model](security-model.md).
 
 
 [open-web-calendar.hosted.quelltext.eu]: {{link.web}}

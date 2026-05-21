@@ -53,7 +53,7 @@ An optional environment variable. Set it to a path or to an inline YAML
 or JSON string to change defaults for every calendar your instance
 serves.
 
-See [OWC_SPECIFICATION in the configuration guide](../../host/configure#owc_specification).
+See [OWC_SPECIFICATION in the configuration guide](../host/configure.md#owc_specification).
 
 ### 3. open_web_calendar.app.DEFAULT_SPECIFICATION
 
@@ -123,7 +123,7 @@ This matters for spec keys that load code, like `javascript` and
 When `OWC_ENABLE_JS=false`, those keys are silently dropped from the
 untrusted layers and still work from the trusted ones.
 
-See [Security Model](../../host/security-model) for why this split matters,
+See [Security Model](../host/security-model.md) for why this split matters,
 and [`get_specification()` in `app.py`]({{link.code}}/open_web_calendar/app.py)
 for the implementation.
 
@@ -140,4 +140,4 @@ for the implementation.
 See also:
 
 - [API](api)
-- [Server Configuration](../../host/configure)
+- [Server Configuration](../host/configure.md)

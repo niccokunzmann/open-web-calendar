@@ -112,8 +112,8 @@ particular status:
 
 See also:
 
-- [`css` and `css_url`](../../host/configure#configuring-the-default-calendar)
-- [Custom Theme Colors](../../host/configure#custom-theme-colors)
+- [`css` and `css_url`](../host/configure.md#configuring-the-default-calendar)
+- [Custom Theme Colors](../host/configure.md#custom-theme-colors)
 - [API](api)
 
 [default_specification]: {{link.code}}/open_web_calendar/default_specification.yml

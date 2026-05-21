@@ -15,7 +15,7 @@ For this, two [parameters] are available:
 - `javascript=...` for adding JavaScript to the calendar.
 - `javascript_url=...` for loading JavaScript from a URL.
 
-[parameters]: ../api
+[parameters]: api.md
 
 Anything that is added to the `javascript` parameter is executed after the calendar has been loaded.
 Thus, you can access the calendar and choose change its configuration.

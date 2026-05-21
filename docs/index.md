@@ -8,14 +8,16 @@ title: Customize Your Own Online Calendar Display
 description: "See the features or try the Open Web Calendar yourself!"
 ---
 
-![]({{link.img}}/logo/github-social-preview.svg)
+# Open Web Calendar
+
+![](/assets/img/logo/github-social-preview.svg)
 
 A highly flexible calendar display for your website.
 
 Give a calendar your personal touch within minutes!
 
-- **[Try it out now!]({{link.web}})**
-- [See Examples](templates)
+- **[Try it out now!](https://open-web-calendar.hosted.quelltext.eu)**
+- [See Examples](templates.md)
 
 ## Getting Started
 
@@ -23,14 +25,14 @@ Pick the path that matches what you have.
 
 ### I have an ICS URL
 
-1. Open the [configuration page]({{link.web}}).
+1. Open the [configuration page](https://open-web-calendar.hosted.quelltext.eu).
 2. Paste the ICS URL into the calendar URL input near the top of the
    page.
 3. Adjust the title, language, and starting tab.
 4. Copy the embed snippet at the bottom of the page into your website.
 
-The hosted instance at <{{link.web}}> is free to use.
-To run your own, see [Self-Hosting](host/self).
+The hosted instance at <https://open-web-calendar.hosted.quelltext.eu> is free to use.
+To run your own, see [Self-Hosting](host/self.md).
 
 ### I have CalDAV
 
@@ -39,7 +41,7 @@ The setup is the same as an ICS URL; just point at the CalDAV endpoint
 instead.
 
 For a CalDAV calendar where viewers sign up to events, see the
-[CalDAV Sign Up tutorial](news/2025-03-17-caldav-nextcloud-sign-up).
+[CalDAV Sign Up tutorial](news/2025-03-17-caldav-nextcloud-sign-up.md).
 
 ### I want to customize the appearance
 
@@ -48,20 +50,20 @@ Three ways, in order of effort:
 - **Quick changes** in the configuration page: title, colors, hours,
   controls.
 - **Theme colors** through `--owc-*` CSS variables in your `css` spec
-  key. See [Custom Theme Colors](host/configure#custom-theme-colors).
+  key. See [Custom Theme Colors](host/configure.md#custom-theme-colors).
 - **Full control** by writing CSS that targets the auto-generated
-  event classes. See [CSS Classes](dev/css-classes).
+  event classes. See [CSS Classes](dev/css-classes.md).
 
 For the full list of spec keys, see the
-[Specification Reference](reference).
+[Specification Reference](reference.md).
 
 ### I want to host my own instance
 
-Start with [Self-Hosting](host/self) and
-[Server Configuration](host/configure).
+Start with [Self-Hosting](host/self.md) and
+[Server Configuration](host/configure.md).
 
 If the calendar will share a domain with another service, read the
-[Security Model](host/security-model) before you go live.
+[Security Model](host/security-model.md) before you go live.
 
 ## Features
 
@@ -84,7 +86,70 @@ If the calendar will share a domain with another service, read the
 | Click on Event Location | <center>✔</center> |
 | Styled Event Descriptions | <center>✔</center> |
 | FOSS - No Vendor Lock-In | <center>✔</center> |
-| [Hosted]({{link.web}}) and [Self-Hosted](host/self) | <center>✔</center> |
+| [Hosted](https://open-web-calendar.hosted.quelltext.eu) and [Self-Hosted](host/self.md) | <center>✔</center> |
 | Subscribe Link | <center>✔</center> |
 | Community and Paid Support | <center>✔</center> |
-| [Developer API](dev/api) | <center>✔</center> |
+| [Developer API](dev/api.md) | <center>✔</center> |
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+reference.md
+templates.md
+contributing.md
+SECURITY.md
+changelog.md
+dunno.md
+```
+
+```{toctree}
+:hidden:
+:caption: Showcase
+
+showcase/index.md
+showcase/events-high-screen.md
+showcase/agenda-info-screen.md
+showcase/self-host-gancio.md
+showcase/philly-dsa.md
+```
+
+```{toctree}
+:hidden:
+:caption: News
+
+news/social-media.md
+news/2025-03-17-caldav-nextcloud-sign-up.md
+news/2024-04-10-website.md
+```
+
+```{toctree}
+:hidden:
+:caption: Hosting
+
+host/hosted.md
+host/self.md
+host/docker.md
+host/pypi.md
+host/configure.md
+host/security-model.md
+host/migrate.md
+host/privacy-policy.md
+```
+
+```{toctree}
+:hidden:
+:caption: Development
+
+dev/translate.md
+dev/index.md
+dev/testing.md
+dev/unit-tests.md
+dev/integration-tests.md
+dev/api.md
+dev/specification-inheritance.md
+dev/css-classes.md
+dev/javascript.md
+dev/maintain.md
+dev/license.md
+```

@@ -13,7 +13,7 @@ This page lists every spec key, grouped by purpose.
 Every key has a default in [default_specification.yml].
 Override any of them in a query parameter, a `specification_url` file,
 or the `OWC_SPECIFICATION` env var on the server.
-For the order of precedence, see [Specification Inheritance](dev/specification-inheritance).
+For the order of precedence, see [Specification Inheritance](dev/specification-inheritance.md).
 
 [default_specification.yml]: {{link.code}}/open_web_calendar/default_specification.yml
 
@@ -42,7 +42,7 @@ The body must be valid YAML or JSON.
 Type: string.
 Default: not set.
 
-See [Specification Inheritance](dev/specification-inheritance) for how this
+See [Specification Inheritance](dev/specification-inheritance.md) for how this
 combines with other layers.
 
 ## Display
@@ -206,9 +206,9 @@ A list of URLs to external stylesheets loaded into the calendar page.
 
 Type: list of strings. Default: empty.
 
-For class names you can target, see [CSS Classes](dev/css-classes).
+For class names you can target, see [CSS Classes](dev/css-classes.md).
 For theme color variables, see
-[Custom Theme Colors](host/configure#custom-theme-colors).
+[Custom Theme Colors](host/configure.md#custom-theme-colors).
 
 ### `style-event-status-tentative`
 
@@ -363,7 +363,7 @@ Type: string. Default: empty.
 !!! warning
 
     JavaScript from untrusted sources is dropped when the server runs with
-    `OWC_ENABLE_JS=false`. See [Security Model](host/security-model).
+    `OWC_ENABLE_JS=false`. See [Security Model](host/security-model.md).
 
 ### `javascript_url`
 
@@ -458,7 +458,7 @@ Type: integer. Default: `0`.
 
 See also:
 
-- [API](dev/api)
-- [Specification Inheritance](dev/specification-inheritance)
-- [Server Configuration](host/configure)
-- [CSS Classes](dev/css-classes)
+- [API](dev/api.md)
+- [Specification Inheritance](dev/specification-inheritance.md)
+- [Server Configuration](host/configure.md)
+- [CSS Classes](dev/css-classes.md)

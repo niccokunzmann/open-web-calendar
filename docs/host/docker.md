@@ -48,7 +48,7 @@ docker stop open-web-calendar
 ## Container Tags
 
 The container `niccokunzmann/open-web-calendar:latest` contains the latest release.
-Containers are also tagged with the version from the [changelog](../../changelog), e.g.
+Containers are also tagged with the version from the [changelog](../changelog.md), e.g.
 `niccokunzmann/open-web-calendar:v1.10`.
 
 If you wish to run the latest development version, use `niccokunzmann/open-web-calendar:master`.
@@ -81,7 +81,7 @@ networks:
 To deploy the Open Web Calendar with `docker compose`, follow these steps:
 
 1. Copy the `docker-compose.yml` file to the directory from where you want to run the container.
-2. If needed change the port mapping and [environment variables](../configure).
+2. If needed change the port mapping and [environment variables](configure.md).
 3. Start the container:
 
     ```sh
@@ -131,8 +131,8 @@ The following example shows the usage of a Tor proxy.
 You can try it out at
 [tor.open-web-calendar.hosted.quelltext.eu](https://tor.open-web-calendar.hosted.quelltext.eu/).
 
-```yaml
---8<-- "tor/docker-compose.yml"
+```{literalinclude} ../snippets/tor/docker-compose.yml
+:language: yaml
 ```
 
 The configuration above prevents access to the internal network as the
@@ -145,7 +145,7 @@ This [example calendar](https://tor.open-web-calendar.hosted.quelltext.eu/calend
 
 See also:
 
-- [SSRF Protection with a Proxy Server](../configure#ssrf-protection-with-a-proxy-server)
+- [SSRF Protection with a Proxy Server](configure.md#ssrf-protection-with-a-proxy-server)
 
 ## Preventing SSRF attacks using a Squid Proxy
 
@@ -154,14 +154,14 @@ The Open Web Calendar can be configured to use it to request `.ics` and other fi
 
 Use this as your `docker-compose.yml` file:
 
-```yaml
---8<-- "docker/docker-compose.yml"
+```{literalinclude} ../snippets/docker/docker-compose.yml
+:language: yaml
 ```
 
 And add the following `open-web-calendar.conf` file into the same directory.
 
-```sh
---8<-- "docker/open-web-calendar.conf"
+```{literalinclude} ../snippets/docker/open-web-calendar.conf
+:language: sh
 ```
 
 Then, you can start the service with this command:
@@ -217,14 +217,14 @@ crontab -e
 
 And add this line:
 
-```crontab
+```text
 3 * * * * /path/to/update.sh 1> /path/to/update.sh.log 2> /path/to/update.sh.log
 ```
 
 ## Further Configuration
 
 After you have set up your own server,
-you can [configure the behavior](../configure).
+you can [configure the behavior](configure.md).
 
 
 [Dockerhub]: {{link.dockerhub}}

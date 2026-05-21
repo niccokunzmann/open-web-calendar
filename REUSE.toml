@@ -8,7 +8,7 @@ SPDX-PackageSupplier = "Nicco Kunzmann <niccokunzmann@rambler.ru>"
 SPDX-PackageDownloadLocation = "https://github.com/niccokunzmann/open-web-calendar"
 
 [[annotations]]
-path = ["open_web_calendar/translations/**.po", "docs/snippets/**", "docs/overrides/partials/languages/**"]
+path = ["docs/locale/**.po", "docs/snippets/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>"
 SPDX-License-Identifier = "CC-BY-SA-4.0"

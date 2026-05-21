@@ -20,6 +20,7 @@ jobs:
   update-translation-po-files:
     name: Update Translation PO Files
     runs-on: ubuntu-latest
+    # Production branch. Change to 'main' once the default branch flips.
     if: github.ref_name == 'master'
     steps:
       - uses: actions/checkout@v6
@@ -29,18 +30,17 @@ jobs:
           python-version: ${{ 3.11 }}  # try to avoid renovate update
       - name: Install tox
         run: pip install tox
-      # run adding languages before the build to make sure that it succeeds
+      - name: Update gettext templates and PO files
+        run: tox -e docs-i18n
       - name: Add missing languages
         run: ./scripts/find-translated-documentation-languages.sh
-      - name: Build the documentation
-        run: tox -e docs -- build
       - name: Check status
         run: git status
-      - name: Push updates translation files
+      - name: Push updated translation files
         run: |
           git config --global user.name 'OWC Github Actions'
           git config --global user.email 'owc-github-actions@users.noreply.github.com'
-          git add open_web_calendar/translations mkdocs.yml
+          git add docs/locale docs/_languages.yml
           if git commit -m "Update translation files"; then
             if ! git push; then
               echo "ERROR: Push failed."

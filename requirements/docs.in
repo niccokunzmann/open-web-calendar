@@ -1,14 +1,13 @@
-mkdocs-material
-mkdocs-rss-plugin
-mkdocs-git-revision-date-localized-plugin
-mkdocs-material[imaging]
-mkdocs-markdownextradata-plugin
-mkdocs-macros-plugin
-mkdocs[i18n]
-mkdocs-meta-descriptions-plugin
-
-#mkdocs-mdpo-plugin
-git+https://github.com/niccokunzmann/mkdocs-mdpo-plugin.git@patch-1
-mkdocs-material-relative-language-selector
-
-mkdocs-exclude
+# Sphinx documentation stack
+sphinx>=7.4
+myst-parser>=3
+pydata-sphinx-theme>=0.15
+sphinx-copybutton
+sphinx-design
+sphinx-issues
+sphinx-sitemap
+sphinx-notfound-page
+sphinxext-opengraph
+sphinx-intl
+linkify-it-py
+PyYAML

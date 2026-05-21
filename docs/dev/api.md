@@ -63,31 +63,35 @@ That is the reference.
 E.g. if you find the parameter `title` in the [default_specification],
 you have several options:
 
-=== "Query Parameter"
+::::{tab-set}
 
-    Change the title in a query parameter:
+:::{tab-item} Query Parameter
+Change the title in a query parameter:
 
-    ```sh
-    /index.html?title=calendar
-    ```
+```sh
+/index.html?title=calendar
+```
+:::
 
-=== "YAML"
+:::{tab-item} YAML
+Change the title in a YAML specification:
 
-    Change the title in a YAML specification:
+```yaml
+title: calendar
+```
+:::
 
-    ```YAML
-    title: calendar
-    ```
+:::{tab-item} JSON
+Change the title in a JSON specification:
 
-=== "JSON"
+```json
+{
+  "title": "calendar"
+}
+```
+:::
 
-    Change the title in a JSON specification:
-
-    ```json
-    {
-      "title": "calendar"
-    }
-    ```
+::::
 
 ## Compiling the Specification
 
@@ -96,7 +100,7 @@ If the same parameter is specified in different places, the earlier place listed
 These are the places to specify parameters:
 
 For a worked example and a diagram of how the layers combine, see
-[Specification Inheritance](specification-inheritance).
+[Specification Inheritance](specification-inheritance.md).
 
 ### Query parameters
 
@@ -130,7 +134,7 @@ DEFAULT_SPECIFICATION['title'] = 'calendar'
 ### OWC_SPECIFICATION
 
 This is an optional environment variable.
-Please read more about it in the [Server Configuration](../../host/configure#owc_specification).
+Please read more about it in the [Server Configuration](../host/configure.md#owc_specification).
 
 ### [default_specification]
 
@@ -162,7 +166,7 @@ The specification is available to JavaScript as the `specification` variable.
 
 See also:
 
-- [JavaScript Customization](../javascript)
+- [JavaScript Customization](javascript.md)
 
 
 [app.py-link]: {{link.code}}/open_web_calendar/app.py

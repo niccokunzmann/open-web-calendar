@@ -24,7 +24,7 @@ This is an example URL that you would use to display or link to the calendar:
 **https://open-web-calendar.hosted.quelltext.eu**/calendar.html?language=de&url=https%3A%2F%2Fexample.co.uk%2Fcalendar.ics
 
 You only need to replace the **bold** part of the calendar with the new server location.
-If your server runs with a [local development setup](../../dev) at `http://localhost:8000`, 
+If your server runs with a [local development setup](../dev/index.md) at `http://localhost:8000`, 
 you would migrate your calendar by editing the URL, leaving everything behind the first `/` as it is:
 
 **http://localhost:8000**/calendar.html?language=de&url=https%3A%2F%2Fexample.co.uk%2Fcalendar.ics
@@ -40,12 +40,12 @@ leaving most features as is.
 **Downgrading** - moving to an earlier version of the Open Web Calendar - should generally work
 without total loss as new configuration parameters are ignored. However, some functionalities might get lost.
 
-Have a look at the [Changelog](../../changelog) for new features added and if you can downgrade
+Have a look at the [Changelog](../changelog.md) for new features added and if you can downgrade
 without loss.
 
 ## Migration with Altered Default Parameters
 
-The Open Web Calendar allows modification of all calendar parameters, as stated in the [Configuration Section](../configure).
+The Open Web Calendar allows modification of all calendar parameters, as stated in the [Configuration Section](configure.md).
 In order to migrate from or to a server that has modified the `default_specification.yml` file,
 you will need to retrieve the specification of the calendar.
 
