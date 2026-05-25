@@ -299,6 +299,11 @@ menu-shows-calendar-names: "List Calendar Names"
 menu-shows-calendar-descriptions: "List Calendar Descriptions"
 menu-shows-calendar-visibility: "Hide/Show Calendars"
 
+event-details-title: "Event Details"
+event-details-description: "Choose whether clicking an event shows its details and whether hovering shows a tooltip."
+event-details-popup: "Show event details on click"
+event-details-tooltip: "Show tooltip on hover"
+
 # Heading of option
 # https://open-web-calendar.hosted.quelltext.eu/#translate-timezone-title
 timezone-title: "Time Zone"

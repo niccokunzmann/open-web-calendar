@@ -402,6 +402,16 @@ SPDX-License-Identifier: GPL-2.0-only
                     <label for="menu_shows_calendar_visibility_toggle" ><div class="belongs-together button"><input type="checkbox" class="specification-checkbox"                            id="menu_shows_calendar_visibility_toggle" />{{ html("menu-shows-calendar-visibility")   }}</div></label>
                 </div>
             </section>
+            <section id="configure-event-details">
+                <h2>{{ html("event-details-title") }}</h2>
+                <p>
+                    {{ html("event-details-description") }}
+                </p>
+                <div class="action-paragraph">
+                    <label for="plugin_event_details"><div class="belongs-together button"><input type="checkbox" class="specification-checkbox" id="plugin_event_details" />{{ html("event-details-popup") }}</div></label>
+                    <label for="plugin_event_tooltip"><div class="belongs-together button"><input type="checkbox" class="specification-checkbox" id="plugin_event_tooltip" />{{ html("event-details-tooltip") }}</div></label>
+                </div>
+            </section>
             <section id="configure-timezone">
                 <h2>{{ html("timezone-title") }}</h2>
                 <p>
