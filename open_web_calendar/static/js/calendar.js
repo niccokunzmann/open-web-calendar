@@ -176,8 +176,8 @@ const template = {
         details.appendChild(summary);
         const ol = document.createElement("ol");
         for (const participant of participants) {
-            if ((participant.is_oragnizer && !specification.show_organizers) ||
-                (!participant.is_oragnizer && !specification.show_attendees)
+            if ((participant.is_organizer && !specification.show_organizers) ||
+                (!participant.is_organizer && !specification.show_attendees)
             ) {
                 continue;
             }
