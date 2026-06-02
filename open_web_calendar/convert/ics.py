@@ -44,8 +44,6 @@ class ConvertToICS(ConversionStrategy):
         event["DESCRIPTION"] = tb_s
         event["URL"] = url
         event["UID"] = "error" + str(id(error))
-        if url:
-            event["URL"] = url
         calendar = Calendar()
         calendar.add_component(event)
         return calendar
