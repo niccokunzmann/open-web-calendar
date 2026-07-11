@@ -11,7 +11,7 @@ cachetools==7.1.4
     # via tox
 chardet==7.4.3
     # via tox
-click==8.4.0
+click==8.4.2
     # via
     #   pip-compile-multi
     #   pip-tools
