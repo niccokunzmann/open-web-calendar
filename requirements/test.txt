@@ -24,7 +24,7 @@ certifi==2026.4.22
     #   selenium
 chardet==7.4.3
     # via binaryornot
-charset-normalizer==3.4.7
+charset-normalizer==3.4.9
     # via
     #   python-debian
     #   requests
