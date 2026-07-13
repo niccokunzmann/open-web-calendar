@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import datetime
+import unicodedata
 import zoneinfo
 from html import escape
 from typing import TYPE_CHECKING, Any
@@ -19,9 +20,12 @@ from .base import ConversionStrategy
 
 if TYPE_CHECKING:
     from icalendar import Event, vCalAddress
-
     from open_web_calendar.calendars.base import Calendars
-
+    
+def normalize_text(value):
+    if not isinstance(value, str):
+        return value
+    return unicodedata.normalize("NFC", value)
 
 def is_date(date):
     """Whether the date is a datetime.date and not a datetime.datetime"""
@@ -131,14 +135,14 @@ class ConvertToEvents(ConversionStrategy):
         if is_date(start) and is_date(end) and start == end:
             end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
-        name = calendar_event.get("SUMMARY", "")
+        name = normalize_text(calendar_event.get("SUMMARY", ""))
         sequence = calendar_event.sequence
         uid = calendar_event.uid
         start_date = self.date_to_string(start)
         location_map: dict[str, str] | None = {
-            "text": location.text,
-            "url": location.url,
-        }
+    "text": normalize_text(location.text),
+    "url": location.url,
+}
         if not location_map["text"] and not location_map["url"]:
             location_map = None
         return {
@@ -206,7 +210,7 @@ class ConvertToEvents(ConversionStrategy):
 
         HTML is cleaned.
         """
-        description = Description(event).html
+        description = normalize_text(Description(event).html)
         return self.clean_html(description)
 
     def merge(self):
@@ -236,6 +240,6 @@ class ConvertToEvents(ConversionStrategy):
     def get_event_categories(self, event: Event) -> list[str]:
         """Return the categories of the event."""
         return event.categories
-
-
+        
+        
 __all__ = ["ConvertToEvents"]
