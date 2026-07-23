@@ -19,7 +19,9 @@ SPDX-License-Identifier: GPL-2.0-only
                 "button-encrypted": {{ string("button-encrypted") | tojson }},
                 "button-edit": {{ string("button-edit") | tojson }},
                 "button-remove": {{ string("button-remove") | tojson }},
+                "home": {{ string("home") | tojson }},
             };
+            const homepageUrl = {{ specification["homepage"] | tojson | safe }};
         </script>
         <link href="css/common.css" rel="stylesheet" type="text/css">
         <link href="css/index.css" rel="stylesheet" type="text/css">
