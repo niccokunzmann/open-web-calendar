@@ -122,7 +122,7 @@ const template = {
     "formatted_summary": function(event) {
       let summary = template.plain_summary(event);
       if (event.url) {
-        summary = makeLink(event.url, "🔗 " + summary);
+        summary = makeLink(event.url, "נ”— " + summary);
       }
       return summary;
     },
@@ -141,7 +141,7 @@ const template = {
         if (!event.location) {
             return "";
         }
-        return makeLink(event.location.url, escapeHtml(event.location.text || "🗺"));
+        return makeLink(event.location.url, escapeHtml(event.location.text || "נ—÷"));
     },
     "debug": function(event) {
         return "<pre class='debug' style='display:none'>" +
@@ -176,8 +176,8 @@ const template = {
         details.appendChild(summary);
         const ol = document.createElement("ol");
         for (const participant of participants) {
-            if ((participant.is_oragnizer && !specification.show_organizers) ||
-                (!participant.is_oragnizer && !specification.show_attendees)
+            if ((participant.is_organizer && !specification.show_organizers) ||
+                (!participant.is_organizer && !specification.show_attendees)
             ) {
                 continue;
             }
