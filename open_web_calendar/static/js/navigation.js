@@ -115,6 +115,10 @@ function scrollToCurrentSection() {
         previousSectionLink.href = bottomPreviousLink.href = "#" + currentSection.owcPreviousSection.id;
         previousSectionLink.innerText = currentSection.owcPreviousSection.owcHeading;
         document.body.classList.remove("no-previous-section");
+    } else if (homepageUrl) {
+        previousSectionLink.href = bottomPreviousLink.href = homepageUrl;
+        previousSectionLink.innerText = bottomPreviousLink.innerText = translations["home"];
+        document.body.classList.remove("no-previous-section");
     } else {
         document.body.classList.add("no-previous-section");
     }
