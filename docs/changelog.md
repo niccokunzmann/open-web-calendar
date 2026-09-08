@@ -18,6 +18,7 @@ The latest version might not be released, yet.
 
 ## v1.52 (Unreleased)
 
+- Fix agenda view crash when both `controls` and `tabs` are empty — the agenda view requires the `.dhx_cal_date` element in the navline, which was previously excluded from the header when no controls were selected
 - Migrate the documentation stack from MkDocs to Sphinx with the MyST
   parser, sphinx-intl for translations, and pydata-sphinx-theme, see
   [Issue 1116](https://github.com/niccokunzmann/open-web-calendar/issues/1116)
