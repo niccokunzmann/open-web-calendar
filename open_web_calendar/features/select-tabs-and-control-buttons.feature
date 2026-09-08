@@ -47,3 +47,13 @@ Feature: I would like to choose which tabs to display.
       And we set the "controls" parameter to ""
      When we look at 2024-01-18
      Then we can see the text "DAY"
+
+  Scenario: The navline remains visible when controls are empty but tabs are present.
+    Given we add the calendar "one-event"
+      And we set the "controls" parameter to ""
+      And we set the "tabs" parameter to ["day"]
+     When we look at 2024-01-18
+     Then we can see the text "January 2024"
+     Then we cannot see a dhx_cal_prev_button
+     Then we cannot see a dhx_cal_today_button
+     Then we cannot see a dhx_cal_next_button
