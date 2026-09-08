@@ -266,7 +266,7 @@ function getHeader() {
     // elements that do not occur in the list will always be permitted
     const useHeaderElement = {
       "prev": specification.controls.includes("previous") ,
-      "date": specification.controls.includes("date"),
+      "date": specification.controls.includes("date") || specification.tabs.length > 0,
       "next": specification.controls.includes("next"),
       "day": specification.tabs.includes("day"),
       "week": specification.tabs.includes("week"),
