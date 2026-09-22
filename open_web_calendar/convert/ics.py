@@ -4,6 +4,8 @@
 """Convert the source links according to the specification to an ICS file."""
 
 import datetime
+from copy import deepcopy
+from functools import lru_cache
 
 from flask import Response
 from icalendar import Calendar, Event, Timezone
@@ -29,6 +31,15 @@ class ConvertToICS(ConversionStrategy):
     def is_timezone(self, component):
         """Whether a component is an event."""
         return isinstance(component, Timezone)
+
+    @staticmethod
+    @lru_cache(maxsize=128)
+    def get_timezone(tzid, first_date, last_date):
+        """Cache generated definitions; unknown timezone IDs cannot be expanded."""
+        try:
+            return Timezone.from_tzid(tzid, first_date=first_date, last_date=last_date)
+        except ValueError:
+            return None
 
     def collect_components_from(self, calendar_index: int, calendars: Calendars):
         with self.lock:
@@ -63,6 +74,24 @@ class ConvertToICS(ConversionStrategy):
             for event in calendar.events:
                 calendar.subcomponents.remove(event)
             calendar.add_component(Event.from_ical(only_event))
+        first_date = Timezone.DEFAULT_FIRST_DATE
+        last_date = Timezone.DEFAULT_LAST_DATE
+        for event in calendar.events:
+            for name in ("DTSTART", "DTEND", "RECURRENCE-ID"):
+                value = getattr(event.get(name), "dt", None)
+                if isinstance(value, datetime.date):
+                    first_date = min(first_date, datetime.date(value.year, 1, 1))
+                    last_date = max(
+                        last_date,
+                        datetime.date(value.year + 1, 1, 1)
+                        if value.year < datetime.MAXYEAR
+                        else datetime.date.max,
+                    )
+        for tzid in sorted(calendar.get_missing_tzids()):
+            timezone = self.get_timezone(tzid, first_date, last_date)
+            if timezone is not None:
+                # Keep definitions before their uses and isolate the cached value.
+                calendar.subcomponents.insert(0, deepcopy(timezone))
         return Response(calendar.to_ical(), mimetype="text/calendar")
 
 
