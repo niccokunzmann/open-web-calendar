@@ -628,12 +628,14 @@ let calendarMetaData = null; // We only need to load this once.
 async function loadCalendarMetadata() {
     // make the menu with the metadata work
     const toggleMenuButton = document.getElementById("menu__toggle");
-    toggleMenuButton.addEventListener("change", function() {
-        const otherCheckbox = document.getElementById("menu__toggle__2");
-        if (otherCheckbox != null) {
-            otherCheckbox.checked = toggleMenuButton.checked;
-        }
-    });
+    if (toggleMenuButton != null) {
+        toggleMenuButton.addEventListener("change", function() {
+            const otherCheckbox = document.getElementById("menu__toggle__2");
+            if (otherCheckbox != null) {
+                otherCheckbox.checked = toggleMenuButton.checked;
+            }
+        });
+    }
     // only update once
     if (calendarMetaData != null) {
         onCalendarInfoLoaded();
@@ -649,8 +651,10 @@ function onCalendarInfoLoaded() {
     // Since we had no data before, we set it now.
     console.log("Calendar Info:", calendarMetaData);
     const metaDataInMenu = document.getElementById("menu-meta-data");
-    // fill the menu
-    metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    // fill the menu if it is shown
+    if (metaDataInMenu != null) {
+        metaDataInMenu.appendChild(getMenuInnerContent(calendarMetaData));
+    }
     // handle errors
     for (error of calendarMetaData.errors) {
         showEventError(error);
