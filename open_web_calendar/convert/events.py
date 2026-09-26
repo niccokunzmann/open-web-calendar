@@ -90,7 +90,7 @@ class ConvertToEvents(ConversionStrategy):
         if organizer is not None:
             participants.append(
                 cls.create_participant_from(
-                    organizer, role="ORGANIZER", is_oragnizer=True
+                    organizer, role="ORGANIZER", is_organizer=True
                 )
             )
         attendees = event.get("ATTENDEE", [])
@@ -105,7 +105,7 @@ class ConvertToEvents(ConversionStrategy):
         cls,
         address: vCalAddress,
         role: str = "REQ-PARTICIPANT",
-        is_oragnizer: bool = False,  # noqa: FBT001
+        is_organizer: bool = False,  # noqa: FBT001
     ) -> dict[str, Any]:
         """Create a participant with default values."""
         participant = {}
@@ -122,7 +122,7 @@ class ConvertToEvents(ConversionStrategy):
             f"PARTICIPANT-{pr}",
             f"PARTICIPANT-{status}",
         ]
-        participant["is_oragnizer"] = is_oragnizer
+        participant["is_organizer"] = is_organizer
         return participant
 
     def convert_ical_event(self, calendar_index, calendar_event: Event):
