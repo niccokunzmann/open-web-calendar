@@ -28,6 +28,17 @@ def is_date(date):
     return isinstance(date, datetime.date) and not isinstance(date, datetime.datetime)
 
 
+def is_midnight(date):
+    """Whether the datetime starts exactly at midnight in its own timezone."""
+    return (
+        isinstance(date, datetime.datetime)
+        and date.hour == 0
+        and date.minute == 0
+        and date.second == 0
+        and date.microsecond == 0
+    )
+
+
 class ConvertToEvents(ConversionStrategy):
     """Convert events to dhtmlx. This conforms to a stratey pattern.
 
@@ -128,6 +139,16 @@ class ConvertToEvents(ConversionStrategy):
     def convert_ical_event(self, calendar_index, calendar_event: Event):
         start = calendar_event.start
         end = calendar_event.end
+        if (
+            is_midnight(start)
+            and is_midnight(end)
+            and end > start
+            and (end - start) % datetime.timedelta(days=1) == datetime.timedelta(0)
+        ):
+            # Events which last whole days and start and end at midnight are
+            # all-day events. As dates, they keep their days in every timezone.
+            start = start.date()
+            end = end.date()
         if is_date(start) and is_date(end) and start == end:
             end = start + datetime.timedelta(days=1)
         location = Location(calendar_event, self.location_spec)
