@@ -66,7 +66,7 @@ for file in ["locale_en.js"] + os.listdir("."):  # noqa: PTH208, RUF100
         r = regex.findall(f.read())
     assert len(r) == 1, r
     r = r[0].replace("{", "dict(").replace("}", ")").replace(":", "=")
-    r = eval(r)
+    r = eval(r, {"__builtins__": {"dict": dict}})
     print(list(r))
     print(r)
     yaml = ""
