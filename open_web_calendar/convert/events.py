@@ -11,6 +11,7 @@ from html import escape
 from typing import TYPE_CHECKING, Any
 from urllib.parse import unquote
 
+from bs4 import BeautifulSoup
 from dateutil.parser import parse as parse_date
 from flask import jsonify
 from icalendar_compatibility import Description, Location, LocationSpec
@@ -21,6 +22,16 @@ if TYPE_CHECKING:
     from icalendar import Event, vCalAddress
 
     from open_web_calendar.calendars.base import Calendars
+
+
+def has_visible_text(html: str) -> bool:
+    """Whether the HTML shows any text to a reader (ignores tags, style, nbsp)."""
+    if not html or not html.strip():
+        return False
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup(["style", "script", "head"]):
+        tag.decompose()
+    return bool(soup.get_text().replace("\xa0", " ").strip())
 
 
 def is_date(date):
@@ -205,9 +216,18 @@ class ConvertToEvents(ConversionStrategy):
         """Return a formatted description of the event.
 
         HTML is cleaned.
+
+        If the HTML description contains no visible text (e.g. Outlook writes
+        an empty X-ALT-DESC body), fall back to the plain-text DESCRIPTION.
         """
-        description = Description(event).html
-        return self.clean_html(description)
+        description = Description(event)
+        html = self.clean_html(description.html)
+        if has_visible_text(html):
+            return html
+        text = description.text.strip()
+        if text:
+            return self.clean_html(escape(text).replace("\n", "<br>"))
+        return html
 
     def merge(self):
         return jsonify(self.components)
