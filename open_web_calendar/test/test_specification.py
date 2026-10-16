@@ -90,3 +90,11 @@ def test_empty_array():
     spec = get_specification(query=MultiDict({"tabs": "", "controls": ""}))
     assert spec["tabs"] == []
     assert spec["controls"] == []
+
+
+@with_url
+def test_specification_url_is_not_in_resulting_spec(url, cache_url):
+    """specification_url should not appear in the resulting spec."""
+    cache_url(url, '{"css": "123"}')
+    spec = get_specification(query=MultiDict({"specification_url": url}))
+    assert "specification_url" not in spec

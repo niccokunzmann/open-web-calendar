@@ -17,8 +17,8 @@ time-increment-15: 15 minuuttia
 hour-format-title: Ajannäyttö
 hour-format-specification-link: Katso määrittely.
 language-title: Kieli
-hour-format-description: Voit valita 24 tunnin tai 12 tunnin kellon välillä. Muitakin
-  vaihtoehtoja on.
+hour-format-description: Voit valita 24 tunnin tai 12 tunnin kellon välillä. 
+  Muitakin vaihtoehtoja on.
 time-increment-60: 1 tunti
 language-browser-false: 'Kalenteri on aina tällä kielellä:'
 style-date: Voit muuttaa nykyisen päivämäärän taustaväriä.
@@ -26,13 +26,13 @@ spec-title: Eritelmän isännöinti
 participants-status: Näytä osallistujien tila? (eli hyväksytty/hylätty)
 add-url-placeholder-url: https://linkki/kalenteriin.ics
 event-status-cancelled: peruttu
-map-link-geo-description: Syötä kartan URL-osoite tähän ja sisällytä koordinaateille
-  {lat} ja {lon}.
+map-link-geo-description: Syötä kartan URL-osoite tähän ja sisällytä 
+  koordinaateille {lat} ja {lon}.
 button-encrypt: Salaa URL-osoite
 event-status-tentative: alustus
 style-click: Voit muuttaa napsautettavien elementtien väriä.
-participants-role: Näytetäänkö osallistujan rooli? (eli järjestäjä, pakollinen henkilö
-  tai valinnainen)
+participants-role: Näytetäänkö osallistujan rooli? (eli järjestäjä, pakollinen 
+  henkilö tai valinnainen)
 event-status-title: Tapahtuman tila
 skins-flat: Litteä
 event-status-confirmed: vahvistettu
@@ -41,19 +41,20 @@ calendar-urls: 'Useiden kalentereiden yhdistäämiseksi, syötä ICS-kalenterien
   tähän:'
 calendar-code: 'Kalenterin upottamiseksi, käytä tätä koodia verkkosivustollasi:'
 skins-terrace: Terassi
-links-self: Avaa linkitetty asiakirja samassa kehyksessä, jossa sitä napsautettiin.
+links-self: Avaa linkitetty asiakirja samassa kehyksessä, jossa sitä 
+  napsautettiin.
 links-parent: Avaa linkitetty asiakirja yläkehyksessä.
 links-blank: Avaa linkitetty asiakirja uudessa ikkunassa tai välilehdessä.
 style-title: Mukautettu tyyli CSS:llä
 style-background: Voit muuttaa kalenterin taustaväriä.
-style-days-outside: Jotkut kalenterin päivät ovat eri värisiä, jos ne eivät ole kuukauden
-  sisällä.
+style-days-outside: Jotkut kalenterin päivät ovat eri värisiä, jos ne eivät ole 
+  kuukauden sisällä.
 style-days: Jos haluat päiville toisen värin, voit myös määrittää tämän.
 style-css: Voit halutessasi määrittää omat CSS-ominaisuudet.
 loader-title: Ladataan animaatiota
-loader-description: Joissakin tapauksissa palvelimella kestää melko kauan ladata kalenteri.
-  Jos palvelin käyttää ilmaista suunnitelmaa Herokussa, palvelimen on käynnistettävä
-  ensin.
+loader-description: Joissakin tapauksissa palvelimella kestää melko kauan ladata
+  kalenteri. Jos palvelin käyttää ilmaista suunnitelmaa Herokussa, palvelimen on
+  käynnistettävä ensin.
 loader-default: pyöreä lataaja
 tabs-title: Kalenterin välilehdet
 controls-description: 'Saattaa olla, että et halua näyttää kaikkia säätimiä käyttäjien
@@ -84,28 +85,33 @@ event-status-description: 'Muuta tapahtuman kuvauksen ulkoasua tilan mukaan:'
 skins-contrast-white: Kontrasti valkoinen
 skins-material: Materiaali
 skins-contrast-black: Kontrasti musta
-style-description: Voit muuttaa kalenterisi ja monien muiden ominaisuuksien väriä
-  CSS:n avulla. Räätälöinnilläsi on etusija valitsemaasi ihoon nähden. Alla voit valita
-  muutamista mukautuksista, jotka olemme valmistaneet sinua varten.
-password-urls: Suosittelemme URL-osoitteiden salaamista, jos ne sisältävät arkaluontoisia
-  tietoja. Tallenna seuraava salasana vain, jos aiot purkaa niiden salauksen myöhemmin.
-about: Open Web Calendar käyttää ICS/ICal-kalentereita verkossa ja näyttää ne yhdessä
-  kalenterissa. Voit käyttää sitä Nextcloudin, Meetupin, Google-kalenterin, Outlookin
-  ja muiden ICS-standardia käyttävien kalenterijärjestelmien kanssa.
+style-description: Voit muuttaa kalenterisi ja monien muiden ominaisuuksien 
+  väriä CSS:n avulla. Räätälöinnilläsi on etusija valitsemaasi ihoon nähden. 
+  Alla voit valita muutamista mukautuksista, jotka olemme valmistaneet sinua 
+  varten.
+password-urls: Suosittelemme URL-osoitteiden salaamista, jos ne sisältävät 
+  arkaluontoisia tietoja. Tallenna seuraava salasana vain, jos aiot purkaa 
+  niiden salauksen myöhemmin.
+about: Open Web Calendar käyttää ICS/ICal-kalentereita verkossa ja näyttää ne 
+  yhdessä kalenterissa. Voit käyttää sitä Nextcloudin, Meetupin, 
+  Google-kalenterin, Outlookin ja muiden ICS-standardia käyttävien 
+  kalenterijärjestelmien kanssa.
 button-edit: Muokkaa
 calendar-code-execution: Tuloksena oleva kalenteri on nähtävissä alta.
 language-browser-true: 'Kalenteri on katselimen kielellä. Jos kieltä ei ole käännetty,
   se näkyy kielellä:'
 section-customization: Voit tehdä lisämuokkauksia kalenteriin.
-spec-host-html: Voit <a href="javascript:downloadJSONSpecification()">ladata tämän
-  määrityksen</a> ja sijoittaa sen jonnekin verkkoon. Näin voit edelleen hallita kalenterin
-  mukauttamista linkin jakamisen jälkeen, esim. GitHubissa <a href="https://gist.github.com/">Gist</a>issä.
+spec-host-html: Voit <a href="javascript:downloadJSONSpecification()">ladata 
+  tämän määrityksen</a> ja sijoittaa sen jonnekin verkkoon. Näin voit edelleen 
+  hallita kalenterin mukauttamista linkin jakamisen jälkeen, esim. GitHubissa <a
+  href="https://gist.github.com/">Gistissä</a>.
 participants-type: Näytä millainen osallistuja tämä on? (eli yksilö tai ryhmä)
-participants-description: Voit kutsua muita tapahtumiin ja ihmiset voivat rekisteröityä.
-  Voit ottaa nämä asetukset käyttöön nähdäksesi nimet ja sähköpostiosoitteet tapahtuman
-  kuvauksen alla.
-links-description: Tapahtumilla voi olla sijainteja ja URL-osoitteita. Jos upotat
-  kalenterin verkkosivustoon, voit valita, mihin napsautettu linkki avaa sivun.
+participants-description: Voit kutsua muita tapahtumiin ja ihmiset voivat 
+  rekisteröityä. Voit ottaa nämä asetukset käyttöön nähdäksesi nimet ja 
+  sähköpostiosoitteet tapahtuman kuvauksen alla.
+links-description: Tapahtumilla voi olla sijainteja ja URL-osoitteita. Jos 
+  upotat kalenterin verkkosivustoon, voit valita, mihin napsautettu linkki avaa 
+  sivun.
 configure-week-description: Viikko voi alkaa maanantaina tai sunnuntaina.
 style-css-classes: 'Nämä ovat esimerkkejä CSS-luokista tapahtumien tyyliin:'
 loading: ladataan…
@@ -118,12 +124,12 @@ timezone-description: 'Aikavyöhyke on otettu käyttäjän selaimesta. Jos halua
 about-title: Tietoja
 calendar-embed-title: Käytä ja upota
 links-title: Linkit
-map-description: Tapahtumapaikoilla voi olla koordinaatteja tai tekstiä. Määritä tässä,
-  mitä karttapalvelua käytetään, kun napsautat tapahtuman sijaintia.
+map-description: Tapahtumapaikoilla voi olla koordinaatteja tai tekstiä. Määritä
+  tässä, mitä karttapalvelua käytetään, kun napsautat tapahtuman sijaintia.
 map-custom: Mukautettu kartta
 map-custom-summary: Mukauta karttalinkkejä
-map-link-location-description: Syötä kartan URL-osoite tähän ja sisällytä {location}
-  minne hakukysely menee.
+map-link-location-description: Syötä kartan URL-osoite tähän ja sisällytä 
+  {location} minne hakukysely menee.
 spec-description: 'Kalenteri voidaan luoda paitsi URL-osoitteen avulla myös JSON-
   tai YAML-määrittelyn avulla tiedostosta. Yllä oleva mukauttaminen luo tämän määrityksen:'
 map-osm: OpenStreetMap
@@ -139,3 +145,5 @@ menu-title: Kalenterin valikko
 menu-shows-description: Näytä kuvaus valikossa
 menu-shows-calendar-names: Listaa kalenterin nimet
 menu-shows-title: Näytä otsikko valikossa
+time-and-hours-title: Aika ja tunnit
+menu-shows-calendar-visibility: Piilota/Näytä kalenterit

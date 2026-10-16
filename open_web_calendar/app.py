@@ -222,6 +222,7 @@ def get_specification(query=None):
             value = value[0]
         specification[parameter] = value
 
+    specification.pop(PARAM_SPECIFICATION_URL, None)
     return specification
 
 

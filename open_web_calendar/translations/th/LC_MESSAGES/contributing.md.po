@@ -1,23 +1,24 @@
 # Languages add-on <noreply-addon-languages@weblate.org>, 2024.
 # nissara pengpol <fon_nissara@hotmail.com>, 2024.
 # Nicco Kunzmann <niccokunzmann@googlemail.com>, 2024.
+# Afdol Kareena <afdol.2548.krn@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 05:03+0200\n"
-"PO-Revision-Date: 2024-06-22 20:15+0000\n"
-"Last-Translator: Nicco Kunzmann <niccokunzmann@googlemail.com>\n"
+"PO-Revision-Date: 2026-03-24 00:09+0000\n"
+"Last-Translator: Afdol Kareena <afdol.2548.krn@gmail.com>\n"
 "Language-Team: Thai <https://hosted.weblate.org/projects/open-web-calendar/documentation-contributing/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6-rc\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "Contribute ♥️"
-msgstr ""
+msgstr "มีส่วนร่วม ♥️"
 
 msgid ""
 "[Fund costs - Open Collective](https://opencollective.com/open-web-"
@@ -30,7 +31,7 @@ msgid ""
 msgstr ""
 
 msgid "[Translate this project to your language](../dev/translate)"
-msgstr ""
+msgstr "[แปลโปรเจกต์นี้เป็นภาษาของคุณ](../dev/translate)"
 
 msgid ""
 "Have a look at [open issues](https://github.com/niccokunzmann/open-web-"

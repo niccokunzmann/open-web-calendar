@@ -304,7 +304,7 @@ function getLoadingAnimationUrl() {
 // An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can remove its sandboxing.
 // allow downloads of ICS files: https://stackoverflow.com/a/64382081
 var TARGET_TO_SANDBOX = {
-  "_blank": 'sandbox="allow-scripts allow-same-origin allow-popups allow-downloads"',
+  "_blank": 'sandbox="allow-scripts allow-same-origin allow-popups allow-downloads allow-popups-to-escape-sandbox"',
   "_top": 'sandbox="allow-scripts allow-same-origin allow-top-navigation allow-downloads"',
   "_parent": 'sandbox="allow-scripts allow-same-origin allow-top-navigation allow-downloads"', // https://stackoverflow.com/a/16929749/1320237
   "_self": 'sandbox="allow-scripts allow-same-origin allow-downloads"' // https://stackoverflow.com/a/17802841/1320237
