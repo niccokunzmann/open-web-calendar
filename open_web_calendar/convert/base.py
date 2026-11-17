@@ -28,8 +28,8 @@ from open_web_calendar.encryption import EmptyFernetStore, FernetStore
 
 
 def get_text_from_url(url):
-    """Return the text from a url."""
-    return requests.get(url, timeout=10).text
+    """Return the response body bytes from a URL."""
+    return requests.get(url, timeout=10).content
 
 
 class ConversionStrategy:

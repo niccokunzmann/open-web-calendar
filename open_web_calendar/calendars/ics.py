@@ -21,7 +21,7 @@ class ICSCalendars(Calendars):
     """Wrapper to handle ICS calendars."""
 
     @classmethod
-    def from_text(cls, text: str):
+    def from_text(cls, text: str | bytes):
         """Create ICS calendars from the text of a calendar file."""
         result = cls()
         result.add_from_text(text)
@@ -31,7 +31,7 @@ class ICSCalendars(Calendars):
         """Handle ICS calendars in a unified way."""
         self._calendars: list[icalendar.Calendar] = []
 
-    def add_from_text(self, text: str):
+    def add_from_text(self, text: str | bytes):
         """Add ICS calendars from text."""
         try:
             self._calendars.extend(icalendar.Calendar.from_ical(text, multiple=True))
