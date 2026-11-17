@@ -19,7 +19,7 @@ colorama==0.4.6
     # via tox
 distlib==0.4.3
     # via virtualenv
-filelock==3.31.0
+filelock==4.2.1
     # via
     #   tox
     #   virtualenv
