@@ -17,3 +17,16 @@ add-url-calendar-public: ลิงก์นี้เป็นลิงก์ส�
 supported-standards: 'ชนิดปฏิทินที่รองรับ: ICAL, CalDAV, webcal'
 about-title: เกี่ยวกับ
 starting-date-description: 'เปลี่ยนวันเริ่มต้นของปฏิทิน:'
+password-urls: เราแนะนำให้เข้ารหัส URL หากมีข้อมูลที่ละเอียดอ่อน 
+  บันทึกรหัสผ่านต่อไปนี้เฉพาะเมื่อคุณต้องการถอดรหัสข้อมูลในภายหลัง
+decrypt-urls: ถอดรหัสข้อมูล URL
+add-url-placeholder-url: https://link.to/a-calendar.ics
+add-url-placeholder-username: ชื่อผู้ใช้ ไม่บังคับ
+add-url-placeholder-password: รหัสผ่าน ไม่บังคับ
+calendar-embed-title: เรียกใช้และดึงข้อมูล
+time-and-hours-title: เวลาและจำนวนชั่วโมง
+first-hour-title: ชั่วโมงเริ่ม
+time-increment-30: 30 นาที
+time-increment-60: 1 ชั่วโมง
+time-increment-10: 10 นาที
+time-increment-15: 15 นาที
