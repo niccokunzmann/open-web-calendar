@@ -456,3 +456,8 @@ div.dhx_agenda_line > span {
     background: rgba(0,0,0,0.1);
 }
 /* END Calendar Source Links */
+
+/* Highlight the current day in the month view. */
+.dhx_cal_month_cell.dhx_now .dhx_month_head {
+    font-weight: bold;
+}

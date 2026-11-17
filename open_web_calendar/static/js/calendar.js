@@ -435,6 +435,18 @@ function loadCalendar() {
     }
     scheduler.config.first_hour = parseInt(specification["starting_hour"]);
     scheduler.config.last_hour = parseInt(specification["ending_hour"]);
+    /* Mark the current day in the month view.
+     * dhtmlxScheduler 7.2.3 does not add .dhx_now to today's month cell
+     * because it discards the result of scheduler.date.date_part(today),
+     * so today keeps its time of day and never matches a cell's date.
+     * This is fixed upstream in later 7.2.x versions.
+     */
+    scheduler.templates.month_date_class = function(date, today){
+        const day = scheduler.date.date_part(new Date(date));
+        const now = scheduler.date.date_part(new Date(today));
+        return day.valueOf() == now.valueOf() ? "dhx_now" : "";
+    };
+
     const date = specification["date"] ? parseDate(specification["date"]) : new Date();
     scheduler.init('scheduler_here', date, specification["tab"]);
 
