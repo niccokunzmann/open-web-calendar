@@ -20,6 +20,7 @@ The latest version might not be released, yet.
 
 - Add development guide links 
 - Add CLI help implementation for better developer onboarding, see [Pull Request #981](https://github.com/niccokunzmann/open-web-calendar/pull/981) by [@Stazz0](https://github.com/Stazz0)
+- Fix the `linux/arm/v6` Docker image crashing on the Raspberry Pi Zero and 1: build lxml and charset-normalizer from source there, and stop using piwheels, whose compiled wheels are built for glibc and do not load on Alpine, see [Issue 1277](https://github.com/niccokunzmann/open-web-calendar/issues/1277)
 
 ## v1.51
 

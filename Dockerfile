@@ -4,9 +4,6 @@
 
 FROM python:3.14-alpine
 
-# make pip also use piwheels
-COPY docker/pip.conf /etc/pip.conf
-
 # licenses
 COPY LICENSE .
 COPY LICENSES .
@@ -28,10 +25,15 @@ COPY docker/constraints.txt .
 ENV PIP_CONSTRAINT=constraints.txt
 COPY requirements/base.txt requirements.txt
 COPY pyproject.toml .
+# On linux/arm/v6, build lxml and charset-normalizer from source: QEMU reports
+# armv7l during the build, so pip would install ARMv7 wheels that the ARMv6 CPU
+# (Raspberry Pi Zero and 1) cannot run.
+ARG TARGETVARIANT
 # see https://stackoverflow.com/a/64352966/1320237
 RUN apk add --no-cache cargo gcc libc-dev libffi libffi-dev libxml2 libxml2-dev libxslt \
  && apk add --no-cache libxslt-dev openssl openssl-dev python3-dev rust \
  && pip install --upgrade --no-cache-dir pip \
+ && if [ "$TARGETVARIANT" = "v6" ]; then export PIP_NO_BINARY=lxml,charset-normalizer; fi \
  && pip install --upgrade --no-cache-dir -r requirements.txt \
  && apk del libxslt-dev libxml2-dev gcc libc-dev python3-dev libffi-dev openssl-dev rust cargo
 
