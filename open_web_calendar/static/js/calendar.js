@@ -176,8 +176,8 @@ const template = {
         details.appendChild(summary);
         const ol = document.createElement("ol");
         for (const participant of participants) {
-            if ((participant.is_oragnizer && !specification.show_organizers) ||
-                (!participant.is_oragnizer && !specification.show_attendees)
+            if ((participant.is_organizer && !specification.show_organizers) ||
+                (!participant.is_organizer && !specification.show_attendees)
             ) {
                 continue;
             }
@@ -566,6 +566,26 @@ scheduler.date.agenda_start = function(date){
 scheduler.date.add_agenda = function(date, inc){
   return scheduler.date.add(date, inc, "month");
 };
+
+/* Mark the current day.
+ * The scheduler does not add "dhx_now" to the cell of the current day in
+ * the month view and has no such marker in the agenda view.
+ * see https://github.com/niccokunzmann/open-web-calendar/issues/1255
+ */
+scheduler.templates.month_date_class = function(date, today){
+  return scheduler.date.date_part(date).valueOf() ==
+    scheduler.date.date_part(today).valueOf() ? "dhx_now" : "";
+};
+function markAgendaToday() {
+  const today = scheduler.date.date_part(new Date()).valueOf();
+  document.querySelectorAll(".dhx_cal_agenda_day").forEach(function(day){
+    const dayDate = scheduler.templates.parse_date(day.getAttribute("data-date"));
+    day.classList.toggle("dhx_now",
+      dayDate != null && scheduler.date.date_part(dayDate).valueOf() == today);
+  });
+}
+scheduler.attachEvent("onViewChange", markAgendaToday);
+scheduler.attachEvent("onDataRender", markAgendaToday);
 
 /* Customize the week view
  *
