@@ -168,6 +168,7 @@ class Config:
         cache_params = {
             "cache_name": self.cache_path,
             "expire_after": self.cache_expire_after,
+            "cache_control": True,
             "backend": "filesystem",
         }
         if self.cache_max_bytes > 0:
